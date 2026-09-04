@@ -1,0 +1,49 @@
+/* Additive mobile-only refinements. Desktop layout remains unchanged. */
+@media(max-width:800px){
+  body{padding-bottom:calc(5.4rem + env(safe-area-inset-bottom))}
+  .utility{display:none}
+  .site-header{position:sticky;top:0;box-shadow:0 4px 16px rgba(16,34,46,.08)}
+  .shell{padding-left:1rem;padding-right:1rem}
+  .head-row{gap:.3rem}
+  .brand{font-size:.95rem}
+  .site-nav .nav-list{display:flex;justify-content:flex-start;width:100%;gap:.2rem .7rem}
+  .nav-list>li>a{min-height:44px;display:flex;align-items:center}
+  .nav-list>li:last-child{order:0}
+  .nav-group{order:1;width:calc(50% - .35rem)}
+  .nav-group>button{min-height:44px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:.45rem .65rem;background:#eef7f7;border:1px solid var(--line);font-size:.92rem}
+  .nav-group.is-open>button{background:var(--aqua);color:var(--ink)}
+  .site-nav .nav-cta{display:flex;align-items:center;justify-content:center;min-height:42px;padding:.45rem .72rem}
+  .site-nav .mega-menu{display:none}
+  .site-nav .nav-group.is-open .mega-menu{display:grid}
+  .mega-menu{margin:.45rem 0 .5rem}
+  .mega-intro{padding:1rem}
+  .mega-link{padding:.85rem .7rem!important}
+  .mega-copy strong{font-size:.95rem}
+  .mega-copy small{font-size:.82rem;line-height:1.4}
+  .hero .slide{min-height:470px}
+  .slide:before{background:linear-gradient(90deg,rgba(11,31,40,.92),rgba(11,31,40,.66),rgba(11,31,40,.28))}
+  .slide .shell{padding-top:3rem;padding-bottom:5rem;align-items:flex-end}
+  .hero-copy{max-width:34rem}
+  .hero-copy h1{font-size:clamp(2.35rem,11vw,3.4rem);max-width:10ch}
+  .hero-copy p{font-size:1.04rem;line-height:1.5}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:.65rem;margin-top:1.25rem;max-width:22rem}
+  .hero-actions .button{width:100%;text-align:center}
+  .carousel-controls{right:1rem;bottom:1rem;gap:.45rem;padding:.3rem .4rem;background:rgba(7,27,38,.38);backdrop-filter:blur(5px)}
+  .carousel-controls button{width:46px;height:46px}
+  .service-strip{padding:.95rem 0}
+  .service-strip ul{display:grid;grid-template-columns:1fr 1fr;gap:.35rem .75rem;font-size:.88rem}
+  .intro,.section{padding:3rem 0}
+  .lead{font-size:1.18rem}
+  .cards{gap:1rem}
+  .card{padding:1.2rem}
+  .card img{width:calc(100% + 2.4rem);height:185px;margin:-1.2rem -1.2rem 1.15rem}
+  .split{gap:1.5rem}
+  .panel{padding:1.45rem}
+  .panel .button{width:100%;text-align:center}
+  .page-hero{min-height:270px;background-position:68% center}
+  .page-hero h1{font-size:clamp(2.25rem,10vw,3rem)}
+  .page-hero p{font-size:1rem;line-height:1.5}
+  input,textarea{font-size:16px}
+  .mobile-ctas{padding:.55rem max(.6rem,env(safe-area-inset-right)) calc(.55rem + env(safe-area-inset-bottom)) max(.6rem,env(safe-area-inset-left));box-shadow:0 -8px 24px rgba(7,27,38,.2)}
+  .mobile-ctas a{min-height:46px;display:flex;align-items:center;justify-content:center}
+}
