@@ -13,8 +13,8 @@
       const response = await fetch('/api/enquiry', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || 'Your enquiry could not be sent.');
-      form.reset(); update('Thanks — your enquiry has been sent. Ellis Services will respond using the details provided.', 'is-success');
-    } catch (error) { update(error.message || 'Your enquiry could not be sent. Please call or email Ellis Services.', 'is-error'); }
+      form.reset(); update('Thanks — your enquiry has been sent. Ellis Services Group will respond using the details provided.', 'is-success');
+    } catch (error) { update(error.message || 'Your enquiry could not be sent. Please call or email Ellis Services Group.', 'is-error'); }
     finally { button.disabled = false; button.removeAttribute('aria-busy'); }
   });
 })();
