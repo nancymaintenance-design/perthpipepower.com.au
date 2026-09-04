@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nancymaintenance-design.github.io/perthpipepower.com.au/sitemap.xml
