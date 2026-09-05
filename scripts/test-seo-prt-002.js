@@ -53,6 +53,18 @@ for (const [page, servicePage] of [
   assert.ok(hrefs(html).includes('contact.html'), `${page} must include an enquiry next step`);
 }
 
+for (const page of [
+  'insights-hot-water-plumbing-or-electrical.html',
+  'insights-tenant-property-manager-maintenance-handover.html',
+  'news-useful-property-work-order.html',
+  'news-keeping-access-information-together.html',
+]) {
+  const nextStep = mainContent(read(page)).match(/<section class="article-next-step">([\s\S]*?)<\/section>/i)?.[1] ?? '';
+  assert.match(nextStep, /<div class="cta-links">[\s\S]*?<a href="[^"]+">[\s\S]*?<\/a>[\s\S]*?<a href="contact\.html">[\s\S]*?<\/a>[\s\S]*?<\/div>/i, `${page} must put its two CTA links in a dedicated group`);
+}
+assert.match(read('site.css'), /\.article-next-step \.cta-links\{display:flex;flex-wrap:wrap;gap:\.75rem\}/, 'desktop CTA group must preserve a spaced, wrapping layout');
+assert.match(read('mobile-refinement.css'), /\.article-next-step \.cta-links\{flex-direction:column;align-items:flex-start;gap:\.75rem\}/, 'mobile CTA group must stack the links with tap spacing');
+
 for (const page of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
   assert.ok(!hrefs(read(page)).includes('index.html'), `${page} must link to the root home URL rather than index.html`);
 }

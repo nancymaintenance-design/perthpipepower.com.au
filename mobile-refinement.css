@@ -47,3 +47,5 @@
   .mobile-ctas{padding:.55rem max(.6rem,env(safe-area-inset-right)) calc(.55rem + env(safe-area-inset-bottom)) max(.6rem,env(safe-area-inset-left));box-shadow:0 -8px 24px rgba(7,27,38,.2)}
   .mobile-ctas a{min-height:46px;display:flex;align-items:center;justify-content:center}
 }
+
+@media(max-width:480px){.article-next-step .cta-links{flex-direction:column;align-items:flex-start;gap:.75rem}.article-next-step .cta-links a{display:flex;align-items:center;min-height:44px}}
