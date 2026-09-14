@@ -1,0 +1,12 @@
+.price-guide { background: #f4f8fa; border-block: 1px solid #c9dde6; }
+.price-guide .shell { max-width: 1120px; }
+.price-guide__intro { max-width: 760px; margin-bottom: 1.5rem; }
+.price-guide__kicker { color: #006e9c; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.price-guide__grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.price-guide__item { background: #fff; border: 1px solid #d6e2e7; border-radius: 8px; box-shadow: 0 6px 18px rgba(8, 47, 68, .06); padding: 1.25rem; }
+.price-guide__item h3 { margin: 0 0 .4rem; color: #082f44; }
+.price-guide__range { color: #006e9c; font-size: 1.35rem; font-weight: 800; margin: .35rem 0; }
+.price-guide__unit { color: #46616e; font-size: .92rem; margin: 0; }
+.price-guide__notice { border-left: 4px solid #e2532e; margin: 1.5rem 0 0; max-width: 960px; padding: 1rem 1.15rem; background: #fff; }
+.price-guide__notice strong { color: #082f44; }
+@media (max-width: 640px) { .price-guide { padding-block: 2.5rem; } .price-guide__grid { grid-template-columns: 1fr; } }
