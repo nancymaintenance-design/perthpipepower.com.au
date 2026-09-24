@@ -19,6 +19,8 @@ assert.match(home, /href="https:\/\/www\.instagram\.com\/elliservices_group\//);
 assert.match(home, /aria-label="Follow Ellis Services Group on Instagram"/);
 assert.match(home, /class="footer-instagram"/);
 assert.match(styles, /\.footer-instagram\s*\{/);
+assert.match(home, /linearGradient id="instagram-gradient"/);
+assert.match(home, /fill="url\(#instagram-gradient\)"/);
 assert.match(
   home,
   /<p>Plumbing and electrical repair enquiries for Perth properties\.<\/p>\s*<a\s+class="footer-instagram"/,
