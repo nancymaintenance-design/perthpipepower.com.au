@@ -48,6 +48,9 @@ assert.match(
 const directoryScript = fs.readFileSync(path.join(__dirname, '..', 'service-area-directory.js'), 'utf8');
 assert.match(directoryScript, /area-search-clear/, 'the search has a clear action');
 assert.match(directoryScript, /No matching Perth locality/, 'the search has a no-results state');
+assert.match(directoryScript, /area-region__meta/, 'each region renders a card metadata row');
+assert.match(directoryScript, /area-region__localities/, 'each region renders a dedicated locality list');
+assert.match(fs.readFileSync(path.join(__dirname, '..', 'site.css'), 'utf8'), /\.area-region__localities\s*\{/, 'the locality list has card styling');
 assert.match(generatedPage, /noindex,follow/, 'pending locality pages remain noindex');
 assert.match(generatedPage, /data-enquiry-form/, 'generated locality pages retain the enquiry hook');
 

@@ -14,19 +14,30 @@
     return link;
   };
   const renderRegionGroups = () => {
-    regions.replaceChildren(...data.regions.map((region) => {
+    regions.replaceChildren(...data.regions.map((region, index) => {
       const section = document.createElement('section');
-      section.className = 'area-region';
+      section.className = `area-region area-region--${index + 1}`;
       section.dataset.areaRegion = region.name;
+      const meta = document.createElement('div');
+      meta.className = 'area-region__meta';
+      const count = document.createElement('span');
+      count.textContent = `${region.localities.length} localities`;
+      const guide = document.createElement('a');
+      guide.href = region.hub;
+      guide.textContent = 'Regional guide';
+      meta.append(count, guide);
       const heading = document.createElement('h2');
       const hub = document.createElement('a');
       hub.href = region.hub;
       hub.textContent = region.name;
       heading.append(hub);
+      const introduction = document.createElement('p');
+      introduction.className = 'area-region__intro';
+      introduction.textContent = 'Choose a locality below to view plumbing, electrical services and the enquiry form.';
       const list = document.createElement('div');
-      list.className = 'area-link-list';
+      list.className = 'area-region__localities';
       list.append(...region.localities.map(createLink));
-      section.append(heading, list);
+      section.append(meta, heading, introduction, list);
       return section;
     }));
   };
