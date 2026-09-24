@@ -16,4 +16,18 @@ for (const record of gallery.ELECTRICAL_WORK_GALLERY) {
 assert.doesNotMatch(JSON.stringify(gallery.ELECTRICAL_WORK_GALLERY), /external-isolator-(after|before)/i);
 assert.equal(gallery.mountElectricalWorkGalleries({ querySelectorAll: () => [] }), 0);
 
+for (const filename of [
+  'perth-cbd-inner-suburbs.html',
+  'northern-suburbs.html',
+  'southern-suburbs.html',
+  'eastern-suburbs.html',
+  'western-suburbs.html',
+  'perth-hills-swan-valley.html',
+]) {
+  const html = fs.readFileSync(path.join(ROOT, filename), 'utf8');
+  assert.match(html, /data-electrical-work-gallery/, `${filename} mounts the gallery`);
+  assert.match(html, /electrical-work-gallery\.js/, `${filename} loads the gallery module`);
+  assert.doesNotMatch(html, /nearby cases|local projects|regional cases/i, `${filename} avoids unsupported location claims`);
+}
+
 console.log('Electrical work gallery contract passed.');
