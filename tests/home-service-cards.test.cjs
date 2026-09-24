@@ -26,7 +26,7 @@ for (const [pageHref, cardHeading, image] of [
   const page = read(pageHref);
   assert.match(page, new RegExp('<img[\\s\\S]*?class="service-page-image"[\\s\\S]*?src="' + image + '"'));
   assert.match(page, /<form class="contact-card" data-enquiry-form novalidate>/);
-  assert.match(page, /<link rel="canonical" href="https:\/\/perthpipepower\.com\.au\//);
+  assert.match(page, /<link[\s\S]*?rel="canonical"[\s\S]*?href="https:\/\/perthpipepower\.com\.au\//);
 }
 
 assert.equal((home.match(/<article class="card">/g) || []).length, 6, 'Homepage service grid should contain six cards');
