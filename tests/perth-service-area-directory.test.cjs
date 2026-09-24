@@ -45,4 +45,15 @@ assert.match(
   /aria-live="polite"/,
 );
 
+const directoryScript = fs.readFileSync(path.join(__dirname, '..', 'service-area-directory.js'), 'utf8');
+assert.match(directoryScript, /area-search-clear/, 'the search has a clear action');
+assert.match(directoryScript, /No matching Perth locality/, 'the search has a no-results state');
+assert.match(generatedPage, /noindex,follow/, 'pending locality pages remain noindex');
+assert.match(generatedPage, /data-enquiry-form/, 'generated locality pages retain the enquiry hook');
+
+const duplicateFixture = path.join(__dirname, 'fixtures-duplicate-localities.json');
+fs.writeFileSync(duplicateFixture, JSON.stringify([localities[0], { ...localities[0] }]));
+assert.throws(() => loadLocalities(duplicateFixture), /Duplicate locality slug/);
+fs.unlinkSync(duplicateFixture);
+
 console.log('Perth service-area locality data contract passed.');

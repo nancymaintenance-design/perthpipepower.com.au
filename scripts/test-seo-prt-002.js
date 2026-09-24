@@ -12,10 +12,10 @@ const linkFor = (html, label) => {
 };
 
 const home = read('index.html');
-assert.match(home, /<title>Plumbing &amp; Electrical Repairs Perth \| Ellis Services Group<\/title>/, 'home title must remain unchanged');
-assert.match(home, /<link rel="canonical" href="https:\/\/perthpipepower\.com\.au\/">/, 'home canonical must remain root');
+assert.match(home, /<title>\s*Plumbing &amp; Electrical Repairs Perth \| Ellis Services Group\s*<\/title>/, 'home title must remain unchanged');
+assert.match(home, /<link rel="canonical" href="https:\/\/perthpipepower\.com\.au\/"\s*\/?\s*>/, 'home canonical must remain root');
 assert.match(home, /Ellis Services Group/, 'home must retain the verified brand');
-assert.match(home, /<h1>Plumbing and electrical repairs in Perth<\/h1>/i, 'home H1 must state the Perth plumbing and electrical repair service');
+assert.match(home, /<h1>\s*Plumbing and electrical repairs in Perth\s*<\/h1>/i, 'home H1 must state the Perth plumbing and electrical repair service');
 
 const safetySwitch = read('safety-switch-tripping-perth.html');
 assert.equal(linkFor(safetySwitch, 'View Detailed safety-switch guide →'), 'insights-safety-switch-keeps-tripping.html', 'safety-switch guide card must lead to the existing insight');
@@ -62,8 +62,8 @@ for (const page of [
   const nextStep = mainContent(read(page)).match(/<section class="article-next-step">([\s\S]*?)<\/section>/i)?.[1] ?? '';
   assert.match(nextStep, /<div class="cta-links">[\s\S]*?<a href="[^"]+">[\s\S]*?<\/a>[\s\S]*?<a href="contact\.html">[\s\S]*?<\/a>[\s\S]*?<\/div>/i, `${page} must put its two CTA links in a dedicated group`);
 }
-assert.match(read('site.css'), /\.article-next-step \.cta-links\{display:flex;flex-wrap:wrap;gap:\.75rem\}/, 'desktop CTA group must preserve a spaced, wrapping layout');
-assert.match(read('mobile-refinement.css'), /\.article-next-step \.cta-links\{flex-direction:column;align-items:flex-start;gap:\.75rem\}/, 'mobile CTA group must stack the links with tap spacing');
+assert.match(read('site.css'), /\.article-next-step\s+\.cta-links\s*\{\s*display:\s*flex;\s*flex-wrap:\s*wrap;\s*gap:\s*\.75rem;/, 'desktop CTA group must preserve a spaced, wrapping layout');
+assert.match(read('mobile-refinement.css'), /\.article-next-step\s+\.cta-links\s*\{\s*flex-direction:\s*column;\s*align-items:\s*flex-start;\s*gap:\s*\.75rem;/, 'mobile CTA group must stack the links with tap spacing');
 
 for (const page of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
   assert.ok(!hrefs(read(page)).includes('index.html'), `${page} must link to the root home URL rather than index.html`);
