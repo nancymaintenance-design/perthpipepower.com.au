@@ -24,7 +24,7 @@ for (const [pageHref, cardHeading, image] of [
   assert.match(card, new RegExp(`<h3>${cardHeading}<\\/h3>`));
   assert.match(card, new RegExp(`<img[\\s\\S]*?src="${image}"`));
   const page = read(pageHref);
-  assert.match(page, new RegExp(`<img class="service-page-image" src="${image}"`));
+  assert.match(page, new RegExp('<img[\\s\\S]*?class="service-page-image"[\\s\\S]*?src="' + image + '"'));
   assert.match(page, /<form class="contact-card" data-enquiry-form novalidate>/);
   assert.match(page, /<link rel="canonical" href="https:\/\/perthpipepower\.com\.au\//);
 }
