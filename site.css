@@ -326,6 +326,18 @@ p {
   font-size: 1.15rem;
   max-width: 60ch;
 }
+.service-page-photo {
+  padding: 2.25rem 0 0;
+  background: var(--paper);
+}
+.service-page-image {
+  display: block;
+  width: 100%;
+  height: min(42vw, 520px);
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+}
 .breadcrumbs {
   font-size: 0.88rem;
   margin-bottom: 1rem;
