@@ -28,7 +28,13 @@ const outputPath = path.join(__dirname, '..', 'service-areas', `${representative
 assert.ok(fs.existsSync(outputPath), 'the representative locality page exists');
 const generatedPage = fs.readFileSync(outputPath, 'utf8');
 assert.match(generatedPage, new RegExp(`Plumber &amp; Electrician in ${representative.name}, Perth`));
-assert.match(generatedPage, /Real local work photos are being prepared/);
+assert.match(examplePage, /data-electrical-work-gallery/);
+assert.match(examplePage, /electrical-work-gallery\.js/);
+assert.match(examplePage, /Examples of electrical work completed by our team/);
+assert.doesNotMatch(examplePage, /Construction cases for|Real local work photos are being prepared|nearby case|local project/i);
+assert.match(generatedPage, /data-electrical-work-gallery/);
+assert.match(generatedPage, /electrical-work-gallery\.js/);
+assert.doesNotMatch(generatedPage, /Real local work photos are being prepared/);
 assert.match(generatedPage, /contact-form\.js/);
 assert.ok(
   !fs.readFileSync(path.join(__dirname, '..', 'sitemap.xml'), 'utf8').includes(`/service-areas/${representative.slug}.html`),
