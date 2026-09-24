@@ -15,4 +15,9 @@ assert.match(home, /href="https:\/\/www\.google\.com\/maps\/place\/140\+St\+Geor
 assert.match(styles, /\.office-location__map\s*\{/);
 assert.match(styles, /\.office-location__map iframe\s*\{/);
 
+assert.match(home, /href="https:\/\/www\.instagram\.com\/elliservices_group\//);
+assert.match(home, /aria-label="Follow Ellis Services Group on Instagram"/);
+assert.match(home, /class="footer-instagram"/);
+assert.match(styles, /\.footer-instagram\s*\{/);
+
 console.log('PASS: homepage contains an accessible, responsive Perth office map section.');
