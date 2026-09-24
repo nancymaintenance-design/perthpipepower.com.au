@@ -30,4 +30,10 @@ for (const filename of [
   assert.doesNotMatch(html, /nearby cases|local projects|regional cases/i, `${filename} avoids unsupported location claims`);
 }
 
+const css = fs.readFileSync(path.join(ROOT, 'site.css'), 'utf8');
+assert.match(css, /\.electrical-work-gallery__grid\s*\{/);
+assert.match(css, /\.electrical-work-gallery__image\s*\{[^}]*object-fit:\s*cover/s);
+assert.match(css, /\.electrical-work-gallery__card\s*\{/);
+assert.match(css, /@media \(max-width:\s*700px\)/);
+
 console.log('Electrical work gallery contract passed.');
