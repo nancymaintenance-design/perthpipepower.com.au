@@ -35,4 +35,14 @@ assert.ok(
   'pending locality pages are excluded from the sitemap',
 );
 
+const directoryPage = fs.readFileSync(path.join(__dirname, '..', 'service-areas.html'), 'utf8');
+assert.match(directoryPage, /type="search"/);
+assert.match(directoryPage, /aria-controls="area-search-results"/);
+assert.match(directoryPage, /service-area-directory\.js/);
+assert.match(directoryPage, /data-area-region="Northern Suburbs"/);
+assert.match(
+  fs.readFileSync(path.join(__dirname, '..', 'service-area-directory.js'), 'utf8'),
+  /aria-live="polite"/,
+);
+
 console.log('Perth service-area locality data contract passed.');

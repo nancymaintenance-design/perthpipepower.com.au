@@ -8,7 +8,7 @@ const pages = fs.readdirSync(root).filter((name) => name.endsWith('.html'));
 
 for (const page of pages) {
   const html = fs.readFileSync(path.join(root, page), 'utf8');
-  const canonical = html.match(/<link rel="canonical" href="([^"]+)">/);
+  const canonical = html.match(/<link rel="canonical" href="([^"]+)"\s*\/?\s*>/);
   const expected = `${origin}/${page === 'index.html' ? '' : page}`;
   if (!canonical) issues.push(`${page}: missing canonical`);
   else if (canonical[1] !== expected) issues.push(`${page}: canonical must be ${expected}`);

@@ -4,6 +4,7 @@ const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
 const LOCALITY_OUTPUT = path.join(ROOT, 'service-areas');
 const SITEMAP_PATH = path.join(ROOT, 'sitemap.xml');
+const DIRECTORY_DATA_PATH = path.join(ROOT, 'service-area-data.js');
 const REGIONS = [
   { name: 'CBD & Inner Perth', hub: 'perth-cbd-inner-suburbs.html' },
   { name: 'Northern Suburbs', hub: 'northern-suburbs.html' },
@@ -72,6 +73,10 @@ function generateLocalityPages(localities) {
   for (const locality of localities) fs.writeFileSync(path.join(LOCALITY_OUTPUT, `${locality.slug}.html`), renderLocalityPage(locality, localities));
 }
 
+function generateDirectoryData(localities, outputPath = DIRECTORY_DATA_PATH) {
+  fs.writeFileSync(outputPath, `window.PERTH_SERVICE_AREAS = ${JSON.stringify(buildDirectoryData(localities))};\n`);
+}
+
 function updateSitemap(localities, sitemapPath = SITEMAP_PATH) {
   const existing = fs.readFileSync(sitemapPath, 'utf8');
   const withoutGeneratedPages = existing.replace(/\s*<url><loc>https:\/\/perthpipepower\.com\.au\/service-areas\/[^<]+<\/loc><\/url>/g, '');
@@ -82,10 +87,11 @@ function updateSitemap(localities, sitemapPath = SITEMAP_PATH) {
 function build() {
   const localities = loadLocalities();
   generateLocalityPages(localities);
+  generateDirectoryData(localities);
   updateSitemap(localities);
   console.log(`Generated ${localities.length} Perth locality pages.`);
 }
 
 if (require.main === module) build();
 
-module.exports = { ROOT, REGIONS, loadLocalities, buildDirectoryData, renderLocalityPage, generateLocalityPages, updateSitemap };
+module.exports = { ROOT, REGIONS, loadLocalities, buildDirectoryData, renderLocalityPage, generateLocalityPages, generateDirectoryData, updateSitemap };

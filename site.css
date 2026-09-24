@@ -559,3 +559,23 @@ textarea {
   font-size: clamp(2.7rem, 5vw, 5.5rem);
   max-width: 11ch;
 }
+
+/* Searchable Perth locality directory */
+.area-directory { background: #f7f8f7; }
+.area-directory-intro { max-width: 48rem; }
+.area-search { max-width: 48rem; margin: 2rem 0 1.5rem; }
+.area-search label { display: block; font-weight: 700; margin-bottom: .5rem; }
+.area-search-control { display: flex; gap: .65rem; align-items: center; }
+.area-search input { flex: 1; min-width: 0; padding: .85rem 1rem; border: 1px solid #66726d; border-radius: .4rem; font: inherit; }
+.area-search input:focus-visible, .area-link-list a:focus-visible, .area-region h2 a:focus-visible { outline: 3px solid #f4b41a; outline-offset: 3px; }
+.area-search-clear { cursor: pointer; border: 1px solid #1c3d39; color: #1c3d39; background: #fff; padding: .8rem 1rem; border-radius: .4rem; font: inherit; }
+.area-search-status { min-height: 1.5rem; margin: .75rem 0 0; }
+.area-search-results { margin-bottom: 2rem; }
+.area-regions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.area-region { background: #fff; border: 1px solid #d9dfdc; padding: 1.25rem; }
+.area-region h2 { font-size: 1.25rem; margin: 0 0 1rem; }
+.area-region h2 a { color: inherit; }
+.area-link-list { display: flex; flex-wrap: wrap; gap: .6rem; }
+.area-link-list a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .4rem .75rem; border-radius: 999px; background: #e9efec; color: #173d38; text-decoration: none; font-weight: 650; }
+.area-link-list a:hover { background: #cfe2d8; text-decoration: underline; }
+@media (max-width: 700px) { .area-regions { grid-template-columns: 1fr; } .area-search-control { align-items: stretch; flex-direction: column; } .area-search-clear { width: 100%; } }
