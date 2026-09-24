@@ -1,0 +1,1388 @@
+[
+  {
+    "name": "Perth",
+    "slug": "perth",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "rivervale",
+      "east-perth"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "East Perth",
+    "slug": "east-perth",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "perth",
+      "west-perth"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "West Perth",
+    "slug": "west-perth",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "east-perth",
+      "northbridge"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Northbridge",
+    "slug": "northbridge",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "west-perth",
+      "highgate"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Highgate",
+    "slug": "highgate",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "northbridge",
+      "mount-lawley"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Mount Lawley",
+    "slug": "mount-lawley",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "highgate",
+      "leederville"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Leederville",
+    "slug": "leederville",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "mount-lawley",
+      "north-perth"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "North Perth",
+    "slug": "north-perth",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "leederville",
+      "subiaco"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Subiaco",
+    "slug": "subiaco",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "north-perth",
+      "west-leederville"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "West Leederville",
+    "slug": "west-leederville",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "subiaco",
+      "wembley"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Wembley",
+    "slug": "wembley",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "west-leederville",
+      "victoria-park"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Victoria Park",
+    "slug": "victoria-park",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "wembley",
+      "east-victoria-park"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "East Victoria Park",
+    "slug": "east-victoria-park",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "victoria-park",
+      "south-perth"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "South Perth",
+    "slug": "south-perth",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "east-victoria-park",
+      "como"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Como",
+    "slug": "como",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "south-perth",
+      "kensington"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Kensington",
+    "slug": "kensington",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "como",
+      "burswood"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Burswood",
+    "slug": "burswood",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "kensington",
+      "lathlain"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Lathlain",
+    "slug": "lathlain",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "burswood",
+      "carlisle"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Carlisle",
+    "slug": "carlisle",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "lathlain",
+      "rivervale"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Rivervale",
+    "slug": "rivervale",
+    "region": "CBD & Inner Perth",
+    "regionHub": "perth-cbd-inner-suburbs.html",
+    "nearby": [
+      "carlisle",
+      "perth"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Joondalup",
+    "slug": "joondalup",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "nollamara",
+      "wanneroo"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Wanneroo",
+    "slug": "wanneroo",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "joondalup",
+      "butler"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Butler",
+    "slug": "butler",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "wanneroo",
+      "clarkson"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Clarkson",
+    "slug": "clarkson",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "butler",
+      "mindarie"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Mindarie",
+    "slug": "mindarie",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "clarkson",
+      "ocean-reef"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Ocean Reef",
+    "slug": "ocean-reef",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "mindarie",
+      "mullaloo"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Mullaloo",
+    "slug": "mullaloo",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "ocean-reef",
+      "hillarys"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Hillarys",
+    "slug": "hillarys",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "mullaloo",
+      "sorrento"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Sorrento",
+    "slug": "sorrento",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "hillarys",
+      "duncraig"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Duncraig",
+    "slug": "duncraig",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "sorrento",
+      "greenwood"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Greenwood",
+    "slug": "greenwood",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "duncraig",
+      "kingsley"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Kingsley",
+    "slug": "kingsley",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "greenwood",
+      "padbury"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Padbury",
+    "slug": "padbury",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "kingsley",
+      "kallaroo"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Kallaroo",
+    "slug": "kallaroo",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "padbury",
+      "craigie"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Craigie",
+    "slug": "craigie",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "kallaroo",
+      "heathridge"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Heathridge",
+    "slug": "heathridge",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "craigie",
+      "currambine"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Currambine",
+    "slug": "currambine",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "heathridge",
+      "edgewater"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Edgewater",
+    "slug": "edgewater",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "currambine",
+      "karrinyup"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Karrinyup",
+    "slug": "karrinyup",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "edgewater",
+      "innaloo"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Innaloo",
+    "slug": "innaloo",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "karrinyup",
+      "scarborough"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Scarborough",
+    "slug": "scarborough",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "innaloo",
+      "doubleview"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Doubleview",
+    "slug": "doubleview",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "scarborough",
+      "balcatta"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Balcatta",
+    "slug": "balcatta",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "doubleview",
+      "nollamara"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Nollamara",
+    "slug": "nollamara",
+    "region": "Northern Suburbs",
+    "regionHub": "northern-suburbs.html",
+    "nearby": [
+      "balcatta",
+      "joondalup"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Fremantle",
+    "slug": "fremantle",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "oconnor",
+      "south-fremantle"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "South Fremantle",
+    "slug": "south-fremantle",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "fremantle",
+      "east-fremantle"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "East Fremantle",
+    "slug": "east-fremantle",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "south-fremantle",
+      "beaconsfield"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Beaconsfield",
+    "slug": "beaconsfield",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "east-fremantle",
+      "hamilton-hill"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Hamilton Hill",
+    "slug": "hamilton-hill",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "beaconsfield",
+      "spearwood"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Spearwood",
+    "slug": "spearwood",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "hamilton-hill",
+      "cockburn-central"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Cockburn Central",
+    "slug": "cockburn-central",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "spearwood",
+      "success"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Success",
+    "slug": "success",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "cockburn-central",
+      "bibra-lake"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Bibra Lake",
+    "slug": "bibra-lake",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "success",
+      "murdoch"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Murdoch",
+    "slug": "murdoch",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "bibra-lake",
+      "kardinya"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Kardinya",
+    "slug": "kardinya",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "murdoch",
+      "bateman"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Bateman",
+    "slug": "bateman",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "kardinya",
+      "booragoon"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Booragoon",
+    "slug": "booragoon",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "bateman",
+      "mount-pleasant"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Mount Pleasant",
+    "slug": "mount-pleasant",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "booragoon",
+      "applecross"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Applecross",
+    "slug": "applecross",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "mount-pleasant",
+      "ardross"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Ardross",
+    "slug": "ardross",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "applecross",
+      "willetton"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Willetton",
+    "slug": "willetton",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "ardross",
+      "canning-vale"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Canning Vale",
+    "slug": "canning-vale",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "willetton",
+      "leeming"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Leeming",
+    "slug": "leeming",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "canning-vale",
+      "bull-creek"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Bull Creek",
+    "slug": "bull-creek",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "leeming",
+      "myaree"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Myaree",
+    "slug": "myaree",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "bull-creek",
+      "oconnor"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "O'Connor",
+    "slug": "oconnor",
+    "region": "Southern Suburbs",
+    "regionHub": "southern-suburbs.html",
+    "nearby": [
+      "myaree",
+      "fremantle"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Belmont",
+    "slug": "belmont",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "morley",
+      "cloverdale"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Cloverdale",
+    "slug": "cloverdale",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "belmont",
+      "kewdale"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Kewdale",
+    "slug": "kewdale",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "cloverdale",
+      "redcliffe"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Redcliffe",
+    "slug": "redcliffe",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "kewdale",
+      "ascot"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Ascot",
+    "slug": "ascot",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "redcliffe",
+      "bayswater"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Bayswater",
+    "slug": "bayswater",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "ascot",
+      "maylands"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Maylands",
+    "slug": "maylands",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "bayswater",
+      "bedford"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Bedford",
+    "slug": "bedford",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "maylands",
+      "bassendean"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Bassendean",
+    "slug": "bassendean",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "bedford",
+      "ashfield"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Ashfield",
+    "slug": "ashfield",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "bassendean",
+      "guildford"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Guildford",
+    "slug": "guildford",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "ashfield",
+      "midland"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Midland",
+    "slug": "midland",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "guildford",
+      "woodbridge"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Woodbridge",
+    "slug": "woodbridge",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "midland",
+      "viveash"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Viveash",
+    "slug": "viveash",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "woodbridge",
+      "forrestfield"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Forrestfield",
+    "slug": "forrestfield",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "viveash",
+      "high-wycombe"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "High Wycombe",
+    "slug": "high-wycombe",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "forrestfield",
+      "maida-vale"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Maida Vale",
+    "slug": "maida-vale",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "high-wycombe",
+      "hazelmere"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Hazelmere",
+    "slug": "hazelmere",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "maida-vale",
+      "south-guildford"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "South Guildford",
+    "slug": "south-guildford",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "hazelmere",
+      "morley"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Morley",
+    "slug": "morley",
+    "region": "Eastern Suburbs",
+    "regionHub": "eastern-suburbs.html",
+    "nearby": [
+      "south-guildford",
+      "belmont"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Nedlands",
+    "slug": "nedlands",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "watermans-bay",
+      "claremont"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Claremont",
+    "slug": "claremont",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "nedlands",
+      "cottesloe"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Cottesloe",
+    "slug": "cottesloe",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "claremont",
+      "swanbourne"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Swanbourne",
+    "slug": "swanbourne",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "cottesloe",
+      "mosman-park"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Mosman Park",
+    "slug": "mosman-park",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "swanbourne",
+      "peppermint-grove"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Peppermint Grove",
+    "slug": "peppermint-grove",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "mosman-park",
+      "dalkeith"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Dalkeith",
+    "slug": "dalkeith",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "peppermint-grove",
+      "shenton-park"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Shenton Park",
+    "slug": "shenton-park",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "dalkeith",
+      "jolimont"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Jolimont",
+    "slug": "jolimont",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "shenton-park",
+      "floreat"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Floreat",
+    "slug": "floreat",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "jolimont",
+      "city-beach"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "City Beach",
+    "slug": "city-beach",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "floreat",
+      "wembley-downs"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Wembley Downs",
+    "slug": "wembley-downs",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "city-beach",
+      "churchlands"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Churchlands",
+    "slug": "churchlands",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "wembley-downs",
+      "mount-claremont"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Mount Claremont",
+    "slug": "mount-claremont",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "churchlands",
+      "daglish"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Daglish",
+    "slug": "daglish",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "mount-claremont",
+      "karrakatta"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Karrakatta",
+    "slug": "karrakatta",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "daglish",
+      "crawley"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Crawley",
+    "slug": "crawley",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "karrakatta",
+      "trigg"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Trigg",
+    "slug": "trigg",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "crawley",
+      "north-beach"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "North Beach",
+    "slug": "north-beach",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "trigg",
+      "watermans-bay"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Watermans Bay",
+    "slug": "watermans-bay",
+    "region": "Western Suburbs",
+    "regionHub": "western-suburbs.html",
+    "nearby": [
+      "north-beach",
+      "nedlands"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Ellenbrook",
+    "slug": "ellenbrook",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "chidlow",
+      "aveley"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Aveley",
+    "slug": "aveley",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "ellenbrook",
+      "the-vines"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "The Vines",
+    "slug": "the-vines",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "aveley",
+      "henley-brook"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Henley Brook",
+    "slug": "henley-brook",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "the-vines",
+      "brabham"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Brabham",
+    "slug": "brabham",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "henley-brook",
+      "caversham"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Caversham",
+    "slug": "caversham",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "brabham",
+      "swan-view"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Swan View",
+    "slug": "swan-view",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "caversham",
+      "stratton"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Stratton",
+    "slug": "stratton",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "swan-view",
+      "jane-brook"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Jane Brook",
+    "slug": "jane-brook",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "stratton",
+      "bellevue"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Bellevue",
+    "slug": "bellevue",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "jane-brook",
+      "greenmount"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Greenmount",
+    "slug": "greenmount",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "bellevue",
+      "darlington"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Darlington",
+    "slug": "darlington",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "greenmount",
+      "mundaring"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Mundaring",
+    "slug": "mundaring",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "darlington",
+      "kalamunda"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Kalamunda",
+    "slug": "kalamunda",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "mundaring",
+      "lesmurdie"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Lesmurdie",
+    "slug": "lesmurdie",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "kalamunda",
+      "gooseberry-hill"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Gooseberry Hill",
+    "slug": "gooseberry-hill",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "lesmurdie",
+      "walliston"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Walliston",
+    "slug": "walliston",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "gooseberry-hill",
+      "pickering-brook"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Pickering Brook",
+    "slug": "pickering-brook",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "walliston",
+      "parkerville"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Parkerville",
+    "slug": "parkerville",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "pickering-brook",
+      "chidlow"
+    ],
+    "caseStatus": "pending"
+  },
+  {
+    "name": "Chidlow",
+    "slug": "chidlow",
+    "region": "Perth Hills & Swan Valley",
+    "regionHub": "perth-hills-swan-valley.html",
+    "nearby": [
+      "parkerville",
+      "ellenbrook"
+    ],
+    "caseStatus": "pending"
+  }
+]
