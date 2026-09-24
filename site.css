@@ -580,6 +580,7 @@ textarea {
 .area-link-list a:hover { background: #cfe2d8; text-decoration: underline; }
 .footer-instagram { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; color: inherit; font-weight: 700; text-decoration: none; }
 .footer-instagram svg { width: 1.35rem; height: 1.35rem; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.footer-instagram__icon { width: 1.35rem; height: 1.35rem; object-fit: contain; }
 .footer-instagram:hover { color: var(--sun); text-decoration: underline; }
 .footer-instagram:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
 @media (max-width: 700px) { .area-regions { grid-template-columns: 1fr; } .area-search-control { align-items: stretch; flex-direction: column; } .area-search-clear { width: 100%; } }
