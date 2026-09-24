@@ -1,4 +1,13 @@
 (() => {
+  const addServiceLink = (menuId, href, title, description) => {
+    const menu = document.getElementById(menuId);
+    if (!menu || menu.querySelector('[href="' + href + '"]')) return;
+    const item = document.createElement('li');
+    item.innerHTML = '<a class="mega-link" href="' + href + '"><span class="mega-copy"><strong>' + title + '</strong><small>' + description + '</small></span></a>';
+    menu.append(item);
+  };
+  addServiceLink('plumbing-menu', 'fixtures-appliances-perth.html', 'Fixtures & appliances', 'Kitchen, laundry and bathroom fitting enquiries.');
+  addServiceLink('electrical-menu', 'renewables-smart-home-perth.html', 'Renewables & smart home', 'Energy equipment, automation and electrical upgrade enquiries.');
   const groups = [...document.querySelectorAll('.nav-group')];
   groups.forEach((group) => {
     const button = group.querySelector('button');
