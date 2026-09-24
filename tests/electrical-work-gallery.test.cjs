@@ -40,5 +40,9 @@ assert.match(css, /\.electrical-work-gallery__grid\s*\{/);
 assert.match(css, /\.electrical-work-gallery__image\s*\{[^}]*object-fit:\s*cover/s);
 assert.match(css, /\.electrical-work-gallery__card\s*\{/);
 assert.match(css, /@media \(max-width:\s*700px\)/);
+assert.match(css, /\.electrical-work-gallery__grid\s*\{[^}]*repeat\(6,\s*minmax\(0,\s*1fr\)\)/s);
+assert.match(css, /\.electrical-work-gallery__image\s*\{[^}]*aspect-ratio:\s*1\s*\/\s*1/s);
+assert.match(css, /@media \(max-width:\s*700px\)\s*\{[^}]*\.electrical-work-gallery__grid\s*\{[^}]*repeat\(3,\s*minmax\(0,\s*1fr\)\)/s);
+assert.match(css, /\.electrical-work-gallery__card figcaption span\s*\{[^}]*display:\s*none/s);
 
 console.log('Electrical work gallery contract passed.');

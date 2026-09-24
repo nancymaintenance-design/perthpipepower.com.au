@@ -627,10 +627,11 @@ textarea {
 /* Shared electrical work gallery */
 .electrical-work-gallery { display: grid; gap: 1.5rem; }
 .electrical-work-gallery__heading { max-width: 48rem; }
-.electrical-work-gallery__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.electrical-work-gallery__grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .75rem; }
 .electrical-work-gallery__card { overflow: hidden; margin: 0; border: 1px solid #d9dfdc; border-radius: .8rem; background: #fff; box-shadow: 0 12px 28px rgba(16, 47, 58, .08); }
-.electrical-work-gallery__image { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.electrical-work-gallery__card figcaption { display: grid; gap: .25rem; padding: .9rem 1rem 1rem; }
-.electrical-work-gallery__card figcaption strong { color: #102f3a; }
-.electrical-work-gallery__card figcaption span { color: #526a70; font-size: .92rem; }
-@media (max-width: 700px) { .electrical-work-gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; } .electrical-work-gallery__card figcaption { padding: .75rem; } }
+.electrical-work-gallery__image { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.electrical-work-gallery__card figcaption { display: block; padding: .55rem .6rem .65rem; }
+.electrical-work-gallery__card figcaption strong { color: #102f3a; font-size: .78rem; line-height: 1.25; }
+.electrical-work-gallery__card figcaption span { display: none; }
+@media (max-width: 980px) { .electrical-work-gallery__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .electrical-work-gallery__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; } .electrical-work-gallery__card figcaption { padding: .45rem .5rem .55rem; } .electrical-work-gallery__card figcaption strong { font-size: .72rem; } }
