@@ -13,4 +13,14 @@ assert.ok(!/\bEC\s*\d{2,}|\bPL\s*\d{2,}|insured by|AUD\s*\d|\$\d/i.test(content)
 const navigation = fs.readFileSync(path.join(root, 'navigation.js'), 'utf8');
 assert.ok(navigation.includes('fixtures-appliances-perth.html'), 'Plumbing menu should expose Fixtures & appliances');
 assert.ok(navigation.includes('renewables-smart-home-perth.html'), 'Electrical menu should expose Renewables & smart home');
+const fixturePage = fs.readFileSync(path.join(root, 'fixtures-appliances-perth.html'), 'utf8');
+assert.match(fixturePage, /<h1>Fixture, Tap &amp; Appliance Connection Services in Perth<\/h1>/, 'Fixtures page needs a core-service H1');
+assert.match(fixturePage, /How fixture and appliance work is scoped and quoted/, 'Fixtures page needs a pricing-process section');
+assert.match(fixturePage, /Fixture, Tap &amp; Appliance Services Perth FAQs/, 'Fixtures page needs service FAQs');
+assert.match(fixturePage, /service-expansion\.css/, 'Fixtures page should reuse the established service-page structure');
+const renewablesPage = fs.readFileSync(path.join(root, 'renewables-smart-home-perth.html'), 'utf8');
+assert.match(renewablesPage, /<h1>Smart Home &amp; Energy Electrical Services in Perth<\/h1>/, 'Smart-home page needs a core-service H1');
+assert.match(renewablesPage, /How smart-home and energy work is scoped and quoted/, 'Smart-home page needs a pricing-process section');
+assert.match(renewablesPage, /Smart Home &amp; Energy Electrical Services Perth FAQs/, 'Smart-home page needs service FAQs');
+assert.match(renewablesPage, /service-expansion\.css/, 'Smart-home page should reuse the established service-page structure');
 console.log('PASS: all service pages load compliant professional-depth content.');
