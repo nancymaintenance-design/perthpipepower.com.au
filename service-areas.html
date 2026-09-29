@@ -32,20 +32,18 @@
     <section class="section area-directory">
       <div class="shell">
         <div class="area-directory-intro">
-          <span class="eyebrow">Search by suburb</span>
-          <h2>Where is your property?</h2>
-          <p>Start typing a Perth suburb or locality. The search covers every locality; the regional cards highlight priority service locations.</p>
+          <span class="eyebrow">Six Perth regions</span>
+          <h2>Choose the region for your property</h2>
+          <p>Each regional guide explains common plumbing and electrical enquiries, practical preparation and how a clear scope is discussed before work is confirmed.</p>
         </div>
-        <div class="area-search">
-          <label for="area-search-input">Search Perth suburbs and localities</label>
-          <div class="area-search-control">
-            <input id="area-search-input" type="search" autocomplete="off" placeholder="For example, Joondalup or Fremantle" aria-controls="area-search-results">
-            <button type="button" class="area-search-clear" hidden aria-label="Clear area search">Clear</button>
-          </div>
-          <p id="area-search-status" class="area-search-status" aria-live="polite"></p>
+        <div class="area-regions" data-region-guide-list>
+          <article class="area-region"><span class="area-region__meta">REGIONAL GUIDE</span><h3><a href="perth-cbd-inner-suburbs.html">CBD &amp; Inner Perth</a></h3><p>Electrical repairs, blocked drains and property maintenance enquiries.</p></article>
+          <article class="area-region"><span class="area-region__meta">REGIONAL GUIDE</span><h3><a href="northern-suburbs.html">Northern Suburbs</a></h3><p>Power faults, hot water concerns and safety-switch enquiries.</p></article>
+          <article class="area-region"><span class="area-region__meta">REGIONAL GUIDE</span><h3><a href="southern-suburbs.html">Southern Suburbs</a></h3><p>Drain repairs, leak concerns and electrical fault enquiries.</p></article>
+          <article class="area-region"><span class="area-region__meta">REGIONAL GUIDE</span><h3><a href="eastern-suburbs.html">Eastern Suburbs</a></h3><p>Switchboards, safety switches and hot-water enquiries.</p></article>
+          <article class="area-region"><span class="area-region__meta">REGIONAL GUIDE</span><h3><a href="western-suburbs.html">Western Suburbs</a></h3><p>Lighting, power points and plumbing repair enquiries.</p></article>
+          <article class="area-region"><span class="area-region__meta">REGIONAL GUIDE</span><h3><a href="perth-hills-swan-valley.html">Perth Hills &amp; Swan Valley</a></h3><p>Hot water, electrical repairs and property maintenance enquiries.</p></article>
         </div>
-        <div id="area-search-results" class="area-search-results" aria-live="polite"></div>
-        <div id="area-regions" class="area-regions" data-area-region="Northern Suburbs"></div>
       </div>
     </section>
     <section class="rich-band">
@@ -59,7 +57,5 @@
   <div class="mobile-ctas"><a href="tel:0413477667">Call</a><a href="contact.html">Book / enquire</a></div>
   <script src="site.js"></script>
   <script src="navigation.js"></script>
-  <script src="service-area-data.js"></script>
-  <script src="service-area-directory.js"></script>
 </body>
 </html>
