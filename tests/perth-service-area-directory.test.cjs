@@ -28,6 +28,22 @@ for (const locality of priorityLocalities) {
   );
 }
 
+const priorityExample = priorityLocalities.find(({ slug }) => slug === 'east-perth');
+const nonPriorityExample = localities.find(({ priority }) => !priority);
+const priorityHtml = renderLocalityPage(priorityExample, localities);
+const nonPriorityHtml = renderLocalityPage(nonPriorityExample, localities);
+assert.match(priorityHtml, /<meta name="robots" content="index,follow">/);
+assert.match(
+  priorityHtml,
+  new RegExp(priorityExample.priority.title.replace(/&/g, '&amp;')),
+);
+assert.match(priorityHtml, new RegExp(priorityExample.priority.h1));
+assert.match(priorityHtml, new RegExp(priorityExample.priority.services[0].href.replace(/[.?]/g, '\\$&')));
+assert.match(priorityHtml, new RegExp(priorityExample.priority.faqs[0].q));
+assert.doesNotMatch(priorityHtml, /Explore nearby|Other Perth areas|nearbyLinks/);
+assert.match(nonPriorityHtml, /<meta name="robots" content="noindex,follow">/);
+assert.doesNotMatch(nonPriorityHtml, /Explore nearby|Other Perth areas|nearbyLinks/);
+
 assert.equal(directory.regions.length, 6, 'the directory has six regions');
 assert.ok(localities.length >= 120, 'the catalogue contains at least 120 localities');
 assert.equal(
