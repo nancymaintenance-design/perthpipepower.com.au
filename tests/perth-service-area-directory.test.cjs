@@ -6,6 +6,7 @@ const {
   loadLocalities,
   buildDirectoryData,
   renderLocalityPage,
+  addGeneratedPageMetadata,
   updateSitemap,
 } = require('../scripts/build-perth-service-areas');
 
@@ -33,6 +34,10 @@ const priorityExample = priorityLocalities.find(({ slug }) => slug === 'east-per
 const nonPriorityExample = localities.find(({ priority }) => !priority);
 const priorityHtml = renderLocalityPage(priorityExample, localities);
 const nonPriorityHtml = renderLocalityPage(nonPriorityExample, localities);
+const trackedPriorityHtml = addGeneratedPageMetadata(priorityHtml);
+assert.match(trackedPriorityHtml, /googletagmanager\.com\/gtag\/js\?id=G-HZ6PKHKGWH/);
+assert.match(trackedPriorityHtml, /property="og:title"/);
+assert.match(trackedPriorityHtml, /property="og:url"/);
 assert.match(priorityHtml, /<meta name="robots" content="index,follow">/);
 assert.match(
   priorityHtml,

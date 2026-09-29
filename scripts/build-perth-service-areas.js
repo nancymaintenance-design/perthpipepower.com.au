@@ -13,6 +13,7 @@ const REGIONS = [
   { name: "Western Suburbs", hub: "western-suburbs.html" },
   { name: "Perth Hills & Swan Valley", hub: "perth-hills-swan-valley.html" },
 ];
+const GA_TRACKING_ID = "G-HZ6PKHKGWH";
 const VALID_REGIONS = new Set(REGIONS.map(({ name }) => name));
 const VALID_CASE_STATUSES = new Set(["pending", "ready"]);
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -29,6 +30,22 @@ const escapeHtml = (value) =>
         "'": "&#39;",
       })[character],
   );
+
+function renderTrackingHead(title, description, canonicalUrl) {
+  return `<meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonicalUrl}"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><script async src="https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_TRACKING_ID}');</script>`;
+}
+
+function addGeneratedPageMetadata(html) {
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1];
+  const description = html.match(/<meta name="description" content="([^"]+)">/i)?.[1];
+  const canonicalUrl = html.match(/<link rel="canonical" href="([^"]+)">/i)?.[1];
+  if (!title || !description || !canonicalUrl)
+    throw new Error("Generated locality page is missing title, description or canonical URL");
+  return html.replace(
+    "</head>",
+    `${renderTrackingHead(title, description, canonicalUrl)}</head>`,
+  );
+}
 
 function assertPriorityRecord(priority, slug) {
   if (!priority || typeof priority !== "object")
@@ -174,7 +191,7 @@ function generateLocalityPages(localities) {
   for (const locality of localities)
     fs.writeFileSync(
       path.join(LOCALITY_OUTPUT, `${locality.slug}.html`),
-      renderLocalityPage(locality, localities),
+      addGeneratedPageMetadata(renderLocalityPage(locality, localities)),
     );
 }
 
@@ -223,6 +240,7 @@ module.exports = {
   loadLocalities,
   buildDirectoryData,
   renderLocalityPage,
+  addGeneratedPageMetadata,
   generateLocalityPages,
   generateDirectoryData,
   updateSitemap,
