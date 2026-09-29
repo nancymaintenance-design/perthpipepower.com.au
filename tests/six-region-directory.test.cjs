@@ -19,6 +19,10 @@ assert.equal((main.match(/data-region-localities/g) || []).length, 6, 'each regi
 assert.match(html, /<script src="service-area-data\.js"><\/script>/i);
 assert.match(html, /<script src="service-area-directory\.js"><\/script>/i);
 assert.match(directoryScript, /region\.localities/i);
-assert.match(directoryScript, /document\.createElement\('span'\)/i);
-assert.doesNotMatch(directoryScript, /service-areas\//i, 'locality names do not create individual locality links');
+assert.match(directoryScript, /document\.createElement\('a'\)/i, 'each locality is a contact shortcut');
+assert.match(directoryScript, /className\s*=\s*['"]area-region__locality-link['"]/i, 'locality links retain a dedicated style hook');
+assert.match(directoryScript, /contact\.html\?suburb=/i, 'locality links route to the contact page');
+assert.match(directoryScript, /encodeURIComponent\(locality\.name\)/i, 'suburb names are safely encoded in the contact URL');
+assert.match(directoryScript, /#enquiry/i, 'locality links target the enquiry form');
+assert.doesNotMatch(directoryScript, /service-areas\//i, 'locality names do not create individual locality pages');
 console.log('Six-region directory contract passed.');

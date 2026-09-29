@@ -617,8 +617,10 @@ textarea {
 .area-region h2 a:hover, .area-region h3 a:hover { color: #075873; }
 .area-region__intro { max-width: 42ch; margin: .75rem 0 1.5rem; color: #526a70; }
 .area-region__localities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .15rem 1.25rem; padding-top: 1.15rem; border-top: 1px solid #dce6e2; }
-.area-region__localities span { position: relative; display: block; padding: .58rem 0 .58rem 1rem; color: #173d38; font-weight: 700; }
-.area-region__localities span::before { content: '•'; position: absolute; left: 0; color: var(--region-accent); }
+.area-region__locality-link { position: relative; display: block; padding: .58rem 0 .58rem 1rem; color: #173d38; font-weight: 700; text-decoration: none; }
+.area-region__locality-link::before { content: '•'; position: absolute; left: 0; color: var(--region-accent); }
+.area-region__locality-link:hover { color: #075873; text-decoration: underline; text-decoration-color: var(--region-accent); text-decoration-thickness: 2px; text-underline-offset: .2rem; }
+.area-region__locality-link:focus-visible { outline: 3px solid var(--region-accent); outline-offset: 3px; border-radius: .2rem; }
 @media (max-width: 700px) { .area-regions { grid-template-columns: 1fr; gap: 1rem; }.area-region { min-height: 0; padding: 1.4rem; }.area-region__localities { grid-template-columns: 1fr; }.area-region__meta { margin-bottom: 1.15rem; } }
 @media (prefers-reduced-motion: reduce) { .area-region { transition: none; } }
 

@@ -9,9 +9,11 @@
     if (!region) return;
 
     list.replaceChildren(...region.localities.map((locality) => {
-      const name = document.createElement('span');
-      name.textContent = locality.name;
-      return name;
+      const link = document.createElement('a');
+      link.className = 'area-region__locality-link';
+      link.href = `contact.html?suburb=${encodeURIComponent(locality.name)}#enquiry`;
+      link.textContent = locality.name;
+      return link;
     }));
   });
 })();
