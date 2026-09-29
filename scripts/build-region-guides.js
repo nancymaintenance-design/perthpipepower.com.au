@@ -14,6 +14,13 @@ function guideMain(guide) {
   return `<main id="main"><section class="page-hero"><div class="shell"><p class="breadcrumbs"><a href="/">Home</a> / <a href="service-areas.html">Areas</a> / ${esc(guide.name)}</p><span class="eyebrow">Perth service region</span><h1>${esc(guide.title)}</h1><p>${esc(guide.intro)}</p></div></section><section class="section"><div class="shell"><span class="eyebrow">Core services</span><h2>Plumbing and electrical services in ${esc(guide.name)}</h2><div class="rich-grid">${cards}</div></div></section><section class="rich-band"><div class="shell"><span class="eyebrow">Service scenarios</span><h2>Prepare a clear service enquiry</h2><div class="rich-grid">${scenarios}</div></div></section><section class="section"><div class="shell split"><div><span class="eyebrow">How we scope the work</span><h2>Clear information before work is confirmed</h2><ol class="list-check">${process}</ol></div><aside class="panel"><h3>Property and maintenance context</h3><p>${esc(guide.property)}</p><a class="button" href="contact.html">Send an enquiry</a></aside></div></section><section class="section"><div class="shell"><span class="eyebrow">Frequently asked questions</span><h2>${esc(guide.name)} plumbing and electrical FAQ</h2><div class="rich-grid">${faqs}</div></div></section><section class="rich-band"><div class="shell split"><div><span class="eyebrow">Safety first</span><h2>Describe the issue without taking risks</h2><p>Do not approach a hazard, dismantle equipment or attempt electrical work. For immediate danger, call 000.</p></div><aside class="panel"><h3>Need plumbing or electrical help?</h3><p>Tell us the property region, what is happening and any access details.</p><a class="button" href="contact.html">Contact Ellis Services Group</a></aside></div></section></main>`;
 }
 
+function guideMainWithGallery(guide) {
+  return guideMain(guide).replace(
+    '</main>',
+    '<section class="section electrical-work-gallery-section"><div class="shell text-column"><span class="eyebrow">Electrical work examples</span><h2>Examples of electrical work completed by our team</h2><p>These images show general electrical work examples. They are not presented as work completed in a specific region or property.</p></div><div class="shell" data-electrical-work-gallery></div></section></main>',
+  );
+}
+
 function guideSchema(guide) {
   const canonical = `${origin}/${guide.route}`;
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': [
@@ -31,8 +38,11 @@ function applyGuide(source, guide) {
     .replace(/<title>[\s\S]*?<\/title>/i, `<title>${esc(guide.title)} | Ellis Services Group</title>`)
     .replace(/<meta\s+name="description"[\s\S]*?(?:\/>|>)/i, `<meta name="description" content="${esc(guide.description)}">`)
     .replace(/<link\s+rel="canonical"[\s\S]*?(?:\/>|>)/i, `<link rel="canonical" href="${canonical}">`)
+    .replace(/<meta property="og:title" content="[^"]*">/i, `<meta property="og:title" content="${esc(guide.title)} | Ellis Services Group">`)
+    .replace(/<meta property="og:description" content="[^"]*">/i, `<meta property="og:description" content="${esc(guide.description)}">`)
+    .replace(/<meta property="og:url" content="[^"]*">/i, `<meta property="og:url" content="${canonical}">`)
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/i, schema)
-    .replace(/<main\b[^>]*>[\s\S]*?<\/main>/i, guideMain(guide));
+    .replace(/<main\b[^>]*>[\s\S]*?<\/main>/i, guideMainWithGallery(guide));
 }
 
 function build() {
@@ -44,4 +54,4 @@ function build() {
 }
 
 if (require.main === module) build();
-module.exports = { applyGuide, guideMain, guideSchema, regionGuides };
+module.exports = { applyGuide, guideMain, guideMainWithGallery, guideSchema, regionGuides };
