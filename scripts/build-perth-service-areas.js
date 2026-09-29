@@ -16,6 +16,7 @@ const REGIONS = [
 const VALID_REGIONS = new Set(REGIONS.map(({ name }) => name));
 const VALID_CASE_STATUSES = new Set(["pending", "ready"]);
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const serviceHrefPattern = /^\.\.\/[a-z0-9]+(?:-[a-z0-9]+)*\.html$/;
 const escapeHtml = (value) =>
   String(value).replace(
     /[&<>"']/g,
@@ -28,6 +29,31 @@ const escapeHtml = (value) =>
         "'": "&#39;",
       })[character],
   );
+
+function assertPriorityRecord(priority, slug) {
+  if (!priority || typeof priority !== "object")
+    throw new Error(`Priority locality requires a record: ${slug}`);
+  for (const field of ["title", "description", "h1", "intro", "quote"])
+    if (typeof priority[field] !== "string" || !priority[field].trim())
+      throw new Error(`Priority locality requires ${field}: ${slug}`);
+  if (!Array.isArray(priority.services) || priority.services.length < 2)
+    throw new Error(`Priority locality requires at least two services: ${slug}`);
+  for (const service of priority.services)
+    if (
+      !service ||
+      !serviceHrefPattern.test(service.href || "") ||
+      !service.title ||
+      !service.copy
+    )
+      throw new Error(`Priority locality has an invalid service link: ${slug}`);
+  if (!Array.isArray(priority.process) || priority.process.length < 3)
+    throw new Error(`Priority locality requires a three-step process: ${slug}`);
+  if (!Array.isArray(priority.faqs) || priority.faqs.length < 2)
+    throw new Error(`Priority locality requires at least two FAQs: ${slug}`);
+  for (const faq of priority.faqs)
+    if (!faq || !faq.q || !faq.a)
+      throw new Error(`Priority locality has an invalid FAQ: ${slug}`);
+}
 
 function loadLocalities(
   datasetPath = path.join(ROOT, "data", "perth-suburbs.json"),
@@ -49,6 +75,7 @@ function loadLocalities(
       throw new Error(`Unknown locality region: ${locality.region}`);
     if (!VALID_CASE_STATUSES.has(locality.caseStatus))
       throw new Error(`Unknown case status: ${locality.caseStatus}`);
+    if (locality.priority) assertPriorityRecord(locality.priority, locality.slug);
     if (!Array.isArray(locality.nearby) || locality.nearby.length < 2)
       throw new Error(`Locality requires two nearby areas: ${locality.slug}`);
     slugs.add(locality.slug);

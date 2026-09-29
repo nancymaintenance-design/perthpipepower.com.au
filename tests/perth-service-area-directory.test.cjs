@@ -11,6 +11,23 @@ const {
 const localities = loadLocalities();
 const directory = buildDirectoryData(localities);
 
+const priorityLocalities = localities.filter(({ priority }) => priority);
+assert.equal(priorityLocalities.length, 12, 'twelve locality pages are prioritised for search');
+assert.equal(
+  new Set(priorityLocalities.map(({ slug }) => slug)).size,
+  priorityLocalities.length,
+  'every priority locality has a unique slug',
+);
+for (const locality of priorityLocalities) {
+  assert.ok(locality.priority.title, `${locality.slug} has a priority title`);
+  assert.ok(locality.priority.description, `${locality.slug} has a priority description`);
+  assert.ok(locality.priority.h1, `${locality.slug} has a priority H1`);
+  assert.ok(
+    locality.priority.services.length >= 2,
+    `${locality.slug} links to at least two relevant services`,
+  );
+}
+
 assert.equal(directory.regions.length, 6, 'the directory has six regions');
 assert.ok(localities.length >= 120, 'the catalogue contains at least 120 localities');
 assert.equal(

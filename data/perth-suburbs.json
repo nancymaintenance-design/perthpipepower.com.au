@@ -19,7 +19,24 @@
       "perth",
       "west-perth"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "East Perth Plumber & Electrician | Electrical Repairs & Blocked Drains",
+      "description": "Plumbing and electrical repair enquiries in East Perth, including blocked drains, electrical faults, hot water and property maintenance requests.",
+      "h1": "East Perth plumber and electrician services",
+      "intro": "For an East Perth property, share the issue, access details and whether the work is plumbing or electrical so the enquiry can be assessed clearly.",
+      "services": [
+        { "href": "../electrical.html", "title": "Electrical repairs", "copy": "Power faults, lighting, power points and safety-related electrical enquiries." },
+        { "href": "../blocked-drains-perth.html", "title": "Blocked drains", "copy": "Drainage and blocked toilet enquiries with clear symptom details." },
+        { "href": "../property-management.html", "title": "Property maintenance", "copy": "Plumbing and electrical maintenance coordination for property managers." }
+      ],
+      "process": ["Describe the issue and property access requirements.", "Receive a clear scope and quote discussion before work is confirmed.", "Keep the completed-work and invoice details with the property records."],
+      "quote": "Quotes depend on the issue, access and confirmed scope. Please provide the property suburb and the symptoms you can safely observe.",
+      "faqs": [
+        { "q": "What should an East Perth maintenance enquiry include?", "a": "Include the property address, the problem, access details and whether the request is plumbing or electrical." },
+        { "q": "Can plumbing and electrical requests be included together?", "a": "Yes. Identify each issue separately so the required work can be scoped clearly." }
+      ]
+    }
   },
   {
     "name": "West Perth",
@@ -85,7 +102,24 @@
       "leederville",
       "subiaco"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "North Perth Plumber & Electrician | Electrical Repairs & Blocked Drains",
+      "description": "North Perth plumbing and electrical repair enquiries for blocked drains, water leaks, power faults, lighting and hot water problems.",
+      "h1": "North Perth plumbing and electrical repairs",
+      "intro": "North Perth property owners and managers can send one enquiry with the symptoms, location at the property and preferred access information.",
+      "services": [
+        { "href": "../blocked-drains-perth.html", "title": "Blocked drain repairs", "copy": "Blocked sinks, toilets and drainage concerns." },
+        { "href": "../electrical.html", "title": "Electrical repairs", "copy": "Electrical fault, lighting and power point enquiries." },
+        { "href": "../hot-water-problems-perth.html", "title": "Hot water problems", "copy": "No-hot-water and system performance enquiries." }
+      ],
+      "process": ["Record the symptoms and any immediate safety concerns.", "Confirm the scope and quote approach before work is approved.", "Receive the completed-work information for your records."],
+      "quote": "An accurate quote needs the property details and the work scope. Avoid dismantling plumbing or electrical equipment before an assessment.",
+      "faqs": [
+        { "q": "Can I report a blocked toilet and an electrical fault together?", "a": "Yes. List each issue and its location separately in the enquiry." },
+        { "q": "What should I do if water is near electrical equipment?", "a": "Do not approach the hazard. Keep people clear and seek urgent assistance where required." }
+      ]
+    }
   },
   {
     "name": "Subiaco",
@@ -228,7 +262,24 @@
       "nollamara",
       "wanneroo"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Joondalup Electrician & Plumber | Electrical Repairs & Hot Water",
+      "description": "Joondalup electrician and plumber enquiries for electrical repairs, hot water problems, power faults, plumbing maintenance and drainage concerns.",
+      "h1": "Joondalup electrician and plumber services",
+      "intro": "Use this page to request plumbing or electrical work for a Joondalup property, with the issue and access details included from the start.",
+      "services": [
+        { "href": "../electrical.html", "title": "Electrical repairs", "copy": "Faults, lighting, power points and electrical maintenance enquiries." },
+        { "href": "../hot-water-problems-perth.html", "title": "Hot water repairs", "copy": "No-hot-water and hot-water-system enquiries." },
+        { "href": "../plumbing.html", "title": "Plumbing repairs", "copy": "Leaks, taps, toilets and drainage concerns." }
+      ],
+      "process": ["Tell us what has changed and where it is happening.", "Confirm the scope, access and quote process.", "Keep the work details and invoice with the property records."],
+      "quote": "Quote requirements vary with the system, property access and confirmed scope. Include photos only where it is safe to do so.",
+      "faqs": [
+        { "q": "Can I request hot-water and electrical help in one Joondalup enquiry?", "a": "Yes. Describe the systems separately so the correct service scope can be considered." },
+        { "q": "Should I reset a safety switch repeatedly?", "a": "Do not repeatedly reset a switch that continues to trip; record what was operating and request electrical assistance." }
+      ]
+    }
   },
   {
     "name": "Wanneroo",
@@ -448,7 +499,24 @@
       "innaloo",
       "doubleview"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Scarborough Electrician & Plumber | Hot Water & Electrical Repairs",
+      "description": "Scarborough plumbing and electrical repair enquiries for hot water problems, power faults, lighting, leaks and drainage issues.",
+      "h1": "Scarborough electrical and plumbing repairs",
+      "intro": "For a Scarborough property, send the visible symptoms, property access details and the service type needed so the enquiry starts with useful information.",
+      "services": [
+        { "href": "../hot-water-problems-perth.html", "title": "Hot water problems", "copy": "Hot-water system and no-hot-water enquiries." },
+        { "href": "../lighting-power-points-perth.html", "title": "Lighting and power points", "copy": "Lighting, switches and power point repair enquiries." },
+        { "href": "../plumbing.html", "title": "Plumbing repairs", "copy": "Leaks, taps, toilets and drainage concerns." }
+      ],
+      "process": ["Describe the fault or plumbing symptom clearly.", "Discuss scope and quote requirements before work is confirmed.", "Retain the completed-work details for future maintenance."],
+      "quote": "The quote process begins with the system involved, the reported problem and safe access information. Final scope is confirmed before work proceeds.",
+      "faqs": [
+        { "q": "What information helps with a Scarborough hot-water enquiry?", "a": "Tell us whether there is no hot water, intermittent hot water or a visible system concern, plus the property address." },
+        { "q": "Can lighting and plumbing requests be submitted together?", "a": "Yes. Separate the requests by room or system to make the scope easier to understand." }
+      ]
+    }
   },
   {
     "name": "Doubleview",
@@ -492,7 +560,24 @@
       "oconnor",
       "south-fremantle"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Fremantle Plumber & Electrician | Plumbing & Electrical Repairs",
+      "description": "Fremantle plumbing and electrical repair enquiries for power faults, water leaks, drainage, lighting, hot water and property maintenance work.",
+      "h1": "Fremantle plumbing and electrical repair services",
+      "intro": "For plumbing or electrical work at a Fremantle property, provide the issue, property address, access constraints and any relevant safety information.",
+      "services": [
+        { "href": "../plumbing.html", "title": "Plumbing repairs", "copy": "Leak, drainage, tap, toilet and hot-water enquiries." },
+        { "href": "../electrical.html", "title": "Electrical repairs", "copy": "Power, lighting, switch and electrical-fault enquiries." },
+        { "href": "../property-management.html", "title": "Property maintenance", "copy": "Coordinated plumbing and electrical maintenance enquiries." }
+      ],
+      "process": ["Describe the problem and identify its location at the property.", "Confirm safe access, scope and quote requirements.", "Receive completed-work details for property records."],
+      "quote": "An accurate quote follows the confirmed scope. Include access information and only share images when it is safe to do so.",
+      "faqs": [
+        { "q": "What type of Fremantle properties can submit an enquiry?", "a": "Property owners and managers can provide the address, service type and issue details through the enquiry form." },
+        { "q": "What if I am not sure whether the issue is plumbing or electrical?", "a": "Choose not sure and describe the symptoms; this helps direct the enquiry appropriately." }
+      ]
+    }
   },
   {
     "name": "South Fremantle",
@@ -679,7 +764,24 @@
       "willetton",
       "leeming"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Canning Vale Plumber & Electrician | Leak Detection & Drain Repairs",
+      "description": "Canning Vale plumber and electrician enquiries for leak detection, blocked drains, electrical repairs, hot water and household maintenance.",
+      "h1": "Canning Vale leak detection, drain and electrical repairs",
+      "intro": "Canning Vale property enquiries are easier to assess when they include the symptoms, the affected room or area, and whether water or power is involved.",
+      "services": [
+        { "href": "../water-leak-detection-perth.html", "title": "Leak detection", "copy": "Water leak and unexplained-water-use enquiries." },
+        { "href": "../blocked-drains-perth.html", "title": "Drain repairs", "copy": "Blocked drain, toilet and sink enquiries." },
+        { "href": "../electrical.html", "title": "Electrical repairs", "copy": "Power faults, lighting and electrical maintenance enquiries." }
+      ],
+      "process": ["Tell us where the symptom is visible and what has changed.", "Confirm the work scope and quote process before approval.", "Keep the outcome details with the property records."],
+      "quote": "Leak and drain enquiries need the affected area, observed symptoms and property access information before the scope can be discussed.",
+      "faqs": [
+        { "q": "What should I include for a Canning Vale leak detection enquiry?", "a": "Describe where water is appearing, any change in water use and the property access details." },
+        { "q": "Can a blocked drain be assessed with another maintenance request?", "a": "Yes. List the drainage symptom separately from any other plumbing or electrical concern." }
+      ]
+    }
   },
   {
     "name": "Leeming",
@@ -734,7 +836,24 @@
       "morley",
       "cloverdale"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Belmont Electrician & Plumber | Safety Switches & Hot Water Repairs",
+      "description": "Belmont electrical and plumbing repair enquiries for safety switch issues, power faults, hot water problems, leaks and drainage.",
+      "h1": "Belmont safety switch, electrical and plumbing repairs",
+      "intro": "For a Belmont property, record the appliance or circuit involved if known, along with any plumbing symptoms and property access details.",
+      "services": [
+        { "href": "../safety-switch-tripping-perth.html", "title": "Safety switch issues", "copy": "Safety-switch and recurring-tripping enquiries." },
+        { "href": "../hot-water-problems-perth.html", "title": "Hot water repairs", "copy": "Hot-water system and no-hot-water enquiries." },
+        { "href": "../plumbing.html", "title": "Plumbing repairs", "copy": "Leaks, drainage and fixture repair enquiries." }
+      ],
+      "process": ["Note the symptoms and any safety concerns without approaching a hazard.", "Discuss scope, access and quote requirements.", "Keep the completed-work information for the property file."],
+      "quote": "For electrical work, do not dismantle equipment to investigate. A quote is based on the confirmed work scope and access requirements.",
+      "faqs": [
+        { "q": "What should I do when a safety switch keeps tripping?", "a": "Avoid repeatedly resetting it. Note what was operating and submit an electrical enquiry with the property details." },
+        { "q": "Can I report a Belmont hot-water issue at the same time?", "a": "Yes. Describe the hot-water issue separately so it can be included in the scope discussion." }
+      ]
+    }
   },
   {
     "name": "Cloverdale",
@@ -855,7 +974,24 @@
       "guildford",
       "woodbridge"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Midland Electrician & Plumber | Electrical Repairs & Safety Switches",
+      "description": "Midland electrician and plumber enquiries for electrical repairs, safety switches, blocked drains, hot water problems and property maintenance.",
+      "h1": "Midland electrical repairs, safety switches and plumbing",
+      "intro": "Submit a Midland property enquiry with the symptoms, whether power or water is affected, and the access information needed to assess the work.",
+      "services": [
+        { "href": "../electrical.html", "title": "Electrical repairs", "copy": "Electrical faults, lighting and power point enquiries." },
+        { "href": "../safety-switch-tripping-perth.html", "title": "Safety switches", "copy": "Recurring trips and safety-switch concerns." },
+        { "href": "../blocked-drains-perth.html", "title": "Blocked drains", "copy": "Drainage and blocked toilet enquiries." }
+      ],
+      "process": ["Record what is affected and any immediate risk.", "Confirm the work scope, access requirements and quote process.", "Store the completed-work details for later maintenance."],
+      "quote": "Quotes are based on the confirmed scope and property access. For electrical hazards, keep clear and seek urgent help where required.",
+      "faqs": [
+        { "q": "Can a Midland property enquiry include electrical and plumbing work?", "a": "Yes. Identify each issue separately and include where it is located at the property." },
+        { "q": "Should I provide photos of an electrical fault?", "a": "Only provide a photo if it can be taken safely without approaching the fault or removing covers." }
+      ]
+    }
   },
   {
     "name": "Woodbridge",
@@ -965,7 +1101,24 @@
       "nedlands",
       "cottesloe"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Claremont Plumber & Electrician | Power Points, Lighting & Plumbing",
+      "description": "Claremont plumber and electrician enquiries for lighting, power points, electrical repairs, water leaks, fixtures and plumbing maintenance.",
+      "h1": "Claremont lighting, power point and plumbing services",
+      "intro": "For a Claremont property, provide the service required, what is happening, the room or area affected and the property access details.",
+      "services": [
+        { "href": "../lighting-power-points-perth.html", "title": "Lighting and power points", "copy": "Lighting, switches and power point repair enquiries." },
+        { "href": "../electrical.html", "title": "Electrical repairs", "copy": "Electrical fault and maintenance enquiries." },
+        { "href": "../tap-mixer-repairs-perth.html", "title": "Tap and mixer repairs", "copy": "Fixture, tap and mixer repair enquiries." }
+      ],
+      "process": ["Describe the affected fixture, fitting or electrical point.", "Confirm the scope and quote process before any work is approved.", "Retain the completed-work details for the property."],
+      "quote": "The quote depends on the fitting, system condition, access and confirmed scope. Do not remove electrical covers or fittings to investigate.",
+      "faqs": [
+        { "q": "Can I request power point and lighting work together in Claremont?", "a": "Yes. List each room and the issue at each point so the work can be scoped clearly." },
+        { "q": "Can a tap repair be included in the same enquiry?", "a": "Yes. Include the fixture type and the visible symptom in the enquiry details." }
+      ]
+    }
   },
   {
     "name": "Cottesloe",
@@ -976,7 +1129,24 @@
       "claremont",
       "swanbourne"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Cottesloe Plumber & Electrician | Electrical & Plumbing Repairs",
+      "description": "Cottesloe plumbing and electrical repair enquiries for power faults, lighting, water leaks, hot water and household maintenance concerns.",
+      "h1": "Cottesloe electrical and plumbing repair services",
+      "intro": "Use the Cottesloe enquiry page to explain the property issue, affected system and safe access details before work is scoped.",
+      "services": [
+        { "href": "../electrical.html", "title": "Electrical repairs", "copy": "Power faults, lighting and electrical maintenance enquiries." },
+        { "href": "../water-leak-detection-perth.html", "title": "Water leak detection", "copy": "Water leak and unexplained-water-use enquiries." },
+        { "href": "../hot-water-problems-perth.html", "title": "Hot water problems", "copy": "Hot-water performance and system enquiries." }
+      ],
+      "process": ["Share the property address, symptoms and access conditions.", "Discuss the scope and quote requirements before confirming work.", "Keep records of the completed work and invoice."],
+      "quote": "The quote process begins once the system, symptoms and access requirements are known. Urgent hazards should be treated as safety matters first.",
+      "faqs": [
+        { "q": "What helps with a Cottesloe water leak enquiry?", "a": "Provide the affected area, visible signs of water and any change in water use, alongside the property address." },
+        { "q": "Can electrical and hot-water concerns be reported together?", "a": "Yes. Separate the symptoms by system so the request can be assessed accurately." }
+      ]
+    }
   },
   {
     "name": "Swanbourne",
@@ -1174,7 +1344,24 @@
       "chidlow",
       "aveley"
     ],
-    "caseStatus": "pending"
+    "caseStatus": "pending",
+    "priority": {
+      "title": "Ellenbrook Plumber & Electrician | Hot Water & Electrical Repairs",
+      "description": "Ellenbrook plumbing and electrical repair enquiries for hot water problems, fault finding, blocked drains, lighting and residential maintenance.",
+      "h1": "Ellenbrook hot water, electrical and plumbing repairs",
+      "intro": "For an Ellenbrook property, explain the issue, affected system and access information so the service request can be assessed without assumptions.",
+      "services": [
+        { "href": "../hot-water-problems-perth.html", "title": "Hot water repairs", "copy": "No-hot-water and system-performance enquiries." },
+        { "href": "../power-faults-perth.html", "title": "Power faults", "copy": "Loss-of-power and recurring electrical-fault enquiries." },
+        { "href": "../blocked-drains-perth.html", "title": "Blocked drains", "copy": "Blocked drain and toilet enquiries." }
+      ],
+      "process": ["Describe what is happening and any safety concern.", "Confirm property access, work scope and quote requirements.", "Retain the work details for future maintenance."],
+      "quote": "A quote is based on the issue, system and access conditions after the scope has been confirmed. Do not attempt repairs to electrical equipment yourself.",
+      "faqs": [
+        { "q": "What should I include in an Ellenbrook hot-water enquiry?", "a": "Tell us the system concern, when the problem started, whether any hot water is available and the property access details." },
+        { "q": "What if the property has both a power fault and drainage issue?", "a": "List the issues separately and include where each is occurring at the property." }
+      ]
+    }
   },
   {
     "name": "Aveley",
@@ -1317,6 +1504,23 @@
       "mundaring",
       "lesmurdie"
     ],
+    "priority": {
+      "title": "Kalamunda Electrician & Plumber | Electrical Fault Finding & Hot Water",
+      "description": "Kalamunda electrician and plumber enquiries for electrical fault finding, hot water problems, safety switches, leaks and household maintenance.",
+      "h1": "Kalamunda electrical fault finding and plumbing repairs",
+      "intro": "For a Kalamunda property, provide a clear description of the problem, the affected service and any access or safety information.",
+      "services": [
+        { "href": "../power-faults-perth.html", "title": "Electrical fault finding", "copy": "Power loss, recurring trips and fault enquiries." },
+        { "href": "../hot-water-problems-perth.html", "title": "Hot water problems", "copy": "Hot-water system and no-hot-water enquiries." },
+        { "href": "../plumbing.html", "title": "Plumbing repairs", "copy": "Leaks, taps, toilets and drainage concerns." }
+      ],
+      "process": ["Record the symptoms without approaching an electrical hazard.", "Confirm access, scope and the quote approach before work is approved.", "Keep completed-work information for property maintenance records."],
+      "quote": "Electrical and plumbing quotes require a confirmed scope and safe property access. For immediate danger, call 000.",
+      "faqs": [
+        { "q": "What information is useful for a Kalamunda electrical fault enquiry?", "a": "Describe what lost power, whether a safety switch tripped and any relevant access details." },
+        { "q": "Can plumbing work be included with electrical fault finding?", "a": "Yes. Include the plumbing issue as a separate item so both scopes can be understood." }
+      ]
+    },
     "caseStatus": "pending"
   },
   {
