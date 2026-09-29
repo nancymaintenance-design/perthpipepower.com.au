@@ -29,9 +29,10 @@ assert.doesNotMatch(main, /type="search"|area-search|service-areas\//i);
 for (const { file, name } of regions) {
   const html = read(file);
   assert.match(html, new RegExp(`<h1>[^<]*${name.replace(/[&]/g, '&amp;')}[^<]*<\\/h1>`, 'i'));
-  assert.match(html, /Service scenarios/i);
-  assert.match(html, /How we scope the work/i);
-  assert.match(html, /Frequently asked questions/i);
+  assert.match(html, /Plumbing and electrical repairs/i);
+  assert.match(html, /Homes, rentals, strata and managed properties/i);
+  assert.match(html, /Assessment and quote discussion/i);
+  assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i);
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(html, /service-areas\//i, `${file} does not promote suburb URLs`);
