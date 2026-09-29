@@ -14,9 +14,10 @@ const regions = [
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const directory = read('service-areas.html');
 const main = directory.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] || '';
-const guideList = main.match(/<div\b[^>]*data-region-guide-list[^>]*>([\s\S]*?)<\/div>/i)?.[1] || '';
-const directoryLinks = [...guideList.matchAll(/<a\s+[^>]*href="([^"]+)"/gi)].map((match) => match[1]);
+const regionCards = [...main.matchAll(/<article\b[^>]*class="area-region[^\"]*"[\s\S]*?<\/article>/gi)].map((match) => match[0]);
+const directoryLinks = regionCards.flatMap((card) => [...card.matchAll(/<a\s+[^>]*href="([^"]+)"/gi)].map((match) => match[1]));
 
+assert.equal(regionCards.length, 6);
 assert.equal(directoryLinks.length, 6, 'the directory exposes exactly six customer destinations');
 assert.deepEqual(
   new Set(directoryLinks),
@@ -28,9 +29,10 @@ assert.doesNotMatch(main, /type="search"|area-search|service-areas\//i);
 for (const { file, name } of regions) {
   const html = read(file);
   assert.match(html, new RegExp(`<h1>[^<]*${name.replace(/[&]/g, '&amp;')}[^<]*<\\/h1>`, 'i'));
-  assert.match(html, /Service scenarios/i);
-  assert.match(html, /How we scope the work/i);
-  assert.match(html, /Frequently asked questions/i);
+  assert.match(html, /Plumbing and electrical repairs/i);
+  assert.match(html, /Homes, rentals, strata and managed properties/i);
+  assert.match(html, /Assessment and quote discussion/i);
+  assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i);
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(html, /service-areas\//i, `${file} does not promote suburb URLs`);
