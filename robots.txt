@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://perthpipepower.com.au/sitemap.xml
+# Public machine-readable service summary: https://perthpipepower.com.au/ai-content.json

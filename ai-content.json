@@ -1,0 +1,26 @@
+{
+  "name": "Ellis Services Group",
+  "website": "https://perthpipepower.com.au/",
+  "purpose": "Public machine-readable summary of visible Ellis Services Group service information.",
+  "business": {
+    "telephone": "0413 477 667",
+    "email": "maxinemaintenance.au@outlook.com",
+    "address": "140 St Georges Terrace, Perth WA 6000, Australia"
+  },
+  "services": [
+    "Electrical repairs and fault enquiries",
+    "Safety switches, lighting and power points",
+    "Blocked drains, leak concerns and plumbing repairs",
+    "Hot water enquiries",
+    "Property, rental and strata maintenance enquiries"
+  ],
+  "regions": [
+    { "name": "CBD & Inner Perth", "url": "https://perthpipepower.com.au/perth-cbd-inner-suburbs.html" },
+    { "name": "Northern Suburbs", "url": "https://perthpipepower.com.au/northern-suburbs.html" },
+    { "name": "Southern Suburbs", "url": "https://perthpipepower.com.au/southern-suburbs.html" },
+    { "name": "Eastern Suburbs", "url": "https://perthpipepower.com.au/eastern-suburbs.html" },
+    { "name": "Western Suburbs", "url": "https://perthpipepower.com.au/western-suburbs.html" },
+    { "name": "Perth Hills & Swan Valley", "url": "https://perthpipepower.com.au/perth-hills-swan-valley.html" }
+  ],
+  "sourcePolicy": "This feed reflects visible website information. Service scope and quotes are discussed from the property issue, access details and confirmed requirements."
+}

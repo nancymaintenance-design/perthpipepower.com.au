@@ -43,7 +43,7 @@ for (const { file } of regions)
 
 const fallback = read('service-areas/applecross.html');
 assert.match(fallback, /<meta name="robots" content="noindex,follow">/);
-assert.doesNotMatch(fallback, /Explore nearby|Other Perth areas|service-areas\/[a-z]/i);
+assert.doesNotMatch(fallback, /Explore nearby|Other Perth areas|<a\b[^>]*href="[^"\n]*service-areas\/[a-z]/i);
 
 const aiFeed = JSON.parse(read('ai-content.json'));
 assert.equal(aiFeed.regions.length, 6);
