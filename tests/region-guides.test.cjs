@@ -9,6 +9,7 @@ for (const guide of regionGuides) {
   assert.match(html, /Plumbing and electrical repairs/i);
   assert.match(html, /Homes, rentals, strata and managed properties/i);
   assert.match(html, /Assessment and quote discussion/i);
+  assert.match(html, new RegExp(`Send an enquiry for ${guide.name.replace(/[&]/g, '&amp;')}`, 'i'));
   assert.match(html, /blocked drains|leak concerns|hot-water/i);
   assert.match(html, /electrical repairs|fault finding|safety switches|switchboards|lighting and power points/i);
   assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i, 'regional guides use prose, not shallow service card grids');
