@@ -6,6 +6,7 @@ const {
   loadLocalities,
   buildDirectoryData,
   renderLocalityPage,
+  updateSitemap,
 } = require('../scripts/build-perth-service-areas');
 
 const localities = loadLocalities();
@@ -45,6 +46,13 @@ assert.match(nonPriorityHtml, /<meta name="robots" content="noindex,follow">/);
 assert.doesNotMatch(nonPriorityHtml, /Explore nearby|Other Perth areas|nearbyLinks/);
 
 assert.equal(directory.regions.length, 6, 'the directory has six regions');
+for (const region of directory.regions) {
+  assert.equal(region.featuredLocalities.length, 2, `${region.name} has two featured locality links`);
+  assert.ok(
+    region.featuredLocalities.every(({ priority }) => priority),
+    `${region.name} only surfaces priority localities in its initial view`,
+  );
+}
 assert.ok(localities.length >= 120, 'the catalogue contains at least 120 localities');
 assert.equal(
   new Set(localities.map(({ slug }) => slug)).size,
@@ -74,6 +82,19 @@ assert.ok(
   'pending locality pages are excluded from the sitemap',
 );
 
+const prioritySitemapFixture = path.join(__dirname, 'fixtures-priority-sitemap.xml');
+fs.writeFileSync(prioritySitemapFixture, '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>');
+updateSitemap(localities, prioritySitemapFixture);
+const prioritySitemap = fs.readFileSync(prioritySitemapFixture, 'utf8');
+assert.equal(
+  (prioritySitemap.match(/<loc>https:\/\/perthpipepower\.com\.au\/service-areas\//g) || []).length,
+  12,
+  'the sitemap contains exactly the twelve priority locality URLs',
+);
+for (const locality of priorityLocalities)
+  assert.match(prioritySitemap, new RegExp(`/service-areas/${locality.slug}\\.html`));
+fs.unlinkSync(prioritySitemapFixture);
+
 const directoryPage = fs.readFileSync(path.join(__dirname, '..', 'service-areas.html'), 'utf8');
 assert.match(directoryPage, /type="search"/);
 assert.match(directoryPage, /aria-controls="area-search-results"/);
@@ -89,6 +110,7 @@ assert.match(directoryScript, /area-search-clear/, 'the search has a clear actio
 assert.match(directoryScript, /No matching Perth locality/, 'the search has a no-results state');
 assert.match(directoryScript, /area-region__meta/, 'each region renders a card metadata row');
 assert.match(directoryScript, /area-region__localities/, 'each region renders a dedicated locality list');
+assert.match(directoryScript, /featuredLocalities/, 'the initial directory uses featured locality links');
 assert.match(fs.readFileSync(path.join(__dirname, '..', 'site.css'), 'utf8'), /\.area-region__localities\s*\{/, 'the locality list has card styling');
 assert.match(generatedPage, /noindex,follow/, 'pending locality pages remain noindex');
 assert.match(generatedPage, /data-enquiry-form/, 'generated locality pages retain the enquiry hook');

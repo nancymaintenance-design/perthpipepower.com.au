@@ -93,12 +93,16 @@ function loadLocalities(
 
 function buildDirectoryData(localities) {
   return {
-    regions: REGIONS.map((region) => ({
-      ...region,
-      localities: localities.filter(
+    regions: REGIONS.map((region) => {
+      const regionalLocalities = localities.filter(
         (locality) => locality.region === region.name,
-      ),
-    })),
+      );
+      return {
+        ...region,
+        localities: regionalLocalities,
+        featuredLocalities: regionalLocalities.filter(({ priority }) => priority),
+      };
+    }),
     localities,
   };
 }
@@ -187,8 +191,8 @@ function updateSitemap(localities, sitemapPath = SITEMAP_PATH) {
     /\s*<url><loc>https:\/\/perthpipepower\.com\.au\/service-areas\/[^<]+<\/loc><\/url>/g,
     "",
   );
-  const readyPages = localities
-    .filter(({ caseStatus }) => caseStatus === "ready")
+  const priorityPages = localities
+    .filter(({ priority }) => priority)
     .map(
       ({ slug }) =>
         `  <url><loc>https://perthpipepower.com.au/service-areas/${slug}.html</loc></url>`,
@@ -198,7 +202,7 @@ function updateSitemap(localities, sitemapPath = SITEMAP_PATH) {
     sitemapPath,
     withoutGeneratedPages.replace(
       /\s*<\/urlset>\s*$/,
-      readyPages ? `\n${readyPages}\n</urlset>` : "\n</urlset>",
+      priorityPages ? `\n${priorityPages}\n</urlset>` : "\n</urlset>",
     ),
   );
 }

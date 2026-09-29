@@ -21,7 +21,7 @@
       const meta = document.createElement('div');
       meta.className = 'area-region__meta';
       const count = document.createElement('span');
-      count.textContent = `${region.localities.length} localities`;
+      count.textContent = `${region.featuredLocalities.length} priority localities`;
       const guide = document.createElement('a');
       guide.href = region.hub;
       guide.textContent = 'Regional guide';
@@ -33,10 +33,10 @@
       heading.append(hub);
       const introduction = document.createElement('p');
       introduction.className = 'area-region__intro';
-      introduction.textContent = 'Choose a locality below to view plumbing, electrical services and the enquiry form.';
+      introduction.textContent = 'Browse priority localities below, or use search to find every covered Perth locality.';
       const list = document.createElement('div');
       list.className = 'area-region__localities';
-      list.append(...region.localities.map(createLink));
+      list.append(...region.featuredLocalities.map(createLink));
       section.append(meta, heading, introduction, list);
       return section;
     }));
