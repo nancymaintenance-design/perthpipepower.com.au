@@ -43,4 +43,3 @@ The themes determine helpful service modules, not a claim that any specific inci
 - Automated tests prove that only the twelve priority pages are indexable, sitemap entries match those pages, and generated pages do not render nearby-suburb links.
 - The existing SEO validation and a local link/metadata crawl must pass.
 - A local browser check verifies the area search and representative desktop/mobile pages.
-

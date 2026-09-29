@@ -144,4 +144,3 @@ Start a static local server and check the service-area page plus one priority an
 - [ ] **Step 4: Commit and publish**
 
 Commit verified changes, push the current branch to `origin/main` through GitHub CLI, then confirm the live URLs return the expected metadata.
-
