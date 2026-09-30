@@ -46,6 +46,8 @@ for (const { file } of regions)
 const fallback = read('service-areas/applecross.html');
 assert.match(fallback, /<meta name="robots" content="noindex,follow">/);
 assert.doesNotMatch(fallback, /Explore nearby|Other Perth areas|<a\b[^>]*href="[^"\n]*service-areas\/[a-z]/i);
+assert.match(fallback, /http-equiv="refresh" content="0;url=\.\.\/contact\.html\?suburb=Applecross#enquiry"/);
+assert.match(fallback, /window\.location\.replace\("\.\.\/contact\.html\?suburb=Applecross#enquiry"\)/);
 
 const aiFeed = JSON.parse(read('ai-content.json'));
 assert.equal(aiFeed.regions.length, 6);

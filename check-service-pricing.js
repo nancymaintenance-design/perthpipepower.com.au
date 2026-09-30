@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const root = path.resolve(__dirname, '..');
+const root = __dirname;
 const pages = {
   'water-leak-detection-perth.html': ['Water leak detection', 'AUD $275–$550', 'per repair'],
   'burst-pipe-repair-perth.html': ['Burst-pipe repair', 'AUD $275–$990', 'per repair'],
@@ -54,9 +54,9 @@ for (const file of Object.keys(pages)) {
 for (const file of hubs) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
   const guideIndex = html.indexOf('Ellis Price Guide');
-  const servicesIndex = html.indexOf('Common plumbing work we can discuss') !== -1
-    ? html.indexOf('Common plumbing work we can discuss')
-    : html.indexOf('Common electrical work we can discuss');
+  const servicesIndex = html.indexOf('Common plumbing services we provide') !== -1
+    ? html.indexOf('Common plumbing services we provide')
+    : html.indexOf('Common electrical services we provide');
   const bottomBookingIndex = html.indexOf('A practical booking path');
   if (guideIndex === -1) failures.push(`${file}: missing Ellis Price Guide marker`);
   if (servicesIndex === -1) failures.push(`${file}: missing common-services heading`);

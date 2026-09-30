@@ -23,7 +23,7 @@ assert.match(home, /<img\s+class="footer-instagram__icon"\s+src="instagram-icon\
 assert.ok(fs.existsSync(path.join(root, 'instagram-icon.png')), 'the supplied Instagram icon asset is present');
 assert.match(
   home,
-  /<p>Plumbing and electrical repair enquiries for Perth properties\.<\/p>\s*<a\s+class="footer-instagram"/,
+  /<p>Dedicated Perth plumbing and electrical repair team, serving properties across Perth\.<\/p>\s*<a\s+class="footer-instagram"/,
   'the Instagram entry appears below the footer brand description',
 );
 
