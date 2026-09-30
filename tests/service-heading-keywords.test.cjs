@@ -11,8 +11,8 @@ const services = [
   ['burst-pipe-repair-perth.html', 'Burst Pipe Repairs Perth'],
   ['lighting-power-points-perth.html', 'Power Point &amp; Lighting Repairs Perth'],
   ['property-management.html', 'Property Manager Plumbing &amp; Electrical Perth'],
-  ['fixtures-appliances-perth.html', 'Appliance Connections, Taps &amp; Fixtures Perth'],
-  ['renewables-smart-home-perth.html', 'Smart Lighting &amp; Energy Electrical Services Perth'],
+  ['fixtures-appliances-perth.html', 'Fixture, Tap &amp; Appliance Connection Services in Perth'],
+  ['renewables-smart-home-perth.html', 'Smart Home &amp; Energy Electrical Services in Perth'],
 ];
 
 for (const [page, heading] of services) {

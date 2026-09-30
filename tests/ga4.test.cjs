@@ -11,6 +11,6 @@ test('every public HTML page has one Perth Pipe Power GA4 configuration', () => 
   for (const relative of pages) {
     const html = fs.readFileSync(path.join(root, relative), 'utf8');
     assert.match(html, new RegExp(`https://www\\.googletagmanager\\.com/gtag/js\\?id=${measurementId}`), relative);
-    assert.equal((html.match(new RegExp(`gtag\\('config', '${measurementId}'\\);`, 'g')) || []).length, 1, relative);
+    assert.equal((html.match(new RegExp(`gtag\\(\\s*["']config["']\\s*,\\s*["']${measurementId}["']\\s*\\)\\s*;`, 'g')) || []).length, 1, relative);
   }
 });

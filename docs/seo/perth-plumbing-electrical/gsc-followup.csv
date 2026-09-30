@@ -1,0 +1,8 @@
+check,owner_or_url,baseline_period,baseline_value,followup_window,success_signal,manual_action
+Search appearance,site property,2026-08-31 to 2026-09-27,7 clicks; 2523 impressions; 0.28% CTR; position 79.9,28 and 56 days,More qualified impressions and improved CTR/position without index coverage loss,Export same dimensions and compare like-for-like
+Blocked-drain owner,blocked-drains-perth.html,2026-06-29 to 2026-09-27,1 click; 1008 impressions; position 83.5,28 and 56 days,Improved impressions/position for blocked-drain terms,Inspect URL and query-page pairs
+Leak-detection owner,water-leak-detection-perth.html,2026-06-29 to 2026-09-27,1 click; 883 impressions; position 81.8,28 and 56 days,Improved impressions/position for leak-detection terms,Inspect URL and query-page pairs
+Burst-pipe owner,burst-pipe-repair-perth.html,2026-06-29 to 2026-09-27,0 clicks; 360 impressions; position 75.8,28 and 56 days,Improved impressions/position for burst-pipe terms,Inspect URL and query-page pairs
+Electrical owner,electrical.html,2026-06-29 to 2026-09-27,0 clicks; 56 impressions; position 64.7,28 and 56 days,Improved impressions/position for electrical-repair terms,Inspect URL and query-page pairs
+Fixture owner,fixtures-appliances-perth.html,Inspection on 2026-09-30,URL unknown to Google; absent from live sitemap,7 to 28 days after deploy,URL becomes discovered/indexed and appears in sitemap processing,Request indexing after sitemap deploy
+Sitemap,https://perthpipepower.com.au/sitemap.xml,2026-09-30,33 live URLs before branch; no GSC errors/warnings,7 to 28 days after deploy,Fixture URL included and sitemap fetch succeeds,Resubmit sitemap and inspect status

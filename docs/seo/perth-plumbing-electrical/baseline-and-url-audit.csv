@@ -1,0 +1,14 @@
+url,role,gsc_index_status,observed_90_day_signals,technical_action,content_action,status
+https://perthpipepower.com.au/,homepage,Indexed and submitted,5 clicks; 60 impressions; avg position 20.3,No change in this scope,No change in this scope,Retained
+https://perthpipepower.com.au/blocked-drains-perth.html,Plumbing service owner,Indexed and submitted,1 click; 1008 impressions; avg position 83.5,No canonical or robots fault observed,Added drainage assessment and scope guidance; added fixture/sink related link,Updated locally
+https://perthpipepower.com.au/water-leak-detection-perth.html,Plumbing service owner,Indexed and submitted,1 click; 883 impressions; avg position 81.8,No canonical or robots fault observed,Added scope limits and visible-fixture routing guidance,Updated locally
+https://perthpipepower.com.au/burst-pipe-repair-perth.html,Plumbing service owner,Indexed and submitted,0 clicks; 360 impressions; avg position 75.8,No canonical or robots fault observed,Added repair-scoping and leak-detection routing guidance,Updated locally
+https://perthpipepower.com.au/electrical.html,Electrical service owner,Indexed and submitted,0 clicks; 56 impressions; avg position 64.7,No canonical or robots fault observed,Added assessment and quote-scope guidance,Updated locally
+https://perthpipepower.com.au/hot-water-problems-perth.html,Hot-water service owner,Indexed and submitted,0 clicks; 46 impressions; avg position 69.7,No canonical or robots fault observed,Added Thornlie/Southern Suburbs enquiry context,Updated locally
+https://perthpipepower.com.au/fixtures-appliances-perth.html,Fixtures and appliance owner,URL unknown to Google at inspection time,No 90-day page data captured,Missing from public sitemap; added to local sitemap only,Added visible sink and fixture leak guidance; refined H1,Updated locally; pending deploy and indexing
+https://perthpipepower.com.au/perth-cbd-inner-suburbs.html,Regional guide,Not inspected in current export,Not used as a query owner in this scope,Retained,Retained,Unchanged
+https://perthpipepower.com.au/northern-suburbs.html,Regional guide,Not inspected in current export,Not used as a query owner in this scope,Retained,Retained,Unchanged
+https://perthpipepower.com.au/southern-suburbs.html,Regional guide,Not inspected in current export,Not used as a query owner in this scope,Retained,Added a single Southern Suburbs/Thornlie contextual section,Updated locally
+https://perthpipepower.com.au/eastern-suburbs.html,Regional guide,Not inspected in current export,Not used as a query owner in this scope,Retained,Retained,Unchanged
+https://perthpipepower.com.au/western-suburbs.html,Regional guide,Not inspected in current export,Not used as a query owner in this scope,Retained,Retained,Unchanged
+https://perthpipepower.com.au/perth-hills-swan-valley.html,Regional guide,Not inspected in current export,Not used as a query owner in this scope,Retained,Retained,Unchanged

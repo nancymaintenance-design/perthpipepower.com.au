@@ -34,7 +34,7 @@ for (const { file, name } of regions) {
   assert.match(html, /Assessment and quote discussion/i);
   assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i);
   assert.match(html, /application\/ld\+json/i);
-  assert.match(html, /"@type":"FAQPage"/);
+  assert.match(html, /"@type"\s*:\s*"FAQPage"/);
   assert.doesNotMatch(html, /service-areas\//i, `${file} does not promote suburb URLs`);
 }
 

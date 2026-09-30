@@ -14,10 +14,10 @@ for (const guide of regionGuides) {
   assert.match(html, /electrical repairs|fault finding|safety switches|switchboards|lighting and power points/i);
   assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i, 'regional guides use prose, not shallow service card grids');
   assert.doesNotMatch(html, /24.hour|fixed price|guaranteed/i, 'regional guide copy must not invent commercial claims');
-  assert.match(html, /"@type":"FAQPage"/);
-  assert.match(html, new RegExp(`<meta property="og:title" content="${guide.title.replace(/&/g, '&amp;').replace(/[|]/g, '\\|')} \\| Ellis Services Group">`, 'i'));
-  assert.match(html, new RegExp(`<meta property="og:description" content="${guide.description.replace(/[?]/g, '\\?')}">`, 'i'));
-  assert.match(html, new RegExp(`<meta property="og:url" content="https://perthpipepower\\.com\\.au/${guide.route}">`, 'i'));
+  assert.match(html, /"@type"\s*:\s*"FAQPage"/);
+  assert.match(html, new RegExp(`<meta\\s+property="og:title"\\s+content="${guide.title.replace(/&/g, '&amp;').replace(/[|]/g, '\\|')} \\| Ellis Services Group"\\s*/?>`, 'i'));
+  assert.match(html, new RegExp(`<meta\\s+property="og:description"\\s+content="${guide.description.replace(/[?]/g, '\\?')}"\\s*/?>`, 'i'));
+  assert.match(html, new RegExp(`<meta\\s+property="og:url"\\s+content="https://perthpipepower\\.com\\.au/${guide.route}"\\s*/?>`, 'i'));
   assert.doesNotMatch(html, /service-areas\//i);
   for (const [question] of guide.faqs) assert.match(html, new RegExp(question.replace(/[?]/g, '\\?')));
 }

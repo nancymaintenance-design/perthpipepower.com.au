@@ -1,0 +1,14 @@
+query,period,impressions,clicks,average_position,current_landing_evidence,selected_owner,implementation,notes
+blocked drains perth,2026-06-29 to 2026-09-27,199,0,87.4,No query-page pair captured in current export,blocked-drains-perth.html,Expanded drainage assessment and scope content; linked fixture/sink owner,Do not infer an exact query-page pair without export evidence
+blocked drain perth,2026-06-29 to 2026-09-27,56,0,93.0,No query-page pair captured in current export,blocked-drains-perth.html,Same owner retained,High-impression term; no new URL created
+drain unblocking perth,2026-06-29 to 2026-09-27,42,0,89.5,No query-page pair captured in current export,blocked-drains-perth.html,Same owner retained,No promise of a specific method or outcome
+drain repair perth,2026-06-29 to 2026-09-27,40,0,66.1,No query-page pair captured in current export,blocked-drains-perth.html,Scope guidance added,Repair method remains assessment-dependent
+water leak detection perth,2026-06-29 to 2026-09-27,56,0,93.6,No query-page pair captured in current export,water-leak-detection-perth.html,Scope-limit and visible-fixture routing content added,No unsupported detection-method claims
+leak detection perth,2026-06-29 to 2026-09-27,110,0,87.1,No query-page pair captured in current export,water-leak-detection-perth.html,Same owner retained,High-impression term; no new URL created
+water leak,2026-06-29 to 2026-09-27,29,0,55.5,No query-page pair captured in current export,water-leak-detection-perth.html,Same owner retained,Generic intent needs assessment framing
+water pipe burst,2026-06-29 to 2026-09-27,37,0,59.6,Query-page pair observed for burst-pipe-repair-perth.html,burst-pipe-repair-perth.html,Added repair-scope and escalation route,No claim that every leak is a burst pipe
+burst pipe near me,2026-06-29 to 2026-09-27,6,0,not recorded,Query-page pair observed for burst-pipe-repair-perth.html,burst-pipe-repair-perth.html,Same owner retained,Low-volume directional signal
+electrical repairs perth,2026-06-29 to 2026-09-27,26,0,76.2,No query-page pair captured in current export,electrical.html,Added assessment and quote-scope guidance,Not presented as proof that this page owned the query before release
+hot water thornlie,2026-06-29 to 2026-09-27,2,0,30.5,Query-page pair observed for hot-water-problems-perth.html,hot-water-problems-perth.html,Added Thornlie context and Southern Suburbs route,No new Thornlie URL created
+leaking sinks perth,2026-06-29 to 2026-09-27,3,0,33.7,Query-page pair observed for insights-reporting-a-plumbing-leak.html,fixtures-appliances-perth.html,Created a clearer service-owner route from fixture content,Current landing was not replaced or removed
+property management drainage,2026-06-29 to 2026-09-27,4,0,36.0,Query-page pair observed for property-management.html,property-management.html,Only contextual link retained from drainage content,No duplicate property-management page created

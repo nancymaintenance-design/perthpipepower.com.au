@@ -19,7 +19,7 @@ assert.match(home, /href="https:\/\/www\.instagram\.com\/elliservices_group\//);
 assert.match(home, /aria-label="Follow Ellis Services Group on Instagram"/);
 assert.match(home, /class="footer-instagram"/);
 assert.match(styles, /\.footer-instagram\s*\{/);
-assert.match(home, /<img class="footer-instagram__icon" src="instagram-icon\.png" alt="">/);
+assert.match(home, /<img\s+class="footer-instagram__icon"\s+src="instagram-icon\.png"\s+alt=""[^>]*>/);
 assert.ok(fs.existsSync(path.join(root, 'instagram-icon.png')), 'the supplied Instagram icon asset is present');
 assert.match(
   home,
