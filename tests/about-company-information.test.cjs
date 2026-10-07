@@ -14,9 +14,11 @@ for (const expected of [
   '140 St Georges Terrace, Perth WA 6000',
   '0413 477 667',
   'maxinemaintenance.au@outlook.com',
-  'How an enquiry moves forward',
+  'How a repair request moves forward',
   'Licensing &amp; insurance',
   'Questions customers often ask',
+  'dedicated Perth repair team providing plumbing and electrical repairs across Perth',
+  'appropriately licensed plumbing and electrical tradespeople',
 ]) {
   assert.ok(about.includes(expected), `About page should present ${expected}`);
 }

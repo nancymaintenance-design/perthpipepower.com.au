@@ -16,6 +16,11 @@ assert.match(styles, /\.office-location__map\s*\{/);
 assert.match(styles, /\.office-location__map iframe\s*\{/);
 
 assert.match(home, /href="https:\/\/www\.instagram\.com\/elliservices_group\//);
+assert.match(home, /"@type": "GeoCoordinates"/);
+assert.match(home, /"latitude": -31\.954352/);
+assert.match(home, /"longitude": 115\.8564539/);
+assert.match(home, /"hasMap": "https:\/\/www\.google\.com\/maps\/place\/140\+St\+Georges\+Terrace/);
+assert.match(home, /"sameAs": \[\s*"https:\/\/www\.instagram\.com\/elliservices_group\/"/);
 assert.match(home, /aria-label="Follow Ellis Services Group on Instagram"/);
 assert.match(home, /class="footer-instagram"/);
 assert.match(styles, /\.footer-instagram\s*\{/);
