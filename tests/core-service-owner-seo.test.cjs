@@ -7,7 +7,7 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 const owners = [
   ['blocked-drains-perth.html', 'Blocked Drains &amp; Toilet Repairs Perth', 'Drainage assessment and treatment scope', 'property-management.html'],
-  ['water-leak-detection-perth.html', 'Water Leak Detection Perth', 'What leak detection can and cannot confirm', 'burst-pipe-repair-perth.html'],
+  ['water-leak-detection-perth.html', 'Water Leak Detection Perth', 'How we locate the leak and plan the repair', 'burst-pipe-repair-perth.html'],
   ['burst-pipe-repair-perth.html', 'Burst Pipe Repairs Perth', 'How a burst-pipe repair is scoped', 'water-leak-detection-perth.html'],
   ['electrical.html', 'Electrical repairs and maintenance in Perth', 'How electrical repair work is scoped', 'contact.html'],
 ];

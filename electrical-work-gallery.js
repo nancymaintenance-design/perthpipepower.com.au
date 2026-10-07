@@ -14,7 +14,7 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
   })[character]);
 
-  const renderElectricalWorkGallery = () => `<div class="electrical-work-gallery"><div class="electrical-work-gallery__heading"><span class="eyebrow">Real work imagery</span><h2>Electrical work examples</h2><p>Examples of electrical work completed by our team.</p></div><div class="electrical-work-gallery__grid">${ELECTRICAL_WORK_GALLERY.map((record) => `<figure class="electrical-work-gallery__card"><img class="electrical-work-gallery__image" src="/${escapeHtml(record.image)}" alt="${escapeHtml(record.alt)}" loading="lazy" decoding="async"><figcaption><strong>${escapeHtml(record.label)}</strong><span>${escapeHtml(record.caption)}</span></figcaption></figure>`).join('')}</div></div>`;
+  const renderElectricalWorkGallery = () => `<div class="electrical-work-gallery"><div class="electrical-work-gallery__heading"><span class="eyebrow">Real work imagery</span><h2>Electrical work examples</h2><p>Electrical switchboard, lighting and power-point work.</p></div><div class="electrical-work-gallery__grid">${ELECTRICAL_WORK_GALLERY.map((record) => `<figure class="electrical-work-gallery__card"><img class="electrical-work-gallery__image" src="/${escapeHtml(record.image)}" alt="${escapeHtml(record.alt)}" loading="lazy" decoding="async"><figcaption><strong>${escapeHtml(record.label)}</strong><span>${escapeHtml(record.caption)}</span></figcaption></figure>`).join('')}</div></div>`;
 
   const mountElectricalWorkGalleries = (documentRef) => {
     const targets = documentRef.querySelectorAll('[data-electrical-work-gallery]');
