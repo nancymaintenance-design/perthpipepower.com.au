@@ -8,6 +8,23 @@ const root=fileURLToPath(new URL('../',import.meta.url));
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const visible=h=>h.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g,' ');
 const pages=fs.readdirSync(root).filter(p=>p.endsWith('.html')).concat(fs.readdirSync(path.join(root,'service-areas')).filter(p=>p.endsWith('.html')).map(p=>'service-areas/'+p));
+
+for(const file of ['smoke-alarm-maintenance-perth.html','toilet-repairs-perth.html']) test(file+' commercial descriptions consistently offer actual on-site work',()=>{
+  const descriptions=['description','og:description','twitter:description'].map(channel=>{
+    const tag=[...read(file).matchAll(/<meta\b[^>]*>/gi)].map(m=>m[0]).find(tag=>new RegExp('(?:name|property)="'+channel+'"').test(tag));
+    assert.ok(tag,file+': '+channel);
+    return tag.match(/content="([^"]*)"/)[1];
+  });
+  assert.equal(new Set(descriptions).size,1,file+': three channels agree');
+  for(const copy of descriptions){
+    assert.doesNotMatch(copy,/enquir|repair information|symptoms to include/i,file);
+    assert.match(copy,/on[- ]site/i,file);
+    assert.match(copy,/(?:repair|maintenance) plan.*quote/i,file);
+    if(file.startsWith('smoke')) assert.match(copy,/Do not remove hardwired units\./);
+    else assert.match(copy,/leaks.*running.*slow filling.*blockages.*overflow/i);
+  }
+});
+
 test('public service and form copy offers assessment rather than email receipt or enquiry handling',()=>{
   for(const p of pages) assert.doesNotMatch(visible(read(p)),/receive your enquiry by email|(?:provides|handles|assist with|coordinate)[^.]{0,100}(?:repair|maintenance) enquiries/i,p);
   assert.match(visible(read('contact.html')),/arrange an on-site assessment/i);
