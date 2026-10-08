@@ -26,7 +26,10 @@ for (const [page, heading] of services) {
 
   const pageHtml = read(page);
   assert.match(pageHtml, new RegExp(`<h1>${heading.replaceAll(' Perth', ' in Perth')}<\\/h1>|<h1>${heading}<\\/h1>`));
-  assert.match(pageHtml, new RegExp(`<title>${heading} \\| Ellis Services Group<\\/title>`));
+  const title = pageHtml.match(/<title>([^<]+)<\/title>/)[1];
+  assert.match(title, /Perth \| Ellis(?: Services Group)?$/);
+  assert.ok(title.length < 85, 'service title should be concise');
+  assert.equal(pageHtml.match(/property="og:title" content="([^"]+)"/)[1], title, 'share title matches search title');
 }
 
 console.log('PASS: keyword-led service headings align across homepage cards and service pages.');

@@ -18,13 +18,14 @@ const regionCards = [...main.matchAll(/<article\b[^>]*class="area-region[^\"]*"[
 const directoryLinks = regionCards.flatMap((card) => [...card.matchAll(/<a\s+[^>]*href="([^"]+)"/gi)].map((match) => match[1]));
 
 assert.equal(regionCards.length, 6);
-assert.equal(directoryLinks.length, 6, 'the directory exposes exactly six customer destinations');
+assert.equal(directoryLinks.filter(link=>link.startsWith('contact.html?suburb=')).length, 126, 'all suburb shortcuts prefill the enquiry');
 assert.deepEqual(
-  new Set(directoryLinks),
+  new Set(directoryLinks.filter(link=>!link.startsWith('contact.html?suburb='))),
   new Set(regions.map(({ file }) => file)),
   'the directory links only to the six region guides',
 );
-assert.doesNotMatch(main, /type="search"|area-search|service-areas\//i);
+assert.match(main, /type="search"/i);
+assert.doesNotMatch(main, /href="service-areas\//i);
 
 for (const { file, name } of regions) {
   const html = read(file);

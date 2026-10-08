@@ -1,4 +1,6 @@
 (() => {
+  // SEO content is now rendered in the HTML; retain compatibility for older pages.
+  if (document.querySelector('[data-static-service-depth]')) return;
   const topics = {
     'water-leak-detection-perth.html': ['Water leaks', 'Unexplained water, damp surfaces, staining, changes around fixtures or a recurring issue after use are useful observations to share.', [['burst-pipe-repair-perth.html','Burst pipes'],['tap-mixer-repairs-perth.html','Taps & mixers']]],
     'burst-pipe-repair-perth.html': ['Burst pipes', 'Active water, the affected room, whether the water is contained and any visible pipe or fitting change help establish the urgency and property context.', [['water-leak-detection-perth.html','Water leak detection'],['blocked-drains-perth.html','Blocked drains']]],

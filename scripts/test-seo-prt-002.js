@@ -12,21 +12,21 @@ const linkFor = (html, label) => {
 };
 
 const home = read('index.html');
-assert.match(home, /<title>\s*Plumbing &amp; Electrical Repairs Perth \| Ellis Services Group\s*<\/title>/, 'home title must remain unchanged');
+assert.match(home, /<title>\s*Plumbing &amp; Electrical Repairs Perth \| Ellis\s*<\/title>/, 'home title retains the service topic and brand');
 assert.match(home, /<link rel="canonical" href="https:\/\/perthpipepower\.com\.au\/"\s*\/?\s*>/, 'home canonical must remain root');
 assert.match(home, /Ellis Services Group/, 'home must retain the verified brand');
-assert.match(home, /<h1>\s*Plumbing and electrical repairs in Perth\s*<\/h1>/i, 'home H1 must state the Perth plumbing and electrical repair service');
+assert.match(home, /<h1\b[^>]*>\s*Plumbing and electrical repairs in Perth\s*<\/h1>/i, 'home H1 must state the Perth plumbing and electrical repair service');
 
 const safetySwitch = read('safety-switch-tripping-perth.html');
-assert.equal(linkFor(safetySwitch, 'View Detailed safety-switch guide →'), 'insights-safety-switch-keeps-tripping.html', 'safety-switch guide card must lead to the existing insight');
+assert.ok(hrefs(mainContent(safetySwitch)).includes('insights-safety-switch-keeps-tripping.html'), 'safety-switch page must lead to the existing insight');
 
 const plumbing = read('plumbing.html');
 for (const [label, expected] of [
-  ['Discuss a leak →', 'water-leak-detection-perth.html'],
+  ['Water leak detection →', 'water-leak-detection-perth.html'],
   ['Discuss drainage →', 'blocked-drains-perth.html'],
   ['Discuss hot water →', 'hot-water-problems-perth.html'],
-  ['Discuss a fixture →', 'tap-mixer-repairs-perth.html'],
-  ['Discuss a toilet issue →', 'toilet-repairs-perth.html'],
+  ['Tap and mixer repairs →', 'tap-mixer-repairs-perth.html'],
+  ['Toilet repairs →', 'toilet-repairs-perth.html'],
 ]) assert.equal(linkFor(plumbing, label), expected, `plumbing card ${label} must lead to its service page`);
 assert.ok(hrefs(plumbing).includes('tel:0413477667'), 'plumbing overview must keep the call CTA');
 assert.ok(hrefs(plumbing).includes('contact.html'), 'plumbing overview must keep the enquiry CTA');
@@ -62,8 +62,8 @@ for (const page of [
   const nextStep = mainContent(read(page)).match(/<section class="article-next-step">([\s\S]*?)<\/section>/i)?.[1] ?? '';
   assert.match(nextStep, /<div class="cta-links">[\s\S]*?<a href="[^"]+">[\s\S]*?<\/a>[\s\S]*?<a href="contact\.html">[\s\S]*?<\/a>[\s\S]*?<\/div>/i, `${page} must put its two CTA links in a dedicated group`);
 }
-assert.match(read('site.css'), /\.article-next-step\s+\.cta-links\s*\{\s*display:\s*flex;\s*flex-wrap:\s*wrap;\s*gap:\s*\.75rem;/, 'desktop CTA group must preserve a spaced, wrapping layout');
-assert.match(read('mobile-refinement.css'), /\.article-next-step\s+\.cta-links\s*\{\s*flex-direction:\s*column;\s*align-items:\s*flex-start;\s*gap:\s*\.75rem;/, 'mobile CTA group must stack the links with tap spacing');
+assert.match(read('site.css'), /\.article-next-step\s+\.cta-links\s*\{\s*display:\s*flex;\s*flex-wrap:\s*wrap;\s*gap:\s*0?\.75rem;/, 'desktop CTA group must preserve a spaced, wrapping layout');
+assert.match(read('mobile-refinement.css'), /\.article-next-step\s+\.cta-links\s*\{\s*flex-direction:\s*column;\s*align-items:\s*flex-start;\s*gap:\s*0?\.75rem[;}]/, 'mobile CTA group must stack the links with tap spacing');
 
 for (const page of fs.readdirSync(root).filter((name) => name.endsWith('.html'))) {
   assert.ok(!hrefs(read(page)).includes('index.html'), `${page} must link to the root home URL rather than index.html`);

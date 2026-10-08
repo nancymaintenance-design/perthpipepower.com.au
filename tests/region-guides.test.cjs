@@ -15,7 +15,9 @@ for (const guide of regionGuides) {
   assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i, 'regional guides use prose, not shallow service card grids');
   assert.doesNotMatch(html, /24.hour|fixed price|guaranteed/i, 'regional guide copy must not invent commercial claims');
   assert.match(html, /"@type"\s*:\s*"FAQPage"/);
-  assert.match(html, new RegExp(`<meta\\s+property="og:title"\\s+content="${guide.title.replace(/&/g, '&amp;').replace(/[|]/g, '\\|')} \\| Ellis Services Group"\\s*/?>`, 'i'));
+  const title = html.match(/<title>([^<]+)<\/title>/)[1];
+  assert.match(title, /Plumb(?:er|ing).*Electric(?:ian|al).*\| Ellis/i);
+  assert.equal(html.match(/property="og:title" content="([^"]+)"/)[1], title, 'regional share title matches search title');
   assert.match(html, new RegExp(`<meta\\s+property="og:description"\\s+content="${guide.description.replace(/[?]/g, '\\?')}"\\s*/?>`, 'i'));
   assert.match(html, new RegExp(`<meta\\s+property="og:url"\\s+content="https://perthpipepower\\.com\\.au/${guide.route}"\\s*/?>`, 'i'));
   assert.equal((html.match(/property="og:title"/gi) || []).length, 1, 'each regional guide has one Open Graph title');

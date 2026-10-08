@@ -9,12 +9,12 @@ const regionCards = [...main.matchAll(/<article\b[^>]*class="area-region[^\"]*"[
 const links = regionCards.flatMap((card) => [...card.matchAll(/<a\s+[^>]*href="([^"]+)"/gi)].map((match) => match[1]));
 const expected = ['perth-cbd-inner-suburbs.html', 'northern-suburbs.html', 'southern-suburbs.html', 'eastern-suburbs.html', 'western-suburbs.html', 'perth-hills-swan-valley.html'];
 
-assert.match(html, /<meta name="description" content="Explore Ellis Services Group&#39;s six Perth plumbing and electrical service regions\."/i);
-assert.doesNotMatch(html, /Search Perth suburbs and localities/i);
+assert.match(html, /six Perth regions[^"]*on-site assessment and written quote/i);
 assert.equal(regionCards.length, 6);
-assert.equal(links.length, 6);
-assert.deepEqual(new Set(links), new Set(expected));
-assert.doesNotMatch(main, /type="search"|area-search|service-areas\//i);
+assert.equal(links.filter(link=>link.startsWith('contact.html?suburb=')).length, 126);
+assert.deepEqual(new Set(links.filter(link=>!link.startsWith('contact.html?suburb='))), new Set(expected));
+assert.match(main, /type="search"/i);
+assert.doesNotMatch(main, /href="service-areas\//i);
 assert.equal((main.match(/data-region-localities/g) || []).length, 6, 'each region reserves a locality display area');
 assert.match(html, /<script src="service-area-data\.js"><\/script>/i);
 assert.match(html, /<script src="service-area-directory\.js"><\/script>/i);

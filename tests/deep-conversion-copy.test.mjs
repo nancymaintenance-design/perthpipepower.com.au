@@ -37,17 +37,20 @@ test('pages asking for photos make them optional and give the existing email cha
 });
 test('runtime service context assigns qualified work to company and makes photos optional by email',()=>{
   let output='';
-  vm.runInNewContext(read('service-page-depth.js'),{location:{pathname:'/hot-water-problems-perth.html'},document:{querySelector:()=>({insertAdjacentHTML:(_,markup)=>{output+=markup;}})}});
+  vm.runInNewContext(read('service-page-depth.js'),{location:{pathname:'/hot-water-problems-perth.html'},document:{querySelector:selector=>selector==='[data-static-service-depth]'?null:({insertAdjacentHTML:(_,markup)=>{output+=markup;}})}});
   const text=visible(output);
   assert.match(text,/We (?:arrange|confirm)[^.]*WA-qualified/i);
   assert.match(text,/optional[^.]*maxinemaintenance.au@outlook.com/i);
   assert.match(text,/on-site assessment/i);
   assert.match(text,/Do not put yourself at risk/i);
+  const staticText=visible(read('hot-water-problems-perth.html'));
+  assert.match(staticText,/We (?:arrange|confirm)[^.]*WA-qualified/i);
+  assert.match(staticText,/optional[^.]*maxinemaintenance.au@outlook.com/i);
 });
 test('installation runtime and static enquiry path do not presume a fault diagnosis',()=>{
   for(const p of ['fixtures-appliances-perth.html','renewables-smart-home-perth.html']) {
     let output='';
-    vm.runInNewContext(read('service-page-depth.js'),{location:{pathname:'/'+p},document:{querySelector:()=>({insertAdjacentHTML:(_,markup)=>output+=markup})}});
+    vm.runInNewContext(read('service-page-depth.js'),{location:{pathname:'/'+p},document:{querySelector:selector=>selector==='[data-static-service-depth]'?null:({insertAdjacentHTML:(_,markup)=>output+=markup})}});
     assert.doesNotMatch(visible(output),/A symptom can have more than one cause|establish the cause and confirm the repair scope/i,p);
     assert.match(visible(output),/installation|requirements/i,p);
   }

@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const {execFileSync}=require('node:child_process');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const original=execFileSync('git',['show','HEAD:index.html'],{cwd:root,encoding:'utf8'});
+const hero=s=>s.match(/<section class="hero"[\s\S]*?<\/section>/)[0].replace(/\r\n/g,'\n');
+assert.equal(hero(html),hero(original),'restored hero exactly preserves published carousel markup');
+assert.doesNotMatch(html,/class="field-hero"|class="field-process"/);
+assert.match(html,/rel="preload" as="image" href="hero-repair.jpg"/);
+console.log('PASS: original photographic carousel restored, generic split hero and process removed.');

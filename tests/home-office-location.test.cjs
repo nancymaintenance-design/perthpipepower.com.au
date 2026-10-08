@@ -35,7 +35,7 @@ assert.match(home, /class="footer-instagram"/);
 assert.match(styles, /\.footer-instagram\s*\{/);
 assert.match(styles, /\.footer-instagram\s*>\s*img\s*\{[^}]*width:\s*1em\s*!important/i);
 assert.match(styles, /\.footer-google-reviews__icon\s*\{[^}]*width:\s*1em/i);
-assert.match(home, /<img\s+class="footer-instagram__icon"\s+src="instagram-icon\.png"\s+alt=""[^>]*>/);
+assert.match(home, /<img\s+class="footer-instagram__icon"\s+src="instagram-icon-small\.png"\s+alt=""[^>]*>/);
 assert.ok(fs.existsSync(path.join(root, 'instagram-icon.png')), 'the supplied Instagram icon asset is present');
 assert.ok(fs.existsSync(path.join(root, 'facebook-icon.svg')), 'the Facebook icon asset is present');
 assert.ok(fs.existsSync(path.join(root, 'linkedin-icon.svg')), 'the LinkedIn icon asset is present');
