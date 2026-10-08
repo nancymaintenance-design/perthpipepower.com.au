@@ -1,4 +1,28 @@
 /* Shared Ellis field-service design. Loaded after the established styles. */
+/* Service detail pages: coherent commercial narrative, no repeated card walls. */
+[data-commercial-service] .service-reading{max-width:980px}
+[data-commercial-service] .section{padding-block:40px}
+[data-commercial-service] .service-editorial{background:#fff}
+[data-commercial-service] .service-jump-links{display:flex;flex-wrap:wrap;gap:12px 24px;padding:0 0 24px;border-bottom:1px solid var(--line);margin-bottom:32px}
+[data-commercial-service] .service-jump-links a{font-size:.93rem;font-weight:700;text-underline-offset:4px}
+[data-commercial-service] .service-editorial-part+ .service-editorial-part{margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+[data-commercial-service] .service-reading h2{font-size:clamp(1.6rem,2.4vw,2.2rem);line-height:1.18;margin:0 0 22px;max-width:32ch}
+[data-commercial-service] .service-reading h3{font-size:1.15rem;line-height:1.35;margin:24px 0 10px}
+[data-commercial-service] .service-reading p{max-width:78ch;line-height:1.75;margin:0 0 18px}
+[data-commercial-service] .service-editorial-figure{margin:24px 0 0;max-width:480px}
+[data-commercial-service] .service-editorial-image{display:block;width:100%;height:240px;object-fit:cover;border-radius:var(--field-radius)}
+[data-commercial-service] .service-trade-note{margin-top:24px;font-weight:700}
+[data-commercial-service] .service-safety{border-left:3px solid var(--field-yellow);padding:10px 16px;background:var(--field-light)}
+[data-commercial-service] .service-quote{background:var(--field-light)}
+[data-commercial-service] .price-guide{margin:0 0 24px;padding:0;background:transparent}
+[data-commercial-service] .price-guide>.shell{width:100%;padding:0}
+[data-commercial-service] .price-guide__intro h2{font-size:1.2rem;margin-bottom:12px}
+[data-commercial-service] .service-editorial-faq{background:#fff}
+[data-commercial-service] .service-booking .button{margin:6px 12px 0 0}
+[data-commercial-service] .service-book-button{background:var(--field-navy);border-color:var(--field-navy);color:#fff}
+[data-commercial-service] .service-book-button:hover{background:var(--field-blue);border-color:var(--field-blue)}
+[data-commercial-service] [id^="service-"]{scroll-margin-top:120px}
+@media(max-width:600px){[data-commercial-service] .section{padding-block:28px}[data-commercial-service] .service-jump-links{gap:10px 18px}[data-commercial-service] .service-editorial-image{height:200px}[data-commercial-service] .page-hero h1{font-size:2.2rem}[data-commercial-service] .page-hero .button{margin-top:10px}}
 /* User-approved homepage identity: original full-bleed carousel, not split hero. */
 .hero h1,.hero h2{font-family:var(--serif);font-weight:700;letter-spacing:normal;line-height:1.05}
 .hero .button{border-radius:0}

@@ -44,7 +44,7 @@ test('runtime service context assigns qualified work to company and makes photos
   assert.match(text,/on-site assessment/i);
   assert.match(text,/Do not put yourself at risk/i);
   const staticText=visible(read('hot-water-problems-perth.html'));
-  assert.match(staticText,/We (?:arrange|confirm)[^.]*WA-qualified/i);
+  assert.match(staticText,/Our Perth plumbing and electrical work is carried out by appropriately licensed trades/i);
   assert.match(staticText,/optional[^.]*maxinemaintenance.au@outlook.com/i);
 });
 test('installation runtime and static enquiry path do not presume a fault diagnosis',()=>{
