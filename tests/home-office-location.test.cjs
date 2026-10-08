@@ -16,6 +16,15 @@ assert.match(styles, /\.office-location__map\s*\{/);
 assert.match(styles, /\.office-location__map iframe\s*\{/);
 
 assert.match(home, /href="https:\/\/www\.instagram\.com\/elliservices_group\//);
+assert.match(home, /href="https:\/\/share\.google\/HbT2Uijg3K6yaqcpV"/);
+assert.match(home, /aria-label="Follow Ellis Services Group on Facebook"/);
+assert.match(home, /<img\s+class="footer-facebook__icon"\s+src="facebook-icon\.svg"\s+alt=""[^>]*>/);
+assert.match(home, /href="https:\/\/share\.google\/Z4tImXHToPi9H4LmH"/);
+assert.match(home, /aria-label="Follow Ellis Services Group on LinkedIn"/);
+assert.match(home, /<img\s+class="footer-linkedin__icon"\s+src="linkedin-icon\.svg"\s+alt=""[^>]*>/);
+assert.match(home, /href="https:\/\/share\.google\/XuRahe0m1VzUUvcGV"/);
+assert.match(home, /aria-label="Read or leave a Google review for Ellis Services Group"/);
+assert.match(home, /<span class="footer-google-reviews__icon" aria-hidden="true">★<\/span>/);
 assert.match(home, /"@type": "GeoCoordinates"/);
 assert.match(home, /"latitude": -31\.954352/);
 assert.match(home, /"longitude": 115\.8564539/);
@@ -24,8 +33,12 @@ assert.match(home, /"sameAs": \[\s*"https:\/\/www\.instagram\.com\/elliservices_
 assert.match(home, /aria-label="Follow Ellis Services Group on Instagram"/);
 assert.match(home, /class="footer-instagram"/);
 assert.match(styles, /\.footer-instagram\s*\{/);
+assert.match(styles, /\.footer-instagram\s*>\s*img\s*\{[^}]*width:\s*1em\s*!important/i);
+assert.match(styles, /\.footer-google-reviews__icon\s*\{[^}]*width:\s*1em/i);
 assert.match(home, /<img\s+class="footer-instagram__icon"\s+src="instagram-icon\.png"\s+alt=""[^>]*>/);
 assert.ok(fs.existsSync(path.join(root, 'instagram-icon.png')), 'the supplied Instagram icon asset is present');
+assert.ok(fs.existsSync(path.join(root, 'facebook-icon.svg')), 'the Facebook icon asset is present');
+assert.ok(fs.existsSync(path.join(root, 'linkedin-icon.svg')), 'the LinkedIn icon asset is present');
 assert.match(
   home,
   /<p>Dedicated Perth plumbing and electrical repair team, serving properties across Perth\.<\/p>\s*<a\s+class="footer-instagram"/,

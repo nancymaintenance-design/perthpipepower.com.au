@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-hidden="true">
+  <circle cx="256" cy="256" r="256" fill="#1877f2"/>
+  <path fill="#fff" d="M298 435V278h53l8-61h-61v-39c0-18 5-30 31-30h33V93c-6-1-26-3-49-3-49 0-83 30-83 85v42h-56v61h56v157h68z"/>
+</svg>
