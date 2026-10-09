@@ -5,22 +5,105 @@
   "business": {
     "telephone": "0413 477 667",
     "email": "maxinemaintenance.au@outlook.com",
-    "address": "140 St Georges Terrace, Perth WA 6000, Australia"
+    "address": "140 St Georges Terrace, Perth WA 6000, Australia",
+    "team": "Ellis Services Group has an independent Perth office and local repair team within Ellis Group."
   },
   "services": [
-    "Electrical repairs and fault enquiries",
-    "Safety switches, lighting and power points",
-    "Blocked drains, leak concerns and plumbing repairs",
-    "Hot water enquiries",
-    "Property, rental and strata maintenance enquiries"
+    "Plumbing repairs, drain clearing and water leak detection",
+    "Hot-water repairs and system replacement assessment",
+    "Electrical fault finding, safety switches and RCD repairs",
+    "Lighting, power points and smoke alarm repairs and installation",
+    "Fixture and appliance connections",
+    "Smart home and energy electrical services",
+    "Rental, strata and managed-property maintenance"
   ],
   "regions": [
-    { "name": "CBD & Inner Perth", "url": "https://perthpipepower.com.au/perth-cbd-inner-suburbs.html" },
-    { "name": "Northern Suburbs", "url": "https://perthpipepower.com.au/northern-suburbs.html" },
-    { "name": "Southern Suburbs", "url": "https://perthpipepower.com.au/southern-suburbs.html" },
-    { "name": "Eastern Suburbs", "url": "https://perthpipepower.com.au/eastern-suburbs.html" },
-    { "name": "Western Suburbs", "url": "https://perthpipepower.com.au/western-suburbs.html" },
-    { "name": "Perth Hills & Swan Valley", "url": "https://perthpipepower.com.au/perth-hills-swan-valley.html" }
+    {
+      "name": "CBD & Inner Perth",
+      "url": "https://perthpipepower.com.au/perth-cbd-inner-suburbs.html"
+    },
+    {
+      "name": "Northern Suburbs",
+      "url": "https://perthpipepower.com.au/northern-suburbs.html"
+    },
+    {
+      "name": "Southern Suburbs",
+      "url": "https://perthpipepower.com.au/southern-suburbs.html"
+    },
+    {
+      "name": "Eastern Suburbs",
+      "url": "https://perthpipepower.com.au/eastern-suburbs.html"
+    },
+    {
+      "name": "Western Suburbs",
+      "url": "https://perthpipepower.com.au/western-suburbs.html"
+    },
+    {
+      "name": "Perth Hills & Swan Valley",
+      "url": "https://perthpipepower.com.au/perth-hills-swan-valley.html"
+    }
   ],
-  "sourcePolicy": "This feed reflects visible website information. Service scope and quotes are discussed from the property issue, access details and confirmed requirements."
+  "sourcePolicy": "This summary reflects visible website services. No case location, certification number, review rating or fixed package price is inferred. Published ranges are guides; the final written quote confirms property-specific scope and price.",
+  "servicePages": [
+    {
+      "name": "Hot Water Repairs & System Replacement Perth",
+      "url": "https://perthpipepower.com.au/hot-water-problems-perth.html",
+      "description": "Hot water repairs and system replacement in Perth. Our local plumbing and electrical team assesses the fault and provides a repair plan and written quote."
+    },
+    {
+      "name": "Blocked Drains Perth — Drain Clearing & Repairs",
+      "url": "https://perthpipepower.com.au/blocked-drains-perth.html",
+      "description": "Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote."
+    },
+    {
+      "name": "Water Leak Detection Perth",
+      "url": "https://perthpipepower.com.au/water-leak-detection-perth.html",
+      "description": "Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote."
+    },
+    {
+      "name": "Burst Pipe Repairs Perth",
+      "url": "https://perthpipepower.com.au/burst-pipe-repair-perth.html",
+      "description": "Burst pipe repairs in Perth for active pipe leaks and damaged water connections. Contact our local team for assessment, repair scope and a written quote."
+    },
+    {
+      "name": "Tap & Mixer Repairs Perth",
+      "url": "https://perthpipepower.com.au/tap-mixer-repairs-perth.html",
+      "description": "Tap and mixer repairs in Perth for dripping, leaking or faulty kitchen, bathroom and laundry fittings. Book an assessment and written repair quote."
+    },
+    {
+      "name": "Toilet Repairs Perth — Cistern & Flush Repairs",
+      "url": "https://perthpipepower.com.au/toilet-repairs-perth.html",
+      "description": "Toilet repairs in Perth for leaks, running cisterns, slow filling, blockages and overflow. On-site assessment, repair or maintenance plan and written quote."
+    },
+    {
+      "name": "Electrical Fault Finding & Power Repairs Perth",
+      "url": "https://perthpipepower.com.au/power-faults-perth.html",
+      "description": "Electrical fault finding and power repairs in Perth for outages, circuit faults and recurring trips. Book a licensed electrician assessment and written quote."
+    },
+    {
+      "name": "Safety Switch & RCD Repairs Perth",
+      "url": "https://perthpipepower.com.au/safety-switch-tripping-perth.html",
+      "description": "Safety switch and RCD repairs in Perth for recurring trips and switches that will not stay on. Arrange fault assessment, repair scope and a written quote."
+    },
+    {
+      "name": "Lighting & Power Point Repairs and Installation Perth",
+      "url": "https://perthpipepower.com.au/lighting-power-points-perth.html",
+      "description": "Lighting and power point repairs and installation in Perth. Discuss fittings, outlet locations and circuit requirements, with an on-site written quote."
+    },
+    {
+      "name": "Smoke Alarm Repairs, Replacement & Maintenance Perth",
+      "url": "https://perthpipepower.com.au/smoke-alarm-maintenance-perth.html",
+      "description": "Smoke alarm repairs, replacement and maintenance in Perth. On-site assessment, repair plan and written quote. Do not remove hardwired units."
+    },
+    {
+      "name": "Fixture, Tap & Appliance Connection Services in Perth",
+      "url": "https://perthpipepower.com.au/fixtures-appliances-perth.html",
+      "description": "Fixture and appliance connections in Perth: taps, toilets, showers, kitchens and laundries. Discuss plumbing and electrical scope and get a written quote."
+    },
+    {
+      "name": "Smart Home & Energy Electrical Services in Perth",
+      "url": "https://perthpipepower.com.au/renewables-smart-home-perth.html",
+      "description": "Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes."
+    }
+  ]
 }

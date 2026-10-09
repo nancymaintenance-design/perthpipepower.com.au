@@ -79,4 +79,6 @@ const regionGuides = [
   }
 ];
 
+const serviceContent = require('./region-service-content.cjs');
+for (const guide of regionGuides) Object.assign(guide, serviceContent[guide.route]);
 module.exports = { regionGuides };

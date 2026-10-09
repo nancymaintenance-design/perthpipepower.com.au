@@ -6,10 +6,10 @@ const root = path.join(__dirname, '..');
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 const owners = [
-  ['blocked-drains-perth.html', 'Blocked Drains &amp; Toilet Repairs Perth', 'How we scope drain clearing and further repairs', 'property-management.html'],
+  ['blocked-drains-perth.html', 'Blocked Drains Perth — Drain Clearing &amp; Repairs', 'How we scope drain clearing and further repairs', 'property-management.html'],
   ['water-leak-detection-perth.html', 'Water Leak Detection Perth', 'From locating the source to agreeing the leak repair', 'burst-pipe-repair-perth.html'],
   ['burst-pipe-repair-perth.html', 'Burst Pipe Repairs Perth', 'Our burst-pipe assessment and repair approach', 'water-leak-detection-perth.html'],
-  ['electrical.html', 'Electrical repairs and maintenance in Perth', 'How electrical repair work is scoped', 'contact.html'],
+  ['electrical.html', 'Electrician Perth — Electrical Repairs &amp; Installation', 'How electrical repair work is scoped', 'contact.html'],
 ];
 
 for (const [file, h1, marker, relatedHref] of owners) {

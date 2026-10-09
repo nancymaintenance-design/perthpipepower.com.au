@@ -1,30 +1,40 @@
-# Ellis Services Group
+# Ellis Services Group — Perth plumbing and electrical services
 
-Ellis Services Group provides public information about plumbing and electrical repair and maintenance enquiries in Perth, Western Australia.
+Independent Perth office and local repair team within Ellis Group, serving all six Perth regions.
 
-## Verified contact details
+## Contact
+0413 477 667
+maxinemaintenance.au@outlook.com
+140 St Georges Terrace, Perth WA 6000, Australia
 
-- Phone: 0413 477 667
-- Email: maxinemaintenance.au@outlook.com
-- Address: 140 St Georges Terrace, Perth WA 6000, Australia
-- Contact page: https://perthpipepower.com.au/contact.html
+## Service pages
+- [Hot Water Repairs & System Replacement Perth](https://perthpipepower.com.au/hot-water-problems-perth.html): Hot water repairs and system replacement in Perth. Our local plumbing and electrical team assesses the fault and provides a repair plan and written quote.
+- [Blocked Drains Perth — Drain Clearing & Repairs](https://perthpipepower.com.au/blocked-drains-perth.html): Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote.
+- [Water Leak Detection Perth](https://perthpipepower.com.au/water-leak-detection-perth.html): Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote.
+- [Burst Pipe Repairs Perth](https://perthpipepower.com.au/burst-pipe-repair-perth.html): Burst pipe repairs in Perth for active pipe leaks and damaged water connections. Contact our local team for assessment, repair scope and a written quote.
+- [Tap & Mixer Repairs Perth](https://perthpipepower.com.au/tap-mixer-repairs-perth.html): Tap and mixer repairs in Perth for dripping, leaking or faulty kitchen, bathroom and laundry fittings. Book an assessment and written repair quote.
+- [Toilet Repairs Perth — Cistern & Flush Repairs](https://perthpipepower.com.au/toilet-repairs-perth.html): Toilet repairs in Perth for leaks, running cisterns, slow filling, blockages and overflow. On-site assessment, repair or maintenance plan and written quote.
+- [Electrical Fault Finding & Power Repairs Perth](https://perthpipepower.com.au/power-faults-perth.html): Electrical fault finding and power repairs in Perth for outages, circuit faults and recurring trips. Book a licensed electrician assessment and written quote.
+- [Safety Switch & RCD Repairs Perth](https://perthpipepower.com.au/safety-switch-tripping-perth.html): Safety switch and RCD repairs in Perth for recurring trips and switches that will not stay on. Arrange fault assessment, repair scope and a written quote.
+- [Lighting & Power Point Repairs and Installation Perth](https://perthpipepower.com.au/lighting-power-points-perth.html): Lighting and power point repairs and installation in Perth. Discuss fittings, outlet locations and circuit requirements, with an on-site written quote.
+- [Smoke Alarm Repairs, Replacement & Maintenance Perth](https://perthpipepower.com.au/smoke-alarm-maintenance-perth.html): Smoke alarm repairs, replacement and maintenance in Perth. On-site assessment, repair plan and written quote. Do not remove hardwired units.
+- [Fixture, Tap & Appliance Connection Services in Perth](https://perthpipepower.com.au/fixtures-appliances-perth.html): Fixture and appliance connections in Perth: taps, toilets, showers, kitchens and laundries. Discuss plumbing and electrical scope and get a written quote.
+- [Smart Home & Energy Electrical Services in Perth](https://perthpipepower.com.au/renewables-smart-home-perth.html): Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes.
 
-## Regional service guides
+## Perth service regions
+- [CBD & Inner Perth](https://perthpipepower.com.au/perth-cbd-inner-suburbs.html)
+- [Northern Suburbs](https://perthpipepower.com.au/northern-suburbs.html)
+- [Southern Suburbs](https://perthpipepower.com.au/southern-suburbs.html)
+- [Eastern Suburbs](https://perthpipepower.com.au/eastern-suburbs.html)
+- [Western Suburbs](https://perthpipepower.com.au/western-suburbs.html)
+- [Perth Hills & Swan Valley](https://perthpipepower.com.au/perth-hills-swan-valley.html)
 
-- CBD & Inner Perth: https://perthpipepower.com.au/perth-cbd-inner-suburbs.html
-- Northern Suburbs: https://perthpipepower.com.au/northern-suburbs.html
-- Southern Suburbs: https://perthpipepower.com.au/southern-suburbs.html
-- Eastern Suburbs: https://perthpipepower.com.au/eastern-suburbs.html
-- Western Suburbs: https://perthpipepower.com.au/western-suburbs.html
-- Perth Hills & Swan Valley: https://perthpipepower.com.au/perth-hills-swan-valley.html
-
-## Core service pages
-
-- Plumbing: https://perthpipepower.com.au/plumbing.html
-- Electrical: https://perthpipepower.com.au/electrical.html
-- Property maintenance: https://perthpipepower.com.au/property-management.html
-- Service areas: https://perthpipepower.com.au/service-areas.html
+## Business and booking
+- [About Ellis](https://perthpipepower.com.au/about.html)
+- [Plumbing](https://perthpipepower.com.au/plumbing.html)
+- [Electrical](https://perthpipepower.com.au/electrical.html)
+- [Service areas](https://perthpipepower.com.au/service-areas.html)
+- [Request an assessment](https://perthpipepower.com.au/contact.html)
 
 ## Information policy
-
-Use the visible page content as the source of truth. Work scope and quotes depend on the issue, access and confirmed requirements. For immediate danger, call 000.
+Public service summaries match visible website content. Service scope and final prices are confirmed in a written quote. Photographs are not assigned to suburbs without project records. No invented ratings, credentials or case results.

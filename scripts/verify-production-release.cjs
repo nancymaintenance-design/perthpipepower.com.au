@@ -6,12 +6,13 @@ const base='https://perthpipepower.com.au/';
  const urls=[...(await sitemap.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);assert.equal(urls.length,35);
  const responses=await Promise.all(urls.map(async url=>{const r=await fetch(url);assert.equal(r.status,200,url);const html=await r.text();assert(html.includes('field-design.css'),url+' release stylesheet');assert.equal((html.match(/<h1\b/g)||[]).length,1);return {url,status:r.status};}));
  const copy=require('../data/service-commercial-copy.cjs');
+ const metadata=require('../data/seo-service-metadata.cjs');
  for(const [file,data] of Object.entries(copy)){
   const html=await (await fetch(base+file)).text();const main=html.match(/<main\b[\s\S]*?<\/main>/)[0];
   assert(main.includes('data-commercial-service'),file+' released commercial structure');
   assert.equal((main.match(/<section\b/g)||[]).length,5);
   assert.equal((main.match(/class="[^"]*\bfaq\b/g)||[]).length,1);
-  assert(main.includes(data.headline.replace(/&/g,'&amp;')),file+' service headline');
+  assert(main.includes((metadata[file].headline||data.headline).replace(/&/g,'&amp;')),file+' service headline');
   assert(!html.includes('src="service-page-depth.js"'));
  }
  const browser=await chromium.launch({channel:'msedge',headless:true});const views=[];
@@ -28,6 +29,6 @@ const base='https://perthpipepower.com.au/';
  await page.goto(base+'contact.html?suburb=Subiaco#enquiry');await page.waitForFunction(()=>document.querySelector('#address').value==='Subiaco');
  }finally{await browser.close();}
  const commit=require('node:child_process').execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
- fs.writeFileSync('docs/seo/production-service-release-20261008.json',JSON.stringify({commit,checkedAt:new Date().toISOString(),base,responses,views,commercialServices:12,suburbPrefill:true,realEmailSent:false,ga4IngestionVerified:false},null,2));
+ fs.writeFileSync('docs/seo/production-service-release-20261009.json',JSON.stringify({commit,checkedAt:new Date().toISOString(),base,responses,views,commercialServices:12,suburbPrefill:true,realEmailSent:false,ga4IngestionVerified:false},null,2));
  console.log('PASS production: 35 pages HTTP 200; 8 responsive browser checks; new static content, decoded imagery and suburb prefill. No real form submission.');
 })().catch(e=>{console.error(e);process.exit(1)});
