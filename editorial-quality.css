@@ -1,0 +1,11 @@
+.article-summary, .article-toc { margin-block: 1.5rem; padding: 1.25rem; border: 1px solid #b6ccd5; border-radius: 10px; background: #edf5f7; }
+.article-summary h2, .article-toc h2 { margin-top: 0; font-size: 1.2rem; }
+.article-summary p { margin-bottom: 0; }
+.article-toc ul { margin-bottom: 0; padding-left: 1.25rem; }
+.article-toc li + li { margin-top: .5rem; }
+.article h2[id] { scroll-margin-top: 7rem; }
+.article-meta { font-size: .9rem; line-height: 1.6; }
+.service-answer { margin-block: 1.5rem 2rem; padding-block: 1rem; border-block: 1px solid #b6ccd5; }
+.service-answer h2 { margin-top: 0; font-size: 1.35rem; }
+.service-answer p:last-child { margin-bottom: 0; }
+@media (max-width: 540px) { .article-summary, .article-toc { padding: 1rem; } }

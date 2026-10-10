@@ -14,7 +14,19 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
   })[character]);
 
-  const renderElectricalWorkGallery = () => `<div class="electrical-work-gallery"><div class="electrical-work-gallery__heading"><span class="eyebrow">Real work imagery</span><h2>Electrical work examples</h2><p>Electrical switchboard, lighting and power-point work.</p></div><div class="electrical-work-gallery__grid">${ELECTRICAL_WORK_GALLERY.map((record) => `<figure class="electrical-work-gallery__card"><img class="electrical-work-gallery__image" src="/${escapeHtml(record.image)}" alt="${escapeHtml(record.alt)}" loading="lazy" decoding="async"><figcaption><strong>${escapeHtml(record.label)}</strong><span>${escapeHtml(record.caption)}</span></figcaption></figure>`).join('')}</div></div>`;
+  // Intrinsic dimensions of the default responsive 4:3 preview resources.
+  const dimensions = {
+    'kitchen-lighting-progress': [480, 360],
+    'kitchen-lighting-wide': [480, 360],
+    'kitchen-lighting-finished': [480, 360],
+    'cabinet-cabling': [480, 360],
+    'underground-conduit': [480, 360],
+    'renovation-rewiring': [480, 360],
+    'residential-switchboard': [480, 360],
+    'safety-switch-closeup': [480, 360],
+  };
+
+  const renderElectricalWorkGallery = () => `<div class="electrical-work-gallery"><div class="electrical-work-gallery__heading"><span class="eyebrow">Real work imagery</span><h2>Electrical work examples</h2><p>Electrical switchboard, lighting and power-point work.</p></div><div class="electrical-work-gallery__grid">${ELECTRICAL_WORK_GALLERY.map((record) => `<figure class="electrical-work-gallery__card"><img class="electrical-work-gallery__image" src="/${escapeHtml(record.image.replace(/\.jpg$/, '-480.webp'))}" srcset="/${escapeHtml(record.image.replace(/\.jpg$/, '-480.webp'))} 480w, /${escapeHtml(record.image.replace(/\.jpg$/, '-960.webp'))} 960w" sizes="(max-width:700px) 50vw, (max-width:980px) 33vw, 25vw" width="${dimensions[record.id][0]}" height="${dimensions[record.id][1]}" alt="${escapeHtml(record.alt)}" loading="lazy" decoding="async"><figcaption><strong>${escapeHtml(record.label)}</strong><span>${escapeHtml(record.caption)}</span></figcaption></figure>`).join('')}</div></div>`;
 
   const mountElectricalWorkGalleries = (documentRef) => {
     const targets = documentRef.querySelectorAll('[data-electrical-work-gallery]');

@@ -1,0 +1,30 @@
+{
+  "insights-reporting-a-plumbing-leak.html": {
+    "sha256": "f77f3b47a97c2caa70bb7d9a508a6dc5f363b35d5f062a0d898785c972f4a6ac",
+    "lastmod": "2026-10-10"
+  },
+  "insights-hot-water-plumbing-or-electrical.html": {
+    "sha256": "d744027076387574dcace2e43c401827d31dfddcd6a062ea942d2585c24e43e6",
+    "lastmod": "2026-10-10"
+  },
+  "insights-safety-switch-keeps-tripping.html": {
+    "sha256": "9271a2d964623f9c434ac8b6c9e056d8e582236988d695b124b4e684c1d92e71",
+    "lastmod": "2026-10-10"
+  },
+  "insights-tenant-property-manager-maintenance-handover.html": {
+    "sha256": "1cd09bac7539cdb914fbd61643640ddd64001200a30dc11abe38ed03d7a4829b",
+    "lastmod": "2026-10-10"
+  },
+  "news-clearer-property-maintenance-enquiry.html": {
+    "sha256": "19ddcf4f929c87ed628d0dba4ca82c9dfc85dbd8d5005d11303e75b83ae86355",
+    "lastmod": "2026-10-10"
+  },
+  "news-useful-property-work-order.html": {
+    "sha256": "1d69ba4b0b230544505fa209c23f32b756a1fdcada46250c52e2c58e0773bc38",
+    "lastmod": "2026-10-10"
+  },
+  "news-keeping-access-information-together.html": {
+    "sha256": "404e38045598b2d4a43fac49df6d3afb6f8deb9a906ccc212d2dc539bb5b9bcc",
+    "lastmod": "2026-10-10"
+  }
+}

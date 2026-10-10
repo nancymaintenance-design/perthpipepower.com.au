@@ -6,7 +6,16 @@
     "telephone": "0413 477 667",
     "email": "maxinemaintenance.au@outlook.com",
     "address": "140 St Georges Terrace, Perth WA 6000, Australia",
-    "team": "Ellis Services Group has an independent Perth office and local repair team within Ellis Group."
+    "team": "Ellis Services Group has an independent Perth office and local repair team within Ellis Group.",
+    "legalName": "ELLIS SERVICES GROUP PTY LTD",
+    "abn": "96 645 821 745",
+    "registration": "https://abr.business.gov.au/ABN/View?id=645821745",
+    "sameAs": [
+      "https://www.instagram.com/elliservices_group/",
+      "https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
+      "https://www.linkedin.com/in/ellis-services-group-091541266/"
+    ],
+    "hasMap": "https://www.google.com/maps?cid=4207134925924682021"
   },
   "services": [
     "Plumbing repairs, drain clearing and water leak detection",
