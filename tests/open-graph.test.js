@@ -5,7 +5,7 @@ import test from 'node:test';
 
 const root = process.cwd();
 const htmlFiles = fs.readdirSync(root, { recursive: true })
-  .filter((file) => file.endsWith('.html') && !path.basename(file).startsWith('google'));
+  .filter((file) => file.endsWith('.html') && !path.basename(file).startsWith('google') && fs.statSync(path.join(root, file)).isFile());
 
 test('every indexable HTML document has Open Graph title, description, URL and type', () => {
   const missing = [];

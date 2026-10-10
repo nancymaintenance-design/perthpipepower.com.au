@@ -5,6 +5,15 @@
 .article-toc li + li { margin-top: .5rem; }
 .article h2[id] { scroll-margin-top: 7rem; }
 .article-meta { font-size: .9rem; line-height: 1.6; }
+.intent-content { margin-block: 2rem; }
+.intent-links { padding-left: 1.25rem; }
+.intent-links li + li { margin-top: .4rem; }
+.intent-content details { margin-block: .75rem; padding: 1rem; border: 1px solid #b6ccd5; border-radius: 8px; background: #fff; color: #17313e; }
+.intent-content summary { cursor: pointer; font-weight: 600; line-height: 1.5; }
+.intent-content details p { margin-bottom: 0; }
+.intent-safety { margin-block: 1.25rem; padding: 1rem 1.25rem; border-left: 4px solid #986724; border-radius: 6px; background: #fff5df; color: #302718; max-width: 75ch; font-size: 1rem; line-height: 1.65; }
+.intent-safety p { margin: 0; }
+.intent-safety a { color: #684508; text-decoration: underline; }
 .service-answer { margin-block: 1.5rem 2rem; padding-block: 1rem; border-block: 1px solid #b6ccd5; }
 .service-answer h2 { margin-top: 0; font-size: 1.35rem; }
 .service-answer p:last-child { margin-bottom: 0; }

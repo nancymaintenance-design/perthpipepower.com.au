@@ -40,7 +40,7 @@ for (const canonical of urls) {
     const page=await context.newPage();
     for (const url of urls) {
       const file=fileFor(new URL(url));
-      const response=await page.goto('http://127.0.0.1:4184/'+(file==='index.html'?'':file));
+      const response=await page.goto((process.env.PERTH_PREVIEW_URL||'http://127.0.0.1:4184')+'/'+(file==='index.html'?'':file));
       assert.equal(response.status(),200);
       const state=await page.evaluate(()=>({h1:document.querySelectorAll('h1').length,overflow:document.documentElement.scrollWidth>innerWidth+1,words:document.querySelector('main').innerText.trim().split(/\s+/).length,answer:!!document.querySelector('[data-service-answer]'),links:document.querySelectorAll('main a[href]').length}));
       assert.equal(state.h1,1,file+': no-JS H1');assert(!state.overflow,file+': no-JS overflow');assert(state.words>80,file+': no-JS readable content');assert(state.links>0);

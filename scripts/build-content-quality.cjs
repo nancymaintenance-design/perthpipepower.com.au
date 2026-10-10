@@ -5,6 +5,7 @@ const serviceAnswers = require('../data/service-answers.cjs');
 const crypto = require('node:crypto');
 const {contentDate} = require('./lib/content-dates.cjs');
 const root = path.resolve(__dirname, '..');
+require('./apply-site-content-intent.cjs').applySiteContent(root);
 const datePath = path.join(root, 'data/editorial-content-dates.json');
 const dates = fs.existsSync(datePath) ? JSON.parse(fs.readFileSync(datePath, 'utf8')) : {};
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');

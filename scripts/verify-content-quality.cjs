@@ -3,6 +3,7 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const { chromium } = require('C:/Users/UFTR/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const root = path.resolve(__dirname, '..');
+const previewBase = process.env.PERTH_PREVIEW_URL || 'http://127.0.0.1:4184';
 const articles = Object.keys(require('../data/editorial-summaries.cjs'));
 const pages = ['service-areas.html', 'insights.html', 'news.html', ...articles];
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
@@ -40,7 +41,7 @@ for (const file of pages) {
     page.on('pageerror', e => errors.push(e.message));
     for (const width of [390, 1440]) for (const file of pages) {
       await page.setViewportSize({ width, height: 950 });
-      const response = await page.goto('http://127.0.0.1:4184/' + file);
+      const response = await page.goto(previewBase + '/' + file);
       assert.equal(response.status(), 200);
       const layout = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, h1: document.querySelectorAll('h1').length }));
       assert(layout.scroll <= width + 1, file + ': overflow');
@@ -53,12 +54,12 @@ for (const file of pages) {
         assert(await page.locator(href).isVisible());
       }
       if (file === articles[0]) {
-        await page.goto('http://127.0.0.1:4184/' + file);
+        await page.goto(previewBase + '/' + file);
         await page.screenshot({ path: path.join(root, `docs/seo/screenshots/content-20261010-${width}.png`) });
       }
       results.push({ file, width, status: 200, overflow: false });
     }
-    await page.goto('http://127.0.0.1:4184/perth-cbd-inner-suburbs.html');
+    await page.goto(previewBase + '/perth-cbd-inner-suburbs.html');
     const galleryImages = await page.locator('.electrical-work-gallery__image').evaluateAll(images => images.map(i => ({ width: i.width, w: i.getAttribute('width'), h: i.getAttribute('height') })));
     assert.equal(galleryImages.length, 8);
     assert(galleryImages.every(i => Number(i.w) > 0 && Number(i.h) > 0));
