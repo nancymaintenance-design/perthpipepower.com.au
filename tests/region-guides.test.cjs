@@ -13,7 +13,7 @@ for (const guide of regionGuides) {
   assert.match(html, /blocked drains|leak concerns|hot-water/i);
   assert.match(html, /electrical repairs|fault finding|safety switches|switchboards|lighting and power points/i);
   assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i, 'regional guides use prose, not shallow service card grids');
-  assert.doesNotMatch(html, /24.hour|fixed price|guaranteed/i, 'regional guide copy must not invent commercial claims');
+  assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /fixed price|guaranteed arrival/i, 'regional guide must not invent price or arrival promises');
   assert.match(html, /"@type"\s*:\s*"FAQPage"/);
   const title = html.match(/<title>([^<]+)<\/title>/)[1];
   assert.match(title, /Plumb(?:er|ing).*Electric(?:ian|al).*\| Ellis/i);

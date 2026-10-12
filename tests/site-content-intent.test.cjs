@@ -1,5 +1,6 @@
 const fs=require('node:fs'),cp=require('node:child_process'),assert=require('node:assert/strict'),{test}=require('node:test');
-const base='f03bd81f03b89d2fb688e7e612646f497122b83e';
+// Pinned approved production base, also present in the migrated shallow clone.
+const base='d1ef9827a4e68b449342e14f44956134504faed2';
 const files=[...fs.readFileSync('sitemap.xml','utf8').matchAll(/<loc>[^<]*\.au\/([^<]*)<\/loc>/g)].map(m=>m[1]||'index.html');
 const read=f=>fs.readFileSync(f,'utf8');
 const clean=s=>s.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
@@ -7,9 +8,9 @@ test('every live page has an explicit distinct search-intent owner, without crea
  assert(fs.existsSync('data/site-content-intent.cjs'),'Missing approved keyword-to-live-page mapping');
  const map=require('../data/site-content-intent.cjs').pages;
  assert.deepEqual(Object.keys(map).sort(),[...files].sort());
- assert.equal(new Set(Object.values(map).map(p=>p.primary)).size,35);
- assert.equal(files.length,35);
- for(const [f,p] of Object.entries(map)){assert(p.intent&&p.primary&&p.links.length>=2,f+': meaningful topic and next paths');for(const [href]of p.links)assert(fs.existsSync(href),f+': dead mapped owner '+href);}
+ assert.equal(new Set(Object.values(map).map(p=>p.primary)).size,47);
+ assert.equal(files.length,47);
+ for(const [f,p] of Object.entries(map)){assert(p.intent&&p.primary&&p.links.length>=2,f+': meaningful topic and next paths');for(const [href]of p.links)assert(fs.existsSync(href.split('#')[0]),f+': dead mapped owner '+href);}
 });
 test('trade overviews, managed-property and contact pages answer booking decisions with native FAQ links',()=>{
  for(const f of ['plumbing.html','electrical.html','property-management.html','contact.html']){
@@ -36,7 +37,8 @@ test('safety-sensitive queries have utility routing before an ordinary enquiry, 
  const drain=read('blocked-drains-perth.html');assert(drain.includes('tel:131375'),'wastewater overflow needs Water Corporation routing');
 });
 test('content editing preserves approved prices, existing canonical URLs, original hero and private personnel',()=>{
- for(const f of [...files,'privacy.html']){
+ const originalFiles=cp.execFileSync('git',['ls-tree','--name-only',base],{encoding:'utf8'}).trim().split(/\r?\n/);
+ for(const f of [...files,'privacy.html'].filter(f=>originalFiles.includes(f))){
   const h=read(f),old=cp.execFileSync('git',['show',base+':'+f],{encoding:'utf8'});
   const prices=s=>[...s.matchAll(/<p class="price-guide__range">([\s\S]*?)<\/p>/g)].map(m=>clean(m[1]));
   assert.deepEqual(prices(h),prices(old),f+': price changed');

@@ -17,4 +17,9 @@
 .service-answer { margin-block: 1.5rem 2rem; padding-block: 1rem; border-block: 1px solid #b6ccd5; }
 .service-answer h2 { margin-top: 0; font-size: 1.35rem; }
 .service-answer p:last-child { margin-bottom: 0; }
+.keyword-gap-part + .keyword-gap-part { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #b6ccd5; }
+.keyword-gap-content { margin-block: 2rem; }
+.keyword-gap-part[id] { scroll-margin-top: 7rem; }
+.keyword-gap-part h2 { margin-top: 0; }
+.keyword-gap-part li + li { margin-top: .45rem; }
 @media (max-width: 540px) { .article-summary, .article-toc { padding: 1rem; } }

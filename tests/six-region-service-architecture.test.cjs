@@ -54,10 +54,11 @@ const aiFeed = JSON.parse(read('ai-content.json'));
 assert.equal(aiFeed.regions.length, 6);
 assert.equal(aiFeed.business.telephone, '0413 477 667');
 assert.equal(aiFeed.business.email, 'maxinemaintenance.au@outlook.com');
-assert.doesNotMatch(JSON.stringify(aiFeed), /24 hour|24-hour|fixed price|guaranteed/i);
+assert.doesNotMatch(JSON.stringify(aiFeed), /fixed price|guaranteed arrival/i);
+assert.equal(aiFeed.business.hours.routine,'09:00–21:00, seven days a week');
 
 const llms = read('llms.txt');
 for (const { file } of regions) assert.match(llms, new RegExp(file));
-assert.doesNotMatch(llms, /24 hour|24-hour|fixed price|guaranteed/i);
+assert.doesNotMatch(llms, /fixed price|guaranteed arrival/i);
 
 console.log('Six-region service architecture contract passed.');

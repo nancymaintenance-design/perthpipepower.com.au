@@ -10,7 +10,7 @@ for(const file of ['perth-cbd-inner-suburbs.html','northern-suburbs.html','south
  assert((main.match(/<section\b/g)||[]).length<=4,file+' uses continuous service content instead of fragmented panels');
 }
 const feed=JSON.parse(read('ai-content.json'));
-assert.equal(feed.servicePages?.length,12,'AI summary links the actual twelve service owners');
+assert.equal(feed.servicePages?.length,24,'AI summary links twelve existing and twelve approved additional service owners');
 for(const item of feed.servicePages){assert(item.url.startsWith('https://perthpipepower.com.au/'));assert(read(new URL(item.url).pathname.slice(1)).includes('href="contact.html"'));}
 for(const file of Object.keys(require('../data/service-commercial-copy.cjs'))){
  const html=read(file),description=html.match(/name="description"\s+content="([^"]+)"/)[1];

@@ -24,7 +24,7 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(date || '') || new Date(date).toISOString().slic
   sitemap = sitemap.replace(/<url>([\s\S]*?)<\/url>/g, (_, entry) => {
     const url = entry.match(/<loc>([^<]+)<\/loc>/)[1];
     const file = new URL(url).pathname.slice(1) || 'index.html';
-    const sha256 = crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex');
+    const sha256 = crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file),'utf8').replace(/\r\n/g,'\n')).digest('hex');
     if (manifest[file]?.sha256 !== sha256) manifest[file] = {sha256, lastmod:date};
     entry = entry.replace(/\s*<lastmod>[^<]*<\/lastmod>/g, '');
     return '<url>' + entry.replace(/<\/loc>/, `</loc><lastmod>${manifest[file].lastmod}</lastmod>`) + '</url>';

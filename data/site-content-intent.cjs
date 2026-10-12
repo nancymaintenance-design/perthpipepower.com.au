@@ -169,4 +169,11 @@ const metadata={
  'news-useful-property-work-order.html':{title:'Plumbing & Electrical Work Order Checklist | Ellis Perth',description:'A practical repair work-order checklist: assessable tasks, property references, access and approval limits for Perth property managers and owners.'},
  'news-keeping-access-information-together.html':{title:'Repair Visit Access Checklist | Ellis Perth',description:'Keep repair access details, occupant contacts and changed arrangements with the work request. Practical privacy-aware preparation for Perth maintenance visits.'},
 };
+require('./keyword-gap-content.cjs').applyKeywordGapContent(pages,metadata);
+require('./confirmed-content-expansion.cjs').applyConfirmedExpansion(pages,metadata);
+// Register generated-page banners in the same source used during regeneration.
+for(const page of require('./expanded-services.cjs').pages){
+ if(page.parent==='electrical.html')safety[page.file]=safety['electrical.html'];
+ if(page.file==='emergency-plumber-perth.html')safety[page.file]=safety['blocked-drains-perth.html'];
+}
 module.exports={pages,safety,metadata};

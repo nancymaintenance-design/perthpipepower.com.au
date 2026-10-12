@@ -15,7 +15,11 @@
       "https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
       "https://www.linkedin.com/in/ellis-services-group-091541266/"
     ],
-    "hasMap": "https://www.google.com/maps?cid=4207134925924682021"
+    "hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+    "hours": {
+      "routine": "09:00–21:00, seven days a week",
+      "emergency": "24-hour emergency repairs; attendance and charges confirmed for the request"
+    }
   },
   "services": [
     "Plumbing repairs, drain clearing and water leak detection",
@@ -97,7 +101,7 @@
     {
       "name": "Lighting & Power Point Repairs and Installation Perth",
       "url": "https://perthpipepower.com.au/lighting-power-points-perth.html",
-      "description": "Lighting and power point repairs and installation in Perth. Discuss fittings, outlet locations and circuit requirements, with an on-site written quote."
+      "description": "Find Perth lighting, power point and switch services. Choose the dedicated repair or installation page, or arrange assessment of a wider electrical fault."
     },
     {
       "name": "Smoke Alarm Repairs, Replacement & Maintenance Perth",
@@ -107,12 +111,72 @@
     {
       "name": "Fixture, Tap & Appliance Connection Services in Perth",
       "url": "https://perthpipepower.com.au/fixtures-appliances-perth.html",
-      "description": "Fixture and appliance connections in Perth: taps, toilets, showers, kitchens and laundries. Discuss plumbing and electrical scope and get a written quote."
+      "description": "Dishwasher and fixture connections in Perth. Assess product compatibility and plumbing or electrical work, with an on-site assessment and written quote."
     },
     {
       "name": "Smart Home & Energy Electrical Services in Perth",
       "url": "https://perthpipepower.com.au/renewables-smart-home-perth.html",
       "description": "Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes."
+    },
+    {
+      "name": "Lighting Installation & Repairs Perth",
+      "url": "https://perthpipepower.com.au/lighting-installation-perth.html",
+      "description": "Lighting installation and repairs in Perth. Assess flickering LED downlights, fitting replacement and new lighting positions, with an agreed written quote."
+    },
+    {
+      "name": "Power Point Installation & Repairs Perth",
+      "url": "https://perthpipepower.com.au/power-points-perth.html",
+      "description": "Power point installation, replacement and repairs in Perth. Assess failed outlets, damaged switches and new locations, with a written quote."
+    },
+    {
+      "name": "Dishwasher Installation & Connections Perth",
+      "url": "https://perthpipepower.com.au/dishwasher-installation-perth.html",
+      "description": "Dishwasher installation in Perth with agreed supply, old-unit removal and taking away. Check water, drainage and electrical requirements before quoting."
+    },
+    {
+      "name": "Toilet Installation & Replacement Perth",
+      "url": "https://perthpipepower.com.au/toilet-installation-perth.html",
+      "description": "Toilet installation and replacement in Perth with agreed supply, removal and taking away. Check fit, water and waste connections before quoting."
+    },
+    {
+      "name": "Shower Plumbing Leak Repairs Perth",
+      "url": "https://perthpipepower.com.au/shower-plumbing-repairs-perth.html",
+      "description": "Shower plumbing leak repairs in Perth. Assess fittings and supply or waste pipes; separate plumbing repairs from waterproofing and building work."
+    },
+    {
+      "name": "Low Water Pressure & Water Hammer Perth",
+      "url": "https://perthpipepower.com.au/water-pressure-perth.html",
+      "description": "Low water pressure and water hammer assessment in Perth. Investigate affected outlets and private plumbing, with supply issues referred appropriately."
+    },
+    {
+      "name": "Ceiling Fan Installation & Repairs Perth",
+      "url": "https://perthpipepower.com.au/ceiling-fans-perth.html",
+      "description": "Ceiling fan installation, replacement and repairs in Perth. Assess mounting, controls and electrical connections before agreeing the work and quote."
+    },
+    {
+      "name": "Bathroom Exhaust Fan Replacement Perth",
+      "url": "https://perthpipepower.com.au/exhaust-fans-perth.html",
+      "description": "Bathroom exhaust fan installation, repairs and replacement in Perth. Assess the fan and electrical work; confirm ventilation or building work separately."
+    },
+    {
+      "name": "Switchboard Repairs & Upgrades Perth",
+      "url": "https://perthpipepower.com.au/switchboard-upgrades-perth.html",
+      "description": "Switchboard repairs and upgrades in Perth. Assess faults, protection and proposed loads, then agree the equipment, work and itemised quote."
+    },
+    {
+      "name": "RCD Testing & Safety Switch Checks Perth",
+      "url": "https://perthpipepower.com.au/rcd-testing-perth.html",
+      "description": "RCD testing and safety switch checks in Perth. Agree the devices, checks and records, with repair or broader inspection work scoped separately."
+    },
+    {
+      "name": "24-Hour Emergency Plumber Perth",
+      "url": "https://perthpipepower.com.au/emergency-plumber-perth.html",
+      "description": "24-hour emergency plumber in Perth for urgent private plumbing repairs. Call to confirm attendance arrangements, the repair plan and emergency charges."
+    },
+    {
+      "name": "24-Hour Emergency Electrician Perth",
+      "url": "https://perthpipepower.com.au/emergency-electrician-perth.html",
+      "description": "24-hour emergency electrician in Perth for urgent private faults. Safety and utility routing first; call to confirm attendance and quoted repair charges."
     }
   ]
 }

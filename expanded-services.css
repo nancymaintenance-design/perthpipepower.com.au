@@ -1,0 +1,13 @@
+[data-expanded-service] .service-reading{max-width:960px}
+[data-expanded-service] p,[data-expanded-service] li{line-height:1.75}
+[data-expanded-service] h2,[data-expanded-service] h3{scroll-margin-top:8rem}
+[data-expanded-service] .page-hero{padding-bottom:2.5rem}
+.expanded-lead{max-width:72ch;font-size:1.1rem}
+.expanded-hours{font-size:.95rem;max-width:72ch}
+.expanded-toc{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;margin-top:1.5rem}
+.expanded-toc a{padding:.4rem 0;text-underline-offset:.2em}
+.expanded-scenarios{background:#f4f6f3}
+.expanded-scenario+.expanded-scenario{margin-top:1.8rem}
+.expanded-steps li{padding-left:.35rem;margin-bottom:1rem}
+[data-expanded-service] .intent-links{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;padding-left:1.2rem}
+@media(max-width:600px){[data-expanded-service] .button{margin-bottom:.6rem;max-width:100%;white-space:normal}[data-expanded-service] .page-hero h1{font-size:clamp(2rem,8vw,2.8rem)}}

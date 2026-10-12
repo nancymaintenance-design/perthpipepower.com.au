@@ -14,7 +14,7 @@ for (const photo of gallery.ELECTRICAL_WORK_GALLERY) {
 }
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)];
-assert.equal(entries.length, 35);
+assert.equal(entries.length, 47, '35 retained URLs plus 12 approved service pages');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data/sitemap-content-dates.json'), 'utf8'));
 const crypto = require('node:crypto');
 for (const [, entry] of entries) {
@@ -23,6 +23,6 @@ for (const [, entry] of entries) {
   const date = entry.match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/)?.[1];
   assert(date, file + ': explicit content modification date');
   assert.equal(date, manifest[file].lastmod);
-  assert.equal(manifest[file].sha256, crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex'), file + ': lastmod manifest matches content');
+  assert.equal(manifest[file].sha256, crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file),'utf8').replace(/\r\n/g,'\n')).digest('hex'), file + ': lastmod manifest matches content (canonical LF)');
 }
 console.log('PASS: responsive work photos and content-backed sitemap dates.');
