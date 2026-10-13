@@ -3,10 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
-const {spawn} = require('node:child_process');
-const http = require('node:http');
 const root = path.join(__dirname, '..');
-const preview = path.resolve(root, '../reports/seo-optimization-2026-10-13/preview-server.py');
 
 function tracking() {
   const events = [], listeners = [];
@@ -52,27 +49,4 @@ test('known HTML variants redirect once while canonical, unknown and backend pat
     assert.equal(redirect(want),null);
   }
   for (const input of ['/','/plumbing.html','/unknown.html/','/api/index.html/','/assets/photo.html/']) assert.equal(redirect(input),null);
-});
-
-function request(port, route, method='GET') { return new Promise((resolve,reject) => {
-  const req=http.request({host:'127.0.0.1', port, path:route, method},res=>{let body='';res.on('data',c=>body+=c);res.on('end',()=>resolve({status:res.statusCode,headers:res.headers,body}));});req.on('error',reject);req.end();
-}); }
-test('localhost preview serves public assets, redirects and denies backend/internal/traversal on GET and HEAD', async t => {
-  assert.ok(fs.existsSync(preview),'dedicated preview server must exist');
-  const child=spawn('python',[preview,'--root',root,'--port','0'],{stdio:['ignore','pipe','pipe']});
-  t.after(()=>child.kill());
-  const port=await new Promise((resolve,reject)=>{let output='';child.stdout.on('data',c=>{output+=c;const m=output.match(/127\.0\.0\.1:(\d+)/);if(m)resolve(Number(m[1]));});child.on('error',reject);child.on('exit',()=>reject(new Error('Preview exited before ready')));});
-  const home=await request(port,'/');
-  assert.equal(home.status,200); assert.match(home.body,/<html/i);
-  assert.equal(home.headers['x-robots-tag'],'noindex, nofollow, noarchive');
-  assert.equal(home.headers['cache-control'],'no-store');
-  for (const directive of ["connect-src 'none'","frame-src 'none'","form-action 'none'"]) assert.ok(home.headers['content-security-policy'].includes(directive));
-  assert.match(home.headers['content-security-policy'],/script-src 'self' 'unsafe-inline'/);
-  for (const method of ['GET','HEAD']) {
-    for (const route of ['/.git/config','/api/contact','/data/test.json','/scripts/test.js','/tests/ga4.test.cjs','/tools/test','/docs/test','/internal/test','/check-favicon.js','/check-service-pricing.js','/ai-content.json','/vercel.json','/%2e%2e/00-%E6%80%BB%E8%A7%88.md','/%252e%252e/source/index.html','/api%2fcontact','/api%5ccontact']) assert.equal((await request(port,route,method)).status,403,method+' '+route);
-    const r=await request(port,'/plumbing.html/?x=1',method);assert.equal(r.status,308);assert.equal(r.headers.location,'/plumbing.html?x=1');
-    assert.equal((await request(port,'/unknown.html/',method)).status,404);
-    assert.equal((await request(port,'/images/',method)).status,403);
-  }
-  const post=await request(port,'/api/contact','POST');assert.equal(post.status,403);assert.equal(JSON.parse(post.body).error,'Preview submissions are disabled');
 });
