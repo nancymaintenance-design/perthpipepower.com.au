@@ -21,6 +21,8 @@ const allowed = new Set([...expectedPageFiles, ...approvedAssets, ...artifacts])
 function ownerPath(outDir: string): string {
   const location = resolve(projectRoot, '.build/output-manifests', `${hash(outDir.toLowerCase())}.json`);
   assertNoLinks(location);
+  const stat = lstatSync(location, { throwIfNoEntry: false });
+  if (stat && !stat.isFile()) throw new Error('Build owner manifest must be a regular file');
   return location;
 }
 function readOwner(location: string, outDir: string): OwnerManifest | null {

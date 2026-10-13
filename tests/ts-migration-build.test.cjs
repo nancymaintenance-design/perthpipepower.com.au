@@ -151,6 +151,83 @@ test('output_file_directory_conflicts_fail_before_any_write', t => {
   assert.equal(fs.statSync(path.join(f.outDir, 'index.html')).mtimeMs, before);
 });
 
+test('occupied_manifest_parent_fails_before_public_or_mirror_writes', t => {
+  modules(); const f = fixture(t);
+  fs.writeFileSync(path.join(f.sourceRoot, 'index.html'), 'EXISTING_MIRROR');
+  // Simulate only the manifest parent type conflict, in a separate process.
+  // Every mutation API used by the builder is intercepted: the real source's
+  // .build directory and all public/mirror paths remain untouched.
+  const code = `
+    const fs = require('node:fs'), path = require('node:path');
+    const { syncBuiltinESMExports } = require('node:module');
+    const { buildSite } = require(${JSON.stringify(path.join(root, '.build/site/build/write-output.mjs'))});
+    const occupied = ${JSON.stringify(path.join(root, '.build/output-manifests'))}.toLowerCase();
+    const originalStat = fs.lstatSync, originalExists = fs.existsSync;
+    fs.lstatSync = function(file, ...args) {
+      const target = path.resolve(file).toLowerCase();
+      if (target === occupied) return { isSymbolicLink:()=>false, isDirectory:()=>false, isFile:()=>true };
+      if (target.startsWith(occupied + path.sep)) return undefined;
+      return originalStat.call(this, file, ...args);
+    };
+    fs.existsSync = function(file) {
+      if (path.resolve(file).toLowerCase().startsWith(occupied + path.sep)) return false;
+      return originalExists.call(this, file);
+    };
+    const writes = [];
+    fs.mkdirSync = function(file) { writes.push(['mkdir', String(file)]); if(path.resolve(file).toLowerCase() === occupied) throw Error('ENOTDIR simulated occupied manifest parent'); };
+    fs.writeFileSync = function(file) { writes.push(['write', String(file)]); };
+    fs.unlinkSync = function(file) { writes.push(['unlink', String(file)]); };
+    syncBuiltinESMExports();
+    let error = null;
+    try { buildSite(${JSON.stringify({sourceRoot:f.sourceRoot,outDir:f.outDir,mirrorRoot:f.sourceRoot})}); }
+    catch(e) { error = e.message; }
+    console.log(JSON.stringify({error,writes}));
+  `;
+  const child = spawnSync(process.execPath, ['-e', code], { encoding: 'utf8' });
+  assert.equal(child.status, 0, child.stderr);
+  const result = JSON.parse(child.stdout);
+  assert.match(result.error, /ancestor.*directory|parent.*directory|manifest.*regular|ENOTDIR/i);
+  assert.equal(result.writes.length, 0, 'manifest preflight must happen before every public/mirror mutation');
+  assert.equal(fs.existsSync(f.outDir), false);
+  assert.equal(fs.readFileSync(path.join(f.sourceRoot, 'index.html'), 'utf8'), 'EXISTING_MIRROR');
+});
+
+test('standalone_asset_copy_preserves_unowned_and_edited_matching_paths', t => {
+  const { copyPublicAssets } = modules(), f = fixture(t);
+  fs.mkdirSync(f.outDir);
+  const target = path.join(f.outDir, 'site.css');
+  fs.writeFileSync(target, 'UNOWNED_USER_FILE');
+  assert.throws(() => copyPublicAssets(f.sourceRoot, f.outDir, ['site.css']), /different|existing|modified|conflict/i);
+  assert.equal(fs.readFileSync(target, 'utf8'), 'UNOWNED_USER_FILE');
+  fs.unlinkSync(target);
+  copyPublicAssets(f.sourceRoot, f.outDir, ['site.css']);
+  fs.appendFileSync(target, '\nUSER_EDIT');
+  const edited = fs.readFileSync(target);
+  assert.throws(() => copyPublicAssets(f.sourceRoot, f.outDir, ['site.css']), /different|existing|modified|conflict/i);
+  assert.deepEqual(fs.readFileSync(target), edited);
+});
+
+test('standalone_asset_copy_leaves_identical_files_unmodified', t => {
+  const { copyPublicAssets } = modules(), f = fixture(t);
+  fs.mkdirSync(f.outDir);
+  const target = path.join(f.outDir, 'site.css');
+  fs.copyFileSync(path.join(f.sourceRoot, 'site.css'), target);
+  fs.utimesSync(target, new Date('2020-01-02T00:00:00Z'), new Date('2020-01-02T00:00:00Z'));
+  const before = fs.statSync(target).mtimeMs;
+  copyPublicAssets(f.sourceRoot, f.outDir, ['site.css']);
+  assert.equal(fs.statSync(target).mtimeMs, before);
+  assert.deepEqual(fs.readFileSync(target), fs.readFileSync(path.join(f.sourceRoot, 'site.css')));
+});
+
+test('standalone_asset_copy_preflights_later_conflicts_before_any_write', t => {
+  const { copyPublicAssets } = modules(), f = fixture(t);
+  fs.mkdirSync(f.outDir);
+  fs.writeFileSync(path.join(f.outDir, 'site.css'), 'LATER_USER_FILE');
+  assert.throws(() => copyPublicAssets(f.sourceRoot, f.outDir, ['navigation.css', 'site.css']), /different|existing|modified|conflict/i);
+  assert.equal(fs.existsSync(path.join(f.outDir, 'navigation.css')), false);
+  assert.equal(fs.readFileSync(path.join(f.outDir, 'site.css'), 'utf8'), 'LATER_USER_FILE');
+});
+
 test('unsafe_and_case_colliding_public_paths_never_write', t => {
   const { copyPublicAssets, renderSite, loadSiteData } = modules(), f = fixture(t);
   for (const file of ['../site.css', '/site.css', 'C:/site.css', 'images\\x.png', 'images/%2e%2e/site.css', 'site.css.', 'CON', 'Site.css']) {

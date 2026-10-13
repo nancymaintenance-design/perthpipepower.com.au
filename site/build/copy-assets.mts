@@ -12,7 +12,7 @@ export function inside(root: string, target: string): boolean {
   return rel !== '' && rel !== '..' && !rel.startsWith(`..${sep}`) && !isAbsolute(rel);
 }
 
-/** Inspect every existing component, including Windows junctions and parents. */
+/** Existing ancestors must be directories; every component must be link-free. */
 export function assertNoLinks(location: string): void {
   const target = resolve(location), disk = parse(target).root;
   let current = disk;
@@ -20,6 +20,7 @@ export function assertNoLinks(location: string): void {
     current = resolve(current, part);
     const stat = lstatSync(current, { throwIfNoEntry: false });
     if (stat?.isSymbolicLink()) throw new Error(`Unsafe symbolic link or junction: ${current}`);
+    if (stat && current !== target && !stat.isDirectory()) throw new Error(`Unsafe path ancestor is not a directory: ${current}`);
   }
 }
 export function publicPath(root: string, file: string): string {
@@ -72,15 +73,19 @@ export function listOutputFiles(root: string, allowedFiles: ReadonlySet<string>,
   }).sort();
 }
 
-/** Narrow standalone copier. Existing unrelated output is refused, never erased. */
+/** Refuse differing existing bytes; identical files are retained without writing. */
 export function copyPublicAssets(sourceRoot: string, outDir: string, assets: readonly string[]): void {
   const roots = checkRoots(sourceRoot, outDir), files = readPublicAssets(roots.sourceRoot, assets);
   for (const file of listOutputFiles(roots.outDir, new Set(files.keys()))) if (!files.has(file)) throw new Error(`Unexpected public output file: ${file}`);
-  for (const file of files.keys()) {
+  const pending = new Map<string, Buffer>();
+  for (const [file, bytes] of files) {
     const target = publicPath(roots.outDir, file), stat = lstatSync(target, { throwIfNoEntry: false });
     if (stat && !stat.isFile()) throw new Error(`Public asset output is not a regular file: ${file}`);
+    if (stat) {
+      if (!readFileSync(target).equals(bytes)) throw new Error(`Existing public asset has different bytes: ${file}`);
+    } else pending.set(file, bytes);
   }
-  for (const [file, bytes] of files) {
+  for (const [file, bytes] of pending) {
     const target = publicPath(roots.outDir, file);
     mkdirSync(dirname(target), { recursive: true }); writeFileSync(target, bytes);
   }
