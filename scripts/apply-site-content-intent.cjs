@@ -9,10 +9,21 @@ function applySiteContent(root){
   const previousHeading=previousPanel?.match(/<h([23])([^>]*)>/);
   h=h.replace(/<!-- site-intent:start -->[\s\S]*?<!-- site-intent:end -->/g,'<!-- site-intent:slot -->').replace(/<aside class="intent-safety"[^>]*>[\s\S]*?<\/aside>/g,'').replace(/<!-- keyword-gap:start -->[\s\S]*?<!-- keyword-gap:end -->/g,'');
   const before=h;
-  const faq=p.faq.map(([q,a])=>`<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('');
+  const faq=p.faq.map(([q,a,href])=>`<details><summary>${esc(q)}</summary><p>${esc(a)}${href?` <a href="${esc(href)}">Read the explanation.</a>`:''}</p></details>`).join('');
   const paragraphs=p.body.split('\n\n').map(t=>`<p>${esc(t)}</p>`).join('');
   const links=`<ul class="intent-links">${p.links.map(([url,label])=>`<li><a href="${url}">${esc(label)}</a></li>`).join('')}</ul>`;
   let main=h.match(/<main\b[\s\S]*?<\/main>/)[0];
+  if(file==='lighting-power-points-perth.html'){
+   const d=require('../data/service-commercial-copy.cjs')[file];
+   main=main.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)\s*<p>[\s\S]*?<\/p>/,(_,heading)=>heading+'<p>'+esc(d.intro)+'</p>');
+   const editorial=d.sections.map(([heading,ps],i)=>`<div id="${i?'service-method':'service-work'}" class="service-editorial-part"><h2>${esc(heading)}</h2>${ps.map(([sub,text])=>(sub?`<h3>${esc(sub)}</h3>`:'')+`<p>${text}</p>`).join('')}</div>`).join('');
+   const figure=main.match(/<figure class="service-editorial-figure">[\s\S]*?<\/figure>/)?.[0]||'';
+   main=main.replace(/<div id="service-work"[\s\S]*?(?=<p class="service-trade-note">)/,editorial+figure);
+   main=main.replace(/(<section[^>]*id="service-faq"[^>]*>[\s\S]*?<h2>)[\s\S]*?(<\/h2>)/,(_,open,close)=>open+'Choosing a lighting or power-point service'+close);
+   main=main.replace(/(<section[^>]*id="service-faq"[^>]*>)([\s\S]*?)(<\/section>)/,(_,open,body,close)=>open+body.replace(/<details\b[\s\S]*?<\/details>/g,'')+close);
+   const answer=require('../data/service-answers.cjs')[file];
+   main=main.replace(/(<aside class="service-answer" data-service-answer>)[\s\S]*?(<\/aside>)/,(_,open,close)=>open+'<h2>Choose the next step</h2><p>'+esc(answer[0])+'</p><p><a href="'+answer[1]+'">'+esc(answer[2])+'</a>. <a href="contact.html">Request an assessment and written quote</a>.</p>'+close);
+  }
   if(file==='plumbing.html')main=main.replace('Issues you can contact us about','Plumbing repairs we assess');
   if(file==='electrical.html')main=main.replace('Issues you can contact us about','Electrical repairs and installations');
   if(file==='property-management.html')main=main.replace('Keep these four elements together','Keep the property, issue and approval together');
@@ -59,6 +70,12 @@ function applySiteContent(root){
    const canonical=h.match(/rel="canonical"\s+href="([^"]+)"/)[1];
    data['@graph'].push({'@type':'FAQPage','@id':canonical+'#faq',url:canonical,mainEntity:questions});
    if(meta?.description)for(const node of data['@graph'])if(node['@type']==='Service')node.description=meta.description;
+   if(meta?.h1)for(const node of data['@graph'])if(['Service','WebPage'].includes(node['@type']))node.name=meta.h1;
+   if(file==='lighting-power-points-perth.html')for(const node of data['@graph']){
+    if(node['@type']==='WebPage')node.description=meta.description;
+    if(node['@type']==='Service')node.serviceType=meta.h1;
+    if(node['@type']==='BreadcrumbList')node.itemListElement.at(-1).name=meta.h1;
+   }
    return '<script type="application/ld+json">\n'+JSON.stringify(data,null,2)+'\n</script>';
   });
   if(!h.includes('editorial-quality.css'))h=h.replace('</head>','<link rel="stylesheet" href="editorial-quality.css?v=20261010">\n</head>');

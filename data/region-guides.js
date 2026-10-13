@@ -81,4 +81,11 @@ const regionGuides = [
 
 const serviceContent = require('./region-service-content.cjs');
 for (const guide of regionGuides) Object.assign(guide, serviceContent[guide.route]);
+const shortTitles={
+ 'perth-cbd-inner-suburbs.html':'CBD & Inner Perth Plumber & Electrician | Ellis',
+ 'northern-suburbs.html':'Northern Suburbs Plumber & Electrician | Ellis Perth',
+ 'southern-suburbs.html':'Southern Suburbs Plumber & Electrician | Ellis Perth',
+ 'perth-hills-swan-valley.html':'Perth Hills & Swan Valley Plumber & Electrician | Ellis',
+};
+for(const guide of regionGuides)if(shortTitles[guide.route])guide.seoTitle=shortTitles[guide.route];
 module.exports = { regionGuides };

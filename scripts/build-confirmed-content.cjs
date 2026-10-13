@@ -11,6 +11,9 @@ function buildConfirmedContent(root,date){
  for(const file of fs.readdirSync(root).filter(f=>f.endsWith('.html')&&f!=='privacy.html')){
   const target=path.join(root,file),old=fs.readFileSync(target,'utf8');
   let h=old.replace(/<!-- confirmed-menu:start -->[\s\S]*?<!-- confirmed-menu:end -->/g,'');
+  if(file==='index.html')h=h.replace('<h3>Lighting &amp; Power Point Repairs and Installation Perth</h3>','<h3>Lighting &amp; Power Point Electrical Services Overview Perth</h3>');
+  const gallery=require('../electrical-work-gallery.js').renderElectricalWorkGallery;
+  h=h.replace(/(<div class="shell" data-electrical-work-gallery>)(?:<div class="electrical-work-gallery">[\s\S]*?<\/figure><\/div><\/div>)?(<\/div>)/g,(_,open,close)=>open+gallery()+close);
   for(const [id,parent]of [['plumbing-menu','plumbing.html'],['electrical-menu','electrical.html']]){
    const items=pages.filter(p=>p.parent===parent).map(p=>`<li><a class="mega-link" href="${p.file}"><span class="mega-copy"><strong>${p.title.replace(' Perth','').replace(/&/g,'&amp;')}</strong><small>Service scope, situations and quote.</small></span></a></li>`).join('');
    const re=new RegExp('(<ul[^>]*id="'+id+'"[^>]*>[\\s\\S]*?)(</ul>)');
@@ -20,10 +23,11 @@ function buildConfirmedContent(root,date){
  }
  const feedPath=path.join(root,'ai-content.json'),feed=JSON.parse(fs.readFileSync(feedPath,'utf8'));
  const map=require('../data/site-content-intent.cjs').metadata;
- for(const entry of feed.servicePages){const f=new URL(entry.url).pathname.slice(1);if(map[f]?.description)entry.description=map[f].description;}
+ for(const entry of feed.servicePages){const f=new URL(entry.url).pathname.slice(1);if(map[f]?.description)entry.description=map[f].description;if(f==='lighting-power-points-perth.html')entry.name='Lighting & Power Point Service Overview Perth';}
  fs.writeFileSync(feedPath,JSON.stringify(feed,null,2)+'\n');
  const llmsPath=path.join(root,'llms.txt');
  let llms=fs.readFileSync(llmsPath,'utf8').replace(/\n## Confirmed service additions — 2026-10-12[\s\S]*$/,'');
+ llms=llms.replace(/^- \[[^\]]+\]\(https:\/\/perthpipepower.com.au\/lighting-power-points-perth.html\):.*$/m,'- [Lighting & Power Point Service Overview Perth](https://perthpipepower.com.au/lighting-power-points-perth.html): Choose the dedicated lighting or power-point service, or wider electrical fault finding.');
  llms=llms.trimEnd()+'\n\n## Confirmed service additions — 2026-10-12\n'+hours.text+'\nEmergency charges follow the quoted work plan.\n'+pages.map(p=>'- ['+p.title+'](https://perthpipepower.com.au/'+p.file+')').join('\n')+'\n';
  fs.writeFileSync(llmsPath,llms);
  return {newServicePages:pages.length,changed:updateSitemapContentDates(root,date)};

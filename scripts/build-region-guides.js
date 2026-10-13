@@ -36,18 +36,19 @@ function guideSchema(guide) {
 
 function applyGuide(source, guide) {
   const canonical = `${origin}/${guide.route}`;
+  const searchTitle=esc(guide.seoTitle||`${guide.title} | Ellis Services Group`);
   const schema = `<script type="application/ld+json">${guideSchema(guide)}</script>`;
   return source
-    .replace(/<title>[\s\S]*?<\/title>/i, `<title>${esc(guide.title)} | Ellis Services Group</title>`)
+    .replace(/<title>[\s\S]*?<\/title>/i, `<title>${searchTitle}</title>`)
     .replace(/<meta\s+name="description"[\s\S]*?(?:\/>|>)/i, `<meta name="description" content="${esc(guide.description)}">`)
     .replace(/<link\s+rel="canonical"[\s\S]*?(?:\/>|>)/i, `<link rel="canonical" href="${canonical}">`)
-    .replace(/<meta\b(?=[^>]*\bproperty="og:title")[^>]*\/?\s*>/i, `<meta property="og:title" content="${esc(guide.title)} | Ellis Services Group" />`)
+    .replace(/<meta\b(?=[^>]*\bproperty="og:title")[^>]*\/?\s*>/i, `<meta property="og:title" content="${searchTitle}" />`)
     .replace(/<meta\b(?=[^>]*\bproperty="og:description")[^>]*\/?\s*>/i, `<meta property="og:description" content="${esc(guide.description)}" />`)
     .replace(/<meta\b(?=[^>]*\bproperty="og:url")[^>]*\/?\s*>/i, `<meta property="og:url" content="${canonical}" />`)
-    .replace(/<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/>/i, `<meta name="twitter:title" content="${esc(guide.title)} | Ellis Services Group" />`)
+    .replace(/<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/?\s*>/i, `<meta name="twitter:title" content="${searchTitle}" />`)
     .replace(/<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/>/i, `<meta name="twitter:description" content="${esc(guide.description)}" />`)
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/i, schema)
-    .replace(/<main\b[^>]*>[\s\S]*?<\/main>/i, guideMainWithGallery(guide));
+    .replace(/<main\b[^>]*>[\s\S]*?<\/main>/i, guideMainWithGallery(guide).replace('<div class="shell" data-electrical-work-gallery></div>','<div class="shell" data-electrical-work-gallery>'+require('../electrical-work-gallery.js').renderElectricalWorkGallery()+'</div>'));
 }
 
 function build() {

@@ -30,7 +30,7 @@
 
   const mountElectricalWorkGalleries = (documentRef) => {
     const targets = documentRef.querySelectorAll('[data-electrical-work-gallery]');
-    targets.forEach((target) => { target.innerHTML = renderElectricalWorkGallery(); });
+    targets.forEach((target) => { if (!target.querySelector('.electrical-work-gallery')) target.innerHTML = renderElectricalWorkGallery(); });
     return targets.length;
   };
 

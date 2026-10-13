@@ -9,7 +9,7 @@ const home = read('index.html');
 const services = [
   ['blocked-drains-perth.html', 'Blocked Drains Perth — Drain Clearing &amp; Repairs'],
   ['burst-pipe-repair-perth.html', 'Burst Pipe Repairs Perth'],
-  ['lighting-power-points-perth.html', 'Lighting &amp; Power Point Repairs and Installation Perth'],
+  ['lighting-power-points-perth.html', 'Lighting &amp; Power Point Electrical Services Overview Perth'],
   ['property-management.html', 'Property Manager Plumbing &amp; Electrical Perth'],
   ['fixtures-appliances-perth.html', 'Fixture, Tap &amp; Appliance Connection Services in Perth'],
   ['renewables-smart-home-perth.html', 'Smart Home &amp; Energy Electrical Services in Perth'],
