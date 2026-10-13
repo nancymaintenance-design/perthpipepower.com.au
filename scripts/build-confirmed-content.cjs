@@ -30,6 +30,7 @@ function buildConfirmedContent(root,date){
  llms=llms.replace(/^- \[[^\]]+\]\(https:\/\/perthpipepower.com.au\/lighting-power-points-perth.html\):.*$/m,'- [Lighting & Power Point Service Overview Perth](https://perthpipepower.com.au/lighting-power-points-perth.html): Choose the dedicated lighting or power-point service, or wider electrical fault finding.');
  llms=llms.trimEnd()+'\n\n## Confirmed service additions — 2026-10-12\n'+hours.text+'\nEmergency charges follow the quoted work plan.\n'+pages.map(p=>'- ['+p.title+'](https://perthpipepower.com.au/'+p.file+')').join('\n')+'\n';
  fs.writeFileSync(llmsPath,llms);
+ require('./apply-responsive-media.cjs').applyResponsiveMedia(root);
  return {newServicePages:pages.length,changed:updateSitemapContentDates(root,date)};
 }
 if(require.main===module)console.log(JSON.stringify(buildConfirmedContent(path.resolve(__dirname,'..'),process.argv[2])));

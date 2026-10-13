@@ -1,4 +1,5 @@
 /* Additive mobile-only refinements. Desktop layout remains unchanged. */
+.mobile-ctas[hidden]{display:none!important}
 @media(max-width:800px){
   body{padding-bottom:calc(5.4rem + env(safe-area-inset-bottom))}
   .utility{display:none}

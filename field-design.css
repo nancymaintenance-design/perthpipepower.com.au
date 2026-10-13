@@ -24,6 +24,9 @@
 [data-commercial-service] [id^="service-"]{scroll-margin-top:120px}
 @media(max-width:600px){[data-commercial-service] .section{padding-block:28px}[data-commercial-service] .service-jump-links{gap:10px 18px}[data-commercial-service] .service-editorial-image{height:200px}[data-commercial-service] .page-hero h1{font-size:2.2rem}[data-commercial-service] .page-hero .button{margin-top:10px}}
 /* User-approved homepage identity: original full-bleed carousel, not split hero. */
+@media(max-width:800px){.hero .slide:first-child{background-image:url("hero-repair-mobile.webp")!important}}
+.contact-grid>*{min-width:0}.contact-card{overflow-wrap:anywhere}.contact-card input,.contact-card select,.contact-card textarea{min-width:0;max-width:100%}
+.split>*{min-width:0}.panel{overflow-wrap:anywhere}
 .hero h1,.hero h2{font-family:var(--serif);font-weight:700;letter-spacing:normal;line-height:1.05}
 .hero .button{border-radius:0}
 .hero .shell{max-width:1180px}
