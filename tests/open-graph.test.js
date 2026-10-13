@@ -4,8 +4,9 @@ import path from 'node:path';
 import test from 'node:test';
 
 const root = process.cwd();
+const internalDirectories = new Set(['node_modules', '.build', 'dist', 'playwright-report', 'test-results']);
 const htmlFiles = fs.readdirSync(root, { recursive: true })
-  .filter((file) => file.endsWith('.html') && !path.basename(file).startsWith('google') && fs.statSync(path.join(root, file)).isFile());
+  .filter((file) => !file.split(path.sep).some(part => internalDirectories.has(part)) && file.endsWith('.html') && !path.basename(file).startsWith('google') && fs.statSync(path.join(root, file)).isFile());
 
 test('every indexable HTML document has Open Graph title, description, URL and type', () => {
   const missing = [];

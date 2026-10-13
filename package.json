@@ -1,0 +1,20 @@
+{
+  "name": "perth-pipe-power",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "npm run compile && node .build/site/build/cli.mjs",
+    "test": "npm run build && node --test tests/*.test.* scripts/test-*.js test-blocked-drains-content.mjs",
+    "test:browser": "playwright test",
+    "validate:seo": "node scripts/validate-seo.js --root dist",
+    "baseline:freeze": "npm run compile && node .build/tools/migration-baseline.mjs freeze"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@types/node": "24.19.2",
+    "parse5": "8.0.1",
+    "typescript": "7.0.2"
+  }
+}

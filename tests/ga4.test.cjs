@@ -5,7 +5,8 @@ const test = require('node:test');
 
 const root = path.join(__dirname, '..');
 const measurementId = 'G-HZ6PKHKGWH';
-const pages = fs.readdirSync(root, { recursive: true }).filter(file => file.endsWith('.html') && fs.statSync(path.join(root, file)).isFile());
+const internalDirectories = new Set(['node_modules', '.build', 'dist', 'playwright-report', 'test-results']);
+const pages = fs.readdirSync(root, { recursive: true }).filter(file => !file.split(path.sep).some(part => internalDirectories.has(part)) && file.endsWith('.html') && fs.statSync(path.join(root, file)).isFile());
 
 test('every public HTML page has one Perth Pipe Power GA4 configuration', () => {
   for (const relative of pages) {
