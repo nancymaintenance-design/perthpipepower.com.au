@@ -87,12 +87,27 @@ function applyConfirmedExpansion(pages,metadata){
   'plumbing.html':['about.html','Business registration and trade documentation boundaries'],
   'electrical.html':['about.html','Requesting the documentation relevant to the work'],
  };
+ const educationTopics={
+  'power-faults-perth.html':['Power loss in part of a house','Investigating intermittent power faults'],
+  'safety-switch-tripping-perth.html':['RCD and circuit-breaker protection','Possible causes of safety-switch tripping'],
+  'blocked-drains-perth.html':['Recurring drain blockages after clearing','Slow toilet flushing and drainage','Kitchen sink gurgling and slow drainage'],
+  'water-leak-detection-perth.html':['Hidden leaks and higher water bills','Water-meter movement without expected use'],
+  'burst-pipe-repair-perth.html':['Signs of a leaking pipe inside a wall'],
+  'tap-mixer-repairs-perth.html':['Tap drips after shut-off','Water lost through a persistent drip','Installing a customer-supplied replacement mixer'],
+  'toilet-repairs-perth.html':['Running cisterns and water at the toilet base','A toilet cistern that refills on its own'],
+  'hot-water-problems-perth.html':['Sudden loss of hot water','Hot water at taps but not the shower','Electric hot-water systems and safety-switch trips'],
+  'fixtures-appliances-perth.html':['Laundry overflow as a washing machine empties','Repairing leaking washing-machine supply taps'],
+  'smoke-alarm-maintenance-perth.html':['Chirping from a hardwired smoke alarm','Smoke-alarm requirements for WA rental homes'],
+  'property-management.html':['Reporting repairs as a tenant'],
+  'plumbing.html':['Work for an appropriately authorised plumber'],
+  'electrical.html':['Household work for licensed electrical professionals'],
+ };
  for(const [file,items]of Object.entries(education)){
   const p=pages[file];
   const id='learn-about-'+file.replace('.html','');
   for(const [i,[q]]of items.entries())if(!p.faq.some(x=>x[0]===q))p.faq.push([q,shortAnswers[file][i],'#'+id]);
   p.sections=p.sections||[];
-  p.sections.push({id,heading:'Understand the symptoms before choosing the work',body:items.map(([,a])=>a),links:[guidance[file]],bullets:[]});
+  p.sections.push({id,heading:'Understand the symptoms before choosing the work',body:items.map(([,a])=>a),topics:educationTopics[file],links:[guidance[file]],bullets:[]});
  }
  // Make newly confirmed scope explicit without overwriting the preceding local work.
  pages['fixtures-appliances-perth.html'].sections.push({id:'confirmed-supply-removal',heading:'Supply, removal and taking away the old unit',body:['For dishwasher and toilet installations, we can supply the agreed product, remove the old unit and take it away as part of the installation package. The written quote identifies the selected product, connection work and any additional access or making good. Cabinet changes, bathroom renovation and internal appliance repairs are not automatically included.'],links:[['dishwasher-installation-perth.html','Dishwasher supply and installation'],['toilet-installation-perth.html','Toilet supply and installation']],bullets:[]});

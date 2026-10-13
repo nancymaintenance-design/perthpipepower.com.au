@@ -59,8 +59,9 @@ for (const page of [
   'news-useful-property-work-order.html',
   'news-keeping-access-information-together.html',
 ]) {
-  const nextStep = mainContent(read(page)).match(/<section class="article-next-step">([\s\S]*?)<\/section>/i)?.[1] ?? '';
-  assert.match(nextStep, /<div class="cta-links">[\s\S]*?<a href="[^"]+">[\s\S]*?<\/a>[\s\S]*?<a href="contact\.html">[\s\S]*?<\/a>[\s\S]*?<\/div>/i, `${page} must put its two CTA links in a dedicated group`);
+  const content = mainContent(read(page));
+  assert.match(content, /<ul class="intent-links">[\s\S]*?<a href="[^"]+">[^<]+<\/a>[\s\S]*?<\/ul>/i, `${page} must expose descriptive related-service links`);
+  assert.match(content, /<a class="button" href="contact\.html">[^<]+<\/a>/i, `${page} must retain its prominent enquiry next step`);
 }
 assert.match(read('site.css'), /\.article-next-step\s+\.cta-links\s*\{\s*display:\s*flex;\s*flex-wrap:\s*wrap;\s*gap:\s*0?\.75rem;/, 'desktop CTA group must preserve a spaced, wrapping layout');
 assert.match(read('mobile-refinement.css'), /\.article-next-step\s+\.cta-links\s*\{\s*flex-direction:\s*column;\s*align-items:\s*flex-start;\s*gap:\s*0?\.75rem[;}]/, 'mobile CTA group must stack the links with tap spacing');

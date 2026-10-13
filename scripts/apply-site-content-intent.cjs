@@ -44,7 +44,7 @@ function applySiteContent(root){
    main=main.slice(0,last.index)+replacement+main.slice(last.index+last[0].length);
   }
   if(p.sections?.length){
-   const sections=p.sections.map(s=>`<div class="keyword-gap-part" id="${esc(s.id)}"><h2>${esc(s.heading)}</h2>${s.body.map(t=>`<p>${esc(t)}</p>`).join('')}${s.bullets?.length?`<ul>${s.bullets.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}${s.links?.length?`<ul class="intent-links">${s.links.map(([url,label])=>`<li><a href="${esc(url)}">${esc(label)}</a></li>`).join('')}</ul>`:''}</div>`).join('');
+   const sections=p.sections.map(s=>`<div class="keyword-gap-part" id="${esc(s.id)}"><h2>${esc(s.heading)}</h2>${s.body.map((t,i)=>(s.topics?.[i]?`<h3>${esc(s.topics[i])}</h3>`:'')+`<p>${esc(t)}</p>`).join('')}${s.bullets?.length?`<ul>${s.bullets.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}${s.links?.length?`<ul class="intent-links">${s.links.map(([url,label])=>`<li><a href="${esc(url)}">${esc(label)}</a></li>`).join('')}</ul>`:''}</div>`).join('');
    if(main.includes('data-commercial-service')){
     const block=`<!-- keyword-gap:start --><div class="keyword-gap-content" data-keyword-gap>${sections}</div><!-- keyword-gap:end -->`;
     main=main.replace(/(<section class="section service-editorial">[\s\S]*?)(<\/div><\/section>)/,(_,body,end)=>body+block+end);
