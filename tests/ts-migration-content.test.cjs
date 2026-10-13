@@ -58,7 +58,7 @@ test('content_preserves_approved_candidate', () => {
 
 test('content loading has no dependency on old HTML, dist or CommonJS content sources', () => {
   modules();
-  const code = `const fs=require('node:fs'); const original=fs.readFileSync; fs.readFileSync=function(file,...args){const p=String(file); if(/\\.html$|[/\\\\]dist[/\\\\]|[/\\\\]data[/\\\\].*\\.(?:cjs|js)$/.test(p)) throw Error('forbidden content read '+p); return original.call(this,file,...args);}; const site=require('./.build/site/content/pages.mjs').loadSiteData(); if(site.pages.length!==48) throw Error('missing pages');`;
+  const code = `const fs=require('node:fs'); const original=fs.readFileSync; fs.readFileSync=function(file,...args){const p=String(file); if(/\\.html$|[/\\\\]source[/\\\\]dist[/\\\\]|[/\\\\]data[/\\\\].*\\.(?:cjs|js)$/.test(p)) throw Error('forbidden content read '+p); return original.call(this,file,...args);}; const site=require('./.build/site/content/pages.mjs').loadSiteData(); if(site.pages.length!==48) throw Error('missing pages');`;
   const result = spawnSync(process.execPath, ['-e',code], {cwd:root,encoding:'utf8'});
   assert.equal(result.status, 0, result.stderr);
 });
@@ -75,13 +75,66 @@ test('malformed structured content and unresolved tokens fail validation before 
     s => s.pages[0].sections.find(x=>x.kind==='faq').container += '{{ppp:faq:999:answer}}',
     s => s.pages[0].breadcrumbContainer += '{{ppp:breadcrumb:999:label}}',
     s => {const key=Object.keys(s.pages[0].chromeBindings)[0];delete s.pages[0].chromeBindings[key];}
+    ,s => s.layouts[s.pages[0].layoutId].headSlots.push({kind:'static',html:'<meta name=description content=shadow>'})
+    ,s => {const page=s.pages.find(p=>p.file==='privacy.html');page.breadcrumbs=[];page.breadcrumbContainer=null;}
+    ,s => s.pages[0].sections.find(x=>x.kind==='faq').items[0].answer += '{{ppp:unknown}}'
   ]) {
     const site=loadSiteData();mutate(site);
     assert.ok(validateSiteData(site).length,'malformed data must fail');
   }
 });
 
-test('all thirteen legacy typed sources preserve current compatibility exports', () => {
+test('authoritative JSON dates constrain sitemap and article publication values', () => {
+  modules();
+  for(const name of ['sitemap-content-dates','editorial-content-dates']) {
+    const code=`const fs=require('node:fs'); const read=fs.readFileSync; fs.readFileSync=function(file,...args){const result=read.call(this,file,...args);if(String(file).includes('${name}.json')){const data=JSON.parse(result);data[Object.keys(data)[0]].lastmod='2026-10-14';return JSON.stringify(data);}return result;};require('node:module').syncBuiltinESMExports();try{require('./.build/site/content/pages.mjs').loadSiteData();process.exitCode=9;}catch(error){if(!/date.*mismatch|mismatch.*date/i.test(error.message))throw error;}`;
+    const result=spawnSync(process.execPath,['-e',code],{cwd:root,encoding:'utf8'});
+    assert.equal(result.status,0,`${name}: changed date must update or reject stale output: ${result.stderr}`);
+  }
+});
+
+test('canonical edits drive published data and readonly compatible readers together', () => {
+  const {loadSiteData}=modules();
+  const canonical=require('../.build/site/content/pages/contact.mjs').page;
+  const reader=require('../.build/site/content/legacy/site-content-intent.mjs').default;
+  const title=canonical.seo.title;
+  try {
+    canonical.seo.title='Canonical shared-field edit';
+    assert.equal(loadSiteData().pages.find(p=>p.file==='contact.html').seo.title,'Canonical shared-field edit');
+    assert.equal(reader.metadata['contact.html'].title,'Canonical shared-field edit');
+    assert.throws(()=>{reader.metadata['contact.html'].title='second authority';},/canonical|read.only/i);
+  } finally {canonical.seo.title=title;}
+  const faq=canonical.sections.find(s=>s.kind==='faq').items[0],question=faq.question;
+  try {
+    faq.question='Canonical FAQ edit?';
+    const page=loadSiteData().pages.find(p=>p.file==='contact.html');
+    assert.equal(reader.pages['contact.html'].faq[0][0],'Canonical FAQ edit?');
+    assert.ok(JSON.stringify(page.seo.jsonLd).includes('Canonical FAQ edit?'));
+    assert.ok(page.seo.jsonLdSource.some(s=>s.includes('Canonical FAQ edit?')));
+  } finally {faq.question=question;}
+  const article=require('../.build/site/content/pages/insights-hot-water-plumbing-or-electrical.mjs').page;
+  const summaryReader=require('../.build/site/content/legacy/editorial-summaries.mjs').default;
+  const summary=summaryReader[article.file];
+  const section=article.sections.find(s=>s.kind==='rich'&&s.html.includes(summary));const original=section.html;
+  try {section.html=section.html.replace(summary,'Canonical prose edit.');assert.equal(summaryReader[article.file],'Canonical prose edit.');assert.ok(loadSiteData().pages.find(p=>p.file===article.file).sections.some(s=>s.kind==='rich'&&s.html.includes('Canonical prose edit.')));}
+  finally {section.html=original;}
+  const shared=require('../.build/site/content/shared.mjs');
+  const oldName=shared.business.name,oldOpens=shared.hours.opens,oldStreet=shared.business.address.streetAddress;
+  try {
+    shared.business.name='Canonical Business Marker';shared.hours.opens='08:00';shared.business.address.streetAddress='Canonical Street Marker';
+    const site=loadSiteData(), chrome=require('../.build/site/content/layouts.mjs');
+    assert.equal(require('../.build/site/content/legacy/business-entity.mjs').default.name,'Canonical Business Marker');
+    assert.match(require('../.build/site/content/legacy/expanded-services.mjs').default.hours.text,/08:00/);
+    const home=site.pages.find(p=>p.file==='index.html');
+    const output=projectPage(home,site.layouts[home.layoutId],chrome);
+    assert.match(output,/Canonical Business Marker/);assert.doesNotMatch(output,/Ellis Services Group/);
+    assert.match(output,/Routine service hours: 08:00/);
+    assert.match(site.artifacts['ai-content.json'],/Canonical Business Marker/);
+    const about=site.pages.find(p=>p.file==='about.html');assert.doesNotMatch(projectPage(about,site.layouts[about.layoutId],chrome),/140 St Georges Terrace/);
+  } finally {shared.business.name=oldName;shared.hours.opens=oldOpens;shared.business.address.streetAddress=oldStreet;}
+});
+
+test('all thirteen legacy modules expose canonical readonly data or explicit internal-mutator retirement', () => {
   modules();
   // Both composition graphs must be initialized before testing their mutable helpers.
   require('../data/site-content-intent.cjs');
@@ -91,11 +144,18 @@ test('all thirteen legacy typed sources preserve current compatibility exports',
     const legacy = require(`../data/${name}.${extension}`);
     const migrated = require(`../.build/site/content/legacy/${name}.mjs`).default;
     if (Object.values(legacy).some(v => typeof v === 'function')) {
-      const original = structuredClone(require('../data/site-content-intent.cjs'));
-      const candidate = structuredClone(original);
-      for (const key of Object.keys(legacy)) {legacy[key](original.pages,original.metadata); migrated[key](candidate.pages,candidate.metadata);}
-      assert.deepEqual(candidate,original,name);
-    } else assert.deepEqual(migrated,legacy,name);
+      for (const key of Object.keys(legacy)) assert.throws(()=>migrated[key]({},{}),/Retired content mutation.*canonical/);
+    } else {
+      const expected=structuredClone(legacy);
+      const site=modules().loadSiteData();
+      if(['seo-guide-expansions','seo-service-metadata'].includes(name))for(const [file,value]of Object.entries(expected))if(value.description)value.description=site.pages.find(p=>p.file===file).seo.description;
+      if(name==='service-commercial-copy'){
+        const {parseFragment}=require('parse5');
+        const walk=n=>[n,...(n.childNodes??[]).flatMap(walk)];const text=n=>n.nodeName==='#text'?n.value:(n.childNodes??[]).map(text).join('');
+        for(const [file,value]of Object.entries(expected))if(value.booking){const page=site.pages.find(p=>p.file===file);const section=page.sections.find(s=>s.id==='service-booking');value.booking=text(walk(parseFragment(section.html)).find(n=>n.tagName==='p'));}
+      }
+      assert.deepEqual(JSON.parse(JSON.stringify(migrated)),expected,name);
+    }
   }
 });
 

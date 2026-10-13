@@ -1,94 +1,2350 @@
-import regionServiceContent from './region-service-content.mjs';
-import type { RegionGuide } from './types.mjs';
-const regionGuides:RegionGuide[] = [
-  {
-    route: 'perth-cbd-inner-suburbs.html', name: 'CBD & Inner Perth',
-    title: 'CBD & Inner Perth Plumber & Electrician',
-    description: 'CBD and Inner Perth plumbing and electrical repairs for apartments, rentals, strata and managed properties. Request a repair or written quote.',
-    intro: 'CBD and Inner Perth plumbing and electrical repairs for blocked drains, leak concerns, power faults, lighting and hot-water problems in homes, apartments, rentals and managed properties.',
-    localFocus: 'For an apartment, strata or managed property, include the building name, unit or level, access contact and any lift, concierge, key or parking instructions that affect the repair visit.',
-    plumbing: ['For a kitchen, bathroom or laundry plumbing concern, describe the affected fixture and what changed: slow drainage, gurgling, overflow, visible water, a dripping tap or loss of hot water. This lets the repair request start with facts rather than a guessed cause.', 'If the problem affects more than one fixture, list each symptom separately. For active water or an overflow, avoid dismantling fittings or attempting to contain water where doing so could put you at risk.'],
-    electrical: ['For a power fault in an apartment or inner-city property, identify the affected room, fitting or circuit only from a safe position. Report a safety switch that will not reset, lighting that has stopped working, a loose outlet or a power loss in a particular area.', 'Do not open a switchboard, remove covers or test fixed wiring. If smoke, active arcing or electrical equipment in contact with water creates immediate danger, move clear and call 000.'],
-    property: ['Property managers can include the work-order reference, occupant contact, access window and approval contact with the repair request. Keeping property access and repair details together helps avoid unnecessary follow-up before scope is confirmed.', 'Where plumbing and electrical issues are both reported, list them as separate items. This helps the Perth team assess each repair requirement without assuming the two issues have the same cause.'],
-    quote: ['Our Perth team uses the reported symptom, property details and access information to identify the likely repair scope. The written quote confirms the work and price before work proceeds.', 'If assessment identifies an additional issue, it is explained before it is added to the repair scope. Keep completed-work and invoice information with the property records for future reference.'],
-    services: [['Electrical repairs', 'Power faults, lighting, power points and safety-switch concerns.'], ['Blocked drains', 'Drainage, blocked-toilet and overflow concerns.'], ['Managed properties', 'Repair requests with access, work-order and approval details.']],
-    faqs: [['What should a CBD or Inner Perth repair request include?', 'Include the property address, building or unit details, access requirements, observed issue and whether the repair is plumbing or electrical.'], ['Can a property manager request plumbing and electrical repairs together?', 'Yes. List each issue separately, then include the access contact and approval pathway for the property.']]
-  },
-  {
-    route: 'northern-suburbs.html', name: 'Northern Suburbs',
-    title: 'Northern Suburbs Plumber & Electrician',
-    description: 'Northern Suburbs plumbing and electrical repairs for power faults, safety switches, hot-water problems, blocked drains and leak concerns.',
-    intro: 'Northern Suburbs plumbing and electrical repairs for power faults, safety switches, hot-water problems, blocked drains and visible leak concerns.',
-    localFocus: 'For a Northern Suburbs repair request, state the suburb, property type and the part of the property affected. Add safe observations such as an affected room, fixture or circuit rather than an attempted diagnosis.',
-    plumbing: ['For a blocked drain, toilet or slow fixture, say whether the issue is limited to one point or affects several areas. Note any backing up, gurgling, odour or recurring slow drainage so the repair scope can be considered clearly.', 'For a hot-water concern, describe whether the change is temperature, pressure, supply or visible water around the system. Do not open the unit or adjust internal controls to investigate.'],
-    electrical: ['For a power fault or safety-switch concern, record what was affected when the change happened, if it can be observed safely. A switch that trips or will not reset, a circuit outage or a changed appliance connection are useful details for the repair request.', 'Do not repeatedly force a safety switch to reset, dismantle an outlet or touch damaged wiring. Keep clear and call 000 where there is immediate danger.'],
-    property: ['For rentals and managed properties, include the tenant or on-site contact, access details and the person authorised to discuss the repair. This gives the Perth team the information needed to progress a written quote or booking.', 'If there is more than one issue, identify the priority concern first and keep plumbing and electrical symptoms in separate sentences.'],
-    quote: ['The written quote is based on the repair category, reported symptom, property access, equipment involved and any materials or additional work identified during assessment.', 'The scope and price are confirmed before work proceeds. Our team explains any emergency, after-hours or additional work in the quote for your property.'],
-    services: [['Electrical fault finding', 'Power faults, circuits and electrical repair concerns.'], ['Safety switches', 'Safety-switch tripping and reset concerns.'], ['Hot-water problems', 'Hot-water supply, temperature and visible-water concerns.']],
-    faqs: [['What details help with a Northern Suburbs power-fault repair?', 'Include the property address, affected area, safe observations and whether the safety switch or circuit has changed.'], ['What should I include for a hot-water repair?', 'Explain whether the issue is supply, temperature, pressure or visible water, together with the property address and access contact.']]
-  },
-  {
-    route: 'southern-suburbs.html', name: 'Southern Suburbs',
-    title: 'Southern Suburbs Plumber & Electrician',
-    description: 'Southern Suburbs plumbing and electrical repairs for drains, leak concerns, hot-water problems, power faults and lighting issues.',
-    intro: 'Southern Suburbs plumbing and electrical repairs for drainage, leaks, hot-water problems, electrical faults, lighting and power-point concerns.',
-    localFocus: 'For a Southern Suburbs property, including Thornlie, report visible water, drainage changes and electrical faults as separate observations. Include the suburb, access contact and whether the request is for a home, rental, strata or managed property.',
-    plumbing: ['For a leak concern, describe the visible location, whether water is active and which room or fixture is affected. Avoid opening walls, fittings or equipment to locate the source.', 'For drainage problems, identify the affected fixture and whether water is slow, backing up or overflowing. These details help distinguish a single-fixture issue from a broader drainage concern.'],
-    electrical: ['For lighting, outlets or power faults, explain what has stopped working and whether the issue appears limited to one area. State any safe observations, such as a switch that will not stay on or a fitting that behaves differently.', 'Do not remove electrical covers, test wiring or approach a hazard. If there is smoke, fire, active arcing or immediate danger, move to safety and call 000.'],
-    property: ['For a rental or managed property, the repair request is clearer when it includes the occupant contact, access notes, work-order reference and approval contact. This helps coordinate the property without asking an occupant to diagnose the issue.', 'Where a plumbing and electrical concern are reported at the same time, keep each symptom and affected area separate so the repair scope can be assessed accurately.'],
-    quote: ['Our Perth team reviews the reported issue, affected area and access information before confirming the repair scope. A written quote confirms scope and price before work proceeds.', 'Our published price ranges help you plan the repair. We confirm the scope and written quote after assessment, and explain any additional work before it is included.'],
-    services: [['Drain repairs', 'Blocked drains, fixture drainage and overflow concerns.'], ['Leak concerns', 'Visible water and leak-detection repair requests.'], ['Electrical repairs', 'Power faults, lighting and safety-related electrical concerns.']],
-    faqs: [['What should a Southern Suburbs drain repair request include?', 'Include the affected fixture, observed symptoms, property address and access details.'], ['Can a manager include multiple property repair issues?', 'Yes. List each plumbing or electrical issue separately and include the approval contact for the property.']]
-  },
-  {
-    route: 'eastern-suburbs.html', name: 'Eastern Suburbs',
-    title: 'Eastern Suburbs Plumber & Electrician',
-    description: 'Eastern Suburbs plumbing and electrical repairs for switchboards, safety switches, lighting, power faults and hot-water problems.',
-    intro: 'Eastern Suburbs plumbing and electrical repairs for switchboard and safety-switch concerns, lighting, power faults and hot-water problems.',
-    localFocus: 'For an Eastern Suburbs electrical repair request, identify the affected area or circuit only if it can be observed safely. Pair that with the property access contact and any separate plumbing concern.',
-    plumbing: ['For a hot-water, tap, toilet or drain concern, describe the affected fixture and the change you can see or hear. Examples include reduced hot water, a running toilet, a dripping tap, slow drainage or visible water around a system.', 'Do not remove panels, disconnect equipment or open fittings to investigate. A factual description of the symptom, location and timing is more useful than a guessed cause.'],
-    electrical: ['For a switchboard or safety-switch concern, report which part of the property is affected and whether the switch will reset, if known. Do not repeatedly reset a switch or remove a cover to inspect the board.', 'For lighting and power points, identify the fitting or outlet and whether the issue appears limited to that point or affects more of the property. Keep clear of damaged wiring or equipment affected by water.'],
-    property: ['For homes, rentals and managed properties, include the property address, best access contact and the person authorised to discuss the repair. This helps the Perth team move from a symptom report to a defined scope.', 'If there are both electrical and plumbing concerns, list them separately so safety-critical electrical work is not obscured by a general maintenance description.'],
-    quote: ['The repair scope is confirmed from the reported issue, safe observations, property access and any assessment required. A written quote sets out the work and price before work proceeds.', 'Additional work is only added after it has been explained. For an immediate electrical danger, move clear and call 000 rather than trying to gather more detail.'],
-    services: [['Safety switches', 'Safety-switch, circuit-protection and reset concerns.'], ['Electrical repairs', 'Switchboard, lighting, power-point and fault-finding repairs.'], ['Hot-water problems', 'Hot-water system and plumbing repair concerns.']],
-    faqs: [['What helps with an Eastern Suburbs safety-switch repair request?', 'Include the property address, what changed, affected areas and any safe observations about the switch.'], ['Should a switchboard concern be listed with other repairs?', 'Yes, but identify the switchboard concern separately from plumbing or general maintenance items.']]
-  },
-  {
-    route: 'western-suburbs.html', name: 'Western Suburbs',
-    title: 'Western Suburbs Plumber & Electrician',
-    description: 'Western Suburbs plumbing and electrical repairs for lighting, power points, taps, toilets, blocked drains and hot-water problems.',
-    intro: 'Western Suburbs plumbing and electrical repairs for lighting, power points, taps, toilets, blocked drains and hot-water problems.',
-    localFocus: 'For a Western Suburbs repair request, distinguish fixture concerns such as taps, toilets and drainage from lighting, switches and power points. Include the affected room or outdoor area and an access contact.',
-    plumbing: ['For taps, mixers, toilets and showers, describe the fitting and the visible symptom: dripping, running, leaking, loose, slow draining or not operating as expected. Include whether water is active or contained safely.', 'For blocked drains, note whether the issue affects one fixture or several, whether water is backing up and whether there is an odour. Do not use chemicals as a substitute for a repair assessment.'],
-    electrical: ['For lighting or power-point concerns, identify the affected fitting or outlet and what changed. A light that has stopped working, an outlet that feels loose or a circuit that trips are useful observations when reported from a safe position.', 'Never remove a fitting, touch damaged wiring or attempt a repair. For smoke, active arcing or immediate danger, move clear and call 000.'],
-    property: ['For managed homes, rentals and strata properties, provide access notes, parking or gate instructions where relevant, plus the tenant or on-site contact and approval contact. This supports a practical repair booking.', 'List each repair item, such as a tap repair, blocked drain or power-point issue. Our Perth team checks the reported items and coordinates the service arrangements in the agreed repair scope.'],
-    quote: ['The repair scope and written quote are based on the reported symptom, affected fixture or equipment, property access and any assessment required. Scope and price are confirmed before work proceeds.', 'Our published price ranges help you plan the repair. We confirm the property-specific scope and written quote after assessment, and explain any additional work before it is added.'],
-    services: [['Lighting and power points', 'Lighting, switches, outlets and electrical fault concerns.'], ['Plumbing repairs', 'Taps, toilets, showers and visible fixture issues.'], ['Blocked drains', 'Drainage, slow fixtures and toilet blockage concerns.']],
-    faqs: [['What should a Western Suburbs lighting repair request include?', 'Include the affected fitting or outlet, property address and a description of what changed.'], ['Can fixture and electrical repairs be requested together?', 'Yes. List each issue separately so it can be assessed as a distinct repair request.']]
-  },
-  {
-    route: 'perth-hills-swan-valley.html', name: 'Perth Hills & Swan Valley',
-    title: 'Perth Hills & Swan Valley Plumber & Electrician',
-    description: 'Perth Hills and Swan Valley plumbing and electrical repairs for hot water, power faults, lighting, drains and leak concerns.',
-    intro: 'Perth Hills and Swan Valley plumbing and electrical repairs for hot-water problems, electrical faults, lighting, blocked drains and visible leak concerns.',
-    localFocus: 'For Perth Hills and Swan Valley properties, include the suburb and any driveway, gate, site-contact or access detail that is relevant to the repair visit. Keep electrical, hot-water, drainage and leak symptoms separate.',
-    plumbing: ['For a hot-water problem, report whether the change is in supply, temperature, pressure or visible water around the system. For a drain or leak concern, describe the affected fixture or visible location without opening fittings or walls.', 'If access to the system, meter area or outdoor fixture needs a gate, key or site contact, include that information with the repair request so the visit can be planned appropriately.'],
-    electrical: ['For power faults, lighting or safety-switch concerns, describe the affected area and the safe observations you can make. Do not test fixed wiring, remove covers or repeatedly reset a switch to collect more information.', 'Where electrical equipment is wet, damaged, smoking or sparking, keep clear. Call 000 for immediate danger rather than approaching the equipment.'],
-    property: ['For homes, rentals and managed properties, add the address or suburb, access instructions, service type and a concise symptom description. Property managers can include the work-order reference and approval contact.', 'A clear repair request separates plumbing and electrical items so the Perth team can consider the correct scope for each concern.'],
-    quote: ['The Perth team uses the repair category, reported symptom, site access and any assessment required to define the work. A written quote confirms scope and price before work proceeds.', 'If additional work is identified during assessment, it is explained before it is added. Keep the completed-work and invoice information with the property records.'],
-    services: [['Hot-water problems', 'Hot-water supply, pressure, temperature and visible-water concerns.'], ['Electrical repairs', 'Power faults, lighting, safety switches and electrical fault finding.'], ['Property repairs', 'Plumbing and electrical repair coordination for managed properties.']],
-    faqs: [['What should a Hills or Swan Valley repair request include?', 'Include the property address, access details, service type and a concise description of the issue.'], ['How should an electrical concern be described safely?', 'Share observable changes and affected areas without opening equipment or approaching a hazard.']]
-  }
-];
-
-const serviceContent = regionServiceContent;
-for (const guide of regionGuides) Object.assign(guide, serviceContent[guide.route as keyof typeof serviceContent]);
-const shortTitles:Record<string,string>={
- 'perth-cbd-inner-suburbs.html':'CBD & Inner Perth Plumber & Electrician | Ellis',
- 'northern-suburbs.html':'Northern Suburbs Plumber & Electrician | Ellis Perth',
- 'southern-suburbs.html':'Southern Suburbs Plumber & Electrician | Ellis Perth',
- 'perth-hills-swan-valley.html':'Perth Hills & Swan Valley Plumber & Electrician | Ellis',
-};
-for(const guide of regionGuides)if(shortTitles[guide.route])guide.seoTitle=shortTitles[guide.route];
-const legacy = { regionGuides };
+import { compatibilityView } from '../authority.mjs';
+// Published fields are canonical references. Unreferenced values are legacy-only
+// historical metadata and must never be used to independently regenerate pages.
+const legacy = compatibilityView({
+  "regionGuides": [
+    {
+      "route": {
+        "$source": "page",
+        "file": "perth-cbd-inner-suburbs.html",
+        "path": [
+          "file"
+        ]
+      },
+      "name": {
+        "$source": "page",
+        "file": "perth-cbd-inner-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          4,
+          "areaServed"
+        ]
+      },
+      "title": {
+        "$source": "page",
+        "file": "perth-cbd-inner-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          2,
+          "name"
+        ]
+      },
+      "description": {
+        "$source": "page",
+        "file": "perth-cbd-inner-suburbs.html",
+        "path": [
+          "seo",
+          "description"
+        ]
+      },
+      "intro": {
+        "$source": "fragment",
+        "file": "perth-cbd-inner-suburbs.html",
+        "path": [
+          "hero"
+        ],
+        "node": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "mode": "text"
+      },
+      "localFocus": {
+        "$source": "fragment",
+        "file": "perth-cbd-inner-suburbs.html",
+        "path": [
+          "sections",
+          0,
+          "html"
+        ],
+        "node": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "mode": "text"
+      },
+      "plumbing": [
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            3
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            4
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            5
+          ],
+          "mode": "inner"
+        }
+      ],
+      "electrical": [
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            7
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            8
+          ],
+          "mode": "inner"
+        }
+      ],
+      "property": [
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            14,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            15,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "quote": [
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            11,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-cbd-inner-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            12,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "services": [
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ]
+      ],
+      "faqs": [
+        [
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ]
+      ],
+      "seoTitle": {
+        "$source": "page",
+        "file": "perth-cbd-inner-suburbs.html",
+        "path": [
+          "seo",
+          "title"
+        ]
+      }
+    },
+    {
+      "route": {
+        "$source": "page",
+        "file": "northern-suburbs.html",
+        "path": [
+          "file"
+        ]
+      },
+      "name": {
+        "$source": "page",
+        "file": "northern-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          4,
+          "areaServed"
+        ]
+      },
+      "title": {
+        "$source": "page",
+        "file": "northern-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          2,
+          "name"
+        ]
+      },
+      "description": {
+        "$source": "page",
+        "file": "northern-suburbs.html",
+        "path": [
+          "seo",
+          "description"
+        ]
+      },
+      "intro": {
+        "$source": "fragment",
+        "file": "northern-suburbs.html",
+        "path": [
+          "hero"
+        ],
+        "node": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "mode": "text"
+      },
+      "localFocus": {
+        "$source": "fragment",
+        "file": "northern-suburbs.html",
+        "path": [
+          "sections",
+          0,
+          "html"
+        ],
+        "node": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "mode": "text"
+      },
+      "plumbing": [
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            3,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            4
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            5
+          ],
+          "mode": "inner"
+        }
+      ],
+      "electrical": [
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            7
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            8
+          ],
+          "mode": "inner"
+        }
+      ],
+      "property": [
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            14,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            15,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "quote": [
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            11,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "northern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            12,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "services": [
+        [
+          {
+            "$source": "page",
+            "file": "northern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "northern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "northern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "northern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ]
+      ],
+      "faqs": [
+        [
+          {
+            "$source": "page",
+            "file": "northern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "northern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "northern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "northern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ]
+      ],
+      "seoTitle": {
+        "$source": "page",
+        "file": "northern-suburbs.html",
+        "path": [
+          "seo",
+          "title"
+        ]
+      }
+    },
+    {
+      "route": {
+        "$source": "page",
+        "file": "southern-suburbs.html",
+        "path": [
+          "file"
+        ]
+      },
+      "name": {
+        "$source": "page",
+        "file": "southern-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          4,
+          "areaServed"
+        ]
+      },
+      "title": {
+        "$source": "page",
+        "file": "southern-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          2,
+          "name"
+        ]
+      },
+      "description": {
+        "$source": "page",
+        "file": "southern-suburbs.html",
+        "path": [
+          "seo",
+          "description"
+        ]
+      },
+      "intro": {
+        "$source": "fragment",
+        "file": "southern-suburbs.html",
+        "path": [
+          "hero"
+        ],
+        "node": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "mode": "text"
+      },
+      "localFocus": {
+        "$source": "fragment",
+        "file": "southern-suburbs.html",
+        "path": [
+          "sections",
+          0,
+          "html"
+        ],
+        "node": [
+          1,
+          0,
+          1
+        ],
+        "mode": "text"
+      },
+      "plumbing": [
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            3
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            4
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            5
+          ],
+          "mode": "inner"
+        }
+      ],
+      "electrical": [
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            7
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            8
+          ],
+          "mode": "inner"
+        }
+      ],
+      "property": [
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            14,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            15,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "quote": [
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            11,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "southern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            12,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "services": [
+        [
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ]
+      ],
+      "faqs": [
+        [
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "southern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ]
+      ],
+      "seoTitle": {
+        "$source": "page",
+        "file": "southern-suburbs.html",
+        "path": [
+          "seo",
+          "title"
+        ]
+      }
+    },
+    {
+      "route": {
+        "$source": "page",
+        "file": "eastern-suburbs.html",
+        "path": [
+          "file"
+        ]
+      },
+      "name": {
+        "$source": "page",
+        "file": "eastern-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          4,
+          "areaServed"
+        ]
+      },
+      "title": {
+        "$source": "page",
+        "file": "eastern-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          2,
+          "name"
+        ]
+      },
+      "description": {
+        "$source": "page",
+        "file": "eastern-suburbs.html",
+        "path": [
+          "seo",
+          "description"
+        ]
+      },
+      "intro": {
+        "$source": "fragment",
+        "file": "eastern-suburbs.html",
+        "path": [
+          "hero"
+        ],
+        "node": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "mode": "text"
+      },
+      "localFocus": {
+        "$source": "fragment",
+        "file": "eastern-suburbs.html",
+        "path": [
+          "sections",
+          0,
+          "html"
+        ],
+        "node": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "mode": "text"
+      },
+      "plumbing": [
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            3
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            4
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            5
+          ],
+          "mode": "inner"
+        }
+      ],
+      "electrical": [
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            7
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            8
+          ],
+          "mode": "inner"
+        }
+      ],
+      "property": [
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            14,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            15,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "quote": [
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            11,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "eastern-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            12,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "services": [
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ]
+      ],
+      "faqs": [
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "route": {
+        "$source": "page",
+        "file": "western-suburbs.html",
+        "path": [
+          "file"
+        ]
+      },
+      "name": {
+        "$source": "page",
+        "file": "western-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          4,
+          "areaServed"
+        ]
+      },
+      "title": {
+        "$source": "page",
+        "file": "western-suburbs.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          2,
+          "name"
+        ]
+      },
+      "description": {
+        "$source": "page",
+        "file": "western-suburbs.html",
+        "path": [
+          "seo",
+          "description"
+        ]
+      },
+      "intro": {
+        "$source": "page",
+        "file": "western-suburbs.html",
+        "path": [
+          "seo",
+          "description"
+        ]
+      },
+      "localFocus": {
+        "$source": "fragment",
+        "file": "western-suburbs.html",
+        "path": [
+          "sections",
+          0,
+          "html"
+        ],
+        "node": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "mode": "text"
+      },
+      "plumbing": [
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            3
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            4
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            5
+          ],
+          "mode": "inner"
+        }
+      ],
+      "electrical": [
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            7
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            8
+          ],
+          "mode": "inner"
+        }
+      ],
+      "property": [
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            14,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            15,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "quote": [
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            11,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "western-suburbs.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            12,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "services": [
+        [
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "perth-cbd-inner-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ]
+      ],
+      "faqs": [
+        [
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "western-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "route": {
+        "$source": "page",
+        "file": "perth-hills-swan-valley.html",
+        "path": [
+          "file"
+        ]
+      },
+      "name": {
+        "$source": "page",
+        "file": "perth-hills-swan-valley.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          4,
+          "areaServed"
+        ]
+      },
+      "title": {
+        "$source": "page",
+        "file": "perth-hills-swan-valley.html",
+        "path": [
+          "seo",
+          "jsonLd",
+          0,
+          "@graph",
+          2,
+          "name"
+        ]
+      },
+      "description": {
+        "$source": "page",
+        "file": "perth-hills-swan-valley.html",
+        "path": [
+          "seo",
+          "description"
+        ]
+      },
+      "intro": {
+        "$source": "fragment",
+        "file": "perth-hills-swan-valley.html",
+        "path": [
+          "hero"
+        ],
+        "node": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "mode": "text"
+      },
+      "localFocus": {
+        "$source": "fragment",
+        "file": "perth-hills-swan-valley.html",
+        "path": [
+          "sections",
+          0,
+          "html"
+        ],
+        "node": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "mode": "text"
+      },
+      "plumbing": [
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            3
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            4
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            5
+          ],
+          "mode": "inner"
+        }
+      ],
+      "electrical": [
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            7
+          ],
+          "mode": "inner"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            8
+          ],
+          "mode": "inner"
+        }
+      ],
+      "property": [
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            14,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            15,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "quote": [
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            11,
+            0
+          ],
+          "mode": "text"
+        },
+        {
+          "$source": "fragment",
+          "file": "perth-hills-swan-valley.html",
+          "path": [
+            "sections",
+            0,
+            "html"
+          ],
+          "node": [
+            1,
+            0,
+            12,
+            0
+          ],
+          "mode": "text"
+        }
+      ],
+      "services": [
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-hills-swan-valley.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              0,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "eastern-suburbs.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-hills-swan-valley.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              1,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "perth-hills-swan-valley.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-hills-swan-valley.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              4,
+              "hasOfferCatalog",
+              "itemListElement",
+              2,
+              "itemOffered",
+              "description"
+            ]
+          }
+        ]
+      ],
+      "faqs": [
+        [
+          {
+            "$source": "page",
+            "file": "perth-hills-swan-valley.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-hills-swan-valley.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              1,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "perth-hills-swan-valley.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "name"
+            ]
+          },
+          {
+            "$source": "page",
+            "file": "perth-hills-swan-valley.html",
+            "path": [
+              "seo",
+              "jsonLd",
+              0,
+              "@graph",
+              5,
+              "mainEntity",
+              2,
+              "acceptedAnswer",
+              "text"
+            ]
+          }
+        ]
+      ],
+      "seoTitle": {
+        "$source": "page",
+        "file": "perth-hills-swan-valley.html",
+        "path": [
+          "seo",
+          "title"
+        ]
+      }
+    }
+  ]
+} as const);
 export default legacy;

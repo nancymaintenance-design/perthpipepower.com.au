@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "insights-hot-water-plumbing-or-electrical.html",
 "kind": "article",
 "seo": {
 "title": "Hot-Water Problem: Plumbing or Electrical? | Perth",
 "description": "No hot water in Perth? Understand outlet versus system faults, plumbing and electrical assessment, and repair versus replacement scope before booking Ellis.",
-"canonical": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/insights-hot-water-plumbing-or-electrical.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Hot-Water Problem: Plumbing or Electrical? | Perth"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "No hot water in Perth? Understand outlet versus system faults, plumbing and electrical assessment, and repair versus replacement scope before booking Ellis."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Hot-Water Problem: Plumbing or Electrical? | Perth"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "No hot water in Perth? Understand outlet versus system faults, plumbing and electrical assessment, and repair versus replacement scope before booking Ellis."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,107 +119,107 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#webpage",
-"url": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html",
-"name": "Is a hot-water problem plumbing or electrical?",
-"description": "No hot water in Perth? Understand outlet versus system faults, plumbing and electrical assessment, and repair versus replacement scope before booking Ellis.",
+"@id": "{{ppp:shared:business.origin:raw}}/insights-hot-water-plumbing-or-electrical.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/insights-hot-water-plumbing-or-electrical.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/insights-hot-water-plumbing-or-electrical.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
 "name": "Insights",
-"item": "https://perthpipepower.com.au/insights.html"
+"item": "{{ppp:shared:business.origin:raw}}/insights.html"
 },
 {
 "@type": "ListItem",
 "position": 3,
-"name": "Is a hot-water problem plumbing or electrical?",
-"item": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "Article",
-"headline": "Is a hot-water problem plumbing or electrical?",
-"description": "No hot water in Perth? Understand outlet versus system faults, plumbing and electrical assessment, and repair versus replacement scope before booking Ellis.",
-"url": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html",
+"headline": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "inLanguage": "en-AU",
 "author": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
-"@id": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#article",
+"@id": "{{ppp:shared:business.origin:raw}}/insights-hot-water-plumbing-or-electrical.html#article",
 "mainEntityOfPage": {
-"@id": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#webpage"
+"@id": "{{ppp:shared:business.origin:raw}}/insights-hot-water-plumbing-or-electrical.html#webpage"
 },
 "dateModified": "2026-10-10",
-"abstract": "Record whether one outlet or the whole property has lost hot water, and what has changed in temperature or flow. Water connections and electrical heating equipment can require different work. The assessment determines the relevant trade and repair options; compare repair and replacement quotes against the same included scope."
+"abstract": "{{ppp:summary-value:raw}}"
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#faq",
-"url": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html",
+"@id": "{{ppp:shared:business.origin:raw}}/insights-hot-water-plumbing-or-electrical.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "Who should I call if I do not know which trade is needed?",
+"name": "{{ppp:faq-value:10:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Describe the system, affected outlets and current symptoms to the team. The appropriate trade and assessment scope need to be confirmed; you do not need to remove covers or test equipment to choose a category."
+"text": "{{ppp:faq-value:10:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Does hot water at one tap rule out a plumbing problem elsewhere?",
+"name": "{{ppp:faq-value:10:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. A difference between outlets is useful context but does not establish the faulty component. Report which outlets are affected so the investigation can be scoped."
+"text": "{{ppp:faq-value:10:1:answer:raw}}"
 }
 }
 ]
@@ -228,7 +228,7 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html\",\n      \"name\": \"Is a hot-water problem plumbing or electrical?\",\n      \"description\": \"No hot water in Perth? Understand outlet versus system faults, plumbing and electrical assessment, and repair versus replacement scope before booking Ellis.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Insights\",\n          \"item\": \"https://perthpipepower.com.au/insights.html\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Is a hot-water problem plumbing or electrical?\",\n          \"item\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"Is a hot-water problem plumbing or electrical?\",\n      \"description\": \"No hot water in Perth? Understand outlet versus system faults, plumbing and electrical assessment, and repair versus replacement scope before booking Ellis.\",\n      \"url\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html\",\n      \"inLanguage\": \"en-AU\",\n      \"author\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"@id\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#article\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#webpage\"\n      },\n      \"dateModified\": \"2026-10-10\",\n      \"abstract\": \"Record whether one outlet or the whole property has lost hot water, and what has changed in temperature or flow. Water connections and electrical heating equipment can require different work. The assessment determines the relevant trade and repair options; compare repair and replacement quotes against the same included scope.\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who should I call if I do not know which trade is needed?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Describe the system, affected outlets and current symptoms to the team. The appropriate trade and assessment scope need to be confirmed; you do not need to remove covers or test equipment to choose a category.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Does hot water at one tap rule out a plumbing problem elsewhere?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. A difference between outlets is useful context but does not establish the faulty component. Report which outlets are affected so the investigation can be scoped.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/insights-hot-water-plumbing-or-electrical.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/insights-hot-water-plumbing-or-electrical.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/insights-hot-water-plumbing-or-electrical.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Insights\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/insights.html\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"author\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"@id\": \"{{ppp:shared:business.origin:json}}/insights-hot-water-plumbing-or-electrical.html#article\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/insights-hot-water-plumbing-or-electrical.html#webpage\"\n      },\n      \"dateModified\": \"2026-10-10\",\n      \"abstract\": \"{{ppp:summary-value:json}}\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/insights-hot-water-plumbing-or-electrical.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:10:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:10:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:10:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:10:1:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-bcfe65294960",
@@ -250,7 +250,7 @@ export const page: PageData = {
 {
 "id": "section-2",
 "kind": "rich",
-"html": "<p class=\"article-meta\" data-editorial-meta>By <a href=\"about.html\">Ellis Services Group</a> · Updated <time datetime=\"2026-10-10\">10 October 2026</time></p>" as TrustedHtml
+"html": "<p class=\"article-meta\" data-editorial-meta>By <a href=\"about.html\">{{ppp:shared:business.name:html}}</a> · Updated <time datetime=\"2026-10-10\">10 October 2026</time></p>" as TrustedHtml
 },
 {
 "id": "section-3",
@@ -285,7 +285,7 @@ export const page: PageData = {
 {
 "id": "section-9",
 "kind": "rich",
-"html": "<div data-seo-guide-expansion><h2 id=\"guide-2\">One outlet or the whole property?</h2><p>A shower that changes temperature while the other hot taps work normally is a different report from a home with no hot water anywhere. A local fixture, water connection and the equipment supplying the property are different parts of the installation. Describe which outlets are affected so the visit starts with the correct scope; a symptom alone does not establish the failed part.</p><p>If every hot outlet is affected, tell us whether the water stays cold, becomes warm only briefly or has reduced flow. Cold-water behaviour and the system location are useful context. There is no need to open a unit or investigate wiring to make this distinction.</p><h2 id=\"guide-3\">When plumbing and electrical work overlap</h2><p>The plumbing side can involve water connections, leaking fittings, supply and outlet behaviour. Electrically heated equipment can also require electrical assessment. Our Perth team coordinates the relevant licensed trades within the agreed scope instead of expecting you to identify the trade from the initial symptom.</p><p>Water beside a unit does not prove the storage tank has failed: accessible connections and surrounding pipework also need assessment. Likewise, loss of heating does not automatically mean the entire system needs replacement. Our <a href=\"hot-water-problems-perth.html\">Perth hot-water repair service</a> explains the assessment and repair options. For moisture whose source is unclear, see <a href=\"water-leak-detection-perth.html\">water leak detection</a>.</p><h2 id=\"guide-4\">Compare repair and replacement on the same scope</h2><p>A repair quote should identify the fault-related work and proposed parts or connections. A replacement quote should identify the proposed equipment and the work needed to connect it to the property. Extra pipework, cabling, access and agreed disposal or restoration tasks should not be silently assumed to be included.</p><p>Compare written scopes rather than a repair-only price against a complete replacement installation. Ask which items are included, what work is outside the quote and how additional findings will be approved. Published price ranges are planning guides; the final written quote confirms your property-specific work.</p><p>Photos are optional: email safely taken photos to <a href=\"mailto:maxinemaintenance.au@outlook.com\">maxinemaintenance.au@outlook.com</a>. You can contact us without photos.</p><p><a class=\"button\" href=\"contact.html\">Arrange an on-site assessment &amp; written quote</a></p></div>" as TrustedHtml
+"html": "<div data-seo-guide-expansion><h2 id=\"guide-2\">One outlet or the whole property?</h2><p>A shower that changes temperature while the other hot taps work normally is a different report from a home with no hot water anywhere. A local fixture, water connection and the equipment supplying the property are different parts of the installation. Describe which outlets are affected so the visit starts with the correct scope; a symptom alone does not establish the failed part.</p><p>If every hot outlet is affected, tell us whether the water stays cold, becomes warm only briefly or has reduced flow. Cold-water behaviour and the system location are useful context. There is no need to open a unit or investigate wiring to make this distinction.</p><h2 id=\"guide-3\">When plumbing and electrical work overlap</h2><p>The plumbing side can involve water connections, leaking fittings, supply and outlet behaviour. Electrically heated equipment can also require electrical assessment. Our Perth team coordinates the relevant licensed trades within the agreed scope instead of expecting you to identify the trade from the initial symptom.</p><p>Water beside a unit does not prove the storage tank has failed: accessible connections and surrounding pipework also need assessment. Likewise, loss of heating does not automatically mean the entire system needs replacement. Our <a href=\"hot-water-problems-perth.html\">Perth hot-water repair service</a> explains the assessment and repair options. For moisture whose source is unclear, see <a href=\"water-leak-detection-perth.html\">water leak detection</a>.</p><h2 id=\"guide-4\">Compare repair and replacement on the same scope</h2><p>A repair quote should identify the fault-related work and proposed parts or connections. A replacement quote should identify the proposed equipment and the work needed to connect it to the property. Extra pipework, cabling, access and agreed disposal or restoration tasks should not be silently assumed to be included.</p><p>Compare written scopes rather than a repair-only price against a complete replacement installation. Ask which items are included, what work is outside the quote and how additional findings will be approved. Published price ranges are planning guides; the final written quote confirms your property-specific work.</p><p>Photos are optional: email safely taken photos to <a href=\"mailto:{{ppp:shared:business.email:html}}\">{{ppp:shared:business.email:html}}</a>. You can contact us without photos.</p><p><a class=\"button\" href=\"contact.html\">Arrange an on-site assessment &amp; written quote</a></p></div>" as TrustedHtml
 },
 {
 "id": "section-10",

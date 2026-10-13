@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "contact.html",
 "kind": "contact",
 "seo": {
 "title": "Book Plumbing & Electrical Repairs Perth | Contact Ellis",
 "description": "Contact Ellis in Perth for plumbing or electrical repairs and installations. Share the property location and issue to arrange an assessment and written quote.",
-"canonical": "https://perthpipepower.com.au/contact.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/contact.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Book Plumbing & Electrical Repairs Perth | Contact Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "Contact Ellis in Perth for plumbing or electrical repairs and installations. Share the property location and issue to arrange an assessment and written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Book Plumbing & Electrical Repairs Perth | Contact Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Contact Ellis in Perth for plumbing or electrical repairs and installations. Share the property location and issue to arrange an assessment and written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/contact.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,98 +119,98 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/contact.html#webpage",
-"url": "https://perthpipepower.com.au/contact.html",
-"name": "Contact Ellis Services Group",
-"description": "Contact Ellis in Perth for plumbing or electrical repairs and installations. Share the property location and issue to arrange an assessment and written quote.",
+"@id": "{{ppp:shared:business.origin:raw}}/contact.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/contact.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/contact.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/contact.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/contact.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Contact Ellis Services Group",
-"item": "https://perthpipepower.com.au/contact.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/contact.html#faq",
-"url": "https://perthpipepower.com.au/contact.html",
+"@id": "{{ppp:shared:business.origin:raw}}/contact.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "Do I need photos or an equipment model to send the form?",
+"name": "{{ppp:faq-value:0:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. Start with the property address and a short description. Safely readable product details can help later. Photos are optional and may be emailed; do not dismantle equipment or approach water, wiring or wastewater to take them."
+"text": "{{ppp:faq-value:0:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Does sending this form confirm the appointment or price?",
+"name": "{{ppp:faq-value:0:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. The team contacts you to agree the visit and assessment requirements. The written quote confirms the agreed work and price; submitting the form does not approve a repair or guarantee an arrival time."
+"text": "{{ppp:faq-value:0:1:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Should I enter your Perth office address in the repair form?",
+"name": "{{ppp:faq-value:0:2:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Enter the address of the property needing work, not our office address, unless the work is at that office. Our actual Perth office is at 140 St Georges Terrace, Perth WA 6000. Contact the team before visiting to confirm arrangements."
+"text": "{{ppp:faq-value:0:2:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What are your routine hours and emergency arrangements?",
+"name": "{{ppp:faq-value:0:3:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry."
+"text": "{{ppp:faq-value:0:3:answer:raw}}"
 }
 }
 ]
@@ -219,19 +219,19 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/contact.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/contact.html\",\n      \"name\": \"Contact Ellis Services Group\",\n      \"description\": \"Contact Ellis in Perth for plumbing or electrical repairs and installations. Share the property location and issue to arrange an assessment and written quote.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/contact.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/contact.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Contact Ellis Services Group\",\n          \"item\": \"https://perthpipepower.com.au/contact.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/contact.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/contact.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Do I need photos or an equipment model to send the form?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. Start with the property address and a short description. Safely readable product details can help later. Photos are optional and may be emailed; do not dismantle equipment or approach water, wiring or wastewater to take them.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Does sending this form confirm the appointment or price?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. The team contacts you to agree the visit and assessment requirements. The written quote confirms the agreed work and price; submitting the form does not approve a repair or guarantee an arrival time.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Should I enter your Perth office address in the repair form?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Enter the address of the property needing work, not our office address, unless the work is at that office. Our actual Perth office is at 140 St Georges Terrace, Perth WA 6000. Contact the team before visiting to confirm arrangements.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What are your routine hours and emergency arrangements?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/contact.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/contact.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/contact.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/contact.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:0:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:0:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:0:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:0:1:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:0:2:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:0:2:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:0:3:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:0:3:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-ea7065db717c",
 "mainAttributes": {
 "id": "main"
 },
-"hero": "\n<section class=\"page-hero\">\n<div class=\"shell\">\n{{ppp:breadcrumbs}}\n<span class=\"eyebrow\">Tell us what is happening</span>\n<h1>Contact Ellis Services Group</h1>\n<p>Our dedicated Perth repair team provides plumbing and electrical repairs and maintenance across Perth.</p>\n</div>\n</section>" as TrustedHtml,
+"hero": "\n<section class=\"page-hero\">\n<div class=\"shell\">\n{{ppp:breadcrumbs}}\n<span class=\"eyebrow\">Tell us what is happening</span>\n<h1>Contact {{ppp:shared:business.name:html}}</h1>\n<p>Our dedicated Perth repair team provides plumbing and electrical repairs and maintenance across Perth.</p>\n</div>\n</section>" as TrustedHtml,
 "sections": [
 {
 "id": "section-1",
 "kind": "faq",
-"container": "\n<section class=\"section\">\n<div class=\"shell contact-grid\">\n      <div class=\"contact-card contact-card--details\">\n<h2>Contact details</h2>\n<p>\n<strong>Ellis Services Group</strong>\n<br>\n<a href=\"tel:0413477667\">0413 477 667</a>\n<br>\n<a href=\"mailto:maxinemaintenance.au@outlook.com\">maxinemaintenance.au@outlook.com</a>\n<br>140 St Georges Terrace, Perth WA 6000</p>\n<h3>Perth office and property visits</h3>\n<p>This is our actual Perth office address. For repair work, tell us the address of the property needing service, which may be different from our office. Contact the team before visiting the office to confirm arrangements; an online enquiry does not reserve a visit.</p>\n<h3>What to include</h3>\n<p>Provide the property address or suburb, a short description, when it began, whether there is an active leak or electrical hazard, and the best access contact.</p>\n        <p>Services are provided by appropriately licensed plumbing and electrical tradespeople. Licence details are available on request.</p>\n        <figure class=\"contact-card__image\">\n          <img src=\"property-maintenance.jpg\" width=\"1672\" height=\"941\" alt=\"Tradesperson preparing for a property maintenance visit\" srcset=\"property-maintenance-480.webp 480w, property-maintenance-800.webp 800w, property-maintenance-1200.webp 1200w\" sizes=\"(max-width:700px) 100vw, (max-width:1000px) 50vw, 380px\">\n        </figure>\n</div>\n<form id=\"enquiry\" class=\"contact-card\" data-enquiry-form novalidate>\n<h2>Request a repair</h2>\n<p>Send your Perth suburb or address and a short description of the repair or installation required. Our team will contact you to arrange an on-site assessment, check the fault or installation requirements and confirm the work plan and written quote. We agree the appointment with you.</p>\n<div class=\"honeypot\" aria-hidden=\"true\">\n<label for=\"company\">Company</label>\n<input id=\"company\" name=\"company\" tabindex=\"-1\" autocomplete=\"off\">\n</div>\n<label for=\"name\">Name</label>\n<input id=\"name\" name=\"name\" autocomplete=\"name\" required>\n<label for=\"phone\">Phone</label>\n<input id=\"phone\" name=\"phone\" type=\"tel\" autocomplete=\"tel\" required>\n<label for=\"email\">Email</label>\n<input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" required>\n<label for=\"address\">Property address or suburb</label>\n<input id=\"address\" name=\"address\" autocomplete=\"street-address\" required>\n<label for=\"type\">Service type</label>\n<select id=\"type\" name=\"type\">\n<option>Plumbing</option>\n<option>Electrical</option>\n<option selected>Not sure</option>\n</select>\n<label for=\"message\">What is happening?</label>\n<textarea id=\"message\" name=\"message\" required>\n</textarea>\n<p>Photos are optional: email safely taken photos to <a href=\"mailto:maxinemaintenance.au@outlook.com\">maxinemaintenance.au@outlook.com</a>. You can submit this form without photos.</p><p class=\"form-note\">Do not approach a hazard to take a photo. For immediate danger, call 000.</p>\n<p class=\"form-note\">By submitting this form, you agree to our <a href=\"privacy.html\">Privacy Policy</a>.</p>\n<p id=\"form-status\" class=\"form-status\" aria-live=\"polite\">\n</p>\n<button class=\"button\" type=\"submit\">Send enquiry</button>\n</form>\n</div>\n<!-- site-intent:start --><div class=\"intent-content shell text-column\" data-site-intent><h2>Prepare the request without extra investigation</h2><p>Choose Plumbing, Electrical or Not sure. Describe the affected room or equipment, when the change began and whether it is still happening. For installation, name the product and intended location instead of describing an invented fault. Add the access and approval contacts for managed premises. The form starts an enquiry; an appointment, diagnosis and final price are confirmed separately. Do not put keys, alarm codes or unrelated personal records in the message.</p><ul class=\"intent-links\"><li><a href=\"plumbing.html\">Plumbing repair and installation scope</a></li><li><a href=\"electrical.html\">Electrical assessment and installation scope</a></li><li><a href=\"property-management.html\">Managed-property work-order checklist</a></li><li><a href=\"news-clearer-property-maintenance-enquiry.html\">What to include in a maintenance enquiry</a></li><li><a href=\"fixtures-appliances-perth.html#gap-dishwasher-installation\">Dishwasher connection enquiry checklist</a></li><li><a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber Perth</a></li><li><a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician Perth</a></li></ul><details><summary>{{ppp:faq:0:question}}</summary>{{ppp:faq:0:answer}}</details><details><summary>{{ppp:faq:1:question}}</summary>{{ppp:faq:1:answer}}</details><details><summary>{{ppp:faq:2:question}}</summary>{{ppp:faq:2:answer}}</details><details><summary>{{ppp:faq:3:question}}</summary>{{ppp:faq:3:answer}}</details></div><!-- site-intent:end --></section>" as TrustedHtml,
+"container": "\n<section class=\"section\">\n<div class=\"shell contact-grid\">\n      <div class=\"contact-card contact-card--details\">\n<h2>Contact details</h2>\n<p>\n<strong>{{ppp:shared:business.name:html}}</strong>\n<br>\n<a href=\"tel:{{ppp:shared:business.localTelephone:html}}\">{{ppp:shared:business.displayTelephone:html}}</a>\n<br>\n<a href=\"mailto:{{ppp:shared:business.email:html}}\">{{ppp:shared:business.email:html}}</a>\n<br>{{ppp:shared:business.addressLine:html}}</p>\n<h3>Perth office and property visits</h3>\n<p>This is our actual Perth office address. For repair work, tell us the address of the property needing service, which may be different from our office. Contact the team before visiting the office to confirm arrangements; an online enquiry does not reserve a visit.</p>\n<h3>What to include</h3>\n<p>Provide the property address or suburb, a short description, when it began, whether there is an active leak or electrical hazard, and the best access contact.</p>\n        <p>Services are provided by appropriately licensed plumbing and electrical tradespeople. Licence details are available on request.</p>\n        <figure class=\"contact-card__image\">\n          <img src=\"property-maintenance.jpg\" width=\"1672\" height=\"941\" alt=\"Tradesperson preparing for a property maintenance visit\" srcset=\"property-maintenance-480.webp 480w, property-maintenance-800.webp 800w, property-maintenance-1200.webp 1200w\" sizes=\"(max-width:700px) 100vw, (max-width:1000px) 50vw, 380px\">\n        </figure>\n</div>\n<form id=\"enquiry\" class=\"contact-card\" data-enquiry-form novalidate>\n<h2>Request a repair</h2>\n<p>Send your Perth suburb or address and a short description of the repair or installation required. Our team will contact you to arrange an on-site assessment, check the fault or installation requirements and confirm the work plan and written quote. We agree the appointment with you.</p>\n<div class=\"honeypot\" aria-hidden=\"true\">\n<label for=\"company\">Company</label>\n<input id=\"company\" name=\"company\" tabindex=\"-1\" autocomplete=\"off\">\n</div>\n<label for=\"name\">Name</label>\n<input id=\"name\" name=\"name\" autocomplete=\"name\" required>\n<label for=\"phone\">Phone</label>\n<input id=\"phone\" name=\"phone\" type=\"tel\" autocomplete=\"tel\" required>\n<label for=\"email\">Email</label>\n<input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" required>\n<label for=\"address\">Property address or suburb</label>\n<input id=\"address\" name=\"address\" autocomplete=\"street-address\" required>\n<label for=\"type\">Service type</label>\n<select id=\"type\" name=\"type\">\n<option>Plumbing</option>\n<option>Electrical</option>\n<option selected>Not sure</option>\n</select>\n<label for=\"message\">What is happening?</label>\n<textarea id=\"message\" name=\"message\" required>\n</textarea>\n<p>Photos are optional: email safely taken photos to <a href=\"mailto:{{ppp:shared:business.email:html}}\">{{ppp:shared:business.email:html}}</a>. You can submit this form without photos.</p><p class=\"form-note\">Do not approach a hazard to take a photo. For immediate danger, call 000.</p>\n<p class=\"form-note\">By submitting this form, you agree to our <a href=\"privacy.html\">Privacy Policy</a>.</p>\n<p id=\"form-status\" class=\"form-status\" aria-live=\"polite\">\n</p>\n<button class=\"button\" type=\"submit\">Send enquiry</button>\n</form>\n</div>\n<!-- site-intent:start --><div class=\"intent-content shell text-column\" data-site-intent><h2>Prepare the request without extra investigation</h2><p>Choose Plumbing, Electrical or Not sure. Describe the affected room or equipment, when the change began and whether it is still happening. For installation, name the product and intended location instead of describing an invented fault. Add the access and approval contacts for managed premises. The form starts an enquiry; an appointment, diagnosis and final price are confirmed separately. Do not put keys, alarm codes or unrelated personal records in the message.</p><ul class=\"intent-links\"><li><a href=\"plumbing.html\">Plumbing repair and installation scope</a></li><li><a href=\"electrical.html\">Electrical assessment and installation scope</a></li><li><a href=\"property-management.html\">Managed-property work-order checklist</a></li><li><a href=\"news-clearer-property-maintenance-enquiry.html\">What to include in a maintenance enquiry</a></li><li><a href=\"fixtures-appliances-perth.html#gap-dishwasher-installation\">Dishwasher connection enquiry checklist</a></li><li><a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber Perth</a></li><li><a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician Perth</a></li></ul><details><summary>{{ppp:faq:0:question}}</summary>{{ppp:faq:0:answer}}</details><details><summary>{{ppp:faq:1:question}}</summary>{{ppp:faq:1:answer}}</details><details><summary>{{ppp:faq:2:question}}</summary>{{ppp:faq:2:answer}}</details><details><summary>{{ppp:faq:3:question}}</summary>{{ppp:faq:3:answer}}</details></div><!-- site-intent:end --></section>" as TrustedHtml,
 "items": [
 {
 "question": "Do I need photos or an equipment model to send the form?",
@@ -243,11 +243,11 @@ export const page: PageData = {
 },
 {
 "question": "Should I enter your Perth office address in the repair form?",
-"answer": "<p>Enter the address of the property needing work, not our office address, unless the work is at that office. Our actual Perth office is at 140 St Georges Terrace, Perth WA 6000. Contact the team before visiting to confirm arrangements.</p>" as TrustedHtml
+"answer": "<p>Enter the address of the property needing work, not our office address, unless the work is at that office. Our actual Perth office is at {{ppp:shared:business.addressLine:html}}. Contact the team before visiting to confirm arrangements.</p>" as TrustedHtml
 },
 {
 "question": "What are your routine hours and emergency arrangements?",
-"answer": "<p>Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.</p>" as TrustedHtml
+"answer": "<p>{{ppp:shared:hours.text:html}} Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.</p>" as TrustedHtml
 }
 ]
 },

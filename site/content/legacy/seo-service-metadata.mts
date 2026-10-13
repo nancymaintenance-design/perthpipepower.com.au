@@ -1,17 +1,206 @@
-
-// One search intent per service owner. No invented prices, credentials or case claims.
-const legacy = {
- 'hot-water-problems-perth.html': {description:'Hot water repairs and system replacement in Perth. Our local plumbing and electrical team assesses the fault and provides a repair plan and written quote.'},
- 'blocked-drains-perth.html': {headline:'Blocked Drains Perth — Drain Clearing & Repairs',title:'Blocked Drains & Drain Repairs Perth | Ellis',description:'Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote.'},
- 'water-leak-detection-perth.html': {description:'Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote.'},
- 'burst-pipe-repair-perth.html': {description:'Burst pipe repairs in Perth for active pipe leaks and damaged water connections. Contact our local team for assessment, repair scope and a written quote.'},
- 'tap-mixer-repairs-perth.html': {description:'Tap and mixer repairs in Perth for dripping, leaking or faulty kitchen, bathroom and laundry fittings. Book an assessment and written repair quote.'},
- 'toilet-repairs-perth.html': {headline:'Toilet Repairs Perth — Cistern & Flush Repairs',title:'Toilet & Cistern Repairs Perth | Ellis',description:'Toilet repairs in Perth for leaks, running cisterns, slow filling, blockages and overflow. On-site assessment, repair or maintenance plan and written quote.'},
- 'power-faults-perth.html': {description:'Electrical fault finding and power repairs in Perth for outages, circuit faults and recurring trips. Book a licensed electrician assessment and written quote.'},
- 'safety-switch-tripping-perth.html': {description:'Safety switch and RCD repairs in Perth for recurring trips and switches that will not stay on. Arrange fault assessment, repair scope and a written quote.'},
- 'lighting-power-points-perth.html': {headline:'Lighting & Power Point Electrical Services Overview Perth',title:'Lighting & Power Point Overview Perth | Ellis',description:'Find Perth lighting, power point and switch services. Choose the dedicated repair or installation page, or arrange assessment of a wider electrical fault.'},
- 'smoke-alarm-maintenance-perth.html': {headline:'Smoke Alarm Repairs, Replacement & Maintenance Perth',title:'Smoke Alarm Repairs & Replacement Perth | Ellis',description:'Smoke alarm repairs, replacement and maintenance in Perth. On-site assessment, repair plan and written quote. Do not remove hardwired units.'},
- 'fixtures-appliances-perth.html': {description:'Fixture and appliance connections in Perth: taps, toilets, showers, kitchens and laundries. Discuss plumbing and electrical scope and get a written quote.'},
- 'renewables-smart-home-perth.html': {description:'Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes.'}
-};
+import { compatibilityView } from '../authority.mjs';
+// Published fields are canonical references. Unreferenced values are legacy-only
+// historical metadata and must never be used to independently regenerate pages.
+const legacy = compatibilityView({
+  "hot-water-problems-perth.html": {
+    "description": {
+      "$source": "page",
+      "file": "hot-water-problems-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "blocked-drains-perth.html": {
+    "headline": {
+      "$source": "page",
+      "file": "blocked-drains-perth.html",
+      "path": [
+        "seo",
+        "jsonLd",
+        0,
+        "@graph",
+        2,
+        "name"
+      ]
+    },
+    "title": {
+      "$source": "page",
+      "file": "blocked-drains-perth.html",
+      "path": [
+        "seo",
+        "title"
+      ]
+    },
+    "description": {
+      "$source": "page",
+      "file": "blocked-drains-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "water-leak-detection-perth.html": {
+    "description": {
+      "$source": "page",
+      "file": "water-leak-detection-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "burst-pipe-repair-perth.html": {
+    "description": {
+      "$source": "page",
+      "file": "burst-pipe-repair-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "tap-mixer-repairs-perth.html": {
+    "description": {
+      "$source": "page",
+      "file": "tap-mixer-repairs-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "toilet-repairs-perth.html": {
+    "headline": {
+      "$source": "page",
+      "file": "toilet-repairs-perth.html",
+      "path": [
+        "seo",
+        "jsonLd",
+        0,
+        "@graph",
+        2,
+        "name"
+      ]
+    },
+    "title": {
+      "$source": "page",
+      "file": "toilet-repairs-perth.html",
+      "path": [
+        "seo",
+        "title"
+      ]
+    },
+    "description": {
+      "$source": "page",
+      "file": "toilet-repairs-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "power-faults-perth.html": {
+    "description": {
+      "$source": "page",
+      "file": "power-faults-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "safety-switch-tripping-perth.html": {
+    "description": {
+      "$source": "page",
+      "file": "safety-switch-tripping-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "lighting-power-points-perth.html": {
+    "headline": {
+      "$source": "page",
+      "file": "lighting-power-points-perth.html",
+      "path": [
+        "seo",
+        "jsonLd",
+        0,
+        "@graph",
+        2,
+        "name"
+      ]
+    },
+    "title": {
+      "$source": "page",
+      "file": "lighting-power-points-perth.html",
+      "path": [
+        "seo",
+        "title"
+      ]
+    },
+    "description": {
+      "$source": "page",
+      "file": "lighting-power-points-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "smoke-alarm-maintenance-perth.html": {
+    "headline": {
+      "$source": "page",
+      "file": "smoke-alarm-maintenance-perth.html",
+      "path": [
+        "seo",
+        "jsonLd",
+        0,
+        "@graph",
+        2,
+        "name"
+      ]
+    },
+    "title": {
+      "$source": "page",
+      "file": "smoke-alarm-maintenance-perth.html",
+      "path": [
+        "seo",
+        "title"
+      ]
+    },
+    "description": {
+      "$source": "page",
+      "file": "smoke-alarm-maintenance-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "fixtures-appliances-perth.html": {
+    "description": {
+      "$source": "page",
+      "file": "fixtures-appliances-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  },
+  "renewables-smart-home-perth.html": {
+    "description": {
+      "$source": "page",
+      "file": "renewables-smart-home-perth.html",
+      "path": [
+        "seo",
+        "description"
+      ]
+    }
+  }
+} as const);
 export default legacy;

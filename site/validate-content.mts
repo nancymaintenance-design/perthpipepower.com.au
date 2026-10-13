@@ -1,4 +1,5 @@
 import { isDeepStrictEqual } from 'node:util';
+import { parseFragment, type DefaultTreeAdapterTypes as T } from 'parse5';
 import type { Difference } from './baseline.mjs';
 import type { SiteData, PageData, LayoutData } from './types.mjs';
 import { expectedPageFiles } from './content/pages.mjs';
@@ -11,6 +12,15 @@ const seoKeys=new Set(['title','description','canonical','robots','social','json
 const artifacts=new Set(['sitemap.xml','robots.txt','llms.txt','ai-content.json','feed.xml','rss.xml','atom.xml']);
 const token=(name:string):string=>`{{ppp:${name}}}`;
 const count=(value:string,needle:string):number=>value.split(needle).length-1;
+function shadowSeo(fragment:string):boolean {
+  function walk(n:T.Node):boolean {
+    if('tagName' in n){
+      const a=(name:string)=>n.attrs.find(x=>x.name===name)?.value.toLowerCase();
+      if(n.tagName==='title'||n.tagName==='meta'&&/^(description$|robots$|og:|twitter:)/.test(a('name')??a('property')??'')||n.tagName==='link'&&a('rel')?.split(/\s+/).includes('canonical')||n.tagName==='script'&&a('type')==='application/ld+json')return true;
+    }
+    return 'childNodes' in n&&n.childNodes.some(walk);
+  }return walk(parseFragment(fragment));
+}
 export function isSafePublicPath(file:unknown):file is string {
   return typeof file==='string'&&file.length>0&&file.split('/').every(part=>/^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(part)&&!part.includes('..'))&&!file.includes('%')&&!file.includes('\\');
 }
@@ -38,6 +48,7 @@ export function validateSiteData(site:SiteData):Difference[] {
       fail(file,'seo.shape','complete typed SEO fields',page.seo);continue;
     }
     const seo=page.seo;
+    for(const value of [page.mainAttributes,page.chromeBindings,seo])if(JSON.stringify(value)?.includes('{{ppp:'))fail(file,'reserved.marker','no markers in emitted values',value);
     try{const url=new URL(seo.canonical as string);if(url.origin!=='https://perthpipepower.com.au'||url.username||url.password||url.search||url.hash||url.pathname!==(file==='index.html'?'/':`/${file}`))fail(file,'canonical','matching route on https://perthpipepower.com.au',seo.canonical);}
     catch{fail(file,'canonical','absolute approved canonical URL',seo.canonical);}
     for(const item of seo.social as unknown[])if(!record(item)||!['name','property'].includes(String(item.attribute))||typeof item.key!=='string'||!/^(og:|twitter:)/.test(item.key)||typeof item.value!=='string')fail(file,'social','typed social metadata',item);
@@ -62,6 +73,7 @@ export function validateSiteData(site:SiteData):Difference[] {
         content.push(section.container);
         for(const [i,item]of section.items.entries()){
           if(!record(item)||typeof item.question!=='string'||typeof item.answer!=='string'){fail(file,'faq','typed question and trusted answer',item);continue;}
+          checkTokens(item.answer,new Set());checkTokens(item.question,new Set());
           for(const key of ['question','answer'])if(count(section.container,token(`faq:${i}:${key}`))!==1)fail(file,'faq.slot','one slot per FAQ field',`${section.id}:${i}:${key}`);
         }
         const actual=[...section.container.matchAll(/\{\{ppp:faq:[^}]+\}\}/g)].length;
@@ -72,16 +84,20 @@ export function validateSiteData(site:SiteData):Difference[] {
     for(const value of content)if(/<\/?(?:html|body|head)\b/i.test(value))fail(file,'content.document','section fragment only','document wrapper');
     for(const [i,crumb]of page.breadcrumbs.entries()){
       if(!record(crumb)||typeof crumb.label!=='string'||!(crumb.href===null||typeof crumb.href==='string')){fail(file,'breadcrumbs','typed label and href',crumb);continue;}
+      checkTokens(crumb.label,new Set());if(typeof crumb.href==='string')checkTokens(crumb.href,new Set());
       if(typeof page.breadcrumbContainer!=='string'||count(page.breadcrumbContainer,token(`breadcrumb:${i}:label`))!==1)fail(file,'breadcrumb.slot','one label slot',i);
       if(crumb.href!==null&&(typeof page.breadcrumbContainer!=='string'||count(page.breadcrumbContainer,token(`breadcrumb:${i}:href`))!==1))fail(file,'breadcrumb.slot','one href slot',i);
     }
     if(page.breadcrumbContainer!==null){if(count(content.join(''),token('breadcrumbs'))!==1)fail(file,'breadcrumbs.placement','one explicit content placement',content.join('').match(/\{\{ppp:breadcrumbs\}\}/g)?.length??0);}
     else if(page.breadcrumbs.length)fail(file,'breadcrumbs.container','container for items',null);
+    if(page.breadcrumbContainer===null&&count(content.join(''),token('breadcrumbs'))!==0)fail(file,'breadcrumbs.orphan','no placement without container and items','orphan placement');
+    if(page.breadcrumbContainer!==null&&page.breadcrumbs.length===0)fail(file,'breadcrumbs.empty','items for existing container',[]);
     if(typeof page.breadcrumbContainer==='string')checkTokens(page.breadcrumbContainer,new Set(page.breadcrumbs.flatMap((crumb,i)=>record(crumb)&&crumb.href!==null?[`breadcrumb:${i}:label`,`breadcrumb:${i}:href`]:[`breadcrumb:${i}:label`])));
     if(file==='privacy.html'&&!/noindex/i.test(String(seo.robots)))fail(file,'robots','privacy remains noindex',seo.robots);
     if(typeof page.layoutId==='string'&&record(site.layouts[page.layoutId]))validateReferences(page as unknown as PageData,site.layouts[page.layoutId]);
     function checkTokens(value:string,allowed:Set<string>):void {
       for(const match of value.matchAll(/\{\{ppp:([^}]+)\}\}/g))if(!allowed.has(match[1]))fail(file,'content.token','declared structured slot',match[1]);
+      if(value.replace(/\{\{ppp:[^}]+\}\}/g,'').includes('{{ppp:'))fail(file,'content.token','complete declared marker',value);
     }
   }
   for(const file of expectedPageFiles)if(!seen.has(file))fail(file,'missing','registered candidate page',null);
@@ -92,11 +108,13 @@ export function validateSiteData(site:SiteData):Difference[] {
     if(!Object.hasOwn(footers,layout.footerId as string))fail(id,'footerId','existing shared footer',layout.footerId);
     if(!usedLayouts.has(id))fail(id,'layout.unused','layout referenced by a page',id);
     if(/<(?:header|footer|nav)\b/i.test(String(layout.beforeMain)+String(layout.afterMain)))fail(id,'layout.chrome','chrome only in registries','embedded chrome');
+    for(const value of [layout.documentOpen,layout.bodyOpen,layout.beforeMain,layout.afterMain,layout.documentClose,...layout.scripts])if(String(value).includes('{{ppp:'))fail(id,'layout.marker','no reserved marker in emitted layout fragment',value);
     for(const slot of layout.headSlots){
       if(!record(slot)){fail(id,'headSlot','typed slot',slot);continue;}
       if(slot.kind==='seo'&&typeof slot.key==='string'&&seoKeys.has(slot.key))continue;
       if(slot.kind==='static'&&typeof slot.html==='string'){
-        if(/<title\b|<[^>]+(?:name|property)\s*=\s*["'](?:description|robots|og:|twitter:)|<[^>]+rel\s*=\s*["']canonical|application\/ld\+json/i.test(slot.html))fail(id,'headSlot.static','SEO only through SeoData','duplicated metadata');
+        if(shadowSeo(slot.html))fail(id,'headSlot.static','SEO only through SeoData','duplicated metadata');
+        if(slot.html.includes('{{ppp:'))fail(id,'headSlot.marker','no reserved marker in static head fragment',slot.html);
       }else fail(id,'headSlot','valid SEO or static slot',slot);
     }
   }
@@ -120,8 +138,9 @@ export function validateSiteData(site:SiteData):Difference[] {
     for(const key of Object.keys(slots))if(typeof bindings[key]!=='string')fail(page.file,'chrome.missingBinding',key,bindings[key]);
     for(const key of Object.keys(bindings))if(!Object.hasOwn(slots,key))fail(page.file,'chrome.unusedBinding','referenced slot',key);
     for(const template of [headers[layout.headerId],footers[layout.footerId]])if(template){
-      for(const [key,kind]of Object.entries(template.slots))if(!['text','attribute'].includes(kind)||count(template.html,token(key))!==1)fail(page.file,'chrome.slot','one typed text or attribute slot',key);
-      if([...template.html.matchAll(/\{\{ppp:[^}]+\}\}/g)].length!==Object.keys(template.slots).length)fail(page.file,'chrome.tokens','no undeclared tokens',template.html);
+      const rendered=template.html;
+      for(const [key,kind]of Object.entries(template.slots))if(!['text','attribute'].includes(kind)||count(rendered,token(key))!==1)fail(page.file,'chrome.slot','one typed text or attribute slot',key);
+      if([...rendered.matchAll(/\{\{ppp:[^}]+\}\}/g)].length!==Object.keys(template.slots).length)fail(page.file,'chrome.tokens','no undeclared tokens',rendered);
     }
   }
 }

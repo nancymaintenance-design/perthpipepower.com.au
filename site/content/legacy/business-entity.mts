@@ -1,23 +1,84 @@
-
-// Public identity confirmed by the owner; ABN checked against ABN Lookup on 2026-10-10.
-const origin = 'https://perthpipepower.com.au';
-const legacy = {
-  origin,
-  id: origin + '/#business',
-  name: 'Ellis Services Group',
-  legalName: 'ELLIS SERVICES GROUP PTY LTD',
-  abn: '96 645 821 745',
-  registration: 'https://abr.business.gov.au/ABN/View?id=645821745',
-  telephone: '+61413477667',
-  email: 'maxinemaintenance.au@outlook.com',
-  address: {
-    '@type': 'PostalAddress', streetAddress: '140 St Georges Terrace',
-    addressLocality: 'Perth', addressRegion: 'WA', postalCode: '6000', addressCountry: 'AU',
+import { compatibilityView } from '../authority.mjs';
+// Published fields are canonical references. Unreferenced values are legacy-only
+// historical metadata and must never be used to independently regenerate pages.
+const legacy = compatibilityView({
+  "origin": {
+    "$source": "shared",
+    "key": "business.origin"
   },
-  logo: origin + '/ellis-services-logo.png',
-  instagram: 'https://www.instagram.com/elliservices_group/',
-  facebook: 'https://www.facebook.com/p/Ellis-Services-Group-100082926022259/',
-  linkedin: 'https://www.linkedin.com/in/ellis-services-group-091541266/',
-  maps: 'https://www.google.com/maps?cid=4207134925924682021',
-};
+  "id": {
+    "$source": "shared",
+    "key": "business.id"
+  },
+  "name": {
+    "$source": "shared",
+    "key": "business.name"
+  },
+  "legalName": {
+    "$source": "shared",
+    "key": "business.legalName"
+  },
+  "abn": {
+    "$source": "shared",
+    "key": "business.abn"
+  },
+  "registration": {
+    "$source": "shared",
+    "key": "business.registration"
+  },
+  "telephone": {
+    "$source": "shared",
+    "key": "business.telephone"
+  },
+  "email": {
+    "$source": "shared",
+    "key": "business.email"
+  },
+  "address": {
+    "@type": {
+      "$source": "shared",
+      "key": "business.address.@type"
+    },
+    "streetAddress": {
+      "$source": "shared",
+      "key": "business.address.streetAddress"
+    },
+    "addressLocality": {
+      "$source": "shared",
+      "key": "business.address.addressLocality"
+    },
+    "addressRegion": {
+      "$source": "shared",
+      "key": "business.address.addressRegion"
+    },
+    "postalCode": {
+      "$source": "shared",
+      "key": "business.address.postalCode"
+    },
+    "addressCountry": {
+      "$source": "shared",
+      "key": "business.address.addressCountry"
+    }
+  },
+  "logo": {
+    "$source": "shared",
+    "key": "business.logo"
+  },
+  "instagram": {
+    "$source": "shared",
+    "key": "business.instagram"
+  },
+  "facebook": {
+    "$source": "shared",
+    "key": "business.facebook"
+  },
+  "linkedin": {
+    "$source": "shared",
+    "key": "business.linkedin"
+  },
+  "maps": {
+    "$source": "shared",
+    "key": "business.maps"
+  }
+} as const);
 export default legacy;

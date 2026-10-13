@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "water-leak-detection-perth.html",
 "kind": "service",
 "seo": {
 "title": "Water Leak Detection Perth | Ellis",
 "description": "Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote.",
-"canonical": "https://perthpipepower.com.au/water-leak-detection-perth.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/water-leak-detection-perth.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Water Leak Detection Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Water Leak Detection Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/water-leak-detection-perth.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,170 +119,170 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/water-leak-detection-perth.html#webpage",
-"url": "https://perthpipepower.com.au/water-leak-detection-perth.html",
-"name": "Water Leak Detection Perth",
-"description": "Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote.",
+"@id": "{{ppp:shared:business.origin:raw}}/water-leak-detection-perth.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/water-leak-detection-perth.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/water-leak-detection-perth.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/water-leak-detection-perth.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/water-leak-detection-perth.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
 "name": "Plumbing",
-"item": "https://perthpipepower.com.au/plumbing.html"
+"item": "{{ppp:shared:business.origin:raw}}/plumbing.html"
 },
 {
 "@type": "ListItem",
 "position": 3,
-"name": "Water Leak Detection Perth",
-"item": "https://perthpipepower.com.au/water-leak-detection-perth.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "Service",
-"name": "Water Leak Detection Perth",
-"description": "Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote.",
-"serviceType": "Water Leak Detection Perth",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
+"serviceType": "{{ppp:h1-value:raw}}",
 "areaServed": {
 "@type": "City",
 "name": "Perth"
 },
-"@id": "https://perthpipepower.com.au/water-leak-detection-perth.html#service",
+"@id": "{{ppp:shared:business.origin:raw}}/water-leak-detection-perth.html#service",
 "provider": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
-"url": "https://perthpipepower.com.au/water-leak-detection-perth.html",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntityOfPage": {
-"@id": "https://perthpipepower.com.au/water-leak-detection-perth.html#webpage"
+"@id": "{{ppp:shared:business.origin:raw}}/water-leak-detection-perth.html#webpage"
 }
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/water-leak-detection-perth.html#faq",
-"url": "https://perthpipepower.com.au/water-leak-detection-perth.html",
+"@id": "{{ppp:shared:business.origin:raw}}/water-leak-detection-perth.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "Can you guarantee finding a hidden leak without opening a wall?",
+"name": "{{ppp:faq-value:2:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Access and the suspected source determine what investigation is appropriate. Do not assume that every leak can be located or repaired without opening finishes. The proposed method and any access or restoration work need to be explained before approval."
+"text": "{{ppp:faq-value:2:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Does a high water bill prove there is a leaking pipe?",
+"name": "{{ppp:faq-value:2:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. It is useful context, not a diagnosis. Include any observed water, changes in use and available records. If the concern is at the water meter or supply network, use Water Corporation guidance rather than assuming it is private pipework."
+"text": "{{ppp:faq-value:2:1:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can a hidden water leak cause a high bill without visible water damage?",
+"name": "{{ppp:faq-value:2:2:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Yes, a concealed leak is possible without visible damage. A bill increase alone is insufficient to diagnose one. Read the explanation."
+"text": "{{ppp:faq-value:2:2:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Why is my water meter moving when no water is being used?",
+"name": "{{ppp:faq-value:2:3:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Flow without expected use can indicate a leak or a fixture still drawing water. It cannot locate the source. Read the explanation."
+"text": "{{ppp:faq-value:2:3:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Do I need to diagnose the problem first?",
+"name": "{{ppp:faq-value:2:4:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first."
+"text": "{{ppp:faq-value:2:4:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can I send photos?",
+"name": "{{ppp:faq-value:2:5:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo."
+"text": "{{ppp:faq-value:2:5:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can you help with a hidden water leak?",
+"name": "{{ppp:faq-value:2:6:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Yes. Describe the property area, any visible moisture and changes you have noticed. This helps us understand the request before work is arranged."
+"text": "{{ppp:faq-value:2:6:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What should I include in a leak enquiry?",
+"name": "{{ppp:faq-value:2:7:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Include the address, affected room or outdoor area, when the issue began, whether water is active and any safe photos."
+"text": "{{ppp:faq-value:2:7:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What if water is near electrical equipment?",
+"name": "{{ppp:faq-value:2:8:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Keep clear of the area and do not touch wet electrical equipment. If there is immediate danger, move to safety and call 000."
+"text": "{{ppp:faq-value:2:8:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Are locating the leak and repairing it the same job?",
+"name": "{{ppp:faq-value:2:9:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "They can be separate parts of the scope. We explain the investigation, access and proposed repair before work proceeds, and identify any additional access or reinstatement work in the written quote."
+"text": "{{ppp:faq-value:2:9:answer:raw}}"
 }
 }
 ]
@@ -291,7 +291,7 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/water-leak-detection-perth.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/water-leak-detection-perth.html\",\n      \"name\": \"Water Leak Detection Perth\",\n      \"description\": \"Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/water-leak-detection-perth.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/water-leak-detection-perth.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Plumbing\",\n          \"item\": \"https://perthpipepower.com.au/plumbing.html\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Water Leak Detection Perth\",\n          \"item\": \"https://perthpipepower.com.au/water-leak-detection-perth.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"Water Leak Detection Perth\",\n      \"description\": \"Water leak detection in Perth for damp areas, visible leaks and suspected concealed pipe faults. Arrange an inspection, repair scope and written quote.\",\n      \"serviceType\": \"Water Leak Detection Perth\",\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"@id\": \"https://perthpipepower.com.au/water-leak-detection-perth.html#service\",\n      \"provider\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"url\": \"https://perthpipepower.com.au/water-leak-detection-perth.html\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"https://perthpipepower.com.au/water-leak-detection-perth.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/water-leak-detection-perth.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/water-leak-detection-perth.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can you guarantee finding a hidden leak without opening a wall?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Access and the suspected source determine what investigation is appropriate. Do not assume that every leak can be located or repaired without opening finishes. The proposed method and any access or restoration work need to be explained before approval.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Does a high water bill prove there is a leaking pipe?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. It is useful context, not a diagnosis. Include any observed water, changes in use and available records. If the concern is at the water meter or supply network, use Water Corporation guidance rather than assuming it is private pipework.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can a hidden water leak cause a high bill without visible water damage?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes, a concealed leak is possible without visible damage. A bill increase alone is insufficient to diagnose one. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why is my water meter moving when no water is being used?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Flow without expected use can indicate a leak or a fixture still drawing water. It cannot locate the source. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Do I need to diagnose the problem first?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I send photos?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can you help with a hidden water leak?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes. Describe the property area, any visible moisture and changes you have noticed. This helps us understand the request before work is arranged.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What should I include in a leak enquiry?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Include the address, affected room or outdoor area, when the issue began, whether water is active and any safe photos.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What if water is near electrical equipment?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Keep clear of the area and do not touch wet electrical equipment. If there is immediate danger, move to safety and call 000.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Are locating the leak and repairing it the same job?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"They can be separate parts of the scope. We explain the investigation, access and proposed repair before work proceeds, and identify any additional access or reinstatement work in the written quote.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/water-leak-detection-perth.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/water-leak-detection-perth.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/water-leak-detection-perth.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Plumbing\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/plumbing.html\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"serviceType\": \"{{ppp:h1-value:json}}\",\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"@id\": \"{{ppp:shared:business.origin:json}}/water-leak-detection-perth.html#service\",\n      \"provider\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/water-leak-detection-perth.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/water-leak-detection-perth.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:1:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:2:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:2:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:3:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:3:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:4:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:4:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:5:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:5:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:6:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:6:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:7:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:7:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:8:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:8:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:9:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:9:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-e2552e379ef9",
@@ -299,7 +299,7 @@ export const page: PageData = {
 "id": "main",
 "data-commercial-service": ""
 },
-"hero": "\n<section\n        class=\"page-hero service-hero\"\n        style=\"--service-image: url(&quot;plumbing-leak-perth.png&quot;)\"\n      >\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Plumbing repair service</span>\n          <h1>Water Leak Detection Perth</h1><aside class=\"intent-safety\" data-intent-safety><p><strong>Is the concern at the water meter?</strong> Use <a href=\"https://www.watercorporation.com.au/help-and-advice/water-issues/leaks/leaking-meter\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation guidance for a leaking meter</a> rather than assuming every leak is private pipework. Do not approach water near electrical equipment.</p></aside>\n<p>Arrange water leak detection and plumbing repair in Perth with Ellis Services Group. We investigate suspected hidden leaks, visible pipe leaks and leaking connections, then explain the access and repair work required. Our local team provides a property-specific repair plan and written quote rather than treating every damp patch as the same fault.</p>\n          <a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a> <a class=\"button service-book-button\" href=\"contact.html?service=water-leak-detection-perth.html\">Book water leak detection and repair</a>\n        </div>\n      </section>" as TrustedHtml,
+"hero": "\n<section\n        class=\"page-hero service-hero\"\n        style=\"--service-image: url(&quot;plumbing-leak-perth.png&quot;)\"\n      >\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Plumbing repair service</span>\n          <h1>Water Leak Detection Perth</h1><aside class=\"intent-safety\" data-intent-safety><p><strong>Is the concern at the water meter?</strong> Use <a href=\"https://www.watercorporation.com.au/help-and-advice/water-issues/leaks/leaking-meter\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation guidance for a leaking meter</a> rather than assuming every leak is private pipework. Do not approach water near electrical equipment.</p></aside>\n<p>Arrange water leak detection and plumbing repair in Perth with {{ppp:shared:business.name:html}}. We investigate suspected hidden leaks, visible pipe leaks and leaking connections, then explain the access and repair work required. Our local team provides a property-specific repair plan and written quote rather than treating every damp patch as the same fault.</p>\n          <a class=\"button\" href=\"tel:{{ppp:shared:business.localTelephone:html}}\">Call {{ppp:shared:business.displayTelephone:html}}</a> <a class=\"button service-book-button\" href=\"contact.html?service=water-leak-detection-perth.html\">Book water leak detection and repair</a>\n        </div>\n      </section>" as TrustedHtml,
 "sections": [
 {
 "id": "section-1",
@@ -338,7 +338,7 @@ export const page: PageData = {
 },
 {
 "question": "Can I send photos?",
-"answer": "<p>Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.</p>" as TrustedHtml
+"answer": "<p>Photos are optional: email safely taken photos to {{ppp:shared:business.email:html}}. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.</p>" as TrustedHtml
 },
 {
 "question": "Can you help with a hidden water leak?",
@@ -361,7 +361,7 @@ export const page: PageData = {
 {
 "id": "service-booking",
 "kind": "rich",
-"html": "\n<section class=\"section contact-band service-booking\" id=\"service-booking\"><div class=\"shell service-reading\"><h2>Book water leak detection and repair in Perth</h2><p>Include the suburb, where the water appears, when it happens and which fixtures are nearby. Previous repairs and available access information help us plan the visit; you do not need to remove finishes before contacting us. Our local team covers <a href=\"service-areas.html\">all six Perth service regions</a> from our office at 140 St Georges Terrace, Perth WA 6000.</p><p>Call to discuss the work or send the property details through our enquiry form. You do not need to diagnose the fault or complete a technical inspection before contacting us.</p><a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a> <a class=\"button service-book-button\" href=\"contact.html?service=water-leak-detection-perth.html\">Request a visit &amp; written quote</a></div></section>" as TrustedHtml
+"html": "\n<section class=\"section contact-band service-booking\" id=\"service-booking\"><div class=\"shell service-reading\"><h2>Book water leak detection and repair in Perth</h2><p>Include the suburb, where the water appears, when it happens and which fixtures are nearby. Previous repairs and available access information help us plan the visit; you do not need to remove finishes before contacting us. Our local team covers <a href=\"service-areas.html\">all six Perth service regions</a> from our office at {{ppp:shared:business.addressLine:html}}.</p><p>Call to discuss the work or send the property details through our enquiry form. You do not need to diagnose the fault or complete a technical inspection before contacting us.</p><a class=\"button\" href=\"tel:{{ppp:shared:business.localTelephone:html}}\">Call {{ppp:shared:business.displayTelephone:html}}</a> <a class=\"button service-book-button\" href=\"contact.html?service=water-leak-detection-perth.html\">Request a visit &amp; written quote</a></div></section>" as TrustedHtml
 },
 {
 "id": "main-trailing-space",

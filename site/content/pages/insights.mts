@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "insights.html",
 "kind": "contentHub",
 "seo": {
 "title": "Perth Plumbing & Electrical Guides | Ellis",
 "description": "Practical guides for Perth property owners, tenants and managers covering plumbing and electrical warning signs, safety and maintenance planning.",
-"canonical": "https://perthpipepower.com.au/insights.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/insights.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Perth Plumbing & Electrical Guides | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "Practical guides for Perth property owners, tenants and managers covering plumbing and electrical warning signs, safety and maintenance planning."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Perth Plumbing & Electrical Guides | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Practical guides for Perth property owners, tenants and managers covering plumbing and electrical warning signs, safety and maintenance planning."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/insights.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,74 +119,74 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "CollectionPage",
-"@id": "https://perthpipepower.com.au/insights.html#webpage",
-"url": "https://perthpipepower.com.au/insights.html",
-"name": "Plumbing and electrical insights",
-"description": "Practical guides for Perth property owners, tenants and managers covering plumbing and electrical warning signs, safety and maintenance planning.",
+"@id": "{{ppp:shared:business.origin:raw}}/insights.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/insights.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/insights.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/insights.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/insights.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Plumbing and electrical insights",
-"item": "https://perthpipepower.com.au/insights.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/insights.html#faq",
-"url": "https://perthpipepower.com.au/insights.html",
+"@id": "{{ppp:shared:business.origin:raw}}/insights.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "Can a guide identify the faulty part at my property?",
+"name": "{{ppp:faq-value:0:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. Similar symptoms can have different causes. Use the guide to describe what you have observed safely, then arrange the appropriate assessment before deciding on a repair or replacement."
+"text": "{{ppp:faq-value:0:0:answer:raw}}"
 }
 }
 ]
@@ -195,7 +195,7 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"CollectionPage\",\n      \"@id\": \"https://perthpipepower.com.au/insights.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/insights.html\",\n      \"name\": \"Plumbing and electrical insights\",\n      \"description\": \"Practical guides for Perth property owners, tenants and managers covering plumbing and electrical warning signs, safety and maintenance planning.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/insights.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/insights.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Plumbing and electrical insights\",\n          \"item\": \"https://perthpipepower.com.au/insights.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/insights.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/insights.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can a guide identify the faulty part at my property?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. Similar symptoms can have different causes. Use the guide to describe what you have observed safely, then arrange the appropriate assessment before deciding on a repair or replacement.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"CollectionPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/insights.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/insights.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/insights.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/insights.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:0:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:0:0:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-1a4ce69823b1",

@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "property-management.html",
 "kind": "service",
 "seo": {
 "title": "Property Manager Plumbing & Electrical Perth | Ellis",
 "description": "Plumbing and electrical maintenance for Perth property managers, rentals and strata. Coordinate access, work orders, approval and an on-site written quote.",
-"canonical": "https://perthpipepower.com.au/property-management.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/property-management.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Property Manager Plumbing & Electrical Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "Plumbing and electrical maintenance for Perth property managers, rentals and strata. Coordinate access, work orders, approval and an on-site written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Property Manager Plumbing & Electrical Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Plumbing and electrical maintenance for Perth property managers, rentals and strata. Coordinate access, work orders, approval and an on-site written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/property-management.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,60 +119,60 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/property-management.html#webpage",
-"url": "https://perthpipepower.com.au/property-management.html",
-"name": "Property Manager Plumbing & Electrical Perth",
-"description": "Plumbing and electrical maintenance for Perth property managers, rentals and strata. Coordinate access, work orders, approval and an on-site written quote.",
+"@id": "{{ppp:shared:business.origin:raw}}/property-management.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/property-management.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/property-management.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/property-management.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/property-management.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Property Manager Plumbing & Electrical Perth",
-"item": "https://perthpipepower.com.au/property-management.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
@@ -181,62 +181,62 @@ export const page: PageData = {
 "name": "Plumbing and electrical support for property management",
 "serviceType": "Plumbing and electrical support for property management",
 "provider": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "areaServed": {
 "@type": "City",
 "name": "Perth"
 },
-"description": "Plumbing and electrical maintenance for Perth property managers, rentals and strata. Coordinate access, work orders, approval and an on-site written quote.",
-"url": "https://perthpipepower.com.au/property-management.html",
-"@id": "https://perthpipepower.com.au/property-management.html#service",
+"description": "{{ppp:seo-value:description:raw}}",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"@id": "{{ppp:shared:business.origin:raw}}/property-management.html#service",
 "mainEntityOfPage": {
-"@id": "https://perthpipepower.com.au/property-management.html#webpage"
+"@id": "{{ppp:shared:business.origin:raw}}/property-management.html#webpage"
 }
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/property-management.html#faq",
-"url": "https://perthpipepower.com.au/property-management.html",
+"@id": "{{ppp:shared:business.origin:raw}}/property-management.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "Can an occupant approve extra repairs during the visit?",
+"name": "{{ppp:faq-value:4:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Access permission and authority to approve cost are different. Give the team the nominated decision-maker, agreed limit and escalation contact. If additional work is needed, its approval follows that instruction rather than assuming the person on site can approve it."
+"text": "{{ppp:faq-value:4:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can one request cover a plumbing and an electrical problem?",
+"name": "{{ppp:faq-value:4:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Yes. Describe each symptom and location separately and include the same property reference. The team confirms which trades and tasks are required. Coordination does not guarantee one diagnosis, one contractor approval or completion in a single visit."
+"text": "{{ppp:faq-value:4:1:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What information should a strata work order include?",
+"name": "{{ppp:faq-value:4:2:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "State the affected lot or common area, the managing contact, access arrangements and who can approve the proposed scope. Do not decide responsibility from the location alone; shared infrastructure and approval requirements need to be clarified for that property."
+"text": "{{ppp:faq-value:4:2:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can I request completion notes or an agency invoice reference?",
+"name": "{{ppp:faq-value:4:3:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Include the required records and agency reference when arranging the visit. Agree what documentation will be provided for the defined work. A reference or maintenance receipt does not by itself certify parts of the property outside that scope."
+"text": "{{ppp:faq-value:4:3:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Who should a tenant contact first about plumbing or electrical repairs?",
+"name": "{{ppp:faq-value:4:4:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "For routine repairs, report to the agent or landlord. For immediate danger, use the appropriate emergency channel first. Read the explanation."
+"text": "{{ppp:faq-value:4:4:answer:raw}}"
 }
 }
 ]
@@ -245,7 +245,7 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/property-management.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/property-management.html\",\n      \"name\": \"Property Manager Plumbing & Electrical Perth\",\n      \"description\": \"Plumbing and electrical maintenance for Perth property managers, rentals and strata. Coordinate access, work orders, approval and an on-site written quote.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/property-management.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/property-management.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Property Manager Plumbing & Electrical Perth\",\n          \"item\": \"https://perthpipepower.com.au/property-management.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"Plumbing and electrical support for property management\",\n      \"serviceType\": \"Plumbing and electrical support for property management\",\n      \"provider\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"description\": \"Plumbing and electrical maintenance for Perth property managers, rentals and strata. Coordinate access, work orders, approval and an on-site written quote.\",\n      \"url\": \"https://perthpipepower.com.au/property-management.html\",\n      \"@id\": \"https://perthpipepower.com.au/property-management.html#service\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"https://perthpipepower.com.au/property-management.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/property-management.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/property-management.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can an occupant approve extra repairs during the visit?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Access permission and authority to approve cost are different. Give the team the nominated decision-maker, agreed limit and escalation contact. If additional work is needed, its approval follows that instruction rather than assuming the person on site can approve it.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can one request cover a plumbing and an electrical problem?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes. Describe each symptom and location separately and include the same property reference. The team confirms which trades and tasks are required. Coordination does not guarantee one diagnosis, one contractor approval or completion in a single visit.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What information should a strata work order include?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"State the affected lot or common area, the managing contact, access arrangements and who can approve the proposed scope. Do not decide responsibility from the location alone; shared infrastructure and approval requirements need to be clarified for that property.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I request completion notes or an agency invoice reference?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Include the required records and agency reference when arranging the visit. Agree what documentation will be provided for the defined work. A reference or maintenance receipt does not by itself certify parts of the property outside that scope.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who should a tenant contact first about plumbing or electrical repairs?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"For routine repairs, report to the agent or landlord. For immediate danger, use the appropriate emergency channel first. Read the explanation.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/property-management.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/property-management.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/property-management.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"Plumbing and electrical support for property management\",\n      \"serviceType\": \"Plumbing and electrical support for property management\",\n      \"provider\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/property-management.html#service\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/property-management.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/property-management.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:4:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:4:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:4:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:4:1:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:4:2:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:4:2:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:4:3:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:4:3:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:4:4:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:4:4:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-3ab21fdad658",
@@ -267,12 +267,12 @@ export const page: PageData = {
 {
 "id": "section-3",
 "kind": "rich",
-"html": "\n      <section class=\"section\">\n        <div class=\"shell panel\">\n          <h2>Request Plumbing and Electrical Repairs for a Managed Property</h2>\n          <p>\n            Email maxinemaintenance.au@outlook.com or call 0413 477 667 with the\n            property address, work-order reference, occupant contact and issue\n            description.\n          </p>\n          <a class=\"button\" href=\"contact.html?service=property-management.html\">Contact Ellis Services Group</a>\n        </div>\n      </section>" as TrustedHtml
+"html": "\n      <section class=\"section\">\n        <div class=\"shell panel\">\n          <h2>Request Plumbing and Electrical Repairs for a Managed Property</h2>\n          <p>\n            Email {{ppp:shared:business.email:html}} or call {{ppp:shared:business.displayTelephone:html}} with the\n            property address, work-order reference, occupant contact and issue\n            description.\n          </p>\n          <a class=\"button\" href=\"contact.html?service=property-management.html\">Contact {{ppp:shared:business.name:html}}</a>\n        </div>\n      </section>" as TrustedHtml
 },
 {
 "id": "section-4",
 "kind": "rich",
-"html": "\n      <section class=\"rich-band\">\n        <div class=\"shell\">\n          <span class=\"eyebrow\">For property managers and occupiers</span>\n          <h2>Rental and Strata Maintenance: Scope, Access and Approval</h2>\n          <div class=\"split\">\n            <div>\n              <p>\n                Maintenance requests move more easily when the property,\n                symptom, access arrangements and approval pathway stay together.\n                This is useful whether the request begins with an occupant, a\n                building manager or a portfolio team.\n              </p>\n              <p>\n                Describe what is happening at the property and contact Ellis Services Group. We assess hot-water and water-affected electrical concerns on site and confirm the qualified trade arrangements, repair scope and quote.\n              </p>\n              <ul class=\"topic-links\">\n                <li>\n                  <a\n                    href=\"insights-tenant-property-manager-maintenance-handover.html\"\n                    >Guide: maintenance handover</a\n                  >\n                </li>\n                <li>\n                  <a href=\"news-useful-property-work-order.html\"\n                    >News: useful work orders</a\n                  >\n                </li>\n                <li><a href=\"contact.html?service=property-management.html\">Start an enquiry</a></li>\n              </ul>\n            </div>\n            <picture data-responsive-media><source type=\"image/avif\" srcset=\"perth-property-service-responsive-480.avif 480w, perth-property-service-responsive-960.avif 960w\" sizes=\"(max-width:800px) calc(100vw - 80px), 560px\"><img loading=\"lazy\" decoding=\"async\" srcset=\"perth-property-service-responsive-480.webp 480w, perth-property-service-responsive-960.webp 960w\" sizes=\"(max-width:800px) calc(100vw - 80px), 560px\"\n              class=\"content-photo\"\n              src=\"perth-property-service.png\"\n              width=\"1536\"\n              height=\"1024\"\n              alt=\"Property manager and tradesperson reviewing a maintenance request\"\n            /></picture>\n          </div>\n        </div>\n      </section>" as TrustedHtml
+"html": "\n      <section class=\"rich-band\">\n        <div class=\"shell\">\n          <span class=\"eyebrow\">For property managers and occupiers</span>\n          <h2>Rental and Strata Maintenance: Scope, Access and Approval</h2>\n          <div class=\"split\">\n            <div>\n              <p>\n                Maintenance requests move more easily when the property,\n                symptom, access arrangements and approval pathway stay together.\n                This is useful whether the request begins with an occupant, a\n                building manager or a portfolio team.\n              </p>\n              <p>\n                Describe what is happening at the property and contact {{ppp:shared:business.name:html}}. We assess hot-water and water-affected electrical concerns on site and confirm the qualified trade arrangements, repair scope and quote.\n              </p>\n              <ul class=\"topic-links\">\n                <li>\n                  <a\n                    href=\"insights-tenant-property-manager-maintenance-handover.html\"\n                    >Guide: maintenance handover</a\n                  >\n                </li>\n                <li>\n                  <a href=\"news-useful-property-work-order.html\"\n                    >News: useful work orders</a\n                  >\n                </li>\n                <li><a href=\"contact.html?service=property-management.html\">Start an enquiry</a></li>\n              </ul>\n            </div>\n            <picture data-responsive-media><source type=\"image/avif\" srcset=\"perth-property-service-responsive-480.avif 480w, perth-property-service-responsive-960.avif 960w\" sizes=\"(max-width:800px) calc(100vw - 80px), 560px\"><img loading=\"lazy\" decoding=\"async\" srcset=\"perth-property-service-responsive-480.webp 480w, perth-property-service-responsive-960.webp 960w\" sizes=\"(max-width:800px) calc(100vw - 80px), 560px\"\n              class=\"content-photo\"\n              src=\"perth-property-service.png\"\n              width=\"1536\"\n              height=\"1024\"\n              alt=\"Property manager and tradesperson reviewing a maintenance request\"\n            /></picture>\n          </div>\n        </div>\n      </section>" as TrustedHtml
 },
 {
 "id": "section-5",
@@ -304,7 +304,7 @@ export const page: PageData = {
 {
 "id": "section-6",
 "kind": "rich",
-"html": "\n    <p class=\"shell\">Photos are optional: email safely taken photos to <a href=\"mailto:maxinemaintenance.au@outlook.com\">maxinemaintenance.au@outlook.com</a>. You can contact us without photos. Do not approach a hazard or dismantle equipment to take them.</p>" as TrustedHtml
+"html": "\n    <p class=\"shell\">Photos are optional: email safely taken photos to <a href=\"mailto:{{ppp:shared:business.email:html}}\">{{ppp:shared:business.email:html}}</a>. You can contact us without photos. Do not approach a hazard or dismantle equipment to take them.</p>" as TrustedHtml
 },
 {
 "id": "section-7",
@@ -482,7 +482,7 @@ export const page: PageData = {
 "chrome:footer-beb0a0c885b2:5": "\n        ",
 "chrome:footer-beb0a0c885b2:6": "\n          ",
 "chrome:footer-beb0a0c885b2:7": "\n          ",
-"chrome:footer-beb0a0c885b2:8": "\n            0413 477 667",
+"chrome:footer-beb0a0c885b2:8": "\n            {{ppp:shared:business.displayTelephone:raw}}",
 "chrome:footer-beb0a0c885b2:9": "140 St\n            Georges Terrace, Perth WA 6000\n          ",
 "chrome:footer-beb0a0c885b2:10": "\n        ",
 "chrome:footer-beb0a0c885b2:11": "\n        ",

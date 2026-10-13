@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "news-keeping-access-information-together.html",
 "kind": "article",
 "seo": {
 "title": "Repair Visit Access Checklist | Ellis Perth",
 "description": "Keep repair access details, occupant contacts and changed arrangements with the work request. Practical privacy-aware preparation for Perth maintenance visits.",
-"canonical": "https://perthpipepower.com.au/news-keeping-access-information-together.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/news-keeping-access-information-together.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Repair Visit Access Checklist | Ellis Perth"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "Keep repair access details, occupant contacts and changed arrangements with the work request. Practical privacy-aware preparation for Perth maintenance visits."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Repair Visit Access Checklist | Ellis Perth"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Keep repair access details, occupant contacts and changed arrangements with the work request. Practical privacy-aware preparation for Perth maintenance visits."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/news-keeping-access-information-together.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,107 +119,107 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/news-keeping-access-information-together.html#webpage",
-"url": "https://perthpipepower.com.au/news-keeping-access-information-together.html",
-"name": "Keeping access information with the repair request",
-"description": "Keep repair access details, occupant contacts and changed arrangements with the work request. Practical privacy-aware preparation for Perth maintenance visits.",
+"@id": "{{ppp:shared:business.origin:raw}}/news-keeping-access-information-together.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/news-keeping-access-information-together.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/news-keeping-access-information-together.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/news-keeping-access-information-together.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/news-keeping-access-information-together.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
 "name": "News",
-"item": "https://perthpipepower.com.au/news.html"
+"item": "{{ppp:shared:business.origin:raw}}/news.html"
 },
 {
 "@type": "ListItem",
 "position": 3,
-"name": "Keeping access information with the repair request",
-"item": "https://perthpipepower.com.au/news-keeping-access-information-together.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "Article",
-"headline": "Keeping access information with the repair request",
-"description": "Keep repair access details, occupant contacts and changed arrangements with the work request. Practical privacy-aware preparation for Perth maintenance visits.",
-"url": "https://perthpipepower.com.au/news-keeping-access-information-together.html",
+"headline": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "inLanguage": "en-AU",
 "author": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
-"@id": "https://perthpipepower.com.au/news-keeping-access-information-together.html#article",
+"@id": "{{ppp:shared:business.origin:raw}}/news-keeping-access-information-together.html#article",
 "mainEntityOfPage": {
-"@id": "https://perthpipepower.com.au/news-keeping-access-information-together.html#webpage"
+"@id": "{{ppp:shared:business.origin:raw}}/news-keeping-access-information-together.html#webpage"
 },
 "dateModified": "2026-10-10",
-"abstract": "Confirm access to the equipment as well as entry to the property. Provide the current on-site contact, agreed entry arrangements and any restricted areas. Keep changes with the booking record. Share sensitive access information through an agreed private channel, and identify the separate contact authorised to approve repair costs."
+"abstract": "{{ppp:summary-value:raw}}"
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/news-keeping-access-information-together.html#faq",
-"url": "https://perthpipepower.com.au/news-keeping-access-information-together.html",
+"@id": "{{ppp:shared:business.origin:raw}}/news-keeping-access-information-together.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "What if the occupant cannot attend the agreed visit?",
+"name": "{{ppp:faq-value:10:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Contact the team to update access arrangements rather than assuming the original instruction remains workable. Confirm who will provide entry and whether access to the actual equipment is available."
+"text": "{{ppp:faq-value:10:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Should I put alarm codes or keys in the enquiry form?",
+"name": "{{ppp:faq-value:10:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Do not include unnecessary sensitive entry information in a general enquiry. Confirm with the team how any required private access details will be shared for the agreed visit."
+"text": "{{ppp:faq-value:10:1:answer:raw}}"
 }
 }
 ]
@@ -228,7 +228,7 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html\",\n      \"name\": \"Keeping access information with the repair request\",\n      \"description\": \"Keep repair access details, occupant contacts and changed arrangements with the work request. Practical privacy-aware preparation for Perth maintenance visits.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"News\",\n          \"item\": \"https://perthpipepower.com.au/news.html\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Keeping access information with the repair request\",\n          \"item\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"Keeping access information with the repair request\",\n      \"description\": \"Keep repair access details, occupant contacts and changed arrangements with the work request. Practical privacy-aware preparation for Perth maintenance visits.\",\n      \"url\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html\",\n      \"inLanguage\": \"en-AU\",\n      \"author\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"@id\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html#article\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html#webpage\"\n      },\n      \"dateModified\": \"2026-10-10\",\n      \"abstract\": \"Confirm access to the equipment as well as entry to the property. Provide the current on-site contact, agreed entry arrangements and any restricted areas. Keep changes with the booking record. Share sensitive access information through an agreed private channel, and identify the separate contact authorised to approve repair costs.\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/news-keeping-access-information-together.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What if the occupant cannot attend the agreed visit?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Contact the team to update access arrangements rather than assuming the original instruction remains workable. Confirm who will provide entry and whether access to the actual equipment is available.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Should I put alarm codes or keys in the enquiry form?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Do not include unnecessary sensitive entry information in a general enquiry. Confirm with the team how any required private access details will be shared for the agreed visit.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/news-keeping-access-information-together.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/news-keeping-access-information-together.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/news-keeping-access-information-together.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"News\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/news.html\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"author\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"@id\": \"{{ppp:shared:business.origin:json}}/news-keeping-access-information-together.html#article\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/news-keeping-access-information-together.html#webpage\"\n      },\n      \"dateModified\": \"2026-10-10\",\n      \"abstract\": \"{{ppp:summary-value:json}}\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/news-keeping-access-information-together.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:10:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:10:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:10:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:10:1:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-bcfe65294960",
@@ -250,7 +250,7 @@ export const page: PageData = {
 {
 "id": "section-2",
 "kind": "rich",
-"html": "<p class=\"article-meta\" data-editorial-meta>By <a href=\"about.html\">Ellis Services Group</a> · Updated <time datetime=\"2026-10-10\">10 October 2026</time></p>" as TrustedHtml
+"html": "<p class=\"article-meta\" data-editorial-meta>By <a href=\"about.html\">{{ppp:shared:business.name:html}}</a> · Updated <time datetime=\"2026-10-10\">10 October 2026</time></p>" as TrustedHtml
 },
 {
 "id": "section-3",
@@ -285,7 +285,7 @@ export const page: PageData = {
 {
 "id": "section-9",
 "kind": "rich",
-"html": "<div data-seo-guide-expansion><h2 id=\"guide-2\">Confirm entry to the property and to the equipment</h2><p>Access to the front door is not always access to the installation. A hot-water unit may be behind a locked gate, a fixture may be inside an occupied room and a shared equipment area may need building-management coordination. Tell the service team which relevant spaces can be reached and who will provide entry.</p><p>For apartments, include the unit and building reference, concierge or lift arrangements and practical parking instructions. For other premises, provide gate or site-contact arrangements. Do not enter a hazardous or restricted area to check access; advise us of the restriction so the visit can be planned.</p><h2 id=\"guide-3\">Use a named contact and update changed arrangements</h2><p>Identify the person who can answer the door or coordinate the visit, and who should be contacted if the agreed entry arrangements change. Keep the current access window and instructions with the same booking record rather than scattering updates across unrelated messages.</p><p>Access permission and repair-cost approval are separate matters. An occupant who provides entry may not be authorised to approve extra work. Use our <a href=\"news-useful-property-work-order.html\">work-order approval guide</a> to record the decision-maker alongside the repair scope.</p><h2 id=\"guide-4\">Protect private information while arranging the repair</h2><p>Share only the personal and access information necessary for the service visit. Do not publish keys, entry codes, occupant schedules or identity documents on a public page or photograph. Ask the service contact which private channel is appropriate for sensitive entry instructions.</p><p>You can begin with the address and fault description even if access is still being arranged. Our <a href=\"property-management.html\">Perth property maintenance service</a> coordinates the relevant contact and approved scope. For a <a href=\"hot-water-problems-perth.html\">hot-water repair</a> or <a href=\"fixtures-appliances-perth.html\">fixture connection</a>, mention the equipment location as well as the property entry arrangements.</p><p>Photos are optional: email safely taken photos to <a href=\"mailto:maxinemaintenance.au@outlook.com\">maxinemaintenance.au@outlook.com</a>. You can contact us without photos.</p><p><a class=\"button\" href=\"contact.html\">Arrange an on-site assessment &amp; written quote</a></p></div>" as TrustedHtml
+"html": "<div data-seo-guide-expansion><h2 id=\"guide-2\">Confirm entry to the property and to the equipment</h2><p>Access to the front door is not always access to the installation. A hot-water unit may be behind a locked gate, a fixture may be inside an occupied room and a shared equipment area may need building-management coordination. Tell the service team which relevant spaces can be reached and who will provide entry.</p><p>For apartments, include the unit and building reference, concierge or lift arrangements and practical parking instructions. For other premises, provide gate or site-contact arrangements. Do not enter a hazardous or restricted area to check access; advise us of the restriction so the visit can be planned.</p><h2 id=\"guide-3\">Use a named contact and update changed arrangements</h2><p>Identify the person who can answer the door or coordinate the visit, and who should be contacted if the agreed entry arrangements change. Keep the current access window and instructions with the same booking record rather than scattering updates across unrelated messages.</p><p>Access permission and repair-cost approval are separate matters. An occupant who provides entry may not be authorised to approve extra work. Use our <a href=\"news-useful-property-work-order.html\">work-order approval guide</a> to record the decision-maker alongside the repair scope.</p><h2 id=\"guide-4\">Protect private information while arranging the repair</h2><p>Share only the personal and access information necessary for the service visit. Do not publish keys, entry codes, occupant schedules or identity documents on a public page or photograph. Ask the service contact which private channel is appropriate for sensitive entry instructions.</p><p>You can begin with the address and fault description even if access is still being arranged. Our <a href=\"property-management.html\">Perth property maintenance service</a> coordinates the relevant contact and approved scope. For a <a href=\"hot-water-problems-perth.html\">hot-water repair</a> or <a href=\"fixtures-appliances-perth.html\">fixture connection</a>, mention the equipment location as well as the property entry arrangements.</p><p>Photos are optional: email safely taken photos to <a href=\"mailto:{{ppp:shared:business.email:html}}\">{{ppp:shared:business.email:html}}</a>. You can contact us without photos.</p><p><a class=\"button\" href=\"contact.html\">Arrange an on-site assessment &amp; written quote</a></p></div>" as TrustedHtml
 },
 {
 "id": "section-10",

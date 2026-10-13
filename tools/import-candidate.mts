@@ -1,5 +1,5 @@
 /** Explicit, one-time migration only. Emits apply_patch patches; never used by load/build. */
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import { parse, parseFragment, type DefaultTreeAdapterTypes as T } from 'parse5';
@@ -200,5 +200,6 @@ for(const name of ['business-entity','confirmed-content-expansion','editorial-su
 if(process.argv[2]==='--list')process.stdout.write(JSON.stringify(Object.keys(modules)));
 else if(process.argv[2]==='--stats')process.stdout.write(JSON.stringify({pages:pages.length,layouts:Object.keys(sharedLayouts).length,headers:Object.keys(headers).length,footers:Object.keys(footers).length,slots:Object.values(headers).concat(Object.values(footers)).map(t=>Object.keys(t.slots).length)}));
 else if(process.argv[2]==='--emit-patch'&&modules[process.argv[3]]){
+  if(existsSync(resolve(source,process.argv[3])))throw Error('Initial import is complete. Refusing to replace canonical content or compatibility views; edit the typed sources directly.');
   const file=process.argv[3];process.stdout.write(`*** Begin Patch\n*** Add File: ${resolve(source,file).replace(/\\/g,'/')}\n${modules[file].split('\n').filter((line,i,lines)=>i<lines.length-1||line).map(line=>'+'+line).join('\n')}\n*** End Patch`);
 }else throw Error('Use --list, --stats, or --emit-patch <exact target>');

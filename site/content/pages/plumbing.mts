@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "plumbing.html",
 "kind": "serviceHub",
 "seo": {
 "title": "Plumber Perth | Plumbing Repairs & Installation | Ellis",
 "description": "Book a Perth plumber for drains, leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work and provides a written quote.",
-"canonical": "https://perthpipepower.com.au/plumbing.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/plumbing.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Plumber Perth | Plumbing Repairs & Installation | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "Book a Perth plumber for drains, leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work and provides a written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Plumber Perth | Plumbing Repairs & Installation | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Book a Perth plumber for drains, leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work and provides a written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/plumbing.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,124 +119,124 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/plumbing.html#webpage",
-"url": "https://perthpipepower.com.au/plumbing.html",
-"name": "Plumber Perth — Plumbing Repairs & Installation",
-"description": "Book a Perth plumber for drains, leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work and provides a written quote.",
+"@id": "{{ppp:shared:business.origin:raw}}/plumbing.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/plumbing.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/plumbing.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/plumbing.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/plumbing.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Plumber Perth — Plumbing Repairs & Installation",
-"item": "https://perthpipepower.com.au/plumbing.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "Service",
-"name": "Plumber Perth — Plumbing Repairs & Installation",
+"name": "{{ppp:h1-value:raw}}",
 "serviceType": "Plumbing repairs and maintenance in Perth",
 "provider": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "areaServed": {
 "@type": "City",
 "name": "Perth"
 },
-"description": "Book a Perth plumber for drains, leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work and provides a written quote.",
-"url": "https://perthpipepower.com.au/plumbing.html",
-"@id": "https://perthpipepower.com.au/plumbing.html#service",
+"description": "{{ppp:seo-value:description:raw}}",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"@id": "{{ppp:shared:business.origin:raw}}/plumbing.html#service",
 "mainEntityOfPage": {
-"@id": "https://perthpipepower.com.au/plumbing.html#webpage"
+"@id": "{{ppp:shared:business.origin:raw}}/plumbing.html#webpage"
 }
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/plumbing.html#faq",
-"url": "https://perthpipepower.com.au/plumbing.html",
+"@id": "{{ppp:shared:business.origin:raw}}/plumbing.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "What does a plumbing quote include?",
+"name": "{{ppp:faq-value:5:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "The written quote identifies the agreed investigation or repair, included materials and relevant access work. The published AUD ranges are guides for standard-hours, standard-scope work, not a fixed quote for an unseen property. Ask which additional work would require further approval."
+"text": "{{ppp:faq-value:5:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can you assess a shower leak or low water pressure?",
+"name": "{{ppp:faq-value:5:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Describe whether the leak appears during use and which outlets have changed. The assessment separates a plumbing fault from other causes, such as waterproofing or a supply issue. Specialist or additional work is confirmed separately, not assumed from a symptom."
+"text": "{{ppp:faq-value:5:1:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can you attend immediately or outside standard hours?",
+"name": "{{ppp:faq-value:5:2:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency fees follow the quoted work plan. Utility faults and immediate danger use the appropriate official channel first."
+"text": "{{ppp:faq-value:5:2:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What are your routine hours and emergency arrangements?",
+"name": "{{ppp:faq-value:5:3:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry."
+"text": "{{ppp:faq-value:5:3:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What jobs should I call a licensed plumber for?",
+"name": "{{ppp:faq-value:5:4:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Use appropriately authorised plumbing trades for regulated fixed-water and drainage work; confirm the specific task and documentation. Read the explanation."
+"text": "{{ppp:faq-value:5:4:answer:raw}}"
 }
 }
 ]
@@ -245,14 +245,14 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/plumbing.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/plumbing.html\",\n      \"name\": \"Plumber Perth — Plumbing Repairs & Installation\",\n      \"description\": \"Book a Perth plumber for drains, leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work and provides a written quote.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/plumbing.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/plumbing.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Plumber Perth — Plumbing Repairs & Installation\",\n          \"item\": \"https://perthpipepower.com.au/plumbing.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"Plumber Perth — Plumbing Repairs & Installation\",\n      \"serviceType\": \"Plumbing repairs and maintenance in Perth\",\n      \"provider\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"description\": \"Book a Perth plumber for drains, leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work and provides a written quote.\",\n      \"url\": \"https://perthpipepower.com.au/plumbing.html\",\n      \"@id\": \"https://perthpipepower.com.au/plumbing.html#service\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"https://perthpipepower.com.au/plumbing.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/plumbing.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/plumbing.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What does a plumbing quote include?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The written quote identifies the agreed investigation or repair, included materials and relevant access work. The published AUD ranges are guides for standard-hours, standard-scope work, not a fixed quote for an unseen property. Ask which additional work would require further approval.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can you assess a shower leak or low water pressure?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Describe whether the leak appears during use and which outlets have changed. The assessment separates a plumbing fault from other causes, such as waterproofing or a supply issue. Specialist or additional work is confirmed separately, not assumed from a symptom.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can you attend immediately or outside standard hours?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency fees follow the quoted work plan. Utility faults and immediate danger use the appropriate official channel first.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What are your routine hours and emergency arrangements?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What jobs should I call a licensed plumber for?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Use appropriately authorised plumbing trades for regulated fixed-water and drainage work; confirm the specific task and documentation. Read the explanation.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/plumbing.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/plumbing.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/plumbing.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"serviceType\": \"Plumbing repairs and maintenance in Perth\",\n      \"provider\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/plumbing.html#service\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/plumbing.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/plumbing.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:5:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:5:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:5:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:5:1:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:5:2:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:5:2:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:5:3:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:5:3:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:5:4:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:5:4:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-d63e70cd6bef",
 "mainAttributes": {
 "id": "main"
 },
-"hero": "\n      <section class=\"page-hero\">\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Perth plumbing</span>\n          <h1>Plumber Perth — Plumbing Repairs &amp; Installation</h1><aside class=\"intent-safety\" data-intent-safety><p><strong>No water across the property?</strong> Check <a href=\"https://www.watercorporation.com.au/About-us/Contact-us\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation supply and outage reporting</a> before assuming a private plumbing fault. Report an unlisted water fault or outage to <a href=\"tel:131375\">13 13 75</a>. Utility network work is not a private repair booking.</p></aside>\n<p>Ellis Services Group provides plumbing repairs and installation across Perth, including blocked drains, water leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work, explains the repair or installation plan and provides a written quote before agreed work proceeds.</p>\n          <a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a>\n        </div>\n      </section>" as TrustedHtml,
+"hero": "\n      <section class=\"page-hero\">\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Perth plumbing</span>\n          <h1>Plumber Perth — Plumbing Repairs &amp; Installation</h1><aside class=\"intent-safety\" data-intent-safety><p><strong>No water across the property?</strong> Check <a href=\"https://www.watercorporation.com.au/About-us/Contact-us\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation supply and outage reporting</a> before assuming a private plumbing fault. Report an unlisted water fault or outage to <a href=\"tel:131375\">13 13 75</a>. Utility network work is not a private repair booking.</p></aside>\n<p>{{ppp:shared:business.name:html}} provides plumbing repairs and installation across Perth, including blocked drains, water leaks, hot water, taps, toilets and fixture connections. Our local team assesses the work, explains the repair or installation plan and provides a written quote before agreed work proceeds.</p>\n          <a class=\"button\" href=\"tel:{{ppp:shared:business.localTelephone:html}}\">Call {{ppp:shared:business.displayTelephone:html}}</a>\n        </div>\n      </section>" as TrustedHtml,
 "sections": [
 {
 "id": "section-1",
@@ -294,11 +294,11 @@ export const page: PageData = {
 },
 {
 "question": "Can you attend immediately or outside standard hours?",
-"answer": "<p>Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency fees follow the quoted work plan. Utility faults and immediate danger use the appropriate official channel first.</p>" as TrustedHtml
+"answer": "<p>{{ppp:shared:hours.text:html}} Emergency fees follow the quoted work plan. Utility faults and immediate danger use the appropriate official channel first.</p>" as TrustedHtml
 },
 {
 "question": "What are your routine hours and emergency arrangements?",
-"answer": "<p>Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.</p>" as TrustedHtml
+"answer": "<p>{{ppp:shared:hours.text:html}} Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.</p>" as TrustedHtml
 },
 {
 "question": "What jobs should I call a licensed plumber for?",
@@ -309,7 +309,7 @@ export const page: PageData = {
 {
 "id": "section-7",
 "kind": "rich",
-"html": "\n    <p class=\"shell\">Photos are optional: email safely taken photos to <a href=\"mailto:maxinemaintenance.au@outlook.com\">maxinemaintenance.au@outlook.com</a>. You can contact us without photos. Do not approach a hazard or dismantle equipment to take them.</p>" as TrustedHtml
+"html": "\n    <p class=\"shell\">Photos are optional: email safely taken photos to <a href=\"mailto:{{ppp:shared:business.email:html}}\">{{ppp:shared:business.email:html}}</a>. You can contact us without photos. Do not approach a hazard or dismantle equipment to take them.</p>" as TrustedHtml
 },
 {
 "id": "section-8",
@@ -492,7 +492,7 @@ export const page: PageData = {
 "chrome:footer-beb0a0c885b2:5": "\n        ",
 "chrome:footer-beb0a0c885b2:6": "\n          ",
 "chrome:footer-beb0a0c885b2:7": "\n          ",
-"chrome:footer-beb0a0c885b2:8": "\n            0413 477 667",
+"chrome:footer-beb0a0c885b2:8": "\n            {{ppp:shared:business.displayTelephone:raw}}",
 "chrome:footer-beb0a0c885b2:9": "140 St\n            Georges Terrace, Perth WA 6000\n          ",
 "chrome:footer-beb0a0c885b2:10": "\n        ",
 "chrome:footer-beb0a0c885b2:11": "\n        ",

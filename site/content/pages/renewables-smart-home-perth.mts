@@ -1,28 +1,28 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "renewables-smart-home-perth.html",
 "kind": "service",
 "seo": {
 "title": "Smart Home & Energy Electrical Perth | Ellis",
 "description": "Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes.",
-"canonical": "https://perthpipepower.com.au/renewables-smart-home-perth.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/renewables-smart-home-perth.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Smart Home & Energy Electrical Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/renewables-smart-home-perth.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -41,26 +41,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -69,13 +69,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -84,148 +84,148 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/renewables-smart-home-perth.html#webpage",
-"url": "https://perthpipepower.com.au/renewables-smart-home-perth.html",
-"name": "Smart Home & Energy Electrical Services in Perth",
-"description": "Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes.",
+"@id": "{{ppp:shared:business.origin:raw}}/renewables-smart-home-perth.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/renewables-smart-home-perth.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/renewables-smart-home-perth.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/renewables-smart-home-perth.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/renewables-smart-home-perth.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Smart Home & Energy Electrical Services in Perth",
-"item": "https://perthpipepower.com.au/renewables-smart-home-perth.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "Service",
-"name": "Smart Home & Energy Electrical Services in Perth",
-"description": "Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes.",
-"serviceType": "Smart Home & Energy Electrical Services in Perth",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
+"serviceType": "{{ppp:h1-value:raw}}",
 "areaServed": {
 "@type": "City",
 "name": "Perth"
 },
-"@id": "https://perthpipepower.com.au/renewables-smart-home-perth.html#service",
+"@id": "{{ppp:shared:business.origin:raw}}/renewables-smart-home-perth.html#service",
 "provider": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
-"url": "https://perthpipepower.com.au/renewables-smart-home-perth.html",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntityOfPage": {
-"@id": "https://perthpipepower.com.au/renewables-smart-home-perth.html#webpage"
+"@id": "{{ppp:shared:business.origin:raw}}/renewables-smart-home-perth.html#webpage"
 }
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/renewables-smart-home-perth.html#faq",
-"url": "https://perthpipepower.com.au/renewables-smart-home-perth.html",
+"@id": "{{ppp:shared:business.origin:raw}}/renewables-smart-home-perth.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "Can you work with every smart-home brand or protocol?",
+"name": "{{ppp:faq-value:2:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No universal compatibility is assumed. Give the product details and existing system so the proposed configuration and electrical scope can be assessed before acceptance."
+"text": "{{ppp:faq-value:2:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Does this page confirm solar, battery or EV-charger installation?",
+"name": "{{ppp:faq-value:2:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. Those products can require specialist capability and a separate agreed scope. Ask about the specific equipment and work; this general enquiry is not confirmation that every energy system can be installed or repaired."
+"text": "{{ppp:faq-value:2:1:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Do I need detailed installation specifications before contacting you?",
+"name": "{{ppp:faq-value:2:2:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. Tell us the fixture, equipment or upgrade you need and your Perth suburb. We assess the site and connections, confirm the requirements and qualified work arrangements and provide the written quote. Additional access is agreed with you first."
+"text": "{{ppp:faq-value:2:2:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can I send photos?",
+"name": "{{ppp:faq-value:2:3:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo."
+"text": "{{ppp:faq-value:2:3:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What should I include in a smart-home electrical enquiry?",
+"name": "{{ppp:faq-value:2:4:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Include the property address, the equipment or control you are considering, the rooms affected and the outcome you want to achieve."
+"text": "{{ppp:faq-value:2:4:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can existing energy equipment be assessed?",
+"name": "{{ppp:faq-value:2:5:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Describe the equipment and the behaviour you have noticed. Leave covers and electrical connections in place until the work can be assessed safely."
+"text": "{{ppp:faq-value:2:5:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "How is smart-home or energy electrical work priced?",
+"name": "{{ppp:faq-value:2:6:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Pricing is based on the agreed electrical scope, equipment requirements, property access, materials and any circuit work confirmed through the enquiry or assessment process."
+"text": "{{ppp:faq-value:2:6:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can you confirm compatibility before I approve the work?",
+"name": "{{ppp:faq-value:2:7:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Compatibility forms part of the installation assessment. We review the selected equipment and existing setup, then identify the proposed functions and electrical tasks in the written scope rather than promising universal integration."
+"text": "{{ppp:faq-value:2:7:answer:raw}}"
 }
 }
 ]
@@ -234,7 +234,7 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html\",\n      \"name\": \"Smart Home & Energy Electrical Services in Perth\",\n      \"description\": \"Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Smart Home & Energy Electrical Services in Perth\",\n          \"item\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"Smart Home & Energy Electrical Services in Perth\",\n      \"description\": \"Smart home and energy electrical services in Perth. Discuss lighting controls, automation and equipment connections, with assessed scope and written quotes.\",\n      \"serviceType\": \"Smart Home & Energy Electrical Services in Perth\",\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"@id\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html#service\",\n      \"provider\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"url\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/renewables-smart-home-perth.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can you work with every smart-home brand or protocol?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No universal compatibility is assumed. Give the product details and existing system so the proposed configuration and electrical scope can be assessed before acceptance.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Does this page confirm solar, battery or EV-charger installation?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. Those products can require specialist capability and a separate agreed scope. Ask about the specific equipment and work; this general enquiry is not confirmation that every energy system can be installed or repaired.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Do I need detailed installation specifications before contacting you?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. Tell us the fixture, equipment or upgrade you need and your Perth suburb. We assess the site and connections, confirm the requirements and qualified work arrangements and provide the written quote. Additional access is agreed with you first.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I send photos?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What should I include in a smart-home electrical enquiry?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Include the property address, the equipment or control you are considering, the rooms affected and the outcome you want to achieve.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can existing energy equipment be assessed?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Describe the equipment and the behaviour you have noticed. Leave covers and electrical connections in place until the work can be assessed safely.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How is smart-home or energy electrical work priced?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Pricing is based on the agreed electrical scope, equipment requirements, property access, materials and any circuit work confirmed through the enquiry or assessment process.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can you confirm compatibility before I approve the work?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Compatibility forms part of the installation assessment. We review the selected equipment and existing setup, then identify the proposed functions and electrical tasks in the written scope rather than promising universal integration.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/renewables-smart-home-perth.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/renewables-smart-home-perth.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/renewables-smart-home-perth.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"serviceType\": \"{{ppp:h1-value:json}}\",\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"@id\": \"{{ppp:shared:business.origin:json}}/renewables-smart-home-perth.html#service\",\n      \"provider\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/renewables-smart-home-perth.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/renewables-smart-home-perth.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:1:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:2:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:2:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:3:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:3:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:4:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:4:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:5:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:5:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:6:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:6:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:7:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:7:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-74308fc29fff",
@@ -242,12 +242,12 @@ export const page: PageData = {
 "id": "main",
 "data-commercial-service": ""
 },
-"hero": "\n<section class=\"page-hero\">\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Perth homes &amp; managed properties</span>\n          <h1>Smart Home &amp; Energy Electrical Services in Perth</h1>\n<p>Arrange smart-home and energy electrical services in Perth with Ellis Services Group. Our local electrical team assesses smart lighting, home-control upgrades and electrical work associated with energy equipment. We define the equipment, compatibility and installation requirements before providing a written quote, so the proposed upgrade has a clear scope.</p>\n        <a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a> <a class=\"button service-book-button\" href=\"contact.html?service=renewables-smart-home-perth.html\">Book smart-home and energy electrical work</a></div>\n      </section>" as TrustedHtml,
+"hero": "\n<section class=\"page-hero\">\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Perth homes &amp; managed properties</span>\n          <h1>Smart Home &amp; Energy Electrical Services in Perth</h1>\n<p>Arrange smart-home and energy electrical services in Perth with {{ppp:shared:business.name:html}}. Our local electrical team assesses smart lighting, home-control upgrades and electrical work associated with energy equipment. We define the equipment, compatibility and installation requirements before providing a written quote, so the proposed upgrade has a clear scope.</p>\n        <a class=\"button\" href=\"tel:{{ppp:shared:business.localTelephone:html}}\">Call {{ppp:shared:business.displayTelephone:html}}</a> <a class=\"button service-book-button\" href=\"contact.html?service=renewables-smart-home-perth.html\">Book smart-home and energy electrical work</a></div>\n      </section>" as TrustedHtml,
 "sections": [
 {
 "id": "section-1",
 "kind": "rich",
-"html": "\n<section class=\"section service-editorial\"><div class=\"shell service-reading\"><nav class=\"service-jump-links\" aria-label=\"On this service page\"><a href=\"#service-work\">Services</a><a href=\"#service-method\">Repair &amp; installation</a><a href=\"#service-quote\">Costs &amp; quote</a><a href=\"#service-faq\">FAQs</a><a href=\"#service-booking\">Book a visit</a></nav><aside class=\"service-answer\" data-service-answer><h2>What to do next</h2><p>Describe the control, lighting or equipment connection you want assessed, along with product information if available. Do not open covers or touch wiring to inspect the existing installation. We check the proposed scope, compatibility, access and connection requirements before quoting. The enquiry does not confirm that every energy product can be installed or promise a saving. For managed premises, identify the person who can approve the proposed electrical work.</p><p><a href=\"insights-tenant-property-manager-maintenance-handover.html\">Keep equipment requests and work approval together</a>. <a href=\"contact.html?service=renewables-smart-home-perth.html\">Request an assessment and written quote</a>.</p></aside><div id=\"service-work\" class=\"service-editorial-part\"><h2>Smart-home electrical installations and upgrade assessments</h2><h3>Smart lighting and electrical controls</h3><p>Smart switches and lighting controls need to be considered with the existing fittings, wiring and intended operation. Tell us what you want to control, which rooms are involved and any selected equipment. Our assessment establishes the installation requirements. If a current circuit keeps tripping, book <a href=\"safety-switch-tripping-perth.html\">safety-switch and RCD repairs</a> before treating it as an upgrade request.</p>\n<h3>Home automation and linked equipment</h3><p>An upgrade can involve both the visible control and the equipment it needs to operate. We review product specifications, existing connections and the proposed integration. A working control panel alone does not establish that every connected function has been included; the quote identifies the actual equipment and functions within the agreed job.</p>\n<h3>Electrical work associated with energy equipment</h3><p>For work involving existing energy equipment or a proposed upgrade, send the model information and the result you need. We assess the relevant electrical requirements and define the proposed scope. Equipment supply, manufacturer servicing, commissioning and specialised installation approvals are not assumed to be included in a general electrical connection request.</p><figure class=\"service-editorial-figure\"><img\n            class=\"service-editorial-image\"\n            src=\"renewables-smart-home-service.png\"\n            width=\"1672\"\n            height=\"941\"\n            alt=\"Ellis Services Group electrician configuring smart-home and energy equipment\"\n            loading=\"lazy\"\n            decoding=\"async\" srcset=\"renewables-smart-home-service-480.webp 480w, renewables-smart-home-service-800.webp 800w, renewables-smart-home-service-1200.webp 1200w\" sizes=\"(max-width:700px) 100vw, (max-width:1000px) 50vw, 380px\"></figure></div>\n<div id=\"service-method\" class=\"service-editorial-part\"><h2>How smart-home and energy work is scoped and quoted</h2><p>We begin with the property, existing installation and equipment specifications. Our electrician assesses compatibility, access and the required connections, cable routes or circuit work. The written quote describes those tasks so you can distinguish the electrical installation from product supply, software configuration or other services that are not included.</p>\n<h3>A defined upgrade rather than an assumed package</h3><p>Tell us whether you want to improve a current setup or install selected new equipment. We discuss the requirements for the proposed controls and the existing property before finalising the scope. We do not promise manufacturer compatibility, energy savings or remote-control functions before the installation and equipment have been assessed.</p>\n<p>For approved work, we complete and check the relevant electrical installation and explain the functions included in the scope. Product-specific instructions remain important for ongoing use. If the request is simply a new light or outlet, our <a href=\"lighting-power-points-perth.html\">lighting and power-point services</a> offer a focused route; existing loss-of-power issues belong with <a href=\"power-faults-perth.html\">electrical fault finding</a>.</p></div><p class=\"service-trade-note\">Our Perth plumbing and electrical work is carried out by appropriately licensed trades. Licence details are available on request.</p><p class=\"service-safety\"><strong>Safety:</strong> Do not open electrical or energy equipment, alter wiring or handle damaged components to gather information. For immediate danger, Call 000.</p></div></section>" as TrustedHtml
+"html": "\n<section class=\"section service-editorial\"><div class=\"shell service-reading\"><nav class=\"service-jump-links\" aria-label=\"On this service page\"><a href=\"#service-work\">Services</a><a href=\"#service-method\">Repair &amp; installation</a><a href=\"#service-quote\">Costs &amp; quote</a><a href=\"#service-faq\">FAQs</a><a href=\"#service-booking\">Book a visit</a></nav><aside class=\"service-answer\" data-service-answer><h2>What to do next</h2><p>Describe the control, lighting or equipment connection you want assessed, along with product information if available. Do not open covers or touch wiring to inspect the existing installation. We check the proposed scope, compatibility, access and connection requirements before quoting. The enquiry does not confirm that every energy product can be installed or promise a saving. For managed premises, identify the person who can approve the proposed electrical work.</p><p><a href=\"insights-tenant-property-manager-maintenance-handover.html\">Keep equipment requests and work approval together</a>. <a href=\"contact.html?service=renewables-smart-home-perth.html\">Request an assessment and written quote</a>.</p></aside><div id=\"service-work\" class=\"service-editorial-part\"><h2>Smart-home electrical installations and upgrade assessments</h2><h3>Smart lighting and electrical controls</h3><p>Smart switches and lighting controls need to be considered with the existing fittings, wiring and intended operation. Tell us what you want to control, which rooms are involved and any selected equipment. Our assessment establishes the installation requirements. If a current circuit keeps tripping, book <a href=\"safety-switch-tripping-perth.html\">safety-switch and RCD repairs</a> before treating it as an upgrade request.</p>\n<h3>Home automation and linked equipment</h3><p>An upgrade can involve both the visible control and the equipment it needs to operate. We review product specifications, existing connections and the proposed integration. A working control panel alone does not establish that every connected function has been included; the quote identifies the actual equipment and functions within the agreed job.</p>\n<h3>Electrical work associated with energy equipment</h3><p>For work involving existing energy equipment or a proposed upgrade, send the model information and the result you need. We assess the relevant electrical requirements and define the proposed scope. Equipment supply, manufacturer servicing, commissioning and specialised installation approvals are not assumed to be included in a general electrical connection request.</p><figure class=\"service-editorial-figure\"><img\n            class=\"service-editorial-image\"\n            src=\"renewables-smart-home-service.png\"\n            width=\"1672\"\n            height=\"941\"\n            alt=\"{{ppp:shared:business.name:html}} electrician configuring smart-home and energy equipment\"\n            loading=\"lazy\"\n            decoding=\"async\" srcset=\"renewables-smart-home-service-480.webp 480w, renewables-smart-home-service-800.webp 800w, renewables-smart-home-service-1200.webp 1200w\" sizes=\"(max-width:700px) 100vw, (max-width:1000px) 50vw, 380px\"></figure></div>\n<div id=\"service-method\" class=\"service-editorial-part\"><h2>How smart-home and energy work is scoped and quoted</h2><p>We begin with the property, existing installation and equipment specifications. Our electrician assesses compatibility, access and the required connections, cable routes or circuit work. The written quote describes those tasks so you can distinguish the electrical installation from product supply, software configuration or other services that are not included.</p>\n<h3>A defined upgrade rather than an assumed package</h3><p>Tell us whether you want to improve a current setup or install selected new equipment. We discuss the requirements for the proposed controls and the existing property before finalising the scope. We do not promise manufacturer compatibility, energy savings or remote-control functions before the installation and equipment have been assessed.</p>\n<p>For approved work, we complete and check the relevant electrical installation and explain the functions included in the scope. Product-specific instructions remain important for ongoing use. If the request is simply a new light or outlet, our <a href=\"lighting-power-points-perth.html\">lighting and power-point services</a> offer a focused route; existing loss-of-power issues belong with <a href=\"power-faults-perth.html\">electrical fault finding</a>.</p></div><p class=\"service-trade-note\">Our Perth plumbing and electrical work is carried out by appropriately licensed trades. Licence details are available on request.</p><p class=\"service-safety\"><strong>Safety:</strong> Do not open electrical or energy equipment, alter wiring or handle damaged components to gather information. For immediate danger, Call 000.</p></div></section>" as TrustedHtml
 },
 {
 "id": "service-quote",
@@ -273,7 +273,7 @@ export const page: PageData = {
 },
 {
 "question": "Can I send photos?",
-"answer": "<p>Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.</p>" as TrustedHtml
+"answer": "<p>Photos are optional: email safely taken photos to {{ppp:shared:business.email:html}}. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.</p>" as TrustedHtml
 },
 {
 "question": "What should I include in a smart-home electrical enquiry?",
@@ -296,7 +296,7 @@ export const page: PageData = {
 {
 "id": "service-booking",
 "kind": "rich",
-"html": "\n<section class=\"section contact-band service-booking\" id=\"service-booking\"><div class=\"shell service-reading\"><h2>Book smart-home and energy electrical work in Perth</h2><p>Send the suburb, equipment model, existing setup and the controls or functions you want. Product specifications and available access help define the installation; photos are not a prerequisite for contacting us. Our local team covers <a href=\"service-areas.html\">all six Perth service regions</a> from our office at 140 St Georges Terrace, Perth WA 6000.</p><p>Call to discuss the work or send the property details through our enquiry form. You do not need to diagnose the fault or complete a technical inspection before contacting us.</p><a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a> <a class=\"button service-book-button\" href=\"contact.html?service=renewables-smart-home-perth.html\">Request a visit &amp; written quote</a><form class=\"contact-card\" data-enquiry-form novalidate>\n              <h2>Request a repair</h2>\n              <p>\n                Send your suburb and a short description of the repair or installation required. Our Perth team will contact you to arrange an on-site assessment and confirm the work scope and written quote.\n              </p>\n              <div class=\"honeypot\" aria-hidden=\"true\">\n                <label for=\"smart-company\">Company</label\n                ><input\n                  id=\"smart-company\"\n                  name=\"company\"\n                  tabindex=\"-1\"\n                  autocomplete=\"off\"\n                />\n              </div>\n              <label for=\"smart-name\">Name</label\n              ><input\n                id=\"smart-name\"\n                name=\"name\"\n                autocomplete=\"name\"\n                required\n              /><label for=\"smart-phone\">Phone</label\n              ><input\n                id=\"smart-phone\"\n                name=\"phone\"\n                type=\"tel\"\n                autocomplete=\"tel\"\n                required\n              /><label for=\"smart-email\">Email</label\n              ><input\n                id=\"smart-email\"\n                name=\"email\"\n                type=\"email\"\n                autocomplete=\"email\"\n                required\n              /><label for=\"smart-address\">Property address or suburb</label\n              ><input\n                id=\"smart-address\"\n                name=\"address\"\n                autocomplete=\"street-address\"\n                required\n              /><label for=\"smart-type\">Service type</label\n              ><select id=\"smart-type\" name=\"type\">\n                <option>Renewables &amp; smart home</option>\n                <option>Electrical</option>\n                <option>Not sure</option></select\n              ><label for=\"smart-message\">What is happening?</label\n              ><textarea id=\"smart-message\" name=\"message\" required></textarea>\n              <p class=\"form-note\">\n                Do not approach a hazard to take a photo. For immediate danger,\n                call 000.\n              </p>\n              <p class=\"form-status\" aria-live=\"polite\"></p>\n              <button class=\"button\" type=\"submit\">Send enquiry</button>\n            </form></div></section>" as TrustedHtml
+"html": "\n<section class=\"section contact-band service-booking\" id=\"service-booking\"><div class=\"shell service-reading\"><h2>Book smart-home and energy electrical work in Perth</h2><p>Send the suburb, equipment model, existing setup and the controls or functions you want. Product specifications and available access help define the installation; photos are not a prerequisite for contacting us. Our local team covers <a href=\"service-areas.html\">all six Perth service regions</a> from our office at {{ppp:shared:business.addressLine:html}}.</p><p>Call to discuss the work or send the property details through our enquiry form. You do not need to diagnose the fault or complete a technical inspection before contacting us.</p><a class=\"button\" href=\"tel:{{ppp:shared:business.localTelephone:html}}\">Call {{ppp:shared:business.displayTelephone:html}}</a> <a class=\"button service-book-button\" href=\"contact.html?service=renewables-smart-home-perth.html\">Request a visit &amp; written quote</a><form class=\"contact-card\" data-enquiry-form novalidate>\n              <h2>Request a repair</h2>\n              <p>\n                Send your suburb and a short description of the repair or installation required. Our Perth team will contact you to arrange an on-site assessment and confirm the work scope and written quote.\n              </p>\n              <div class=\"honeypot\" aria-hidden=\"true\">\n                <label for=\"smart-company\">Company</label\n                ><input\n                  id=\"smart-company\"\n                  name=\"company\"\n                  tabindex=\"-1\"\n                  autocomplete=\"off\"\n                />\n              </div>\n              <label for=\"smart-name\">Name</label\n              ><input\n                id=\"smart-name\"\n                name=\"name\"\n                autocomplete=\"name\"\n                required\n              /><label for=\"smart-phone\">Phone</label\n              ><input\n                id=\"smart-phone\"\n                name=\"phone\"\n                type=\"tel\"\n                autocomplete=\"tel\"\n                required\n              /><label for=\"smart-email\">Email</label\n              ><input\n                id=\"smart-email\"\n                name=\"email\"\n                type=\"email\"\n                autocomplete=\"email\"\n                required\n              /><label for=\"smart-address\">Property address or suburb</label\n              ><input\n                id=\"smart-address\"\n                name=\"address\"\n                autocomplete=\"street-address\"\n                required\n              /><label for=\"smart-type\">Service type</label\n              ><select id=\"smart-type\" name=\"type\">\n                <option>Renewables &amp; smart home</option>\n                <option>Electrical</option>\n                <option>Not sure</option></select\n              ><label for=\"smart-message\">What is happening?</label\n              ><textarea id=\"smart-message\" name=\"message\" required></textarea>\n              <p class=\"form-note\">\n                Do not approach a hazard to take a photo. For immediate danger,\n                call 000.\n              </p>\n              <p class=\"form-status\" aria-live=\"polite\"></p>\n              <button class=\"button\" type=\"submit\">Send enquiry</button>\n            </form></div></section>" as TrustedHtml
 },
 {
 "id": "main-trailing-space",

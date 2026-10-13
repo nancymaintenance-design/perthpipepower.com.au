@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "blocked-drains-perth.html",
 "kind": "service",
 "seo": {
 "title": "Blocked Drains & Drain Repairs Perth | Ellis",
 "description": "Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote.",
-"canonical": "https://perthpipepower.com.au/blocked-drains-perth.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/blocked-drains-perth.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Blocked Drains & Drain Repairs Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Blocked Drains & Drain Repairs Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/blocked-drains-perth.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,186 +119,186 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/blocked-drains-perth.html#webpage",
-"url": "https://perthpipepower.com.au/blocked-drains-perth.html",
-"name": "Blocked Drains Perth — Drain Clearing & Repairs",
-"description": "Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote.",
+"@id": "{{ppp:shared:business.origin:raw}}/blocked-drains-perth.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/blocked-drains-perth.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/blocked-drains-perth.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/blocked-drains-perth.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/blocked-drains-perth.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
 "name": "Plumbing",
-"item": "https://perthpipepower.com.au/plumbing.html"
+"item": "{{ppp:shared:business.origin:raw}}/plumbing.html"
 },
 {
 "@type": "ListItem",
 "position": 3,
-"name": "Blocked Drains Perth — Drain Clearing & Repairs",
-"item": "https://perthpipepower.com.au/blocked-drains-perth.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "Service",
-"name": "Blocked Drains Perth — Drain Clearing & Repairs",
-"description": "Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote.",
-"serviceType": "Blocked Drains Perth — Drain Clearing & Repairs",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
+"serviceType": "{{ppp:h1-value:raw}}",
 "areaServed": {
 "@type": "City",
 "name": "Perth"
 },
-"@id": "https://perthpipepower.com.au/blocked-drains-perth.html#service",
+"@id": "{{ppp:shared:business.origin:raw}}/blocked-drains-perth.html#service",
 "provider": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
-"url": "https://perthpipepower.com.au/blocked-drains-perth.html",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntityOfPage": {
-"@id": "https://perthpipepower.com.au/blocked-drains-perth.html#webpage"
+"@id": "{{ppp:shared:business.origin:raw}}/blocked-drains-perth.html#webpage"
 }
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/blocked-drains-perth.html#faq",
-"url": "https://perthpipepower.com.au/blocked-drains-perth.html",
+"@id": "{{ppp:shared:business.origin:raw}}/blocked-drains-perth.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "Does a recurring blockage mean the drain must be replaced?",
+"name": "{{ppp:faq-value:2:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Not automatically. The condition and cause need assessment. Ask what the initial clearing covers and what evidence would justify further investigation or repair before approving excavation or replacement."
+"text": "{{ppp:faq-value:2:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Is a camera inspection included in every drain-clearing job?",
+"name": "{{ppp:faq-value:2:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Do not assume it is included. Ask whether further investigation is needed, what method is proposed and whether it is a separate scope and charge. Availability of a particular inspection method should be confirmed for the job."
+"text": "{{ppp:faq-value:2:1:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Why do drains keep blocking after they have been cleared?",
+"name": "{{ppp:faq-value:2:2:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "An unresolved restriction or other underlying drainage problem can cause recurrence. Further investigation should establish the next scope. Read the explanation."
+"text": "{{ppp:faq-value:2:2:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Is a slow-flushing toilet always caused by a blocked drain?",
+"name": "{{ppp:faq-value:2:3:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. Poor flushing can involve the cistern or toilet fixture as well as downstream drainage. Read the explanation."
+"text": "{{ppp:faq-value:2:3:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Why does my kitchen sink gurgle and drain slowly?",
+"name": "{{ppp:faq-value:2:4:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "A drainage restriction can cause slow flow and gurgling, but the noise cannot identify its location or cause. Read the explanation."
+"text": "{{ppp:faq-value:2:4:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Do I need to diagnose the problem first?",
+"name": "{{ppp:faq-value:2:5:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first."
+"text": "{{ppp:faq-value:2:5:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can I send photos?",
+"name": "{{ppp:faq-value:2:6:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo."
+"text": "{{ppp:faq-value:2:6:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What details help with a blocked-drain request?",
+"name": "{{ppp:faq-value:2:7:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Tell us the affected fixture, whether water backs up elsewhere, when it began and whether the issue is getting worse."
+"text": "{{ppp:faq-value:2:7:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Should I keep using a blocked fixture?",
+"name": "{{ppp:faq-value:2:8:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Avoid using a fixture that is overflowing or causing water to return elsewhere. Do not use chemicals as a substitute for a repair assessment."
+"text": "{{ppp:faq-value:2:8:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can a blocked toilet be related to a drain issue?",
+"name": "{{ppp:faq-value:2:9:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "It can be useful to note whether other fixtures are slow, gurgling or backing up. Use the Toilet Repairs page for a toilet-specific concern and include all visible symptoms in the enquiry."
+"text": "{{ppp:faq-value:2:9:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can you help with property-managed drainage issues?",
+"name": "{{ppp:faq-value:2:10:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Yes. Include the property reference, access details and approval contact."
+"text": "{{ppp:faq-value:2:10:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Does a blocked-drain quote include pipe replacement?",
+"name": "{{ppp:faq-value:2:11:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Clearing and pipe replacement are different scopes. We identify the proposed treatment and any separate investigation or repair in the written quote before additional work proceeds."
+"text": "{{ppp:faq-value:2:11:answer:raw}}"
 }
 }
 ]
@@ -307,7 +307,7 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/blocked-drains-perth.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/blocked-drains-perth.html\",\n      \"name\": \"Blocked Drains Perth — Drain Clearing & Repairs\",\n      \"description\": \"Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/blocked-drains-perth.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/blocked-drains-perth.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Plumbing\",\n          \"item\": \"https://perthpipepower.com.au/plumbing.html\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"Blocked Drains Perth — Drain Clearing & Repairs\",\n          \"item\": \"https://perthpipepower.com.au/blocked-drains-perth.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"Blocked Drains Perth — Drain Clearing & Repairs\",\n      \"description\": \"Blocked drain clearing and drain repairs in Perth for slow sinks, showers and backed-up drainage. Book an on-site assessment and written quote.\",\n      \"serviceType\": \"Blocked Drains Perth — Drain Clearing & Repairs\",\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"@id\": \"https://perthpipepower.com.au/blocked-drains-perth.html#service\",\n      \"provider\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"url\": \"https://perthpipepower.com.au/blocked-drains-perth.html\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"https://perthpipepower.com.au/blocked-drains-perth.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/blocked-drains-perth.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/blocked-drains-perth.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Does a recurring blockage mean the drain must be replaced?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Not automatically. The condition and cause need assessment. Ask what the initial clearing covers and what evidence would justify further investigation or repair before approving excavation or replacement.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Is a camera inspection included in every drain-clearing job?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Do not assume it is included. Ask whether further investigation is needed, what method is proposed and whether it is a separate scope and charge. Availability of a particular inspection method should be confirmed for the job.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why do drains keep blocking after they have been cleared?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"An unresolved restriction or other underlying drainage problem can cause recurrence. Further investigation should establish the next scope. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Is a slow-flushing toilet always caused by a blocked drain?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. Poor flushing can involve the cistern or toilet fixture as well as downstream drainage. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why does my kitchen sink gurgle and drain slowly?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"A drainage restriction can cause slow flow and gurgling, but the noise cannot identify its location or cause. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Do I need to diagnose the problem first?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I send photos?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What details help with a blocked-drain request?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Tell us the affected fixture, whether water backs up elsewhere, when it began and whether the issue is getting worse.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Should I keep using a blocked fixture?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Avoid using a fixture that is overflowing or causing water to return elsewhere. Do not use chemicals as a substitute for a repair assessment.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can a blocked toilet be related to a drain issue?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"It can be useful to note whether other fixtures are slow, gurgling or backing up. Use the Toilet Repairs page for a toilet-specific concern and include all visible symptoms in the enquiry.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can you help with property-managed drainage issues?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes. Include the property reference, access details and approval contact.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Does a blocked-drain quote include pipe replacement?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Clearing and pipe replacement are different scopes. We identify the proposed treatment and any separate investigation or repair in the written quote before additional work proceeds.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/blocked-drains-perth.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/blocked-drains-perth.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/blocked-drains-perth.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Plumbing\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/plumbing.html\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 3,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"Service\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"serviceType\": \"{{ppp:h1-value:json}}\",\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"@id\": \"{{ppp:shared:business.origin:json}}/blocked-drains-perth.html#service\",\n      \"provider\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntityOfPage\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/blocked-drains-perth.html#webpage\"\n      }\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/blocked-drains-perth.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:1:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:2:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:2:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:3:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:3:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:4:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:4:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:5:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:5:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:6:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:6:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:7:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:7:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:8:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:8:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:9:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:9:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:10:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:10:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:2:11:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:2:11:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-836cb461e787",
@@ -315,7 +315,7 @@ export const page: PageData = {
 "id": "main",
 "data-commercial-service": ""
 },
-"hero": "\n<section\n        class=\"page-hero service-hero\"\n        style=\"--service-image: url(&quot;hot-water-drainage-perth.png&quot;)\"\n      >\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Plumbing repair service</span>\n          <h1>Blocked Drains Perth — Drain Clearing &amp; Repairs</h1><aside class=\"intent-safety\" data-intent-safety><p><strong>Wastewater overflow needs the right first call.</strong> Water Corporation directs customers with wastewater overflowing on their property to call <a href=\"tel:131375\">13 13 75</a> immediately. Private plumbing and a public sewer fault have different repair responsibilities. <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Wastewater/Sewer-blockage-or-overflow\" target=\"_blank\" rel=\"noopener noreferrer\">Check the official overflow guidance</a>.</p></aside>\n<p>Book a Perth plumber for a blocked drain, slow sink, backed-up shower or blocked toilet. Ellis Services Group investigates the affected drainage, explains the clearing or repair scope and provides a written quote. Our Perth team handles drainage requests for homes, rental properties and managed premises.</p>\n          <a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a> <a class=\"button service-book-button\" href=\"contact.html?service=blocked-drains-perth.html\">Book blocked-drain clearing</a>\n        </div>\n      </section>" as TrustedHtml,
+"hero": "\n<section\n        class=\"page-hero service-hero\"\n        style=\"--service-image: url(&quot;hot-water-drainage-perth.png&quot;)\"\n      >\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Plumbing repair service</span>\n          <h1>Blocked Drains Perth — Drain Clearing &amp; Repairs</h1><aside class=\"intent-safety\" data-intent-safety><p><strong>Wastewater overflow needs the right first call.</strong> Water Corporation directs customers with wastewater overflowing on their property to call <a href=\"tel:131375\">13 13 75</a> immediately. Private plumbing and a public sewer fault have different repair responsibilities. <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Wastewater/Sewer-blockage-or-overflow\" target=\"_blank\" rel=\"noopener noreferrer\">Check the official overflow guidance</a>.</p></aside>\n<p>Book a Perth plumber for a blocked drain, slow sink, backed-up shower or blocked toilet. {{ppp:shared:business.name:html}} investigates the affected drainage, explains the clearing or repair scope and provides a written quote. Our Perth team handles drainage requests for homes, rental properties and managed premises.</p>\n          <a class=\"button\" href=\"tel:{{ppp:shared:business.localTelephone:html}}\">Call {{ppp:shared:business.displayTelephone:html}}</a> <a class=\"button service-book-button\" href=\"contact.html?service=blocked-drains-perth.html\">Book blocked-drain clearing</a>\n        </div>\n      </section>" as TrustedHtml,
 "sections": [
 {
 "id": "section-1",
@@ -358,7 +358,7 @@ export const page: PageData = {
 },
 {
 "question": "Can I send photos?",
-"answer": "<p>Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.</p>" as TrustedHtml
+"answer": "<p>Photos are optional: email safely taken photos to {{ppp:shared:business.email:html}}. You can contact us without photos. Do not approach a hazard, remove covers or dismantle equipment to take a photo.</p>" as TrustedHtml
 },
 {
 "question": "What details help with a blocked-drain request?",
@@ -385,7 +385,7 @@ export const page: PageData = {
 {
 "id": "service-booking",
 "kind": "rich",
-"html": "\n<section class=\"section contact-band service-booking\" id=\"service-booking\"><div class=\"shell service-reading\"><h2>Book blocked-drain clearing in Perth</h2><p>Provide the suburb, affected drains, whether more than one fixture is backing up and any previous clearing work. If wastewater is returning, tell us before the visit and avoid using the affected fixtures. Our local team covers <a href=\"service-areas.html\">all six Perth service regions</a> from our office at 140 St Georges Terrace, Perth WA 6000.</p><p>Call to discuss the work or send the property details through our enquiry form. You do not need to diagnose the fault or complete a technical inspection before contacting us.</p><a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a> <a class=\"button service-book-button\" href=\"contact.html?service=blocked-drains-perth.html\">Request a visit &amp; written quote</a></div></section>" as TrustedHtml
+"html": "\n<section class=\"section contact-band service-booking\" id=\"service-booking\"><div class=\"shell service-reading\"><h2>Book blocked-drain clearing in Perth</h2><p>Provide the suburb, affected drains, whether more than one fixture is backing up and any previous clearing work. If wastewater is returning, tell us before the visit and avoid using the affected fixtures. Our local team covers <a href=\"service-areas.html\">all six Perth service regions</a> from our office at {{ppp:shared:business.addressLine:html}}.</p><p>Call to discuss the work or send the property details through our enquiry form. You do not need to diagnose the fault or complete a technical inspection before contacting us.</p><a class=\"button\" href=\"tel:{{ppp:shared:business.localTelephone:html}}\">Call {{ppp:shared:business.displayTelephone:html}}</a> <a class=\"button service-book-button\" href=\"contact.html?service=blocked-drains-perth.html\">Request a visit &amp; written quote</a></div></section>" as TrustedHtml
 },
 {
 "id": "main-trailing-space",

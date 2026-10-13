@@ -1,18 +1,18 @@
 import type { PageData, TrustedHtml } from '../../types.mjs';
-// Candidate content extracted once; edit this typed record for future content changes.
+// Canonical content; shared/SEO/FAQ/heading tokens are derived formatting views.
 export const page: PageData = {
 "file": "faq.html",
 "kind": "faq",
 "seo": {
 "title": "Plumbing & Electrical Repair FAQs Perth | Ellis",
 "description": "Answers about Perth plumbing and electrical bookings, quote inclusions, access, property-manager approval and when to use emergency or utility services.",
-"canonical": "https://perthpipepower.com.au/faq.html",
+"canonical": "{{ppp:shared:business.origin:raw}}/faq.html",
 "robots": null,
 "social": [
 {
 "attribute": "property",
 "key": "og:site_name",
-"value": "Ellis Services Group"
+"value": "{{ppp:shared:business.name:raw}}"
 },
 {
 "attribute": "property",
@@ -22,7 +22,7 @@ export const page: PageData = {
 {
 "attribute": "property",
 "key": "og:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
@@ -32,32 +32,32 @@ export const page: PageData = {
 {
 "attribute": "name",
 "key": "twitter:title",
-"value": "Plumbing & Electrical Repair FAQs Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:description",
-"value": "Answers about Perth plumbing and electrical bookings, quote inclusions, access, property-manager approval and when to use emergency or utility services."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "name",
 "key": "twitter:image",
-"value": "https://perthpipepower.com.au/hero-repair.jpg"
+"value": "{{ppp:shared:business.origin:raw}}/hero-repair.jpg"
 },
 {
 "attribute": "property",
 "key": "og:title",
-"value": "Plumbing & Electrical Repair FAQs Perth | Ellis"
+"value": "{{ppp:seo-value:title:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:description",
-"value": "Answers about Perth plumbing and electrical bookings, quote inclusions, access, property-manager approval and when to use emergency or utility services."
+"value": "{{ppp:seo-value:description:raw}}"
 },
 {
 "attribute": "property",
 "key": "og:url",
-"value": "https://perthpipepower.com.au/faq.html"
+"value": "{{ppp:seo-value:canonical:raw}}"
 },
 {
 "attribute": "property",
@@ -76,26 +76,26 @@ export const page: PageData = {
 "@graph": [
 {
 "@type": "LocalBusiness",
-"@id": "https://perthpipepower.com.au/#business",
-"name": "Ellis Services Group",
-"legalName": "ELLIS SERVICES GROUP PTY LTD",
-"taxID": "96 645 821 745",
+"@id": "{{ppp:shared:business.id:raw}}",
+"name": "{{ppp:shared:business.name:raw}}",
+"legalName": "{{ppp:shared:business.legalName:raw}}",
+"taxID": "{{ppp:shared:business.abn:raw}}",
 "identifier": {
 "@type": "PropertyValue",
 "propertyID": "ABN",
-"value": "96 645 821 745",
-"url": "https://abr.business.gov.au/ABN/View?id=645821745"
+"value": "{{ppp:shared:business.abn:raw}}",
+"url": "{{ppp:shared:business.registration:raw}}"
 },
-"url": "https://perthpipepower.com.au/",
-"telephone": "+61413477667",
-"email": "maxinemaintenance.au@outlook.com",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"telephone": "{{ppp:shared:business.telephone:raw}}",
+"email": "{{ppp:shared:business.email:raw}}",
 "address": {
 "@type": "PostalAddress",
-"streetAddress": "140 St Georges Terrace",
-"addressLocality": "Perth",
-"addressRegion": "WA",
-"postalCode": "6000",
-"addressCountry": "AU"
+"streetAddress": "{{ppp:shared:business.address.streetAddress:raw}}",
+"addressLocality": "{{ppp:shared:business.address.addressLocality:raw}}",
+"addressRegion": "{{ppp:shared:business.address.addressRegion:raw}}",
+"postalCode": "{{ppp:shared:business.address.postalCode:raw}}",
+"addressCountry": "{{ppp:shared:business.address.addressCountry:raw}}"
 },
 "geo": {
 "@type": "GeoCoordinates",
@@ -104,13 +104,13 @@ export const page: PageData = {
 },
 "logo": {
 "@type": "ImageObject",
-"url": "https://perthpipepower.com.au/ellis-services-logo.png"
+"url": "{{ppp:shared:business.logo:raw}}"
 },
-"hasMap": "https://www.google.com/maps?cid=4207134925924682021",
+"hasMap": "{{ppp:shared:business.maps:raw}}",
 "sameAs": [
-"https://www.instagram.com/elliservices_group/",
-"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/",
-"https://www.linkedin.com/in/ellis-services-group-091541266/"
+"{{ppp:shared:business.instagram:raw}}",
+"{{ppp:shared:business.facebook:raw}}",
+"{{ppp:shared:business.linkedin:raw}}"
 ],
 "areaServed": {
 "@type": "City",
@@ -119,218 +119,218 @@ export const page: PageData = {
 "openingHoursSpecification": {
 "@type": "OpeningHoursSpecification",
 "dayOfWeek": [
-"Monday",
-"Tuesday",
-"Wednesday",
-"Thursday",
-"Friday",
-"Saturday",
-"Sunday"
+"{{ppp:shared:hours.days.0:raw}}",
+"{{ppp:shared:hours.days.1:raw}}",
+"{{ppp:shared:hours.days.2:raw}}",
+"{{ppp:shared:hours.days.3:raw}}",
+"{{ppp:shared:hours.days.4:raw}}",
+"{{ppp:shared:hours.days.5:raw}}",
+"{{ppp:shared:hours.days.6:raw}}"
 ],
-"opens": "09:00",
-"closes": "21:00"
+"opens": "{{ppp:shared:hours.opens:raw}}",
+"closes": "{{ppp:shared:hours.closes:raw}}"
 }
 },
 {
 "@type": "WebSite",
-"@id": "https://perthpipepower.com.au/#website",
-"url": "https://perthpipepower.com.au/",
-"name": "Ellis Services Group",
+"@id": "{{ppp:shared:business.origin:raw}}/#website",
+"url": "{{ppp:shared:business.origin:raw}}/",
+"name": "{{ppp:shared:business.name:raw}}",
 "inLanguage": "en-AU",
 "publisher": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 }
 },
 {
 "@type": "WebPage",
-"@id": "https://perthpipepower.com.au/faq.html#webpage",
-"url": "https://perthpipepower.com.au/faq.html",
-"name": "Perth plumbing and electrical repair FAQs",
-"description": "Answers about Perth plumbing and electrical bookings, quote inclusions, access, property-manager approval and when to use emergency or utility services.",
+"@id": "{{ppp:shared:business.origin:raw}}/faq.html#webpage",
+"url": "{{ppp:seo-value:canonical:raw}}",
+"name": "{{ppp:h1-value:raw}}",
+"description": "{{ppp:seo-value:description:raw}}",
 "inLanguage": "en-AU",
 "isPartOf": {
-"@id": "https://perthpipepower.com.au/#website"
+"@id": "{{ppp:shared:business.origin:raw}}/#website"
 },
 "about": {
-"@id": "https://perthpipepower.com.au/#business"
+"@id": "{{ppp:shared:business.id:raw}}"
 },
 "breadcrumb": {
-"@id": "https://perthpipepower.com.au/faq.html#breadcrumb"
+"@id": "{{ppp:shared:business.origin:raw}}/faq.html#breadcrumb"
 }
 },
 {
 "@type": "BreadcrumbList",
-"@id": "https://perthpipepower.com.au/faq.html#breadcrumb",
+"@id": "{{ppp:shared:business.origin:raw}}/faq.html#breadcrumb",
 "itemListElement": [
 {
 "@type": "ListItem",
 "position": 1,
 "name": "Home",
-"item": "https://perthpipepower.com.au/"
+"item": "{{ppp:shared:business.origin:raw}}/"
 },
 {
 "@type": "ListItem",
 "position": 2,
-"name": "Perth plumbing and electrical repair FAQs",
-"item": "https://perthpipepower.com.au/faq.html"
+"name": "{{ppp:h1-value:raw}}",
+"item": "{{ppp:seo-value:canonical:raw}}"
 }
 ]
 },
 {
 "@type": "FAQPage",
-"@id": "https://perthpipepower.com.au/faq.html#faq",
-"url": "https://perthpipepower.com.au/faq.html",
+"@id": "{{ppp:shared:business.origin:raw}}/faq.html#faq",
+"url": "{{ppp:seo-value:canonical:raw}}",
 "mainEntity": [
 {
 "@type": "Question",
-"name": "Why can an online guide price differ from the written quote?",
+"name": "{{ppp:faq-value:1:0:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "A guide range describes a standard scope; the property may need different access, materials, investigation or additional work. Ask the team to identify the inclusions and approval boundaries in the written quote rather than treating an online range as a fixed offer."
+"text": "{{ppp:faq-value:1:0:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can I approve investigation without approving every possible repair?",
+"name": "{{ppp:faq-value:1:1:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Discuss the initial assessment scope and the person authorised to approve it. If further repair or replacement is proposed, ask what needs separate agreement. An enquiry or access arrangement alone is not approval of unlimited work."
+"text": "{{ppp:faq-value:1:1:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What are your routine hours and emergency arrangements?",
+"name": "{{ppp:faq-value:1:2:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry."
+"text": "{{ppp:faq-value:1:2:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can a hidden water leak cause a high bill without visible water damage?",
+"name": "{{ppp:faq-value:1:3:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Yes, a concealed leak is possible without visible damage. A bill increase alone is insufficient to diagnose one. Read the explanation."
+"text": "{{ppp:faq-value:1:3:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What is the difference between an RCD and a circuit breaker?",
+"name": "{{ppp:faq-value:1:4:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "An RCD detects leakage imbalance; a circuit breaker responds to overload or short circuit. A combined device can do both. Read the explanation."
+"text": "{{ppp:faq-value:1:4:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Why has my hot water suddenly stopped working?",
+"name": "{{ppp:faq-value:1:5:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Several supply, heating or plumbing faults can interrupt hot water. The system type and affected outlets guide assessment. Read the explanation."
+"text": "{{ppp:faq-value:1:5:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What is the difference between a running toilet and a leaking toilet base?",
+"name": "{{ppp:faq-value:1:6:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "A running cistern passes or replenishes water internally; a base leak is external water with a source that needs checking. Read the explanation."
+"text": "{{ppp:faq-value:1:6:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Who should a tenant contact first about plumbing or electrical repairs?",
+"name": "{{ppp:faq-value:1:7:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "For routine repairs, report to the agent or landlord. For immediate danger, use the appropriate emergency channel first. Read the explanation."
+"text": "{{ppp:faq-value:1:7:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What is Ellis Services Group?",
+"name": "{{ppp:faq-value:1:8:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Ellis Services Group is part of the Ellis Group, with a dedicated Perth repair team providing plumbing and electrical repairs and maintenance across Perth for homes, rentals, strata properties and commercial premises."
+"text": "{{ppp:faq-value:1:8:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Which areas does Ellis Services Group cover?",
+"name": "{{ppp:faq-value:1:9:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Our dedicated Perth repair team provides plumbing and electrical services across Perth. Include the property suburb and service required so we can prepare for the work."
+"text": "{{ppp:faq-value:1:9:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What information should I provide?",
+"name": "{{ppp:faq-value:1:10:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Provide the property address, affected area, factual description, when it began, whether it is active or worsening, and the best access contact. Property managers should include a work-order reference and approval pathway."
+"text": "{{ppp:faq-value:1:10:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Can I send photos?",
+"name": "{{ppp:faq-value:1:11:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach exposed wiring, active sparking, wet electrical equipment or another hazard to take a photo."
+"text": "{{ppp:faq-value:1:11:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What if I do not know whether the problem is plumbing or electrical?",
+"name": "{{ppp:faq-value:1:12:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Describe what you observe rather than guessing. Our Perth team will identify the appropriate plumbing or electrical service path."
+"text": "{{ppp:faq-value:1:12:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Should I use the blocked drain or blocked toilet page?",
+"name": "{{ppp:faq-value:1:13:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Use Blocked Drains & Toilets for slow drainage, gurgling, backups or a blocked toilet. Use Toilet Repairs when the concern is specifically a running, leaking, slow-filling or non-functioning toilet."
+"text": "{{ppp:faq-value:1:13:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What should I do if a pipe bursts?",
+"name": "{{ppp:faq-value:1:14:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Put people and electrical safety first. If it is safe and familiar, isolate the water supply; otherwise keep clear and use the Burst Pipe Repair page to share the affected area and active water details."
+"text": "{{ppp:faq-value:1:14:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "What should I do if a safety switch keeps tripping?",
+"name": "{{ppp:faq-value:1:15:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Do not repeatedly reset it. Note which areas lost power and what equipment was being used. Do not open the switchboard or work on fixed wiring."
+"text": "{{ppp:faq-value:1:15:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "When is Ellis Services Group available?",
+"name": "{{ppp:faq-value:1:16:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed."
+"text": "{{ppp:faq-value:1:16:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "Are licence details available?",
+"name": "{{ppp:faq-value:1:17:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Services are provided by appropriately licensed plumbing and electrical tradespeople. Current licence details are available on request for procurement or property management."
+"text": "{{ppp:faq-value:1:17:answer:raw}}"
 }
 },
 {
 "@type": "Question",
-"name": "When should I call 000?",
+"name": "{{ppp:faq-value:1:18:question:raw}}",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "Call 000 for life-threatening emergencies, fire, smoke, active arcing or immediate danger. Move to a safe location first. Once the immediate hazard is made safe, contact Ellis Services Group to arrange the repair assessment."
+"text": "{{ppp:faq-value:1:18:answer:raw}}"
 }
 }
 ]
@@ -339,7 +339,7 @@ export const page: PageData = {
 }
 ],
 "jsonLdSource": [
-"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"https://perthpipepower.com.au/#business\",\n      \"name\": \"Ellis Services Group\",\n      \"legalName\": \"ELLIS SERVICES GROUP PTY LTD\",\n      \"taxID\": \"96 645 821 745\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"96 645 821 745\",\n        \"url\": \"https://abr.business.gov.au/ABN/View?id=645821745\"\n      },\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"telephone\": \"+61413477667\",\n      \"email\": \"maxinemaintenance.au@outlook.com\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"140 St Georges Terrace\",\n        \"addressLocality\": \"Perth\",\n        \"addressRegion\": \"WA\",\n        \"postalCode\": \"6000\",\n        \"addressCountry\": \"AU\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://perthpipepower.com.au/ellis-services-logo.png\"\n      },\n      \"hasMap\": \"https://www.google.com/maps?cid=4207134925924682021\",\n      \"sameAs\": [\n        \"https://www.instagram.com/elliservices_group/\",\n        \"https://www.facebook.com/p/Ellis-Services-Group-100082926022259/\",\n        \"https://www.linkedin.com/in/ellis-services-group-091541266/\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"Monday\",\n          \"Tuesday\",\n          \"Wednesday\",\n          \"Thursday\",\n          \"Friday\",\n          \"Saturday\",\n          \"Sunday\"\n        ],\n        \"opens\": \"09:00\",\n        \"closes\": \"21:00\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"https://perthpipepower.com.au/#website\",\n      \"url\": \"https://perthpipepower.com.au/\",\n      \"name\": \"Ellis Services Group\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://perthpipepower.com.au/faq.html#webpage\",\n      \"url\": \"https://perthpipepower.com.au/faq.html\",\n      \"name\": \"Perth plumbing and electrical repair FAQs\",\n      \"description\": \"Answers about Perth plumbing and electrical bookings, quote inclusions, access, property-manager approval and when to use emergency or utility services.\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"https://perthpipepower.com.au/#website\"\n      },\n      \"about\": {\n        \"@id\": \"https://perthpipepower.com.au/#business\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"https://perthpipepower.com.au/faq.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"https://perthpipepower.com.au/faq.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://perthpipepower.com.au/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Perth plumbing and electrical repair FAQs\",\n          \"item\": \"https://perthpipepower.com.au/faq.html\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://perthpipepower.com.au/faq.html#faq\",\n      \"url\": \"https://perthpipepower.com.au/faq.html\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why can an online guide price differ from the written quote?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"A guide range describes a standard scope; the property may need different access, materials, investigation or additional work. Ask the team to identify the inclusions and approval boundaries in the written quote rather than treating an online range as a fixed offer.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I approve investigation without approving every possible repair?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Discuss the initial assessment scope and the person authorised to approve it. If further repair or replacement is proposed, ask what needs separate agreement. An enquiry or access arrangement alone is not approval of unlimited work.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What are your routine hours and emergency arrangements?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can a hidden water leak cause a high bill without visible water damage?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes, a concealed leak is possible without visible damage. A bill increase alone is insufficient to diagnose one. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is the difference between an RCD and a circuit breaker?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"An RCD detects leakage imbalance; a circuit breaker responds to overload or short circuit. A combined device can do both. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why has my hot water suddenly stopped working?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Several supply, heating or plumbing faults can interrupt hot water. The system type and affected outlets guide assessment. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is the difference between a running toilet and a leaking toilet base?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"A running cistern passes or replenishes water internally; a base leak is external water with a source that needs checking. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who should a tenant contact first about plumbing or electrical repairs?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"For routine repairs, report to the agent or landlord. For immediate danger, use the appropriate emergency channel first. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is Ellis Services Group?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Ellis Services Group is part of the Ellis Group, with a dedicated Perth repair team providing plumbing and electrical repairs and maintenance across Perth for homes, rentals, strata properties and commercial premises.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Which areas does Ellis Services Group cover?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Our dedicated Perth repair team provides plumbing and electrical services across Perth. Include the property suburb and service required so we can prepare for the work.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What information should I provide?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Provide the property address, affected area, factual description, when it began, whether it is active or worsening, and the best access contact. Property managers should include a work-order reference and approval pathway.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I send photos?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach exposed wiring, active sparking, wet electrical equipment or another hazard to take a photo.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What if I do not know whether the problem is plumbing or electrical?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Describe what you observe rather than guessing. Our Perth team will identify the appropriate plumbing or electrical service path.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Should I use the blocked drain or blocked toilet page?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Use Blocked Drains & Toilets for slow drainage, gurgling, backups or a blocked toilet. Use Toilet Repairs when the concern is specifically a running, leaking, slow-filling or non-functioning toilet.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What should I do if a pipe bursts?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Put people and electrical safety first. If it is safe and familiar, isolate the water supply; otherwise keep clear and use the Burst Pipe Repair page to share the affected area and active water details.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What should I do if a safety switch keeps tripping?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Do not repeatedly reset it. Note which areas lost power and what equipment was being used. Do not open the switchboard or work on fixed wiring.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"When is Ellis Services Group available?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Are licence details available?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Services are provided by appropriately licensed plumbing and electrical tradespeople. Current licence details are available on request for procurement or property management.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"When should I call 000?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Call 000 for life-threatening emergencies, fire, smoke, active arcing or immediate danger. Move to a safe location first. Once the immediate hazard is made safe, contact Ellis Services Group to arrange the repair assessment.\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+"\n{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"LocalBusiness\",\n      \"@id\": \"{{ppp:shared:business.id:json}}\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"legalName\": \"{{ppp:shared:business.legalName:json}}\",\n      \"taxID\": \"{{ppp:shared:business.abn:json}}\",\n      \"identifier\": {\n        \"@type\": \"PropertyValue\",\n        \"propertyID\": \"ABN\",\n        \"value\": \"{{ppp:shared:business.abn:json}}\",\n        \"url\": \"{{ppp:shared:business.registration:json}}\"\n      },\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"telephone\": \"{{ppp:shared:business.telephone:json}}\",\n      \"email\": \"{{ppp:shared:business.email:json}}\",\n      \"address\": {\n        \"@type\": \"{{ppp:shared:business.address.@type:json}}\",\n        \"streetAddress\": \"{{ppp:shared:business.address.streetAddress:json}}\",\n        \"addressLocality\": \"{{ppp:shared:business.address.addressLocality:json}}\",\n        \"addressRegion\": \"{{ppp:shared:business.address.addressRegion:json}}\",\n        \"postalCode\": \"{{ppp:shared:business.address.postalCode:json}}\",\n        \"addressCountry\": \"{{ppp:shared:business.address.addressCountry:json}}\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": -31.954352,\n        \"longitude\": 115.8564539\n      },\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"{{ppp:shared:business.logo:json}}\"\n      },\n      \"hasMap\": \"{{ppp:shared:business.maps:json}}\",\n      \"sameAs\": [\n        \"{{ppp:shared:business.instagram:json}}\",\n        \"{{ppp:shared:business.facebook:json}}\",\n        \"{{ppp:shared:business.linkedin:json}}\"\n      ],\n      \"areaServed\": {\n        \"@type\": \"City\",\n        \"name\": \"Perth\"\n      },\n      \"openingHoursSpecification\": {\n        \"@type\": \"OpeningHoursSpecification\",\n        \"dayOfWeek\": [\n          \"{{ppp:shared:hours.days.0:json}}\",\n          \"{{ppp:shared:hours.days.1:json}}\",\n          \"{{ppp:shared:hours.days.2:json}}\",\n          \"{{ppp:shared:hours.days.3:json}}\",\n          \"{{ppp:shared:hours.days.4:json}}\",\n          \"{{ppp:shared:hours.days.5:json}}\",\n          \"{{ppp:shared:hours.days.6:json}}\"\n        ],\n        \"opens\": \"{{ppp:shared:hours.opens:json}}\",\n        \"closes\": \"{{ppp:shared:hours.closes:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebSite\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/#website\",\n      \"url\": \"{{ppp:shared:business.origin:json}}/\",\n      \"name\": \"{{ppp:shared:business.name:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"publisher\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      }\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/faq.html#webpage\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"name\": \"{{ppp:h1-value:json}}\",\n      \"description\": \"{{ppp:seo-value:description:json}}\",\n      \"inLanguage\": \"en-AU\",\n      \"isPartOf\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/#website\"\n      },\n      \"about\": {\n        \"@id\": \"{{ppp:shared:business.id:json}}\"\n      },\n      \"breadcrumb\": {\n        \"@id\": \"{{ppp:shared:business.origin:json}}/faq.html#breadcrumb\"\n      }\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/faq.html#breadcrumb\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"{{ppp:shared:business.origin:json}}/\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"{{ppp:h1-value:json}}\",\n          \"item\": \"{{ppp:seo-value:canonical:json}}\"\n        }\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"{{ppp:shared:business.origin:json}}/faq.html#faq\",\n      \"url\": \"{{ppp:seo-value:canonical:json}}\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:0:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:0:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:1:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:1:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:2:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:2:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:3:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:3:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:4:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:4:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:5:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:5:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:6:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:6:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:7:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:7:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:8:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:8:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:9:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:9:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:10:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:10:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:11:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:11:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:12:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:12:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:13:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:13:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:14:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:14:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:15:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:15:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:16:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:16:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:17:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:17:answer:json}}\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"{{ppp:faq-value:1:18:question:json}}\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"{{ppp:faq-value:1:18:answer:json}}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
 ]
 },
 "layoutId": "layout-549f11456ba4",
@@ -368,7 +368,7 @@ export const page: PageData = {
 },
 {
 "question": "What are your routine hours and emergency arrangements?",
-"answer": "<p>Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.</p>" as TrustedHtml
+"answer": "<p>{{ppp:shared:hours.text:html}} Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.</p>" as TrustedHtml
 },
 {
 "question": "Can a hidden water leak cause a high bill without visible water damage?",
@@ -391,11 +391,11 @@ export const page: PageData = {
 "answer": "<p>For routine repairs, report to the agent or landlord. For immediate danger, use the appropriate emergency channel first. <a href=\"property-management.html#learn-about-property-management\">Read the explanation.</a></p>" as TrustedHtml
 },
 {
-"question": "What is Ellis Services Group?",
-"answer": "\n            <p>\n              Ellis Services Group is part of the Ellis Group, with a dedicated\n              Perth repair team providing plumbing and electrical repairs and\n              maintenance across Perth for homes, rentals, strata properties\n              and commercial premises.\n            </p>\n          " as TrustedHtml
+"question": "What is {{ppp:shared:business.name:raw}}?",
+"answer": "\n            <p>\n              {{ppp:shared:business.name:html}} is part of the Ellis Group, with a dedicated\n              Perth repair team providing plumbing and electrical repairs and\n              maintenance across Perth for homes, rentals, strata properties\n              and commercial premises.\n            </p>\n          " as TrustedHtml
 },
 {
-"question": "Which areas does Ellis Services Group cover?",
+"question": "Which areas does {{ppp:shared:business.name:raw}} cover?",
 "answer": "\n            <p>\n              Our dedicated Perth repair team provides plumbing and electrical\n              services across Perth. Include the property suburb and service\n              required so we can prepare for the work.\n            </p>\n          " as TrustedHtml
 },
 {
@@ -404,7 +404,7 @@ export const page: PageData = {
 },
 {
 "question": "Can I send photos?",
-"answer": "\n            <p>\n              Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach exposed wiring, active sparking, wet electrical equipment or another hazard to take a photo.\n            </p>\n          " as TrustedHtml
+"answer": "\n            <p>\n              Photos are optional: email safely taken photos to {{ppp:shared:business.email:html}}. You can contact us without photos. Do not approach exposed wiring, active sparking, wet electrical equipment or another hazard to take a photo.\n            </p>\n          " as TrustedHtml
 },
 {
 "question": "\n              What if I do not know whether the problem is plumbing or\n              electrical?\n            ",
@@ -423,8 +423,8 @@ export const page: PageData = {
 "answer": "\n            <p>\n              Do not repeatedly reset it. Note which areas lost power and what\n              equipment was being used. Do not open the switchboard or work on\n              fixed wiring.\n            </p>\n          " as TrustedHtml
 },
 {
-"question": "When is Ellis Services Group available?",
-"answer": "\n            <p>\n              Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed.\n            </p>\n          " as TrustedHtml
+"question": "When is {{ppp:shared:business.name:raw}} available?",
+"answer": "\n            <p>\n              {{ppp:shared:hours.text:html}}\n            </p>\n          " as TrustedHtml
 },
 {
 "question": "Are licence details available?",
@@ -432,7 +432,7 @@ export const page: PageData = {
 },
 {
 "question": "When should I call 000?",
-"answer": "\n            <p>\n              Call 000 for life-threatening emergencies, fire, smoke, active\n              arcing or immediate danger. Move to a safe location first. Once the immediate hazard is made safe, contact Ellis Services Group to arrange the repair assessment.\n            </p>\n          " as TrustedHtml
+"answer": "\n            <p>\n              Call 000 for life-threatening emergencies, fire, smoke, active\n              arcing or immediate danger. Move to a safe location first. Once the immediate hazard is made safe, contact {{ppp:shared:business.name:html}} to arrange the repair assessment.\n            </p>\n          " as TrustedHtml
 }
 ]
 },
