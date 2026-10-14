@@ -1,9 +1,10 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..');
+const root=resolvePublicRoot();
 const html=fs.readFileSync(path.join(root,'blocked-drains-perth.html'),'utf8');
 const graph=JSON.parse(html.match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
 assert.equal(graph.find(n=>n['@type']==='BreadcrumbList').itemListElement[1].item,'https://perthpipepower.com.au/plumbing.html','service breadcrumb retains visible parent');
-const manifestPath=path.join(root,'data/editorial-content-dates.json');
+const manifestPath=path.join(SOURCE_ROOT,'data/editorial-content-dates.json');
 assert(fs.existsSync(manifestPath),'article dates are persisted with content hashes');
 const {contentDate}=require('../scripts/lib/content-dates.cjs');
 const previous={sha256:'same',lastmod:'2026-10-10'};

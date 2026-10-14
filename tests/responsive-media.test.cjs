@@ -1,3 +1,4 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
@@ -16,10 +17,10 @@ test('media integration supplies real responsive sources without changing carous
  assert.equal(apply(result,'index.html'),result,'rebuilding cannot nest pictures or duplicate srcsets');
 });
 test('published responsive photo width descriptors match encoded pixels',()=>{
- const html=fs.readFileSync(path.resolve(__dirname,'../index.html'),'utf8');
+ const html=fs.readFileSync(path.resolve(resolvePublicRoot(),'index.html'),'utf8');
  const sources=[...html.matchAll(/(?:srcset)="([^"]*responsive[^\"]*)"/g)].flatMap(m=>m[1].split(',').map(s=>s.trim().split(/\s+/)));
  for(const [file,width] of sources){
-  const bytes=fs.readFileSync(path.resolve(__dirname,'..',file));
+  const bytes=fs.readFileSync(path.resolve(resolvePublicRoot(),file));
   // Read the standard AVIF spatial extents / lossy WebP frame size directly,
   // keeping the regression check independent of the optional build encoder.
   const offset=file.endsWith('.avif')?bytes.indexOf(Buffer.from('ispe')):bytes.indexOf(Buffer.from([0x9d,0x01,0x2a]));

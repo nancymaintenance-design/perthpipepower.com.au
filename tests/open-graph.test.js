@@ -1,9 +1,10 @@
-import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import path from 'node:path';
-import test from 'node:test';
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const test = require('node:test');
 
-const root = process.cwd();
+const root = resolvePublicRoot();
 const internalDirectories = new Set(['node_modules', '.build', 'dist', 'playwright-report', 'test-results']);
 const htmlFiles = fs.readdirSync(root, { recursive: true })
   .filter((file) => !file.split(path.sep).some(part => internalDirectories.has(part)) && file.endsWith('.html') && !path.basename(file).startsWith('google') && fs.statSync(path.join(root, file)).isFile());

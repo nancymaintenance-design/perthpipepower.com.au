@@ -1,8 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const about = fs.readFileSync(path.join(__dirname, '..', 'about.html'), 'utf8');
+const about = fs.readFileSync(path.join(resolvePublicRoot(), 'about.html'), 'utf8');
 
 for (const expected of [
   'ELLIS SERVICES GROUP PTY LTD',

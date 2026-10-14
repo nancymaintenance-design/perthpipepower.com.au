@@ -1,7 +1,8 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
-const root = path.resolve(__dirname, '..');
+const root = resolvePublicRoot();
 // Missing rendered summaries deprives readers without JavaScript of the
 // symptom/safety/next-step answer. Assert shipped output, not generator text.
 for (const file of Object.keys(require('../data/service-commercial-copy.cjs'))) {

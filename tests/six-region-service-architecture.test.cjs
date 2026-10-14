@@ -1,8 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const root = path.join(__dirname, '..');
+const root = resolvePublicRoot();
 const regions = [
   { file: 'perth-cbd-inner-suburbs.html', name: 'CBD & Inner Perth' },
   { file: 'northern-suburbs.html', name: 'Northern Suburbs' },

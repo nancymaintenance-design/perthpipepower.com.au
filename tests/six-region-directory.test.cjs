@@ -1,9 +1,10 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const html = fs.readFileSync(path.join(__dirname, '..', 'service-areas.html'), 'utf8');
-const directoryScript = fs.readFileSync(path.join(__dirname, '..', 'service-area-directory.js'), 'utf8');
+const html = fs.readFileSync(path.join(resolvePublicRoot(), 'service-areas.html'), 'utf8');
+const directoryScript = fs.readFileSync(path.join(resolvePublicRoot(), 'service-area-directory.js'), 'utf8');
 const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] || '';
 const regionCards = [...main.matchAll(/<article\b[^>]*class="area-region[^\"]*"[\s\S]*?<\/article>/gi)].map((match) => match[0]);
 const links = regionCards.flatMap((card) => [...card.matchAll(/<a\s+[^>]*href="([^"]+)"/gi)].map((match) => match[1]));

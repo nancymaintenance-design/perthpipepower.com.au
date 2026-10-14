@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+import publicPaths from './tests/support/public-paths.cjs';
 
-const html = await readFile(new URL('./blocked-drains-perth.html', import.meta.url), 'utf8');
-const depthScript = await readFile(new URL('./service-page-depth.js', import.meta.url), 'utf8');
+const html = await readFile(path.join(publicPaths.resolvePublicRoot(),'blocked-drains-perth.html'), 'utf8');
+const depthScript = await readFile(path.join(publicPaths.SOURCE_ROOT,'service-page-depth.js'), 'utf8');
 
 assert.match(html, /<title>Blocked Drains &amp; Drain Repairs Perth \| Ellis<\/title>/);
 assert.match(html, /<h1>Blocked Drains Perth[^<]*Drain Clearing &amp; Repairs<\/h1>/);

@@ -1,16 +1,17 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
-const root = path.join(__dirname, '..');
+const root = resolvePublicRoot();
 
 function tracking() {
   const events = [], listeners = [];
   const location = new URL('https://perthpipepower.com.au/contact.html');
   const window = {location, gtag: (...args) => events.push(args)};
   const context = vm.createContext({window, location, URL, document: {baseURI: location.href, addEventListener: (name, fn) => listeners.push(fn)}});
-  const script = fs.readFileSync(path.join(root, 'conversion-events.js'), 'utf8');
+  const script = fs.readFileSync(path.join(SOURCE_ROOT, 'conversion-events.js'), 'utf8');
   vm.runInContext(script, context); vm.runInContext(script, context);
   return {events, click(href) { for (const fn of listeners) fn({target: {closest: () => ({getAttribute: () => href})}}); }};
 }
@@ -40,7 +41,7 @@ test('every published service page and hub is tracked; irrelevant and external l
 // Evaluates the literal source/destination config subset we own. It does not emulate Vercel hosting.
 function redirect(input) {
   const url = new URL(input,'https://perthpipepower.com.au');
-  const rule = JSON.parse(fs.readFileSync(path.join(root,'vercel.json'))).redirects?.find(r => r.source === url.pathname);
+  const rule = JSON.parse(fs.readFileSync(path.join(SOURCE_ROOT,'vercel.json'))).redirects?.find(r => r.source === url.pathname);
   return rule ? {status: rule.permanent ? 308 : 307, location: rule.destination + url.search} : null;
 }
 test('known HTML variants redirect once while canonical, unknown and backend paths remain untouched', () => {

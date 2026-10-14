@@ -146,7 +146,8 @@ test('all thirteen legacy modules expose canonical readonly data or explicit int
     if (Object.values(legacy).some(v => typeof v === 'function')) {
       for (const key of Object.keys(legacy)) assert.throws(()=>migrated[key]({},{}),/Retired content mutation.*canonical/);
     } else {
-      const expected=structuredClone(legacy);
+      const snapshot=value=>Array.isArray(value)?value.map(snapshot):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).map(([key,item])=>[key,snapshot(item)])):value;
+      const expected=snapshot(legacy);
       const site=modules().loadSiteData();
       if(['seo-guide-expansions','seo-service-metadata'].includes(name))for(const [file,value]of Object.entries(expected))if(value.description)value.description=site.pages.find(p=>p.file===file).seo.description;
       if(name==='service-commercial-copy'){

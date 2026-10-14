@@ -1,9 +1,10 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('../tests/support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const http = require('node:http');
 const path = require('node:path');
 
-const root = path.resolve(__dirname, '..');
+const root = resolvePublicRoot();
 const contentTypes = { '.html': 'text/html; charset=utf-8', '.png': 'image/png' };
 
 const server = http.createServer((request, response) => {

@@ -1,8 +1,9 @@
-import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
-import { test } from 'node:test';
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('../tests/support/public-paths.cjs');
+const assert = require('node:assert/strict');
+const { readFileSync } = require('node:fs');
+const { test } = require('node:test');
 
-const root = new URL('..', import.meta.url);
+const root = require('node:url').pathToFileURL(resolvePublicRoot() + require('node:path').sep);
 const home = readFileSync(new URL('index.html', root), 'utf8');
 const script = readFileSync(new URL('site.js', root), 'utf8');
 

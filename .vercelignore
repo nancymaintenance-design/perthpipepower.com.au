@@ -1,4 +1,4 @@
-# Stage3 release packaging: keep internal evidence out of deployment.
+# Build inputs stay available; only dist is the public output directory.
 node_modules
 .git
 .vercel
@@ -13,5 +13,6 @@ docs
 **/*.patch
 tests
 test
-scripts
+dist
+.build
 /*.zip

@@ -1,9 +1,10 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
 
-const root = path.join(__dirname, '..');
+const root = resolvePublicRoot();
 const measurementId = 'G-HZ6PKHKGWH';
 const internalDirectories = new Set(['node_modules', '.build', 'dist', 'playwright-report', 'test-results']);
 const pages = fs.readdirSync(root, { recursive: true }).filter(file => !file.split(path.sep).some(part => internalDirectories.has(part)) && file.endsWith('.html') && fs.statSync(path.join(root, file)).isFile());

@@ -1,8 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const html = fs.readFileSync(path.join(__dirname, '..', 'about.html'), 'utf8');
+const html = fs.readFileSync(path.join(resolvePublicRoot(), 'about.html'), 'utf8');
 const replacementSection = html.match(/<section class="section">\s*<div class="shell text-column">[\s\S]*?Perth plumbing &amp; electrical repairs[\s\S]*?<\/section>/i)?.[0] || '';
 
 assert.match(replacementSection, /<h2>Perth plumbing and electrical repairs for homes, rentals and strata properties\.<\/h2>/i);

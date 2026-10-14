@@ -1,9 +1,10 @@
-import assert from 'node:assert/strict';
-import { readdir, readFile } from 'node:fs/promises';
-import path from 'node:path';
-import test from 'node:test';
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('../tests/support/public-paths.cjs');
+const assert = require('node:assert/strict');
+const { readdir, readFile } = require('node:fs/promises');
+const path = require('node:path');
+const test = require('node:test');
 
-const root = path.resolve(import.meta.dirname, '..');
+const root = resolvePublicRoot();
 const loader = '/_vercel/speed-insights/script.js';
 
 test('every public HTML page loads the Vercel Speed Insights client', async () => {

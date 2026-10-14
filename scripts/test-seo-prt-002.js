@@ -1,8 +1,10 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('../tests/support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const {hasLocalLink}=require('./lib/link-assertions.cjs');
 
-const root = path.resolve(__dirname, '..');
+const root = resolvePublicRoot();
 const read = (page) => fs.readFileSync(path.join(root, page), 'utf8');
 const mainContent = (html) => html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? '';
 const hrefs = (html) => [...html.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>/gi)].map((match) => match[1]);
@@ -29,7 +31,7 @@ for (const [label, expected] of [
   ['Toilet repairs →', 'toilet-repairs-perth.html'],
 ]) assert.equal(linkFor(plumbing, label), expected, `plumbing card ${label} must lead to its service page`);
 assert.ok(hrefs(plumbing).includes('tel:0413477667'), 'plumbing overview must keep the call CTA');
-assert.ok(hrefs(plumbing).includes('contact.html'), 'plumbing overview must keep the enquiry CTA');
+assert.ok(hasLocalLink(plumbing,'contact.html'), 'plumbing overview must keep the enquiry CTA');
 
 const electrical = read('electrical.html');
 for (const [label, expected] of [
@@ -40,7 +42,7 @@ for (const [label, expected] of [
   ['Discuss a smoke alarm →', 'smoke-alarm-maintenance-perth.html'],
 ]) assert.equal(linkFor(electrical, label), expected, `electrical card ${label} must lead to its service page`);
 assert.ok(hrefs(electrical).includes('tel:0413477667'), 'electrical overview must keep the call CTA');
-assert.ok(hrefs(electrical).includes('contact.html'), 'electrical overview must keep the enquiry CTA');
+assert.ok(hasLocalLink(electrical,'contact.html'), 'electrical overview must keep the enquiry CTA');
 
 for (const [page, servicePage] of [
   ['insights-hot-water-plumbing-or-electrical.html', 'hot-water-problems-perth.html'],

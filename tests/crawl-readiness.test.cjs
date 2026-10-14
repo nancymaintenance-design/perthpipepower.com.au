@@ -1,5 +1,6 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const root=resolvePublicRoot(),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const map=read('sitemap.xml');
 const indexable=fs.readdirSync(root).filter(f=>f.endsWith('.html')&&!/name="robots" content="noindex/i.test(read(f)));
 for(const file of indexable){const canonical=read(file).match(/<link\s+rel="canonical"\s+href="([^"]+)"/)[1];assert(map.includes(`<loc>${canonical}</loc>`),file+' missing from sitemap');}

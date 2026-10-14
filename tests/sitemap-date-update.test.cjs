@@ -1,11 +1,12 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const {test}=require('node:test'),assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 test('sitemap timestamp update ignores checkout line endings but dates a real content edit',()=>{
- const modulePath=path.join(root,'scripts/update-sitemap-content-dates.cjs');
+ const modulePath=path.join(SOURCE_ROOT,'scripts/update-sitemap-content-dates.cjs');
  const update=fs.existsSync(modulePath)?require(modulePath).updateSitemapContentDates:undefined;
  assert.equal(typeof update,'function','a content-only updater must be available without image rebuilding');
- const temp=fs.mkdtempSync(path.join(root,'../reports/sitemap-date-test-'));
+ const temp=createFixture('sitemap-date-test-');
  try{
   fs.mkdirSync(path.join(temp,'data'));
   const hash=crypto.createHash('sha256').update('<h1>Original</h1>\n').digest('hex');

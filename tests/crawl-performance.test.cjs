@@ -1,8 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const gallery = require('../electrical-work-gallery.js');
 const path = require('node:path');
-const root = path.resolve(__dirname, '..');
+const root = resolvePublicRoot();
 const markup = gallery.renderElectricalWorkGallery();
 assert.equal((markup.match(/srcset=/g) || []).length, 8, 'all work photos have responsive delivery');
 for (const photo of gallery.ELECTRICAL_WORK_GALLERY) {
@@ -15,14 +16,18 @@ for (const photo of gallery.ELECTRICAL_WORK_GALLERY) {
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)];
 assert.equal(entries.length, 47, '35 retained URLs plus 12 approved service pages');
-const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data/sitemap-content-dates.json'), 'utf8'));
+const manifest = JSON.parse(fs.readFileSync(path.join(SOURCE_ROOT,'data/sitemap-content-dates.json'), 'utf8'));
 const crypto = require('node:crypto');
+// Historical date-record provenance uses the pre-migration source serialization.
+// Published content is independently checked below against the frozen DOM baseline.
 for (const [, entry] of entries) {
   const url = entry.match(/<loc>([^<]+)<\/loc>/)[1];
   const file = new URL(url).pathname.slice(1) || 'index.html';
   const date = entry.match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/)?.[1];
   assert(date, file + ': explicit content modification date');
   assert.equal(date, manifest[file].lastmod);
-  assert.equal(manifest[file].sha256, crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file),'utf8').replace(/\r\n/g,'\n')).digest('hex'), file + ': lastmod manifest matches content (canonical LF)');
+  assert.equal(manifest[file].sha256, crypto.createHash('sha256').update(fs.readFileSync(path.join(SOURCE_ROOT, file),'utf8').replace(/\r\n/g,'\n')).digest('hex'), file + ': historical lastmod provenance matches original source serialization (canonical LF)');
 }
+const {comparePublicOutput}=require('../scripts/lib/ts-compat.cjs').loadCompiledModule('site/baseline.mjs');
+assert.deepEqual(comparePublicOutput(root,require('./fixtures/ts-migration/baseline.json')),[],'actual dist content, SEO, dates and resources remain equivalent to the frozen candidate');
 console.log('PASS: responsive work photos and content-backed sitemap dates.');

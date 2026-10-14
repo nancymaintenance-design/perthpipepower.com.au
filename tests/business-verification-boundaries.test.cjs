@@ -1,5 +1,6 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const root=resolvePublicRoot(),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const b=require('../data/business-entity.cjs');
 assert.equal(b.maps,'https://www.google.com/maps?cid=4207134925924682021','Maps uses the verified direct official listing, not a short redirect');
 const home=read('index.html');

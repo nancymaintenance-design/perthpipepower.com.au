@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
-import { fileURLToPath } from 'node:url';
-const root=fileURLToPath(new URL('../',import.meta.url));
+import publicPaths from './support/public-paths.cjs';
+const root=publicPaths.resolvePublicRoot();
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const readSource=p=>fs.readFileSync(path.join(publicPaths.SOURCE_ROOT,p),'utf8');
 const visible=h=>h.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g,' ');
 const pages=fs.readdirSync(root).filter(p=>p.endsWith('.html')).concat(fs.readdirSync(path.join(root,'service-areas')).filter(p=>p.endsWith('.html')).map(p=>'service-areas/'+p));
 
@@ -37,7 +38,7 @@ test('pages asking for photos make them optional and give the existing email cha
 });
 test('runtime service context assigns qualified work to company and makes photos optional by email',()=>{
   let output='';
-  vm.runInNewContext(read('service-page-depth.js'),{location:{pathname:'/hot-water-problems-perth.html'},document:{querySelector:selector=>selector==='[data-static-service-depth]'?null:({insertAdjacentHTML:(_,markup)=>{output+=markup;}})}});
+  vm.runInNewContext(readSource('service-page-depth.js'),{location:{pathname:'/hot-water-problems-perth.html'},document:{querySelector:selector=>selector==='[data-static-service-depth]'?null:({insertAdjacentHTML:(_,markup)=>{output+=markup;}})}});
   const text=visible(output);
   assert.match(text,/We (?:arrange|confirm)[^.]*WA-qualified/i);
   assert.match(text,/optional[^.]*maxinemaintenance.au@outlook.com/i);
@@ -50,7 +51,7 @@ test('runtime service context assigns qualified work to company and makes photos
 test('installation runtime and static enquiry path do not presume a fault diagnosis',()=>{
   for(const p of ['fixtures-appliances-perth.html','renewables-smart-home-perth.html']) {
     let output='';
-    vm.runInNewContext(read('service-page-depth.js'),{location:{pathname:'/'+p},document:{querySelector:selector=>selector==='[data-static-service-depth]'?null:({insertAdjacentHTML:(_,markup)=>output+=markup})}});
+    vm.runInNewContext(readSource('service-page-depth.js'),{location:{pathname:'/'+p},document:{querySelector:selector=>selector==='[data-static-service-depth]'?null:({insertAdjacentHTML:(_,markup)=>output+=markup})}});
     assert.doesNotMatch(visible(output),/A symptom can have more than one cause|establish the cause and confirm the repair scope/i,p);
     assert.match(visible(output),/installation|requirements/i,p);
   }

@@ -1,17 +1,19 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert=require('node:assert/strict'),fs=require('node:fs');
-const read=f=>fs.readFileSync(require('node:path').join(__dirname,'..',f),'utf8');
+const {hasLocalLink}=require('../scripts/lib/link-assertions.cjs');
+const read=f=>fs.readFileSync(require('node:path').join(resolvePublicRoot(), f),'utf8');
 // Missing contextual links breaks the region-to-service booking journey even when global menus exist.
 for(const file of ['perth-cbd-inner-suburbs.html','northern-suburbs.html','southern-suburbs.html','eastern-suburbs.html','western-suburbs.html','perth-hills-swan-valley.html']){
  const html=read(file),main=html.match(/<main\b[\s\S]*?<\/main>/)[0];
  const services=new Set([...main.matchAll(/href="([^"#?]+-perth\.html)"/g)].map(m=>m[1]));
  assert(services.size>=4,file+' has relevant crawlable services in its main content');
- for(const service of services)assert(fs.existsSync(require('node:path').join(__dirname,'..',service)));
+ for(const service of services)assert(fs.existsSync(require('node:path').join(resolvePublicRoot(), service)));
  assert(main.includes('contact.html?suburb='),file+' retains a prefilled locality booking path');
  assert((main.match(/<section\b/g)||[]).length<=4,file+' uses continuous service content instead of fragmented panels');
 }
 const feed=JSON.parse(read('ai-content.json'));
 assert.equal(feed.servicePages?.length,24,'AI summary links twelve existing and twelve approved additional service owners');
-for(const item of feed.servicePages){assert(item.url.startsWith('https://perthpipepower.com.au/'));assert(read(new URL(item.url).pathname.slice(1)).includes('href="contact.html"'));}
+for(const item of feed.servicePages){assert(item.url.startsWith('https://perthpipepower.com.au/'));assert(hasLocalLink(read(new URL(item.url).pathname.slice(1)),'contact.html'));}
 for(const file of Object.keys(require('../data/service-commercial-copy.cjs'))){
  const html=read(file),description=html.match(/name="description"\s+content="([^"]+)"/)[1];
  assert(description.length<=180,file+' has a concise service summary, not an appended paragraph');

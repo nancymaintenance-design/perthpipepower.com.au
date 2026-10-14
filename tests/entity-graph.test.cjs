@@ -1,7 +1,8 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const root = path.resolve(__dirname, '..');
+const root = resolvePublicRoot();
 const b = require('../data/business-entity.cjs');
 const services = require('../data/seo-service-metadata.cjs');
 for (const file of fs.readdirSync(root).filter(f => f.endsWith('.html'))) {
@@ -36,7 +37,7 @@ for (const file of fs.readdirSync(root).filter(f => f.endsWith('.html'))) {
     }
   }
 }
-const config = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
+const config = JSON.parse(fs.readFileSync(path.join(SOURCE_ROOT,'vercel.json'), 'utf8'));
 const headers = config.headers.find(r => r.source === '/(.*)')?.headers || [];
 for (const key of ['X-Content-Type-Options', 'X-Frame-Options', 'Referrer-Policy', 'Permissions-Policy']) {
   assert(headers.some(h => h.key === key), key + ': global response header');

@@ -1,6 +1,7 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const {test}=require('node:test');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const root=path.resolve(__dirname,'..');
+const root=resolvePublicRoot();
 const read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const main=f=>read(f).match(/<main\b[\s\S]*?<\/main>/)[0];
 const plain=s=>s.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();

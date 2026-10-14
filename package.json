@@ -6,7 +6,7 @@
     "compile": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "build": "npm run compile && node .build/site/build/cli.mjs",
-    "test": "npm run build && node --test tests/*.test.* scripts/test-*.js test-blocked-drains-content.mjs",
+    "test": "npm run build && node scripts/run-tests.cjs",
     "test:browser": "playwright test",
     "validate:seo": "node scripts/validate-seo.js --root dist",
     "baseline:freeze": "npm run compile && node .build/tools/migration-baseline.mjs freeze"

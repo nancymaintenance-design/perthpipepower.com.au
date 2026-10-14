@@ -1,10 +1,11 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { regionGuides } = require('../data/region-guides');
 
 for (const guide of regionGuides) {
-  const html = fs.readFileSync(path.join(__dirname, '..', guide.route), 'utf8');
+  const html = fs.readFileSync(path.join(resolvePublicRoot(), guide.route), 'utf8');
   assert.match(html, new RegExp(`<h1>[^<]*${guide.name.replace(/[&]/g, '&amp;')}[^<]*<\\/h1>`, 'i'));
   assert.match(html, /Plumbing and electrical repairs/i);
   assert.match(html, /What to include in a repair request/i);

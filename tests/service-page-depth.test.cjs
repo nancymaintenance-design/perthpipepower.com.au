@@ -1,7 +1,8 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const root = path.resolve(__dirname, '..');
+const root = resolvePublicRoot();
 const pages = ['water-leak-detection-perth.html','burst-pipe-repair-perth.html','blocked-drains-perth.html','hot-water-problems-perth.html','tap-mixer-repairs-perth.html','toilet-repairs-perth.html','power-faults-perth.html','safety-switch-tripping-perth.html','lighting-power-points-perth.html','smoke-alarm-maintenance-perth.html'];
 for (const file of pages) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');

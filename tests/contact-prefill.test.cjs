@@ -1,14 +1,15 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const contactHtml = fs.readFileSync(path.join(__dirname, '..', 'contact.html'), 'utf8');
+const contactHtml = fs.readFileSync(path.join(resolvePublicRoot(), 'contact.html'), 'utf8');
 const { safeSuburbFromSearch } = require('../contact-prefill.js');
 
 assert.match(contactHtml, /<form[^>]+id="enquiry"[^>]+data-enquiry-form/i, 'contact form has a stable enquiry anchor');
 assert.match(contactHtml, /<script src="contact-prefill\.js">\s*<\/script>/i, 'contact page loads the initializer');
 assert.match(contactHtml, /<figure class="contact-card__image">\s*<img src="property-maintenance\.jpg"[^>]*alt="Tradesperson preparing for a property maintenance visit"/i, 'contact information card includes the approved service image');
-const siteCss = fs.readFileSync(path.join(__dirname, '..', 'site.css'), 'utf8');
+const siteCss = fs.readFileSync(path.join(resolvePublicRoot(), 'site.css'), 'utf8');
 assert.match(siteCss, /\.contact-card--details\s*\{[^}]*display:\s*flex[^}]*flex-direction:\s*column/i, 'details card uses its existing height for the image');
 assert.match(siteCss, /\.contact-card__image\s*\{[^}]*margin-top:\s*2rem[^}]*height:\s*[^;}]+/i, 'image starts two lines below the details and remains constrained');
 assert.match(siteCss, /@media \(max-width: 800px\)[\s\S]*?\.contact-card__image\s*\{\s*display:\s*none/i, 'image is hidden on small screens');
