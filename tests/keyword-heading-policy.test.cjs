@@ -10,7 +10,7 @@ test('commercial headings explicitly identify the service rather than generic re
   ['property-management.html','Plumbing and Electrical Maintenance: Work-Order Scope'],
   ['ceiling-fans-perth.html','Ceiling fan installation: service scope'],
   ['dishwasher-installation-perth.html','Dishwasher installation: service scope'],
-  ['plumbing.html','Plumber Perth: plumbing symptoms and service choices'],
+  ['plumbing.html','Plumbing symptoms and repair services'],
  ])assert(headings(file).includes(expected),file+': '+expected);
 });
 test('service-page education and scope headings do not revert to query-free boilerplate',()=>{

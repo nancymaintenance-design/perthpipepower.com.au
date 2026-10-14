@@ -222,6 +222,13 @@ for(const edit of require('../fixtures/content-navigation-repair/coherent-prose-
  const matches=walk(tree).filter(n=>n[0]==='text'&&n[1].includes(edit.before));assert.equal(matches.length,1,edit.file+': exact educational prose edit');
  matches[0][1]=matches[0][1].replace(edit.before,edit.after);approved.pages[edit.file]=snapshotFromTree(tree,previous);
 }
+// Owner-approved secondary heading cleanup only; no primary title/body/link edits.
+for(const edit of require('../fixtures/content-navigation-repair/service-locality-heading-edits.json')){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ const matches=walk(tree).filter(n=>isEl(n,'h2')&&text(n)===edit.before);
+ assert.equal(matches.length,1,edit.file+': exact locality heading correction');
+ matches[0][4]=[['text',edit.after]];approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
 const beforeEnquirySidebar=structuredClone(approved);
 // Exact approved wrapper/form addition. Original body nodes move unchanged;
 // existing two forms are relocated, not replaced by a new output capture.
