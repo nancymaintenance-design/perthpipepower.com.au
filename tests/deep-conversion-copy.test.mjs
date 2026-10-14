@@ -33,8 +33,8 @@ test('public service and form copy offers assessment rather than email receipt o
 test('public metadata describes repairs rather than another page or unspecified next steps',()=>{
   for(const p of ['index.html','blocked-drains-perth.html']) assert.doesNotMatch(read(p).match(/<head>[\s\S]*?<\/head>/i)[0],/right next service page|discuss the issue, property location and next steps/i,p);
 });
-test('pages asking for photos make them optional and give the existing email channel',()=>{
-  for(const p of ['index.html','about.html','plumbing.html','fixtures-appliances-perth.html','renewables-smart-home-perth.html','property-management.html','insights-reporting-a-plumbing-leak.html','insights-tenant-property-manager-maintenance-handover.html']) assert.match(visible(read(p)),/optional[^.]*maxinemaintenance.au@outlook.com/i,p);
+test('central photo help makes images optional and gives the existing email channel',()=>{
+  for(const p of ['contact.html','faq.html']) assert.match(visible(read(p)),/optional[^.]*maxinemaintenance.au@outlook.com/i,p);
 });
 test('runtime service context assigns qualified work to company and makes photos optional by email',()=>{
   let output='';
@@ -46,7 +46,7 @@ test('runtime service context assigns qualified work to company and makes photos
   assert.match(text,/Do not put yourself at risk/i);
   const staticText=visible(read('hot-water-problems-perth.html'));
   assert.match(staticText,/Our Perth plumbing and electrical work is carried out by appropriately licensed trades/i);
-  assert.match(staticText,/optional[^.]*maxinemaintenance.au@outlook.com/i);
+  assert.doesNotMatch(staticText,/Photos are optional: email safely taken photos to/i,'service pages do not repeat centralized submission instructions');
 });
 test('installation runtime and static enquiry path do not presume a fault diagnosis',()=>{
   for(const p of ['fixtures-appliances-perth.html','renewables-smart-home-perth.html']) {

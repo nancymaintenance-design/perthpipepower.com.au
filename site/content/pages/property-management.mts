@@ -280,7 +280,7 @@ export const page: PageData = {
 {
 "id": "section-6",
 "kind": "rich",
-"html": "\n    <p class=\"shell\">Photos are optional: email safely taken photos to <a href=\"mailto:{{ppp:shared:business.email:html}}\">{{ppp:shared:business.email:html}}</a>. You can contact us without photos. Do not approach a hazard or dismantle equipment to take them.</p>" as TrustedHtml
+"html": "\n    " as TrustedHtml
 },
 {
 "id": "section-7",

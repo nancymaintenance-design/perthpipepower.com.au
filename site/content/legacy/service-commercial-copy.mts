@@ -339,7 +339,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          10,
+          9,
           "question"
         ]
       },
@@ -350,7 +350,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          10,
+          9,
           "answer"
         ],
         "node": [],
@@ -659,7 +659,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          11,
+          10,
           "question"
         ]
       },
@@ -670,7 +670,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          11,
+          10,
           "answer"
         ],
         "node": [],
@@ -998,7 +998,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          9,
+          8,
           "question"
         ]
       },
@@ -1009,7 +1009,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          9,
+          8,
           "answer"
         ],
         "node": [],
@@ -1355,7 +1355,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          9,
+          8,
           "question"
         ]
       },
@@ -1366,7 +1366,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          9,
+          8,
           "answer"
         ],
         "node": [],
@@ -1693,7 +1693,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          10,
+          9,
           "question"
         ]
       },
@@ -1704,7 +1704,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          10,
+          9,
           "answer"
         ],
         "node": [],
@@ -2013,7 +2013,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          10,
+          9,
           "question"
         ]
       },
@@ -2024,7 +2024,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          10,
+          9,
           "answer"
         ],
         "node": [],
@@ -2366,7 +2366,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          9,
+          8,
           "question"
         ]
       },
@@ -2377,7 +2377,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          9,
+          8,
           "answer"
         ],
         "node": [],
@@ -2704,7 +2704,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          9,
+          8,
           "question"
         ]
       },
@@ -2715,7 +2715,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          9,
+          8,
           "answer"
         ],
         "node": [],
@@ -3337,7 +3337,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          10,
+          9,
           "question"
         ]
       },
@@ -3348,7 +3348,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          10,
+          9,
           "answer"
         ],
         "node": [],
@@ -3673,7 +3673,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          11,
+          10,
           "question"
         ]
       },
@@ -3684,7 +3684,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          11,
+          10,
           "answer"
         ],
         "node": [],
@@ -4011,7 +4011,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          7,
+          6,
           "question"
         ]
       },
@@ -4022,7 +4022,7 @@ const legacy = compatibilityView({
           "sections",
           2,
           "items",
-          7,
+          6,
           "answer"
         ],
         "node": [],

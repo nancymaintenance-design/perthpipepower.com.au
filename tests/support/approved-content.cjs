@@ -169,6 +169,22 @@ approved.artifacts['llms.txt']=reviewedCopy(approved.artifacts['llms.txt']);
   approved.pages[file]=snapshotFromTree(tree,previous);
  }
 }
+// Owner-approved de-duplication: only generic photo-submission paragraphs,
+// display-only photo topics and redundant scenario introductions are removed.
+for(const [file,previous]of Object.entries(approved.pages)){
+ if(['faq.html','contact.html'].includes(file))continue;
+ const tree=JSON.parse(previous.dom),main=walk(tree).find(n=>isEl(n,'main'));
+ for(const parent of walk(main)){
+  const c=childList(parent);
+  for(let i=c.length-1;i>=0;i--){const n=c[i],copy=readable(n);
+   if(isEl(n,'p')&&copy.startsWith('Photos are optional: email safely taken photos to'))c.splice(i,1);
+   else if(isEl(n,'p')&&copy==='Use these common service situations to describe the work you need. Our team assesses the cause and confirms the repair or installation plan.')c.splice(i,1);
+   else if(isEl(n,'div')&&attr(n,'class')==='service-information'&&walk(n).some(x=>isEl(x,'h3')&&readable(x)==='Safely taken photos'))c.splice(i,1);
+  }
+  for(let i=c.length-1;i>0;i--)if(c[i][0]==='text'&&c[i-1][0]==='text'){c[i-1][1]+=c[i][1];c.splice(i,1);}
+ }
+ approved.pages[file]=snapshotFromTree(tree,previous);
+}
 Object.assign(approved.assets,policy.runtimeHashes,homeCorrection.runtimeHashes);
 for(const change of policy.headStylesheets){
  const original=approved.pages[change.file],tree=JSON.parse(original.dom),head=walk(tree).find(n=>isEl(n,'head'));

@@ -455,7 +455,7 @@ export const page: PageData = {
 {
 "id": "section-43",
 "kind": "rich",
-"html": "<p class=\"shell\">Photos are optional: email safely taken photos to <a href=\"mailto:{{ppp:shared:business.email:html}}\">{{ppp:shared:business.email:html}}</a>. You can contact us without photos. Do not approach a hazard or dismantle equipment to take them.</p>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-44",
@@ -489,7 +489,5 @@ export const page: PageData = {
 }
 ],
 "breadcrumbContainer": "<p class=\"breadcrumbs\"><a href=\"{{ppp:breadcrumb:0:href}}\">{{ppp:breadcrumb:0:label}}</a> / <a href=\"{{ppp:breadcrumb:1:href}}\">{{ppp:breadcrumb:1:label}}</a></p>" as TrustedHtml,
-"chromeBindings": {
-
-}
+"chromeBindings": {}
 };

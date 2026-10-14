@@ -111,7 +111,7 @@ test('statement narratives have complete sentences without dangling yes/no answe
 test('each statement heading identifies its original answer topic rather than a shifted FAQ index',()=>{
  for(const [file,want]of Object.entries(require('./fixtures/content-navigation-repair/statement-topics.json'))){
   const actual=nodes(file).filter(n=>attr(n,'class')==='service-information').map(n=>text(walk(n).find(n=>n.tagName==='h3')).trim());
-  assert.deepEqual([...actual].sort(),[...want].sort(),file+': statement topics match the reviewed original questions');
+  assert.deepEqual([...actual].sort(),want.filter(t=>t!=='Safely taken photos').sort(),file+': statement topics match reviewed questions, excluding the centralized photo help');
  }
 });
 test('a deliberately mismatched statement title fails the independent topic contract',()=>{
@@ -126,6 +126,7 @@ test('each converted answer remains paired with its reviewed topic and preserves
  for(const [file,topics]of Object.entries(require('./fixtures/content-navigation-repair/statement-topics.json'))){
   const blocks=nodes(file).filter(n=>attr(n,'class')==='service-information'),offset=file==='index.html'?0:2;
   topics.forEach((topic,i)=>{
+   if(topic==='Safely taken photos')return;
    const original=before[file].faq[i+offset],edit=edits.find(e=>e.file===file&&e.question===original.question);
    if(edit)assert.equal(clean(edit.before),original.answer,file+': precise original answer provenance');
    const expected=require('./support/approved-content.cjs').reviewedCopy(edit?clean(edit.after):original.answer).replace(/\s+/g,' ').trim();
