@@ -275,7 +275,7 @@ export const page: PageData = {
 },
 {
 "question": "After-hours electrical attendance arrangements",
-"answer": "<p>{{ppp:shared:hours.text:html}} Call {{ppp:shared:business.displayTelephone:html}} for urgent work; an online form does not reserve an appointment. For shock or network danger, use the official safety route first.</p>" as TrustedHtml
+"answer": "<p>Call {{ppp:shared:business.displayTelephone:html}} for urgent work; an online form does not reserve an appointment. For shock or network danger, use the official safety route first.</p>" as TrustedHtml
 },
 {
 "question": "Routine hours and emergency arrangements",

@@ -2,6 +2,28 @@ const {test,expect}=require('@playwright/test');
 const fs=require('node:fs'),path=require('node:path');
 const report=path.resolve(__dirname,'../../../reports/content-navigation-repair-2026-10-14');
 test.beforeEach(async({context,baseURL})=>context.route('**/*',r=>new URL(r.request().url()).origin===baseURL&&!new URL(r.request().url()).pathname.startsWith('/api/')?r.continue():r.abort()));
+for(const width of [1440,320])test('native no-JS keyboard service menu clears the header and follows its link '+width,async({browser,baseURL})=>{
+ const context=await browser.newContext({javaScriptEnabled:false,viewport:{width,height:900}});
+ await context.route('**/*',r=>new URL(r.request().url()).origin===baseURL&&!new URL(r.request().url()).pathname.startsWith('/api/')?r.continue():r.abort());
+ try{
+  const page=await context.newPage();await page.goto(baseURL+'/electrical.html');
+  if(width===1440)await expect(page.locator('.utility')).toBeVisible();
+  const button=page.locator('[aria-controls="plumbing-menu"]');
+  // Reach the native control with the keyboard, without focus/evaluate helpers.
+  for(let i=0;i<12&&!await button.evaluate(n=>n===document.activeElement);i++)await page.keyboard.press('Tab');
+  await expect(button).toBeFocused();await expect(page.locator('#plumbing-menu')).toBeVisible();
+  await page.keyboard.press('Tab');const link=page.locator('#plumbing-menu a').first();await expect(link).toBeFocused();
+  // Wait for the existing CSS reveal transition, without disabling native CSS.
+  await expect.poll(async()=>{const h=await page.locator('.site-header').boundingBox(),m=await page.locator('#plumbing-menu').boundingBox();return m.y-h.y-h.height;}).toBeGreaterThanOrEqual(-1);
+  const header=await page.locator('.site-header').boundingBox(),menu=await page.locator('#plumbing-menu').boundingBox(),focus=await link.boundingBox();
+  expect(menu.y,'native menu clears the actual header').toBeGreaterThanOrEqual(header.y+header.height-1);
+  expect(focus.y,'native focused link clears the actual header').toBeGreaterThanOrEqual(header.y+header.height-1);
+  expect(menu.x).toBeGreaterThanOrEqual(0);expect(menu.x+menu.width).toBeLessThanOrEqual(width+1);
+  await page.screenshot({path:path.join(report,'screenshots','native-menu-'+width+'.png')});
+  await page.keyboard.press('Enter');await expect(page).toHaveURL(/contact\.html\?service=plumbing\.html$/);
+  await expect(page.locator('h1')).toBeVisible();await expect(page.locator('a[href="tel:0413477667"]').first()).toBeAttached();
+ }finally{await context.close();}
+});
 test('office copy stays in one reading column outside the map grid',async({page})=>{
  await page.goto('/index.html');
  const office=page.locator('.office-location');

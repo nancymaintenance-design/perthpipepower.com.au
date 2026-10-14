@@ -129,11 +129,11 @@ test('canonical edits drive published data and readonly compatible readers toget
     assert.equal(require('../.build/site/content/legacy/business-entity.mjs').default.name,'Canonical Business Marker');
     assert.match(require('../.build/site/content/legacy/expanded-services.mjs').default.hours.text,/08:00/);
     const home=site.pages.find(p=>p.file==='index.html');
-    const output=projectPage(home,site.layouts[home.layoutId],chrome);
+    const output=projectPage(home,site.layouts[home.layoutId],chrome,site);
     assert.match(output,/Canonical Business Marker/);assert.doesNotMatch(output,/Ellis Services Group/);
     assert.match(output,/Routine service hours: 08:00/);
     assert.match(site.artifacts['ai-content.json'],/Canonical Business Marker/);
-    const about=site.pages.find(p=>p.file==='about.html');assert.doesNotMatch(projectPage(about,site.layouts[about.layoutId],chrome),/140 St Georges Terrace/);
+    const about=site.pages.find(p=>p.file==='about.html');assert.doesNotMatch(projectPage(about,site.layouts[about.layoutId],chrome,site),/140 St Georges Terrace/);
   } finally {shared.business.name=oldName;shared.hours.opens=oldOpens;shared.business.address.streetAddress=oldStreet;}
 });
 
@@ -165,7 +165,7 @@ test('all thirteen legacy modules expose canonical readonly data or explicit int
 
 // This projection exercises the data contract before Task 3 installs production templates.
 // Expectations come only from the immutable Task 1 DOM snapshot, never this projection.
-function projectPage(page, layout, chrome) {
+function projectPage(page, layout, chrome, site) {
   const escape = value => value.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   const replace = (value, name, item) => value.split(`{{ppp:${name}}}`).join(item);
   let social = 0, jsonLd = 0;
@@ -192,7 +192,11 @@ function projectPage(page, layout, chrome) {
     return out;
   }).join('');
   const main=replace((page.hero??'')+sections,'breadcrumbs',breadcrumbs);
-  const result=layout.documentOpen+head+layout.bodyOpen+renderChrome(chrome.headers[layout.headerId])+layout.beforeMain+
+  // Produce approved shared navigation, not the raw pre-unification template.
+  // Expected chrome comes independently from immutable DOM + literal policy;
+  // head, body content and footer remain manually projected in this test.
+  const navigation=require('../.build/site/templates/navigation.mjs').renderNavigation(page,site);
+  const result=layout.documentOpen+head+layout.bodyOpen+navigation+layout.beforeMain+
     `<main${Object.entries(page.mainAttributes).map(([key,value])=>` ${key}="${escape(value)}"`).join('')}>`+main+'</main>'+layout.afterMain+renderChrome(chrome.footers[layout.footerId])+layout.scripts.join('')+layout.documentClose;
   assert.doesNotMatch(result,/\{\{ppp:/,`${page.file}: unconsumed token`);
   return result;
@@ -205,13 +209,13 @@ test('typed content projects to the complete frozen DOM including links, prices,
   const site=loadSiteData();
   const temp=fs.mkdtempSync(path.resolve(root,'../reports/content-navigation-repair-2026-10-14/content-projection-'));
   try {
-    for(const page of site.pages)fs.writeFileSync(path.join(temp,page.file),projectPage(page,site.layouts[page.layoutId],chrome));
+    for(const page of site.pages)fs.writeFileSync(path.join(temp,page.file),projectPage(page,site.layouts[page.layoutId],chrome,site));
     const expected={...baseline,assets:{},artifacts:{}};
     const differences=comparePublicOutput(temp,expected);
     assert.deepEqual(differences.map(({file,field})=>({file,field})),[]);
     const page=site.pages.find(p=>p.file==='electrical.html');
     const altered=structuredClone(page);altered.seo.title='Old online electrical title';
-    fs.writeFileSync(path.join(temp,page.file),projectPage(altered,site.layouts[page.layoutId],chrome));
+    fs.writeFileSync(path.join(temp,page.file),projectPage(altered,site.layouts[page.layoutId],chrome,site));
     assert.ok(comparePublicOutput(temp,expected).some(d=>d.file===page.file&&d.field==='title'),'reverting candidate data to old titles must fail');
   } finally {fs.rmSync(temp,{recursive:true,force:true});}
 });

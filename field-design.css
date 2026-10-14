@@ -103,9 +103,14 @@ main [id],main :focus{scroll-margin-top:calc(var(--site-header-height) + 18px)}
 .home-company-advantages{background:var(--field-light)}
 .nav-enhanced .nav-group:not(.is-open) .subnav{visibility:hidden;opacity:0;pointer-events:none}
 html:not(.nav-enhanced) .nav-group:focus-within .subnav{display:grid;visibility:visible;opacity:1;transform:translateX(-50%)}
+/* Native keyboard menus anchor to the actual header, not JS-measured offsets.
+   Static intermediate ancestors make the sticky header the containing block. */
+html:not(.nav-enhanced) .head-row,html:not(.nav-enhanced) .site-nav,html:not(.nav-enhanced) .nav-group{position:static}
+html:not(.nav-enhanced) .site-nav .nav-group:focus-within .mega-menu{position:absolute;top:100%;left:50%;margin:0;max-height:calc(100dvh - 230px);transform:translateX(-50%)}
 @media(max-width:800px){
  :root{--site-header-height:212px}
  .nav-list>li:last-child,.nav-group{order:0}
  .site-nav .nav-group.is-open .mega-menu,html:not(.nav-enhanced) .nav-group:focus-within .mega-menu{position:fixed;top:var(--site-header-height);left:1rem;right:1rem;width:auto;margin:0;transform:none;max-height:calc(100dvh - var(--site-header-height) - 16px);z-index:101}
+ html:not(.nav-enhanced) .site-nav .nav-group:focus-within .mega-menu{position:absolute;top:100%;left:1rem;right:1rem;transform:none;max-height:calc(100dvh - 230px)}
  .head-row{align-items:flex-start}.nav-group>button{height:auto}
 }

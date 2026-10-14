@@ -270,7 +270,7 @@ export const page: PageData = {
 },
 {
 "question": "Urgent and after-hours plumbing attendance",
-"answer": "<p>{{ppp:shared:hours.text:html}} Emergency fees follow the quoted work plan. Utility faults and immediate danger use the appropriate official channel first.</p>" as TrustedHtml
+"answer": "<p>Utility faults and immediate danger use the appropriate official channel first.</p>" as TrustedHtml
 },
 {
 "question": "Routine hours and emergency arrangements",

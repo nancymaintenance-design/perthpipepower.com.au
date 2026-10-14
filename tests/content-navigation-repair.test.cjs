@@ -7,6 +7,20 @@ const walk=n=>[n,...(n.childNodes||[]).flatMap(walk)];
 const text=n=>n?.nodeName==='#text'?n.value:(n?.childNodes||[]).map(text).join('');
 const attr=(n,k)=>n.attrs?.find(a=>a.name===k)?.value;
 const nodes=f=>walk(parse(fs.readFileSync(path.join(root,f),'utf8')));
+test('all 48 complete top-level headers and utility blocks match independent immutable chrome contracts',()=>{
+ const {approvedHeader}=require('./support/approved-content.cjs'),frozen=require('./fixtures/ts-migration/baseline.json');
+ const contract=require('./fixtures/content-navigation-repair/chrome-contract.json');
+ const canonical=n=>n.nodeName==='#text'?['text',n.value]:n.nodeName==='#comment'?['comment',n.data]:n.tagName?['element',n.namespaceURI,n.tagName,n.attrs.map(a=>[a.namespace||'',a.name,a.value]).sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b),'en')),(n.childNodes||[]).map(canonical)]:['fragment',(n.childNodes||[]).map(canonical)];
+ const cchildren=n=>n[0]==='element'?n[4]:['document','fragment'].includes(n[0])?n[1]:[],cwalk=n=>[n,...cchildren(n).flatMap(cwalk)];
+ assert.equal(Object.keys(contract.current).length,48);
+ for(const file of Object.keys(frozen.pages)){
+  const all=nodes(file),body=all.find(n=>n.tagName==='body'),headers=body.childNodes.filter(n=>n.tagName==='header'&&attr(n,'class')==='site-header');
+  assert.equal(headers.length,1,file+': one exact top-level shared header');
+  assert.deepEqual(canonical(headers[0]),approvedHeader(file),file+': full logo/menu/CTA DOM including every attribute, label, destination and current marker');
+  const original=cchildren(cwalk(JSON.parse(frozen.pages[file].dom)).find(n=>n[2]==='body')).filter(n=>n[2]==='div'&&n[3].some(a=>a[1]==='class'&&a[2]==='utility'));
+  assert.deepEqual(body.childNodes.filter(n=>n.tagName==='div'&&attr(n,'class')==='utility').map(canonical),original,file+': full original utility content/contact links');
+ }
+});
 test('all public types expose unified service menus and honest current-page state',()=>{
  for(const file of fs.readdirSync(root).filter(f=>f.endsWith('.html'))){
   const all=nodes(file),nav=all.find(n=>n.tagName==='nav'&&attr(n,'aria-label')==='Main navigation');
@@ -17,6 +31,49 @@ test('all public types expose unified service menus and honest current-page stat
   for(const id of ['plumbing-menu','electrical-menu'])assert(all.some(n=>n.tagName==='button'&&attr(n,'aria-controls')===id),file+': '+id);
   const current=walk(nav).filter(n=>attr(n,'aria-current')==='page');
   if(['index.html','about.html','service-areas.html','plumbing.html','electrical.html','contact.html'].includes(file))assert.equal(current.length,1,file);
+ }
+});
+test('approved preservation rejects out-of-region DOM and every shared-chrome mutation',async t=>{
+ const {compareApprovedOutput}=require('./support/approved-content.cjs');
+ const {createFixture}=require('./support/public-paths.cjs');
+ const fixture=createFixture('chrome-mutations-');
+ try{
+  fs.cpSync(root,fixture,{recursive:true});
+  const file='index.html',original=fs.readFileSync(path.join(root,file),'utf8');
+  assert.deepEqual(compareApprovedOutput(fixture),[],'unchanged control must pass');
+  fs.writeFileSync(path.join(fixture,file),original.replace(/<main\b/,'\n \t\n<main'));
+  assert.deepEqual(compareApprovedOutput(fixture),[],'only reviewed direct-body inter-block whitespace is normalized');
+  const cases={
+   'extra pre-main paragraph':h=>h.replace(/<main\b/,'<p>UNAPPROVED BODY CONTENT</p><main'),
+   'pre-main header':h=>h.replace(/<main\b/,'<header>UNAPPROVED HEADER</header><main'),
+   'pre-main utility':h=>h.replace(/<main\b/,'<div class="utility">UNAPPROVED UTILITY</div><main'),
+   'main header':h=>h.replace('</main>','<header>UNAPPROVED HEADER</header></main>'),
+   'main utility':h=>h.replace('</main>','<div class="utility">UNAPPROVED UTILITY</div></main>'),
+   'footer header':h=>h.replace('</footer>','<header>UNAPPROVED HEADER</header></footer>'),
+   'footer utility':h=>h.replace('</footer>','<div class="utility">UNAPPROVED UTILITY</div></footer>'),
+   'wrong menu destination':h=>h.replace('href="blocked-drains-perth.html"','href="toilet-repairs-perth.html"'),
+   'wrong logo destination':h=>h.replace(/(<a\b[^>]*class="brand"[^>]*href=")[^"]+/, '$1privacy.html'),
+   'wrong CTA destination':h=>h.replace(/(<a\b[^>]*class="nav-cta"[^>]*href=")[^"]+/, '$1contact.html?service=WRONG'),
+   'missing utility contact':h=>h.replace(/(<div class="utility">[\s\S]*?)<a\b[^>]*href="tel:[^"]+"[^>]*>[\s\S]*?<\/a>/,'$1'),
+   'utility text change':h=>h.replace(/(<div class="utility">[\s\S]*?<span>)[^<]+/,'$1UNAPPROVED UTILITY COPY')
+  };
+  for(const [name,mutate]of Object.entries(cases))await t.test(name,()=>{
+   const changed=mutate(original);assert.notEqual(changed,original,name+': mutation must apply');
+   fs.writeFileSync(path.join(fixture,file),changed);
+   assert(compareApprovedOutput(fixture).some(d=>d.file===file&&d.field==='dom'),name+': exact preservation must fail');
+  });
+ }finally{fs.rmSync(fixture,{recursive:true,force:true});}
+});
+test('hub narratives state all hours once and retain distinct urgent and safety guidance',()=>{
+ for(const file of ['electrical.html','plumbing.html']){
+  const statements=nodes(file).filter(n=>attr(n,'class')==='service-information'),copy=statements.map(text).join(' ');
+  for(const fact of ['09:00–21:00','seven days a week','24-hour emergency repairs','No arrival time is guaranteed'])assert.equal(copy.split(fact).length-1,1,file+': '+fact+' appears once');
+  assert.match(copy,/Emergency repair fees follow the quoted work plan/);
+  assert.match(copy,/For urgent work, call rather than relying on an online enquiry/);
+  if(file==='electrical.html'){
+   assert.match(copy,/Call 0413 477 667 for urgent work; an online form does not reserve an appointment/);
+   assert.match(copy,/For shock or network danger, use the official safety route first/);
+  }else assert.match(copy,/Utility faults and immediate danger use the appropriate official channel first/);
  }
 });
 test('homepage separates office, service pathways and company advantages',()=>{

@@ -316,5 +316,17 @@
     "question": "Can fixture and electrical repairs be requested together?",
     "before": "<p>Yes. List each issue separately so it can be assessed as a distinct repair request.</p>",
     "after": "<p>List each issue separately so it can be assessed as a distinct repair request.</p>"
+  },
+  {
+    "file": "electrical.html",
+    "question": "Can I book an after-hours electrician online?",
+    "before": "<p>Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Call 0413 477 667 for urgent work; an online form does not reserve an appointment. For shock or network danger, use the official safety route first.</p>",
+    "after": "<p>Call 0413 477 667 for urgent work; an online form does not reserve an appointment. For shock or network danger, use the official safety route first.</p>"
+  },
+  {
+    "file": "plumbing.html",
+    "question": "Can you attend immediately or outside standard hours?",
+    "before": "<p>Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed. Emergency fees follow the quoted work plan. Utility faults and immediate danger use the appropriate official channel first.</p>",
+    "after": "<p>Utility faults and immediate danger use the appropriate official channel first.</p>"
   }
 ]
