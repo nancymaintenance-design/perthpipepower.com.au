@@ -28,7 +28,7 @@
   const mobileActions = document.querySelector('.mobile-ctas');
   if (mobileActions) {
     const hero = document.querySelector('main .page-hero, main .hero');
-    const inlineActions = [...document.querySelectorAll('main a.button[href="contact.html"], main a.button[href^="tel:"]')];
+    const inlineActions = [...document.querySelectorAll('main a.button[href="contact.html"], main a.button[href^="contact.html?"], main a.button[href^="tel:"]')];
     const inView = (element) => {
       const rect = element.getBoundingClientRect();
       return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < innerHeight;
