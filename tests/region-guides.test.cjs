@@ -25,6 +25,7 @@ for (const guide of regionGuides) {
   assert.equal((html.match(/property="og:description"/gi) || []).length, 1, 'each regional guide has one Open Graph description');
   assert.equal((html.match(/property="og:url"/gi) || []).length, 1, 'each regional guide has one Open Graph URL');
   assert.doesNotMatch(html, /service-areas\//i);
-  for (const [question] of guide.faqs) assert.match(html, new RegExp(question.replace(/[?]/g, '\\?')));
+  for (const [question] of guide.faqs.filter(([q])=>q.endsWith('?'))) assert.match(html, new RegExp(question.replace(/[?]/g, '\\?')));
+  assert(!html.includes('class="service-information"'),'regional prose is not followed by retired one-sentence statement walls');
 }
 console.log('Regional guide contract passed.');

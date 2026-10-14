@@ -7,13 +7,13 @@ import { renderFooter } from './footer.mjs';
 import { renderHead } from './head.mjs';
 import { renderNavigation } from './navigation.mjs';
 
-function renderSections(sections: readonly ContentSection[]): string {
-  return sections.map(section => section.kind === 'rich' ? section.html : renderFaq(section.items, section.container)).join('');
+function renderSections(sections: readonly ContentSection[],pageFile:string): string {
+  return sections.map(section => section.kind === 'rich' ? section.html : renderFaq(section.items, section.container,pageFile)).join('');
 }
 
 function renderHeroPage(page: PageData): string {
   if (page.hero === null) throw new Error(`Invalid ${page.kind} page: missing hero for ${page.file}`);
-  return page.hero + renderSections(page.sections);
+  return page.hero + renderSections(page.sections,page.file);
 }
 
 function renderArticle(page: PageData): string {
@@ -22,7 +22,7 @@ function renderArticle(page: PageData): string {
   if (page.hero !== null || !page.mainAttributes.class?.split(/\s+/).includes('article')) {
     throw new Error(`Invalid article layout for ${page.file}`);
   }
-  return renderSections(page.sections);
+  return renderSections(page.sections,page.file);
 }
 
 function renderContent(page: PageData): string {

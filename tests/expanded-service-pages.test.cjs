@@ -18,7 +18,8 @@ test('confirmed services are reachable, distinct native pages with matching FAQ 
   const clean=s=>s.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
   const visible=[...main.matchAll(/<details><summary>([\s\S]*?)<\/summary><p>([\s\S]*?)<\/p><\/details>/g)].map(x=>[clean(x[1]),clean(x[2])]);
   assert.equal(visible.length,2,file+': compact related FAQ');
-  assert(main.includes('class="service-information"'),file+': retained declarative service answers');
+  assert(!main.includes('class="service-information"'),file+': useful service chapters replace fragmented declarative-answer walls');
+  assert(main.includes('id="service-scope"')&&main.includes('id="service-scenarios"'),file+': complete scope and scenario chapters retained');
   assert.deepEqual(graph.find(x=>x['@type']==='FAQPage').mainEntity.map(x=>[x.name,x.acceptedAnswer.text]),visible);
   assert(main.includes('href="tel:0413477667"')&&hasLocalLink(main,'contact.html'));
  }

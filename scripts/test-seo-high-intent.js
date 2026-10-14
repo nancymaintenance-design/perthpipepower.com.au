@@ -26,7 +26,7 @@ assert.match(main(toilets), /blocked toilet/i);
 assert.match(main(toilets), /href="blocked-drains-perth\.html"/);
 
 const burst = read('burst-pipe-repair-perth.html');
-assert.match(main(burst), /Burst-pipe safety and first actions/i);
+assert.match(main(burst), /Do not enter water near electrical equipment/i,'substantive burst-pipe safety remains without an extra one-line heading');
 assert.match(main(burst), /do not|keep clear|safe/i);
 assert.match(main(burst), /href="water-leak-detection-perth\.html"/);
 

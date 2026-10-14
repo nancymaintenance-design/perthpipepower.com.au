@@ -185,7 +185,44 @@ for(const [file,previous]of Object.entries(approved.pages)){
  }
  approved.pages[file]=snapshotFromTree(tree,previous);
 }
-Object.assign(approved.assets,policy.runtimeHashes,homeCorrection.runtimeHashes);
+const beforeCoherentPresentation=structuredClone(approved);
+// Reviewed presentation correction: retire all 125 converted FAQ statement
+// walls, keep the substantive work/education chapters and compact actual FAQ.
+for(const [file,previous]of Object.entries(approved.pages)){
+ const tree=JSON.parse(previous.dom),main=walk(tree).find(n=>isEl(n,'main'));
+ for(const parent of walk(main)){
+  const c=childList(parent);
+  for(let i=c.length-1;i>=0;i--)if(isEl(c[i],'div')&&attr(c[i],'class')==='service-information')c.splice(i,1);
+  for(let i=c.length-1;i>0;i--)if(c[i][0]==='text'&&c[i-1][0]==='text'){c[i-1][1]+=c[i][1];c.splice(i,1);}
+ }
+ const targets=require('../fixtures/content-navigation-repair/coherent-related.json')[file];
+ if(targets)for(const n of walk(main).filter(n=>isEl(n,'ul')&&attr(n,'class')==='intent-links')){
+  // Only the FAQ presenter owns this correction, not body/region directories.
+  const faq=walk(main).find(p=>isEl(p,'section')&&(attr(p,'class')||'').split(' ').includes('faq')&&walk(p).includes(n));if(!faq)continue;
+  n[4]=n[4].filter(li=>isEl(li,'li')&&walk(li).some(a=>isEl(a,'a')&&targets.includes(attr(a,'href'))));
+  if(n[4].length)n[3].find(a=>a[1]==='class')[2]='intent-links service-related-links';
+  else{const p=walk(main).find(p=>childList(p).includes(n));childList(p).splice(childList(p).indexOf(n),1);}
+ }
+ if(['plumbing.html','electrical.html'].includes(file)){
+  const heading=walk(main).find(n=>isEl(n,'h2')&&text(n)===(file==='plumbing.html'?'Assessment and written quotation':'Booking an Electrician: Symptoms, Safety and Access'));
+  assert(heading,file+': approved availability placement heading');
+  const parent=walk(main).find(n=>childList(n).includes(heading));
+  childList(parent).splice(childList(parent).indexOf(heading)+1,0,...parts('<p class="service-attendance-note">Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.</p>'));
+ }
+ approved.pages[file]=snapshotFromTree(tree,previous);
+}
+for(const [kind,map]of Object.entries(require('../fixtures/content-navigation-repair/coherent-heading-edits.json')))for(const [file,label]of Object.entries(map)){
+ const previous=approved.pages[file],tree=JSON.parse(previous.dom);
+ const old=kind==='scenarios'?'Common situations and what to report':'Service assessment and next steps';
+ const matches=walk(tree).filter(n=>isEl(n,'h2')&&text(n)===old);assert.equal(matches.length,1,file+': exact generic heading replacement');
+ matches[0][4]=[['text',label]];approved.pages[file]=snapshotFromTree(tree,previous);
+}
+for(const edit of require('../fixtures/content-navigation-repair/coherent-prose-edits.json')){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ const matches=walk(tree).filter(n=>n[0]==='text'&&n[1].includes(edit.before));assert.equal(matches.length,1,edit.file+': exact educational prose edit');
+ matches[0][1]=matches[0][1].replace(edit.before,edit.after);approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
+Object.assign(approved.assets,policy.runtimeHashes,homeCorrection.runtimeHashes,{'field-design.css':'5fd20822881dfeefd8303a76db8415af206086ffdd14a482384335bb3db9858b'});
 for(const change of policy.headStylesheets){
  const original=approved.pages[change.file],tree=JSON.parse(original.dom),head=walk(tree).find(n=>isEl(n,'head'));
  const i=head[4].findIndex(n=>isEl(n,'link')&&attr(n,'rel')==='stylesheet'&&attr(n,'href')===change.after);
@@ -200,4 +237,4 @@ function compareApprovedOutput(root,manifest=approved){
   return JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.expected)))!==JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.actual)));
  }).map(d=>({...d,expected:d.field==='dom'?'approved exact DOM including shared chrome':d.expected,actual:d.field==='dom'?'unexpected DOM difference':d.actual}));
 }
-module.exports={approved,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader,reviewedCopy};
+module.exports={approved,beforeCoherentPresentation,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader,reviewedCopy};

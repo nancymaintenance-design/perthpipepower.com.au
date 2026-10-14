@@ -245,7 +245,7 @@ export const page: PageData = {
 {
 "id": "section-2",
 "kind": "rich",
-"html": "\n<section class=\"section expanded-scenarios\"><div class=\"shell service-reading\"><h2 id=\"service-scenarios\">Common situations and what to report</h2><div class=\"expanded-scenario\"><h3>The fan is noisy but steam remains</h3><p>A running motor does not establish that air is being removed effectively. Fan performance, a restricted path and room ventilation can affect the result. Tell us whether airflow has changed, not just whether the fan makes a sound.</p></div><div class=\"expanded-scenario\"><h3>An exhaust fan has stopped working</h3><p>The fan, switch or electrical supply may need assessment. Note whether the bathroom light still operates and when the problem began. Do not remove a wet or ceiling-mounted unit to inspect wiring or ducting yourself.</p></div></div></section>" as TrustedHtml
+"html": "\n<section class=\"section expanded-scenarios\"><div class=\"shell service-reading\"><h2 id=\"service-scenarios\">Bathroom extraction faults and replacement fan suitability</h2><div class=\"expanded-scenario\"><h3>The fan is noisy but steam remains</h3><p>A running motor does not establish that air is being removed effectively. Fan performance, a restricted path and room ventilation can affect the result. Tell us whether airflow has changed, not just whether the fan makes a sound.</p></div><div class=\"expanded-scenario\"><h3>An exhaust fan has stopped working</h3><p>The fan, switch or electrical supply may need assessment. Note whether the bathroom light still operates and when the problem began. Do not remove a wet or ceiling-mounted unit to inspect wiring or ducting yourself.</p></div></div></section>" as TrustedHtml
 },
 {
 "id": "section-3",

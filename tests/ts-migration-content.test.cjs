@@ -201,9 +201,7 @@ function projectPage(page, layout, chrome, site) {
   page.breadcrumbs.forEach((item,i)=>{breadcrumbs=replace(breadcrumbs,`breadcrumb:${i}:label`,escape(item.label));if(item.href!==null)breadcrumbs=replace(breadcrumbs,`breadcrumb:${i}:href`,escape(item.href));});
   const sections=page.sections.map(section=>{
     if(section.kind==='rich')return section.html;
-    let out=section.container;
-    section.items.forEach((item,i)=>{out=replace(out,`faq:${i}:question`,escape(item.question));out=replace(out,`faq:${i}:answer`,item.answer);});
-    return out;
+    return require('../.build/site/templates/faq.mjs').renderFaq(section.items,section.container,page.file);
   }).join('');
   const main=replace((page.hero??'')+sections,'breadcrumbs',breadcrumbs);
   // Produce approved shared navigation, not the raw pre-unification template.

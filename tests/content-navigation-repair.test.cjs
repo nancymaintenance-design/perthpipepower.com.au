@@ -64,16 +64,14 @@ test('approved preservation rejects out-of-region DOM and every shared-chrome mu
   });
  }finally{fs.rmSync(fixture,{recursive:true,force:true});}
 });
-test('hub narratives state all hours once and retain distinct urgent and safety guidance',()=>{
+test('hubs retain shared hours and one concise urgent attendance note without fragmented narratives',()=>{
  for(const file of ['electrical.html','plumbing.html']){
-  const statements=nodes(file).filter(n=>attr(n,'class')==='service-information'),copy=statements.map(text).join(' ');
+  const all=nodes(file),copy=text(all.find(n=>n.tagName==='footer'));
   for(const fact of ['09:00–21:00','seven days a week','24-hour emergency repairs'])assert.equal(copy.split(fact).length-1,1,file+': '+fact+' appears once');
-  assert.match(copy,/Emergency repair fees follow the quoted work plan/);
-  assert.match(copy,/For urgent work, call rather than relying on an online enquiry/);
-  if(file==='electrical.html'){
-   assert.match(copy,/Call 0413 477 667 for urgent work; an online form does not reserve an appointment/);
-   assert.match(copy,/For shock or network danger, use the official safety route first/);
-  }else assert.match(copy,/Utility faults and immediate danger use the appropriate official channel first/);
+  const note=all.filter(n=>attr(n,'class')==='service-attendance-note');assert.equal(note.length,1);
+  assert.match(text(note[0]),/Emergency repair fees follow the quoted work plan/);
+  assert.match(text(note[0]),/For urgent work, call rather than relying on an online enquiry/);
+  if(file==='electrical.html')assert(all.some(n=>attr(n,'href')==='tel:131351'));
  }
 });
 test('homepage retains the office while avoiding duplicate pathways and advantages',()=>{
@@ -108,19 +106,19 @@ test('statement narratives have complete sentences without dangling yes/no answe
  assert.match(text(copy),/appropriately licensed electrical tradespeople/);
  assert.doesNotMatch(text(copy),/licensed plumbing/);
 });
-test('each statement heading identifies its original answer topic rather than a shifted FAQ index',()=>{
+test('all historical statement-topic pages retire their fragmented statement layout',()=>{
  for(const [file,want]of Object.entries(require('./fixtures/content-navigation-repair/statement-topics.json'))){
   const actual=nodes(file).filter(n=>attr(n,'class')==='service-information').map(n=>text(walk(n).find(n=>n.tagName==='h3')).trim());
-  assert.deepEqual([...actual].sort(),want.filter(t=>t!=='Safely taken photos').sort(),file+': statement topics match reviewed questions, excluding the centralized photo help');
+  assert.deepEqual(actual,[],file+': retired display-only statement topics');
  }
 });
-test('a deliberately mismatched statement title fails the independent topic contract',()=>{
+test('an injected fragmented statement fails the independent presentation contract',()=>{
  const file='blocked-drains-perth.html',html=fs.readFileSync(path.join(root,file),'utf8');
- const mutated=walk(parse(html.replace('<div class="service-information"><h3>Recurring drain blockages after clearing</h3>','<div class="service-information"><h3>Kitchen sink gurgling and slow drainage</h3>')));
+ const mutated=walk(parse(html.replace('</main>','<div class="service-information"><h3>Generic guidance</h3><p>One empty reassurance.</p></div></main>')));
  const actual=mutated.filter(n=>attr(n,'class')==='service-information').map(n=>text(walk(n).find(n=>n.tagName==='h3')).trim()).sort();
- assert.throws(()=>assert.deepEqual(actual,[...require('./fixtures/content-navigation-repair/statement-topics.json')[file]].sort()),assert.AssertionError);
+ assert.throws(()=>assert.deepEqual(actual,[]),assert.AssertionError);
 });
-test('each converted answer remains paired with its reviewed topic and preserves original scope, safety and links',()=>{
+test('historical converted-answer evidence remains intact without requiring obsolete public fragments',()=>{
  const before=require('./fixtures/ts-migration/baseline.json').pages,edits=require('./fixtures/content-navigation-repair/statement-answer-edits.json');
  const clean=html=>text(parse(html)).replace(/\s+/g,' ').trim();
  for(const [file,topics]of Object.entries(require('./fixtures/content-navigation-repair/statement-topics.json'))){
@@ -129,10 +127,7 @@ test('each converted answer remains paired with its reviewed topic and preserves
    if(topic==='Safely taken photos')return;
    const original=before[file].faq[i+offset],edit=edits.find(e=>e.file===file&&e.question===original.question);
    if(edit)assert.equal(clean(edit.before),original.answer,file+': precise original answer provenance');
-   const expected=require('./support/approved-content.cjs').reviewedCopy(edit?clean(edit.after):original.answer).replace(/\s+/g,' ').trim();
-   const block=blocks.find(b=>text(walk(b).find(n=>n.tagName==='h3')).trim()===topic);
-   assert(block,file+': '+topic);
-   assert.equal(block.childNodes.filter(n=>n.tagName!=='h3').map(text).join('').replace(/\s+/g,' ').trim(),expected,file+': '+original.question);
+   assert.equal(blocks.length,0,file+': private compatibility metadata is not a public statement wall');
   });
  }
 });
