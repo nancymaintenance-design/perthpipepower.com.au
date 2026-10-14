@@ -40,6 +40,7 @@ function inventory(dir, prefix = '') {
 function hashes(dir) { return Object.fromEntries(inventory(dir).map(file => [file, hash(fs.readFileSync(path.join(dir, file)))])); }
 const expectedFiles = [...Object.keys(baseline.pages), ...Object.keys(baseline.assets), ...Object.keys(baseline.artifacts)].sort();
 
+
 // A root-HTML, old-dist, or CommonJS-data fallback must fail even when the real
 // checkout happens to contain those files. Sync ESM bindings exercise the reader
 // used by production modules; the guard is installed before loading the builder.
@@ -301,4 +302,66 @@ test('explicit_compatibility_mirror_only_updates_registered_rendered_files', t =
   fs.mkdirSync(path.join(f.sourceRoot, 'privacy.html'));
   assert.throws(() => buildSite({ ...f, mirrorRoot: f.sourceRoot }), /mirror|regular file/i);
   assert.deepEqual(hashes(f.outDir), before);
+});
+
+for(const mirror of [false,true]) test(`hard_linked_${mirror?'mirror':'public_output'}_fails_before_any_write`, t => {
+  const {buildSite}=modules();
+    const f=fixture(t);buildSite(f);
+    const before=hashes(f.outDir),early=path.join(f.outDir,'about.html');
+    fs.utimesSync(early,new Date('2020-01-01'),new Date('2020-01-01'));
+    const mtime=fs.statSync(early).mtimeMs;
+    const target=path.join(mirror?f.sourceRoot:f.outDir,'western-suburbs.html');
+    const outside=path.join(f.dir,'outside-page.txt');
+    const original=mirror?'OUTSIDE MIRROR':fs.readFileSync(target);
+    fs.writeFileSync(outside,original);
+    if(fs.existsSync(target))fs.unlinkSync(target);
+    fs.linkSync(outside,target);assert.equal(fs.lstatSync(target).nlink,2);
+    assert.throws(()=>buildSite({...f,...(mirror?{mirrorRoot:f.sourceRoot}:{})}),/hard.link/i);
+    assert.deepEqual(fs.readFileSync(outside),Buffer.from(original));
+    assert.deepEqual(hashes(f.outDir),before);
+    assert.equal(fs.statSync(early).mtimeMs,mtime,'later linked target must fail before any earlier write');
+});
+
+test('hard_link_guard_accepts_normal_directory_link_counts', t => {
+  const f=fixture(t),{assertNoLinks}=modules(),original=fs.lstatSync;
+  fs.lstatSync=function(...args){const stat=original(...args);if(stat?.isDirectory())stat.nlink=3;return stat;};
+  syncBuiltinESMExports();
+  try {assert.doesNotThrow(()=>assertNoLinks(f.sourceRoot));}
+  finally {fs.lstatSync=original;syncBuiltinESMExports();}
+});
+
+test('hard_linked_owner_manifest_fails_before_output_or_mirror_write', t => {
+  const f=fixture(t),runtime=f.sourceRoot;
+  // All physical links, compiled fixture modules and outputs remain under REPORT.
+  fs.cpSync(path.join(root,'.build/site'),path.join(runtime,'.build/site'),{recursive:true});
+  fs.mkdirSync(path.join(runtime,'data'));
+  for(const file of ['perth-suburbs.json','editorial-content-dates.json','sitemap-content-dates.json'])fs.copyFileSync(path.join(root,'data',file),path.join(runtime,'data',file));
+  fs.symlinkSync(path.join(root,'node_modules'),path.join(runtime,'node_modules'),'junction');
+  const outDir=path.join(runtime,'dist');
+  const code=`const {buildSite}=require(${JSON.stringify(path.join(runtime,'.build/site/build/write-output.mjs'))});buildSite(${JSON.stringify({sourceRoot:runtime,outDir,mirrorRoot:runtime})});`;
+  const first=spawnSync(process.execPath,['-e',code],{encoding:'utf8'});
+  assert.equal(first.status,0,first.stderr);
+  const manifest=path.join(runtime,'.build/output-manifests',hash(outDir.toLowerCase())+'.json');
+  const outside=path.join(f.dir,'outside-manifest.json'),original=fs.readFileSync(manifest);
+  fs.writeFileSync(outside,original);fs.unlinkSync(manifest);fs.linkSync(outside,manifest);
+  assert.equal(fs.lstatSync(manifest).nlink,2);
+  const targets=[path.join(outDir,'about.html'),path.join(runtime,'about.html')];
+  for(const file of targets)fs.utimesSync(file,new Date('2020-01-01'),new Date('2020-01-01'));
+  const mtimes=targets.map(file=>fs.statSync(file).mtimeMs),before=hashes(outDir);
+  const second=spawnSync(process.execPath,['-e',code],{encoding:'utf8'});
+  assert.notEqual(second.status,0,'hard-linked owner manifest must fail');
+  assert.match(second.stderr,/hard.link/i);
+  assert.deepEqual(fs.readFileSync(outside),original);
+  assert.deepEqual(hashes(outDir),before);
+  assert.deepEqual(targets.map(file=>fs.statSync(file).mtimeMs),mtimes);
+});
+
+test('hard_linked_standalone_asset_destination_is_refused_before_pending_copy', t => {
+  const {copyPublicAssets}=modules(),f=fixture(t);fs.mkdirSync(f.outDir);
+  const outside=path.join(f.dir,'outside.css'),target=path.join(f.outDir,'site.css');
+  fs.copyFileSync(path.join(f.sourceRoot,'site.css'),outside);fs.linkSync(outside,target);
+  const original=fs.readFileSync(outside);
+  assert.throws(()=>copyPublicAssets(f.sourceRoot,f.outDir,['navigation.css','site.css']),/hard.link/i);
+  assert.deepEqual(fs.readFileSync(outside),original);
+  assert.deepEqual(fs.readdirSync(f.outDir),['site.css']);
 });

@@ -9,6 +9,39 @@ fs.mkdirSync(report, {recursive:true});
 function fixture() { return fs.mkdtempSync(path.join(report, 'case-')); }
 function compat() { return require('../scripts/lib/ts-compat.cjs'); }
 
+test('hard_links_in_fixture_pages_fail_before_writes', () => {
+  const root=fixture(),targetRoot=path.join(root,'selected');
+  fs.mkdirSync(targetRoot);
+  try {
+    const outside=path.join(root,'outside-page.txt'),target=path.join(targetRoot,'power-points-perth.html');
+    fs.writeFileSync(outside,'OUTSIDE PAGE');fs.linkSync(outside,target);
+    assert.equal(fs.lstatSync(target).nlink,2);
+    const {buildExpandedServices}=require('../scripts/build-expanded-services.cjs');
+    assert.throws(()=>buildExpandedServices(targetRoot),/hard.link/i);
+    assert.equal(fs.readFileSync(outside,'utf8'),'OUTSIDE PAGE');
+    assert.deepEqual(fs.readdirSync(targetRoot),['power-points-perth.html'],'no earlier generated file may be written');
+  } finally {
+    assert.ok(path.relative(report,root)&&!path.relative(report,root).startsWith('..'));
+    fs.rmSync(root,{recursive:true,force:true});
+  }
+});
+
+test('hard_links_in_locality_sitemaps_preserve_outside_fixture_bytes', () => {
+  const root=fixture(),targetRoot=path.join(root,'selected');fs.mkdirSync(targetRoot);
+  try {
+    const outsideMap=path.join(root,'outside-sitemap.xml'),map=path.join(targetRoot,'sitemap.xml');
+    const original='<urlset><url><loc>https://perthpipepower.com.au/service-areas/test.html</loc></url></urlset>';
+    fs.writeFileSync(outsideMap,original);fs.linkSync(outsideMap,map);
+    const {updateSitemap}=require('../scripts/build-perth-service-areas.js');
+    assert.throws(()=>updateSitemap([],map),/hard.link/i);
+    assert.equal(fs.readFileSync(outsideMap,'utf8'),original);
+    assert.equal(fs.readFileSync(map,'utf8'),original);
+  } finally {
+    assert.ok(path.relative(report,root)&&!path.relative(report,root).startsWith('..'));
+    fs.rmSync(root,{recursive:true,force:true});
+  }
+});
+
 test('controlled synchronous compiled loading and readonly legacy readers', () => {
   const {loadCompiledModule} = compat();
   assert.equal(typeof loadCompiledModule('site/content/pages.mjs').loadSiteData, 'function');

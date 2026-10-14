@@ -12,7 +12,7 @@ export function inside(root: string, target: string): boolean {
   return rel !== '' && rel !== '..' && !rel.startsWith(`..${sep}`) && !isAbsolute(rel);
 }
 
-/** Existing ancestors must be directories; every component must be link-free. */
+/** Ancestors must be directories; reject symbolic links and shared regular-file inodes. */
 export function assertNoLinks(location: string): void {
   const target = resolve(location), disk = parse(target).root;
   let current = disk;
@@ -20,6 +20,7 @@ export function assertNoLinks(location: string): void {
     current = resolve(current, part);
     const stat = lstatSync(current, { throwIfNoEntry: false });
     if (stat?.isSymbolicLink()) throw new Error(`Unsafe symbolic link or junction: ${current}`);
+    if (stat?.isFile() && stat.nlink > 1) throw new Error(`Unsafe hard-linked regular file: ${current}`);
     if (stat && current !== target && !stat.isDirectory()) throw new Error(`Unsafe path ancestor is not a directory: ${current}`);
   }
 }
