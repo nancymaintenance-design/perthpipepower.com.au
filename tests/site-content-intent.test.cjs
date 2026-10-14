@@ -24,7 +24,7 @@ test('all visible FAQ answers agree with structured data and have unique questio
  for(const f of files){
   const h=read(f),m=h.match(/<main\b[\s\S]*?<\/main>/)[0];
   const visible=[...m.matchAll(/<details\b[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)].map(x=>[clean(x[1]),clean(x[2])]);
-  if(f==='index.html'){assert.equal(visible.length,0,'homepage uses one informative service narrative');assert(!/"@type":\s*"FAQPage"/.test(h),'homepage makes no FAQPage claim');continue;}
+  if(['index.html','about.html'].includes(f)){assert.equal(visible.length,0,f+': informative company/service narrative without redundant FAQ');assert(!/"@type":\s*"FAQPage"/.test(h),f+': makes no FAQPage claim');continue;}
   assert(visible.length>=1,f+': useful customer FAQ missing');
   assert.equal(new Set(visible.map(q=>q[0])).size,visible.length,f+': repeated FAQ');
   const graph=JSON.parse(h.match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];

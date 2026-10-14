@@ -223,7 +223,7 @@ export const page: PageData = {
 },
 {
 "question": "Does sending this form confirm the appointment or price?",
-"answer": "<p>No. The team contacts you to agree the visit and assessment requirements. The written quote confirms the agreed work and price; submitting the form does not approve a repair or guarantee an arrival time.</p>" as TrustedHtml
+"answer": "<p>No. The team contacts you to agree the visit and assessment requirements. The written quote confirms the agreed work and price, and the team confirms the appointment with you.</p>" as TrustedHtml
 },
 {
 "question": "The repair property address and our office address",

@@ -67,7 +67,7 @@ test('approved preservation rejects out-of-region DOM and every shared-chrome mu
 test('hub narratives state all hours once and retain distinct urgent and safety guidance',()=>{
  for(const file of ['electrical.html','plumbing.html']){
   const statements=nodes(file).filter(n=>attr(n,'class')==='service-information'),copy=statements.map(text).join(' ');
-  for(const fact of ['09:00–21:00','seven days a week','24-hour emergency repairs','No arrival time is guaranteed'])assert.equal(copy.split(fact).length-1,1,file+': '+fact+' appears once');
+  for(const fact of ['09:00–21:00','seven days a week','24-hour emergency repairs'])assert.equal(copy.split(fact).length-1,1,file+': '+fact+' appears once');
   assert.match(copy,/Emergency repair fees follow the quoted work plan/);
   assert.match(copy,/For urgent work, call rather than relying on an online enquiry/);
   if(file==='electrical.html'){
@@ -128,7 +128,7 @@ test('each converted answer remains paired with its reviewed topic and preserves
   topics.forEach((topic,i)=>{
    const original=before[file].faq[i+offset],edit=edits.find(e=>e.file===file&&e.question===original.question);
    if(edit)assert.equal(clean(edit.before),original.answer,file+': precise original answer provenance');
-   const expected=edit?clean(edit.after):original.answer;
+   const expected=require('./support/approved-content.cjs').reviewedCopy(edit?clean(edit.after):original.answer).replace(/\s+/g,' ').trim();
    const block=blocks.find(b=>text(walk(b).find(n=>n.tagName==='h3')).trim()===topic);
    assert(block,file+': '+topic);
    assert.equal(block.childNodes.filter(n=>n.tagName!=='h3').map(text).join('').replace(/\s+/g,' ').trim(),expected,file+': '+original.question);

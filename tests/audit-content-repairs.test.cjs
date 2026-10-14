@@ -83,7 +83,7 @@ test('regional titles fit 60 characters and social titles stay aligned through t
 });
 test('electrical photos are discoverable in native regional HTML and hydration preserves prerendered nodes',()=>{
  const {regionGuides,applyGuide}=require('../scripts/build-region-guides.js');const gallery=require('../electrical-work-gallery.js');
- for(const g of regionGuides){for(const h of [main(g.route),applyGuide(read(g.route),g)]){assert.equal((h.match(/<figure class="electrical-work-gallery__card">/g)||[]).length,8,g.route);assert.match(h,/not assigned to a particular suburb/);}}
+ for(const g of regionGuides){for(const h of [main(g.route),applyGuide(read(g.route),g)]){assert.equal((h.match(/<figure class="electrical-work-gallery__card">/g)||[]).length,8,g.route);assert.match(h,/Company electrical work photographs illustrate installation and repair stages/);assert.doesNotMatch(h,/nearby cases|local projects|regional cases/i);}}
  let writes=0;const target={querySelector:()=>({}),set innerHTML(value){writes++;}};
  assert.equal(gallery.mountElectricalWorkGalleries({querySelectorAll:()=>[target]}),1);assert.equal(writes,0,'prerendered gallery must retain DOM nodes');
 });

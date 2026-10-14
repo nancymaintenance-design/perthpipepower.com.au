@@ -93,6 +93,54 @@ for(const record of policy.changes){const original=approved.pages[record.file],t
  }
  approved.pages['index.html']=snapshotFromTree(tree,previous);
 }
+// Exact, independently reviewed copy edits layered on the prior immutable contract.
+const trustCleanup=require('../fixtures/content-navigation-repair/trust-copy-cleanup.json');
+for(const [file,previous]of Object.entries(approved.pages)){
+ const tree=JSON.parse(previous.dom);
+ for(const edit of trustCleanup.text.filter(e=>e.file===file)){
+  const node=edit.path.reduce((n,i)=>childList(n)[i],tree);
+  assert.equal(node[0],'text',file+': approved text-node boundary');
+  assert.equal(require('node:crypto').createHash('sha256').update(node[1]).digest('hex'),edit.hash,file+': prior text provenance');
+  assert.equal(node[1].slice(edit.start,edit.start+edit.before.length),edit.before);
+  node[1]=node[1].slice(0,edit.start)+edit.after+node[1].slice(edit.start+edit.before.length);
+ }
+ if(file==='about.html'){
+  const sections=walk(tree).filter(n=>isEl(n,'section')&&walk(n).some(c=>isEl(c,'h2')&&text(c)==='Company registration and trade documentation'));
+  assert.equal(sections.length,1,'exact rejected About section');
+  const parent=walk(tree).find(n=>childList(n).includes(sections[0]));
+  childList(parent).splice(childList(parent).indexOf(sections[0]),1);
+  const scripts=walk(tree).filter(n=>isEl(n,'script')&&attr(n,'type')==='application/ld+json');
+  assert.equal(scripts.length,1);const graph=JSON.parse(text(scripts[0]));
+  assert.equal(graph['@graph'].filter(n=>n['@type']==='FAQPage').length,1);
+  graph['@graph']=graph['@graph'].filter(n=>n['@type']!=='FAQPage');
+  scripts[0][4]=[['text',JSON.stringify(graph,null,2)]];
+ }
+ approved.pages[file]=snapshotFromTree(tree,previous);
+}
+for(const [file,previous]of Object.entries(approved.pages)){
+ const tree=JSON.parse(previous.dom);
+ for(const edit of require('../fixtures/content-navigation-repair/trust-copy-follow-up.json').text.filter(e=>e.file===file)){
+  const node=edit.path.reduce((n,i)=>childList(n)[i],tree);
+  assert.equal(node[0],'text');
+  assert.equal(require('node:crypto').createHash('sha256').update(node[1]).digest('hex'),edit.hash,file+': follow-up text provenance');
+  assert.equal(node[1].slice(edit.start,edit.start+edit.before.length),edit.before);
+  node[1]=node[1].slice(0,edit.start)+edit.after+node[1].slice(edit.start+edit.before.length);
+ }
+ approved.pages[file]=snapshotFromTree(tree,previous);
+}
+const finalCopy=require('../fixtures/content-navigation-repair/trust-copy-final.json');
+for(const [file,previous]of Object.entries(approved.pages)){
+ const tree=JSON.parse(previous.dom);
+ for(const edit of finalCopy.text.filter(e=>e.file===file)){
+  const node=edit.path.reduce((n,i)=>childList(n)[i],tree);
+  assert.equal(node[0],'text');assert.equal(node[1],edit.before,file+': final-copy provenance');
+  node[1]=edit.after;
+ }
+ approved.pages[file]=snapshotFromTree(tree,previous);
+}
+function reviewedCopy(s){return [...require('../fixtures/content-navigation-repair/trust-copy-rules.json'),...finalCopy.rules].reduce((v,[a,b])=>v.replace(new RegExp(a.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/\s+/g,'\\s+'),'g'),b),s);}
+assert.equal(approved.artifacts['llms.txt'].split(' No arrival time is guaranteed.').length-1,1,'one approved shared-hours companion edit');
+approved.artifacts['llms.txt']=reviewedCopy(approved.artifacts['llms.txt']);
 Object.assign(approved.assets,policy.runtimeHashes,homeCorrection.runtimeHashes);
 for(const change of policy.headStylesheets){
  const original=approved.pages[change.file],tree=JSON.parse(original.dom),head=walk(tree).find(n=>isEl(n,'head'));
@@ -108,4 +156,4 @@ function compareApprovedOutput(root,manifest=approved){
   return JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.expected)))!==JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.actual)));
  }).map(d=>({...d,expected:d.field==='dom'?'approved exact DOM including shared chrome':d.expected,actual:d.field==='dom'?'unexpected DOM difference':d.actual}));
 }
-module.exports={approved,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader};
+module.exports={approved,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader,reviewedCopy};

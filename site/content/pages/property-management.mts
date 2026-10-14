@@ -261,7 +261,7 @@ export const page: PageData = {
 },
 {
 "question": "Can one request cover a plumbing and an electrical problem?",
-"answer": "<p>Yes. Describe each symptom and location separately and include the same property reference. The team confirms which trades and tasks are required. Coordination does not guarantee one diagnosis, one contractor approval or completion in a single visit.</p>" as TrustedHtml
+"answer": "<p>Yes. Describe each symptom and location separately and include the same property reference. The team confirms which trades and tasks are required. </p>" as TrustedHtml
 },
 {
 "question": "Strata work-order details",

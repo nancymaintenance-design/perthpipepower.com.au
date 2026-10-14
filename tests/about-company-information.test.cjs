@@ -17,7 +17,7 @@ for (const expected of [
   'maxinemaintenance.au@outlook.com',
   'How a repair request moves forward',
   'Licensing &amp; insurance',
-  'Company registration and trade documentation',
+  'Registered business details.',
   'dedicated local repair team',
   'appropriately licensed plumbing and electrical tradespeople',
 ]) {

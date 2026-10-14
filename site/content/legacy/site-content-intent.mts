@@ -130,15 +130,12 @@ const legacy = compatibilityView({
             ]
           },
           {
-            "$source": "fragment",
-            "file": "about.html",
+            "$source": "page",
+            "file": "contact.html",
             "path": [
-              "sections",
-              9,
-              "container"
-            ],
-            "node": [0, 0, 4, 2],
-            "mode": "text"
+              "seo",
+              "title"
+            ]
           }
         ],
         [
@@ -157,67 +154,17 @@ const legacy = compatibilityView({
               0,
               "html"
             ],
-            "node": [0, 0, 8, 1],
+            "node": [
+              0,
+              0,
+              8,
+              1
+            ],
             "mode": "text"
           }
         ]
       ],
-      "faq": [
-        [
-          {
-            "$source": "page",
-            "file": "about.html",
-            "path": [
-              "sections",
-              9,
-              "items",
-              0,
-              "question"
-            ]
-          },
-          {
-            "$source": "fragment",
-            "file": "about.html",
-            "path": [
-              "sections",
-              9,
-              "items",
-              0,
-              "answer"
-            ],
-            "node": [],
-            "mode": "text",
-            "trim": true
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "about.html",
-            "path": [
-              "sections",
-              9,
-              "items",
-              1,
-              "question"
-            ]
-          },
-          {
-            "$source": "fragment",
-            "file": "about.html",
-            "path": [
-              "sections",
-              9,
-              "items",
-              1,
-              "answer"
-            ],
-            "node": [],
-            "mode": "text",
-            "trim": true
-          }
-        ]
-      ]
+      "faq": []
     },
     "plumbing.html": {
       "primary": "plumber Perth",

@@ -257,8 +257,8 @@ export const page: PageData = {
 "answer": "<p>Only when the written scope expressly includes it. Confirm pipe access, repair, testing and any separate restoration or other trade work rather than assuming that repairing the pipe restores every affected surface.</p>" as TrustedHtml
 },
 {
-"question": "Does an active leak guarantee an immediate call-out?",
-"answer": "<p>No. Call to explain the current condition and confirm availability and charges. Keep people clear of hazards; a normal booking request is not a substitute for emergency or utility action where needed.</p>" as TrustedHtml
+"question": "How do I arrange an urgent burst-pipe repair?",
+"answer": "<p>Call to explain the current condition and confirm availability and charges. Keep people clear of hazards; a normal booking request is not a substitute for emergency or utility action where needed.</p>" as TrustedHtml
 },
 {
 "question": "Concealed burst-pipe and leak signs",

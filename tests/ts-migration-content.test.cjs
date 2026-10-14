@@ -74,13 +74,13 @@ test('malformed structured content and unresolved tokens fail validation before 
     s => s.pages[0].seo.jsonLdSource.pop(),
     s => {delete s.pages[0].seo.jsonLdSource;s.pages[0].seo.jsonLd[0]=undefined;},
     s => s.layouts[s.pages[0].layoutId].headSlots.push({kind:'seo',key:'social'}),
-    s => s.pages[0].sections.find(x=>x.kind==='faq').items[0].question = 7,
-    s => s.pages[0].sections.find(x=>x.kind==='faq').container += '{{ppp:faq:999:answer}}',
+    s => s.pages.find(p=>p.file==='plumbing.html').sections.find(x=>x.kind==='faq').items[0].question = 7,
+    s => s.pages.find(p=>p.file==='plumbing.html').sections.find(x=>x.kind==='faq').container += '{{ppp:faq:999:answer}}',
     s => s.pages[0].breadcrumbContainer += '{{ppp:breadcrumb:999:label}}',
     s => {const key=Object.keys(s.pages[0].chromeBindings)[0];delete s.pages[0].chromeBindings[key];}
     ,s => s.layouts[s.pages[0].layoutId].headSlots.push({kind:'static',html:'<meta name=description content=shadow>'})
     ,s => {const page=s.pages.find(p=>p.file==='privacy.html');page.breadcrumbs=[];page.breadcrumbContainer=null;}
-    ,s => s.pages[0].sections.find(x=>x.kind==='faq').items[0].answer += '{{ppp:unknown}}'
+    ,s => s.pages.find(p=>p.file==='plumbing.html').sections.find(x=>x.kind==='faq').items[0].answer += '{{ppp:unknown}}'
   ]) {
     const site=loadSiteData();mutate(site);
     assert.ok(validateSiteData(site).length,'malformed data must fail');

@@ -313,7 +313,7 @@ export const page: PageData = {
 },
 {
 "question": "Is a tripping safety switch always a problem with the switch itself?",
-"answer": "<p>No. The affected installation, connected equipment and protective device may need assessment. A trip alone is not evidence that replacing the switch will resolve the cause.</p>" as TrustedHtml
+"answer": "<p>The electrician assesses the installation, connected equipment and protective device to identify the cause and the appropriate repair.</p>" as TrustedHtml
 }
 ]
 },

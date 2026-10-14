@@ -8,7 +8,7 @@ export const business = {
 };
 export const hours = {
   days:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'09:00',closes:'21:00',
-  get text():string {return `Routine service hours: ${this.opens}–${this.closes}, ${this.days.length===7?'seven days a week':this.days.join(', ')}. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed.`;}
+  get text():string {return `Routine service hours: ${this.opens}–${this.closes}, ${this.days.length===7?'seven days a week':this.days.join(', ')}. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work.`;}
 };
 export function sharedValue(key:string):string {
   if(key==='business.addressLine')return `${business.address.streetAddress}, ${business.address.addressLocality} ${business.address.addressRegion} ${business.address.postalCode}`;
