@@ -12,6 +12,14 @@ const seoKeys=new Set(['title','description','canonical','robots','social','json
 const artifacts=new Set(['sitemap.xml','robots.txt','llms.txt','ai-content.json','feed.xml','rss.xml','atom.xml']);
 const token=(name:string):string=>`{{ppp:${name}}}`;
 const count=(value:string,needle:string):number=>value.split(needle).length-1;
+// Marker detection must not serialize malformed JSON-LD before its diagnostic
+// guard. Visit each object once so cycles and BigInt still reach that guard.
+function containsReservedMarker(value:unknown,seen=new Set<object>()):boolean {
+  if(typeof value==='string')return value.includes('{{ppp:');
+  if(!value||typeof value!=='object'||seen.has(value))return false;
+  seen.add(value);
+  return Object.entries(value).some(([key,item])=>key.includes('{{ppp:')||containsReservedMarker(item,seen));
+}
 function shadowSeo(fragment:string):boolean {
   function walk(n:T.Node):boolean {
     if('tagName' in n){
@@ -48,7 +56,7 @@ export function validateSiteData(site:SiteData):Difference[] {
       fail(file,'seo.shape','complete typed SEO fields',page.seo);continue;
     }
     const seo=page.seo;
-    for(const value of [page.mainAttributes,page.chromeBindings,seo])if(JSON.stringify(value)?.includes('{{ppp:'))fail(file,'reserved.marker','no markers in emitted values',value);
+    for(const value of [page.mainAttributes,page.chromeBindings,seo])if(containsReservedMarker(value))fail(file,'reserved.marker','no markers in emitted values',value);
     try{const url=new URL(seo.canonical as string);if(url.origin!=='https://perthpipepower.com.au'||url.username||url.password||url.search||url.hash||url.pathname!==(file==='index.html'?'/':`/${file}`))fail(file,'canonical','matching route on https://perthpipepower.com.au',seo.canonical);}
     catch{fail(file,'canonical','absolute approved canonical URL',seo.canonical);}
     for(const item of seo.social as unknown[])if(!record(item)||!['name','property'].includes(String(item.attribute))||typeof item.key!=='string'||!/^(og:|twitter:)/.test(item.key)||typeof item.value!=='string')fail(file,'social','typed social metadata',item);

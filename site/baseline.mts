@@ -154,11 +154,13 @@ export function comparePublicOutput(publicRoot: string, manifest: BaselineManife
     // and reordered attributes but compares the complete text-preserving DOM.
     for (const field of ['title', 'description', 'canonical', 'robots', 'headings', 'faq', 'jsonLd', 'dom', 'rawText'] as const) compare(file, field, expected[field], actual[field]);
   }
+  for (const file of publicAssets(publicRoot)) if (!Object.hasOwn(manifest.assets, file)) compare(file, 'unexpected', null, 'asset');
   for (const [file, expected] of Object.entries(manifest.assets)) {
     const location = checkedPath(publicRoot, file);
     if (!existsSync(location)) compare(file, 'missing', expected, null);
     else compare(file, 'sha256', expected, hash(readFileSync(location)));
   }
+  for (const file of artifactNames) if (existsSync(resolve(publicRoot, file)) && !Object.hasOwn(manifest.artifacts, file)) compare(file, 'unexpected', null, 'artifact');
   for (const [file, expected] of Object.entries(manifest.artifacts)) {
     const location = checkedPath(publicRoot, file);
     if (!existsSync(location)) { compare(file, 'missing', expected, null); continue; }

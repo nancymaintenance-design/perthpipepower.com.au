@@ -1,5 +1,5 @@
-// Markup integration runs after the content builders; original photographs remain available.
-const fs=require('node:fs'),path=require('node:path');
+// Pure historical markup transform only; canonical page records own public HTML.
+const {retired}=require('./lib/ts-compat.cjs');
 const photoStems=['perth-property-service','images/electrical-work/kitchen-lighting-wide','images/electrical-work/renovation-rewiring','images/electrical-work/residential-switchboard'];
 const photoWidths=stem=>stem.endsWith('/renovation-rewiring')?[480,828]:[480,960];
 function responsiveMarkup(html,file){
@@ -21,14 +21,5 @@ function responsiveMarkup(html,file){
  }
  return html;
 }
-function applyResponsiveMedia(root){
- const changed=[];
- for(const file of fs.readdirSync(root).filter(f=>f.endsWith('.html')&&f!=='privacy.html')){
-  const target=path.join(root,file),old=fs.readFileSync(target,'utf8');
-  const next=responsiveMarkup(old,file).replace(/\r\n/g,'\n').replace(/\n/g,'\r\n');
-  if(next!==old){fs.writeFileSync(target,next);changed.push(file);}
- }
- return changed;
-}
-if(require.main===module)console.log(JSON.stringify({changed:applyResponsiveMedia(path.resolve(__dirname,'..'))}));
-module.exports={responsiveMarkup,applyResponsiveMedia,photoStems,photoWidths};
+if(require.main===module)retired();
+module.exports={responsiveMarkup,applyResponsiveMedia:retired,photoStems,photoWidths};

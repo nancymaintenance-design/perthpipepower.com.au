@@ -365,3 +365,40 @@ test('hard_linked_standalone_asset_destination_is_refused_before_pending_copy', 
   assert.deepEqual(fs.readFileSync(outside),original);
   assert.deepEqual(fs.readdirSync(f.outDir),['site.css']);
 });
+
+// Directly exercises deletion ownership rather than merely rejecting an extra
+// path. feed.xml is an allowed optional artifact absent from current output.
+for(const state of ['owned','changed','unowned','out-of-universe','invalid-digest','wrong-outdir'])test(`stale_optional_artifact_${state}_respects_preflight_ownership`,t=>{
+  const {buildSite}=modules(),f=fixture(t);
+  buildSite({...f,mirrorRoot:f.sourceRoot});
+  const owner=path.join(root,'.build/output-manifests',hash(f.outDir.toLowerCase())+'.json');
+  t.after(()=>fs.rmSync(owner,{force:true}));
+  const manifest=JSON.parse(fs.readFileSync(owner,'utf8'));
+  const stale=path.join(f.outDir,'feed.xml'),original='<feed>PREVIOUS OWNED OPTIONAL ARTIFACT</feed>';
+  fs.writeFileSync(stale,original);
+  if(state!=='unowned')manifest.files['feed.xml']=hash(original);
+  if(state==='changed')fs.writeFileSync(stale,'USER MODIFIED OPTIONAL ARTIFACT');
+  if(state==='out-of-universe')manifest.files['../outside.txt']=hash('OUTSIDE');
+  if(state==='invalid-digest')manifest.files['feed.xml']='NOT_A_SHA256';
+  if(state==='wrong-outdir')manifest.outDir=f.sourceRoot;
+  fs.writeFileSync(owner,JSON.stringify(manifest));
+  const outside=path.join(f.dir,'outside.txt');fs.writeFileSync(outside,'OUTSIDE');
+  const sentinels=[path.join(f.outDir,'about.html'),path.join(f.sourceRoot,'about.html'),stale,owner,outside];
+  for(const file of sentinels)fs.utimesSync(file,new Date('2020-01-01'),new Date('2020-01-01'));
+  const beforeOutput=hashes(f.outDir),beforeMirror=hashes(f.sourceRoot);
+  const before=sentinels.map(file=>[fs.readFileSync(file),fs.statSync(file).mtimeMs]);
+  if(state==='owned'){
+    buildSite({...f,mirrorRoot:f.sourceRoot});
+    assert.equal(fs.existsSync(stale),false,'only hash-matching registered stale artifact is deleted');
+    delete beforeOutput['feed.xml'];
+    assert.deepEqual(hashes(f.outDir),beforeOutput);
+    assert.deepEqual(hashes(f.sourceRoot),beforeMirror);
+    assert.ok(!Object.hasOwn(JSON.parse(fs.readFileSync(owner,'utf8')).files,'feed.xml'));
+    assert.deepEqual([fs.readFileSync(outside),fs.statSync(outside).mtimeMs],before[4]);
+  }else{
+    assert.throws(()=>buildSite({...f,mirrorRoot:f.sourceRoot}),/unexpected|unowned|modified|hash|Invalid build owner manifest/i);
+    assert.deepEqual(hashes(f.outDir),beforeOutput);
+    assert.deepEqual(hashes(f.sourceRoot),beforeMirror);
+    assert.deepEqual(sentinels.map(file=>[fs.readFileSync(file),fs.statSync(file).mtimeMs]),before,'failure must precede every output/mirror/owner write or unlink');
+  }
+});

@@ -92,7 +92,7 @@ test('public_tests_exercise_dist_not_root', () => {
 });
 
 test('every legacy writing CLI exits with the canonical build guidance', () => {
-  for(const file of ['build-confirmed-content.cjs','build-expanded-services.cjs','apply-site-content-intent.cjs','build-region-guides.js','build-perth-service-areas.js','build-content-quality.cjs','build-entity-graph.cjs','build-seo-plan-20261009.cjs','build-crawl-performance.cjs','consolidate-service-pages.cjs','apply-confirmed-hours.cjs','apply-booking-context.cjs','apply-keyword-heading-policy.cjs']) {
+  for(const file of ['build-confirmed-content.cjs','build-expanded-services.cjs','apply-site-content-intent.cjs','build-region-guides.js','build-perth-service-areas.js','build-content-quality.cjs','build-entity-graph.cjs','build-seo-plan-20261009.cjs','build-crawl-performance.cjs','consolidate-service-pages.cjs','apply-confirmed-hours.cjs','apply-booking-context.cjs','apply-keyword-heading-policy.cjs','apply-responsive-media.cjs','update-sitemap-content-dates.cjs']) {
     const result=spawnSync(process.execPath,['scripts/'+file],{cwd:source,encoding:'utf8'});
     assert.notEqual(result.status,0,file);
     assert.match(result.stderr,/npm run build/,file);

@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
+const { spawnSync } = require('node:child_process');
 // Node 24 synchronous require of compiled .mjs is part of the compatibility contract.
 const { captureBaseline, comparePublicOutput } = require('../.build/site/baseline.mjs');
 const report = path.resolve(__dirname, '../../reports/content-navigation-repair-2026-10-14');
@@ -94,4 +95,40 @@ test('capture_records_independently_known_fields_and_never_copies_credentials', 
   assert(!fs.existsSync(path.join(evidence, 'public-evidence/.env')));
   assert(!fs.existsSync(path.join(evidence, 'public-evidence/.vercel')));
   assert.equal(fs.readFileSync(path.join(evidence, 'public-evidence/index.html'), 'utf8'), html);
+});
+
+// Catches omission of unexpected public keys without treating private/source
+// directories as public inventory in a deliberately mixed fixture.
+test('baseline_rejects_extra_assets_and_optional_artifacts_only_in_public_inventory', t => {
+  const dir = fixture(t);
+  for (const file of ['package.json','tests/private.js','scripts/maintenance.js','api/enquiry.js','.build/private.js','docs/private.md']) {
+    fs.mkdirSync(path.dirname(path.join(dir,file)),{recursive:true});
+    fs.writeFileSync(path.join(dir,file),'SOURCE_ONLY');
+  }
+  assert.deepEqual(comparePublicOutput(dir,expected),[]);
+});
+for (const [file,kind] of [['extra.css','asset'],['images/extra.webp','asset'],['service-areas/extra.html','asset'],['feed.xml','artifact']])test(`baseline_rejects_extra_public_${file}`,t=>{
+    const dir=fixture(t);
+    fs.mkdirSync(path.dirname(path.join(dir,file)),{recursive:true});
+    fs.writeFileSync(path.join(dir,file),'EXTRA_PUBLIC');
+    assert.ok(comparePublicOutput(dir,expected).some(d=>d.file===file&&d.field==='unexpected'&&d.actual===kind),file);
+});
+
+// Catches either removed CLI guard. All invocations must reject; no successful
+// capture/refreeze is attempted, even against synthetic evidence.
+test('freeze_cli_rejections_preserve_existing_manifest_and_evidence_bytes_and_mtimes', t => {
+  const dir=fixture(t), cli=path.resolve(__dirname,'../.build/tools/migration-baseline.mjs');
+  const evidence=path.join(dir,'public-evidence');fs.mkdirSync(evidence);
+  const manifest=path.join(dir,'tests/fixtures/ts-migration/baseline.json');fs.mkdirSync(path.dirname(manifest),{recursive:true});
+  const sentinels=[manifest,path.join(evidence,'index.html'),path.join(dir,'manifest.json')];
+  for(const file of sentinels){fs.writeFileSync(file,'IMMUTABLE SENTINEL '+path.basename(file));fs.utimesSync(file,new Date('2020-01-01'),new Date('2020-01-01'));}
+  const before=sentinels.map(file=>({bytes:fs.readFileSync(file),mtime:fs.statSync(file).mtimeMs}));
+  const inventory=()=>fs.readdirSync(evidence).sort();
+  for(const args of [[],['wrong',dir,dir,manifest],['freeze',dir,dir,manifest]]) {
+    const result=spawnSync(process.execPath,[cli,...args],{cwd:dir,encoding:'utf8'});
+    assert.notEqual(result.status,0,JSON.stringify(args));
+    assert.match(result.stderr,args[0]==='freeze'?/Frozen manifest already exists/:/Explicit freeze required/);
+    assert.deepEqual(sentinels.map(file=>({bytes:fs.readFileSync(file),mtime:fs.statSync(file).mtimeMs})),before);
+    assert.deepEqual(inventory(),['index.html']);
+  }
 });

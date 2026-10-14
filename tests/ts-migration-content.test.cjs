@@ -96,6 +96,20 @@ test('authoritative JSON dates constrain sitemap and article publication values'
   }
 });
 
+// Catches unguarded serialization before the structured diagnostic boundary.
+for(const malformed of ['BigInt','cycle']) test(`malformed_json_ld_${malformed}_returns_differences_and_fails_closed`,()=>{
+  const {loadSiteData,validateSiteData}=modules(),site=loadSiteData(),page=site.pages[0];
+  const item={'@type':'Thing',name:'{{ppp:forbidden}}'};
+  if(malformed==='BigInt')item.value=1n;else item.value=item;
+  page.seo.jsonLd[0]=item;
+  let differences;
+  assert.doesNotThrow(()=>{differences=validateSiteData(site);});
+  assert.ok(differences.some(d=>d.file===page.file&&d.field==='jsonLd'));
+  assert.ok(differences.some(d=>d.file===page.file&&d.field==='reserved.marker'),'malformed values must not conceal a reserved marker');
+  assert.ok(differences.every(d=>Object.keys(d).sort().join()==='actual,expected,field,file'));
+  assert.throws(()=>require('../.build/site/build/render-site.mjs').renderSite(site),/invalid site content/i);
+});
+
 test('canonical edits drive published data and readonly compatible readers together', () => {
   const {loadSiteData}=modules();
   const canonical=require('../.build/site/content/pages/contact.mjs').page;

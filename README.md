@@ -26,6 +26,27 @@ The existing `.html` URLs, relative assets, metadata and publication dates are p
 - Compatibility modules in `data/` and `scripts/lib/ts-compat.cjs` read the same compiled
   model. Old root-writing CLIs fail with guidance to run the canonical build.
 
+`scripts/apply-responsive-media.cjs` and `scripts/update-sitemap-content-dates.cjs`
+are retired CLI commands. Responsive markup is maintained in the canonical page
+records and rendered with `npm run build`; the pure `responsiveMarkup()` transform
+remains available for historical tests. The explicit image encoder
+`scripts/build-responsive-assets.cjs` is separate and is not a markup writer.
+The date helper export is restricted to isolated fixtures at least two levels below
+the named current or historical report roots. It preflights the root, every input
+and both destinations before any write, rejecting links, hard links and type conflicts.
+
+For a separately reviewed publication-date change, edit the owning canonical page
+record first. Update only that route's `lastmod` in `data/sitemap-content-dates.json`
+and its matching `<lastmod>` formatting companion in `site/content/artifacts.mts`.
+For an article, also reconcile `data/editorial-content-dates.json`, the canonical
+visible `<time>` and `dateModified` value plus any JSON-LD source companion.
+Preserve unrelated dates and existing provenance hashes; these inherited hashes
+are not an automatic freshness signal. Record any intentionally new digest's input
+and review basis. Never calculate current publication dates from frozen root HTML.
+Run typecheck, content/date tests, build and SEO validation; the canonical identity
+gate rejects mismatched date records and serialized companions. The build does not
+infer or refresh dates, and baseline refreezing is not part of this workflow.
+
 Do not edit generated `.build/`, `dist/` or the retained root HTML as content sources.
 The root HTML remains the approved legacy/provenance snapshot. The 2026-10-14 approved repair changes only navigation.js, site.css and field-design.css at runtime. Imagery, enquiry behavior and api/enquiry.js remain preserved. Narrow `.gitattributes` rules preserve frozen
 public asset bytes across Git checkouts. Do not normalize their line endings.
