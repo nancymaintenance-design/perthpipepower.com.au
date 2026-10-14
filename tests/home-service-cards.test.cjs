@@ -1,8 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const root = path.resolve(__dirname, '..');
+const root = resolvePublicRoot();
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const home = read('index.html');
 
@@ -17,8 +18,8 @@ function cardFor(href) {
 }
 
 for (const [pageHref, cardHeading, image] of [
-  ['fixtures-appliances-perth.html', 'Fixture, Tap &amp; Appliance Connection Services in Perth', 'fixtures-appliances-service.png'],
-  ['renewables-smart-home-perth.html', 'Smart Home &amp; Energy Electrical Services in Perth', 'renewables-smart-home-service.png'],
+  ['fixtures-appliances-perth.html', 'Fixture, Tap &amp; Appliance Connection Services', 'fixtures-appliances-service.png'],
+  ['renewables-smart-home-perth.html', 'Smart Home &amp; Energy Electrical Services', 'renewables-smart-home-service.png'],
 ]) {
   const card = cardFor(pageHref);
   assert.match(card, new RegExp(`<h3>${cardHeading}<\\/h3>`));

@@ -1,27 +1,26 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
-const {applySiteContent}=require('../scripts/apply-site-content-intent.cjs');
+const {applySiteContentFixture}=require('../scripts/apply-site-content-intent.cjs');
 const {pages}=require('../data/site-content-intent.cjs');
-const root=path.resolve(__dirname,'..');
+const root=resolvePublicRoot();
 
 test('content builder puts decision sections before FAQs and escapes prose without duplicate blocks on rerun',()=>{
- const temp=fs.mkdtempSync(path.join(root,'../reports/gap-render-test-'));
- const page=pages['blocked-drains-perth.html'],saved=page.sections;
+ const temp=createFixture('gap-render-test-');
+ const sections=[{id:'gap-scope-test',heading:'Scope & approval',body:['Equipment <limits> & access.'],bullets:['One agreed task'],links:[['contact.html','Ask about the scope']]}];
  try{
   for(const file of Object.keys(pages))fs.copyFileSync(path.join(root,file),path.join(temp,file));
-  page.sections=[{id:'gap-scope-test',heading:'Scope & approval',body:['Equipment <limits> & access.'],bullets:['One agreed task'],links:[['contact.html','Ask about the scope']]}];
-  applySiteContent(temp);
+  applySiteContentFixture(temp,'blocked-drains-perth.html',sections);
   const file=path.join(temp,'blocked-drains-perth.html'),once=fs.readFileSync(file,'utf8');
   assert(!/(?<!\r)\n/.test(once),'regeneration preserves the Windows checkout line endings');
   assert.equal((once.match(/id="gap-scope-test"/g)||[]).length,1,'the section needs a reachable unique anchor');
   assert(once.indexOf('id="gap-scope-test"')<once.indexOf('id="service-faq"'),'decision content belongs before FAQs');
   assert(once.includes('Equipment &lt;limits&gt; &amp; access.'),'public text must not create HTML elements');
   assert(once.includes('href="contact.html">Ask about the scope</a>'),'the next step is a native link');
-  applySiteContent(temp);
+  applySiteContentFixture(temp,'blocked-drains-perth.html',sections);
   assert.equal(fs.readFileSync(file,'utf8'),once,'regeneration must not duplicate or move sections');
  }finally{
-  if(saved===undefined)delete page.sections;else page.sections=saved;
   // Exact test-owned directory; never the source or reports root.
   fs.rmSync(temp,{recursive:true,force:true});
  }

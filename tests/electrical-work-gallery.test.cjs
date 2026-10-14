@@ -1,8 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const ROOT = path.join(__dirname, '..');
+const ROOT = resolvePublicRoot();
 const gallery = require('../electrical-work-gallery.js');
 
 assert.equal(gallery.ELECTRICAL_WORK_GALLERY.length, 8);

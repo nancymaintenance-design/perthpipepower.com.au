@@ -1,8 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const root = path.join(__dirname, '..');
+const root = resolvePublicRoot();
 const regions = [
   { file: 'perth-cbd-inner-suburbs.html', name: 'CBD & Inner Perth' },
   { file: 'northern-suburbs.html', name: 'Northern Suburbs' },
@@ -31,7 +32,7 @@ for (const { file, name } of regions) {
   const html = read(file);
   assert.match(html, new RegExp(`<h1>[^<]*${name.replace(/[&]/g, '&amp;')}[^<]*<\\/h1>`, 'i'));
   assert.match(html, /Plumbing and electrical repairs/i);
-  assert.match(html, /What to include in a repair request/i);
+  assert.match(html, /Repair request and access details/i);
   assert.match(html, /Written quote before work proceeds/i);
   assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i);
   assert.match(html, /application\/ld\+json/i);

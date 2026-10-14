@@ -1,0 +1,12 @@
+# Frozen public candidate bytes must survive Windows and Linux checkouts.
+/*.html -text
+/*.css -text
+/*.js -text
+/service-areas/*.html -text
+/*.svg -text
+/images/**/*.svg -text
+/robots.txt -text
+/llms.txt -text
+/ai-content.json -text
+/sitemap.xml -text
+/api/enquiry.js -text

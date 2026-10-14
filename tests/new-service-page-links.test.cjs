@@ -1,7 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
-const root = path.resolve(__dirname, "..");
+const {hasLocalLink}=require('../scripts/lib/link-assertions.cjs');
+const root = resolvePublicRoot();
 
 const expected = {
   "fixtures-appliances-perth.html": [
@@ -25,6 +27,6 @@ const expected = {
 for (const [file, hrefs] of Object.entries(expected)) {
   const html = fs.readFileSync(path.join(root, file), "utf8");
   assert.ok(!html.includes("service-page-depth.js"), `${file} should use its dedicated related-services content`);
-  hrefs.forEach((href) => assert.ok(html.includes(`href="${href}"`), `${file} should link to ${href}`));
+  hrefs.forEach((href) => assert.ok(hasLocalLink(html,href), `${file} should link to ${href}`));
 }
 console.log("PASS: new service pages use dedicated, topic-relevant internal links.");

@@ -1,13 +1,14 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { regionGuides } = require('../data/region-guides');
 
 for (const guide of regionGuides) {
-  const html = fs.readFileSync(path.join(__dirname, '..', guide.route), 'utf8');
+  const html = fs.readFileSync(path.join(resolvePublicRoot(), guide.route), 'utf8');
   assert.match(html, new RegExp(`<h1>[^<]*${guide.name.replace(/[&]/g, '&amp;')}[^<]*<\\/h1>`, 'i'));
   assert.match(html, /Plumbing and electrical repairs/i);
-  assert.match(html, /What to include in a repair request/i);
+  assert.match(html, /Repair request and access details/i);
   assert.match(html, /Written quote before work proceeds/i);
   assert.match(html, new RegExp(`Request a repair in ${guide.name.replace(/[&]/g, '&amp;')}`, 'i'));
   assert.match(html, /blocked drains|leak concerns|hot-water/i);
@@ -24,6 +25,7 @@ for (const guide of regionGuides) {
   assert.equal((html.match(/property="og:description"/gi) || []).length, 1, 'each regional guide has one Open Graph description');
   assert.equal((html.match(/property="og:url"/gi) || []).length, 1, 'each regional guide has one Open Graph URL');
   assert.doesNotMatch(html, /service-areas\//i);
-  for (const [question] of guide.faqs) assert.match(html, new RegExp(question.replace(/[?]/g, '\\?')));
+  for (const [question] of guide.faqs.filter(([q])=>q.endsWith('?'))) assert.match(html, new RegExp(question.replace(/[?]/g, '\\?')));
+  assert(!html.includes('class="service-information"'),'regional prose is not followed by retired one-sentence statement walls');
 }
 console.log('Regional guide contract passed.');

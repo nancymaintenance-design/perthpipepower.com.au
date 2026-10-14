@@ -1,0 +1,1486 @@
+{
+  "text": [
+    {
+      "file": "about.html",
+      "path": [
+        1,
+        2,
+        5,
+        8,
+        1,
+        4,
+        0
+      ],
+      "hash": "9b3d0ecc5e7382fac1dc157b1cb0e301c18e4bf5c7d0e9a846b36b0d9a020531",
+      "start": 0,
+      "before": "The ABR record verifies the registered company, ABN and GST status; it does not list individual trade licences. Contact our local team privately for the current documentation relevant to the proposed work",
+      "after": "View our company registration and GST details in the official ABR record below"
+    },
+    {
+      "file": "about.html",
+      "path": [
+        1,
+        2,
+        5,
+        8,
+        1,
+        6,
+        0
+      ],
+      "hash": "f92cc471dd172fcd0c4ea3ee4d810f1aeadb56c7cc8d1e2b57521eb7a7140e00",
+      "start": 49,
+      "before": "The company record below and our Perth office describe different things: ABN Lookup lists the company's main business location as VIC 3030; our actual Perth office is at 140 St Georges Terrace, Perth WA 6000. The company registration record does not verify this office address or a trade licence.",
+      "after": "Our local repair team is based at 140 St Georges Terrace, Perth WA 6000. "
+    },
+    {
+      "file": "about.html",
+      "path": [
+        1,
+        2,
+        7,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "burst-pipe-repair-perth.html",
+      "path": [
+        1,
+        0,
+        60,
+        0
+      ],
+      "hash": "5121e167daafc2646cf748a770b4e91ac6ca9bf03af653cbde424602b2205ef2",
+      "start": 4987,
+      "before": "Does an active leak guarantee an immediate call-out",
+      "after": "How do I arrange an urgent burst-pipe repair"
+    },
+    {
+      "file": "burst-pipe-repair-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        7,
+        0,
+        2,
+        4,
+        0,
+        0
+      ],
+      "hash": "3f03cb877a7071afc5cffd82e0cee36b3ae25996df9855695e9d07ec80832fc4",
+      "start": 0,
+      "before": "Does an active leak guarantee an immediate call-out",
+      "after": "How do I arrange an urgent burst-pipe repair"
+    },
+    {
+      "file": "burst-pipe-repair-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "ceiling-fans-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        6,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "ceiling-fans-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "contact.html",
+      "path": [
+        1,
+        0,
+        65,
+        0
+      ],
+      "hash": "25fa94836d663e84066d70e4e12a93144f6074086ddf4a01aefd83276186bb07",
+      "start": 4240,
+      "before": "; submitting the form does not approve a repair or guarantee an arrival time",
+      "after": ", and the team confirms the appointment with you"
+    },
+    {
+      "file": "contact.html",
+      "path": [
+        1,
+        2,
+        5,
+        3,
+        4,
+        4,
+        1,
+        0
+      ],
+      "hash": "0b01dafe3c6e0bef85b3f591cfc48c01a17c5882730a0a70640ca2048f8e3a56",
+      "start": 126,
+      "before": "; submitting the form does not approve a repair or guarantee an arrival time",
+      "after": ", and the team confirms the appointment with you"
+    },
+    {
+      "file": "contact.html",
+      "path": [
+        1,
+        2,
+        5,
+        3,
+        4,
+        6,
+        1,
+        0
+      ],
+      "hash": "6f5b848be45ed2f62826d957df0a00d13eb5f3c10542873fe0aafa271e9cb374",
+      "start": 167,
+      "before": "No arrival time is guaranteed. ",
+      "after": ""
+    },
+    {
+      "file": "contact.html",
+      "path": [
+        1,
+        2,
+        7,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "dishwasher-installation-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "dishwasher-installation-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        5,
+        0,
+        1,
+        1,
+        0
+      ],
+      "hash": "9ec098460974aa76fcd72e8eba7ac0164fe70ea41ea027400d55b151170e3322",
+      "start": 200,
+      "before": "A same-space replacement does not guarantee that every existing connection can be reused",
+      "after": "We assess the existing connections for compatibility with the replacement appliance"
+    },
+    {
+      "file": "dishwasher-installation-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "eastern-suburbs.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "electrical.html",
+      "path": [
+        1,
+        2,
+        7,
+        13,
+        3,
+        0,
+        0
+      ],
+      "hash": "8b5d3de75a5fb03a078ec740587beedfea6bf54e68a7ab466fc3d40c6e1393cb",
+      "start": 86,
+      "before": "They are not documented Perth suburb case studies or evidence of a particular fault diagnosis, test result or compliance outcome. A photo of an installation stage does not confirm that the same scope is available for every property.",
+      "after": ""
+    },
+    {
+      "file": "electrical.html",
+      "path": [
+        1,
+        2,
+        7,
+        15,
+        4,
+        6,
+        1,
+        0
+      ],
+      "hash": "6f5b848be45ed2f62826d957df0a00d13eb5f3c10542873fe0aafa271e9cb374",
+      "start": 167,
+      "before": "No arrival time is guaranteed. ",
+      "after": ""
+    },
+    {
+      "file": "electrical.html",
+      "path": [
+        1,
+        2,
+        7,
+        18,
+        0,
+        1,
+        1,
+        0
+      ],
+      "hash": "c2f58bf617c2ab7f32de53565f85efe8dfd517faa865e0c27ed5a46f73d32bf5",
+      "start": 171,
+      "before": "A suburb in the directory does not confirm an appointment or specialist service capability",
+      "after": "The team confirms the appointment and the agreed work for your address"
+    },
+    {
+      "file": "electrical.html",
+      "path": [
+        1,
+        2,
+        7,
+        18,
+        0,
+        2,
+        2,
+        0
+      ],
+      "hash": "ed5a3a9af00d7fb839efe5d4e7372039e70bc41b73dc9a5c1606cd2f98e45bf1",
+      "start": 66,
+      "before": "should be arranged through appropriately licensed electrical professionals, not an unlicensed general handyman. Ask for the current documentation relevant to the work; an ABN alone does not verify trade authorisation",
+      "after": "are arranged through appropriately licensed electrical professionals. Current documentation relevant to the work is available on request"
+    },
+    {
+      "file": "electrical.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "emergency-electrician-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        6,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "emergency-electrician-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "emergency-plumber-perth.html",
+      "path": [
+        1,
+        0,
+        62,
+        0
+      ],
+      "hash": "d13a0ac324b0bfda305d8d2a113b7a178253948d2c3341b78ea5e9bc1ec437e4",
+      "start": 4852,
+      "before": " Availability is not a guaranteed arrival time.",
+      "after": ""
+    },
+    {
+      "file": "emergency-plumber-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        6,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "emergency-plumber-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        9,
+        0,
+        4,
+        1,
+        0
+      ],
+      "hash": "1accd0fe27a5353817f8d1ac9d590363d4ea715d34457f1b7c7dd09898ecd95e",
+      "start": 150,
+      "before": " Availability is not a guaranteed arrival time.",
+      "after": ""
+    },
+    {
+      "file": "emergency-plumber-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "exhaust-fans-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        6,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "exhaust-fans-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        9,
+        0,
+        6,
+        1,
+        0
+      ],
+      "hash": "0c280ab30ce7d5902a21e3e277459b1b8daf913c683f223a133fa0ec74a808be",
+      "start": 57,
+      "before": "A fan replacement addresses the agreed equipment work and is not a guarantee about all condensation or mould in the room",
+      "after": "We assess the fan and ventilation requirements to confirm the agreed equipment work"
+    },
+    {
+      "file": "exhaust-fans-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "faq.html",
+      "path": [
+        1,
+        0,
+        65,
+        0
+      ],
+      "hash": "ec57c456a10bda2aee6c9739aa557f9c3bcfd6a41e2e399bdc29b057e179820c",
+      "start": 4784,
+      "before": "No arrival time is guaranteed. Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can a hidden water leak cause a high bill without visible water damage?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes, a concealed leak is possible without visible damage. A bill increase alone is insufficient to diagnose one. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is the difference between an RCD and a circuit breaker?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"An RCD detects leakage imbalance; a circuit breaker responds to overload or short circuit. A combined device can do both. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why has my hot water suddenly stopped working?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Several supply, heating or plumbing faults can interrupt hot water. The system type and affected outlets guide assessment. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is the difference between a running toilet and a leaking toilet base?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"A running cistern passes or replenishes water internally; a base leak is external water with a source that needs checking. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who should a tenant contact first about plumbing or electrical repairs?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"For routine repairs, report to the agent or landlord. For immediate danger, use the appropriate emergency channel first. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is Ellis Services Group?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Ellis Services Group is part of the Ellis Group, with a dedicated Perth repair team providing plumbing and electrical repairs and maintenance across Perth for homes, rentals, strata properties and commercial premises.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Which areas does Ellis Services Group cover?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Our dedicated Perth repair team provides plumbing and electrical services across Perth. Include the property suburb and service required so we can prepare for the work.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What information should I provide?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Provide the property address, affected area, factual description, when it began, whether it is active or worsening, and the best access contact. Property managers should include a work-order reference and approval pathway.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I send photos?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach exposed wiring, active sparking, wet electrical equipment or another hazard to take a photo.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What if I do not know whether the problem is plumbing or electrical?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Describe what you observe rather than guessing. Our Perth team will identify the appropriate plumbing or electrical service path.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Should I use the blocked drain or blocked toilet page?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Use Blocked Drains & Toilets for slow drainage, gurgling, backups or a blocked toilet. Use Toilet Repairs when the concern is specifically a running, leaking, slow-filling or non-functioning toilet.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What should I do if a pipe bursts?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Put people and electrical safety first. If it is safe and familiar, isolate the water supply; otherwise keep clear and use the Burst Pipe Repair page to share the affected area and active water details.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What should I do if a safety switch keeps tripping?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Do not repeatedly reset it. Note which areas lost power and what equipment was being used. Do not open the switchboard or work on fixed wiring.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"When is Ellis Services Group available?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work. No arrival time is guaranteed",
+      "after": "Emergency repair fees follow the quoted work plan. For urgent work, call rather than relying on an online enquiry.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can a hidden water leak cause a high bill without visible water damage?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes, a concealed leak is possible without visible damage. A bill increase alone is insufficient to diagnose one. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is the difference between an RCD and a circuit breaker?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"An RCD detects leakage imbalance; a circuit breaker responds to overload or short circuit. A combined device can do both. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why has my hot water suddenly stopped working?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Several supply, heating or plumbing faults can interrupt hot water. The system type and affected outlets guide assessment. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is the difference between a running toilet and a leaking toilet base?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"A running cistern passes or replenishes water internally; a base leak is external water with a source that needs checking. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Who should a tenant contact first about plumbing or electrical repairs?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"For routine repairs, report to the agent or landlord. For immediate danger, use the appropriate emergency channel first. Read the explanation.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is Ellis Services Group?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Ellis Services Group is part of the Ellis Group, with a dedicated Perth repair team providing plumbing and electrical repairs and maintenance across Perth for homes, rentals, strata properties and commercial premises.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Which areas does Ellis Services Group cover?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Our dedicated Perth repair team provides plumbing and electrical services across Perth. Include the property suburb and service required so we can prepare for the work.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What information should I provide?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Provide the property address, affected area, factual description, when it began, whether it is active or worsening, and the best access contact. Property managers should include a work-order reference and approval pathway.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I send photos?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Photos are optional: email safely taken photos to maxinemaintenance.au@outlook.com. You can contact us without photos. Do not approach exposed wiring, active sparking, wet electrical equipment or another hazard to take a photo.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What if I do not know whether the problem is plumbing or electrical?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Describe what you observe rather than guessing. Our Perth team will identify the appropriate plumbing or electrical service path.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Should I use the blocked drain or blocked toilet page?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Use Blocked Drains & Toilets for slow drainage, gurgling, backups or a blocked toilet. Use Toilet Repairs when the concern is specifically a running, leaking, slow-filling or non-functioning toilet.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What should I do if a pipe bursts?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Put people and electrical safety first. If it is safe and familiar, isolate the water supply; otherwise keep clear and use the Burst Pipe Repair page to share the affected area and active water details.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What should I do if a safety switch keeps tripping?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Do not repeatedly reset it. Note which areas lost power and what equipment was being used. Do not open the switchboard or work on fixed wiring.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"When is Ellis Services Group available?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work"
+    },
+    {
+      "file": "faq.html",
+      "path": [
+        1,
+        2,
+        5,
+        6,
+        1,
+        5,
+        3,
+        1,
+        0
+      ],
+      "hash": "6f5b848be45ed2f62826d957df0a00d13eb5f3c10542873fe0aafa271e9cb374",
+      "start": 167,
+      "before": "No arrival time is guaranteed. ",
+      "after": ""
+    },
+    {
+      "file": "faq.html",
+      "path": [
+        1,
+        2,
+        5,
+        6,
+        1,
+        5,
+        7,
+        2,
+        0
+      ],
+      "hash": "8f3a96c1c78767cf2c557cc5650d4064e2c9e057deabc759f9ce9c673f1b657c",
+      "start": 181,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "faq.html",
+      "path": [
+        1,
+        2,
+        7,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "fixtures-appliances-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "hot-water-problems-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "index.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "path": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "path": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "path": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "path": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "insights.html",
+      "path": [
+        1,
+        1,
+        3,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "lighting-installation-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        6,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "lighting-installation-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        3,
+        0,
+        3,
+        4,
+        2
+      ],
+      "hash": "6bea9bf5f967147f043a9bc2e400571bc47fdc61103700637dcc9af6abc60275",
+      "start": 141,
+      "before": "Completion of one item does not certify every electrical item in the property or guarantee that an unrelated fault has been resolved.",
+      "after": ""
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "path": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "path": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "path": [
+        1,
+        1,
+        1,
+        9,
+        7,
+        0
+      ],
+      "hash": "17ea40ebca61b88c1652924cd5eca44b8f8edc6f17c66bdd55a39edef0a13d66",
+      "start": 98,
+      "before": "A recommendation is not a completed task; an inspection is not proof that every related issue was repaired. Make those distinctions clear in the completion record",
+      "after": "Record completed repairs, inspection findings and recommended follow-up work separately"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "path": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "news.html",
+      "path": [
+        1,
+        1,
+        3,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "northern-suburbs.html",
+      "path": [
+        1,
+        2,
+        7,
+        4,
+        0,
+        2,
+        1,
+        0
+      ],
+      "hash": "9b2042e2b7d1622d17ee1fd639e631496223dbd9c62a4d6b3a3b8cf736136d12",
+      "start": 228,
+      "before": "suburb shortcut helps locate the enquiry; it does not confirm attendance or that extra external work is included",
+      "after": "team uses your address and access details to confirm attendance and the quoted work"
+    },
+    {
+      "file": "northern-suburbs.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "perth-cbd-inner-suburbs.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "perth-hills-swan-valley.html",
+      "path": [
+        1,
+        0,
+        60,
+        0
+      ],
+      "hash": "6aa819b7c9f9c4e15188b1fc8686325d749dd50abb3cd3b058b7226ae6cc34c7",
+      "start": 5646,
+      "before": "No. Provide details of the equipment and the proposed work. A regional service enquiry does not confirm specialist tank, pump, septic or other infrastructure work, and availability must be checked for the actual address",
+      "after": "Provide details of the equipment, proposed work and address so the team can confirm the appropriate service and availability before booking"
+    },
+    {
+      "file": "perth-hills-swan-valley.html",
+      "path": [
+        1,
+        2,
+        7,
+        4,
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "hash": "5b0cd56da9ec15d2c05448abe26ccf086d4a156b1aba5214863dfe52399b675d",
+      "start": 0,
+      "before": "No. Provide details of the equipment and the proposed work. A regional service enquiry does not confirm specialist tank, pump, septic or other infrastructure work, and availability must be checked for the actual address",
+      "after": "Provide details of the equipment, proposed work and address so the team can confirm the appropriate service and availability before booking"
+    },
+    {
+      "file": "perth-hills-swan-valley.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "plumbing.html",
+      "path": [
+        1,
+        2,
+        7,
+        13,
+        4,
+        6,
+        1,
+        0
+      ],
+      "hash": "6f5b848be45ed2f62826d957df0a00d13eb5f3c10542873fe0aafa271e9cb374",
+      "start": 167,
+      "before": "No arrival time is guaranteed. ",
+      "after": ""
+    },
+    {
+      "file": "plumbing.html",
+      "path": [
+        1,
+        2,
+        7,
+        17,
+        0,
+        1,
+        1,
+        0
+      ],
+      "hash": "7bafee226428f7becc03da6316ec53ea7ba8b966740c9f9487857db6bed1c697",
+      "start": 82,
+      "before": "organise service enquiries; they are not separate branches or a promise of an arrival time",
+      "after": "help you find the right service for your area"
+    },
+    {
+      "file": "plumbing.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "power-faults-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "power-points-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        6,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "power-points-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "property-management.html",
+      "path": [
+        1,
+        0,
+        58,
+        0
+      ],
+      "hash": "f12c08c9a5973f207dad373f53b3136dcf6aaa06ceed8cb1d024af25a6166213",
+      "start": 5218,
+      "before": "Coordination does not guarantee one diagnosis, one contractor approval or completion in a single visit.",
+      "after": ""
+    },
+    {
+      "file": "property-management.html",
+      "path": [
+        1,
+        2,
+        5,
+        11,
+        4,
+        6,
+        1,
+        0
+      ],
+      "hash": "21e809106f250a90fcce056645463919d0ff2647ca07434d6c33a820ab59a609",
+      "start": 147,
+      "before": "Coordination does not guarantee one diagnosis, one contractor approval or completion in a single visit.",
+      "after": ""
+    },
+    {
+      "file": "property-management.html",
+      "path": [
+        1,
+        2,
+        7,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "rcd-testing-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        6,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "rcd-testing-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "renewables-smart-home-perth.html",
+      "path": [
+        1,
+        2,
+        5,
+        3,
+        0,
+        1,
+        1,
+        0
+      ],
+      "hash": "f87877eb38866d764810bda43e3d68455209422f334d884e4fda85e6cc3d7eeb",
+      "start": 287,
+      "before": "The enquiry does not confirm that every energy product can be installed or promise a saving.",
+      "after": ""
+    },
+    {
+      "file": "renewables-smart-home-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "path": [
+        1,
+        0,
+        62,
+        0
+      ],
+      "hash": "330f0c855b517fc5bedc4de00b57faad9a156cf9eabd860448583a0d784501f6",
+      "start": 5058,
+      "before": "Can replacing the RCD guarantee that tripping will stop",
+      "after": "How is recurring RCD tripping assessed"
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        3,
+        0,
+        1,
+        1,
+        0
+      ],
+      "hash": "19549cd3cd436acaa73d112fc9bfe865180e5f4ee651fd9d510b428d25a10ecd",
+      "start": 0,
+      "before": "A recurring trip is a symptom, not proof that the safety switch needs replacing",
+      "after": "We assess recurring trips to identify the circuit, connected equipment or switch involved"
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        3,
+        0,
+        8,
+        1,
+        4,
+        0
+      ],
+      "hash": "a74a4e5f9e1227f0e950b67fef324502344d4253e8f16e1269d7041dc366444a",
+      "start": 0,
+      "before": "No. A circuit or connected appliance may be responsible. Rain-related trips and trips during washing-machine use are observations to report, not proof of a particular failed component",
+      "after": "A circuit or connected appliance may be responsible. Report rain-related trips or trips during washing-machine use so the electrician can assess the cause"
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        7,
+        0,
+        2,
+        4,
+        0,
+        0
+      ],
+      "hash": "76bcae474833883e641da9405fed432d0432685146964e6630e579daca1c97ab",
+      "start": 0,
+      "before": "Can replacing the RCD guarantee that tripping will stop",
+      "after": "How is recurring RCD tripping assessed"
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "service-areas.html",
+      "path": [
+        1,
+        2,
+        5,
+        7,
+        0,
+        1,
+        0
+      ],
+      "hash": "3b4383674a782af763744909fdd26cdb3afc41b0f77fb791d21970982b5aaef8",
+      "start": 224,
+      "before": "The suburb search is a booking shortcut; it does not confirm an appointment or arrival time",
+      "after": "Use the suburb search to start your enquiry, then confirm the appointment with the team"
+    },
+    {
+      "file": "service-areas.html",
+      "path": [
+        1,
+        2,
+        7,
+        3,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "shower-plumbing-repairs-perth.html",
+      "path": [
+        1,
+        0,
+        62,
+        0
+      ],
+      "hash": "0d38df7967927656fc29e6a5bbfc6998dc65f9d3e9a8dad28bb2f116479f47b1",
+      "start": 4922,
+      "before": "Dampness alone cannot confirm a failed membrane or a leaking pi",
+      "after": "The assessment identifies the source and the appropriate repair sco"
+    },
+    {
+      "file": "shower-plumbing-repairs-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "shower-plumbing-repairs-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        9,
+        0,
+        4,
+        1,
+        0
+      ],
+      "hash": "f38f1f9aa24d1d70b82227ba8dd4bdf02c894abb0351b4a65896b4f098b76afb",
+      "start": 139,
+      "before": "Dampness alone cannot confirm a failed membrane or a leaking pi",
+      "after": "The assessment identifies the source and the appropriate repair sco"
+    },
+    {
+      "file": "shower-plumbing-repairs-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "smoke-alarm-maintenance-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "southern-suburbs.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "switchboard-upgrades-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        6,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "switchboard-upgrades-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "tap-mixer-repairs-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "toilet-installation-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "toilet-installation-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "toilet-repairs-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "path": [
+        1,
+        0,
+        62,
+        0
+      ],
+      "hash": "28b4dd49f70244eaae9230f366e9cf043fd2a3cb57e61c5da10698c47e86d9f9",
+      "start": 4574,
+      "before": "Can you guarantee finding a hidden leak without opening a wall",
+      "after": "How is access for a hidden-leak investigation assessed"
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        3,
+        0,
+        8,
+        0,
+        1,
+        0
+      ],
+      "hash": "fee6f85c4ffa9bf8e247bee3f2ebeabadb6dba57534ace5b4ef69ab9540b85fd",
+      "start": 150,
+      "before": "is useful context, not proof of a failed pipe or a particular detection method",
+      "after": "helps guide the investigation of the affected area"
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        3,
+        0,
+        8,
+        0,
+        2,
+        0
+      ],
+      "hash": "69a91b015d269c74ee921721134179e8d64c80849f6ad4a2c22f1b0d8bfb999c",
+      "start": 217,
+      "before": "This does not guarantee an insurance outcome, a non-invasive result or a fixed detection accuracy.",
+      "after": ""
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        7,
+        0,
+        2,
+        3,
+        0,
+        0
+      ],
+      "hash": "fdb97668ec3f17bacc042b447a3c92a762dcdc95daa7e44b5467e097551e01dd",
+      "start": 0,
+      "before": "Can you guarantee finding a hidden leak without opening a wall",
+      "after": "How is access for a hidden-leak investigation assessed"
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "water-pressure-perth.html",
+      "path": [
+        1,
+        2,
+        7,
+        1,
+        0,
+        5,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "water-pressure-perth.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    },
+    {
+      "file": "western-suburbs.html",
+      "path": [
+        1,
+        2,
+        9,
+        7,
+        0
+      ],
+      "hash": "66ee3cbcf4d418f583c9ae289e1e3f104a6c03e69b824be9e94c437e15d81065",
+      "start": 166,
+      "before": " No arrival time is guaranteed.",
+      "after": ""
+    }
+  ],
+  "removeAboutFaq": true
+}
+

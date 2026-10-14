@@ -1,8 +1,10 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const {hasLocalLink}=require('../scripts/lib/link-assertions.cjs');
 
-const root = path.join(__dirname, '..');
+const root = resolvePublicRoot();
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 const owners = [
@@ -16,8 +18,8 @@ for (const [file, h1, marker, relatedHref] of owners) {
   const html = read(file);
   assert.match(html, new RegExp(`<h1>${h1}</h1>`), `${file} retains its unique service H1`);
   assert.match(html, new RegExp(`<h2>${marker}</h2>`), `${file} explains its assessment scope`);
-  assert.match(html, new RegExp(`href="${relatedHref}"`), `${file} has a contextual related-service link`);
-  assert.match(html, /href="contact\.html"/, `${file} keeps a crawlable enquiry path`);
+  assert(hasLocalLink(html,relatedHref), `${file} has a contextual related-service link`);
+  assert(hasLocalLink(html,'contact.html'), `${file} keeps a crawlable enquiry path`);
 }
 
 assert.match(read('hot-water-problems-perth.html'), /Thornlie/, 'hot-water owner covers the observed Thornlie query without a new locality page');

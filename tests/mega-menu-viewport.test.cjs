@@ -1,8 +1,9 @@
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const css = fs.readFileSync(path.join(__dirname, '..', 'mega-menu.css'), 'utf8');
+const css = fs.readFileSync(path.join(resolvePublicRoot(), 'mega-menu.css'), 'utf8');
 
 assert.match(
   css,

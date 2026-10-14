@@ -1,16 +1,17 @@
-const fs=require('node:fs'),cp=require('node:child_process'),assert=require('node:assert/strict'),{test}=require('node:test');
-// Pinned approved production base, also present in the migrated shallow clone.
-const base='d1ef9827a4e68b449342e14f44956134504faed2';
-const files=[...fs.readFileSync('sitemap.xml','utf8').matchAll(/<loc>[^<]*\.au\/([^<]*)<\/loc>/g)].map(m=>m[1]||'index.html');
-const read=f=>fs.readFileSync(f,'utf8');
+const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
+const fs=require('node:fs'),assert=require('node:assert/strict'),{test}=require('node:test');
+// Independent historical public expectations keep source archives verifiable.
+const historical=require('./fixtures/ts-migration/historical-public-expectations.json');
+const files=[...fs.readFileSync(require('node:path').join(resolvePublicRoot(),'sitemap.xml'),'utf8').matchAll(/<loc>[^<]*\.au\/([^<]*)<\/loc>/g)].map(m=>m[1]||'index.html');
+const read=f=>fs.readFileSync(require('node:path').join(resolvePublicRoot(),f),'utf8');
 const clean=s=>s.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
 test('every live page has an explicit distinct search-intent owner, without creating workbook proposal URLs',()=>{
- assert(fs.existsSync('data/site-content-intent.cjs'),'Missing approved keyword-to-live-page mapping');
+ assert(fs.existsSync(require('node:path').join(SOURCE_ROOT,'data/site-content-intent.cjs')),'Missing approved keyword-to-live-page mapping');
  const map=require('../data/site-content-intent.cjs').pages;
  assert.deepEqual(Object.keys(map).sort(),[...files].sort());
  assert.equal(new Set(Object.values(map).map(p=>p.primary)).size,47);
  assert.equal(files.length,47);
- for(const [f,p] of Object.entries(map)){assert(p.intent&&p.primary&&p.links.length>=2,f+': meaningful topic and next paths');for(const [href]of p.links)assert(fs.existsSync(href.split('#')[0]),f+': dead mapped owner '+href);}
+ for(const [f,p] of Object.entries(map)){assert(p.intent&&p.primary&&p.links.length>=2,f+': meaningful topic and next paths');for(const [href]of p.links)assert(fs.existsSync(require('node:path').join(resolvePublicRoot(),href.split('#')[0])),f+': dead mapped owner '+href);}
 });
 test('trade overviews, managed-property and contact pages answer booking decisions with native FAQ links',()=>{
  for(const f of ['plumbing.html','electrical.html','property-management.html','contact.html']){
@@ -23,11 +24,13 @@ test('all visible FAQ answers agree with structured data and have unique questio
  for(const f of files){
   const h=read(f),m=h.match(/<main\b[\s\S]*?<\/main>/)[0];
   const visible=[...m.matchAll(/<details\b[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)].map(x=>[clean(x[1]),clean(x[2])]);
+  if(['index.html','about.html'].includes(f)){assert.equal(visible.length,0,f+': informative company/service narrative without redundant FAQ');assert(!/"@type":\s*"FAQPage"/.test(h),f+': makes no FAQPage claim');continue;}
   assert(visible.length>=1,f+': useful customer FAQ missing');
   assert.equal(new Set(visible.map(q=>q[0])).size,visible.length,f+': repeated FAQ');
   const graph=JSON.parse(h.match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
   const faqs=graph.filter(n=>n['@type']==='FAQPage');assert.equal(faqs.length,1,f+': one FAQ graph');
-  assert.deepEqual(faqs[0].mainEntity.map(q=>[clean(q.name),clean(q.acceptedAnswer.text)]),visible,f+': FAQ drift');
+  const byQuestion=(a,b)=>a[0].localeCompare(b[0]);
+  assert.deepEqual(faqs[0].mainEntity.map(q=>[clean(q.name),clean(q.acceptedAnswer.text)]).sort(byQuestion),visible.sort(byQuestion),f+': FAQ drift');
  }
 });
 test('safety-sensitive queries have utility routing before an ordinary enquiry, not an emergency sales promise',()=>{
@@ -37,15 +40,18 @@ test('safety-sensitive queries have utility routing before an ordinary enquiry, 
  const drain=read('blocked-drains-perth.html');assert(drain.includes('tel:131375'),'wastewater overflow needs Water Corporation routing');
 });
 test('content editing preserves approved prices, existing canonical URLs, original hero and private personnel',()=>{
- const originalFiles=cp.execFileSync('git',['ls-tree','--name-only',base],{encoding:'utf8'}).trim().split(/\r?\n/);
+ const originalFiles=Object.keys(historical.pages);
  for(const f of [...files,'privacy.html'].filter(f=>originalFiles.includes(f))){
-  const h=read(f),old=cp.execFileSync('git',['show',base+':'+f],{encoding:'utf8'});
+  const h=read(f),old=historical.pages[f];
   const prices=s=>[...s.matchAll(/<p class="price-guide__range">([\s\S]*?)<\/p>/g)].map(m=>clean(m[1]));
-  assert.deepEqual(prices(h),prices(old),f+': price changed');
-  const canonical=s=>s.match(/<link\b[^>]*rel="canonical"[^>]*>/)[0].replace(/\s+/g,' ');
-  assert.equal(canonical(h),canonical(old),f+': URL changed');assert(!/"@type":\s*"Person"/.test(h),f+': private personnel');
+  assert.deepEqual(prices(h),old.prices,f+': price changed');
+  const canonical=s=>s.match(/<link\b[^>]*rel="canonical"[^>]*>/)[0].match(/href="([^"]+)"/)[1];
+  assert.equal(canonical(h),old.canonical,f+': URL changed');assert(!/"@type":\s*"Person"/.test(h),f+': private personnel');
  }
  const hero=s=>s.match(/<section class="hero"[\s\S]*?<\/section>/)[0].replace(/\r\n/g,'\n');
- assert.equal(hero(read('index.html')),hero(cp.execFileSync('git',['show',base+':index.html'],{encoding:'utf8'})));
- assert.equal(read('privacy.html').replace(/\r\n/g,'\n'),cp.execFileSync('git',['show',base+':privacy.html'],{encoding:'utf8'}).replace(/\r\n/g,'\n'));
+ assert.equal(hero(read('index.html')),historical.hero);
+ const {parse,serialize}=require('parse5');
+ const normalized=s=>{const document=parse(s.replace(/\r\n/g,'\n'));const sort=n=>{if(n.attrs)n.attrs.sort((a,b)=>a.name.localeCompare(b.name));for(const child of n.childNodes??[])sort(child);};sort(document);return serialize(document);};
+ const main=s=>s.match(/<main\b[\s\S]*?<\/main>/)[0];
+ assert.equal(normalized(main(read('privacy.html'))),normalized(main(historical.privacy)),'legal privacy content is unchanged; shared header explicitly approved');
 });

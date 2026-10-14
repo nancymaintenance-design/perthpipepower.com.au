@@ -24,6 +24,30 @@
     });
   }
 
+  // Keep safety guidance and in-flow booking actions clear on small screens.
+  const mobileActions = document.querySelector('.mobile-ctas');
+  if (mobileActions) {
+    const hero = document.querySelector('main .page-hero, main .hero');
+    const inlineActions = [...document.querySelectorAll('main a.button[href="contact.html"], main a.button[href^="contact.html?"], main a.button[href^="tel:"]')];
+    const inView = (element) => {
+      const rect = element.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < innerHeight;
+    };
+    let scheduled = false;
+    const updateActions = () => {
+      scheduled = false;
+      const menuOpen = document.querySelector('.site-nav.open, .nav-group.is-open');
+      mobileActions.hidden = !!menuOpen || !!(hero && hero.getBoundingClientRect().bottom > 0) || inlineActions.some(inView);
+    };
+    const scheduleActions = () => {
+      if (!scheduled) { scheduled = true; requestAnimationFrame(updateActions); }
+    };
+    addEventListener('scroll', scheduleActions, {passive:true});
+    addEventListener('resize', scheduleActions);
+    if (nav) new MutationObserver(scheduleActions).observe(nav, {attributes:true, subtree:true, attributeFilter:['class']});
+    updateActions();
+  }
+
   const slides = [...document.querySelectorAll('.slide')];
   const status = document.querySelector('.carousel-status');
   if (!slides.length) return;

@@ -1,0 +1,29 @@
+{
+ "serviceAssessment":{
+  "blocked-drains-perth.html":"Blocked Drain Assessment and Clearing",
+  "burst-pipe-repair-perth.html":"Burst Pipe Assessment and Repairs",
+  "water-leak-detection-perth.html":"Water Leak Investigation and Repair Access",
+  "tap-mixer-repairs-perth.html":"Tap and Mixer Repair Assessment",
+  "toilet-repairs-perth.html":"Toilet and Cistern Repair Assessment",
+  "hot-water-problems-perth.html":"Hot Water Repair and Replacement Assessment",
+  "power-faults-perth.html":"Electrical Fault Assessment and Repairs",
+  "safety-switch-tripping-perth.html":"Safety Switch and RCD Fault Assessment",
+  "smoke-alarm-maintenance-perth.html":"Smoke Alarm Faults and Replacement Assessment",
+  "fixtures-appliances-perth.html":"Fixture and Appliance Connection Assessment",
+  "renewables-smart-home-perth.html":"Smart Home Electrical Installation Assessment"
+ },
+ "scenarios":{
+  "lighting-installation-perth.html":"Lighting faults, fitting replacement and new installations",
+  "power-points-perth.html":"Damaged outlets, double power points and new connections",
+  "dishwasher-installation-perth.html":"Replacing a dishwasher and connecting a first installation",
+  "toilet-installation-perth.html":"Toilet replacement, set-out and waste connections",
+  "shower-plumbing-repairs-perth.html":"Shower leaks during use and moisture in adjoining rooms",
+  "water-pressure-perth.html":"Low water pressure at one outlet or across the property",
+  "ceiling-fans-perth.html":"Fan controls, replacement fittings and ceiling support",
+  "exhaust-fans-perth.html":"Bathroom extraction faults and replacement fan suitability",
+  "switchboard-upgrades-perth.html":"Switchboard faults, recurring trips and planned upgrades",
+  "rcd-testing-perth.html":"RCD testing, safety switches and property check records",
+  "emergency-plumber-perth.html":"Active plumbing leaks, wastewater and urgent repairs",
+  "emergency-electrician-perth.html":"Electrical hazards, circuit outages and urgent assessment"
+ }
+}

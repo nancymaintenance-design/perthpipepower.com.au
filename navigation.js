@@ -9,6 +9,19 @@
   addServiceLink('plumbing-menu', 'fixtures-appliances-perth.html', 'Fixtures & appliances', 'Kitchen, laundry and bathroom fitting enquiries.');
   addServiceLink('electrical-menu', 'renewables-smart-home-perth.html', 'Renewables & smart home', 'Energy equipment, automation and electrical upgrade enquiries.');
   const groups = [...document.querySelectorAll('.nav-group')];
+  document.documentElement.classList.add('nav-enhanced');
+  const header = document.querySelector('.site-header');
+  const measureHeader = () => {
+    if (header) {
+      const bounds = header.getBoundingClientRect();
+      document.documentElement.style.setProperty('--site-header-height', bounds.height + 'px');
+      document.documentElement.style.setProperty('--site-header-bottom', bounds.bottom + 'px');
+    }
+  };
+  measureHeader();
+  if (header && window.ResizeObserver) new ResizeObserver(measureHeader).observe(header);
+  window.addEventListener('resize', measureHeader);
+  window.addEventListener('scroll', measureHeader, {passive:true});
   groups.forEach((group) => {
     const button = group.querySelector('button');
     if (!button) return;
@@ -25,6 +38,8 @@
   });
   document.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape') return;
+    const active = groups.find(group => group.classList.contains('is-open') && group.contains(document.activeElement));
     groups.forEach((group) => { group.classList.remove('is-open'); group.querySelector('button')?.setAttribute('aria-expanded', 'false'); });
+    active?.querySelector('button')?.focus();
   });
 })();

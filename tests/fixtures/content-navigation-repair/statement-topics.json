@@ -1,0 +1,207 @@
+{
+  "blocked-drains-perth.html": [
+    "Recurring drain blockages after clearing",
+    "Slow toilet flushing and drainage",
+    "Kitchen sink gurgling and slow drainage",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Blocked-drain enquiry details",
+    "Safety around a blocked fixture",
+    "Blocked toilets and connected drains",
+    "Drainage requests for managed properties",
+    "Drain clearing and pipe replacement scopes"
+  ],
+  "burst-pipe-repair-perth.html": [
+    "Concealed burst-pipe and leak signs",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Burst-pipe safety and first actions",
+    "Active bursts and water-leak investigation",
+    "Pipe type and useful leak observations",
+    "Managed-property booking details",
+    "Pipe repair and wall or floor reinstatement"
+  ],
+  "ceiling-fans-perth.html": [
+    "Replacing a ceiling light with a fan",
+    "Customer-supplied ceiling fans"
+  ],
+  "contact.html": [
+    "The repair property address and our office address",
+    "Routine hours and emergency arrangements"
+  ],
+  "dishwasher-installation-perth.html": [
+    "Water and drain connection checks",
+    "Cabinet changes and new power-point scope"
+  ],
+  "eastern-suburbs.html": [
+    "Separate switchboard concerns from other repairs"
+  ],
+  "electrical.html": [
+    "After-hours electrical attendance arrangements",
+    "Routine hours and emergency arrangements",
+    "Electrical work and licensed trades"
+  ],
+  "emergency-electrician-perth.html": [
+    "Power-fault information for the electrician",
+    "Emergency electrical fees and quoted scope"
+  ],
+  "emergency-plumber-perth.html": [
+    "Emergency plumbing fees and quoted scope",
+    "Neighbouring properties and public water supply"
+  ],
+  "exhaust-fans-perth.html": [
+    "Moisture sources and ventilation conditions",
+    "Ducting and roof-work scope"
+  ],
+  "fixtures-appliances-perth.html": [
+    "Dishwasher connection and appliance repair",
+    "Toilet compatibility before purchase",
+    "Laundry drainage during appliance discharge",
+    "Washing-machine tap replacement",
+    "Product details before installation",
+    "Safely taken photos",
+    "Fixture and appliance request details",
+    "Plumbing and electrical coordination",
+    "Connection costs and agreed scope",
+    "Connection work and appliance servicing"
+  ],
+  "hot-water-problems-perth.html": [
+    "Loss of hot water",
+    "Different temperatures between outlets",
+    "Electrical trips at the hot-water system",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Plumbing and electrical hot-water faults",
+    "Hot-water enquiry details",
+    "Safety around unit covers",
+    "Repair and replacement assessment"
+  ],
+  "index.html": [],
+  "lighting-installation-perth.html": [
+    "Light-fitting compatibility before purchase",
+    "Light replacement and new wiring scope"
+  ],
+  "lighting-power-points-perth.html": [
+    "Faults affecting more than one fitting"
+  ],
+  "northern-suburbs.html": [
+    "Hot-water repair details for northern properties"
+  ],
+  "perth-cbd-inner-suburbs.html": [
+    "Plumbing and electrical requests for managed properties"
+  ],
+  "perth-hills-swan-valley.html": [
+    "Safe electrical observations for Hills and Swan Valley properties"
+  ],
+  "plumbing.html": [
+    "Urgent and after-hours plumbing attendance",
+    "Routine hours and emergency arrangements",
+    "Plumbing work and licensed trades"
+  ],
+  "power-faults-perth.html": [
+    "Partial loss of power",
+    "Intermittent electrical faults",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Power-fault enquiry details",
+    "Safety around recurring circuit trips",
+    "Burning smells and smoke",
+    "Investigation and repair scope"
+  ],
+  "power-points-perth.html": [
+    "Double power-point installation costs",
+    "Damaged power-point assessment and replacement"
+  ],
+  "property-management.html": [
+    "Strata work-order details",
+    "Completion notes and invoice references",
+    "Tenant reporting and emergency channels"
+  ],
+  "rcd-testing-perth.html": [
+    "Combined smoke-alarm and RCD checks",
+    "RCD test records and broader property assessment"
+  ],
+  "renewables-smart-home-perth.html": [
+    "Product details before installation",
+    "Safely taken photos",
+    "Smart-home enquiry details",
+    "Existing energy-equipment assessment",
+    "Electrical upgrade costs and scope",
+    "Compatibility before approval"
+  ],
+  "safety-switch-tripping-perth.html": [
+    "RCD and circuit-breaker functions",
+    "Trips and the source of a fault",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Reasons a safety switch trips",
+    "Switchboard-cover safety",
+    "Fault history for the electrician",
+    "Replacing a switch and resolving the fault"
+  ],
+  "shower-plumbing-repairs-perth.html": [
+    "Shower leak access and tile removal",
+    "Shower-leak enquiry details"
+  ],
+  "smoke-alarm-maintenance-perth.html": [
+    "Additional alarm locations",
+    "Hardwired alarm chirping",
+    "WA rental-home smoke-alarm requirements",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Beeping and faulty smoke alarms",
+    "Hardwired alarm safety",
+    "Managed-property alarm requests",
+    "One repair and whole-property assessment"
+  ],
+  "southern-suburbs.html": [
+    "Separate repair issues and property approvals"
+  ],
+  "switchboard-upgrades-perth.html": [
+    "Switchboard upgrade costs and written scope",
+    "Recurring circuit trips and switchboard work"
+  ],
+  "tap-mixer-repairs-perth.html": [
+    "Drips after a tap is closed",
+    "Water loss from a persistent drip",
+    "Customer-supplied mixer compatibility",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Dripping-tap assessment",
+    "Safety around dismantling fittings",
+    "Rental-property fixture repairs",
+    "Installation of purchased fittings"
+  ],
+  "toilet-installation-perth.html": [
+    "Blocked drainage and toilet replacement",
+    "Toilet compatibility before ordering"
+  ],
+  "toilet-repairs-perth.html": [
+    "Cistern faults and leaks at the base",
+    "Unplanned cistern refilling",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Constantly running toilets",
+    "Toilet overflow safety",
+    "Toilets and connected drains",
+    "Several toilets at one property",
+    "Repair compared with replacement"
+  ],
+  "water-leak-detection-perth.html": [
+    "Concealed leaks without visible damage",
+    "Unexpected water-meter movement",
+    "Reporting symptoms without diagnosis",
+    "Safely taken photos",
+    "Hidden-leak investigation",
+    "Leak enquiry details",
+    "Water near electrical equipment",
+    "Leak location and repair scopes"
+  ],
+  "water-pressure-perth.html": [
+    "Whole-property water-pressure investigation",
+    "Supply conditions and booster-pump suitability"
+  ],
+  "western-suburbs.html": [
+    "Combined fixture and electrical repair requests"
+  ]
+}

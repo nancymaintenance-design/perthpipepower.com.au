@@ -1,0 +1,14 @@
+/** Focused owner-to-owner routes; not a keyword dump or a global related list. */
+export const serviceRelated:Readonly<Record<string,readonly string[]>>={
+ 'tap-mixer-repairs-perth.html':['water-leak-detection-perth.html','fixtures-appliances-perth.html','water-pressure-perth.html'],
+ 'blocked-drains-perth.html':['toilet-repairs-perth.html','property-management.html'],
+ 'burst-pipe-repair-perth.html':['water-leak-detection-perth.html','property-management.html'],
+ 'water-leak-detection-perth.html':['burst-pipe-repair-perth.html','plumbing.html','shower-plumbing-repairs-perth.html'],
+ 'toilet-repairs-perth.html':['blocked-drains-perth.html','toilet-installation-perth.html'],
+ 'hot-water-problems-perth.html':['insights-hot-water-plumbing-or-electrical.html','electrical.html','plumbing.html'],
+ 'power-faults-perth.html':['safety-switch-tripping-perth.html','switchboard-upgrades-perth.html'],
+ 'safety-switch-tripping-perth.html':['power-faults-perth.html','rcd-testing-perth.html'],
+ 'smoke-alarm-maintenance-perth.html':['electrical.html','property-management.html','rcd-testing-perth.html'],
+ 'fixtures-appliances-perth.html':['tap-mixer-repairs-perth.html','dishwasher-installation-perth.html','toilet-installation-perth.html'],
+ 'renewables-smart-home-perth.html':['electrical.html','lighting-installation-perth.html']
+};

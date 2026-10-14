@@ -1,0 +1,10 @@
+const fs=require('node:fs'),path=require('node:path');
+const {spawnSync}=require('node:child_process');
+const {SOURCE_ROOT,REPORT_ROOT}=require('../tests/support/public-paths.cjs');
+const temp=path.join(REPORT_ROOT,'test-temp');
+fs.mkdirSync(temp,{recursive:true});
+const tests=fs.readdirSync(path.join(SOURCE_ROOT,'tests')).filter(f=>/\.test\.(?:cjs|mjs|js)$/.test(f)).map(f=>'tests/'+f);
+const scripts=fs.readdirSync(path.join(SOURCE_ROOT,'scripts')).filter(f=>/^test-.*\.js$/.test(f)).map(f=>'scripts/'+f);
+const result=spawnSync(process.execPath,['--test',...tests,...scripts,'test-blocked-drains-content.mjs'],{cwd:SOURCE_ROOT,stdio:'inherit',env:{...process.env,TEMP:temp,TMP:temp,TMPDIR:temp}});
+if(result.error)throw result.error;
+process.exitCode=result.status??1;

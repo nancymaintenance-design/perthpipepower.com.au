@@ -1,0 +1,9 @@
+{
+  "provenance": "Explicit approved source fields, authored 2026-10-14 against BASE 31601e0ccb92f9de8da8d28486927815b1e41636. Not captured from dist. Runtime never reads Git.",
+  "changes": [],
+  "runtimeHashes": {
+    "site.css": "2afff147013e075563a8616d205774b89e3ced995e68bf4575b5280fdd96709d",
+    "field-design.css": "256f40b09dd1c38bf444352ec2986e5fe6eb48fe1253b52dc70dca935925f5ff",
+    "navigation.js": "5e8108a1e363cf84bb9887cfb3e1148b0f3269ccd85f9a6bf6c1cbf7d5bc7261"
+  }
+}
