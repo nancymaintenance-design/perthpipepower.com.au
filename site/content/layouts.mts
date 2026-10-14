@@ -123,7 +123,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-d97673bf2d5f",
-"footerId": "footer-177cec5c3651",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -254,7 +254,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-965ba50d3525",
-"footerId": "footer-ea4eccc794d7",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -385,7 +385,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-965ba50d3525",
-"footerId": "footer-ea4eccc794d7",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -532,7 +532,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-d97673bf2d5f",
-"footerId": "footer-960ba0746467",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n" as TrustedHtml,
 "scripts": [
@@ -666,7 +666,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-965ba50d3525",
-"footerId": "footer-ea4eccc794d7",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -798,7 +798,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-09fb64239d62",
-"footerId": "footer-beb0a0c885b2",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n" as TrustedHtml,
 "scripts": [
@@ -945,7 +945,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-d97673bf2d5f",
-"footerId": "footer-177cec5c3651",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -1020,7 +1020,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-739fd2b7da8c",
-"footerId": "footer-602048de8c60",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -1152,7 +1152,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-965ba50d3525",
-"footerId": "footer-ea4eccc794d7",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -1406,10 +1406,11 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-1460a2ab0d09",
-"footerId": "footer-202075b20536",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "" as TrustedHtml,
 "scripts": [
+"<script src=\"site.js\"></script>" as TrustedHtml,
 "<script src=\"navigation.js\"></script>" as TrustedHtml
 ],
 "documentClose": "</body></html>\n" as TrustedHtml
@@ -1528,7 +1529,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-d97673bf2d5f",
-"footerId": "footer-b1e246f43bf5",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "" as TrustedHtml,
 "scripts": [
@@ -1675,7 +1676,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-09fb64239d62",
-"footerId": "footer-beb0a0c885b2",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -1758,7 +1759,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-54f54fcf2e4a",
-"footerId": "footer-7be324843dd8",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -1889,7 +1890,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-d97673bf2d5f",
-"footerId": "footer-beb0a0c885b2",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
@@ -1964,7 +1965,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-fc4e0bdd19ef",
-"footerId": "footer-f39b399914ad",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n  " as TrustedHtml,
 "scripts": [
@@ -2114,7 +2115,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 }
 ],
 "headerId": "header-965ba50d3525",
-"footerId": "footer-ea4eccc794d7",
+"footerId": "footer-2fc3dfab3eea",
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [

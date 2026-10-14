@@ -55,7 +55,7 @@ test('shared_components_preserve_context', () => {
   assert.ok(plumbingLinks.includes('blocked-drains-perth.html'));
   assert.ok(plumbingLinks.includes('contact.html?service=plumbing.html'));
   assert.ok(!plumbingLinks.includes('contact.html?service=electrical.html'));
-  assert.match(renderFooter(electrical, site), /contact\.html\?service=electrical\.html/);
+  assert.equal(renderFooter(electrical, site),renderFooter(site.pages.find(p=>p.file==='index.html'),site),'all pages use the owner-approved complete homepage footer; service context remains in the header and body');
   for (const file of ['blocked-drains-perth.html', 'ceiling-fans-perth.html', 'plumbing.html']) {
     assert.match(renderPage(site.pages.find(p => p.file === file), site), new RegExp(`contact\\.html\\?service=${file.replace('.', '\\.')}`));
   }

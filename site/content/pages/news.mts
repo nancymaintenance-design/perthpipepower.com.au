@@ -377,10 +377,6 @@ export const page: PageData = {
 "chrome:header-d97673bf2d5f:141": "",
 "chrome:header-d97673bf2d5f:142": "",
 "chrome:header-d97673bf2d5f:143": "",
-"chrome:header-d97673bf2d5f:144": "",
-"chrome:footer-b1e246f43bf5:0": "insights.html",
-"chrome:footer-b1e246f43bf5:1": "Insights",
-"chrome:footer-b1e246f43bf5:2": "faq.html",
-"chrome:footer-b1e246f43bf5:3": "FAQ"
+"chrome:header-d97673bf2d5f:144": ""
 }
 };

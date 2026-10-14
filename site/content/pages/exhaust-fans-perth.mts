@@ -369,20 +369,6 @@ export const page: PageData = {
 "chrome:header-965ba50d3525:69": "",
 "chrome:header-965ba50d3525:70": "",
 "chrome:header-965ba50d3525:71": "contact.html?service=exhaust-fans-perth.html",
-"chrome:header-965ba50d3525:72": "",
-"chrome:footer-ea4eccc794d7:0": "",
-"chrome:footer-ea4eccc794d7:1": "",
-"chrome:footer-ea4eccc794d7:2": "",
-"chrome:footer-ea4eccc794d7:3": "",
-"chrome:footer-ea4eccc794d7:4": "",
-"chrome:footer-ea4eccc794d7:5": "",
-"chrome:footer-ea4eccc794d7:6": "",
-"chrome:footer-ea4eccc794d7:7": "",
-"chrome:footer-ea4eccc794d7:8": "",
-"chrome:footer-ea4eccc794d7:9": "",
-"chrome:footer-ea4eccc794d7:10": "contact.html?service=exhaust-fans-perth.html",
-"chrome:footer-ea4eccc794d7:11": "",
-"chrome:footer-ea4eccc794d7:12": "",
-"chrome:footer-ea4eccc794d7:13": "contact.html?service=exhaust-fans-perth.html"
+"chrome:header-965ba50d3525:72": ""
 }
 };

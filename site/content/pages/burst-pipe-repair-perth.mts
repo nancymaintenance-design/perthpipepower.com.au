@@ -393,20 +393,6 @@ export const page: PageData = {
 "chrome:header-965ba50d3525:69": "\n                  ",
 "chrome:header-965ba50d3525:70": "\n              ",
 "chrome:header-965ba50d3525:71": "contact.html?service=burst-pipe-repair-perth.html",
-"chrome:header-965ba50d3525:72": "\n            ",
-"chrome:footer-ea4eccc794d7:0": "\n            ",
-"chrome:footer-ea4eccc794d7:1": "\n              ",
-"chrome:footer-ea4eccc794d7:2": "\n            ",
-"chrome:footer-ea4eccc794d7:3": "\n              ",
-"chrome:footer-ea4eccc794d7:4": "\n            ",
-"chrome:footer-ea4eccc794d7:5": "\n              ",
-"chrome:footer-ea4eccc794d7:6": "\n            ",
-"chrome:footer-ea4eccc794d7:7": "\n              ",
-"chrome:footer-ea4eccc794d7:8": "\n            ",
-"chrome:footer-ea4eccc794d7:9": "\n              ",
-"chrome:footer-ea4eccc794d7:10": "contact.html?service=burst-pipe-repair-perth.html",
-"chrome:footer-ea4eccc794d7:11": "\n            ",
-"chrome:footer-ea4eccc794d7:12": "\n      ",
-"chrome:footer-ea4eccc794d7:13": "contact.html?service=burst-pipe-repair-perth.html"
+"chrome:header-965ba50d3525:72": "\n            "
 }
 };

@@ -284,7 +284,6 @@ export const page: PageData = {
 ],
 "breadcrumbContainer": "<p class=\"breadcrumbs\">\n            <a href=\"{{ppp:breadcrumb:0:href}}\">{{ppp:breadcrumb:0:label}}</a> / {{ppp:breadcrumb:1:label}}\n          </p>" as TrustedHtml,
 "chromeBindings": {
-"chrome:header-739fd2b7da8c:0": "contact.html?service=fixtures-appliances-perth.html",
-"chrome:footer-602048de8c60:0": "contact.html?service=fixtures-appliances-perth.html"
+"chrome:header-739fd2b7da8c:0": "contact.html?service=fixtures-appliances-perth.html"
 }
 };

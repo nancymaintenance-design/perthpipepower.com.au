@@ -141,6 +141,34 @@ for(const [file,previous]of Object.entries(approved.pages)){
 function reviewedCopy(s){return [...require('../fixtures/content-navigation-repair/trust-copy-rules.json'),...finalCopy.rules].reduce((v,[a,b])=>v.replace(new RegExp(a.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/\s+/g,'\\s+'),'g'),b),s);}
 assert.equal(approved.artifacts['llms.txt'].split(' No arrival time is guaranteed.').length-1,1,'one approved shared-hours companion edit');
 approved.artifacts['llms.txt']=reviewedCopy(approved.artifacts['llms.txt']);
+// Owner-approved global footer restoration: clone only the previously approved
+// homepage footer/mobile bar, never capture newly generated output as expected.
+{
+ const homeBody=bodyChildren(JSON.parse(approved.pages['index.html'].dom));
+ const footerIndex=homeBody.findIndex(n=>isEl(n,'footer'));
+ const mobileIndex=homeBody.findIndex(n=>isEl(n,'div')&&attr(n,'class')==='mobile-ctas');
+ assert.equal(mobileIndex,footerIndex+2,'homepage footer and mobile bar boundary');
+ assert.equal(homeBody[mobileIndex+1][0],'text');
+ const shared=homeBody.slice(footerIndex,mobileIndex+2);
+ for(const [file,previous]of Object.entries(approved.pages)){
+  const tree=JSON.parse(previous.dom),body=bodyChildren(tree);
+  const start=body.findIndex(n=>isEl(n,'footer'));
+  const end=body.findIndex(n=>isEl(n,'div')&&attr(n,'class')==='mobile-ctas');
+  let length;
+  if(['insights-hot-water-plumbing-or-electrical.html','insights-reporting-a-plumbing-leak.html','insights-safety-switch-keeps-tripping.html','insights-tenant-property-manager-maintenance-handover.html','news-clearer-property-maintenance-enquiry.html','news-keeping-access-information-together.html','news-useful-property-work-order.html','privacy.html'].includes(file)){
+   assert.equal(end,-1,file+': historical layout had no mobile bar');
+   length=file==='privacy.html'?2:1;
+   if(file==='privacy.html')assert.equal(body[start+1][0],'text');
+  }else if(['insights.html','news.html'].includes(file)){
+   assert.equal(end,start+1,file+': historical compact footer/mobile boundary');length=2;
+  }else{
+   assert.equal(end,start+2,file+': exact footer/mobile restoration boundary');
+   assert.equal(body[end+1][0],'text');length=end-start+2;
+  }
+  body.splice(start,length,...structuredClone(shared));
+  approved.pages[file]=snapshotFromTree(tree,previous);
+ }
+}
 Object.assign(approved.assets,policy.runtimeHashes,homeCorrection.runtimeHashes);
 for(const change of policy.headStylesheets){
  const original=approved.pages[change.file],tree=JSON.parse(original.dom),head=walk(tree).find(n=>isEl(n,'head'));

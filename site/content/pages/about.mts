@@ -401,7 +401,6 @@ export const page: PageData = {
 "chrome:header-d97673bf2d5f:141": "\n        ",
 "chrome:header-d97673bf2d5f:142": "\n      ",
 "chrome:header-d97673bf2d5f:143": "\n    ",
-"chrome:header-d97673bf2d5f:144": "\n    ",
-"chrome:footer-177cec5c3651:0": "Enquire"
+"chrome:header-d97673bf2d5f:144": "\n    "
 }
 };
