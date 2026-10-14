@@ -10,9 +10,6 @@
   addServiceLink('electrical-menu', 'renewables-smart-home-perth.html', 'Renewables & smart home', 'Energy equipment, automation and electrical upgrade enquiries.');
   const groups = [...document.querySelectorAll('.nav-group')];
   document.documentElement.classList.add('nav-enhanced');
-  // Local preview CSP intentionally blocks frames. Give that environment a
-  // readable address/link card; production retains its existing map iframe.
-  if (['127.0.0.1', 'localhost'].includes(location.hostname)) document.documentElement.classList.add('local-map-preview');
   const header = document.querySelector('.site-header');
   const measureHeader = () => {
     if (header) {

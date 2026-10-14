@@ -56,10 +56,10 @@ test('no-JS public content, navigation, gallery and contact fallback remain nati
  const context=await browser.newContext({javaScriptEnabled:false});await context.route('**/*',r=>new URL(r.request().url()).origin===baseURL?r.continue():r.abort());
  try{const page=await context.newPage();for(const file of ['index.html','electrical.html','plumbing.html','ceiling-fans-perth.html','northern-suburbs.html','contact.html']){await page.goto(baseURL+'/'+file);await expect(page.locator('h1')).toBeVisible();expect(await page.locator('main').innerText()).not.toBe('');await expect(page.locator('a[href^="tel:"]').first()).toBeAttached();if(file!=='index.html')expect(await page.locator('details').count()).toBeGreaterThan(0);if(file==='northern-suburbs.html')expect(await page.locator('.electrical-work-gallery__image').count()).toBe(8);}await expect(page.locator('main a[href^="mailto:"]').first()).toBeVisible();await expect(page.locator('main a[href^="tel:"]').first()).toBeVisible();}finally{await context.close();}
 });
-test('CSP blocks real browser fetch, analytics, maps and native form submission',async({page})=>{
+test('CSP allows only Google Maps frames while blocking fetch analytics and native form submission',async({page})=>{
  const posts=[];page.on('request',r=>{if(r.method()==='POST')posts.push(r.url());});await page.goto('/contact.html');
  const result=await page.evaluate(async()=>{try{await fetch('/api/enquiry',{method:'POST',body:'{}'});return 'unexpected';}catch{return 'blocked';}});expect(result).toBe('blocked');
- const response=await page.request.get('/contact.html'),csp=response.headers()['content-security-policy'];for(const rule of ["connect-src 'none'","frame-src 'none'","form-action 'none'"])expect(csp).toContain(rule);
+ const response=await page.request.get('/contact.html'),csp=response.headers()['content-security-policy'];for(const rule of ["connect-src 'none'","frame-src https://www.google.com/maps https://www.google.com/maps/;","form-action 'none'"])expect(csp).toContain(rule);
  await page.evaluate(()=>{const form=document.createElement('form');form.method='POST';form.action='/api/enquiry';document.body.append(form);form.submit();});await page.waitForTimeout(100);expect(posts).toEqual([]);
 });
 for(const success of [true,false])test('intercepted local form '+(success?'success':'failure'),async({page,context,baseURL})=>{

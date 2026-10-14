@@ -1,0 +1,8 @@
+{
+  "approval": "2026-10-14 user explicitly rejected homepage appended narratives and requested restoration of Google Maps. Remove only these three exact elements from the previously reviewed homepage expectation; preserve every remaining DOM and SEO field.",
+  "removedClasses": ["home-service-pathways", "home-company-advantages", "office-map-fallback"],
+  "runtimeHashes": {
+    "navigation.js": "360ac636f829a6d8529e338fa35efc777fe2ee20a31133d41ed0bae8629194cf",
+    "field-design.css": "af84daf176eddb79e91ba6b9da7cb1dae8ea2296bbc92a019d231de2a4cf196b"
+  }
+}

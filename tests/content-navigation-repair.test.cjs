@@ -76,12 +76,13 @@ test('hub narratives state all hours once and retain distinct urgent and safety 
   }else assert.match(copy,/Utility faults and immediate danger use the appropriate official channel first/);
  }
 });
-test('homepage separates office, service pathways and company advantages',()=>{
+test('homepage retains the office while avoiding duplicate pathways and advantages',()=>{
  const all=nodes('index.html');
- for(const id of ['office-location-title','home-service-pathways','home-company-advantages'])assert(all.some(n=>attr(n,'id')===id),id);
+ assert(all.some(n=>attr(n,'id')==='office-location-title'));
+ for(const id of ['home-service-pathways','home-company-advantages'])assert(!all.some(n=>attr(n,'id')===id),id+': rejected repeated block');
  const office=all.find(n=>attr(n,'class')?.split(' ').includes('office-location'));
  assert(!walk(office).some(n=>attr(n,'data-site-intent')!==undefined),'intent content must not inherit office grid');
- assert(all.some(n=>attr(n,'class')==='office-map-fallback'),'readable map fallback');
+ assert(!all.some(n=>attr(n,'class')==='office-map-fallback'),'map is not replaced by address-only copy');
 });
 test('About introduces three core services before company evidence',()=>{
  const all=nodes('about.html'),headings=all.filter(n=>/^h[123]$/.test(n.tagName)).map(n=>text(n).trim());

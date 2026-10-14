@@ -4,6 +4,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const {parseFragment}=require('parse5');
 const frozen=require('../fixtures/ts-migration/baseline.json');
 const chrome=require('../fixtures/content-navigation-repair/chrome-contract.json');
+const homeCorrection=require('../fixtures/content-navigation-repair/home-map-correction.json');
 const policies=Object.keys(frozen.pages).map(f=>require('../fixtures/content-navigation-repair/'+f+'.json'));
 const policy={changes:policies.flatMap(p=>p.changes),headStylesheets:policies.flatMap(p=>p.headStylesheets||[]),runtimeHashes:{...policies[0].runtimeHashes,...chrome.runtimeHashes}};
 const children=n=>n.childNodes||[];
@@ -80,7 +81,19 @@ for(const record of policy.changes){const original=approved.pages[record.file],t
  for(const change of record.schemas){const script=walk(tree).filter(n=>isEl(n,'script')&&attr(n,'type')==='application/ld+json')[change.index];assert.equal(text(script),change.before,record.file+': schema provenance');script[4]=[['text',change.after]];}
  approved.pages[record.file]=snapshotFromTree(tree,original);
 }
-Object.assign(approved.assets,policy.runtimeHashes);
+{
+ const previous=approved.pages['index.html'],tree=JSON.parse(previous.dom);
+ for(const name of homeCorrection.removedClasses){
+  let removed=0;
+  for(const parent of walk(tree)){
+   const c=childList(parent);
+   for(let i=c.length-1;i>=0;i--)if(c[i][0]==='element'&&(attr(c[i],'class')||'').split(' ').includes(name)){c.splice(i,1);removed++;}
+  }
+  assert.equal(removed,1,'homepage correction removes exactly one '+name);
+ }
+ approved.pages['index.html']=snapshotFromTree(tree,previous);
+}
+Object.assign(approved.assets,policy.runtimeHashes,homeCorrection.runtimeHashes);
 for(const change of policy.headStylesheets){
  const original=approved.pages[change.file],tree=JSON.parse(original.dom),head=walk(tree).find(n=>isEl(n,'head'));
  const i=head[4].findIndex(n=>isEl(n,'link')&&attr(n,'rel')==='stylesheet'&&attr(n,'href')===change.after);

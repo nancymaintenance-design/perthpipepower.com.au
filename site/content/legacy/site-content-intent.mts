@@ -9,20 +9,23 @@ const legacy = compatibilityView({
         "/"
       ],
       "intent": "entity-navigation",
-      "heading": "Choose the right repair starting point",
+      "heading": {
+        "$source": "page",
+        "file": "index.html",
+        "path": [
+          "seo",
+          "title"
+        ]
+      },
       "body": {
         "$source": "fragment",
         "file": "index.html",
         "path": [
           "sections",
-          5,
-          "container"
-        ],
-        "node": [
           1,
-          1,
-          1
+          "html"
         ],
+        "node": [],
         "mode": "text",
         "trim": true
       },
@@ -30,57 +33,35 @@ const legacy = compatibilityView({
         [
           {
             "$source": "page",
-            "file": "blocked-drains-perth.html",
+            "file": "plumbing.html",
             "path": [
-              "breadcrumbs",
-              1,
-              "href"
+              "file"
             ]
           },
           {
-            "$source": "fragment",
-            "file": "index.html",
+            "$source": "page",
+            "file": "plumbing.html",
             "path": [
-              "sections",
-              5,
-              "container"
-            ],
-            "node": [
-              1,
-              1,
-              2,
-              0,
-              0,
-              0
-            ],
-            "mode": "text"
+              "seo",
+              "title"
+            ]
           }
         ],
         [
           {
             "$source": "page",
-            "file": "ceiling-fans-perth.html",
+            "file": "electrical.html",
             "path": [
-              "breadcrumbs",
-              1,
-              "href"
+              "file"
             ]
           },
           {
-            "$source": "fragment",
-            "file": "eastern-suburbs.html",
+            "$source": "page",
+            "file": "electrical.html",
             "path": [
-              "sections",
-              0,
-              "html"
-            ],
-            "node": [
-              1,
-              0,
-              6,
-              0
-            ],
-            "mode": "text"
+              "seo",
+              "title"
+            ]
           }
         ],
         [
@@ -92,108 +73,16 @@ const legacy = compatibilityView({
             ]
           },
           {
-            "$source": "fragment",
-            "file": "index.html",
+            "$source": "page",
+            "file": "property-management.html",
             "path": [
-              "sections",
-              5,
-              "container"
-            ],
-            "node": [
-              1,
-              1,
-              2,
-              2,
-              0,
-              0
-            ],
-            "mode": "text"
+              "seo",
+              "title"
+            ]
           }
         ]
       ],
-      "faq": [
-        [
-          {
-            "$source": "page",
-            "file": "index.html",
-            "path": [
-              "sections",
-              5,
-              "items",
-              0,
-              "question"
-            ]
-          },
-          {
-            "$source": "fragment",
-            "file": "index.html",
-            "path": [
-              "sections",
-              5,
-              "items",
-              0,
-              "answer"
-            ],
-            "node": [],
-            "mode": "text",
-            "trim": true
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "index.html",
-            "path": [
-              "sections",
-              5,
-              "items",
-              1,
-              "question"
-            ]
-          },
-          {
-            "$source": "fragment",
-            "file": "index.html",
-            "path": [
-              "sections",
-              5,
-              "items",
-              1,
-              "answer"
-            ],
-            "node": [],
-            "mode": "text",
-            "trim": true
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "contact.html",
-            "path": [
-              "sections",
-              0,
-              "items",
-              3,
-              "question"
-            ]
-          },
-          {
-            "$source": "fragment",
-            "file": "contact.html",
-            "path": [
-              "sections",
-              0,
-              "items",
-              3,
-              "answer"
-            ],
-            "node": [],
-            "mode": "text",
-            "trim": true
-          }
-        ]
-      ]
+      "faq": []
     },
     "about.html": {
       "primary": "{{ppp:shared:business.name:raw}} Perth team",

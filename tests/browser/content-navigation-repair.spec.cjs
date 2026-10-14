@@ -24,14 +24,15 @@ for(const width of [1440,320])test('native no-JS keyboard service menu clears th
   await expect(page.locator('h1')).toBeVisible();await expect(page.locator('a[href="tel:0413477667"]').first()).toBeAttached();
  }finally{await context.close();}
 });
-test('office copy stays in one reading column outside the map grid',async({page})=>{
+test('office map and native Maps link remain visible without appended filler',async({page})=>{
  await page.goto('/index.html');
  const office=page.locator('.office-location');
  expect(await office.locator('[data-site-intent]').count()).toBe(0);
- await expect(page.locator('#home-service-pathways')).toBeVisible();
- await expect(page.locator('.office-map-fallback')).toBeVisible();
- await expect(page.locator('.office-location iframe')).toBeHidden();
- expect(await page.locator('.office-map-fallback').evaluate(n=>parseFloat(getComputedStyle(n).paddingLeft))).toBeGreaterThanOrEqual(16);
+ await expect(page.locator('#home-service-pathways')).toHaveCount(0);
+ await expect(page.locator('.home-company-advantages')).toHaveCount(0);
+ await expect(office.locator('iframe')).toBeVisible();
+ await expect(office.locator('a[href^="https://www.google.com/maps/place/"]')).toBeVisible();
+ await expect(page.locator('.office-map-fallback')).toHaveCount(0);
 });
 test('long translated menu labels wrap without obscuring focused anchors',async({page})=>{
  await page.setViewportSize({width:320,height:900});await page.goto('/electrical.html');
@@ -68,7 +69,7 @@ for(const width of [320,390,1440])for(const file of pages)test('approved visual 
  const dir=path.join(report,'screenshots');fs.mkdirSync(dir,{recursive:true});
  await page.screenshot({path:path.join(dir,file.replace('.html','')+'-'+width+'.png'),fullPage:true});
  await page.screenshot({path:path.join(dir,file.replace('.html','')+'-'+width+'-viewport.png')});
- if(file==='index.html'&&width===1440){await page.locator('.office-location').screenshot({path:path.join(dir,'home-office-desktop.png')});await page.locator('.home-service-pathways').screenshot({path:path.join(dir,'home-pathways-desktop.png')});}
+ if(file==='index.html'&&width===1440)await page.locator('.office-location').screenshot({path:path.join(dir,'home-office-desktop.png')});
  if(file==='about.html'&&width===1440)await page.locator('main>.section').first().screenshot({path:path.join(dir,'about-core-services-desktop.png')});
  if(file==='service-areas.html'){
   await page.locator('[aria-controls="plumbing-menu"]').click();await expect(page.locator('#plumbing-menu')).toBeVisible();

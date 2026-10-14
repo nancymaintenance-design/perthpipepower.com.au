@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 CSP = ("default-src 'self'; script-src 'self' 'unsafe-inline'; "
        "style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; "
-       "connect-src 'none'; frame-src 'none'; object-src 'none'; "
+       "connect-src 'none'; frame-src https://www.google.com/maps https://www.google.com/maps/; object-src 'none'; "
        "form-action 'none'; base-uri 'self'; frame-ancestors 'none'")
 DENIED = {'api', 'data', 'scripts', 'tests', 'tools', 'docs', 'internal', 'node_modules', 'site', 'source'}
 ASSETS = {'.html', '.css', '.js', '.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif',
