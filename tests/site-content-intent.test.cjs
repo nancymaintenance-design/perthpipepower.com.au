@@ -1,7 +1,7 @@
 const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/public-paths.cjs');
-const fs=require('node:fs'),cp=require('node:child_process'),assert=require('node:assert/strict'),{test}=require('node:test');
-// Pinned approved production base, also present in the migrated shallow clone.
-const base='d1ef9827a4e68b449342e14f44956134504faed2';
+const fs=require('node:fs'),assert=require('node:assert/strict'),{test}=require('node:test');
+// Independent historical public expectations keep source archives verifiable.
+const historical=require('./fixtures/ts-migration/historical-public-expectations.json');
 const files=[...fs.readFileSync(require('node:path').join(resolvePublicRoot(),'sitemap.xml'),'utf8').matchAll(/<loc>[^<]*\.au\/([^<]*)<\/loc>/g)].map(m=>m[1]||'index.html');
 const read=f=>fs.readFileSync(require('node:path').join(resolvePublicRoot(),f),'utf8');
 const clean=s=>s.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
@@ -38,17 +38,17 @@ test('safety-sensitive queries have utility routing before an ordinary enquiry, 
  const drain=read('blocked-drains-perth.html');assert(drain.includes('tel:131375'),'wastewater overflow needs Water Corporation routing');
 });
 test('content editing preserves approved prices, existing canonical URLs, original hero and private personnel',()=>{
- const originalFiles=cp.execFileSync('git',['ls-tree','--name-only',base],{encoding:'utf8'}).trim().split(/\r?\n/);
+ const originalFiles=Object.keys(historical.pages);
  for(const f of [...files,'privacy.html'].filter(f=>originalFiles.includes(f))){
-  const h=read(f),old=cp.execFileSync('git',['show',base+':'+f],{encoding:'utf8'});
+  const h=read(f),old=historical.pages[f];
   const prices=s=>[...s.matchAll(/<p class="price-guide__range">([\s\S]*?)<\/p>/g)].map(m=>clean(m[1]));
-  assert.deepEqual(prices(h),prices(old),f+': price changed');
+  assert.deepEqual(prices(h),old.prices,f+': price changed');
   const canonical=s=>s.match(/<link\b[^>]*rel="canonical"[^>]*>/)[0].match(/href="([^"]+)"/)[1];
-  assert.equal(canonical(h),canonical(old),f+': URL changed');assert(!/"@type":\s*"Person"/.test(h),f+': private personnel');
+  assert.equal(canonical(h),old.canonical,f+': URL changed');assert(!/"@type":\s*"Person"/.test(h),f+': private personnel');
  }
  const hero=s=>s.match(/<section class="hero"[\s\S]*?<\/section>/)[0].replace(/\r\n/g,'\n');
- assert.equal(hero(read('index.html')),hero(cp.execFileSync('git',['show',base+':index.html'],{encoding:'utf8'})));
+ assert.equal(hero(read('index.html')),historical.hero);
  const {parse,serialize}=require('parse5');
  const normalized=s=>{const document=parse(s.replace(/\r\n/g,'\n'));const sort=n=>{if(n.attrs)n.attrs.sort((a,b)=>a.name.localeCompare(b.name));for(const child of n.childNodes??[])sort(child);};sort(document);return serialize(document);};
- assert.equal(normalized(read('privacy.html')),normalized(cp.execFileSync('git',['show',base+':privacy.html'],{encoding:'utf8'})));
+ assert.equal(normalized(read('privacy.html')),normalized(historical.privacy));
 });

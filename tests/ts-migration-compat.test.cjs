@@ -101,7 +101,7 @@ test('every legacy writing CLI exits with the canonical build guidance', () => {
 
 test('local deployment config preserves routing and keeps cold build inputs', () => {
   const current=JSON.parse(fs.readFileSync(path.join(source,'vercel.json'),'utf8'));
-  const before=JSON.parse(spawnSync('git',['show','0df39a4797f4d04c36c5ba6634f1506d7f7b2456:vercel.json'],{cwd:source,encoding:'utf8'}).stdout);
+  const before=require('./fixtures/ts-migration/historical-public-expectations.json').config;
   assert.equal(current.buildCommand,'npm run build'); assert.equal(current.outputDirectory,'dist');
   const {buildCommand,outputDirectory,...rest}=current;
   assert.deepEqual(rest,before);

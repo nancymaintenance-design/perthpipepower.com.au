@@ -1,0 +1,489 @@
+{
+  "provenance": {
+    "content": "d1ef9827a4e68b449342e14f44956134504faed2",
+    "hero": "38ae1ceb96153615ef312d78b6a5b4c37a1d87c5",
+    "config": "0df39a4797f4d04c36c5ba6634f1506d7f7b2456",
+    "note": "Public expectation fragments captured once directly from independent historical Git blobs, before Task6 test edits."
+  },
+  "pages": {
+    "about.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/about.html"
+    },
+    "blocked-drains-perth.html": {
+      "prices": [
+        "AUD $198–$605"
+      ],
+      "canonical": "https://perthpipepower.com.au/blocked-drains-perth.html"
+    },
+    "burst-pipe-repair-perth.html": {
+      "prices": [
+        "AUD $275–$990"
+      ],
+      "canonical": "https://perthpipepower.com.au/burst-pipe-repair-perth.html"
+    },
+    "contact.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/contact.html"
+    },
+    "eastern-suburbs.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/eastern-suburbs.html"
+    },
+    "electrical.html": {
+      "prices": [
+        "AUD $220–$440",
+        "AUD $220–$440",
+        "AUD $220–$330",
+        "AUD $165–$275",
+        "AUD $70–$160",
+        "AUD $205–$275"
+      ],
+      "canonical": "https://perthpipepower.com.au/electrical.html"
+    },
+    "faq.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/faq.html"
+    },
+    "fixtures-appliances-perth.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/fixtures-appliances-perth.html"
+    },
+    "hot-water-problems-perth.html": {
+      "prices": [
+        "AUD $198–$660",
+        "AUD $1,980–$4,950"
+      ],
+      "canonical": "https://perthpipepower.com.au/hot-water-problems-perth.html"
+    },
+    "index.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/"
+    },
+    "insights-hot-water-plumbing-or-electrical.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/insights-hot-water-plumbing-or-electrical.html"
+    },
+    "insights-reporting-a-plumbing-leak.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/insights-reporting-a-plumbing-leak.html"
+    },
+    "insights-safety-switch-keeps-tripping.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/insights-safety-switch-keeps-tripping.html"
+    },
+    "insights-tenant-property-manager-maintenance-handover.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/insights-tenant-property-manager-maintenance-handover.html"
+    },
+    "insights.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/insights.html"
+    },
+    "lighting-power-points-perth.html": {
+      "prices": [
+        "AUD $165–$275",
+        "AUD $70–$160"
+      ],
+      "canonical": "https://perthpipepower.com.au/lighting-power-points-perth.html"
+    },
+    "news-clearer-property-maintenance-enquiry.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/news-clearer-property-maintenance-enquiry.html"
+    },
+    "news-keeping-access-information-together.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/news-keeping-access-information-together.html"
+    },
+    "news-useful-property-work-order.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/news-useful-property-work-order.html"
+    },
+    "news.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/news.html"
+    },
+    "northern-suburbs.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/northern-suburbs.html"
+    },
+    "perth-cbd-inner-suburbs.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/perth-cbd-inner-suburbs.html"
+    },
+    "perth-hills-swan-valley.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/perth-hills-swan-valley.html"
+    },
+    "plumbing.html": {
+      "prices": [
+        "AUD $275–$550",
+        "AUD $275–$990",
+        "AUD $198–$605",
+        "AUD $198–$660",
+        "AUD $165–$420",
+        "AUD $165–$330"
+      ],
+      "canonical": "https://perthpipepower.com.au/plumbing.html"
+    },
+    "power-faults-perth.html": {
+      "prices": [
+        "AUD $220–$440"
+      ],
+      "canonical": "https://perthpipepower.com.au/power-faults-perth.html"
+    },
+    "privacy.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/privacy.html"
+    },
+    "property-management.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/property-management.html"
+    },
+    "renewables-smart-home-perth.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/renewables-smart-home-perth.html"
+    },
+    "safety-switch-tripping-perth.html": {
+      "prices": [
+        "AUD $220–$440",
+        "AUD $220–$330"
+      ],
+      "canonical": "https://perthpipepower.com.au/safety-switch-tripping-perth.html"
+    },
+    "service-areas.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/service-areas.html"
+    },
+    "smoke-alarm-maintenance-perth.html": {
+      "prices": [
+        "AUD $205–$275"
+      ],
+      "canonical": "https://perthpipepower.com.au/smoke-alarm-maintenance-perth.html"
+    },
+    "southern-suburbs.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/southern-suburbs.html"
+    },
+    "tap-mixer-repairs-perth.html": {
+      "prices": [
+        "AUD $165–$420"
+      ],
+      "canonical": "https://perthpipepower.com.au/tap-mixer-repairs-perth.html"
+    },
+    "toilet-repairs-perth.html": {
+      "prices": [
+        "AUD $165–$330"
+      ],
+      "canonical": "https://perthpipepower.com.au/toilet-repairs-perth.html"
+    },
+    "water-leak-detection-perth.html": {
+      "prices": [
+        "AUD $275–$550"
+      ],
+      "canonical": "https://perthpipepower.com.au/water-leak-detection-perth.html"
+    },
+    "western-suburbs.html": {
+      "prices": [],
+      "canonical": "https://perthpipepower.com.au/western-suburbs.html"
+    }
+  },
+  "hero": "<section class=\"hero\" aria-label=\"Featured services\">\n        <article\n          class=\"slide is-active\"\n          style=\"background-image: url(&quot;hero-repair.jpg&quot;)\"\n        >\n          <div class=\"shell\">\n            <div class=\"hero-copy\">\n              <span class=\"eyebrow\">Perth plumbing &amp; electrical repairs</span>\n              <h1>Plumbing and electrical repairs in Perth</h1>\n              <p>\n                Clear help for property problems. Ellis Services Group is a\n                direct place to start when a plumbing or electrical issue\n                interrupts your Perth property.\n              </p>\n              <div class=\"hero-actions\">\n                <a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a\n                ><a class=\"button alt\" href=\"contact.html\">Request a repair</a>\n              </div>\n            </div>\n          </div>\n        </article>\n        <article class=\"slide\" data-background-image=\"plumbing-repair.jpg\">\n          <div class=\"shell\">\n            <div class=\"hero-copy\">\n              <span class=\"eyebrow\">Plumbing</span>\n              <h2>Describe the water problem, simply.</h2>\n              <p>\n                Leaks, slow drains and hot-water symptoms are easier to action\n                when the location and observations are clear.\n              </p>\n              <div class=\"hero-actions\">\n                <a class=\"button\" href=\"plumbing.html\">Explore plumbing</a>\n              </div>\n            </div>\n          </div>\n        </article>\n        <article class=\"slide\" data-background-image=\"electrical-repair.jpg\">\n          <div class=\"shell\">\n            <div class=\"hero-copy\">\n              <span class=\"eyebrow\">Electrical</span>\n              <h2>Safety first. Facts next.</h2>\n              <p>\n                For electrical faults, report what you can observe from a safe\n                position. Never dismantle equipment to diagnose a problem.\n              </p>\n              <div class=\"hero-actions\">\n                <a class=\"button\" href=\"electrical.html\">Explore electrical</a>\n              </div>\n            </div>\n          </div>\n        </article>\n        <div class=\"carousel-controls\">\n          <button type=\"button\" data-prev aria-label=\"Previous slide\">←</button\n          ><span class=\"carousel-status\" aria-live=\"polite\">1 of 3</span\n          ><button type=\"button\" data-next aria-label=\"Next slide\">→</button>\n        </div>\n      </section>",
+  "restoredHero": "<section class=\"hero\" aria-label=\"Featured services\">\n        <article\n          class=\"slide is-active\"\n          style=\"background-image: url(&quot;hero-repair.jpg&quot;)\"\n        >\n          <div class=\"shell\">\n            <div class=\"hero-copy\">\n              <span class=\"eyebrow\">Perth plumbing &amp; electrical repairs</span>\n              <h1>Plumbing and electrical repairs in Perth</h1>\n              <p>\n                Clear help for property problems. Ellis Services Group is a\n                direct place to start when a plumbing or electrical issue\n                interrupts your Perth property.\n              </p>\n              <div class=\"hero-actions\">\n                <a class=\"button\" href=\"tel:0413477667\">Call 0413 477 667</a\n                ><a class=\"button alt\" href=\"contact.html\">Request a repair</a>\n              </div>\n            </div>\n          </div>\n        </article>\n        <article class=\"slide\" data-background-image=\"plumbing-repair.jpg\">\n          <div class=\"shell\">\n            <div class=\"hero-copy\">\n              <span class=\"eyebrow\">Plumbing</span>\n              <h2>Describe the water problem, simply.</h2>\n              <p>\n                Leaks, slow drains and hot-water symptoms are easier to action\n                when the location and observations are clear.\n              </p>\n              <div class=\"hero-actions\">\n                <a class=\"button\" href=\"plumbing.html\">Explore plumbing</a>\n              </div>\n            </div>\n          </div>\n        </article>\n        <article class=\"slide\" data-background-image=\"electrical-repair.jpg\">\n          <div class=\"shell\">\n            <div class=\"hero-copy\">\n              <span class=\"eyebrow\">Electrical</span>\n              <h2>Safety first. Facts next.</h2>\n              <p>\n                For electrical faults, report what you can observe from a safe\n                position. Never dismantle equipment to diagnose a problem.\n              </p>\n              <div class=\"hero-actions\">\n                <a class=\"button\" href=\"electrical.html\">Explore electrical</a>\n              </div>\n            </div>\n          </div>\n        </article>\n        <div class=\"carousel-controls\">\n          <button type=\"button\" data-prev aria-label=\"Previous slide\">←</button\n          ><span class=\"carousel-status\" aria-live=\"polite\">1 of 3</span\n          ><button type=\"button\" data-next aria-label=\"Next slide\">→</button>\n        </div>\n      </section>",
+  "privacy": "<!doctype html>\n<html lang=\"en-AU\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <title>Privacy Policy | Ellis Services Group</title>\n    <meta name=\"description\" content=\"How Ellis Services Group handles personal information submitted through this Perth plumbing and electrical website.\" />\n    <meta name=\"robots\" content=\"noindex,follow\" />\n    <link rel=\"canonical\" href=\"https://perthpipepower.com.au/privacy.html\" />\n    <meta property=\"og:title\" content=\"Privacy Policy | Ellis Services Group\" />\n    <meta property=\"og:description\" content=\"How Ellis Services Group handles personal information submitted through this Perth plumbing and electrical website.\" />\n    <meta property=\"og:url\" content=\"https://perthpipepower.com.au/privacy.html\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script>\n    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>\n    <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n</head>\n  <body>\n    <a class=\"skip\" href=\"#main\">Skip to content</a>\n    <header class=\"site-header\">\n      <div class=\"shell head-row\">\n        <a class=\"brand\" href=\"/\"><img class=\"brand-logo\" src=\"ellis-services-logo.png\" width=\"1237\" height=\"1272\" alt=\"Ellis Services Group logo\" />Ellis Services Group</a>\n        <nav class=\"site-nav\" aria-label=\"Main navigation\"><ul class=\"nav-list\"><li><a href=\"/\">Home</a></li><li><a href=\"about.html\">About</a></li><li><a href=\"service-areas.html\">Areas</a></li><li><a href=\"contact.html\" class=\"nav-cta\">Contact</a></li></ul></nav>\n      </div>\n    </header>\n    <main id=\"main\">\n      <section class=\"page-hero\"><div class=\"shell\"><p class=\"breadcrumbs\"><a href=\"/\">Home</a> / Privacy Policy</p><span class=\"eyebrow\">Your information</span><h1>Privacy policy</h1><p>How Ellis Services Group handles information you provide through this website.</p></div></section>\n      <section class=\"section\"><div class=\"shell text-column\">\n        <h2>Information we collect</h2>\n        <p>When you send an enquiry, we may collect your name, phone number, email address and property address or suburb, together with the service details you choose to provide.</p>\n        <h2>How we use it</h2>\n        <p>We use enquiry information to respond to your request, discuss plumbing or electrical work, arrange access where appropriate and keep records connected with the enquiry or completed work.</p>\n        <h2>Keeping information secure</h2>\n        <p>Provide only information that is relevant to the request. Do not include unnecessary sensitive information or take photos that place you near an electrical, water or other safety hazard.</p>\n        <h2>Contact and updates</h2>\n        <p>For a privacy question or to update information you have submitted, contact Ellis Services Group at <a href=\"mailto:maxinemaintenance.au@outlook.com\">maxinemaintenance.au@outlook.com</a> or call <a href=\"tel:0413477667\">0413 477 667</a>.</p>\n      </div></section>\n    </main>\n    <footer class=\"footer\"><div class=\"shell\"><p>Ellis Services Group · <a href=\"tel:0413477667\">0413 477 667</a> · <a href=\"mailto:maxinemaintenance.au@outlook.com\">maxinemaintenance.au@outlook.com</a> · 140 St Georges Terrace, Perth WA 6000 · <a href=\"privacy.html\">Privacy Policy</a></p></div></footer>\n    <script src=\"site.js\"></script><script src=\"navigation.js\"></script>\n  </body>\n</html>\n",
+  "config": {
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "redirects": [
+      {
+        "source": "/index.html",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/about.html/",
+        "destination": "/about.html",
+        "permanent": true
+      },
+      {
+        "source": "/blocked-drains-perth.html/",
+        "destination": "/blocked-drains-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/burst-pipe-repair-perth.html/",
+        "destination": "/burst-pipe-repair-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/ceiling-fans-perth.html/",
+        "destination": "/ceiling-fans-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/contact.html/",
+        "destination": "/contact.html",
+        "permanent": true
+      },
+      {
+        "source": "/dishwasher-installation-perth.html/",
+        "destination": "/dishwasher-installation-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/eastern-suburbs.html/",
+        "destination": "/eastern-suburbs.html",
+        "permanent": true
+      },
+      {
+        "source": "/electrical.html/",
+        "destination": "/electrical.html",
+        "permanent": true
+      },
+      {
+        "source": "/emergency-electrician-perth.html/",
+        "destination": "/emergency-electrician-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/emergency-plumber-perth.html/",
+        "destination": "/emergency-plumber-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/exhaust-fans-perth.html/",
+        "destination": "/exhaust-fans-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/faq.html/",
+        "destination": "/faq.html",
+        "permanent": true
+      },
+      {
+        "source": "/fixtures-appliances-perth.html/",
+        "destination": "/fixtures-appliances-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/hot-water-problems-perth.html/",
+        "destination": "/hot-water-problems-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/index.html/",
+        "destination": "/",
+        "permanent": true
+      },
+      {
+        "source": "/insights-hot-water-plumbing-or-electrical.html/",
+        "destination": "/insights-hot-water-plumbing-or-electrical.html",
+        "permanent": true
+      },
+      {
+        "source": "/insights-reporting-a-plumbing-leak.html/",
+        "destination": "/insights-reporting-a-plumbing-leak.html",
+        "permanent": true
+      },
+      {
+        "source": "/insights-safety-switch-keeps-tripping.html/",
+        "destination": "/insights-safety-switch-keeps-tripping.html",
+        "permanent": true
+      },
+      {
+        "source": "/insights-tenant-property-manager-maintenance-handover.html/",
+        "destination": "/insights-tenant-property-manager-maintenance-handover.html",
+        "permanent": true
+      },
+      {
+        "source": "/insights.html/",
+        "destination": "/insights.html",
+        "permanent": true
+      },
+      {
+        "source": "/lighting-installation-perth.html/",
+        "destination": "/lighting-installation-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/lighting-power-points-perth.html/",
+        "destination": "/lighting-power-points-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/news-clearer-property-maintenance-enquiry.html/",
+        "destination": "/news-clearer-property-maintenance-enquiry.html",
+        "permanent": true
+      },
+      {
+        "source": "/news-keeping-access-information-together.html/",
+        "destination": "/news-keeping-access-information-together.html",
+        "permanent": true
+      },
+      {
+        "source": "/news-useful-property-work-order.html/",
+        "destination": "/news-useful-property-work-order.html",
+        "permanent": true
+      },
+      {
+        "source": "/news.html/",
+        "destination": "/news.html",
+        "permanent": true
+      },
+      {
+        "source": "/northern-suburbs.html/",
+        "destination": "/northern-suburbs.html",
+        "permanent": true
+      },
+      {
+        "source": "/perth-cbd-inner-suburbs.html/",
+        "destination": "/perth-cbd-inner-suburbs.html",
+        "permanent": true
+      },
+      {
+        "source": "/perth-hills-swan-valley.html/",
+        "destination": "/perth-hills-swan-valley.html",
+        "permanent": true
+      },
+      {
+        "source": "/plumbing.html/",
+        "destination": "/plumbing.html",
+        "permanent": true
+      },
+      {
+        "source": "/power-faults-perth.html/",
+        "destination": "/power-faults-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/power-points-perth.html/",
+        "destination": "/power-points-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/privacy.html/",
+        "destination": "/privacy.html",
+        "permanent": true
+      },
+      {
+        "source": "/property-management.html/",
+        "destination": "/property-management.html",
+        "permanent": true
+      },
+      {
+        "source": "/rcd-testing-perth.html/",
+        "destination": "/rcd-testing-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/renewables-smart-home-perth.html/",
+        "destination": "/renewables-smart-home-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/safety-switch-tripping-perth.html/",
+        "destination": "/safety-switch-tripping-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/service-areas.html/",
+        "destination": "/service-areas.html",
+        "permanent": true
+      },
+      {
+        "source": "/shower-plumbing-repairs-perth.html/",
+        "destination": "/shower-plumbing-repairs-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/smoke-alarm-maintenance-perth.html/",
+        "destination": "/smoke-alarm-maintenance-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/southern-suburbs.html/",
+        "destination": "/southern-suburbs.html",
+        "permanent": true
+      },
+      {
+        "source": "/switchboard-upgrades-perth.html/",
+        "destination": "/switchboard-upgrades-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/tap-mixer-repairs-perth.html/",
+        "destination": "/tap-mixer-repairs-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/toilet-installation-perth.html/",
+        "destination": "/toilet-installation-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/toilet-repairs-perth.html/",
+        "destination": "/toilet-repairs-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/water-leak-detection-perth.html/",
+        "destination": "/water-leak-detection-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/water-pressure-perth.html/",
+        "destination": "/water-pressure-perth.html",
+        "permanent": true
+      },
+      {
+        "source": "/western-suburbs.html/",
+        "destination": "/western-suburbs.html",
+        "permanent": true
+      }
+    ],
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          },
+          {
+            "key": "Content-Security-Policy",
+            "value": "frame-ancestors 'self'; object-src 'none'; base-uri 'self'"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "camera=(), microphone=(), geolocation=()"
+          }
+        ]
+      },
+      {
+        "source": "/(.*)\\.(png|jpg|jpeg|webp|gif|svg|ico|woff|woff2)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800, stale-while-revalidate=86400"
+          }
+        ]
+      },
+      {
+        "source": "/(.*)\\.(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600, stale-while-revalidate=86400"
+          }
+        ]
+      }
+    ]
+  }
+}
