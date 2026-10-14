@@ -1,7 +1,9 @@
 (() => {
   const form = document.querySelector('[data-enquiry-form]');
   if (!form) return;
-  const status = document.querySelector('#form-status');
+  const status = form.querySelector('.form-status');
+  if (!status) return;
+  if (!status.id) status.id = 'form-status';
   const button = form.querySelector('button[type="submit"]');
   let submitting = false;
   const update = (message, state) => { status.textContent = message; status.className = `form-status ${state || ''}`; };
@@ -14,7 +16,7 @@
       const field = form.elements.namedItem(name);
       const valid = !!data[name]?.trim() && (name !== 'email' || field.validity.valid);
       field.setAttribute('aria-invalid', String(!valid));
-      field.setAttribute('aria-describedby', 'form-status');
+      field.setAttribute('aria-describedby', status.id);
       if (!valid && !invalid) invalid = field;
     }
     if (invalid) { update('Please complete each required field and enter a valid email address.', 'is-error'); invalid.focus(); return; }

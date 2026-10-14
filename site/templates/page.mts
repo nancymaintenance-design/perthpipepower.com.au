@@ -6,6 +6,7 @@ import { renderFaq } from './faq.mjs';
 import { renderFooter } from './footer.mjs';
 import { renderHead } from './head.mjs';
 import { renderNavigation } from './navigation.mjs';
+import { hasEnquirySidebar, renderEnquiryLayout } from './enquiry-sidebar.mjs';
 
 function renderSections(sections: readonly ContentSection[],pageFile:string): string {
   return sections.map(section => section.kind === 'rich' ? section.html : renderFaq(section.items, section.container,pageFile)).join('');
@@ -13,7 +14,7 @@ function renderSections(sections: readonly ContentSection[],pageFile:string): st
 
 function renderHeroPage(page: PageData): string {
   if (page.hero === null) throw new Error(`Invalid ${page.kind} page: missing hero for ${page.file}`);
-  return page.hero + renderSections(page.sections,page.file);
+  return page.hero + renderEnquiryLayout(page,renderSections(page.sections,page.file));
 }
 
 function renderArticle(page: PageData): string {
@@ -22,7 +23,7 @@ function renderArticle(page: PageData): string {
   if (page.hero !== null || !page.mainAttributes.class?.split(/\s+/).includes('article')) {
     throw new Error(`Invalid article layout for ${page.file}`);
   }
-  return renderSections(page.sections,page.file);
+  return renderEnquiryLayout(page,renderSections(page.sections,page.file));
 }
 
 function renderContent(page: PageData): string {
@@ -54,6 +55,8 @@ export function renderPage(page: PageData, site: SiteData): string {
   const bindings: Record<string, string> = page.breadcrumbContainer === null ? {} : { breadcrumbs: renderBreadcrumbs(page) };
   const main = `<main${Object.entries(page.mainAttributes).map(([key, value]) => ` ${key}="${escapePlainText(value)}"`).join('')}>`
     + renderSlots(content, bindings, `page content for ${page.file}`) + '</main>';
-  return renderDocument(layout, { head: renderHead(page, layout), navigation: renderNavigation(page, site),
+  const effectiveLayout=hasEnquirySidebar(page)&&!layout.scripts.some(s=>s.includes('src="contact-form.js"'))
+    ? {...layout,scripts:[...layout.scripts,'<script src="contact-form.js"></script>' as import('../types.mjs').TrustedHtml]} : layout;
+  return renderDocument(effectiveLayout, { head: renderHead(page, layout), navigation: renderNavigation(page, site),
     main, footer: renderFooter(page, site) });
 }

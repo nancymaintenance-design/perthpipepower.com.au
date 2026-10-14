@@ -203,13 +203,14 @@ function projectPage(page, layout, chrome, site) {
     if(section.kind==='rich')return section.html;
     return require('../.build/site/templates/faq.mjs').renderFaq(section.items,section.container,page.file);
   }).join('');
-  const main=replace((page.hero??'')+sections,'breadcrumbs',breadcrumbs);
+  const sidebar=require('../.build/site/templates/enquiry-sidebar.mjs');
+  const main=replace((page.hero??'')+sidebar.renderEnquiryLayout(page,sections),'breadcrumbs',breadcrumbs);
   // Produce approved shared navigation, not the raw pre-unification template.
   // Expected chrome comes independently from immutable DOM + literal policy;
   // head, body content and footer remain manually projected in this test.
   const navigation=require('../.build/site/templates/navigation.mjs').renderNavigation(page,site);
   const result=layout.documentOpen+head+layout.bodyOpen+navigation+layout.beforeMain+
-    `<main${Object.entries(page.mainAttributes).map(([key,value])=>` ${key}="${escape(value)}"`).join('')}>`+main+'</main>'+layout.afterMain+renderChrome(chrome.footers[layout.footerId])+layout.scripts.join('')+layout.documentClose;
+    `<main${Object.entries(page.mainAttributes).map(([key,value])=>` ${key}="${escape(value)}"`).join('')}>`+main+'</main>'+layout.afterMain+renderChrome(chrome.footers[layout.footerId])+layout.scripts.join('')+(sidebar.hasEnquirySidebar(page)&&!layout.scripts.some(s=>s.includes('src="contact-form.js"'))?'<script src="contact-form.js"></script>':'')+layout.documentClose;
   assert.doesNotMatch(result,/\{\{ppp:/,`${page.file}: unconsumed token`);
   return result;
 }

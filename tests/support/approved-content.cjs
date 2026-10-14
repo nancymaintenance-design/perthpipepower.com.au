@@ -222,7 +222,35 @@ for(const edit of require('../fixtures/content-navigation-repair/coherent-prose-
  const matches=walk(tree).filter(n=>n[0]==='text'&&n[1].includes(edit.before));assert.equal(matches.length,1,edit.file+': exact educational prose edit');
  matches[0][1]=matches[0][1].replace(edit.before,edit.after);approved.pages[edit.file]=snapshotFromTree(tree,previous);
 }
-Object.assign(approved.assets,policy.runtimeHashes,homeCorrection.runtimeHashes,{'field-design.css':'5fd20822881dfeefd8303a76db8415af206086ffdd14a482384335bb3db9858b'});
+const beforeEnquirySidebar=structuredClone(approved);
+// Exact approved wrapper/form addition. Original body nodes move unchanged;
+// existing two forms are relocated, not replaced by a new output capture.
+for(const [file,[label,line]]of Object.entries(require('../fixtures/content-navigation-repair/enquiry-sidebar-topics.json'))){
+ const previous=approved.pages[file],tree=JSON.parse(previous.dom),main=walk(tree).find(n=>isEl(n,'main'));
+ const article=label===null,topic=label??previous.title.split(' | ')[0];
+ const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+ const existing=walk(main).find(n=>isEl(n,'form')&&attr(n,'data-enquiry-form')!==undefined);
+ let form;
+ if(existing){
+  form=existing;
+  const parent=walk(main).find(n=>childList(n).includes(existing)),c=childList(parent);c.splice(c.indexOf(existing),1);
+  for(let i=c.length-1;i>0;i--)if(c[i][0]==='text'&&c[i-1][0]==='text'){c[i-1][1]+=c[i][1];c.splice(i,1);}
+ }else{
+  const html=fs.readFileSync(path.join(__dirname,'../fixtures/content-navigation-repair/enquiry-sidebar-form.html'),'utf8').trimEnd().replace('{{service}}',esc(line+' — '+topic)).replace('{{topic}}',esc(line==='Not sure'?'Not sure':topic));
+  form=parts(html)[0];
+ }
+ const start=article?0:main[4].findIndex(n=>isEl(n,'section')&&(attr(n,'class')||'').includes('page-hero'))+1;
+ assert(start>0||article,file+': exact hero/wrapper boundary');
+ const moved=main[4].splice(start);
+ const wrapper=parts('<div class="enquiry-layout shell"><div class="enquiry-content"></div><aside class="enquiry-sidebar" aria-label="Contact our repair team"><div class="enquiry-sidebar__sticky"><a class="enquiry-sidebar__call" href="tel:0413477667">Call 0413 477 667</a></div></aside></div>')[0];
+ wrapper[4][0][4]=moved;wrapper[4][1][4][0][4].push(form);main[4].push(wrapper);
+ if(!walk(tree).some(n=>isEl(n,'script')&&attr(n,'src')==='contact-form.js')){
+  const body=bodyChildren(tree);let i=body.length;while(i>0&&body[i-1][0]==='text'&&!body[i-1][1].trim())i--;
+  body.splice(i,0,...parts('<script src="contact-form.js"></script>'));
+ }
+ approved.pages[file]=snapshotFromTree(tree,previous);
+}
+Object.assign(approved.assets,policy.runtimeHashes,homeCorrection.runtimeHashes,{'field-design.css':'74c476ca164881a8f43e413b7330c845b94265eab1ddfd31f531b73465e39efd','contact-form.js':'bccd86ae00111dba344485989b164fa7c1e4bac07af20c9e9e7a19d7c7899ab7'});
 for(const change of policy.headStylesheets){
  const original=approved.pages[change.file],tree=JSON.parse(original.dom),head=walk(tree).find(n=>isEl(n,'head'));
  const i=head[4].findIndex(n=>isEl(n,'link')&&attr(n,'rel')==='stylesheet'&&attr(n,'href')===change.after);
@@ -237,4 +265,4 @@ function compareApprovedOutput(root,manifest=approved){
   return JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.expected)))!==JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.actual)));
  }).map(d=>({...d,expected:d.field==='dom'?'approved exact DOM including shared chrome':d.expected,actual:d.field==='dom'?'unexpected DOM difference':d.actual}));
 }
-module.exports={approved,beforeCoherentPresentation,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader,reviewedCopy};
+module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader,reviewedCopy};

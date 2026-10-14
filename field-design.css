@@ -85,6 +85,33 @@ h1{font-weight:800}h2{font-size:clamp(1.9rem,3.2vw,3rem)}h3{font-size:1.3rem;lin
 @media(forced-colors:active){html{scrollbar-color:auto}.button{border:1px solid ButtonText}}
 
 /* One sticky navigation geometry for every public route. */
+/* Shared inner-page enquiry rail: fills the second column without overlays. */
+.enquiry-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;max-width:1240px;padding-block:32px;align-items:stretch}
+.enquiry-content,.enquiry-sidebar{min-width:0}
+.enquiry-content .shell{width:100%;max-width:none;padding-inline:0}
+.enquiry-content .section{padding-block:24px}
+.enquiry-content .text-column,.enquiry-content .service-reading{max-width:none}
+.enquiry-content .split,.enquiry-content .intro-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+.enquiry-content .contact-grid{display:block}
+.enquiry-content .rich-grid,.enquiry-content .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.enquiry-content .price-guide__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+main.article:has(.enquiry-layout){max-width:none;padding:0}
+.enquiry-sidebar__sticky{position:sticky;top:calc(var(--site-header-height) + 16px);max-height:calc(100dvh - var(--site-header-height) - 32px);overflow:auto;scrollbar-gutter:stable;border:1px solid var(--line);border-top:4px solid var(--field-blue);border-radius:var(--field-radius);background:var(--field-light);padding:20px}
+.enquiry-sidebar__call{display:block;color:var(--field-blue);font-weight:800;margin:0 0 14px;text-underline-offset:4px}
+.enquiry-sidebar .contact-card{padding:0;border:0;background:transparent;box-shadow:none;margin:0}
+.enquiry-sidebar h2{font-size:1.45rem;line-height:1.2;margin:0 0 16px;max-width:none}
+.enquiry-sidebar label{display:block;font-size:.85rem;font-weight:700;margin:0 0 4px}
+.enquiry-sidebar input,.enquiry-sidebar select,.enquiry-sidebar textarea{display:block;width:100%;margin:0 0 10px;padding:8px 10px;background:#fff;font-size:1rem}
+.enquiry-sidebar textarea{min-height:90px;resize:vertical}
+.enquiry-sidebar .form-note,.enquiry-sidebar .contact-card>p{font-size:.82rem;line-height:1.5;margin:0 0 12px}
+.enquiry-sidebar .form-status:empty{margin:0}
+.enquiry-sidebar .button{width:100%;cursor:pointer}
+.enquiry-sidebar .button:disabled{cursor:wait;opacity:.7}
+.enquiry-sidebar :is(input,select,textarea):focus-visible{outline:3px solid var(--field-blue);outline-offset:2px}
+.enquiry-sidebar [aria-invalid="true"]{border-color:#a62929}
+@media(max-width:1000px){.enquiry-layout{grid-template-columns:minmax(0,1fr);gap:24px}.enquiry-sidebar__sticky{position:static;max-height:none;overflow:visible}.enquiry-sidebar{width:100%;max-width:650px;justify-self:center}}
+@media(max-width:600px){.enquiry-content .rich-grid,.enquiry-content .cards,.enquiry-content .price-guide__grid{grid-template-columns:minmax(0,1fr)}.enquiry-layout{padding-block:20px}.enquiry-sidebar__sticky{padding:20px}}
+@media print{.enquiry-layout{display:block}.enquiry-sidebar{display:none}}
 :root{--site-header-height:90px}
 html{scroll-padding-top:calc(var(--site-header-height) + 18px)}
 .site-header{position:sticky;top:0;z-index:100}

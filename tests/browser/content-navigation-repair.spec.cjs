@@ -70,7 +70,7 @@ for(const width of [320,390,1440])for(const file of pages)test('approved visual 
  await page.screenshot({path:path.join(dir,file.replace('.html','')+'-'+width+'.png'),fullPage:true});
  await page.screenshot({path:path.join(dir,file.replace('.html','')+'-'+width+'-viewport.png')});
  if(file==='index.html'&&width===1440)await page.locator('.office-location').screenshot({path:path.join(dir,'home-office-desktop.png')});
- if(file==='about.html'&&width===1440)await page.locator('main>.section').first().screenshot({path:path.join(dir,'about-core-services-desktop.png')});
+ if(file==='about.html'&&width===1440)await page.locator('.enquiry-content>.section').first().screenshot({path:path.join(dir,'about-core-services-desktop.png')});
  if(file==='service-areas.html'){
   await page.locator('[aria-controls="plumbing-menu"]').click();await expect(page.locator('#plumbing-menu')).toBeVisible();
   const menu=await page.locator('#plumbing-menu').boundingBox();expect(menu.x).toBeGreaterThanOrEqual(0);expect(menu.x+menu.width).toBeLessThanOrEqual(width+1);
