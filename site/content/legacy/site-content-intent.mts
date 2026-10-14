@@ -19,12 +19,12 @@ const legacy = compatibilityView({
           "container"
         ],
         "node": [
-          0,
-          4,
           1,
-          0
+          1,
+          1
         ],
-        "mode": "text"
+        "mode": "text",
+        "trim": true
       },
       "links": [
         [
@@ -46,8 +46,8 @@ const legacy = compatibilityView({
               "container"
             ],
             "node": [
-              0,
-              4,
+              1,
+              1,
               2,
               0,
               0,
@@ -100,8 +100,8 @@ const legacy = compatibilityView({
               "container"
             ],
             "node": [
-              0,
-              4,
+              1,
+              1,
               2,
               2,
               0,
@@ -117,30 +117,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "index.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              5,
+              "items",
               0,
-              "@graph",
-              3,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "index.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              5,
+              "items",
               0,
-              "@graph",
-              3,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -148,30 +144,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "index.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              3,
-              "mainEntity",
+              "sections",
+              5,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "index.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              3,
-              "mainEntity",
+              "sections",
+              5,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -179,30 +171,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -216,34 +204,32 @@ const legacy = compatibilityView({
         "file": "about.html",
         "path": [
           "sections",
-          9,
-          "container"
+          0,
+          "html"
         ],
         "node": [
-          1,
-          1,
-          6,
           0,
-          0
+          0,
+          1
         ],
-        "mode": "text"
+        "mode": "text",
+        "trim": true
       },
       "body": {
         "$source": "fragment",
         "file": "about.html",
         "path": [
           "sections",
-          9,
-          "container"
+          0,
+          "html"
         ],
         "node": [
-          1,
-          1,
-          6,
-          1,
-          0
+          0,
+          0,
+          2
         ],
-        "mode": "text"
+        "mode": "text",
+        "trim": true
       },
       "links": [
         [
@@ -262,15 +248,7 @@ const legacy = compatibilityView({
               9,
               "container"
             ],
-            "node": [
-              1,
-              1,
-              6,
-              2,
-              0,
-              0,
-              0
-            ],
+            "node": [0, 0, 4, 2],
             "mode": "text"
           }
         ],
@@ -287,18 +265,10 @@ const legacy = compatibilityView({
             "file": "about.html",
             "path": [
               "sections",
-              9,
-              "container"
-            ],
-            "node": [
-              1,
-              1,
-              6,
-              2,
-              1,
               0,
-              0
+              "html"
             ],
+            "node": [0, 0, 8, 1],
             "mode": "text"
           }
         ]
@@ -309,30 +279,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "about.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              9,
+              "items",
               0,
-              "@graph",
-              4,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "about.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              9,
+              "items",
               0,
-              "@graph",
-              4,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -340,30 +306,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "about.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              9,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "about.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              9,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -702,30 +664,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "plumbing.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
               5,
-              "mainEntity",
+              "items",
               0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "plumbing.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
               5,
-              "mainEntity",
+              "items",
               0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -733,30 +691,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "plumbing.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
               5,
-              "mainEntity",
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "plumbing.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
               5,
-              "mainEntity",
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -764,30 +718,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "plumbing.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
               5,
-              "mainEntity",
+              "items",
               2,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "plumbing.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
               5,
-              "mainEntity",
+              "items",
               2,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -795,30 +745,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -826,14 +772,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "plumbing.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
               5,
-              "mainEntity",
+              "items",
               4,
-              "name"
+              "question"
             ]
           },
           {
@@ -1691,30 +1634,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              6,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              6,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -1722,30 +1661,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              6,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              6,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -1753,30 +1688,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              6,
+              "items",
               2,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              6,
+              "items",
               2,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -1784,30 +1715,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -1815,14 +1742,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              6,
+              "items",
               4,
-              "name"
+              "question"
             ]
           },
           {
@@ -2647,30 +2571,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "property-management.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              4,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "property-management.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              4,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -2678,30 +2598,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "property-management.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              4,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "property-management.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              4,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -2709,30 +2625,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "property-management.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              4,
+              "items",
               2,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "property-management.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              4,
+              "items",
               2,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -2740,30 +2652,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "property-management.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              4,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "property-management.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              4,
+              "items",
               3,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -2771,14 +2679,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              1,
+              "items",
               7,
-              "name"
+              "question"
             ]
           },
           {
@@ -3280,30 +3185,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "service-areas.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              4,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "service-areas.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              4,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -3311,30 +3212,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "service-areas.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
               1,
-              "name"
+              "items",
+              1,
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "service-areas.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -3493,30 +3390,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -3646,30 +3539,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "news.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "news.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -3737,7 +3626,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               0,
               0,
               0
@@ -3767,7 +3656,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               1,
               0,
               0
@@ -3795,7 +3684,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               2,
               0,
               0
@@ -3823,7 +3712,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               3,
               0,
               0
@@ -3851,7 +3740,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               4,
               0,
               0
@@ -3879,7 +3768,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               5,
               0,
               0
@@ -3907,7 +3796,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               6,
               0,
               0
@@ -3935,7 +3824,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               7,
               0,
               0
@@ -3963,7 +3852,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               8,
               0,
               0
@@ -3991,7 +3880,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               9,
               0,
               0
@@ -4019,7 +3908,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               10,
               0,
               0
@@ -4047,7 +3936,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               11,
               0,
               0
@@ -4075,7 +3964,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               12,
               0,
               0
@@ -4103,7 +3992,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               13,
               0,
               0
@@ -4131,7 +4020,7 @@ const legacy = compatibilityView({
               1,
               1,
               2,
-              2,
+              3,
               14,
               0,
               0
@@ -4146,30 +4035,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              4,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              4,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -4177,30 +4062,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
               1,
-              "name"
+              "items",
+              1,
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -4208,30 +4089,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -4239,14 +4116,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              1,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -4289,14 +4163,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
+              1,
+              "items",
               4,
-              "mainEntity",
-              4,
-              "name"
+              "question"
             ]
           },
           {
@@ -4339,14 +4210,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              1,
+              "items",
               5,
-              "name"
+              "question"
             ]
           },
           {
@@ -4389,14 +4257,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              1,
+              "items",
               6,
-              "name"
+              "question"
             ]
           },
           {
@@ -4439,14 +4304,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              1,
+              "items",
               7,
-              "name"
+              "question"
             ]
           },
           {
@@ -5038,30 +4900,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -5069,30 +4927,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -5100,30 +4954,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               2,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               2,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -5131,30 +4981,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "contact.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
               0,
-              "@graph",
-              4,
-              "mainEntity",
+              "items",
               3,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -5347,76 +5193,65 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "blocked-drains-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "blocked-drains-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "blocked-drains-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "blocked-drains-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "blocked-drains-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "name"
+              "items",
+              0,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "blocked-drains-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "blocked-drains-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "blocked-drains-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "blocked-drains-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              2,
+              "question"
             ]
           },
           {
@@ -5459,14 +5294,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "blocked-drains-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -5509,14 +5341,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "blocked-drains-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               4,
-              "name"
+              "question"
             ]
           },
           {
@@ -6027,30 +5856,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "water-leak-detection-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "water-leak-detection-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -6058,30 +5883,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "water-leak-detection-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "water-leak-detection-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -6089,14 +5910,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              1,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -6139,14 +5957,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "water-leak-detection-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -6633,76 +6448,65 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "burst-pipe-repair-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "burst-pipe-repair-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "burst-pipe-repair-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "burst-pipe-repair-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "burst-pipe-repair-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "name"
+              "items",
+              0,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "burst-pipe-repair-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "burst-pipe-repair-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "burst-pipe-repair-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "burst-pipe-repair-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              2,
+              "question"
             ]
           },
           {
@@ -7005,30 +6809,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "hot-water-problems-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "hot-water-problems-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -7036,30 +6836,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "hot-water-problems-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "hot-water-problems-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -7067,14 +6863,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              1,
+              "items",
               5,
-              "name"
+              "question"
             ]
           },
           {
@@ -7117,14 +6910,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "hot-water-problems-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -7167,14 +6957,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "hot-water-problems-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               4,
-              "name"
+              "question"
             ]
           },
           {
@@ -7724,76 +7511,65 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "tap-mixer-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "tap-mixer-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "tap-mixer-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "tap-mixer-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "tap-mixer-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "name"
+              "items",
+              0,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "tap-mixer-repairs-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "tap-mixer-repairs-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "tap-mixer-repairs-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "tap-mixer-repairs-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              2,
+              "question"
             ]
           },
           {
@@ -7836,14 +7612,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "tap-mixer-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -7886,14 +7659,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "tap-mixer-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               4,
-              "name"
+              "question"
             ]
           },
           {
@@ -8224,30 +7994,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "toilet-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "toilet-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -8255,30 +8021,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "toilet-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "toilet-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -8286,14 +8048,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
+              "sections",
+              1,
+              "items",
               6,
-              "name"
+              "question"
             ]
           },
           {
@@ -8336,14 +8095,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "toilet-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -8934,76 +8690,65 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "power-faults-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "power-faults-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "power-faults-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "power-faults-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "power-faults-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "name"
+              "items",
+              0,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "power-faults-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "power-faults-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "power-faults-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "power-faults-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              2,
+              "question"
             ]
           },
           {
@@ -9046,14 +8791,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "power-faults-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -9598,30 +9340,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "safety-switch-tripping-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "safety-switch-tripping-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -9629,30 +9367,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "safety-switch-tripping-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "safety-switch-tripping-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -9660,14 +9394,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
+              1,
+              "items",
               4,
-              "mainEntity",
-              4,
-              "name"
+              "question"
             ]
           },
           {
@@ -9710,14 +9441,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "rcd-testing-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              3,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
@@ -10232,14 +9960,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "lighting-power-points-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
@@ -10272,14 +9997,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "lighting-power-points-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
@@ -10312,14 +10034,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "lighting-power-points-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "name"
+              "items",
+              2,
+              "question"
             ]
           },
           {
@@ -10656,92 +10375,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "smoke-alarm-maintenance-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "smoke-alarm-maintenance-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "smoke-alarm-maintenance-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "smoke-alarm-maintenance-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "smoke-alarm-maintenance-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "smoke-alarm-maintenance-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "acceptedAnswer",
-              "text"
-            ]
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -10749,14 +10402,65 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "smoke-alarm-maintenance-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
+              1,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "smoke-alarm-maintenance-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "smoke-alarm-maintenance-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "smoke-alarm-maintenance-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "smoke-alarm-maintenance-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
               3,
-              "name"
+              "question"
             ]
           },
           {
@@ -10799,14 +10503,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "smoke-alarm-maintenance-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               4,
-              "name"
+              "question"
             ]
           },
           {
@@ -11451,92 +11152,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "fixtures-appliances-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "fixtures-appliances-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "fixtures-appliances-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "fixtures-appliances-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "fixtures-appliances-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "fixtures-appliances-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               2,
-              "acceptedAnswer",
-              "text"
-            ]
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -11544,30 +11179,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "fixtures-appliances-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              3,
-              "name"
+              "sections",
+              2,
+              "items",
+              1,
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "fixtures-appliances-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              3,
-              "acceptedAnswer",
-              "text"
-            ]
+              "sections",
+              2,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -11575,14 +11206,65 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "fixtures-appliances-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "fixtures-appliances-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "fixtures-appliances-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "fixtures-appliances-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "fixtures-appliances-perth.html",
+            "path": [
+              "sections",
+              2,
+              "items",
               4,
-              "name"
+              "question"
             ]
           },
           {
@@ -11625,14 +11307,11 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "fixtures-appliances-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
+              "sections",
+              2,
+              "items",
               5,
-              "mainEntity",
-              5,
-              "name"
+              "question"
             ]
           },
           {
@@ -12426,30 +12105,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "renewables-smart-home-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "renewables-smart-home-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              2,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -12457,30 +12132,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "renewables-smart-home-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "renewables-smart-home-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              2,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -12651,30 +12322,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "perth-cbd-inner-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "perth-cbd-inner-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -12815,30 +12482,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "northern-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "northern-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -13009,30 +12672,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "southern-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "southern-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -13174,30 +12833,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "eastern-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "eastern-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -13366,30 +13021,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "western-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "western-suburbs.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -13530,30 +13181,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "perth-hills-swan-valley.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "perth-hills-swan-valley.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              1,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -13656,30 +13303,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights-reporting-a-plumbing-leak.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              44,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights-reporting-a-plumbing-leak.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              44,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -13687,30 +13330,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights-reporting-a-plumbing-leak.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              44,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights-reporting-a-plumbing-leak.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              44,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -13811,30 +13450,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights-safety-switch-keeps-tripping.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              13,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights-safety-switch-keeps-tripping.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              13,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -13842,30 +13477,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights-safety-switch-keeps-tripping.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              13,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights-safety-switch-keeps-tripping.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              13,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -13966,30 +13597,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights-hot-water-plumbing-or-electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              10,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights-hot-water-plumbing-or-electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              10,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -13997,30 +13624,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights-hot-water-plumbing-or-electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              10,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights-hot-water-plumbing-or-electrical.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              10,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -14121,30 +13744,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights-tenant-property-manager-maintenance-handover.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              10,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights-tenant-property-manager-maintenance-handover.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              10,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -14152,30 +13771,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "insights-tenant-property-manager-maintenance-handover.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              10,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "insights-tenant-property-manager-maintenance-handover.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              10,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -14276,30 +13891,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "news-clearer-property-maintenance-enquiry.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              9,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "news-clearer-property-maintenance-enquiry.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              9,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -14307,30 +13918,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "news-clearer-property-maintenance-enquiry.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              9,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "news-clearer-property-maintenance-enquiry.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              9,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -14431,30 +14038,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "news-useful-property-work-order.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              10,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "news-useful-property-work-order.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              10,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -14462,30 +14065,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "news-useful-property-work-order.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              10,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "news-useful-property-work-order.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              10,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]
@@ -14586,30 +14185,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "news-keeping-access-information-together.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              10,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "news-keeping-access-information-together.html",
             "path": [
-              "seo",
-              "jsonLd",
+              "sections",
+              10,
+              "items",
               0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -14617,30 +14212,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "news-keeping-access-information-together.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              10,
+              "items",
               1,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "news-keeping-access-information-together.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              10,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ]

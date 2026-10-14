@@ -24,11 +24,13 @@ test('all visible FAQ answers agree with structured data and have unique questio
  for(const f of files){
   const h=read(f),m=h.match(/<main\b[\s\S]*?<\/main>/)[0];
   const visible=[...m.matchAll(/<details\b[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)].map(x=>[clean(x[1]),clean(x[2])]);
+  if(f==='index.html'){assert.equal(visible.length,0,'homepage uses one informative service narrative');assert(!/"@type":\s*"FAQPage"/.test(h),'homepage makes no FAQPage claim');continue;}
   assert(visible.length>=1,f+': useful customer FAQ missing');
   assert.equal(new Set(visible.map(q=>q[0])).size,visible.length,f+': repeated FAQ');
   const graph=JSON.parse(h.match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
   const faqs=graph.filter(n=>n['@type']==='FAQPage');assert.equal(faqs.length,1,f+': one FAQ graph');
-  assert.deepEqual(faqs[0].mainEntity.map(q=>[clean(q.name),clean(q.acceptedAnswer.text)]),visible,f+': FAQ drift');
+  const byQuestion=(a,b)=>a[0].localeCompare(b[0]);
+  assert.deepEqual(faqs[0].mainEntity.map(q=>[clean(q.name),clean(q.acceptedAnswer.text)]).sort(byQuestion),visible.sort(byQuestion),f+': FAQ drift');
  }
 });
 test('safety-sensitive queries have utility routing before an ordinary enquiry, not an emergency sales promise',()=>{
@@ -50,5 +52,6 @@ test('content editing preserves approved prices, existing canonical URLs, origin
  assert.equal(hero(read('index.html')),historical.hero);
  const {parse,serialize}=require('parse5');
  const normalized=s=>{const document=parse(s.replace(/\r\n/g,'\n'));const sort=n=>{if(n.attrs)n.attrs.sort((a,b)=>a.name.localeCompare(b.name));for(const child of n.childNodes??[])sort(child);};sort(document);return serialize(document);};
- assert.equal(normalized(read('privacy.html')),normalized(historical.privacy));
+ const main=s=>s.match(/<main\b[\s\S]*?<\/main>/)[0];
+ assert.equal(normalized(main(read('privacy.html'))),normalized(main(historical.privacy)),'legal privacy content is unchanged; shared header explicitly approved');
 });

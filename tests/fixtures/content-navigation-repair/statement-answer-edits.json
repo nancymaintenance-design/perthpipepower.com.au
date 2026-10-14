@@ -1,0 +1,320 @@
+[
+  {
+    "file": "blocked-drains-perth.html",
+    "question": "Is a slow-flushing toilet always caused by a blocked drain?",
+    "before": "<p>No. Poor flushing can involve the cistern or toilet fixture as well as downstream drainage. <a href=\"#learn-about-blocked-drains-perth\">Read the explanation.</a></p>",
+    "after": "<p>Poor flushing can involve the cistern or toilet fixture as well as downstream drainage. <a href=\"#learn-about-blocked-drains-perth\">Read the explanation.</a></p>"
+  },
+  {
+    "file": "blocked-drains-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "blocked-drains-perth.html",
+    "question": "Can you help with property-managed drainage issues?",
+    "before": "<p>Yes. Include the property reference, access details and approval contact.</p>",
+    "after": "<p>Include the property reference, access details and approval contact.</p>"
+  },
+  {
+    "file": "burst-pipe-repair-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "burst-pipe-repair-perth.html",
+    "question": "Do I need to know the pipe type?",
+    "before": "<p>No. A description of the location, water flow and affected area is more useful than a guess about the cause.</p>",
+    "after": "<p>A description of the location, water flow and affected area is more useful than a guess about the cause.</p>"
+  },
+  {
+    "file": "burst-pipe-repair-perth.html",
+    "question": "Can a property manager make the booking?",
+    "before": "<p>Yes. Include access, occupant and work-order details in the enquiry.</p>",
+    "after": "<p>Include access, occupant and work-order details in the enquiry.</p>"
+  },
+  {
+    "file": "dishwasher-installation-perth.html",
+    "question": "Can you check the water and drain connections before installation?",
+    "before": "<p>Yes. We assess the existing connections and proposed product before agreeing the installation. Report leaking valves, slow drainage or previous overflows so those issues are included in the assessment.</p>",
+    "after": "<p>We assess the existing connections and proposed product before agreeing the installation. Report leaking valves, slow drainage or previous overflows so those issues are included in the assessment.</p>"
+  },
+  {
+    "file": "eastern-suburbs.html",
+    "question": "Should a switchboard concern be listed with other repairs?",
+    "before": "<p>Yes, but identify the switchboard concern separately from plumbing or general maintenance items.</p>",
+    "after": "<p>Identify the switchboard concern separately from plumbing or general maintenance items.</p>"
+  },
+  {
+    "file": "exhaust-fans-perth.html",
+    "question": "Will a new fan solve every steam or mould problem?",
+    "before": "<p>No. Moisture sources and ventilation conditions also matter. A fan replacement addresses the agreed equipment work and is not a guarantee about all condensation or mould in the room.</p>",
+    "after": "<p>Moisture sources and ventilation conditions also matter. A fan replacement addresses the agreed equipment work and is not a guarantee about all condensation or mould in the room.</p>"
+  },
+  {
+    "file": "fixtures-appliances-perth.html",
+    "question": "Is dishwasher installation the same as repairing a faulty dishwasher?",
+    "before": "<p>No. A connection request concerns the water, drainage and any agreed electrical arrangements. An internal appliance fault is a separate service. Describe the model, intended location and task so the accepted scope can be confirmed.</p>",
+    "after": "<p>A connection request concerns the water, drainage and any agreed electrical arrangements. An internal appliance fault is a separate service. Describe the model, intended location and task so the accepted scope can be confirmed.</p>"
+  },
+  {
+    "file": "fixtures-appliances-perth.html",
+    "question": "Can you replace leaking washing machine taps?",
+    "before": "<p>Yes. Repair or replacement of the water supply tap can be assessed separately from internal washing-machine repairs. <a href=\"#learn-about-fixtures-appliances-perth\">Read the explanation.</a></p>",
+    "after": "<p>Repair or replacement of the water supply tap can be assessed separately from internal washing-machine repairs. <a href=\"#learn-about-fixtures-appliances-perth\">Read the explanation.</a></p>"
+  },
+  {
+    "file": "fixtures-appliances-perth.html",
+    "question": "Do I need detailed installation specifications before contacting you?",
+    "before": "<p>No. Tell us the fixture, equipment or upgrade you need and your Perth suburb. We assess the site and connections, confirm the requirements and qualified work arrangements and provide the written quote. Additional access is agreed with you first.</p>",
+    "after": "<p>Tell us the fixture, equipment or upgrade you need and your Perth suburb. We assess the site and connections, confirm the requirements and qualified work arrangements and provide the written quote. Additional access is agreed with you first.</p>"
+  },
+  {
+    "file": "fixtures-appliances-perth.html",
+    "question": "Can plumbing and electrical work be considered together?",
+    "before": "<p>Yes. Explain the complete requirement so the relevant plumbing and electrical work can be considered as part of the scope.</p>",
+    "after": "<p>Explain the complete requirement so the relevant plumbing and electrical work can be considered as part of the scope.</p>"
+  },
+  {
+    "file": "hot-water-problems-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "hot-water-problems-perth.html",
+    "question": "Can I remove the cover to check the unit?",
+    "before": "<p>No. Do not remove covers or handle wiring.</p>",
+    "after": "<p>Do not remove covers or handle wiring.</p>"
+  },
+  {
+    "file": "index.html",
+    "question": "Can I arrange plumbing and electrical work through one enquiry?",
+    "before": "<p>Yes. Tell us which rooms, fittings or equipment are affected and identify any immediate danger. We confirm the appropriate trade arrangements and quote the agreed tasks; a combined enquiry does not mean every task can be completed in one visit.</p>",
+    "after": "<p>Tell us which rooms, fittings or equipment are affected and identify any immediate danger. We confirm the appropriate trade arrangements and quote the agreed tasks; a combined enquiry does not mean every task can be completed in one visit.</p>"
+  },
+  {
+    "file": "index.html",
+    "question": "Do I need to diagnose the fault before calling?",
+    "before": "<p>No. Start with the Perth property location and what has changed. Photos are optional, and you should not enter a hazard or dismantle equipment to gather details.</p>",
+    "after": "<p>Start with the property location and what has changed. Photos are optional, and you should not enter a hazard or dismantle equipment to gather details.</p>"
+  },
+  {
+    "file": "perth-cbd-inner-suburbs.html",
+    "question": "Can a property manager request plumbing and electrical repairs together?",
+    "before": "<p>Yes. List each issue separately, then include the access contact and approval pathway for the property.</p>",
+    "after": "<p>List each issue separately, then include the access contact and approval pathway for the property.</p>"
+  },
+  {
+    "file": "power-faults-perth.html",
+    "question": "Can you investigate an intermittent power fault?",
+    "before": "<p>Yes. An intermittent fault can be investigated, although its timing may require more than one assessment stage. <a href=\"#learn-about-power-faults-perth\">Read the explanation.</a></p>",
+    "after": "<p>An intermittent fault can be investigated, although its timing may require more than one assessment stage. <a href=\"#learn-about-power-faults-perth\">Read the explanation.</a></p>"
+  },
+  {
+    "file": "power-faults-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "power-faults-perth.html",
+    "question": "Should I keep resetting a tripping circuit?",
+    "before": "<p>No. Avoid repeatedly resetting an electrical device that trips again.</p>",
+    "after": "<p>Avoid repeatedly resetting an electrical device that trips again.</p>"
+  },
+  {
+    "file": "power-points-perth.html",
+    "question": "Can an electrician replace a damaged power point?",
+    "before": "<p>Yes. We assess the damaged point and any related fault before quoting the replacement work. Share the location and observable condition, but do not touch or dismantle damaged equipment.</p>",
+    "after": "<p>We assess the damaged point and any related fault before quoting the replacement work. Share the location and observable condition, but do not touch or dismantle damaged equipment.</p>"
+  },
+  {
+    "file": "rcd-testing-perth.html",
+    "question": "Can smoke alarms and RCDs be checked during one visit?",
+    "before": "<p>Yes, both can be arranged within an agreed visit. State the checks and records required so the scope, access, interruptions and price are confirmed together.</p>",
+    "after": "<p>Smoke alarms and RCDs can be arranged within an agreed visit. State the checks and records required so the scope, access, interruptions and price are confirmed together.</p>"
+  },
+  {
+    "file": "rcd-testing-perth.html",
+    "question": "Is an RCD test the same as a whole-property safety certificate?",
+    "before": "<p>No. The record relates to the agreed devices and checks. Confirm the required documentation and any broader inspection separately rather than assuming an RCD test certifies the entire property.</p>",
+    "after": "<p>The record relates to the agreed devices and checks. Confirm the required documentation and any broader inspection separately rather than assuming an RCD test certifies the entire property.</p>"
+  },
+  {
+    "file": "renewables-smart-home-perth.html",
+    "question": "Do I need detailed installation specifications before contacting you?",
+    "before": "<p>No. Tell us the fixture, equipment or upgrade you need and your Perth suburb. We assess the site and connections, confirm the requirements and qualified work arrangements and provide the written quote. Additional access is agreed with you first.</p>",
+    "after": "<p>Tell us the fixture, equipment or upgrade you need and your Perth suburb. We assess the site and connections, confirm the requirements and qualified work arrangements and provide the written quote. Additional access is agreed with you first.</p>"
+  },
+  {
+    "file": "safety-switch-tripping-perth.html",
+    "question": "Does a tripping safety switch mean the switch itself is faulty?",
+    "before": "<p>No. Tripping can originate in connected equipment or wiring, so replacing the switch alone may not resolve it. <a href=\"#learn-about-safety-switch-tripping-perth\">Read the explanation.</a></p>",
+    "after": "<p>Tripping can originate in connected equipment or wiring, so replacing the switch alone may not resolve it. <a href=\"#learn-about-safety-switch-tripping-perth\">Read the explanation.</a></p>"
+  },
+  {
+    "file": "safety-switch-tripping-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "safety-switch-tripping-perth.html",
+    "question": "Can I open the switchboard?",
+    "before": "<p>No. Do not open switchboards or remove covers.</p>",
+    "after": "<p>Do not open switchboards or remove covers.</p>"
+  },
+  {
+    "file": "shower-plumbing-repairs-perth.html",
+    "question": "Can you guarantee the shower can be repaired without removing tiles?",
+    "before": "<p>No. Access depends on the fault and the installation. We explain the proposed access and the repair scope before work proceeds, including who handles any affected finishes.</p>",
+    "after": "<p>Access depends on the fault and the installation. We explain the proposed access and the repair scope before work proceeds, including who handles any affected finishes.</p>"
+  },
+  {
+    "file": "smoke-alarm-maintenance-perth.html",
+    "question": "Can I request a new alarm location as well as replacement of a faulty unit?",
+    "before": "<p>Yes, include both proposed tasks in the enquiry. The team needs to confirm the requirements and accepted scope for the new location separately. Replacement of an existing unit does not automatically include a changed supply, interconnection or additional locations.</p>",
+    "after": "<p>Include both proposed tasks in the enquiry. The team needs to confirm the requirements and accepted scope for the new location separately. Replacement of an existing unit does not automatically include a changed supply, interconnection or additional locations.</p>"
+  },
+  {
+    "file": "smoke-alarm-maintenance-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "smoke-alarm-maintenance-perth.html",
+    "question": "Can you help with a smoke alarm that keeps beeping?",
+    "before": "<p>Yes. Tell us where it is, what it is doing and when the behaviour began.</p>",
+    "after": "<p>Tell us where it is, what it is doing and when the behaviour began.</p>"
+  },
+  {
+    "file": "smoke-alarm-maintenance-perth.html",
+    "question": "Should I remove a hardwired smoke alarm?",
+    "before": "<p>No. Do not remove a hardwired unit or handle its wiring.</p>",
+    "after": "<p>Do not remove a hardwired unit or handle its wiring.</p>"
+  },
+  {
+    "file": "smoke-alarm-maintenance-perth.html",
+    "question": "Can a property manager send a maintenance request?",
+    "before": "<p>Yes. Include the property address, occupant access and approval details.</p>",
+    "after": "<p>Include the property address, occupant access and approval details.</p>"
+  },
+  {
+    "file": "smoke-alarm-maintenance-perth.html",
+    "question": "Does repairing one alarm assess the whole property?",
+    "before": "<p>No. The agreed scope identifies the units and work included. A broader property assessment or replacement plan is a separate request, which we discuss and define before quoting.</p>",
+    "after": "<p>The agreed scope identifies the units and work included. A broader property assessment or replacement plan is a separate request, which we discuss and define before quoting.</p>"
+  },
+  {
+    "file": "southern-suburbs.html",
+    "question": "Can a manager include multiple property repair issues?",
+    "before": "<p>Yes. List each plumbing or electrical issue separately and include the approval contact for the property.</p>",
+    "after": "<p>List each plumbing or electrical issue separately and include the approval contact for the property.</p>"
+  },
+  {
+    "file": "tap-mixer-repairs-perth.html",
+    "question": "Can a dripping tap waste water over time?",
+    "before": "<p>Yes. Continued dripping wastes water; the amount depends on the actual rate and how long it continues. <a href=\"#learn-about-tap-mixer-repairs-perth\">Read the explanation.</a></p>",
+    "after": "<p>Continued dripping wastes water; the amount depends on the actual rate and how long it continues. <a href=\"#learn-about-tap-mixer-repairs-perth\">Read the explanation.</a></p>"
+  },
+  {
+    "file": "tap-mixer-repairs-perth.html",
+    "question": "Can I supply my own replacement mixer tap?",
+    "before": "<p>Yes, if the selected mixer suits the installation. Confirm compatibility and the installation inclusions before buying. <a href=\"#learn-about-tap-mixer-repairs-perth\">Read the explanation.</a></p>",
+    "after": "<p>A customer-supplied mixer can be installed if it suits the installation. Confirm compatibility and the installation inclusions before buying. <a href=\"#learn-about-tap-mixer-repairs-perth\">Read the explanation.</a></p>"
+  },
+  {
+    "file": "tap-mixer-repairs-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "tap-mixer-repairs-perth.html",
+    "question": "Can you help with a dripping tap?",
+    "before": "<p>Yes. Tell us the fixture location, whether it drips constantly and any other changes you have noticed.</p>",
+    "after": "<p>Tell us the fixture location, whether it drips constantly and any other changes you have noticed.</p>"
+  },
+  {
+    "file": "tap-mixer-repairs-perth.html",
+    "question": "Should I try to dismantle a mixer?",
+    "before": "<p>No. It is safer to describe the problem and leave the fitting intact for assessment.</p>",
+    "after": "<p>It is safer to describe the problem and leave the fitting intact for assessment.</p>"
+  },
+  {
+    "file": "tap-mixer-repairs-perth.html",
+    "question": "Do you work on rental-property fixtures?",
+    "before": "<p>Yes. Property managers can include work-order and access details.</p>",
+    "after": "<p>Property managers can include work-order and access details.</p>"
+  },
+  {
+    "file": "toilet-installation-perth.html",
+    "question": "Does a blocked toilet mean I need a new toilet?",
+    "before": "<p>No. A blockage, a cistern fault and a damaged toilet suite are different problems. Drainage needs assessment where water backs up or other outlets are affected; replacing a suite does not automatically clear a downstream blockage.</p>",
+    "after": "<p>A blockage, a cistern fault and a damaged toilet suite are different problems. Drainage needs assessment where water backs up or other outlets are affected; replacing a suite does not automatically clear a downstream blockage.</p>"
+  },
+  {
+    "file": "toilet-installation-perth.html",
+    "question": "Can I choose the toilet myself?",
+    "before": "<p>Yes, but confirm compatibility before ordering. Waste and water connection positions, dimensions and access can affect whether the selected model suits the existing installation.</p>",
+    "after": "<p>Confirm toilet compatibility before ordering. Waste and water connection positions, dimensions and access can affect whether the selected model suits the existing installation.</p>"
+  },
+  {
+    "file": "toilet-repairs-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "toilet-repairs-perth.html",
+    "question": "Can you help with multiple toilets at one property?",
+    "before": "<p>Yes. Identify each affected fixture and its symptoms in the enquiry.</p>",
+    "after": "<p>Identify each affected fixture and its symptoms in the enquiry.</p>"
+  },
+  {
+    "file": "toilet-repairs-perth.html",
+    "question": "Does every running toilet need to be replaced?",
+    "before": "<p>No. We assess the component fault, condition and availability of compatible parts. A complete replacement is a separate option with its own installation requirements and written scope.</p>",
+    "after": "<p>We assess the component fault, condition and availability of compatible parts. A complete replacement is a separate option with its own installation requirements and written scope.</p>"
+  },
+  {
+    "file": "water-leak-detection-perth.html",
+    "question": "Can a hidden water leak cause a high bill without visible water damage?",
+    "before": "<p>Yes, a concealed leak is possible without visible damage. A bill increase alone is insufficient to diagnose one. <a href=\"#learn-about-water-leak-detection-perth\">Read the explanation.</a></p>",
+    "after": "<p>A concealed leak is possible without visible damage. A bill increase alone is insufficient to diagnose one. <a href=\"#learn-about-water-leak-detection-perth\">Read the explanation.</a></p>"
+  },
+  {
+    "file": "water-leak-detection-perth.html",
+    "question": "Do I need to diagnose the problem first?",
+    "before": "<p>No. Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>",
+    "after": "<p>Describe the observable change and property context. We inspect the affected area on site to establish the cause and confirm the repair scope. If more access is needed, we agree it with you first.</p>"
+  },
+  {
+    "file": "water-leak-detection-perth.html",
+    "question": "Can you help with a hidden water leak?",
+    "before": "<p>Yes. Describe the property area, any visible moisture and changes you have noticed. This helps us understand the request before work is arranged.</p>",
+    "after": "<p>Describe the property area, any visible moisture and changes you have noticed. This helps us understand the request before work is arranged.</p>"
+  },
+  {
+    "file": "water-pressure-perth.html",
+    "question": "Can you investigate low water pressure throughout the house?",
+    "before": "<p>Yes. Report which outlets are affected, whether hot and cold differ and when the change began. We assess the private installation and explain any utility referral or repair findings.</p>",
+    "after": "<p>Report which outlets are affected, whether hot and cold differ and when the change began. We assess the private installation and explain any utility referral or repair findings.</p>"
+  },
+  {
+    "file": "water-pressure-perth.html",
+    "question": "Will a booster pump fix every low-pressure problem?",
+    "before": "<p>No. The cause and supply conditions must be established first. Do not assume that installing a pump or altering a valve is appropriate or authorised for the property.</p>",
+    "after": "<p>The cause and supply conditions must be established first. Do not assume that installing a pump or altering a valve is appropriate or authorised for the property.</p>"
+  },
+  {
+    "file": "western-suburbs.html",
+    "question": "Can fixture and electrical repairs be requested together?",
+    "before": "<p>Yes. List each issue separately so it can be assessed as a distinct repair request.</p>",
+    "after": "<p>List each issue separately so it can be assessed as a distinct repair request.</p>"
+  }
+]

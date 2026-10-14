@@ -327,65 +327,57 @@ const legacy = compatibilityView({
       "faqs": [
         [
           {
-            "$source": "page",
-            "file": "perth-cbd-inner-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "perth-cbd-inner-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "perth-cbd-inner-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "perth-cbd-inner-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ],
         [
           {
-            "$source": "page",
-            "file": "perth-cbd-inner-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "perth-cbd-inner-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "perth-cbd-inner-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "perth-cbd-inner-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ]
       ],
       "seoTitle": {
@@ -722,65 +714,57 @@ const legacy = compatibilityView({
       "faqs": [
         [
           {
-            "$source": "page",
-            "file": "northern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "northern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "northern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "northern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ],
         [
           {
-            "$source": "page",
-            "file": "northern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "northern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "northern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "northern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ]
       ],
       "seoTitle": {
@@ -1115,65 +1099,57 @@ const legacy = compatibilityView({
       "faqs": [
         [
           {
-            "$source": "page",
-            "file": "southern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "southern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "southern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "southern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ],
         [
           {
-            "$source": "page",
-            "file": "southern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "southern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "southern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "southern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ]
       ],
       "seoTitle": {
@@ -1509,65 +1485,57 @@ const legacy = compatibilityView({
       "faqs": [
         [
           {
-            "$source": "page",
-            "file": "eastern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "eastern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "eastern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "eastern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ],
         [
           {
-            "$source": "page",
-            "file": "eastern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "eastern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "eastern-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "eastern-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ]
       ]
     },
@@ -1889,65 +1857,57 @@ const legacy = compatibilityView({
       "faqs": [
         [
           {
-            "$source": "page",
-            "file": "western-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "western-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "western-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "western-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ],
         [
           {
-            "$source": "page",
-            "file": "western-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "western-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "western-suburbs.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "western-suburbs.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ]
       ]
     },
@@ -2275,65 +2235,57 @@ const legacy = compatibilityView({
       "faqs": [
         [
           {
-            "$source": "page",
-            "file": "perth-hills-swan-valley.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "perth-hills-swan-valley.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "perth-hills-swan-valley.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "perth-hills-swan-valley.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    1,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ],
         [
           {
-            "$source": "page",
-            "file": "perth-hills-swan-valley.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
+  "$source": "page",
+  "file": "perth-hills-swan-valley.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "question"
+  ]
+},
           {
-            "$source": "page",
-            "file": "perth-hills-swan-valley.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
+  "$source": "fragment",
+  "file": "perth-hills-swan-valley.html",
+  "path": [
+    "sections",
+    1,
+    "items",
+    2,
+    "answer"
+  ],
+  "node": [],
+  "mode": "text",
+  "trim": true
+}
         ]
       ],
       "seoTitle": {

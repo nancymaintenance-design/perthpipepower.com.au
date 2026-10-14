@@ -5,7 +5,7 @@ const path = require('node:path');
 const { createHash } = require('node:crypto');
 // Node 24 synchronous require of compiled .mjs is part of the compatibility contract.
 const { captureBaseline, comparePublicOutput } = require('../.build/site/baseline.mjs');
-const report = path.resolve(__dirname, '../../reports/typescript-migration-2026-10-13');
+const report = path.resolve(__dirname, '../../reports/content-navigation-repair-2026-10-14');
 const hash = text => createHash('sha256').update(text).digest('hex');
 const html = '<!DOCTYPE html><html><head><title>Fixture &amp; title</title><meta name="description" content="Original description"><link rel="canonical" href="https://example.test/"><meta name="robots" content="noindex, follow"><script type="application/ld+json">{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Original question?","acceptedAnswer":{"@type":"Answer","text":"Original answer."}}]}</script></head><body><h1>Fixture heading</h1><p>Original body &amp; café.</p><a href="one" class="first">one</a> <a href="two">two</a><details><summary>Original question?</summary><p>Original answer.</p></details><pre>  keep\n  indent </pre><textarea> user\n message </textarea><script>const message = " one ";\n</script><style>p::after { content: " two "; }\n</style></body></html>';
 // Hand-authored parser representation, independent of captureBaseline.

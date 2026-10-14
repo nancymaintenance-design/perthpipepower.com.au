@@ -28,6 +28,6 @@ for (const [, entry] of entries) {
   assert.equal(date, manifest[file].lastmod);
   assert.equal(manifest[file].sha256, crypto.createHash('sha256').update(fs.readFileSync(path.join(SOURCE_ROOT, file),'utf8').replace(/\r\n/g,'\n')).digest('hex'), file + ': historical lastmod provenance matches original source serialization (canonical LF)');
 }
-const {comparePublicOutput}=require('../scripts/lib/ts-compat.cjs').loadCompiledModule('site/baseline.mjs');
-assert.deepEqual(comparePublicOutput(root,require('./fixtures/ts-migration/baseline.json')),[],'actual dist content, SEO, dates and resources remain equivalent to the frozen candidate');
+const {compareApprovedOutput:comparePublicOutput,approved}=require('./support/approved-content.cjs');
+assert.deepEqual(comparePublicOutput(root,approved),[],'actual dist content, SEO, dates and resources remain equivalent to the frozen candidate');
 console.log('PASS: responsive work photos and content-backed sitemap dates.');

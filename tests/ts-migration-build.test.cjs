@@ -6,15 +6,15 @@ const { createHash } = require('node:crypto');
 const { spawnSync } = require('node:child_process');
 const { syncBuiltinESMExports } = require('node:module');
 const { fileURLToPath } = require('node:url');
-const baseline = require('./fixtures/ts-migration/baseline.json');
+const baseline = require('./support/approved-content.cjs').approved;
 const root = path.resolve(__dirname, '..');
-const report = path.resolve(root, '../reports/typescript-migration-2026-10-13');
+const report = path.resolve(root, '../reports/content-navigation-repair-2026-10-14');
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 function modules() {
   assert.ok(fs.existsSync(path.join(root, '.build/site/build/write-output.mjs')), 'safe build implementation must exist');
   return { ...require('../.build/site/build/write-output.mjs'), ...require('../.build/site/build/render-site.mjs'),
     ...require('../.build/site/build/copy-assets.mjs'), ...require('../.build/site/content/pages.mjs'),
-    ...require('../.build/site/baseline.mjs') };
+    ...require('../.build/site/baseline.mjs'), comparePublicOutput:require('./support/approved-content.cjs').compareApprovedOutput };
 }
 function fixture(t) {
   const dir = fs.mkdtempSync(path.join(report, 'build-test-'));

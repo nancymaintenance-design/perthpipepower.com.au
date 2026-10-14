@@ -32,7 +32,7 @@ for (const { file, name } of regions) {
   const html = read(file);
   assert.match(html, new RegExp(`<h1>[^<]*${name.replace(/[&]/g, '&amp;')}[^<]*<\\/h1>`, 'i'));
   assert.match(html, /Plumbing and electrical repairs/i);
-  assert.match(html, /What to include in a repair request/i);
+  assert.match(html, /Repair request and access details/i);
   assert.match(html, /Written quote before work proceeds/i);
   assert.doesNotMatch(html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || '', /class="rich-grid"/i);
   assert.match(html, /application\/ld\+json/i);

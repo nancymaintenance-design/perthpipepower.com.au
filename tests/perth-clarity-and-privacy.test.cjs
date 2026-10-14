@@ -11,8 +11,8 @@ const contact = read('contact.html');
 const home = read('index.html');
 const privacy = read('privacy.html');
 
-assert.match(about, /part of the Ellis Group.*dedicated Perth repair team.*across Perth/i);
-assert.match(home, /dedicated Perth repair team/i);
+assert.match(about.replace(/\\s+/g,' '), /part of the Ellis Group.*dedicated local repair team/i);
+assert.match(home, /dedicated local repair team/i);
 assert.match(faq, /Routine service hours: 09:00–21:00, seven days a week/i);
 assert.match(faq, /24-hour emergency repairs/i);
 assert.doesNotMatch(faq, /Availability should be confirmed directly/i);

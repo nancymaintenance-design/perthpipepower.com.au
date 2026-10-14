@@ -262,21 +262,13 @@ const legacy = compatibilityView({
       "power fault",
       "circuit fault",
       {
-        "$source": "fragment",
-        "file": "about.html",
+        "$source": "page",
+        "file": "power-faults-perth.html",
         "path": [
-          "sections",
+          "breadcrumbs",
           2,
-          "html"
-        ],
-        "node": [
-          1,
-          1,
-          5,
-          1,
-          0
-        ],
-        "mode": "text"
+          "label"
+        ]
       }
     ],
     "scope": {

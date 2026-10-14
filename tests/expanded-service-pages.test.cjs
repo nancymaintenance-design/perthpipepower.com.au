@@ -17,7 +17,8 @@ test('confirmed services are reachable, distinct native pages with matching FAQ 
   assert.equal(graph.find(x=>x['@type']==='Service').provider['@id'],'https://perthpipepower.com.au/#business');
   const clean=s=>s.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
   const visible=[...main.matchAll(/<details><summary>([\s\S]*?)<\/summary><p>([\s\S]*?)<\/p><\/details>/g)].map(x=>[clean(x[1]),clean(x[2])]);
-  assert(visible.length>=4,file+': needs service and educational answers');
+  assert.equal(visible.length,2,file+': compact related FAQ');
+  assert(main.includes('class="service-information"'),file+': retained declarative service answers');
   assert.deepEqual(graph.find(x=>x['@type']==='FAQPage').mainEntity.map(x=>[x.name,x.acceptedAnswer.text]),visible);
   assert(main.includes('href="tel:0413477667"')&&hasLocalLink(main,'contact.html'));
  }

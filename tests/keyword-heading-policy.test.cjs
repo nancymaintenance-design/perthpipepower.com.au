@@ -4,12 +4,12 @@ const root=resolvePublicRoot();
 const headings=file=>[...fs.readFileSync(path.join(root,file),'utf8').matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/g)].map(m=>m[1].replace(/&amp;/g,'&').replace(/<[^>]+>/g,'').trim());
 test('commercial headings explicitly identify the service rather than generic reassurance',()=>{
  for(const [file,expected]of [
-  ['electrical.html','Electrical Maintenance for Perth Property Managers'],
-  ['electrical.html','Electrical Faults in Perth: Safety and What to Report'],
-  ['property-management.html','Plumbing and Electrical Maintenance for Perth Property Managers'],
-  ['property-management.html','Plumbing and Electrical Maintenance in Perth: Work-Order Questions'],
-  ['ceiling-fans-perth.html','Ceiling fan installation Perth: service scope'],
-  ['dishwasher-installation-perth.html','Dishwasher installation Perth: service scope'],
+  ['electrical.html','Electrical Maintenance for Property Managers'],
+  ['electrical.html','Electrical Faults: Safety and Reporting'],
+  ['property-management.html','Plumbing and Electrical Maintenance for Property Managers'],
+  ['property-management.html','Plumbing and Electrical Maintenance: Work-Order Scope'],
+  ['ceiling-fans-perth.html','Ceiling fan installation: service scope'],
+  ['dishwasher-installation-perth.html','Dishwasher installation: service scope'],
   ['plumbing.html','Plumber Perth: plumbing symptoms and service choices'],
  ])assert(headings(file).includes(expected),file+': '+expected);
 });

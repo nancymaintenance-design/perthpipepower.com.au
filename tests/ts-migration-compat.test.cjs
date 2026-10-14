@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {spawnSync} = require('node:child_process');
 const source = path.resolve(__dirname, '..');
-const report = path.resolve(source, '../reports/typescript-migration-2026-10-13/compat-tests');
+const report = path.resolve(source, '../reports/content-navigation-repair-2026-10-14/compat-tests');
 fs.mkdirSync(report, {recursive:true});
 function fixture() { return fs.mkdtempSync(path.join(report, 'case-')); }
 function compat() { return require('../scripts/lib/ts-compat.cjs'); }
@@ -65,8 +65,8 @@ test('legacy_entrypoints_cannot_restore_old_content', () => {
         const file=path.join(root,guide.route);
         fs.writeFileSync(file,applyGuide(fs.readFileSync(file,'utf8'),guide));
       }
-      const {comparePublicOutput}=compat().loadCompiledModule('site/baseline.mjs');
-      assert.deepEqual(comparePublicOutput(root,require('./fixtures/ts-migration/baseline.json')),[]);
+      const {comparePublicOutput}={comparePublicOutput:require('./support/approved-content.cjs').compareApprovedOutput};
+      assert.deepEqual(comparePublicOutput(root,require('./support/approved-content.cjs').approved),[]);
     }
     assert.throws(()=>buildConfirmedContent(source),/fixture|npm run build/i);
   } finally {fs.rmSync(root,{recursive:true,force:true});}
@@ -83,7 +83,7 @@ test('public_tests_exercise_dist_not_root', () => {
     const file=path.join(root,'dist/electrical.html');
     fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace(/<title>.*?<\/title>/,'<title>Wrong title</title>'));
     const {comparePublicOutput}=compat().loadCompiledModule('site/baseline.mjs');
-    assert.ok(comparePublicOutput(path.join(root,'dist'),require('./fixtures/ts-migration/baseline.json')).length);
+    assert.ok(comparePublicOutput(path.join(root,'dist'),require('./support/approved-content.cjs').approved).length);
     for(const selected of [path.join(root,'dist'),path.join(root,'missing')]) {
       const run=spawnSync(process.execPath,['scripts/validate-seo.js','--root',selected],{cwd:source,encoding:'utf8'});
       assert.notEqual(run.status,0,run.stdout);

@@ -336,30 +336,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "hot-water-problems-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           10,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "hot-water-problems-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           10,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -660,30 +656,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "blocked-drains-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           11,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "blocked-drains-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           11,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -1003,30 +995,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "water-leak-detection-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           9,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "water-leak-detection-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           9,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -1364,30 +1352,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "burst-pipe-repair-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           9,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "burst-pipe-repair-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           9,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -1706,30 +1690,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "tap-mixer-repairs-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           10,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "tap-mixer-repairs-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           10,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -2030,30 +2010,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "toilet-repairs-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           10,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "toilet-repairs-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           10,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -2387,30 +2363,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "power-faults-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           9,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "power-faults-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           9,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -2729,30 +2701,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "safety-switch-tripping-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           9,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "safety-switch-tripping-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           9,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -3366,30 +3334,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "smoke-alarm-maintenance-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           10,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "smoke-alarm-maintenance-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           10,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -3706,30 +3670,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "fixtures-appliances-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           11,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "fixtures-appliances-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           11,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   },
@@ -4048,30 +4008,26 @@ const legacy = compatibilityView({
         "$source": "page",
         "file": "renewables-smart-home-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           7,
-          "name"
+          "question"
         ]
       },
       {
-        "$source": "page",
+        "$source": "fragment",
         "file": "renewables-smart-home-perth.html",
         "path": [
-          "seo",
-          "jsonLd",
-          0,
-          "@graph",
-          5,
-          "mainEntity",
+          "sections",
+          2,
+          "items",
           7,
-          "acceptedAnswer",
-          "text"
-        ]
+          "answer"
+        ],
+        "node": [],
+        "mode": "text",
+        "trim": true
       }
     ]
   }

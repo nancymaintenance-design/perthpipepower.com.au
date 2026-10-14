@@ -6,10 +6,15 @@ import { isSafePublicPath } from '../validate-content.mjs';
 
 export const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 export const reportRoot = resolve(projectRoot, '../reports/typescript-migration-2026-10-13');
+export const repairReportRoot = resolve(projectRoot, '../reports/content-navigation-repair-2026-10-14');
 const fold = (value: string): string => value.toLowerCase();
 export function inside(root: string, target: string): boolean {
   const rel = relative(fold(resolve(root)), fold(resolve(target)));
   return rel !== '' && rel !== '..' && !rel.startsWith(`..${sep}`) && !isAbsolute(rel);
+}
+/** Only the two explicitly approved evidence roots accept isolated fixtures. */
+export function isReportFixture(target: string): boolean {
+  return [reportRoot, repairReportRoot].some(root => inside(root, target) && relative(root, target).split(sep).length >= 2);
 }
 
 /** Ancestors must be directories; reject symbolic links and shared regular-file inodes. */
@@ -34,7 +39,7 @@ export function publicPath(root: string, file: string): string {
 }
 export function checkRoots(sourceRoot: string, outDir: string): { sourceRoot: string; outDir: string } {
   const source = resolve(sourceRoot), output = resolve(outDir);
-  const fixture = (target: string): boolean => inside(reportRoot, target) && relative(reportRoot, target).split(sep).length >= 2;
+  const fixture = isReportFixture;
   if (fold(source) !== fold(projectRoot) && !fixture(source)) throw new Error(`Unsafe source directory scope: ${source}`);
   if (fold(output) !== fold(resolve(projectRoot, 'dist')) && !fixture(output)) throw new Error(`Unsafe output directory scope: ${output}`);
   if (fold(source) === fold(output) || inside(output, source)) throw new Error('Unsafe output directory is source or its parent');

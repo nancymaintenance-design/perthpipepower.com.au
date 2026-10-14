@@ -53,14 +53,23 @@ test('primary intent is unique after case folding and overview routes readers to
  assert.match(graph.find(n=>n['@type']==='Service').serviceType,/overview/i);
  assert.match(graph.find(n=>n['@type']==='WebPage').description,/dedicated/i);
 });
-test('educational FAQs give concise answers and native links to distinct explanatory service prose with schema parity',()=>{
+test('educational answers survive as statements or compact FAQs with explanation anchors and schema parity',()=>{
  const {pages}=require('../data/site-content-intent.cjs');let count=0;
  for(const [file,p]of Object.entries(pages)){
   const section=p.sections?.find(s=>s.id==='learn-about-'+file.replace('.html',''));if(!section)continue;count++;
   const h=main(file),body=h.match(new RegExp('<div class="keyword-gap-part" id="'+section.id+'">([\\s\\S]*?)</div>'))[1];
   const details=[...h.matchAll(/<details><summary>([\s\S]*?)<\/summary><p>([\s\S]*?)<\/p><\/details>/g)];
-  const educational=details.filter(d=>d[2].includes('href="#'+section.id+'"'));
-  assertEducationQuestions(file,educational.map(d=>plain(d[1])));
+  const statements=[...h.matchAll(/<div class="service-information"><h3>([\s\S]*?)<\/h3>([\s\S]*?)<\/div>/g)];
+  const educational=[...details,...statements].filter(d=>d[2].includes('href="#'+section.id+'"'));
+  assert.equal(educational.length,expectedEducation[file].length,file+': every educational explanation retains its short answer and anchor');
+  const original=require('./fixtures/ts-migration/baseline.json').pages[file].faq;
+  for(const question of expectedEducation[file]){
+   const answer=original.find(q=>q.question===question)?.answer;
+   assert(answer,file+': independent original education answer');
+   const edit=require('./fixtures/content-navigation-repair/statement-answer-edits.json').find(e=>e.file===file&&e.question===question);
+   if(edit)assert.equal(plain(edit.before),answer,file+': approved complete-sentence edit preserves original source');
+   assert(educational.some(d=>plain(d[2])===(edit?plain(edit.after):answer)),file+': original useful answer with only the approved complete-sentence edit for '+question);
+  }
   for(const d of educational){const answer=plain(d[2]).replace(' Read the explanation.','');assert(!plain(body).includes(answer),file+': full answer repeated');assert(answer.length>25,file+': useful direct answer');}
   assert(section.links.length>0,file+': explanatory source or related guidance missing');
   const graph=JSON.parse(read(file).match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];

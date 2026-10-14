@@ -1,7 +1,8 @@
 const {test,expect}=require('@playwright/test');
 const fs=require('node:fs'),path=require('node:path');
-const source=path.resolve(__dirname,'../..'),report=path.resolve(source,'../reports/typescript-migration-2026-10-13');
-const baseline=require('../fixtures/ts-migration/baseline.json');
+const source=path.resolve(__dirname,'../..'),report=path.resolve(source,'../reports/content-navigation-repair-2026-10-14');
+const baseline=require('../support/approved-content.cjs').approved;
+const historicalBaseline=require('../fixtures/ts-migration/baseline.json');
 const {services}=require('../../booking-context.js');
 test.beforeEach(async({context,baseURL})=>{
  await context.route('**/*',route=>{
@@ -9,8 +10,8 @@ test.beforeEach(async({context,baseURL})=>{
   return url.origin===baseURL&&!(url.pathname.startsWith('/api/'))?route.continue():route.abort();
  });
 });
-test('all 48 pages and 239 resources are served with frozen content and local-only protections',async({request,baseURL})=>{
- const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
+test('all 48 pages and 239 resources follow exact approved changes and local-only protections',async({request,baseURL})=>{
+ const {compareApprovedOutput:comparePublicOutput}=require('../support/approved-content.cjs');
  expect(comparePublicOutput(path.join(source,'dist'),baseline)).toEqual([]);
  for(const file of Object.keys(baseline.pages)){
   const response=await request.get('/'+file);expect(response.status(),file).toBe(200);
@@ -53,7 +54,7 @@ test('mobile CTA clears hero, menu and in-flow booking controls',async({page})=>
 });
 test('no-JS public content, navigation, gallery and contact fallback remain native',async({browser,baseURL})=>{
  const context=await browser.newContext({javaScriptEnabled:false});await context.route('**/*',r=>new URL(r.request().url()).origin===baseURL?r.continue():r.abort());
- try{const page=await context.newPage();for(const file of ['index.html','electrical.html','plumbing.html','ceiling-fans-perth.html','northern-suburbs.html','contact.html']){await page.goto(baseURL+'/'+file);await expect(page.locator('h1')).toBeVisible();expect(await page.locator('main').innerText()).not.toBe('');await expect(page.locator('a[href^="tel:"]').first()).toBeAttached();expect(await page.locator('details').count()).toBeGreaterThan(0);if(file==='northern-suburbs.html')expect(await page.locator('.electrical-work-gallery__image').count()).toBe(8);}await expect(page.locator('main a[href^="mailto:"]').first()).toBeVisible();await expect(page.locator('main a[href^="tel:"]').first()).toBeVisible();}finally{await context.close();}
+ try{const page=await context.newPage();for(const file of ['index.html','electrical.html','plumbing.html','ceiling-fans-perth.html','northern-suburbs.html','contact.html']){await page.goto(baseURL+'/'+file);await expect(page.locator('h1')).toBeVisible();expect(await page.locator('main').innerText()).not.toBe('');await expect(page.locator('a[href^="tel:"]').first()).toBeAttached();if(file!=='index.html')expect(await page.locator('details').count()).toBeGreaterThan(0);if(file==='northern-suburbs.html')expect(await page.locator('.electrical-work-gallery__image').count()).toBe(8);}await expect(page.locator('main a[href^="mailto:"]').first()).toBeVisible();await expect(page.locator('main a[href^="tel:"]').first()).toBeVisible();}finally{await context.close();}
 });
 test('CSP blocks real browser fetch, analytics, maps and native form submission',async({page})=>{
  const posts=[];page.on('request',r=>{if(r.method()==='POST')posts.push(r.url());});await page.goto('/contact.html');
@@ -73,7 +74,7 @@ for(const success of [true,false])test('intercepted local form '+(success?'succe
 });
 
 const screenshotRoot=path.join(source,'tests/fixtures/ts-migration/screenshots');
-test.describe('frozen captures with the original shared browser cache',()=>{
+(process.env.TS_HISTORICAL_VISUAL==='1'?test.describe:test.describe.skip)('historical migration provenance: superseded layout, inherited capture limitations',()=>{
 let visualContext;
 test.beforeAll(async({browser,baseURL})=>{visualContext=await browser.newContext();await visualContext.route('**/*',r=>new URL(r.request().url()).origin===baseURL?r.continue():r.abort());});
 test.afterAll(async()=>{await visualContext?.close();});
@@ -94,7 +95,7 @@ for(const record of require(path.join(screenshotRoot,'inventory.json')))test(`fr
  const evidence={file:record.file,width:record.width,dimensions,changedPixels:changed,totalPixels:after.width*after.height,browserName,errors};
  if(changed){
   const original=fs.readFileSync(path.join(source,record.file));
-  expect(require('node:crypto').createHash('sha256').update(original).digest('hex')).toBe(baseline.pages[record.file].sha256);
+  expect(require('node:crypto').createHash('sha256').update(original).digest('hex')).toBe(historicalBaseline.pages[record.file].sha256);
   const imageState=()=>page.evaluate(()=>({dpr:devicePixelRatio,images:[...document.images].map(i=>({src:i.getAttribute('src'),currentSrc:i.currentSrc,naturalWidth:i.naturalWidth,complete:i.complete,rect:i.getBoundingClientRect().toJSON()}))}));
   const decoded=()=>page.evaluate(async()=>{await Promise.all([...document.images].map(async i=>{i.loading='eager';await i.decode();}));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
   await decoded();

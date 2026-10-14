@@ -6,7 +6,7 @@ const clean=s=>s.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<[^>
 for(const file of pages){
  const html=fs.readFileSync(path.join(root,file),'utf8'),main=html.match(/<main\b[^>]*>[\s\S]*?<\/main>/)[0];
  assert.equal((main.match(/<section\b/g)||[]).length,5,file+' should present five coherent main sections');
- assert.equal((main.match(/class="[^"]*\bfaq\b/g)||[]).length,1,file+' should have one FAQ group');
+ assert.equal((main.match(/<section\b[^>]*class="[^"]*\bfaq\b/g)||[]).length,1,file+' should have one FAQ group');
  assert(!main.includes('service-detail-grid'),file+' should not repeat link-card walls');
  assert(!html.includes('src="service-page-depth.js"'),file+' should not append legacy content at runtime');
  const h1=clean(main.match(/<h1[^>]*>[\s\S]*?<\/h1>/)[0]);assert(/repair|detection|connection|electrical services/i.test(h1)&&/Perth/.test(h1),file+' needs a commercial service headline');

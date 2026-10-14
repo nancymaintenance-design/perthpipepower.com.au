@@ -3,9 +3,9 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { parse, parseFragment } = require('parse5');
-const baseline = require('./fixtures/ts-migration/baseline.json');
+const baseline = require('./support/approved-content.cjs').approved;
 const root = path.resolve(__dirname, '..');
-const report = path.resolve(root, '../reports/typescript-migration-2026-10-13');
+const report = path.resolve(root, '../reports/content-navigation-repair-2026-10-14');
 const walk = node => [node, ...(node.childNodes ?? []).flatMap(walk)];
 const text = node => node.nodeName === '#text' ? node.value : (node.childNodes ?? []).map(text).join('');
 const attr = (node, key) => node.attrs?.find(a => a.name === key)?.value;
@@ -28,7 +28,7 @@ function modules() {
 // Every expectation comes from the immutable, independently frozen Task 1 DOM.
 test('all_48_templates_match_baseline', t => {
   const { loadSiteData, renderPage } = modules();
-  const { comparePublicOutput } = require('../.build/site/baseline.mjs');
+  const { compareApprovedOutput: comparePublicOutput } = require('./support/approved-content.cjs');
   const site = loadSiteData();
   const dir = fs.mkdtempSync(path.join(report, 'templates-test-'));
   t.after(() => fs.rmSync(dir, { recursive: true, force: true }));
@@ -47,7 +47,7 @@ test('shared_components_preserve_context', () => {
   const site = loadSiteData();
   const electrical = site.pages.find(p => p.file === 'electrical.html');
   const html = renderPage(electrical, site);
-  assert.match(html, /<h2[^>]*>Electrical Maintenance for Perth Property Managers<\/h2>/);
+  assert.match(html, /<h2[^>]*>Electrical Maintenance for Property Managers<\/h2>/);
   assert.match(html, /contact\.html\?service=electrical\.html/);
   const nav = walk(parseFragment(renderNavigation(electrical, site)));
   const plumbingMenu = nav.find(n => attr(n, 'id') === 'plumbing-menu');

@@ -462,7 +462,7 @@ textarea {
 .office-location {
   background: #e8f4f3;
 }
-.office-location .shell {
+.office-location > .shell {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
   gap: 3rem;
@@ -539,7 +539,7 @@ textarea {
   .cards,
   .contact-grid,
   .footer-grid,
-  .office-location .shell {
+  .office-location > .shell {
     grid-template-columns: 1fr;
     gap: 1.3rem;
   }

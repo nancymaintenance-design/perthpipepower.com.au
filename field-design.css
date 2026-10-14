@@ -83,3 +83,29 @@ h1{font-weight:800}h2{font-size:clamp(1.9rem,3.2vw,3rem)}h3{font-size:1.3rem;lin
 @media(max-width:600px){.cards{grid-template-columns:1fr}.field-process__grid{grid-template-columns:1fr;padding-block:1.5rem;gap:1.2rem}.field-process__grid>div{padding-left:2.8rem}.field-step{position:absolute;top:0;left:0}.field-hero__photo{min-height:300px}.hero-actions{align-items:stretch}.hero-actions .button{width:100%}.field-work figure{display:block}.field-work img{height:210px}.area-search__control{align-items:stretch}.area-search input{font-size:.9rem}.area-region h3{font-size:1.5rem}.field-hero__photo figcaption{font-size:.68rem;padding:.9rem}.footer a{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 @media(forced-colors:active){html{scrollbar-color:auto}.button{border:1px solid ButtonText}}
+
+/* One sticky navigation geometry for every public route. */
+:root{--site-header-height:90px}
+html{scroll-padding-top:calc(var(--site-header-height) + 18px)}
+.site-header{position:sticky;top:0;z-index:100}
+main [id],main :focus{scroll-margin-top:calc(var(--site-header-height) + 18px)}
+.site-nav .mega-menu{top:var(--site-header-bottom,var(--site-header-height));max-height:calc(100dvh - var(--site-header-bottom,var(--site-header-height)) - 16px);overflow-y:auto;overscroll-behavior:contain}
+.head-row{flex-wrap:wrap}.site-nav{max-width:100%;min-width:0}.nav-list{flex-wrap:wrap}.brand{max-width:100%;overflow-wrap:anywhere}
+.nav-list a,.nav-group>button{overflow-wrap:anywhere;white-space:normal}
+.nav-list [aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.office-map-fallback{margin:0;padding:1.25rem;background:#fff;font-size:1rem;line-height:1.65;border-top:1px solid var(--line)}
+.local-map-preview .office-location__map iframe{display:none}
+.local-map-preview .office-location__map{align-self:center;min-height:0}
+.local-map-preview .office-map-fallback{padding:2rem;border:0}
+.service-information{padding-block:1.4rem;border-top:1px solid var(--line)}
+.service-information h3{margin:0 0 .8rem}.service-information p{max-width:78ch}
+.service-information:empty{display:none}.related-faq-link{margin-top:1.5rem;font-weight:700}
+.home-company-advantages{background:var(--field-light)}
+.nav-enhanced .nav-group:not(.is-open) .subnav{visibility:hidden;opacity:0;pointer-events:none}
+html:not(.nav-enhanced) .nav-group:focus-within .subnav{display:grid;visibility:visible;opacity:1;transform:translateX(-50%)}
+@media(max-width:800px){
+ :root{--site-header-height:212px}
+ .nav-list>li:last-child,.nav-group{order:0}
+ .site-nav .nav-group.is-open .mega-menu,html:not(.nav-enhanced) .nav-group:focus-within .mega-menu{position:fixed;top:var(--site-header-height);left:1rem;right:1rem;width:auto;margin:0;transform:none;max-height:calc(100dvh - var(--site-header-height) - 16px);z-index:101}
+ .head-row{align-items:flex-start}.nav-group>button{height:auto}
+}

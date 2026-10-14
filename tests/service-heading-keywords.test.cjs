@@ -23,7 +23,8 @@ for (const [page, heading] of services) {
     .map((fragment) => `<article class="card">${fragment}`)
     .find((fragment) => fragment.includes(`href="${page}"`));
   assert.ok(card, `Homepage should link the ${heading} card to ${page}`);
-  assert.match(card, new RegExp(`<h3>${heading}<\\/h3>`));
+  const secondary = heading.replaceAll(' in Perth','').replaceAll(' Perth','');
+  assert.match(card, new RegExp(`<h3>${secondary}<\\/h3>`));
 
   const pageHtml = read(page);
   assert.match(pageHtml, new RegExp(`<h1>${heading.replaceAll(' Perth', ' in Perth')}<\\/h1>|<h1>${heading}<\\/h1>`));

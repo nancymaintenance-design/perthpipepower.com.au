@@ -1,5 +1,5 @@
 import {lstatSync, readFileSync, readdirSync, writeFileSync} from 'node:fs';
-import {relative, resolve, sep} from 'node:path';
+import {resolve} from 'node:path';
 import {loadSiteData} from './content/pages.mjs';
 import expanded from './content/legacy/expanded-services.mjs';
 import intent from './content/legacy/site-content-intent.mjs';
@@ -7,12 +7,12 @@ import guides from './content/legacy/region-guides.mjs';
 import {renderSite} from './build/render-site.mjs';
 import {renderPage} from './templates/page.mjs';
 import {escapePlainText} from './templates/document.mjs';
-import {assertNoLinks, inside, publicPath, reportRoot} from './build/copy-assets.mjs';
+import {assertNoLinks, isReportFixture, publicPath} from './build/copy-assets.mjs';
 import type {TrustedHtml} from './types.mjs';
 
 export function fixtureRoot(root: string): string {
   const target=resolve(root);
-  if (!inside(reportRoot,target) || relative(reportRoot,target).split(sep).length<2) throw new Error('Legacy writes require an isolated report fixture; use npm run build for dist.');
+  if (!isReportFixture(target)) throw new Error('Legacy writes require an isolated report fixture; use npm run build for dist.');
   assertNoLinks(target);
   if (!lstatSync(target,{throwIfNoEntry:false})?.isDirectory()) throw new Error('Missing fixture directory');
   return target;

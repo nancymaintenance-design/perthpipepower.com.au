@@ -8,7 +8,7 @@ for (const guide of regionGuides) {
   const html = fs.readFileSync(path.join(resolvePublicRoot(), guide.route), 'utf8');
   assert.match(html, new RegExp(`<h1>[^<]*${guide.name.replace(/[&]/g, '&amp;')}[^<]*<\\/h1>`, 'i'));
   assert.match(html, /Plumbing and electrical repairs/i);
-  assert.match(html, /What to include in a repair request/i);
+  assert.match(html, /Repair request and access details/i);
   assert.match(html, /Written quote before work proceeds/i);
   assert.match(html, new RegExp(`Request a repair in ${guide.name.replace(/[&]/g, '&amp;')}`, 'i'));
   assert.match(html, /blocked drains|leak concerns|hot-water/i);

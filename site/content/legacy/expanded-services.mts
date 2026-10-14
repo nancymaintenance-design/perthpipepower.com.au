@@ -197,123 +197,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "lighting-installation-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "lighting-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "lighting-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "lighting-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "lighting-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "lighting-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "lighting-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "lighting-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "lighting-installation-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "lighting-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "lighting-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "lighting-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "lighting-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "lighting-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -630,123 +614,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "power-points-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "power-points-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "power-points-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "power-points-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "power-points-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "power-points-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "power-points-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "power-points-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "power-points-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "power-points-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "power-points-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "power-points-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "power-points-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "power-points-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -1063,123 +1031,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "dishwasher-installation-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "dishwasher-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "dishwasher-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "dishwasher-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "dishwasher-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "dishwasher-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "dishwasher-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "dishwasher-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "dishwasher-installation-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "dishwasher-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "dishwasher-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "dishwasher-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "dishwasher-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "dishwasher-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -1496,123 +1448,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "toilet-installation-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "toilet-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "toilet-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "toilet-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "toilet-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "toilet-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "toilet-installation-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "toilet-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "toilet-installation-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "toilet-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "toilet-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "toilet-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "toilet-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "toilet-installation-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -1929,123 +1865,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "shower-plumbing-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "shower-plumbing-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "shower-plumbing-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "shower-plumbing-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "shower-plumbing-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "shower-plumbing-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "shower-plumbing-repairs-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "shower-plumbing-repairs-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "shower-plumbing-repairs-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "shower-plumbing-repairs-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "shower-plumbing-repairs-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "shower-plumbing-repairs-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "shower-plumbing-repairs-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "shower-plumbing-repairs-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -2362,123 +2282,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "water-pressure-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "water-pressure-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "water-pressure-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "water-pressure-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "water-pressure-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "water-pressure-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "water-pressure-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "water-pressure-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "water-pressure-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "water-pressure-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "water-pressure-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "water-pressure-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "water-pressure-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "water-pressure-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -2797,123 +2701,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "ceiling-fans-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "ceiling-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "ceiling-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "ceiling-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "ceiling-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "ceiling-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "ceiling-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "ceiling-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "ceiling-fans-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "ceiling-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "ceiling-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "ceiling-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "ceiling-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "ceiling-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -3230,123 +3118,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "exhaust-fans-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "exhaust-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "exhaust-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "exhaust-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "exhaust-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "exhaust-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "exhaust-fans-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "exhaust-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "exhaust-fans-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "exhaust-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "exhaust-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "exhaust-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "exhaust-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "exhaust-fans-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -3663,123 +3535,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "switchboard-upgrades-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "switchboard-upgrades-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "switchboard-upgrades-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "switchboard-upgrades-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "switchboard-upgrades-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "switchboard-upgrades-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "switchboard-upgrades-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "switchboard-upgrades-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "switchboard-upgrades-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "switchboard-upgrades-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "switchboard-upgrades-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "switchboard-upgrades-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "switchboard-upgrades-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "switchboard-upgrades-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -4096,61 +3952,53 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "faq.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              4,
-              "mainEntity",
-              4,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "rcd-testing-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "rcd-testing-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               1,
-              "name"
+              "items",
+              4,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "rcd-testing-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "rcd-testing-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              3,
+              "items",
               1,
-              "acceptedAnswer",
-              "text"
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "rcd-testing-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -4158,30 +4006,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "rcd-testing-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              3,
+              "items",
               2,
-              "name"
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "rcd-testing-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
+              3,
+              "items",
               2,
-              "acceptedAnswer",
-              "text"
-            ]
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ],
         [
@@ -4189,30 +4033,26 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "rcd-testing-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              3,
+              "question"
             ]
           },
           {
-            "$source": "page",
+            "$source": "fragment",
             "file": "rcd-testing-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
-            ]
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -4529,123 +4369,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "emergency-plumber-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "emergency-plumber-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "emergency-plumber-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "emergency-plumber-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "emergency-plumber-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "emergency-plumber-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "emergency-plumber-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "emergency-plumber-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "emergency-plumber-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "emergency-plumber-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "emergency-plumber-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "emergency-plumber-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "emergency-plumber-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "emergency-plumber-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],
@@ -4962,123 +4786,107 @@ const legacy = compatibilityView({
             "$source": "page",
             "file": "emergency-electrician-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "emergency-electrician-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              0,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "emergency-electrician-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "emergency-electrician-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              1,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "emergency-electrician-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "name"
-            ]
-          },
-          {
-            "$source": "page",
-            "file": "emergency-electrician-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
-              2,
-              "acceptedAnswer",
-              "text"
-            ]
-          }
-        ],
-        [
-          {
-            "$source": "page",
-            "file": "emergency-electrician-perth.html",
-            "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "name"
+              "items",
+              0,
+              "question"
             ]
           },
+          {
+            "$source": "fragment",
+            "file": "emergency-electrician-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              0,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
           {
             "$source": "page",
             "file": "emergency-electrician-perth.html",
             "path": [
-              "seo",
-              "jsonLd",
-              0,
-              "@graph",
-              5,
-              "mainEntity",
+              "sections",
               3,
-              "acceptedAnswer",
-              "text"
+              "items",
+              1,
+              "question"
             ]
+          },
+          {
+            "$source": "fragment",
+            "file": "emergency-electrician-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              1,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "emergency-electrician-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "emergency-electrician-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              2,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
+          }
+        ],
+        [
+          {
+            "$source": "page",
+            "file": "emergency-electrician-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "question"
+            ]
+          },
+          {
+            "$source": "fragment",
+            "file": "emergency-electrician-perth.html",
+            "path": [
+              "sections",
+              3,
+              "items",
+              3,
+              "answer"
+            ],
+            "node": [],
+            "mode": "text",
+            "trim": true
           }
         ]
       ],

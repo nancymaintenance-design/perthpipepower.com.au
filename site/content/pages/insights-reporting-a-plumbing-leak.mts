@@ -410,7 +410,7 @@ export const page: PageData = {
 {
 "id": "section-34",
 "kind": "rich",
-"html": "\n<h3>Do I need a meter reading before I call?</h3>" as TrustedHtml
+"html": "\n<h3>Meter observations before a leak enquiry</h3>" as TrustedHtml
 },
 {
 "id": "section-35",
@@ -420,7 +420,7 @@ export const page: PageData = {
 {
 "id": "section-36",
 "kind": "rich",
-"html": "\n<h3>Can a photo confirm where the hidden pipe is leaking?</h3>" as TrustedHtml
+"html": "\n<h3>Photos support a report; inspection establishes the source</h3>" as TrustedHtml
 },
 {
 "id": "section-37",
@@ -430,7 +430,7 @@ export const page: PageData = {
 {
 "id": "section-38",
 "kind": "rich",
-"html": "\n<h3>Does leak detection include repairing and repainting the wall?</h3>" as TrustedHtml
+"html": "\n<h3>Leak detection, pipe repair and wall reinstatement scopes</h3>" as TrustedHtml
 },
 {
 "id": "section-39",
@@ -440,7 +440,7 @@ export const page: PageData = {
 {
 "id": "section-40",
 "kind": "rich",
-"html": "\n<h3>What should a tenant send to the property manager?</h3>" as TrustedHtml
+"html": "\n<h3>Leak reports for tenants and property managers</h3>" as TrustedHtml
 },
 {
 "id": "section-41",

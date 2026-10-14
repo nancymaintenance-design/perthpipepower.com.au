@@ -17,8 +17,8 @@ for (const expected of [
   'maxinemaintenance.au@outlook.com',
   'How a repair request moves forward',
   'Licensing &amp; insurance',
-  'Questions customers often ask',
-  'dedicated Perth repair team providing plumbing and electrical repairs across Perth',
+  'Company registration and trade documentation',
+  'dedicated local repair team',
   'appropriately licensed plumbing and electrical tradespeople',
 ]) {
   assert.ok(about.includes(expected), `About page should present ${expected}`);

@@ -1754,7 +1754,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script>\n    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>\n    <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n" as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <link rel=\"stylesheet\" href=\"field-design.css\">\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script>\n    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>\n    <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n" as TrustedHtml
 }
 ],
 "headerId": "header-54f54fcf2e4a",
