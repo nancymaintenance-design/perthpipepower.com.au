@@ -10,13 +10,11 @@ export const hours = {
   days:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],opens:'09:00',closes:'21:00',
   get text():string {return `Routine service hours: ${this.opens}–${this.closes}, ${this.days.length===7?'seven days a week':this.days.join(', ')}. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work.`;}
 };
-/** Link destinations are independent of existing public display and schema values. */
-export const contactRouting = { telephone:'+611300838722' };
 export function sharedValue(key:string):string {
   if(key==='business.addressLine')return `${business.address.streetAddress}, ${business.address.addressLocality} ${business.address.addressRegion} ${business.address.postalCode}`;
   if(key==='business.localTelephone')return business.telephone.replace(/^\+61/,'0');
   if(key==='business.displayTelephone'){const phone=sharedValue('business.localTelephone');return `${phone.slice(0,4)} ${phone.slice(4,7)} ${phone.slice(7)}`;}
-  let value:unknown={business,hours,contactRouting};
+  let value:unknown={business,hours};
   for(const part of key.split('.')){if(!value||typeof value!=='object'||!(part in value))throw Error(`Unknown shared content field: ${key}`);value=(value as Record<string,unknown>)[part];}
   if(typeof value!=='string')throw Error(`Shared content field is not text: ${key}`);return value;
 }

@@ -8,7 +8,7 @@ const text=n=>n?.nodeName==='#text'?n.value:(n?.childNodes||[]).map(text).join('
 const attr=(n,k)=>n.attrs?.find(a=>a.name===k)?.value;
 const nodes=f=>walk(parse(fs.readFileSync(path.join(root,f),'utf8')));
 test('all 48 complete top-level headers and utility blocks match independent immutable chrome contracts',()=>{
- const {approvedHeader,approveContactRouting}=require('./support/approved-content.cjs'),frozen=require('./fixtures/ts-migration/baseline.json');
+ const {approvedHeader}=require('./support/approved-content.cjs'),frozen=require('./fixtures/ts-migration/baseline.json');
  const contract=require('./fixtures/content-navigation-repair/chrome-contract.json');
  const canonical=n=>n.nodeName==='#text'?['text',n.value]:n.nodeName==='#comment'?['comment',n.data]:n.tagName?['element',n.namespaceURI,n.tagName,n.attrs.map(a=>[a.namespace||'',a.name,a.value]).sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b),'en')),(n.childNodes||[]).map(canonical)]:['fragment',(n.childNodes||[]).map(canonical)];
  const cchildren=n=>n[0]==='element'?n[4]:['document','fragment'].includes(n[0])?n[1]:[],cwalk=n=>[n,...cchildren(n).flatMap(cwalk)];
@@ -18,7 +18,7 @@ test('all 48 complete top-level headers and utility blocks match independent imm
   assert.equal(headers.length,1,file+': one exact top-level shared header');
   assert.deepEqual(canonical(headers[0]),approvedHeader(file),file+': full logo/menu/CTA DOM including every attribute, label, destination and current marker');
   const original=cchildren(cwalk(JSON.parse(frozen.pages[file].dom)).find(n=>n[2]==='body')).filter(n=>n[2]==='div'&&n[3].some(a=>a[1]==='class'&&a[2]==='utility'));
-  assert.deepEqual(body.childNodes.filter(n=>n.tagName==='div'&&attr(n,'class')==='utility').map(canonical),original.map(approveContactRouting),file+': original utility content with approved contact destinations');
+  assert.deepEqual(body.childNodes.filter(n=>n.tagName==='div'&&attr(n,'class')==='utility').map(canonical),original,file+': full original utility content/contact links');
  }
 });
 test('all public types expose unified service menus and honest current-page state',()=>{

@@ -30,7 +30,7 @@ for (const [label, expected] of [
   ['Tap and mixer repairs →', 'tap-mixer-repairs-perth.html'],
   ['Toilet repairs →', 'toilet-repairs-perth.html'],
 ]) assert.equal(linkFor(plumbing, label), expected, `plumbing card ${label} must lead to its service page`);
-assert.ok(hrefs(plumbing).includes('tel:+611300838722'), 'plumbing overview must keep the call CTA');
+assert.ok(hrefs(plumbing).includes('tel:0413477667'), 'plumbing overview must keep the call CTA');
 assert.ok(hasLocalLink(plumbing,'contact.html'), 'plumbing overview must keep the enquiry CTA');
 
 const electrical = read('electrical.html');
@@ -41,7 +41,7 @@ for (const [label, expected] of [
   ['Discuss an outlet →', 'lighting-power-points-perth.html'],
   ['Discuss a smoke alarm →', 'smoke-alarm-maintenance-perth.html'],
 ]) assert.equal(linkFor(electrical, label), expected, `electrical card ${label} must lead to its service page`);
-assert.ok(hrefs(electrical).includes('tel:+611300838722'), 'electrical overview must keep the call CTA');
+assert.ok(hrefs(electrical).includes('tel:0413477667'), 'electrical overview must keep the call CTA');
 assert.ok(hasLocalLink(electrical,'contact.html'), 'electrical overview must keep the enquiry CTA');
 
 for (const [page, servicePage] of [

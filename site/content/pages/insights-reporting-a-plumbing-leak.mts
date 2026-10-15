@@ -280,7 +280,7 @@ export const page: PageData = {
 {
 "id": "section-8",
 "kind": "rich",
-"html": "\n<ul><li><strong>A stable drip or stain you can observe safely:</strong> record the affected room, when it started and whether it follows use of a fixture. Send an enquiry with photos taken from a safe position.</li><li><strong>Active flow or spreading water:</strong> call <a href=\"tel:{{ppp:shared:contactRouting.telephone:html}}\">{{ppp:shared:business.displayTelephone:html}}</a> and describe whether the flow is continuing and which rooms are affected. If you know the water isolation point and it is safe to reach, isolate the supply. Do not delay contact to collect a full set of photos. Our <a href=\"burst-pipe-repair-perth.html\">burst pipe repair page</a> covers active pipe leaks and repair arrangements.</li><li><strong>Water near electrical fittings, appliances or a switchboard:</strong> keep people away and do not touch wet equipment, operate switches in the affected area or enter water to reach an isolation point. Tell us about the electrical hazard when you call so the required trades can be considered. For immediate danger to people, contact emergency services.</li></ul>" as TrustedHtml
+"html": "\n<ul><li><strong>A stable drip or stain you can observe safely:</strong> record the affected room, when it started and whether it follows use of a fixture. Send an enquiry with photos taken from a safe position.</li><li><strong>Active flow or spreading water:</strong> call <a href=\"tel:{{ppp:shared:business.telephone:html}}\">{{ppp:shared:business.displayTelephone:html}}</a> and describe whether the flow is continuing and which rooms are affected. If you know the water isolation point and it is safe to reach, isolate the supply. Do not delay contact to collect a full set of photos. Our <a href=\"burst-pipe-repair-perth.html\">burst pipe repair page</a> covers active pipe leaks and repair arrangements.</li><li><strong>Water near electrical fittings, appliances or a switchboard:</strong> keep people away and do not touch wet equipment, operate switches in the affected area or enter water to reach an isolation point. Tell us about the electrical hazard when you call so the required trades can be considered. For immediate danger to people, contact emergency services.</li></ul>" as TrustedHtml
 },
 {
 "id": "section-9",
@@ -450,7 +450,7 @@ export const page: PageData = {
 {
 "id": "section-42",
 "kind": "rich",
-"html": "\n<p><a class=\"button\" href=\"contact.html\">Arrange a leak inspection with Ellis</a> or call <a href=\"tel:{{ppp:shared:contactRouting.telephone:html}}\">{{ppp:shared:business.displayTelephone:html}}</a> with the location, water spread and access details.</p>" as TrustedHtml
+"html": "\n<p><a class=\"button\" href=\"contact.html\">Arrange a leak inspection with Ellis</a> or call <a href=\"tel:{{ppp:shared:business.telephone:html}}\">{{ppp:shared:business.displayTelephone:html}}</a> with the location, water spread and access details.</p>" as TrustedHtml
 },
 {
 "id": "section-43",

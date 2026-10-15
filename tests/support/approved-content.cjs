@@ -64,15 +64,7 @@ function approvedHeader(file,refined=true){
   }
  }
  assert.deepEqual(selected,chrome.current[file],file+': independently enumerated current targets exist exactly');
- return approveContactRouting(refined?refineHeader(header):header);
-}
-// Exact owner-approved destination edits preserve all text, ARIA and other attributes.
-function approveContactRouting(tree){
- for(const node of walk(tree))if(isEl(node,'a')){
-  const href=node[3].find(a=>a[1]==='href');
-  if(href&&['tel:0413477667','tel:+61413477667'].includes(href[2]))href[2]='tel:+611300838722';
- }
- return tree;
+ return refined?refineHeader(header):header;
 }
 const approved=structuredClone(frozen);
 assert.deepEqual(Object.keys(chrome.current).sort(),Object.keys(frozen.pages).sort(),'chrome contract covers all 48 routes');
@@ -456,7 +448,6 @@ function refineHeader(header){
  assert.equal(approved.assets['field-design.css'],edits.fieldDesignCss.before,'previous homepage style fingerprint');
  approved.assets['field-design.css']=edits.fieldDesignCss.after;
 }
-for(const [file,previous]of Object.entries(approved.pages))approved.pages[file]=snapshotFromTree(approveContactRouting(JSON.parse(previous.dom)),previous);
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  return comparePublicOutput(root,manifest).filter(d=>{
@@ -464,4 +455,4 @@ function compareApprovedOutput(root,manifest=approved){
   return JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.expected)))!==JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.actual)));
  }).map(d=>({...d,expected:d.field==='dom'?'approved exact DOM including shared chrome':d.expected,actual:d.field==='dom'?'unexpected DOM difference':d.actual}));
 }
-module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader,approveContactRouting,reviewedCopy};
+module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader,reviewedCopy};

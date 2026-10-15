@@ -34,6 +34,6 @@ export function renderEnquiryLayout(page:PageData,content:string):string {
 <p id="form-status" class="form-status" aria-live="polite"></p>
 <button class="button" type="submit">Send enquiry</button>
 </form>`).replace('<form ','<form id="enquiry" tabindex="-1" ');
-  const call=`<a class="enquiry-sidebar__call" href="tel:${escape(sharedValue('contactRouting.telephone'))}">Call ${escape(sharedValue('business.displayTelephone'))}</a>`;
+  const call=`<a class="enquiry-sidebar__call" href="tel:${escape(sharedValue('business.localTelephone'))}">Call ${escape(sharedValue('business.displayTelephone'))}</a>`;
   return `<div class="enquiry-layout shell"><div class="enquiry-content">${existing?content.replace(existing,''):content}</div><aside class="enquiry-sidebar" aria-label="Contact our repair team"><div class="enquiry-sidebar__sticky">${call}${form}</div></aside></div>`;
 }
