@@ -1,0 +1,21 @@
+{
+  "evidence": "Final review at 85d4248: remove only the second identical overview item in each actual water-pressure list; use existing homepage light token.",
+  "edits": [
+    {
+      "file": "water-pressure-perth.html",
+      "reason": "service-scope overview duplicate",
+      "before": "<ul class=\"intent-links\"><li><a href=\"plumbing.html\">Perth plumbing services</a></li><li><a href=\"plumbing.html\">Perth plumbing services</a></li><li><a href=\"water-leak-detection-perth.html\">Leaks and unexplained water use</a></li><li><a href=\"tap-mixer-repairs-perth.html\">Problems at one tap</a></li><li><a href=\"hot-water-problems-perth.html\">Hot-water-only problems</a></li><li><a href=\"service-areas.html\">Perth service regions</a></li></ul>",
+      "after": "<ul class=\"intent-links\"><li><a href=\"plumbing.html\">Perth plumbing services</a></li><li><a href=\"water-leak-detection-perth.html\">Leaks and unexplained water use</a></li><li><a href=\"tap-mixer-repairs-perth.html\">Problems at one tap</a></li><li><a href=\"hot-water-problems-perth.html\">Hot-water-only problems</a></li><li><a href=\"service-areas.html\">Perth service regions</a></li></ul>"
+    },
+    {
+      "file": "water-pressure-perth.html",
+      "reason": "service-faq overview duplicate",
+      "before": "<ul class=\"intent-links\"><li><a href=\"plumbing.html\">Perth plumbing services</a></li><li><a href=\"plumbing.html\">Perth plumbing services</a></li><li><a href=\"water-leak-detection-perth.html\">Leaks and unexplained water use</a></li><li><a href=\"tap-mixer-repairs-perth.html\">Problems at one tap</a></li><li><a href=\"hot-water-problems-perth.html\">Hot-water-only problems</a></li></ul>",
+      "after": "<ul class=\"intent-links\"><li><a href=\"plumbing.html\">Perth plumbing services</a></li><li><a href=\"water-leak-detection-perth.html\">Leaks and unexplained water use</a></li><li><a href=\"tap-mixer-repairs-perth.html\">Problems at one tap</a></li><li><a href=\"hot-water-problems-perth.html\">Hot-water-only problems</a></li></ul>"
+    }
+  ],
+  "fieldDesignCss": {
+    "before": "f34215ef8e924cb1cd21c380ad965547958e3ca98603bf07b52dbcd2ac3aa15c",
+    "after": "7f48f5331310bad41672ea0af4aeecbb4a89a23b8e77338ebe23b072b632ae6f"
+  }
+}

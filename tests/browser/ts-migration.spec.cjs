@@ -19,7 +19,25 @@ test('all 48 pages and 239 resources follow exact approved changes and local-onl
   expect(response.headers()['x-robots-tag']).toContain('noindex');expect(response.headers()['cache-control']).toBe('no-store');
  }
  const {createHash}=require('node:crypto');
- for(const [file,hash] of Object.entries(baseline.assets)){const r=await request.get('/'+file);expect(r.status(),file).toBe(200);expect(createHash('sha256').update(await r.body()).digest('hex'),file).toBe(hash);}
+ const aliases=new Map();
+ for(const suburb of require('../../data/perth-suburbs.json')){
+  const source='/service-areas/'+suburb.slug+'.html',destination='/contact.html?suburb='+encodeURIComponent(suburb.name);
+  const rules=require('../../vercel.json').redirects.filter(r=>r.source===source);
+  expect(rules,source+': one explicit permanent alias').toEqual([{source,destination,permanent:true}]);
+  expect(Object.hasOwn(baseline.assets,source.slice(1)),source+': retained static shell hash').toBe(true);
+  aliases.set(source,destination);
+ }
+ expect(aliases.size).toBe(126);
+ let checkedAliases=0;
+ for(const [file,hash] of Object.entries(baseline.assets)){
+  const source='/'+file,r=await request.get(source,{maxRedirects:0});
+  if(aliases.has(source)){
+   expect(r.status(),file).toBe(308);expect(r.headers().location,file).toBe(aliases.get(source));checkedAliases++;
+  }else{
+   expect(r.status(),file).toBe(200);expect(createHash('sha256').update(await r.body()).digest('hex'),file).toBe(hash);
+  }
+ }
+ expect(checkedAliases).toBe(126);
  expect((await request.post('/api/enquiry',{data:{}})).status()).toBe(403);
  for(const file of ['.env','vercel.json','data/business-entity.cjs','scripts/validate-seo.js','site/content/pages.mts','tests/x.js','site.js.map'])expect((await request.get('/'+file)).status()).toBe(404);
 });

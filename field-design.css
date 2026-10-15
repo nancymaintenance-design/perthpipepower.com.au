@@ -28,6 +28,7 @@
 .contact-grid>*{min-width:0}.contact-card{overflow-wrap:anywhere}.contact-card input,.contact-card select,.contact-card textarea{min-width:0;max-width:100%}
 .split>*{min-width:0}.panel{overflow-wrap:anywhere}
 .hero h1,.hero h2{font-family:var(--serif);font-weight:700;letter-spacing:normal;line-height:1.05}
+.hero .eyebrow{color:var(--field-light)}
 .hero .button{border-radius:0}
 .hero .shell{max-width:1180px}
 .service-work-example figure{margin:0;max-width:640px}.service-work-example img{display:block;width:100%;height:260px;object-fit:cover;border-radius:10px}.service-work-example figcaption{font-size:.85rem;color:#526b7a;padding-top:.7rem}

@@ -436,6 +436,18 @@ function refineHeader(header){
  assert.equal(approved.assets['site.js'],edits.siteJs.before,'previous carousel runtime fingerprint');approved.assets['site.js']=edits.siteJs.after;
  assert.equal(approved.assets['site.css'],edits.siteCss.before,'previous carousel style fingerprint');approved.assets['site.css']=edits.siteCss.after;
 }
+// Final-review fixes remain two exact old-to-approved list edits and one
+// explicit asset identity. Static alias shells and all other guards remain.
+{
+ const edits=require('../fixtures/fullsite-refinement/final-fix-edits.json');
+ for(const edit of edits.edits){
+  const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+  replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
+  approved.pages[edit.file]=snapshotFromTree(tree,previous);
+ }
+ assert.equal(approved.assets['field-design.css'],edits.fieldDesignCss.before,'previous homepage style fingerprint');
+ approved.assets['field-design.css']=edits.fieldDesignCss.after;
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  return comparePublicOutput(root,manifest).filter(d=>{
