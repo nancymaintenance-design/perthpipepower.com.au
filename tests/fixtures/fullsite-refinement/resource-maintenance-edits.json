@@ -1,0 +1,340 @@
+{
+  "stylesheets": [
+    ["field-design.css", "field-design.css?v=20261015"],
+    [
+      "site.css",
+      "site.css?v=20261015"
+    ],
+    [
+      "site.css?v=20261007-social-icons",
+      "site.css?v=20261015"
+    ],
+    [
+      "field-design.css?v=20261008",
+      "field-design.css?v=20261015"
+    ],
+    [
+      "field-design.css?v=20261008-services",
+      "field-design.css?v=20261015"
+    ],
+    [
+      "editorial-quality.css?v=20261010",
+      "editorial-quality.css?v=20261015"
+    ]
+  ],
+  "scripts": [
+    ["site.js", "site.js?v=20261015"],
+    ["navigation.js", "navigation.js?v=20261015"],
+    ["booking-context.js", "booking-context.js?v=20261015"],
+    ["contact-prefill.js", "contact-prefill.js?v=20261015"]
+  ],
+  "carousel": [
+    {
+      "fallback": "plumbing-repair.jpg",
+      "srcset": "plumbing-repair-480.webp 480w, plumbing-repair-800.webp 800w, plumbing-repair-1200.webp 1200w"
+    },
+    {
+      "fallback": "electrical-repair.jpg",
+      "srcset": "electrical-repair-480.webp 480w, electrical-repair-800.webp 800w, electrical-repair-1200.webp 1200w"
+    }
+  ],
+  "pause": "<button type=\"button\" data-carousel-pause aria-pressed=\"false\">Pause slideshow</button>",
+  "dates": [
+    {
+      "file": "index.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service descriptions, work-photo captions and chapter composition rewritten."
+    },
+    {
+      "file": "about.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Electrical work narrative and assessment/booking chapter rewritten."
+    },
+    {
+      "file": "plumbing.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service scope, installation and repair checks replace repeated reporting instructions."
+    },
+    {
+      "file": "electrical.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Electrical scope, installation and findings replace repeated reporting instructions."
+    },
+    {
+      "file": "fixtures-appliances-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "renewables-smart-home-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "property-management.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Rental/strata maintenance scope and approval responsibilities rewritten."
+    },
+    {
+      "file": "service-areas.html",
+      "before": "2026-10-13",
+      "after": "2026-10-13",
+      "reason": "Heading and equivalent outside-directory coverage wording; no new coverage or substantive service content."
+    },
+    {
+      "file": "news.html",
+      "before": "2026-10-13",
+      "after": "2026-10-13",
+      "reason": "Only a collection heading changed."
+    },
+    {
+      "file": "insights.html",
+      "before": "2026-10-13",
+      "after": "2026-10-13",
+      "reason": "Only a collection heading changed."
+    },
+    {
+      "file": "faq.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Question grouping and service guidance consolidated."
+    },
+    {
+      "file": "contact.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Repair-request repetition replaced with relevant service scope and routing."
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "burst-pipe-repair-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "eastern-suburbs.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Regional service introduction rewritten and repeated booking guidance consolidated."
+    },
+    {
+      "file": "hot-water-problems-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-13",
+      "reason": "Heading and removal of duplicated guidance; service selection and body remain equivalent."
+    },
+    {
+      "file": "northern-suburbs.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Regional service introduction rewritten and repeated booking guidance consolidated."
+    },
+    {
+      "file": "perth-cbd-inner-suburbs.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Regional service introduction rewritten and repeated booking guidance consolidated."
+    },
+    {
+      "file": "perth-hills-swan-valley.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Regional service introduction rewritten and repeated booking guidance consolidated."
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "smoke-alarm-maintenance-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "southern-suburbs.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Regional service introduction rewritten and repeated booking guidance consolidated."
+    },
+    {
+      "file": "tap-mixer-repairs-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "toilet-repairs-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "western-suburbs.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Regional service introduction rewritten and repeated booking guidance consolidated."
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Article education, approval/access or safety prose consolidated and restructured."
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Article education, approval/access or safety prose consolidated and restructured."
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Article education, approval/access or safety prose consolidated and restructured."
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Article education, approval/access or safety prose consolidated and restructured."
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Article education, approval/access or safety prose consolidated and restructured."
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Article education, approval/access or safety prose consolidated and restructured."
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Article education, approval/access or safety prose consolidated and restructured."
+    },
+    {
+      "file": "lighting-installation-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "power-points-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "dishwasher-installation-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "toilet-installation-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "shower-plumbing-repairs-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "water-pressure-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "ceiling-fans-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "exhaust-fans-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "switchboard-upgrades-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "rcd-testing-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "emergency-plumber-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    },
+    {
+      "file": "emergency-electrician-perth.html",
+      "before": "2026-10-13",
+      "after": "2026-10-15",
+      "reason": "Service-specific assessment/quotation or educational chapter rewritten and duplicate guidance consolidated."
+    }
+  ],
+  "articles": [
+    "insights-reporting-a-plumbing-leak.html",
+    "insights-hot-water-plumbing-or-electrical.html",
+    "insights-safety-switch-keeps-tripping.html",
+    "insights-tenant-property-manager-maintenance-handover.html",
+    "news-clearer-property-maintenance-enquiry.html",
+    "news-useful-property-work-order.html",
+    "news-keeping-access-information-together.html"
+  ],
+  "siteCss": {"before":"2afff147013e075563a8616d205774b89e3ced995e68bf4575b5280fdd96709d","after":"3643d219b37e69c1d6c27daa807dcba480314f78999328f6d5949068711c9bfc"},
+  "siteJs": {
+    "before": "350990baede55b257df455ff7f7ac834b16f638a9ee5cc8dad3756cea1256526",
+    "after": "ae47ef1e34c399fdd43f060f1e5749e8b1fb165598c524e0df5acb0ed3bd1262"
+  }
+}

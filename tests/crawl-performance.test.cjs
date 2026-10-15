@@ -18,15 +18,15 @@ const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)];
 assert.equal(entries.length, 47, '35 retained URLs plus 12 approved service pages');
 const manifest = JSON.parse(fs.readFileSync(path.join(SOURCE_ROOT,'data/sitemap-content-dates.json'), 'utf8'));
 const crypto = require('node:crypto');
-// Historical date-record provenance uses the pre-migration source serialization.
-// Published content is independently checked below against the frozen DOM baseline.
+// Current maintenance fingerprints use final rendered HTML normalized to LF.
+// Independent frozen DOM + explicit reviewed deltas still guard the whole output.
 for (const [, entry] of entries) {
   const url = entry.match(/<loc>([^<]+)<\/loc>/)[1];
   const file = new URL(url).pathname.slice(1) || 'index.html';
   const date = entry.match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/)?.[1];
   assert(date, file + ': explicit content modification date');
   assert.equal(date, manifest[file].lastmod);
-  assert.equal(manifest[file].sha256, crypto.createHash('sha256').update(fs.readFileSync(path.join(SOURCE_ROOT, file),'utf8').replace(/\r\n/g,'\n')).digest('hex'), file + ': historical lastmod provenance matches original source serialization (canonical LF)');
+  assert.equal(manifest[file].sha256, crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file),'utf8').replace(/\r\n/g,'\n')).digest('hex'), file + ': maintenance fingerprint matches final canonical HTML (LF)');
 }
 const {compareApprovedOutput:comparePublicOutput,approved}=require('./support/approved-content.cjs');
 assert.deepEqual(comparePublicOutput(root,approved),[],'actual dist content, SEO, dates and resources remain equivalent to the frozen candidate');

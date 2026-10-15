@@ -48,7 +48,14 @@
 
   const loadSlideImage = (slide) => {
     const image = slide.dataset.backgroundImage;
-    if (image && !slide.style.backgroundImage) slide.style.backgroundImage = `url("${image}")`;
+    if (!image) return;
+    const candidates = (slide.dataset.backgroundSrcset || '').split(',').map(item => item.trim().split(/\s+/));
+    const width = innerWidth * devicePixelRatio;
+    const selected = candidates.find(([, size]) => parseInt(size, 10) >= width) || candidates[candidates.length - 1];
+    const responsive = selected?.[1] ? `image-set(url("${selected[0]}") type("image/webp"), url("${image}") type("image/jpeg"))` : '';
+    // The browser selects one supported format; the original JPEG remains a
+    // fallback without an unnecessary simultaneous background download.
+    slide.style.backgroundImage = responsive && CSS.supports('background-image', responsive) ? responsive : `url("${image}")`;
   };
 
   let current = 0;
@@ -65,10 +72,30 @@
   document.querySelector('[data-next]')?.addEventListener('click', () => show(current + 1));
 
   const hero = document.querySelector('.hero');
-  const start = () => { timer = setInterval(() => show(current + 1), 6500); };
-  if (hero && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    start();
-    hero.addEventListener('mouseenter', () => clearInterval(timer));
-    hero.addEventListener('mouseleave', start);
+  if (hero) {
+    const motion = matchMedia('(prefers-reduced-motion: reduce)');
+    const pause = hero.querySelector('[data-carousel-pause]');
+    let visible = false, hovering = false, focused = false, paused = false;
+    const reconcile = () => {
+      const play = visible && !document.hidden && !motion.matches && !hovering && !focused && !paused;
+      if (play && timer === undefined) timer = setInterval(() => show(current + 1), 6500);
+      if (!play && timer !== undefined) { clearInterval(timer); timer = undefined; }
+      if (pause) {
+        pause.disabled = motion.matches;
+        pause.setAttribute('aria-pressed', String(paused || motion.matches));
+        pause.textContent = motion.matches ? 'Slideshow paused' : paused ? 'Resume slideshow' : 'Pause slideshow';
+      }
+      if (status) status.setAttribute('aria-live', play ? 'off' : 'polite');
+    };
+    pause?.addEventListener('click', () => { paused = !paused; reconcile(); });
+    hero.addEventListener('mouseenter', () => { hovering = true; reconcile(); });
+    hero.addEventListener('mouseleave', () => { hovering = false; reconcile(); });
+    hero.addEventListener('focusin', () => { focused = true; reconcile(); });
+    hero.addEventListener('focusout', () => queueMicrotask(() => { focused = hero.contains(document.activeElement); reconcile(); }));
+    document.addEventListener('visibilitychange', reconcile);
+    motion.addEventListener('change', reconcile);
+    new IntersectionObserver(entries => { visible = entries[0].isIntersecting; reconcile(); }).observe(hero);
+    addEventListener('resize', () => slides.filter(slide => slide.style.backgroundImage).forEach(loadSlideImage));
+    reconcile();
   }
 })();

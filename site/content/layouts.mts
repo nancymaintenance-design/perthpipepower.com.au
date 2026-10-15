@@ -31,7 +31,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -111,7 +111,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -127,8 +127,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -162,7 +162,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <link\n      rel=\"icon\"\n      href=\"/favicon-ellis-512.png\"\n      type=\"image/png\"\n      sizes=\"512x512\"\n    />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    <link rel=\"stylesheet\" href=\"price-guide.css\" />\n\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <link\n      rel=\"icon\"\n      href=\"/favicon-ellis-512.png\"\n      type=\"image/png\"\n      sizes=\"512x512\"\n    />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    <link rel=\"stylesheet\" href=\"price-guide.css\" />\n\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -242,7 +242,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008-services\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -258,8 +258,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -293,7 +293,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    <link rel=\"stylesheet\" href=\"price-guide.css\" />\n\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    <link rel=\"stylesheet\" href=\"price-guide.css\" />\n\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -373,7 +373,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008-services\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -389,8 +389,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -424,7 +424,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n<link rel=\"stylesheet\" href=\"site.css\">\n<link rel=\"stylesheet\" href=\"logo.css\">\n<link rel=\"stylesheet\" href=\"navigation.css\">\n<link rel=\"stylesheet\" href=\"mega-menu.css\">\n<link rel=\"stylesheet\" href=\"title-banner.css\">\n\n<link rel=\"stylesheet\" href=\"mobile-refinement.css\">\n<script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n<script defer src=\"/_vercel/speed-insights/script.js\">\n</script>\n" as TrustedHtml
+"html": "\n<link rel=\"stylesheet\" href=\"site.css?v=20261015\">\n<link rel=\"stylesheet\" href=\"logo.css\">\n<link rel=\"stylesheet\" href=\"navigation.css\">\n<link rel=\"stylesheet\" href=\"mega-menu.css\">\n<link rel=\"stylesheet\" href=\"title-banner.css\">\n\n<link rel=\"stylesheet\" href=\"mobile-refinement.css\">\n<script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n<script defer src=\"/_vercel/speed-insights/script.js\">\n</script>\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -520,7 +520,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\">\n</script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>\n<link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\">\n</script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>\n<link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -536,11 +536,11 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n" as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\">\n</script>" as TrustedHtml,
-"\n<script src=\"navigation.js\">\n</script>" as TrustedHtml,
+"<script src=\"site.js?v=20261015\">\n</script>" as TrustedHtml,
+"\n<script src=\"navigation.js?v=20261015\">\n</script>" as TrustedHtml,
 "\n<script src=\"contact-form.js\">\n</script>" as TrustedHtml,
-"\n<script src=\"booking-context.js\"></script>" as TrustedHtml,
-"\n<script src=\"contact-prefill.js\">\n</script>" as TrustedHtml
+"\n<script src=\"booking-context.js?v=20261015\"></script>" as TrustedHtml,
+"\n<script src=\"contact-prefill.js?v=20261015\">\n</script>" as TrustedHtml
 ],
 "documentClose": "\n</body>\n</html>\n" as TrustedHtml
 },
@@ -574,7 +574,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -654,7 +654,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -670,8 +670,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n  <script src=\"navigation.js\"></script>" as TrustedHtml,
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n  <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml,
 "\n  <script src=\"electrical-work-gallery.js\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
@@ -706,7 +706,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n<link rel=\"stylesheet\" href=\"site.css\">\n<link rel=\"stylesheet\" href=\"logo.css\">\n<link rel=\"stylesheet\" href=\"navigation.css\">\n<link rel=\"stylesheet\" href=\"mega-menu.css\">\n<link rel=\"stylesheet\" href=\"title-banner.css\">\n<link rel=\"stylesheet\" href=\"mobile-refinement.css\">\n<link rel=\"icon\" href=\"/favicon-ellis-512.png\" type=\"image/png\" sizes=\"512x512\">\n<script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n<script defer src=\"/_vercel/speed-insights/script.js\">\n</script>\n<link rel=\"stylesheet\" href=\"price-guide.css\">\n\n" as TrustedHtml
+"html": "\n<link rel=\"stylesheet\" href=\"site.css?v=20261015\">\n<link rel=\"stylesheet\" href=\"logo.css\">\n<link rel=\"stylesheet\" href=\"navigation.css\">\n<link rel=\"stylesheet\" href=\"mega-menu.css\">\n<link rel=\"stylesheet\" href=\"title-banner.css\">\n<link rel=\"stylesheet\" href=\"mobile-refinement.css\">\n<link rel=\"icon\" href=\"/favicon-ellis-512.png\" type=\"image/png\" sizes=\"512x512\">\n<script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n<script defer src=\"/_vercel/speed-insights/script.js\">\n</script>\n<link rel=\"stylesheet\" href=\"price-guide.css\">\n\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -786,7 +786,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -802,8 +802,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n" as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\">\n</script>" as TrustedHtml,
-"\n<script src=\"navigation.js\">\n</script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\">\n</script>" as TrustedHtml,
+"\n<script src=\"navigation.js?v=20261015\">\n</script>" as TrustedHtml
 ],
 "documentClose": "\n</body>\n</html>\n" as TrustedHtml
 },
@@ -837,7 +837,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -933,7 +933,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <script\n      async\n      src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"\n    ></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag() {\n        dataLayer.push(arguments);\n      }\n      gtag(\"js\", new Date());\n      gtag(\"config\", \"G-HZ6PKHKGWH\");\n    </script>\n  <link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "\n    <script\n      async\n      src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"\n    ></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag() {\n        dataLayer.push(arguments);\n      }\n      gtag(\"js\", new Date());\n      gtag(\"config\", \"G-HZ6PKHKGWH\");\n    </script>\n  <link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -949,8 +949,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -984,7 +984,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n  " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n  " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1008,7 +1008,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "  <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n<link rel=\"stylesheet\" href=\"field-design.css?v=20261008-services\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "  <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n<link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1024,8 +1024,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml,
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml,
 "\n    <script src=\"contact-form.js\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
@@ -1060,7 +1060,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    <link rel=\"stylesheet\" href=\"price-guide.css\" />\n\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    <link rel=\"stylesheet\" href=\"price-guide.css\" />\n\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1140,7 +1140,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008-services\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1156,8 +1156,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -1191,7 +1191,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261007-social-icons\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"preload\" as=\"image\" href=\"hero-repair.jpg\" fetchpriority=\"high\" media=\"(min-width:801px)\">\n<link data-mobile-hero rel=\"preload\" as=\"image\" media=\"(max-width:800px)\" href=\"hero-repair-mobile.webp\" fetchpriority=\"high\">\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"preload\" as=\"image\" href=\"hero-repair.jpg\" fetchpriority=\"high\" media=\"(min-width:801px)\">\n<link data-mobile-hero rel=\"preload\" as=\"image\" media=\"(max-width:800px)\" href=\"hero-repair-mobile.webp\" fetchpriority=\"high\">\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1271,7 +1271,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1287,8 +1287,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -1314,7 +1314,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<link rel=\"stylesheet\" href=\"site.css\"><link rel=\"stylesheet\" href=\"logo.css\"><link rel=\"stylesheet\" href=\"navigation.css\"><link rel=\"stylesheet\" href=\"mega-menu.css\"><link rel=\"stylesheet\" href=\"title-banner.css\"><link rel=\"stylesheet\" href=\"mobile-refinement.css\"><script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script><script defer src=\"/_vercel/speed-insights/script.js\"></script>\n" as TrustedHtml
+"html": "<link rel=\"stylesheet\" href=\"site.css?v=20261015\"><link rel=\"stylesheet\" href=\"logo.css\"><link rel=\"stylesheet\" href=\"navigation.css\"><link rel=\"stylesheet\" href=\"mega-menu.css\"><link rel=\"stylesheet\" href=\"title-banner.css\"><link rel=\"stylesheet\" href=\"mobile-refinement.css\"><script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script><script defer src=\"/_vercel/speed-insights/script.js\"></script>\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1394,7 +1394,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1410,8 +1410,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "" as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"<script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"<script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "</body></html>\n" as TrustedHtml
 },
@@ -1437,7 +1437,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<link rel=\"stylesheet\" href=\"site.css\"><link rel=\"stylesheet\" href=\"logo.css\"><link rel=\"stylesheet\" href=\"navigation.css\"><link rel=\"stylesheet\" href=\"mega-menu.css\"><link rel=\"stylesheet\" href=\"title-banner.css\"><link rel=\"stylesheet\" href=\"mobile-refinement.css\"><script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script><script defer src=\"/_vercel/speed-insights/script.js\"></script>\n" as TrustedHtml
+"html": "<link rel=\"stylesheet\" href=\"site.css?v=20261015\"><link rel=\"stylesheet\" href=\"logo.css\"><link rel=\"stylesheet\" href=\"navigation.css\"><link rel=\"stylesheet\" href=\"mega-menu.css\"><link rel=\"stylesheet\" href=\"title-banner.css\"><link rel=\"stylesheet\" href=\"mobile-refinement.css\"><script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script><script defer src=\"/_vercel/speed-insights/script.js\"></script>\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1517,7 +1517,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1533,8 +1533,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "" as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"<script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"<script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "</body></html>\n" as TrustedHtml
 },
@@ -1568,7 +1568,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    <link rel=\"stylesheet\" href=\"price-guide.css\" />\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n    <link rel=\"stylesheet\" href=\"price-guide.css\" />\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1664,7 +1664,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <script\n      async\n      src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"\n    ></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag() {\n        dataLayer.push(arguments);\n      }\n      gtag(\"js\", new Date());\n      gtag(\"config\", \"G-HZ6PKHKGWH\");\n    </script>\n  <link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "\n    <script\n      async\n      src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"\n    ></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag() {\n        dataLayer.push(arguments);\n      }\n      gtag(\"js\", new Date());\n      gtag(\"config\", \"G-HZ6PKHKGWH\");\n    </script>\n  <link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1680,8 +1680,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -1755,7 +1755,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <link rel=\"stylesheet\" href=\"field-design.css\">\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script>\n    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>\n    <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n" as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script>\n    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>\n    <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n" as TrustedHtml
 }
 ],
 "headerId": "header-54f54fcf2e4a",
@@ -1763,8 +1763,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"<script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"<script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -1798,7 +1798,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1878,7 +1878,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script><link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1894,8 +1894,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
 },
@@ -1929,7 +1929,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n  <link rel=\"stylesheet\" href=\"site.css\">\n  <link rel=\"stylesheet\" href=\"logo.css\">\n  <link rel=\"stylesheet\" href=\"navigation.css\">\n  <link rel=\"stylesheet\" href=\"mega-menu.css\">\n  <link rel=\"stylesheet\" href=\"mobile-refinement.css\">\n" as TrustedHtml
+"html": "\n  <link rel=\"stylesheet\" href=\"site.css?v=20261015\">\n  <link rel=\"stylesheet\" href=\"logo.css\">\n  <link rel=\"stylesheet\" href=\"navigation.css\">\n  <link rel=\"stylesheet\" href=\"mega-menu.css\">\n  <link rel=\"stylesheet\" href=\"mobile-refinement.css\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1953,7 +1953,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>  <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n<link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HZ6PKHKGWH');</script>  <script>window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments)};</script>\n  <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n<link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -1969,8 +1969,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n  " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n  <script src=\"navigation.js\"></script>" as TrustedHtml,
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n  <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml,
 "\n  <script src=\"service-area-data.js\"></script>" as TrustedHtml,
 "\n  <script src=\"service-area-directory.js\"></script>" as TrustedHtml,
 "<script src=\"suburb-search.js\"></script>" as TrustedHtml
@@ -2007,7 +2007,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <link rel=\"stylesheet\" href=\"site.css\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
+"html": "\n    <link rel=\"stylesheet\" href=\"site.css?v=20261015\" />\n    <link rel=\"stylesheet\" href=\"logo.css\" />\n    <link rel=\"stylesheet\" href=\"navigation.css\" />\n    <link rel=\"stylesheet\" href=\"mega-menu.css\" />\n    <link rel=\"stylesheet\" href=\"title-banner.css\" />\n    <link rel=\"stylesheet\" href=\"service-expansion.css\" />\n\n    <link rel=\"stylesheet\" href=\"mobile-refinement.css\" />\n    <script>\n      window.si =\n        window.si ||\n        function () {\n          (window.siq = window.siq || []).push(arguments);\n        };\n    </script>\n    <script defer src=\"/_vercel/speed-insights/script.js\"></script>\n\n    " as TrustedHtml
 },
 {
 "kind": "seo",
@@ -2103,7 +2103,7 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 },
 {
 "kind": "static",
-"html": "\n    <script\n      async\n      src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"\n    ></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag() {\n        dataLayer.push(arguments);\n      }\n      gtag(\"js\", new Date());\n      gtag(\"config\", \"G-HZ6PKHKGWH\");\n    </script>\n  <link rel=\"stylesheet\" href=\"field-design.css?v=20261008\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261010\">\n" as TrustedHtml
+"html": "\n    <script\n      async\n      src=\"https://www.googletagmanager.com/gtag/js?id=G-HZ6PKHKGWH\"\n    ></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag() {\n        dataLayer.push(arguments);\n      }\n      gtag(\"js\", new Date());\n      gtag(\"config\", \"G-HZ6PKHKGWH\");\n    </script>\n  <link rel=\"stylesheet\" href=\"field-design.css?v=20261015\">\n<script defer src=\"conversion-events.js\"></script>\n\n<link rel=\"stylesheet\" href=\"editorial-quality.css?v=20261015\">\n" as TrustedHtml
 },
 {
 "kind": "seo",
@@ -2119,8 +2119,8 @@ export const layouts: Readonly<Record<string, LayoutData>> = {
 "beforeMain": "" as TrustedHtml,
 "afterMain": "\n    " as TrustedHtml,
 "scripts": [
-"<script src=\"site.js\"></script>" as TrustedHtml,
-"\n    <script src=\"navigation.js\"></script>" as TrustedHtml,
+"<script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
+"\n    <script src=\"navigation.js?v=20261015\"></script>" as TrustedHtml,
 "\n    <script src=\"electrical-work-gallery.js\"></script>" as TrustedHtml
 ],
 "documentClose": "\n  </body>\n</html>\n" as TrustedHtml
@@ -2619,7 +2619,7 @@ export const footers: Readonly<Record<string, ChromeTemplate>> = sharedView({
 }
 },
 "footer-202075b20536": {
-"html": "<footer class=\"footer\"><div class=\"shell\">{{ppp:shared:business.name:html}} · {{ppp:shared:business.addressLine:html}} · {{ppp:shared:business.displayTelephone:html}} · Services are provided by appropriately licensed plumbing and electrical tradespeople. Licence details are available on request.</div><p class=\"shell\" data-business-identity=\"\">{{ppp:shared:business.legalName:html}} · <a href=\"{{ppp:shared:business.registration:html}}\" rel=\"noopener noreferrer\" target=\"_blank\">ABN {{ppp:shared:business.abn:html}}</a></p>\n<p class=\"shell\" data-confirmed-hours=\"\">{{ppp:shared:hours.text:html}}</p></footer><script src=\"site.js\"></script>" as TrustedHtml,
+"html": "<footer class=\"footer\"><div class=\"shell\">{{ppp:shared:business.name:html}} · {{ppp:shared:business.addressLine:html}} · {{ppp:shared:business.displayTelephone:html}} · Services are provided by appropriately licensed plumbing and electrical tradespeople. Licence details are available on request.</div><p class=\"shell\" data-business-identity=\"\">{{ppp:shared:business.legalName:html}} · <a href=\"{{ppp:shared:business.registration:html}}\" rel=\"noopener noreferrer\" target=\"_blank\">ABN {{ppp:shared:business.abn:html}}</a></p>\n<p class=\"shell\" data-confirmed-hours=\"\">{{ppp:shared:hours.text:html}}</p></footer><script src=\"site.js?v=20261015\"></script>" as TrustedHtml,
 "slots": {
 
 }

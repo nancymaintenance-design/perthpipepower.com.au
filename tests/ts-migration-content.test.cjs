@@ -218,7 +218,7 @@ function projectPage(page, layout, chrome, site) {
   const navigation=require('../.build/site/templates/navigation.mjs').renderNavigation(page,site);
   const footer=renderChrome(chrome.footers[layout.footerId]).replace('href="contact.html">Book a repair',`href="${rail||page.kind==='contact'?'#enquiry':'contact.html#enquiry'}">Book a repair`);
   const scripts=[...layout.scripts];
-  for(const src of ['booking-context.js','contact-prefill.js',...(rail?['contact-form.js']:[])])if(!scripts.some(s=>s.includes(`src="${src}"`)))scripts.push(`<script src="${src}"></script>`);
+  for(const src of ['booking-context.js?v=20261015','contact-prefill.js?v=20261015',...(rail?['contact-form.js']:[])])if(!scripts.some(s=>s.includes(`src="${src}"`)))scripts.push(`<script src="${src}"></script>`);
   const result=layout.documentOpen+head+layout.bodyOpen+navigation+layout.beforeMain+
     `<main${Object.entries(page.mainAttributes).map(([key,value])=>` ${key}="${escape(value)}"`).join('')}>`+main+'</main>'+layout.afterMain+footer+scripts.join('')+layout.documentClose;
   assert.doesNotMatch(result,/\{\{ppp:/,`${page.file}: unconsumed token`);

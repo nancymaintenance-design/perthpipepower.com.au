@@ -66,7 +66,7 @@ class PreviewHandler(BaseHTTPRequestHandler):
         if decoded in self.server.redirects:
             destination = self.server.redirects[decoded]
             if request.query:
-                destination += '?' + request.query
+                destination += ('&' if '?' in destination else '?') + request.query
             return self.respond(308, location=destination)
         if decoded == '/':
             target = self.server.root / 'index.html'

@@ -61,7 +61,7 @@ export function renderPage(page: PageData, site: SiteData): string {
   const main = `<main${Object.entries(page.mainAttributes).map(([key, value]) => ` ${key}="${escapePlainText(value)}"`).join('')}>`
     + renderSlots(content, bindings, `page content for ${page.file}`) + '</main>';
   const scripts=[...layout.scripts];
-  for(const src of ['booking-context.js','contact-prefill.js',...(hasEnquirySidebar(page)?['contact-form.js']:[])]){
+  for(const src of ['booking-context.js?v=20261015','contact-prefill.js?v=20261015',...(hasEnquirySidebar(page)?['contact-form.js']:[])]){
     if(!scripts.some(s=>s.includes(`src="${src}"`)))scripts.push(`<script src="${src}"></script>` as import('../types.mjs').TrustedHtml);
   }
   const effectiveLayout={...layout,scripts};

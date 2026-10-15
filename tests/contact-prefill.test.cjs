@@ -7,7 +7,7 @@ const contactHtml = fs.readFileSync(path.join(resolvePublicRoot(), 'contact.html
 const { safeSuburbFromSearch } = require('../contact-prefill.js');
 
 assert.match(contactHtml, /<form[^>]+id="enquiry"[^>]+data-enquiry-form/i, 'contact form has a stable enquiry anchor');
-assert.match(contactHtml, /<script src="contact-prefill\.js">\s*<\/script>/i, 'contact page loads the initializer');
+assert.match(contactHtml, /<script src="contact-prefill\.js\?v=20261015">\s*<\/script>/i, 'contact page loads the current initializer');
 assert.match(contactHtml, /<figure class="contact-card__image">\s*<img src="property-maintenance\.jpg"[^>]*alt="Tradesperson preparing for a property maintenance visit"/i, 'contact information card includes the approved service image');
 const siteCss = fs.readFileSync(path.join(resolvePublicRoot(), 'site.css'), 'utf8');
 assert.match(siteCss, /\.contact-card--details\s*\{[^}]*display:\s*flex[^}]*flex-direction:\s*column/i, 'details card uses its existing height for the image');

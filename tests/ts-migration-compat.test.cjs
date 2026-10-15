@@ -104,7 +104,8 @@ test('local deployment config preserves routing and keeps cold build inputs', ()
   const before=require('./fixtures/ts-migration/historical-public-expectations.json').config;
   assert.equal(current.buildCommand,'npm run build'); assert.equal(current.outputDirectory,'dist');
   const {buildCommand,outputDirectory,...rest}=current;
-  assert.deepEqual(rest,before);
+  const suburbRules=require('../data/perth-suburbs.json').map(s=>({source:'/service-areas/'+s.slug+'.html',destination:'/contact.html?suburb='+encodeURIComponent(s.name),permanent:true}));
+  assert.deepEqual(rest,{...before,redirects:[...suburbRules,...before.redirects]});
   const ignores=fs.readFileSync(path.join(source,'.vercelignore'),'utf8').split(/\r?\n/).map(s=>s.trim());
   for(const input of ['site','tools','scripts','data','package.json','package-lock.json','tsconfig.json','api']) assert(!ignores.includes(input),'required cold build input '+input);
   assert.equal(require('../package.json').type,undefined);

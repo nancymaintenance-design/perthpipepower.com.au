@@ -232,6 +232,14 @@ p {
 .carousel-status {
   font-size: 0.85rem;
 }
+.carousel-controls [data-carousel-pause] {
+  width: auto;
+  min-height: 40px;
+  padding-inline: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
 .intro,
 .section {
   padding: 5rem 0;

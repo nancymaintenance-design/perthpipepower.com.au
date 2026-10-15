@@ -11,7 +11,7 @@ test('all 41 enquiry rails provide one focusable form target and a native first-
   const mobile=all.find(n=>attr(n,'class')==='mobile-ctas');assert(walk(mobile).some(n=>attr(n,'href')==='#enquiry'),p.file+': direct mobile form target');
   const hero=all.find(n=>(attr(n,'class')||'').split(' ').includes('page-hero'));
   if(hero)assert(walk(hero).some(n=>n.tagName==='a'&&attr(n,'href')==='#enquiry'),p.file+': native hero form target');
-  for(const src of ['booking-context.js','contact-prefill.js','contact-form.js'])assert.equal(all.filter(n=>n.tagName==='script'&&attr(n,'src')===src).length,1,p.file+': shared '+src);
+  for(const src of ['booking-context.js?v=20261015','contact-prefill.js?v=20261015','contact-form.js'])assert.equal(all.filter(n=>n.tagName==='script'&&attr(n,'src')===src).length,1,p.file+': shared '+src);
  }
  assert.equal(count,41);
 });

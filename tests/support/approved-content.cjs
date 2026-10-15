@@ -408,6 +408,34 @@ function refineHeader(header){
  }
  Object.assign(approved.assets,edits.runtimeHashes);
 }
+// Task 4 changes only enumerated CSS identities, two lazy carousel resource
+// attributes, one pause button, seven article date companions and sitemap dates.
+// All other full-document nodes/artifacts/assets remain independently guarded.
+{
+ const edits=require('../fixtures/fullsite-refinement/resource-maintenance-edits.json');
+ for(const [file,previous]of Object.entries(approved.pages)){
+  const tree=JSON.parse(previous.dom),all=walk(tree);
+  for(const [before,after]of edits.scripts){const matches=all.filter(n=>isEl(n,'script')&&attr(n,'src')===before);assert.equal(matches.length,1,file+': one prior shared script '+before);matches[0][3].find(a=>a[1]==='src')[2]=after;}
+  for(const node of all.filter(n=>isEl(n,'link')&&attr(n,'rel')==='stylesheet')){
+   const edit=edits.stylesheets.find(([before])=>before===attr(node,'href'));
+   if(edit)node[3].find(a=>a[1]==='href')[2]=edit[1];
+  }
+  if(file==='index.html'){
+   for(const edit of edits.carousel){const nodes=all.filter(n=>isEl(n,'article')&&attr(n,'data-background-image')===edit.fallback);assert.equal(nodes.length,1,'one exact lazy slide '+edit.fallback);assert.equal(attr(nodes[0],'data-background-srcset'),undefined);nodes[0][3].push(['','data-background-srcset',edit.srcset]);nodes[0][3].sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b),'en'));}
+   const controls=all.filter(n=>isEl(n,'div')&&attr(n,'class')==='carousel-controls');assert.equal(controls.length,1);
+   const children=childList(controls[0]),next=children.findIndex(n=>isEl(n,'button')&&attr(n,'data-next')!==undefined);assert(next>=0);children.splice(next+1,0,...parts('\n          '+edits.pause));
+  }
+  if(edits.articles.includes(file)){
+   const times=all.filter(n=>isEl(n,'time'));assert.equal(times.length,1,file+': one prior visible article date');assert.equal(attr(times[0],'datetime'),'2026-10-10');assert.equal(text(times[0]),'10 October 2026');times[0][3].find(a=>a[1]==='datetime')[2]='2026-10-15';times[0][4]=[['text','15 October 2026']];
+   const scripts=all.filter(n=>isEl(n,'script')&&attr(n,'type')==='application/ld+json'&&text(n).includes('"dateModified": "2026-10-10"'));assert.equal(scripts.length,1,file+': one prior Article schema');
+   assert.equal(text(scripts[0]).split('"dateModified": "2026-10-10"').length-1,1);scripts[0][4]=[['text',text(scripts[0]).replace('"dateModified": "2026-10-10"','"dateModified": "2026-10-15"')]];
+  }
+  approved.pages[file]=snapshotFromTree(tree,previous);
+ }
+ for(const edit of edits.dates){const url='https://perthpipepower.com.au/'+(edit.file==='index.html'?'':edit.file),before='<loc>'+url+'</loc><lastmod>'+edit.before+'</lastmod>';assert.equal(approved.artifacts['sitemap.xml'].split(before).length-1,1,edit.file+': exact prior sitemap date');approved.artifacts['sitemap.xml']=approved.artifacts['sitemap.xml'].replace(before,'<loc>'+url+'</loc><lastmod>'+edit.after+'</lastmod>');}
+ assert.equal(approved.assets['site.js'],edits.siteJs.before,'previous carousel runtime fingerprint');approved.assets['site.js']=edits.siteJs.after;
+ assert.equal(approved.assets['site.css'],edits.siteCss.before,'previous carousel style fingerprint');approved.assets['site.css']=edits.siteCss.after;
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  return comparePublicOutput(root,manifest).filter(d=>{
