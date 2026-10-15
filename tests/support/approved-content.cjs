@@ -355,6 +355,11 @@ for(const edit of require('../fixtures/fullsite-refinement/editorial-photo-edits
  replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
  approved.pages[edit.file]=snapshotFromTree(tree,previous);
 }
+for(const edit of require('../fixtures/fullsite-refinement/editorial-review-round-1.json').edits){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
+ approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  return comparePublicOutput(root,manifest).filter(d=>{

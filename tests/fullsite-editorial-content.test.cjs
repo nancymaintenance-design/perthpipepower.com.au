@@ -53,13 +53,27 @@ test('article FAQ headings identify questions and do not repeat the preceding re
   assert.equal((intent.childNodes||[]).filter(n=>n.tagName==='p').length,0,file+': no duplicate FAQ-preparation paragraph');
  }
 });
-test('leak education uses complete statements under statement headings',()=>{
- const {main}=page('insights-reporting-a-plumbing-leak.html'),nodes=walk(main);
- for(const heading of ['Meter observations before a leak enquiry','Leak detection, pipe repair and wall reinstatement scopes']){
-  const h=nodes.find(n=>n.tagName==='h3'&&text(n)===heading),parent=nodes.find(n=>n.childNodes?.includes(h));
-  const after=parent.childNodes.slice(parent.childNodes.indexOf(h)+1).find(n=>n.tagName==='p');
-  assert.doesNotMatch(text(after),/^(?:No\.|Only if)/,heading+': orphaned answer opener');
- }
+test('leak education consolidates evidence and urgent tenant reporting into their substantive chapters without a second answer tail',()=>{
+ const {nodes,main}=page('insights-reporting-a-plumbing-leak.html'),body=walk(main);
+ const tenant=body.findIndex(n=>n.tagName==='h2'&&attr(n,'id')==='guide-5'),faq=body.findIndex(n=>n.tagName==='h2'&&attr(n,'id')==='guide-7');
+ assert(tenant>=0&&faq>tenant,'retained tenant chapter and actual FAQ');
+ assert.equal(body.slice(tenant+1,faq).filter(n=>n.tagName==='h3').length,0,'duplicate four-answer education tail after tenant chapter');
+ const chapter=id=>{const h=body.find(n=>n.tagName==='h2'&&attr(n,'id')===id),parent=body.find(n=>n.childNodes?.includes(h)),siblings=parent.childNodes.slice(parent.childNodes.indexOf(h)+1),end=siblings.findIndex(n=>n.tagName==='h2');return siblings.slice(0,end<0?undefined:end).map(text).join(' ');};
+ assert.match(chapter('guide-2'),/without meter readings|readings are optional/i,'optional readings remain with meter/reporting guidance');
+ assert.match(chapter('guide-2'),/water can travel/i,'photo/source distinction remains with reporting evidence');
+ assert.match(chapter('guide-5'),/urgent.maintenance process/i,'urgent tenant process remains with tenant report');
+ assert.equal(body.filter(n=>attr(n,'id')==='guide-6').length,1,'old incoming anchor retained once');
+ assert(!body.some(n=>/^h[1-6]$/.test(n.tagName??'')&&attr(n,'id')==='guide-6'),'retired tail is an alias, not a second chapter');
+ assert(!body.some(n=>n.tagName==='a'&&attr(n,'href')==='#guide-6'),'contents no longer advertises a removed chapter');
+ const graph=JSON.parse(raw(nodes.find(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json')))['@graph'];
+ const questions=body.filter(n=>n.tagName==='details').map(n=>text(n.childNodes.find(c=>c.tagName==='summary')));
+ assert.deepEqual(graph.find(n=>n['@type']==='FAQPage').mainEntity.map(q=>q.name),questions,'retained FAQ source/schema references');
+});
+test('recurring safety-switch chapter gives a standalone safe instruction after its topic heading',()=>{
+ const {main}=page('insights-safety-switch-keeps-tripping.html'),nodes=walk(main),h=nodes.find(n=>n.tagName==='h2'&&attr(n,'id')==='guide-1'),parent=nodes.find(n=>n.childNodes?.includes(h));
+ const paragraph=parent.childNodes.slice(parent.childNodes.indexOf(h)+1).find(n=>n.tagName==='p');
+ assert.match(text(paragraph),/^Do not repeatedly reset/i,'essential instruction belongs beside the recurring-trips heading');
+ assert.doesNotMatch(text(paragraph),/^Instead\b/i,'no missing contrast antecedent');
 });
 test('Contact preparation is consolidated outside the unchanged enquiry form',()=>{
  const {main}=page('contact.html'),nodes=walk(main);

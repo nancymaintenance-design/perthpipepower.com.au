@@ -260,7 +260,7 @@ export const page: PageData = {
 {
 "id": "section-4",
 "kind": "rich",
-"html": "<nav class=\"article-toc\" aria-label=\"In this guide\"><h2>In this guide</h2><ul><li><a href=\"#guide-1\">Active leaks and immediate hazards</a></li><li><a href=\"#guide-2\">Leak location, timing and water spread</a></li><li><a href=\"#guide-3\">Leak investigation and repair quotation</a></li><li><a href=\"#guide-4\">Separate pipe repair from access and surface restoration</a></li><li><a href=\"#guide-5\">Leak reports for tenants and property managers</a></li><li><a href=\"#guide-6\">Leak-reporting evidence and repair scope</a></li><li><a href=\"#guide-7\">Private pipes, meters and drainage</a></li></ul></nav>" as TrustedHtml
+"html": "<nav class=\"article-toc\" aria-label=\"In this guide\"><h2>In this guide</h2><ul><li><a href=\"#guide-1\">Active leaks and immediate hazards</a></li><li><a href=\"#guide-2\">Leak location, timing and water spread</a></li><li><a href=\"#guide-3\">Leak investigation and repair quotation</a></li><li><a href=\"#guide-4\">Separate pipe repair from access and surface restoration</a></li><li><a href=\"#guide-5\">Leak reports for tenants and property managers</a></li><li><a href=\"#guide-7\">Private pipes, meters and drainage</a></li></ul></nav>" as TrustedHtml
 },
 {
 "id": "section-5",
@@ -300,7 +300,7 @@ export const page: PageData = {
 {
 "id": "section-12",
 "kind": "rich",
-"html": "\n<p>Include the time first noticed, any change in the wet area, staining or swelling, and whether the supply has been isolated. A wide photo can show the location; a closer photo can show the visible detail. Take both without disturbing finishes or approaching electrical hazards. Previous repairs, recent plumbing work and an unusual water bill are useful context, but none proves the cause on its own.</p>" as TrustedHtml
+"html": "\n<p>Include the time first noticed, any change in the wet area, staining or swelling, and whether the supply has been isolated. Photos are optional: a wide photo can show the location and a closer photo the visible detail, without disturbing finishes or approaching electrical hazards. Water can travel before it becomes visible, so a photo records symptoms and access rather than establishing the source. Previous repairs, recent plumbing work and an unusual water bill are useful context, but none proves the cause on its own.</p>" as TrustedHtml
 },
 {
 "id": "section-13",
@@ -310,7 +310,7 @@ export const page: PageData = {
 {
 "id": "section-14",
 "kind": "rich",
-"html": "\n<p>If the meter is safely accessible and the situation is stable, note the meter type, readings and times. Water Corporation's <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Leaks/Detect-a-Leak\">household leak-check guidance</a> compares ordinary meter readings after actual water use has stopped for 15 minutes. An integrated smart meter uses its own model instructions and usage display; do not apply the ordinary dial-reading method to every meter.</p>" as TrustedHtml
+"html": "\n<p>You can request an inspection without meter readings. If the meter is safely accessible and the situation is stable, note the meter type, readings and times. Water Corporation's <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Leaks/Detect-a-Leak\">household leak-check guidance</a> compares ordinary meter readings after actual water use has stopped for 15 minutes. An integrated smart meter uses its own model instructions and usage display; do not apply the ordinary dial-reading method to every meter.</p>" as TrustedHtml
 },
 {
 "id": "section-15",
@@ -370,12 +370,12 @@ export const page: PageData = {
 {
 "id": "guide-4",
 "kind": "rich",
-"html": "\n<h2 id=\"guide-4\">Separate pipe repair from access and surface restoration</h2>" as TrustedHtml
+"html": "\n<span id=\"guide-6\" aria-hidden=\"true\"></span><h2 id=\"guide-4\">Separate pipe repair from access and surface restoration</h2>" as TrustedHtml
 },
 {
 "id": "section-27",
 "kind": "rich",
-"html": "\n<p>A useful quotation makes these items clear:</p>" as TrustedHtml
+"html": "\n<p>The written quote identifies the agreed work. Inspection, pipe repair and restoring finishes are separate tasks; confirm which of these items are included:</p>" as TrustedHtml
 },
 {
 "id": "section-28",
@@ -395,7 +395,7 @@ export const page: PageData = {
 {
 "id": "section-31",
 "kind": "rich",
-"html": "\n<p>Include the tenant or on-site contact, entry permission, suitable access times and the person responsible for approving costs. Note the work-order reference, any approval limit and where photos, findings and invoices should be sent. If a room is unavailable or the meter is behind a locked gate, say so before the visit.</p>" as TrustedHtml
+"html": "\n<p>Include the tenant or on-site contact, entry permission, suitable access times and the person responsible for approving costs. Note the work-order reference, any approval limit and where photos, findings and invoices should be sent. If a room is unavailable or the meter is behind a locked gate, say so before the visit. When water is continuing to spread, follow the property’s urgent-maintenance process without waiting to complete the report.</p>" as TrustedHtml
 },
 {
 "id": "section-32",
@@ -405,47 +405,47 @@ export const page: PageData = {
 {
 "id": "guide-6",
 "kind": "rich",
-"html": "\n<h2 id=\"guide-6\">Leak-reporting evidence and repair scope</h2>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-34",
 "kind": "rich",
-"html": "\n<h3>Meter observations before a leak enquiry</h3>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-35",
 "kind": "rich",
-"html": "\n<p>Report what you can see safely; meter readings are not required before contacting the team. A meter record can help with a stable suspected leak, but active water spread or an electrical hazard takes priority over collecting readings.</p>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-36",
 "kind": "rich",
-"html": "\n<h3>Photos support a report; inspection establishes the source</h3>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-37",
 "kind": "rich",
-"html": "\n<p>A photo shows visible symptoms and access conditions. Water can travel before it becomes visible, so the inspection must establish the source and whether more access is needed.</p>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-38",
 "kind": "rich",
-"html": "\n<h3>Leak detection, pipe repair and wall reinstatement scopes</h3>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-39",
 "kind": "rich",
-"html": "\n<p>Leak detection, pipe repair and reinstating a wall are separate tasks. Ask for inspection, opening, pipe repair and surface restoration to be identified in the written quote; only the agreed work is included.</p>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-40",
 "kind": "rich",
-"html": "\n<h3>Leak reports for tenants and property managers</h3>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-41",
 "kind": "rich",
-"html": "\n<p>Send the address, affected room, timing, active flow and safe photos, plus your contact and access availability. Follow the property's urgent-maintenance process when water is continuing to spread.</p>" as TrustedHtml
+"html": "" as TrustedHtml
 },
 {
 "id": "section-42",

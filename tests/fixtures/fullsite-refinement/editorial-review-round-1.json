@@ -1,0 +1,133 @@
+{
+  "evidence": "Task 2 review round 1, exact fragment changes against 95c9319: consolidate leak education and repair one safety prose antecedent. No output capture/refreeze.",
+  "edits": [
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 12,
+      "field": "html",
+      "before": "\n<p>Include the time first noticed, any change in the wet area, staining or swelling, and whether the supply has been isolated. A wide photo can show the location; a closer photo can show the visible detail. Take both without disturbing finishes or approaching electrical hazards. Previous repairs, recent plumbing work and an unusual water bill are useful context, but none proves the cause on its own.</p>",
+      "after": "\n<p>Include the time first noticed, any change in the wet area, staining or swelling, and whether the supply has been isolated. Photos are optional: a wide photo can show the location and a closer photo the visible detail, without disturbing finishes or approaching electrical hazards. Water can travel before it becomes visible, so a photo records symptoms and access rather than establishing the source. Previous repairs, recent plumbing work and an unusual water bill are useful context, but none proves the cause on its own.</p>",
+      "reason": "Merge the photo/source explanation into the substantive observation chapter"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 14,
+      "field": "html",
+      "before": "\n<p>If the meter is safely accessible and the situation is stable, note the meter type, readings and times. Water Corporation's <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Leaks/Detect-a-Leak\">household leak-check guidance</a> compares ordinary meter readings after actual water use has stopped for 15 minutes. An integrated smart meter uses its own model instructions and usage display; do not apply the ordinary dial-reading method to every meter.</p>",
+      "after": "\n<p>You can request an inspection without meter readings. If the meter is safely accessible and the situation is stable, note the meter type, readings and times. Water Corporation's <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Leaks/Detect-a-Leak\">household leak-check guidance</a> compares ordinary meter readings after actual water use has stopped for 15 minutes. An integrated smart meter uses its own model instructions and usage display; do not apply the ordinary dial-reading method to every meter.</p>",
+      "reason": "Keep optional meter readings with the existing stable-leak/meter explanation"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 27,
+      "field": "html",
+      "before": "\n<p>A useful quotation makes these items clear:</p>",
+      "after": "\n<p>The written quote identifies the agreed work. Inspection, pipe repair and restoring finishes are separate tasks; confirm which of these items are included:</p>",
+      "reason": "Consolidate agreed-work inclusion with the substantive scope list"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 31,
+      "field": "html",
+      "before": "\n<p>Include the tenant or on-site contact, entry permission, suitable access times and the person responsible for approving costs. Note the work-order reference, any approval limit and where photos, findings and invoices should be sent. If a room is unavailable or the meter is behind a locked gate, say so before the visit.</p>",
+      "after": "\n<p>Include the tenant or on-site contact, entry permission, suitable access times and the person responsible for approving costs. Note the work-order reference, any approval limit and where photos, findings and invoices should be sent. If a room is unavailable or the meter is behind a locked gate, say so before the visit. When water is continuing to spread, follow the property’s urgent-maintenance process without waiting to complete the report.</p>",
+      "reason": "Merge the unique tenant urgent-process instruction into the tenant reporting chapter"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 26,
+      "field": "html",
+      "before": "\n<h2 id=\"guide-4\">Separate pipe repair from access and surface restoration</h2>",
+      "after": "\n<span id=\"guide-6\" aria-hidden=\"true\"></span><h2 id=\"guide-4\">Separate pipe repair from access and surface restoration</h2>",
+      "reason": "Retain the incoming retired guide-6 anchor as an alias at the surviving scope chapter"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 33,
+      "field": "html",
+      "before": "\n<h2 id=\"guide-6\">Leak-reporting evidence and repair scope</h2>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 34,
+      "field": "html",
+      "before": "\n<h3>Meter observations before a leak enquiry</h3>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 35,
+      "field": "html",
+      "before": "\n<p>Report what you can see safely; meter readings are not required before contacting the team. A meter record can help with a stable suspected leak, but active water spread or an electrical hazard takes priority over collecting readings.</p>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 36,
+      "field": "html",
+      "before": "\n<h3>Photos support a report; inspection establishes the source</h3>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 37,
+      "field": "html",
+      "before": "\n<p>A photo shows visible symptoms and access conditions. Water can travel before it becomes visible, so the inspection must establish the source and whether more access is needed.</p>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 38,
+      "field": "html",
+      "before": "\n<h3>Leak detection, pipe repair and wall reinstatement scopes</h3>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 39,
+      "field": "html",
+      "before": "\n<p>Leak detection, pipe repair and reinstating a wall are separate tasks. Ask for inspection, opening, pipe repair and surface restoration to be identified in the written quote; only the agreed work is included.</p>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 40,
+      "field": "html",
+      "before": "\n<h3>Leak reports for tenants and property managers</h3>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 41,
+      "field": "html",
+      "before": "\n<p>Send the address, affected room, timing, active flow and safe photos, plus your contact and access availability. Follow the property's urgent-maintenance process when water is continuing to spread.</p>",
+      "after": "",
+      "reason": "Retire the duplicate four-answer education tail; retain canonical section positions and FAQ index 44"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 4,
+      "field": "html",
+      "before": "<li><a href=\"#guide-6\">Leak-reporting evidence and repair scope</a></li>",
+      "after": "",
+      "reason": "Remove the retired tail from the visible table of contents"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 7,
+      "field": "html",
+      "before": "<p>Instead, note which parts of the property lost power and what appliances or equipment were being used before the trip. If something appears damaged, wet, unusually hot or burnt, do not touch or use it.</p>",
+      "after": "<p>Do not repeatedly reset a switch that keeps tripping. Note which parts of the property lost power and what appliances or equipment were being used before the trip. If something appears damaged, wet, unusually hot or burnt, do not touch or use it.</p>",
+      "reason": "Make the essential safe instruction standalone after the recurring-trips topic heading"
+    }
+  ]
+}

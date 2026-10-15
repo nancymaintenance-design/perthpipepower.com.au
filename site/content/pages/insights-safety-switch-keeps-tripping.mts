@@ -275,7 +275,7 @@ export const page: PageData = {
 {
 "id": "section-7",
 "kind": "rich",
-"html": "<p>Instead, note which parts of the property lost power and what appliances or equipment were being used before the trip. If something appears damaged, wet, unusually hot or burnt, do not touch or use it.</p>" as TrustedHtml
+"html": "<p>Do not repeatedly reset a switch that keeps tripping. Note which parts of the property lost power and what appliances or equipment were being used before the trip. If something appears damaged, wet, unusually hot or burnt, do not touch or use it.</p>" as TrustedHtml
 },
 {
 "id": "guide-2",
