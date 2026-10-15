@@ -54,6 +54,9 @@ test('content editing preserves approved prices, existing canonical URLs, origin
   assert.equal(expectedHero.split(edit.before).length-1,1,'exact historical hero copy fragment');
   expectedHero=expectedHero.replace(edit.before,edit.after);
  }
+ const resources=require('./fixtures/fullsite-refinement/resource-maintenance-edits.json');
+ for(const edit of resources.carousel){const before='data-background-image="'+edit.fallback+'"';assert.equal(expectedHero.split(before).length-1,1);expectedHero=expectedHero.replace(before,before+' data-background-srcset="'+edit.srcset+'"');}
+ const next='aria-label="Next slide">→</button>';assert.equal(expectedHero.split(next).length-1,1);expectedHero=expectedHero.replace(next,next+'\n          '+resources.pause);
  assert.equal(hero(read('index.html')),expectedHero);
  const {parse,serialize}=require('parse5');
  const normalized=s=>{const document=parse(s.replace(/\r\n/g,'\n'));const sort=n=>{if(n.attrs)n.attrs.sort((a,b)=>a.name.localeCompare(b.name));for(const child of n.childNodes??[])sort(child);};sort(document);return serialize(document);};
