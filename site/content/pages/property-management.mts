@@ -228,7 +228,7 @@ export const page: PageData = {
 "mainAttributes": {
 "id": "main"
 },
-"hero": "\n      <section class=\"page-hero\">\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Perth property management</span>\n          <h1>Property Manager Plumbing &amp; Electrical Perth</h1>\n          <p>\n            Send the property address, occupant contact, access instructions and approval contact. Our local team arranges the site assessment and confirms the repair scope and quote with the authorised decision-maker.\n          </p>\n        </div>\n      </section>" as TrustedHtml,
+"hero": "\n      <section class=\"page-hero\">\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Perth property management</span>\n          <h1>Property Manager Plumbing &amp; Electrical Perth</h1>\n          <p>Our Perth team carries out plumbing and electrical maintenance for rental homes, strata buildings and managed premises. We assess leaks, drainage, hot-water and electrical faults, and agree the repair or installation work in a written scope and quote.</p>\n        </div>\n      </section>" as TrustedHtml,
 "sections": [
 {
 "id": "section-1",

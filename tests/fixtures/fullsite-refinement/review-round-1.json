@@ -1,0 +1,37 @@
+{
+  "evidence": "Independent review round 1, based on 99d6cbd; four exact reviewed fragments, not generated output capture",
+  "edits": [
+    {
+      "file": "property-management.html",
+      "section": null,
+      "field": "hero",
+      "before": "<p>\n            Send the property address, occupant contact, access instructions and approval contact. Our local team arranges the site assessment and confirms the repair scope and quote with the authorised decision-maker.\n          </p>",
+      "after": "<p>Our Perth team carries out plumbing and electrical maintenance for rental homes, strata buildings and managed premises. We assess leaks, drainage, hot-water and electrical faults, and agree the repair or installation work in a written scope and quote.</p>",
+      "reason": "Review Important 1: actual maintenance work and properties before reporting preparation"
+    },
+    {
+      "file": "renewables-smart-home-perth.html",
+      "section": 0,
+      "field": "html",
+      "before": "<h2>How smart-home and energy work is scoped and quoted</h2>",
+      "after": "<h2>Planning smart lighting and electrical control installation</h2>",
+      "reason": "Review Important 2: unprotected method heading names only confirmed lighting and controls"
+    },
+    {
+      "file": "renewables-smart-home-perth.html",
+      "section": 0,
+      "field": "html",
+      "before": "<p>Smart switches and lighting controls need to be considered with the existing fittings, wiring and intended operation. Tell us what you want to control, which rooms are involved and any selected equipment. Our assessment establishes the installation requirements. If a current circuit keeps tripping, book <a href=\"safety-switch-tripping-perth.html\">safety-switch and RCD repairs</a> before treating it as an upgrade request.</p>",
+      "after": "<p>Smart switches and lighting controls need to be considered with the existing fittings, wiring and intended operation. Tell us what you want to control, which rooms are involved and any selected equipment. Our assessment establishes the installation requirements. If a current circuit keeps tripping, book <a href=\"safety-switch-tripping-perth.html\">safety-switch and RCD repairs</a> before treating it as an upgrade request. The written scope distinguishes fixed electrical installation from product configuration and identifies the lighting functions included.</p>",
+      "reason": "Review Minor: retain the installation/configuration distinction in the first control topic"
+    },
+    {
+      "file": "renewables-smart-home-perth.html",
+      "section": 0,
+      "field": "html",
+      "before": "<h3>Controls alongside existing electrical fittings</h3><p>A lighting control needs to suit the connected fittings and the way the room is used. The assessment considers the proposed switch or controller, existing connections and the lighting functions to be included. Product configuration and fixed electrical installation are identified separately so the agreed work can be checked against the selected equipment.</p>",
+      "after": "",
+      "reason": "Review Minor: remove the duplicated controls subsection after merging its useful distinction"
+    }
+  ]
+}

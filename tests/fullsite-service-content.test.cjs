@@ -71,7 +71,32 @@ test('service content excludes internal research copy, mechanical near-me senten
 });
 
 test('energy service explains confirmed electrical work without exposing research topics',()=>{
- assert.doesNotMatch(page('renewables-smart-home-perth.html').copy,/research topics|Does this page confirm|solar, battery or EV.charger installation/i);
+ const {main,copy}=page('renewables-smart-home-perth.html');
+ assert.doesNotMatch(copy,/research topics|Does this page confirm|solar, battery or EV.charger installation/i);
+ const method=walk(main).find(n=>attr(n,'id')==='service-method'),heading=walk(method).find(n=>n.tagName==='h2');
+ assert.match(text(heading),/smart lighting and electrical control/i,'method heading names the confirmed work');
+ assert.doesNotMatch(text(heading),/\benergy\b/i,'unprotected method heading must not restore an energy offer');
+});
+
+test('property-management hero introduces actual maintenance work before reporting preparation',()=>{
+ const {main}=page('property-management.html'),hero=walk(main).find(n=>n.tagName==='section'&&(attr(n,'class')||'').includes('page-hero'));
+ const h1=walk(hero).find(n=>n.tagName==='h1'),container=walk(hero).find(n=>n.childNodes?.includes(h1));
+ const paragraph=container.childNodes.slice(container.childNodes.indexOf(h1)+1).find(n=>n.tagName==='p'),opening=text(paragraph),firstSentence=opening.split(/[.!?]/)[0];
+ assert.match(firstSentence,/plumbing and electrical maintenance/i,'opening names the actual work');
+ assert.match(firstSentence,/rental.*strata/i,'opening names applicable properties');
+ assert.doesNotMatch(opening,/^(?:send|provide|include|tell)\b/i,'hero must not lead with a reporting instruction');
+ assert.match(opening,/written scope and quote/i,'opening states the work deliverable');
+});
+
+test('smart control work folds the repeated fittings subsection into one useful control topic',()=>{
+ const {main}=page('renewables-smart-home-perth.html'),work=walk(main).find(n=>attr(n,'id')==='service-work');
+ assert.doesNotMatch(text(work),/Controls alongside existing electrical fittings/);
+ const paragraph=walk(work).find(n=>n.tagName==='p');
+ assert.match(text(paragraph),/fixed electrical installation/i);
+ assert.match(text(paragraph),/product configuration/i);
+ const legacy=require('../data/service-commercial-copy.cjs')['renewables-smart-home-perth.html'];
+ assert.equal(legacy.sections[0][1][2][0],'Smart lighting and electrical controls','merged compatibility topic follows the surviving control heading');
+ assert.match(legacy.sections[0][1][2][1],/fixed electrical installation from product configuration/i,'merged compatibility body follows the surviving explanation');
 });
 
 test('trade hubs describe local coverage without mechanical near-me search phrases',()=>{

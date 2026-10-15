@@ -3833,7 +3833,7 @@ const legacy = compatibilityView({
                 1,
                 0,
                 2,
-                7,
+                1,
                 0
               ],
               "mode": "text"
@@ -3850,8 +3850,7 @@ const legacy = compatibilityView({
                 1,
                 0,
                 2,
-                8,
-                0
+                2
               ],
               "mode": "text"
             }
