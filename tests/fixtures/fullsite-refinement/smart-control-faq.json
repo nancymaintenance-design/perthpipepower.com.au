@@ -1,0 +1,16 @@
+{
+  "file": "renewables-smart-home-perth.html",
+  "index": 1,
+  "before": {
+    "question": "Does this page confirm solar, battery or EV-charger installation?",
+    "answer": "No. Those products can require specialist capability and a separate agreed scope. Ask about the specific equipment and work; this general enquiry is not confirmation that every energy system can be installed or repaired."
+  },
+  "after": {
+    "question": "What should a smart-lighting or control installation quote include?",
+    "answer": "The quote should identify the selected controls, connected fittings, fixed electrical work and any product configuration included. Compatibility, cable access and the functions to be checked are assessed against the existing installation. Equipment supply and any separate work should be listed before approval."
+  },
+  "text": [
+    ["Book smart-home and energy electrical work", "Book smart-lighting or control assessment"],
+    ["Request a smart-home and energy electrical work quote", "Request a smart-lighting or control quote"]
+  ]
+}

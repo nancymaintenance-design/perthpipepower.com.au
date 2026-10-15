@@ -4852,14 +4852,13 @@ const legacy = compatibilityView({
         "file": "blocked-drains-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -4869,15 +4868,14 @@ const legacy = compatibilityView({
         "file": "blocked-drains-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -4902,7 +4900,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -4930,7 +4928,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -5413,8 +5411,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                2,
-                0
+                2
               ],
               "mode": "text"
             },
@@ -5431,8 +5428,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                4,
-                0
+                2
               ],
               "mode": "text"
             },
@@ -5449,8 +5445,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                6,
-                0
+                1
               ],
               "mode": "text"
             }
@@ -5469,6 +5464,22 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
+                0
+              ],
+              "mode": "text"
+            },
+            {
+              "$source": "fragment",
+              "file": "blocked-drains-perth.html",
+              "path": [
+                "sections",
+                0,
+                "html"
+              ],
+              "node": [
+                1,
+                0,
+                8,
                 1,
                 0
               ],
@@ -5487,25 +5498,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                3,
-                0
-              ],
-              "mode": "text"
-            },
-            {
-              "$source": "fragment",
-              "file": "blocked-drains-perth.html",
-              "path": [
-                "sections",
-                0,
-                "html"
-              ],
-              "node": [
-                1,
-                0,
-                8,
-                1,
-                5,
                 0
               ],
               "mode": "text"
@@ -5533,7 +5525,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   1,
-                  7,
+                  3,
                   0,
                   0,
                   0
@@ -5557,14 +5549,13 @@ const legacy = compatibilityView({
         "file": "water-leak-detection-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -5574,15 +5565,14 @@ const legacy = compatibilityView({
         "file": "water-leak-detection-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -5607,7 +5597,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -5635,7 +5625,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -5868,7 +5858,6 @@ const legacy = compatibilityView({
               0,
               8,
               0,
-              0,
               0
             ],
             "mode": "text"
@@ -5887,7 +5876,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                1,
                 0
               ],
               "mode": "text"
@@ -5905,7 +5893,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                2,
                 0
               ],
               "mode": "text"
@@ -5932,11 +5919,8 @@ const legacy = compatibilityView({
                 "node": [
                   1,
                   0,
-                  8,
-                  0,
-                  3,
-                  0,
-                  0,
+                  1,
+                  2,
                   0
                 ],
                 "mode": "text"
@@ -5961,12 +5945,9 @@ const legacy = compatibilityView({
                 "node": [
                   1,
                   0,
+                  2,
                   8,
-                  0,
-                  3,
-                  1,
-                  0,
-                  0
+                  3
                 ],
                 "mode": "text"
               }
@@ -5986,10 +5967,8 @@ const legacy = compatibilityView({
                   0,
                   8,
                   0,
-                  3,
-                  2,
                   0,
-                  0
+                  5
                 ],
                 "mode": "text"
               }
@@ -6029,8 +6008,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                2,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -6047,8 +6025,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                4,
-                0
+                2
               ],
               "mode": "text"
             }
@@ -6067,7 +6044,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                1,
                 0
               ],
               "mode": "text"
@@ -6085,7 +6061,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                3,
                 0
               ],
               "mode": "text"
@@ -6123,7 +6098,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   1,
-                  5,
+                  3,
                   0,
                   0,
                   0
@@ -6147,14 +6122,13 @@ const legacy = compatibilityView({
         "file": "burst-pipe-repair-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -6164,15 +6138,14 @@ const legacy = compatibilityView({
         "file": "burst-pipe-repair-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -6197,7 +6170,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -6227,7 +6200,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -6415,8 +6388,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                2,
-                0
+                1
               ],
               "mode": "text"
             }
@@ -6435,7 +6407,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                1,
                 0
               ],
               "mode": "text"
@@ -6463,7 +6434,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   0,
-                  3,
+                  2,
                   0,
                   0,
                   0
@@ -6488,14 +6459,13 @@ const legacy = compatibilityView({
         "file": "hot-water-problems-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -6505,15 +6475,14 @@ const legacy = compatibilityView({
         "file": "hot-water-problems-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -6538,7 +6507,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -6566,7 +6535,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -6588,7 +6557,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -7047,8 +7016,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                2,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -7065,8 +7033,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                4,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -7083,8 +7050,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                6,
-                0
+                2
               ],
               "mode": "text"
             }
@@ -7103,6 +7069,22 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
+                0
+              ],
+              "mode": "text"
+            },
+            {
+              "$source": "fragment",
+              "file": "hot-water-problems-perth.html",
+              "path": [
+                "sections",
+                0,
+                "html"
+              ],
+              "node": [
+                1,
+                0,
+                8,
                 1,
                 0
               ],
@@ -7121,25 +7103,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                3,
-                0
-              ],
-              "mode": "text"
-            },
-            {
-              "$source": "fragment",
-              "file": "hot-water-problems-perth.html",
-              "path": [
-                "sections",
-                0,
-                "html"
-              ],
-              "node": [
-                1,
-                0,
-                8,
-                1,
-                5,
                 0
               ],
               "mode": "text"
@@ -7167,7 +7130,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   1,
-                  7,
+                  3,
                   0,
                   0,
                   0
@@ -7191,14 +7154,13 @@ const legacy = compatibilityView({
         "file": "tap-mixer-repairs-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -7208,15 +7170,14 @@ const legacy = compatibilityView({
         "file": "tap-mixer-repairs-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -7241,7 +7202,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -7269,7 +7230,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -7572,8 +7533,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                2,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -7590,8 +7550,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                4,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -7608,8 +7567,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                6,
-                0
+                2
               ],
               "mode": "text"
             }
@@ -7628,7 +7586,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                1,
                 0
               ],
               "mode": "text"
@@ -7646,7 +7603,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                3,
                 0
               ],
               "mode": "text"
@@ -7664,7 +7620,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 0,
-                5,
                 0
               ],
               "mode": "text"
@@ -7692,7 +7647,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   0,
-                  7,
+                  3,
                   0,
                   0,
                   0
@@ -7716,14 +7671,13 @@ const legacy = compatibilityView({
         "file": "toilet-repairs-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -7733,15 +7687,14 @@ const legacy = compatibilityView({
         "file": "toilet-repairs-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -7766,7 +7719,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -7794,7 +7747,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -8199,8 +8152,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                2,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -8217,8 +8169,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                4,
-                0
+                1
               ],
               "mode": "text"
             }
@@ -8237,7 +8188,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                1,
                 0
               ],
               "mode": "text"
@@ -8255,7 +8205,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                3,
                 0
               ],
               "mode": "text"
@@ -8283,7 +8232,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   1,
-                  5,
+                  3,
                   0,
                   0,
                   0
@@ -8307,14 +8256,13 @@ const legacy = compatibilityView({
         "file": "power-faults-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -8324,15 +8272,14 @@ const legacy = compatibilityView({
         "file": "power-faults-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -8357,7 +8304,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -8385,7 +8332,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -8863,8 +8810,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                2,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -8881,8 +8827,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                4,
-                0
+                2
               ],
               "mode": "text"
             }
@@ -8901,7 +8846,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                1,
                 0
               ],
               "mode": "text"
@@ -8919,7 +8863,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                3,
                 0
               ],
               "mode": "text"
@@ -8947,7 +8890,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   1,
-                  5,
+                  3,
                   0,
                   0,
                   0
@@ -8971,14 +8914,13 @@ const legacy = compatibilityView({
         "file": "safety-switch-tripping-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -8988,15 +8930,14 @@ const legacy = compatibilityView({
         "file": "safety-switch-tripping-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -9021,7 +8962,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -9049,7 +8990,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -9077,7 +9018,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -9531,8 +9472,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                2,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -9549,8 +9489,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                4,
-                0
+                2
               ],
               "mode": "text"
             }
@@ -9569,7 +9508,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                1,
                 0
               ],
               "mode": "text"
@@ -9587,7 +9525,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 1,
-                3,
                 0
               ],
               "mode": "text"
@@ -9615,7 +9552,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   1,
-                  5,
+                  3,
                   0,
                   0,
                   0
@@ -9640,14 +9577,13 @@ const legacy = compatibilityView({
         "file": "lighting-power-points-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -9657,15 +9593,14 @@ const legacy = compatibilityView({
         "file": "lighting-power-points-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -9690,7 +9625,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -9718,7 +9653,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -10095,14 +10030,13 @@ const legacy = compatibilityView({
         "file": "smoke-alarm-maintenance-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -10112,15 +10046,14 @@ const legacy = compatibilityView({
         "file": "smoke-alarm-maintenance-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -10145,7 +10078,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -10175,7 +10108,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -10703,8 +10636,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 2,
-                2,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -10721,8 +10653,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 2,
-                4,
-                0
+                2
               ],
               "mode": "text"
             }
@@ -10741,7 +10672,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 2,
-                1,
                 0
               ],
               "mode": "text"
@@ -10759,7 +10689,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 2,
-                3,
                 0
               ],
               "mode": "text"
@@ -10798,7 +10727,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   2,
-                  5,
+                  3,
                   0,
                   0,
                   0
@@ -10823,14 +10752,13 @@ const legacy = compatibilityView({
         "file": "fixtures-appliances-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -10840,15 +10768,14 @@ const legacy = compatibilityView({
         "file": "fixtures-appliances-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -10873,7 +10800,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -10901,7 +10828,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -10931,7 +10858,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -11620,8 +11547,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 2,
-                2,
-                0
+                1
               ],
               "mode": "text"
             },
@@ -11638,8 +11564,7 @@ const legacy = compatibilityView({
                 0,
                 8,
                 2,
-                4,
-                0
+                2
               ],
               "mode": "text"
             }
@@ -11658,7 +11583,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 2,
-                1,
                 0
               ],
               "mode": "text"
@@ -11676,7 +11600,6 @@ const legacy = compatibilityView({
                 0,
                 8,
                 2,
-                3,
                 0
               ],
               "mode": "text"
@@ -11704,7 +11627,7 @@ const legacy = compatibilityView({
                   0,
                   8,
                   2,
-                  5,
+                  3,
                   0,
                   0,
                   0
@@ -11846,14 +11769,13 @@ const legacy = compatibilityView({
         "file": "renewables-smart-home-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          0,
           0
         ],
         "mode": "text"
@@ -11863,15 +11785,14 @@ const legacy = compatibilityView({
         "file": "renewables-smart-home-perth.html",
         "path": [
           "sections",
-          2,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
           2,
-          1,
-          0
+          2
         ],
         "mode": "text"
       },
@@ -11896,7 +11817,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -11926,7 +11847,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -14078,16 +13999,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "lighting-installation-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -14095,16 +14014,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "lighting-installation-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -14132,7 +14050,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               0,
               0,
               0
@@ -14159,7 +14077,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -14186,7 +14104,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -14213,7 +14131,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -14240,7 +14158,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -14278,16 +14196,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "power-points-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -14295,16 +14211,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "power-points-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -14332,7 +14247,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               0,
               0,
               0
@@ -14359,7 +14274,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -14386,7 +14301,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -14413,7 +14328,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -14440,7 +14355,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -14520,16 +14435,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "dishwasher-installation-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -14537,16 +14450,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "dishwasher-installation-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -14601,7 +14513,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -14628,7 +14540,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -14655,7 +14567,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -14682,7 +14594,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -14699,16 +14611,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "toilet-installation-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -14716,16 +14626,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "toilet-installation-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -14780,7 +14689,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -14807,7 +14716,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -14834,7 +14743,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -14861,7 +14770,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -14878,16 +14787,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "shower-plumbing-repairs-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -14895,16 +14802,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "shower-plumbing-repairs-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -14959,7 +14865,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -14986,7 +14892,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -15013,7 +14919,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -15040,7 +14946,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -15057,16 +14963,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "water-pressure-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -15074,16 +14978,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "water-pressure-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -15167,7 +15070,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -15194,7 +15097,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -15221,7 +15124,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -15241,13 +15144,11 @@ const legacy = compatibilityView({
         "file": "ceiling-fans-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -15258,13 +15159,12 @@ const legacy = compatibilityView({
         "file": "ceiling-fans-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -15292,7 +15192,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               0,
               0,
               0
@@ -15319,7 +15219,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -15346,7 +15246,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -15373,7 +15273,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -15400,7 +15300,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -15417,16 +15317,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "exhaust-fans-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -15434,16 +15332,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "exhaust-fans-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -15471,7 +15368,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               0,
               0,
               0
@@ -15498,7 +15395,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -15525,7 +15422,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -15552,7 +15449,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -15579,7 +15476,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -15596,16 +15493,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "switchboard-upgrades-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -15613,16 +15508,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "switchboard-upgrades-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -15650,7 +15544,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               0,
               0,
               0
@@ -15677,7 +15571,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -15704,7 +15598,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -15731,7 +15625,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -15758,7 +15652,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -15775,16 +15669,14 @@ const legacy = compatibilityView({
       "intent": "commercial-confirmed-service",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "rcd-testing-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -15792,16 +15684,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "rcd-testing-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -15829,7 +15720,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               0,
               0,
               0
@@ -15856,7 +15747,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -15883,7 +15774,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -15910,7 +15801,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -15937,7 +15828,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -15954,16 +15845,14 @@ const legacy = compatibilityView({
       "intent": "commercial-emergency",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "emergency-plumber-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -15971,16 +15860,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "emergency-plumber-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -16035,7 +15923,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -16062,7 +15950,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -16089,7 +15977,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -16116,7 +16004,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0
@@ -16133,16 +16021,14 @@ const legacy = compatibilityView({
       "intent": "commercial-emergency",
       "heading": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "emergency-electrician-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -16150,16 +16036,15 @@ const legacy = compatibilityView({
       },
       "body": {
         "$source": "fragment",
-        "file": "ceiling-fans-perth.html",
+        "file": "emergency-electrician-perth.html",
         "path": [
           "sections",
-          3,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
           1,
           0
         ],
@@ -16187,7 +16072,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               0,
               0,
               0
@@ -16214,7 +16099,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               1,
               0,
               0
@@ -16241,7 +16126,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               2,
               0,
               0
@@ -16268,7 +16153,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               3,
               0,
               0
@@ -16295,7 +16180,7 @@ const legacy = compatibilityView({
             "node": [
               1,
               0,
-              3,
+              2,
               4,
               0,
               0

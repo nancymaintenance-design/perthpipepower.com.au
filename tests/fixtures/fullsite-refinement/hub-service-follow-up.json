@@ -1,0 +1,61 @@
+{
+  "evidence": "Follow-up editorial review: these exact source fragments remain reporting repetitions after the first service merge",
+  "edits": [
+    {
+      "file": "plumbing.html",
+      "section": 1,
+      "before": "<p>\n              For rental, strata or managed commercial properties, include the\n              work-order reference, approval contact, occupant details, access\n              arrangements and any known history.\n            </p>",
+      "after": "<p>Rental and strata maintenance can combine tap, toilet, leak and drainage work at one property. Investigation, the plumbing repair and any common-property work are identified in the agreed scope. The owner or managing contact approves the relevant work before it proceeds.</p>",
+      "reason": "Keep managed-property work distinct from the later booking checklist"
+    },
+    {
+      "file": "electrical.html",
+      "section": 1,
+      "before": "<p>Property managers can send a work order with the occupant’s description, affected area, access contact and approval pathway. Identify any strata-controlled areas where relevant.</p>",
+      "after": "<p>RCD checks, smoke-alarm maintenance and repair or replacement of damaged fittings can be scoped for a managed property. The agreed plan identifies the devices, electrical work and any requested record. Lot and common-property responsibilities determine the approval arrangements for the particular installation.</p>",
+      "reason": "Explain managed-property electrical work rather than repeat preparation"
+    },
+    {
+      "file": "electrical.html",
+      "section": 2,
+      "before": "<p>Electrical faults are best described by what is happening: a safety switch that will not stay on, lighting that has stopped working, an outlet that feels loose, or power loss in a particular area. Do not open switchboards, remove covers or test fixed wiring.</p>",
+      "after": "<p>Electrical fault finding assesses the relevant installation and connected equipment before selecting the repair. A recurring trip, failed outlet and lighting fault can need different checks. The electrician explains what the investigation establishes and any further testing or repair needed. Do not open switchboards, remove covers or test fixed wiring.</p>",
+      "reason": "Describe the actual fault-finding work"
+    },
+    {
+      "file": "electrical.html",
+      "section": 2,
+      "before": "<p>For smoke, fire, active arcing, fallen lines or electrical equipment in contact with water, move clear and call 000. For a wider network outage or hazard, follow the advice of the relevant utility.</p>",
+      "after": "<p>The completed checks and repair apply to the work commissioned for that visit. A circuit that operates normally during an assessment does not resolve every intermittent fault. Any restriction on use or further investigation is explained with the findings.</p>",
+      "reason": "Retain urgent safety routing in the hero; explain the limits of the actual checks here"
+    },
+    {
+      "file": "electrical.html",
+      "section": 2,
+      "before": "<p>Our Perth electrical team starts with the affected area, the observable symptom, any safe warning signs and the property access details. We use that information to identify the repair scope. Fault location, access, equipment, materials and any additional work found during assessment are confirmed in a written quote before work proceeds.</p>",
+      "after": "<p>The work plan distinguishes investigation, fitting replacement and additional wiring or circuit work. Fault location, existing equipment, cable access and materials determine the scope. The written quote identifies the authorised repair and any separate work before it proceeds.</p>",
+      "reason": "Explain electrical scope instead of another symptom checklist"
+    },
+    {
+      "file": "electrical.html",
+      "section": 2,
+      "before": "<p>For homes, rentals, strata and commercial properties, do not attempt to diagnose from a switchboard or remove a fitting. Tell us what changed, what has been affected and whether there is a safe access contact. Our local team arranges a safe on-site assessment and confirms the electrical repair scope and quote.</p>",
+      "after": "",
+      "reason": "Keep reporting and approval preparation in the booking chapter"
+    },
+    {
+      "file": "plumbing.html",
+      "section": 7,
+      "before": "<p>Choose the region for the property, then describe the plumbing task. These guides help you find the right service for your area. Tell the team the address and access requirements so the proposed visit can be confirmed.</p>",
+      "after": "<p>Our service regions cover the CBD and inner suburbs, northern, southern, eastern and western suburbs, and the Perth Hills and Swan Valley. The guides include Joondalup and Canning Vale and link to the existing service enquiry routes from our Perth office.</p>",
+      "reason": "Geographic chapter explains coverage; booking chapter owns preparation"
+    },
+    {
+      "file": "electrical.html",
+      "section": 7,
+      "before": "<p>Use the property location as well as the service when making the request. For a rental or strata building, add the access contact and the person who can approve the work. The team confirms the appointment and the agreed work for your address.</p>",
+      "after": "<p>Our Perth office serves the CBD and inner suburbs, the northern, southern, eastern and western suburbs, and the Perth Hills and Swan Valley. The region guides connect each area with the existing electrical service and enquiry routes.</p>",
+      "reason": "Geographic chapter explains coverage; booking chapter owns preparation"
+    }
+  ]
+}

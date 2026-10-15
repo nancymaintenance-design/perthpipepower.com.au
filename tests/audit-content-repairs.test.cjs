@@ -28,14 +28,35 @@ test('education coverage rejects omission of any of the 25 required questions',(
   for(let i=0;i<questions.length;i++)assert.throws(()=>assertEducationQuestions(file,questions.filter((_,n)=>n!==i)),/every required education question retained/);
  }
 });
-test('education explanations retain descriptive topic headings outside the FAQ',()=>{
+test('education chapters retain all 25 explanation intents outside the compact FAQ',()=>{
+ // Independent concepts from the original required questions. The approved
+ // chapter merge changes presentation, not these explanations. Reintroducing
+ // headings alone cannot satisfy a missing cause, limitation or work decision.
+ const concepts={
+  'power-faults-perth.html':[[/different circuits/i,/working lights do not prove/i],[/intermittent fault/i,/staged investigation/i]],
+  'safety-switch-tripping-perth.html':[[/current imbalance/i,/overload or short circuit/i],[/circuit or connected equipment/i,/replacement follows assessment/i]],
+  'blocked-drains-perth.html':[[/blockage returns after clearing/i,/recurrence alone does not prove/i],[/cistern or fixture/i,/downstream drainage/i],[/sink that gurgles/i,/water and air/i]],
+  'water-leak-detection-perth.html':[[/higher water bill/i,/concealed leak, changed use/i],[/water-meter movement/i,/running cistern/i,/cannot locate/i]],
+  'burst-pipe-repair-perth.html':[[/dampness, staining/i,/another source/i,/access, repair and reinstatement/i]],
+  'tap-mixer-repairs-perth.html':[[/sealing component/i,/after shut-off/i,/mixer base/i],[/persistent drip wastes water/i,/flow and duration/i],[/customer-supplied replacement mixer/i,/mounting and connection/i,/installation, additional parts/i]],
+  'toilet-repairs-perth.html':[[/running cistern/i,/toilet base/i,/different checks/i],[/refills on its own/i,/fill mechanism/i,/does not establish that a new suite/i]],
+  'hot-water-problems-perth.html':[[/sudden loss of hot water/i,/heating, control, supply or plumbing/i],[/hot water at taps but not at the shower/i,/local fitting or mixing/i],[/electric hot-water system/i,/safety-switch trips/i,/does not identify the failed part/i]],
+  'fixtures-appliances-perth.html':[[/washing machine empties/i,/waste connection, restricted drainage/i,/internal washing-machine repairs are separate/i],[/leaking washing-machine supply taps/i,/repair or replacement/i]],
+  'smoke-alarm-maintenance-perth.html':[[/chirping from a hardwired smoke alarm/i,/backup power or device condition/i],[/WA rental homes/i,/DFES guidance/i,/owners remain responsible/i,/age requirements/i]],
+  'property-management.html':[[/managing agent or landlord/i,/reporting and approval/i,/immediate danger or utility emergencies/i]],
+  'plumbing.html':[[/fixed water or drainage/i,/appropriate authorisation/i,/gas fitting/i]],
+  'electrical.html':[[/fixed wiring, power points/i,/licensed electrical professionals/i,/documentation/i]],
+ };
+ assert.equal(Object.values(concepts).flat().length,25,'25 independently specified education intents');
  for(const [file,questions]of Object.entries(expectedEducation)){
   const id='learn-about-'+file.replace('.html','');
-  const body=main(file).match(new RegExp('<div class="keyword-gap-part" id="'+id+'">([\\s\\S]*?)</div>'))[1];
-  const topics=[...body.matchAll(/<h3>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)];
-  assert.equal(topics.length,questions.length,file+': each explanation needs its own context');
-  for(const topic of topics)assert(plain(topic[1]).length>10,file+': descriptive topic');
-  if(file==='tap-mixer-repairs-perth.html')assert.match(plain(topics[2][1]),/customer.supplied replacement mixer/i);
+  const match=main(file).match(new RegExp('<div class="keyword-gap-part" id="'+id+'">([\\s\\S]*?)</div>'));
+  assert(match,file+': reachable education anchor');const body=match[1],copy=plain(body);
+  const headings=[...body.matchAll(/<h2>([\s\S]*?)<\/h2>/g)];
+  assert.equal(headings.length,1,file+': one descriptive chapter heading');assert(plain(headings[0][1]).length>10);
+  assert(!/<details\b/.test(body),file+': explanation belongs in its chapter, not another FAQ wall');
+  assert.equal(concepts[file].length,questions.length,file+': each original intent has a semantic requirement');
+  concepts[file].forEach((patterns,i)=>patterns.forEach(pattern=>assert.match(copy,pattern,file+': '+questions[i])));
  }
 });
 test('primary intent is unique after case folding and overview routes readers to the dedicated owners',()=>{

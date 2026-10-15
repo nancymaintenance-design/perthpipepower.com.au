@@ -265,6 +265,48 @@ for(const change of policy.headStylesheets){
  head[4].splice(i+1,0,['text','\n    '],...parts(`<link rel="stylesheet" href="${change.href}">`));
  approved.pages[change.file]=snapshotFromTree(tree,original);
 }
+// Reviewed 2026-10-15 service-only fragment policy. Each exact before fragment
+// must occur once in the previously approved immutable DOM; unrelated content,
+// metadata, shared chrome and asset hashes retain their existing contract.
+for(const edit of require('../fixtures/fullsite-refinement/service-copy-edits.json').edits){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
+ approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
+for(const edit of require('../fixtures/fullsite-refinement/hub-service-follow-up.json').edits){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ let deletionParent;
+ if(edit.after===''){
+  const fragment=parts(edit.before);assert.equal(fragment.length,1,'one exact removed hub paragraph');
+  const parents=walk(tree).filter(n=>childList(n).some(c=>JSON.stringify(c)===JSON.stringify(fragment[0])));
+  assert.equal(parents.length,1,edit.file+': exact paragraph parent');deletionParent=parents[0];
+ }
+ replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
+ // Removing this one paragraph joins its two whitespace text neighbours when
+ // the HTML parser reads the canonical source. Match that exact local effect.
+ if(deletionParent){const c=childList(deletionParent);for(let i=c.length-1;i>0;i--)if(c[i][0]==='text'&&c[i-1][0]==='text'){c[i-1][1]+=c[i][1];c.splice(i,1);}}
+ approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
+{
+ const edit=require('../fixtures/fullsite-refinement/smart-control-faq.json');
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ for(const [before,after]of edit.text){
+  const nodes=walk(tree).filter(n=>n[0]==='text'&&n[1]===before);
+  assert.equal(nodes.length,1,edit.file+': exact smart-control contact label');nodes[0][1]=after;
+ }
+ const detail=q=>`<details><summary>${q.question}</summary><p>${q.answer}</p></details>`;
+ replaceFragment(tree,detail(edit.before),detail(edit.after),edit.file,'actual smart-control quotation FAQ');
+ const script=walk(tree).find(n=>isEl(n,'script')&&attr(n,'type')==='application/ld+json');
+ const graph=JSON.parse(text(script))['@graph'].find(n=>n['@type']==='FAQPage');
+ assert.equal(graph.mainEntity[edit.index].name,edit.before.question);
+ assert.equal(graph.mainEntity[edit.index].acceptedAnswer.text,edit.before.answer);
+ let source=text(script);
+ for(const key of ['question','answer']){
+  assert.equal(source.split(JSON.stringify(edit.before[key])).length-1,1,edit.file+': exact prior FAQ schema value');
+  source=source.replace(JSON.stringify(edit.before[key]),JSON.stringify(edit.after[key]));
+ }
+ script[4]=[['text',source]];approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  return comparePublicOutput(root,manifest).filter(d=>{
