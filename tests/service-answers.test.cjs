@@ -3,6 +3,14 @@ const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 const root = resolvePublicRoot();
+// The handover guide owns occupant/manager records, not a mechanical catalogue
+// of every service that links to it. These three paths return to the actual
+// managed-property owner after the unrelated service-chain paragraph is removed.
+const handoverReturnOwners={
+  'smoke-alarm-maintenance-perth.html':'property-management.html',
+  'fixtures-appliances-perth.html':'property-management.html',
+  'renewables-smart-home-perth.html':'property-management.html',
+};
 // Missing rendered summaries deprives readers without JavaScript of the
 // symptom/safety/next-step answer. Assert shipped output, not generator text.
 for (const file of Object.keys(require('../data/service-commercial-copy.cjs'))) {
@@ -18,7 +26,9 @@ for (const file of Object.keys(require('../data/service-commercial-copy.cjs'))) 
   assert(guide, file + ': guide link readable without JavaScript');
   assert(fs.existsSync(path.join(root, guide[1])));
   const guideMain = fs.readFileSync(path.join(root, guide[1]), 'utf8').match(/<main\b[\s\S]*?<\/main>/)[0];
-  assert(guideMain.includes(`href="${file}"`), guide[1] + ': contextual return to ' + file);
+  const returnOwner=handoverReturnOwners[file]??file;
+  if(handoverReturnOwners[file])assert.equal(guide[1],'insights-tenant-property-manager-maintenance-handover.html',file+': exact handover route');
+  assert(guideMain.includes(`href="${returnOwner}"`), guide[1] + ': contextual return to ' + returnOwner);
   assert.equal((main.match(/<section\b/g)||[]).length, 5, file + ': retained five-part design');
 }
 const leak = fs.readFileSync(path.join(root, 'water-leak-detection-perth.html'), 'utf8');

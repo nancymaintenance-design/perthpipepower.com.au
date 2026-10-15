@@ -11926,13 +11926,11 @@ const legacy = compatibilityView({
         "file": "perth-cbd-inner-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -11943,15 +11941,13 @@ const legacy = compatibilityView({
         "file": "perth-cbd-inner-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
-          1,
-          0
+          1
         ],
         "mode": "text"
       },
@@ -11976,7 +11972,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -12004,7 +12000,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -12034,7 +12030,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -12064,7 +12060,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               3,
               0,
               0
@@ -12114,13 +12110,11 @@ const legacy = compatibilityView({
         "file": "northern-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -12131,15 +12125,13 @@ const legacy = compatibilityView({
         "file": "northern-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
-          1,
-          0
+          1
         ],
         "mode": "text"
       },
@@ -12166,7 +12158,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -12194,7 +12186,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -12224,7 +12216,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -12276,13 +12268,11 @@ const legacy = compatibilityView({
         "file": "southern-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -12293,15 +12283,13 @@ const legacy = compatibilityView({
         "file": "southern-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
-          1,
-          0
+          1
         ],
         "mode": "text"
       },
@@ -12326,7 +12314,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -12354,7 +12342,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -12384,7 +12372,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -12414,7 +12402,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               3,
               0,
               0
@@ -12465,13 +12453,11 @@ const legacy = compatibilityView({
         "file": "eastern-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -12482,15 +12468,13 @@ const legacy = compatibilityView({
         "file": "eastern-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
-          1,
-          0
+          1
         ],
         "mode": "text"
       },
@@ -12515,7 +12499,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -12545,7 +12529,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -12575,7 +12559,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -12625,13 +12609,11 @@ const legacy = compatibilityView({
         "file": "western-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -12642,15 +12624,13 @@ const legacy = compatibilityView({
         "file": "western-suburbs.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
-          1,
-          0
+          1
         ],
         "mode": "text"
       },
@@ -12675,7 +12655,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -12703,7 +12683,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -12733,7 +12713,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -12763,7 +12743,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               3,
               0,
               0
@@ -12811,13 +12791,11 @@ const legacy = compatibilityView({
         "file": "perth-hills-swan-valley.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
-          0,
-          2,
           0,
           0
         ],
@@ -12828,15 +12806,13 @@ const legacy = compatibilityView({
         "file": "perth-hills-swan-valley.html",
         "path": [
           "sections",
-          1,
-          "container"
+          0,
+          "html"
         ],
         "node": [
           1,
           0,
-          2,
-          1,
-          0
+          1
         ],
         "mode": "text"
       },
@@ -12863,7 +12839,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               0,
               0,
               0
@@ -12893,7 +12869,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               1,
               0,
               0
@@ -12923,7 +12899,7 @@ const legacy = compatibilityView({
               1,
               0,
               2,
-              2,
+              0,
               2,
               0,
               0
@@ -13137,13 +13113,12 @@ const legacy = compatibilityView({
         "file": "insights-safety-switch-keeps-tripping.html",
         "path": [
           "sections",
-          13,
-          "container"
+          3,
+          "html"
         ],
         "node": [
-          1,
-          1,
-          0
+          0,
+          1
         ],
         "mode": "text"
       },
@@ -13166,7 +13141,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               0,
               0,
               0
@@ -13192,7 +13167,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               1,
               0,
               0
@@ -13284,13 +13259,12 @@ const legacy = compatibilityView({
         "file": "insights-hot-water-plumbing-or-electrical.html",
         "path": [
           "sections",
-          10,
-          "container"
+          3,
+          "html"
         ],
         "node": [
-          1,
-          1,
-          0
+          0,
+          1
         ],
         "mode": "text"
       },
@@ -13313,7 +13287,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               0,
               0,
               0
@@ -13339,7 +13313,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               1,
               0,
               0
@@ -13431,13 +13405,12 @@ const legacy = compatibilityView({
         "file": "insights-tenant-property-manager-maintenance-handover.html",
         "path": [
           "sections",
-          10,
-          "container"
+          3,
+          "html"
         ],
         "node": [
-          1,
-          1,
-          0
+          0,
+          1
         ],
         "mode": "text"
       },
@@ -13460,7 +13433,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               0,
               0,
               0
@@ -13486,7 +13459,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               1,
               0,
               0
@@ -13578,13 +13551,12 @@ const legacy = compatibilityView({
         "file": "news-clearer-property-maintenance-enquiry.html",
         "path": [
           "sections",
-          9,
-          "container"
+          3,
+          "html"
         ],
         "node": [
-          1,
-          1,
-          0
+          0,
+          1
         ],
         "mode": "text"
       },
@@ -13607,7 +13579,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               0,
               0,
               0
@@ -13633,7 +13605,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               1,
               0,
               0
@@ -13725,13 +13697,12 @@ const legacy = compatibilityView({
         "file": "news-useful-property-work-order.html",
         "path": [
           "sections",
-          10,
-          "container"
+          3,
+          "html"
         ],
         "node": [
-          1,
-          1,
-          0
+          0,
+          1
         ],
         "mode": "text"
       },
@@ -13754,7 +13725,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               0,
               0,
               0
@@ -13780,7 +13751,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               1,
               0,
               0
@@ -13872,13 +13843,12 @@ const legacy = compatibilityView({
         "file": "news-keeping-access-information-together.html",
         "path": [
           "sections",
-          10,
-          "container"
+          3,
+          "html"
         ],
         "node": [
-          1,
-          1,
-          0
+          0,
+          1
         ],
         "mode": "text"
       },
@@ -13901,7 +13871,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               0,
               0,
               0
@@ -13927,7 +13897,7 @@ const legacy = compatibilityView({
             ],
             "node": [
               1,
-              2,
+              1,
               1,
               0,
               0

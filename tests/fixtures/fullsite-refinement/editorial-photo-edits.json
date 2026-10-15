@@ -1,0 +1,41 @@
+{
+  "evidence": "Task 2 final self-review: visible descriptions checked against the three local photographs. Evidence limitations belong in the report; no project location/date/outcome is introduced.",
+  "edits": [
+    {
+      "file": "index.html", "section": 4, "field": "html",
+      "before": "<p>The photograph shows recessed downlights across the kitchen ceiling. For lighting work, fitting selection, placement and the existing electrical connection are considered together.</p>",
+      "after": "<p>Recessed downlights illuminate the kitchen bench and island, with power points visible at the splashback and island end.</p>",
+      "reason": "Describe visible lighting and outlets in the kitchen photograph"
+    },
+    {
+      "file": "index.html", "section": 4, "field": "html",
+      "before": "<p>Visible wiring is shown before wall linings are installed. This stage makes the cable routes visible; the photograph alone does not establish the completed installation or testing results.</p>",
+      "after": "<p>Electrical cables are visible against the exposed wall framing and insulation before wall linings are fitted.</p>",
+      "reason": "Describe the visible wiring stage without editorial evidence commentary"
+    },
+    {
+      "file": "index.html", "section": 4, "field": "html",
+      "before": "<p>The open protective cover shows the arrangement of circuit equipment. Repairs and upgrades require assessment of the existing board and protection; a photograph does not identify an electrical fault.</p>",
+      "after": "<p>Circuit breakers and labelled circuit positions are visible beneath the open switchboard cover.</p>",
+      "reason": "Describe the visible switchboard equipment"
+    },
+    {
+      "file": "about.html", "section": 1, "field": "html",
+      "before": "<p>Our existing electrical work photographs show lighting fittings, exposed wiring during renovation and residential switchboard equipment. They give a view of the installations our electrical service works with, while each property still needs its own assessment.</p>",
+      "after": "<p>Our electrical work includes lighting and power-point repairs, fault finding and planned installation. We assess the existing connections, fitting positions and controls so the written quote identifies the work needed for the property.</p>",
+      "reason": "Explain the actual electrical service and property-specific quote"
+    },
+    {
+      "file": "about.html", "section": 1, "field": "html",
+      "before": "<figcaption>Recessed downlights in a kitchen renovation, from our existing electrical work photographs.</figcaption>",
+      "after": "<figcaption>Recessed downlights across the kitchen ceiling, with power points at the bench and island.</figcaption>",
+      "reason": "Keep the caption on visible work"
+    },
+    {
+      "file": "about.html", "section": 1, "field": "html",
+      "before": "<p>Lighting installation includes the fitting, intended location, controls and connection requirements. Wiring visible before wall linings are fitted is an installation stage, not evidence of completed testing. See <a href=\"lighting-installation-perth.html\">lighting installation and repairs</a> or <a href=\"switchboard-upgrades-perth.html\">switchboard repairs and upgrades</a> for the relevant work and quotation scope.</p>",
+      "after": "<p>Lighting installation includes the fitting, intended location, controls and connection requirements. A repair to an existing light and a new lighting location can involve different work. See <a href=\"lighting-installation-perth.html\">lighting installation and repairs</a> or <a href=\"switchboard-upgrades-perth.html\">switchboard repairs and upgrades</a> for the relevant work and quotation scope.</p>",
+      "reason": "Retain useful installation/quotation conditions and remove editorial evidence explanation"
+    }
+  ]
+}

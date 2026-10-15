@@ -423,8 +423,8 @@ export const page: PageData = {
 "answer": "\n            <p>\n              Do not repeatedly reset it. Note which areas lost power and what\n              equipment was being used. Do not open the switchboard or work on\n              fixed wiring.\n            </p>\n          " as TrustedHtml
 },
 {
-"question": "When is {{ppp:shared:business.name:raw}} available?",
-"answer": "\n            <p>\n              {{ppp:shared:hours.text:html}}\n            </p>\n          " as TrustedHtml
+"question": "How do I arrange an urgent plumbing or electrical repair?",
+"answer": "<p>Call <a href=\"tel:{{ppp:shared:business.localTelephone:html}}\">{{ppp:shared:business.displayTelephone:html}}</a> with the property address, current condition and access contact. The team confirms attendance and the emergency work quote; an online enquiry does not reserve a visit.</p>" as TrustedHtml
 },
 {
 "question": "Are licence details available?",

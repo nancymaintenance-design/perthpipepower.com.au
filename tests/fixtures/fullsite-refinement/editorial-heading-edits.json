@@ -1,0 +1,477 @@
+{
+  "evidence": "Task 2 self-review: exact topic-heading and same-anchor TOC edits only, without changing H1/title/URL or dates.",
+  "edits": [
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-1\">Start with facts</a>",
+      "after": "<a href=\"#guide-1\">Property location and current repair symptoms</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 6,
+      "field": "html",
+      "before": "<h2 id=\"guide-1\">Start with facts</h2>",
+      "after": "<h2 id=\"guide-1\">Property location and current repair symptoms</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-1\">Keep three details together</a>",
+      "after": "<a href=\"#guide-1\">Work-order issue, access and approval details</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 6,
+      "field": "html",
+      "before": "<h2 id=\"guide-1\">Keep three details together</h2>",
+      "after": "<h2 id=\"guide-1\">Work-order issue, access and approval details</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-1\">Share only what is needed</a>",
+      "after": "<a href=\"#guide-1\">Access contacts and private entry information</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 6,
+      "field": "html",
+      "before": "<h2 id=\"guide-1\">Share only what is needed</h2>",
+      "after": "<h2 id=\"guide-1\">Access contacts and private entry information</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-1\">Do not repeatedly reset it</a>",
+      "after": "<a href=\"#guide-1\">Recurring safety-switch trips</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 6,
+      "field": "html",
+      "before": "<h2 id=\"guide-1\">Do not repeatedly reset it</h2>",
+      "after": "<h2 id=\"guide-1\">Recurring safety-switch trips</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-2\">What to record</a>",
+      "after": "<a href=\"#guide-2\">Trip timing and affected circuits</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 8,
+      "field": "html",
+      "before": "<h2 id=\"guide-2\">What to record</h2>",
+      "after": "<h2 id=\"guide-2\">Trip timing and affected circuits</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-1\">What to observe from a safe position</a>",
+      "after": "<a href=\"#guide-1\">Hot-water temperature, flow and affected outlets</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "section": 6,
+      "field": "html",
+      "before": "<h2 id=\"guide-1\">What to observe from a safe position</h2>",
+      "after": "<h2 id=\"guide-1\">Hot-water temperature, flow and affected outlets</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-1\">Decide what needs attention first</a>",
+      "after": "<a href=\"#guide-1\">Active leaks and immediate hazards</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 7,
+      "field": "html",
+      "before": "<h2 id=\"guide-1\">Decide what needs attention first</h2>",
+      "after": "<h2 id=\"guide-1\">Active leaks and immediate hazards</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-2\">What to record before the inspection</a>",
+      "after": "<a href=\"#guide-2\">Leak location, timing and water spread</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 10,
+      "field": "html",
+      "before": "<h2 id=\"guide-2\">What to record before the inspection</h2>",
+      "after": "<h2 id=\"guide-2\">Leak location, timing and water spread</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-3\">How Ellis takes a report through to a repair scope</a>",
+      "after": "<a href=\"#guide-3\">Leak investigation and repair quotation</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 16,
+      "field": "html",
+      "before": "<h2 id=\"guide-3\">How Ellis takes a report through to a repair scope</h2>",
+      "after": "<h2 id=\"guide-3\">Leak investigation and repair quotation</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-5\">For tenants and property managers</a>",
+      "after": "<a href=\"#guide-5\">Leak reports for tenants and property managers</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 30,
+      "field": "html",
+      "before": "<h2 id=\"guide-5\">For tenants and property managers</h2>",
+      "after": "<h2 id=\"guide-5\">Leak reports for tenants and property managers</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-6\">Common leak-reporting questions</a>",
+      "after": "<a href=\"#guide-6\">Leak-reporting evidence and repair scope</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 33,
+      "field": "html",
+      "before": "<h2 id=\"guide-6\">Common leak-reporting questions</h2>",
+      "after": "<h2 id=\"guide-6\">Leak-reporting evidence and repair scope</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-7\">Use the right route for the water source</a>",
+      "after": "<a href=\"#guide-7\">Private pipes, meters and drainage</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 44,
+      "field": "container",
+      "before": "<h2 id=\"guide-7\">Use the right route for the water source</h2>",
+      "after": "<h2 id=\"guide-7\">Private pipes, meters and drainage</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "contact.html",
+      "section": 0,
+      "field": "container",
+      "before": "<h2>Prepare the request without extra investigation</h2>",
+      "after": "<h2>Plumbing and electrical enquiry details</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights.html",
+      "section": 0,
+      "field": "container",
+      "before": "<h2>Read the question that matches your situation</h2>",
+      "after": "<h2>Plumbing faults, hot water and maintenance handovers</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news.html",
+      "section": 0,
+      "field": "container",
+      "before": "<h2>Choose a practical booking note</h2>",
+      "after": "<h2>Property maintenance enquiries, access and work orders</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-2\">Choose a service starting point without diagnosing the fault</a>",
+      "after": "<a href=\"#guide-2\">Plumbing and electrical service choices</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 8,
+      "field": "html",
+      "before": "<h2 id=\"guide-2\">Choose a service starting point without diagnosing the fault</h2>",
+      "after": "<h2 id=\"guide-2\">Plumbing and electrical service choices</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-4\">From first contact to an agreed visit and quote</a>",
+      "after": "<a href=\"#guide-4\">On-site assessment and written quotation</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 8,
+      "field": "html",
+      "before": "<h2 id=\"guide-4\">From first contact to an agreed visit and quote</h2>",
+      "after": "<h2 id=\"guide-4\">On-site assessment and written quotation</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-2\">Confirm entry to the property and to the equipment</a>",
+      "after": "<a href=\"#guide-2\">Property entry and equipment access</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-2\">Confirm entry to the property and to the equipment</h2>",
+      "after": "<h2 id=\"guide-2\">Property entry and equipment access</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-3\">Use a named contact and update changed arrangements</a>",
+      "after": "<a href=\"#guide-3\">On-site contacts and changed entry arrangements</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-3\">Use a named contact and update changed arrangements</h2>",
+      "after": "<h2 id=\"guide-3\">On-site contacts and changed entry arrangements</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-4\">Protect private information while arranging the repair</a>",
+      "after": "<a href=\"#guide-4\">Private access information for repair visits</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-4\">Protect private information while arranging the repair</h2>",
+      "after": "<h2 id=\"guide-4\">Private access information for repair visits</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-2\">Describe an assessable task, not an assumed repair</a>",
+      "after": "<a href=\"#guide-2\">Fault assessment and requested work</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-2\">Describe an assessable task, not an assumed repair</h2>",
+      "after": "<h2 id=\"guide-2\">Fault assessment and requested work</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-3\">Make approval boundaries explicit</a>",
+      "after": "<a href=\"#guide-3\">Assessment, repair and spending approvals</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-3\">Make approval boundaries explicit</h2>",
+      "after": "<h2 id=\"guide-3\">Assessment, repair and spending approvals</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-4\">Close the work order with the actual outcome</a>",
+      "after": "<a href=\"#guide-4\">Completed work and outstanding recommendations</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-4\">Close the work order with the actual outcome</h2>",
+      "after": "<h2 id=\"guide-4\">Completed work and outstanding recommendations</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-2\">Keep the original occupant report separate from the repair instruction</a>",
+      "after": "<a href=\"#guide-2\">Occupant observations and repair instructions</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-2\">Keep the original occupant report separate from the repair instruction</h2>",
+      "after": "<h2 id=\"guide-2\">Occupant observations and repair instructions</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-3\">Update the condition when it changes</a>",
+      "after": "<a href=\"#guide-3\">Changes in the reported fault</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-3\">Update the condition when it changes</h2>",
+      "after": "<h2 id=\"guide-3\">Changes in the reported fault</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-4\">Separate handover, access and work approval</a>",
+      "after": "<a href=\"#guide-4\">Handover, access and repair approval</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-4\">Separate handover, access and work approval</h2>",
+      "after": "<h2 id=\"guide-4\">Handover, access and repair approval</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-4\">Compare repair and replacement on the same scope</a>",
+      "after": "<a href=\"#guide-4\">Repair and replacement quotation scope</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "section": 9,
+      "field": "html",
+      "before": "<h2 id=\"guide-4\">Compare repair and replacement on the same scope</h2>",
+      "after": "<h2 id=\"guide-4\">Repair and replacement quotation scope</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-4\">What an electrical assessment needs to establish</a>",
+      "after": "<a href=\"#guide-4\">Electrical fault finding and repair options</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 12,
+      "field": "html",
+      "before": "<h2 id=\"guide-4\">What an electrical assessment needs to establish</h2>",
+      "after": "<h2 id=\"guide-4\">Electrical fault finding and repair options</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-5\">Agree the investigation and repair scope</a>",
+      "after": "<a href=\"#guide-5\">Investigation, repair and installation scope</a>",
+      "reason": "Align article table of contents with unchanged guide anchor"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 12,
+      "field": "html",
+      "before": "<h2 id=\"guide-5\">Agree the investigation and repair scope</h2>",
+      "after": "<h2 id=\"guide-5\">Investigation, repair and installation scope</h2>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "about.html",
+      "section": 7,
+      "field": "html",
+      "before": "<h3>Safety comes first</h3>",
+      "after": "<h3>Immediate plumbing and electrical hazards</h3>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "index.html",
+      "section": 3,
+      "field": "html",
+      "before": "<h3>Put safety before diagnosis</h3>",
+      "after": "<h3>Electrical hazards and immediate danger</h3>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 13,
+      "field": "html",
+      "before": "<h3>Use water meter records as a clue</h3>",
+      "after": "<h3>Water meter records and suspected leaks</h3>",
+      "reason": "Name the actual repair, evidence or record topic"
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "section": 4,
+      "field": "html",
+      "before": "<a href=\"#guide-2\">One outlet or the whole property?</a>",
+      "after": "<a href=\"#guide-2\">One outlet compared with the whole property</a>",
+      "reason": "Final complete TOC audit: align the one surviving historical mismatch to the actual unchanged chapter"
+    }
+  ]
+}

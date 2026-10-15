@@ -23,7 +23,9 @@ for (const [page, heading] of services) {
     .map((fragment) => `<article class="card">${fragment}`)
     .find((fragment) => fragment.includes(`href="${page}"`));
   assert.ok(card, `Homepage should link the ${heading} card to ${page}`);
-  const secondary = heading.replaceAll(' in Perth','').replaceAll(' Perth','');
+  const secondary = page==='renewables-smart-home-perth.html'
+    ? 'Smart Lighting &amp; Electrical Controls'
+    : heading.replaceAll(' in Perth','').replaceAll(' Perth','');
   assert.match(card, new RegExp(`<h3>${secondary}<\\/h3>`));
 
   const pageHtml = read(page);

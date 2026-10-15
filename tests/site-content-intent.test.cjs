@@ -49,7 +49,12 @@ test('content editing preserves approved prices, existing canonical URLs, origin
   assert.equal(canonical(h),old.canonical,f+': URL changed');assert(!/"@type":\s*"Person"/.test(h),f+': private personnel');
  }
  const hero=s=>s.match(/<section class="hero"[\s\S]*?<\/section>/)[0].replace(/\r\n/g,'\n');
- assert.equal(hero(read('index.html')),historical.hero);
+ let expectedHero=historical.hero;
+ for(const edit of require('./fixtures/fullsite-refinement/editorial-copy-edits.json').edits.filter(e=>e.file==='index.html'&&e.field==='hero')){
+  assert.equal(expectedHero.split(edit.before).length-1,1,'exact historical hero copy fragment');
+  expectedHero=expectedHero.replace(edit.before,edit.after);
+ }
+ assert.equal(hero(read('index.html')),expectedHero);
  const {parse,serialize}=require('parse5');
  const normalized=s=>{const document=parse(s.replace(/\r\n/g,'\n'));const sort=n=>{if(n.attrs)n.attrs.sort((a,b)=>a.name.localeCompare(b.name));for(const child of n.childNodes??[])sort(child);};sort(document);return serialize(document);};
  const main=s=>s.match(/<main\b[\s\S]*?<\/main>/)[0];

@@ -1,0 +1,16 @@
+{
+  "file": "faq.html",
+  "section": 1,
+  "index": 16,
+  "reason": "Keep one routine-hours answer and give urgent repairs a separate useful contact question; existing emergency fees and hours stay in the first availability answer.",
+  "before": {
+    "question": "When is Ellis Services Group available?",
+    "answer": "Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work.",
+    "answerHtml": "\n            <p>\n              Routine service hours: 09:00–21:00, seven days a week. 24-hour emergency repairs are available; call to confirm attendance arrangements and the quoted emergency work.\n            </p>\n          "
+  },
+  "after": {
+    "question": "How do I arrange an urgent plumbing or electrical repair?",
+    "answer": "Call 0413 477 667 with the property address, current condition and access contact. The team confirms attendance and the emergency work quote; an online enquiry does not reserve a visit.",
+    "answerHtml": "<p>Call <a href=\"tel:0413477667\">0413 477 667</a> with the property address, current condition and access contact. The team confirms attendance and the emergency work quote; an online enquiry does not reserve a visit.</p>"
+  }
+}

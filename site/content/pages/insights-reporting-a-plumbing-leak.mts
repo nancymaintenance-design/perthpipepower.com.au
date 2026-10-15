@@ -260,7 +260,7 @@ export const page: PageData = {
 {
 "id": "section-4",
 "kind": "rich",
-"html": "<nav class=\"article-toc\" aria-label=\"In this guide\"><h2>In this guide</h2><ul><li><a href=\"#guide-1\">Decide what needs attention first</a></li><li><a href=\"#guide-2\">What to record before the inspection</a></li><li><a href=\"#guide-3\">How Ellis takes a report through to a repair scope</a></li><li><a href=\"#guide-4\">Separate pipe repair from access and surface restoration</a></li><li><a href=\"#guide-5\">For tenants and property managers</a></li><li><a href=\"#guide-6\">Common leak-reporting questions</a></li><li><a href=\"#guide-7\">Use the right route for the water source</a></li></ul></nav>" as TrustedHtml
+"html": "<nav class=\"article-toc\" aria-label=\"In this guide\"><h2>In this guide</h2><ul><li><a href=\"#guide-1\">Active leaks and immediate hazards</a></li><li><a href=\"#guide-2\">Leak location, timing and water spread</a></li><li><a href=\"#guide-3\">Leak investigation and repair quotation</a></li><li><a href=\"#guide-4\">Separate pipe repair from access and surface restoration</a></li><li><a href=\"#guide-5\">Leak reports for tenants and property managers</a></li><li><a href=\"#guide-6\">Leak-reporting evidence and repair scope</a></li><li><a href=\"#guide-7\">Private pipes, meters and drainage</a></li></ul></nav>" as TrustedHtml
 },
 {
 "id": "section-5",
@@ -275,7 +275,7 @@ export const page: PageData = {
 {
 "id": "guide-1",
 "kind": "rich",
-"html": "\n<h2 id=\"guide-1\">Decide what needs attention first</h2>" as TrustedHtml
+"html": "\n<h2 id=\"guide-1\">Active leaks and immediate hazards</h2>" as TrustedHtml
 },
 {
 "id": "section-8",
@@ -290,7 +290,7 @@ export const page: PageData = {
 {
 "id": "guide-2",
 "kind": "rich",
-"html": "\n<h2 id=\"guide-2\">What to record before the inspection</h2>" as TrustedHtml
+"html": "\n<h2 id=\"guide-2\">Leak location, timing and water spread</h2>" as TrustedHtml
 },
 {
 "id": "section-11",
@@ -305,7 +305,7 @@ export const page: PageData = {
 {
 "id": "section-13",
 "kind": "rich",
-"html": "\n<h3>Use water meter records as a clue</h3>" as TrustedHtml
+"html": "\n<h3>Water meter records and suspected leaks</h3>" as TrustedHtml
 },
 {
 "id": "section-14",
@@ -320,7 +320,7 @@ export const page: PageData = {
 {
 "id": "guide-3",
 "kind": "rich",
-"html": "\n<h2 id=\"guide-3\">How Ellis takes a report through to a repair scope</h2>" as TrustedHtml
+"html": "\n<h2 id=\"guide-3\">Leak investigation and repair quotation</h2>" as TrustedHtml
 },
 {
 "id": "section-17",
@@ -390,7 +390,7 @@ export const page: PageData = {
 {
 "id": "guide-5",
 "kind": "rich",
-"html": "\n<h2 id=\"guide-5\">For tenants and property managers</h2>" as TrustedHtml
+"html": "\n<h2 id=\"guide-5\">Leak reports for tenants and property managers</h2>" as TrustedHtml
 },
 {
 "id": "section-31",
@@ -405,7 +405,7 @@ export const page: PageData = {
 {
 "id": "guide-6",
 "kind": "rich",
-"html": "\n<h2 id=\"guide-6\">Common leak-reporting questions</h2>" as TrustedHtml
+"html": "\n<h2 id=\"guide-6\">Leak-reporting evidence and repair scope</h2>" as TrustedHtml
 },
 {
 "id": "section-34",
@@ -415,7 +415,7 @@ export const page: PageData = {
 {
 "id": "section-35",
 "kind": "rich",
-"html": "\n<p>No. Report what you can see safely. A meter record can help with a stable suspected leak, but active water spread or an electrical hazard takes priority over collecting readings.</p>" as TrustedHtml
+"html": "\n<p>Report what you can see safely; meter readings are not required before contacting the team. A meter record can help with a stable suspected leak, but active water spread or an electrical hazard takes priority over collecting readings.</p>" as TrustedHtml
 },
 {
 "id": "section-36",
@@ -435,7 +435,7 @@ export const page: PageData = {
 {
 "id": "section-39",
 "kind": "rich",
-"html": "\n<p>Only if those tasks are included in the agreed scope. Ask for inspection, opening, pipe repair and surface restoration to be identified separately.</p>" as TrustedHtml
+"html": "\n<p>Leak detection, pipe repair and reinstating a wall are separate tasks. Ask for inspection, opening, pipe repair and surface restoration to be identified in the written quote; only the agreed work is included.</p>" as TrustedHtml
 },
 {
 "id": "section-40",
@@ -460,7 +460,7 @@ export const page: PageData = {
 {
 "id": "section-44",
 "kind": "faq",
-"container": "<!-- site-intent:start --><div class=\"intent-content\" data-site-intent><h2 id=\"guide-7\">Use the right route for the water source</h2><p>A suspected private pipe leak, water at the meter and wastewater returning through a drain need different next steps. Report the observation without moving covers or entering water to investigate. If the source is not clear, say so. A useful enquiry separates the location of the symptom from a proposed diagnosis.</p><ul class=\"intent-links\"><li><a href=\"water-leak-detection-perth.html\">Request private-pipe leak investigation</a></li><li><a href=\"blocked-drains-perth.html\">Wastewater and blocked-drain guidance</a></li></ul><details><summary>{{ppp:faq:0:question}}</summary>{{ppp:faq:0:answer}}</details><details><summary>{{ppp:faq:1:question}}</summary>{{ppp:faq:1:answer}}</details></div>" as TrustedHtml,
+"container": "<!-- site-intent:start --><div class=\"intent-content\" data-site-intent><h2 id=\"guide-7\">Private pipes, meters and drainage</h2><p>A suspected private pipe leak, water at the meter and wastewater returning through a drain need different next steps. Report the observation without moving covers or entering water to investigate. If the source is not clear, say so. A useful enquiry separates the location of the symptom from a proposed diagnosis.</p><ul class=\"intent-links\"><li><a href=\"water-leak-detection-perth.html\">Request private-pipe leak investigation</a></li><li><a href=\"blocked-drains-perth.html\">Wastewater and blocked-drain guidance</a></li></ul><details><summary>{{ppp:faq:0:question}}</summary>{{ppp:faq:0:answer}}</details><details><summary>{{ppp:faq:1:question}}</summary>{{ppp:faq:1:answer}}</details></div>" as TrustedHtml,
 "items": [
 {
 "question": "Should I treat water at the meter as a normal private-pipe repair?",

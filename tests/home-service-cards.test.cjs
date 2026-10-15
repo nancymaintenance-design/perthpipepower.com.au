@@ -19,7 +19,7 @@ function cardFor(href) {
 
 for (const [pageHref, cardHeading, image] of [
   ['fixtures-appliances-perth.html', 'Fixture, Tap &amp; Appliance Connection Services', 'fixtures-appliances-service.png'],
-  ['renewables-smart-home-perth.html', 'Smart Home &amp; Energy Electrical Services', 'renewables-smart-home-service.png'],
+  ['renewables-smart-home-perth.html', 'Smart Lighting &amp; Electrical Controls', 'renewables-smart-home-service.png'],
 ]) {
   const card = cardFor(pageHref);
   assert.match(card, new RegExp(`<h3>${cardHeading}<\\/h3>`));

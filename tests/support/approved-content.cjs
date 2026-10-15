@@ -312,6 +312,49 @@ for(const edit of require('../fixtures/fullsite-refinement/review-round-1.json')
  replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
  approved.pages[edit.file]=snapshotFromTree(tree,previous);
 }
+// Task 2 is a literal fragment policy over the previously reviewed output.
+// Plain text/attribute edits have one exact occurrence; HTML edits retain the
+// strict structural fragment matcher. No page or content category is exempted.
+for(const edit of require('../fixtures/fullsite-refinement/editorial-copy-edits.json').edits){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ if(!edit.before.includes('<')||edit.before.startsWith('>')){
+  const before=text(['fragment',parts(edit.before.startsWith('>')?edit.before.slice(1,-4):edit.before)]);
+  const after=text(['fragment',parts(edit.after.startsWith('>')?edit.after.slice(1,-4):edit.after)]);
+  let count=0;
+  for(const n of walk(tree)){
+   if(n[0]==='text'&&n[1].includes(before)){assert.equal(n[1].split(before).length-1,1,edit.file+': one exact text occurrence');n[1]=n[1].replace(before,after);count++;}
+   if(n[0]==='element')for(const a of n[3])if(a[2].includes(before)){assert.equal(a[2].split(before).length-1,1,edit.file+': one exact attribute occurrence');a[2]=a[2].replace(before,after);count++;}
+  }
+  assert.equal(count,1,edit.file+': exact editorial text/attribute edit: '+edit.reason);
+ }else replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
+ approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
+{
+ const edit=require('../fixtures/fullsite-refinement/editorial-faq-edit.json');
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ const detail=q=>`<details><summary>${q.question}</summary>${q.answerHtml}</details>`;
+ replaceFragment(tree,detail(edit.before),detail(edit.after),edit.file,edit.reason);
+ const script=walk(tree).find(n=>isEl(n,'script')&&attr(n,'type')==='application/ld+json');
+ const graph=JSON.parse(text(script))['@graph'].find(n=>n['@type']==='FAQPage');
+ assert.equal(graph.mainEntity[edit.index].name,edit.before.question);
+ assert.equal(graph.mainEntity[edit.index].acceptedAnswer.text,edit.before.answer);
+ let source=text(script);
+ for(const key of ['question','answer']){
+  assert.equal(source.split(JSON.stringify(edit.before[key])).length-1,1,edit.file+': one prior schema FAQ value');
+  source=source.replace(JSON.stringify(edit.before[key]),JSON.stringify(edit.after[key]));
+ }
+ script[4]=[['text',source]];approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
+for(const edit of require('../fixtures/fullsite-refinement/editorial-heading-edits.json').edits){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
+ approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
+for(const edit of require('../fixtures/fullsite-refinement/editorial-photo-edits.json').edits){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
+ approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  return comparePublicOutput(root,manifest).filter(d=>{

@@ -1,0 +1,625 @@
+{
+  "evidence": "Task 2 author-defined, exact canonical fragment before-to-after edits against 7c0f9e7. Not a full-page snapshot or generated-output capture.",
+  "edits": [
+    {
+      "file": "index.html",
+      "section": null,
+      "field": "hero",
+      "before": "<h2>Describe the water problem, simply.</h2>",
+      "after": "<h2>Leak repairs, drain clearing and hot water.</h2>",
+      "reason": "Lead plumbing slide with actual repair work",
+      "sourceBefore": "<h2>Describe the water problem, simply.</h2>",
+      "sourceAfter": "<h2>Leak repairs, drain clearing and hot water.</h2>"
+    },
+    {
+      "file": "index.html",
+      "section": null,
+      "field": "hero",
+      "before": "<p>\n                Leaks, slow drains and hot-water symptoms are easier to action\n                when the location and observations are clear.\n              </p>",
+      "after": "<p>Plumbing repairs for leaking pipes, blocked drains, taps, toilets and hot-water problems. We assess the installation and confirm repair or replacement work in a written quote.</p>",
+      "reason": "Explain plumbing service scope before reporting preparation",
+      "sourceBefore": "<p>\n                Leaks, slow drains and hot-water symptoms are easier to action\n                when the location and observations are clear.\n              </p>",
+      "sourceAfter": "<p>Plumbing repairs for leaking pipes, blocked drains, taps, toilets and hot-water problems. We assess the installation and confirm repair or replacement work in a written quote.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": null,
+      "field": "hero",
+      "before": "<h2>Safety first. Facts next.</h2>",
+      "after": "<h2>Electrical repairs, lighting and power points.</h2>",
+      "reason": "Lead electrical slide with actual work",
+      "sourceBefore": "<h2>Safety first. Facts next.</h2>",
+      "sourceAfter": "<h2>Electrical repairs, lighting and power points.</h2>"
+    },
+    {
+      "file": "index.html",
+      "section": null,
+      "field": "hero",
+      "before": "<p>\n                For electrical faults, report what you can observe from a safe\n                position. Never dismantle equipment to diagnose a problem.\n              </p>",
+      "after": "<p>Fault finding for power loss and recurring trips, plus lighting, power points, fans and smoke-alarm maintenance. Planned installation and fault repairs are assessed for the existing property.</p>",
+      "reason": "Explain electrical service choices; safety remains in dedicated home section",
+      "sourceBefore": "<p>\n                For electrical faults, report what you can observe from a safe\n                position. Never dismantle equipment to diagnose a problem.\n              </p>",
+      "sourceAfter": "<p>Fault finding for power loss and recurring trips, plus lighting, power points, fans and smoke-alarm maintenance. Planned installation and fault repairs are assessed for the existing property.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 1,
+      "field": "html",
+      "before": "<span class=\"eyebrow\">One clear starting point</span>",
+      "after": "<span class=\"eyebrow\">Perth repair services</span>",
+      "reason": "Use a factual intro label",
+      "sourceBefore": "<span class=\"eyebrow\">One clear starting point</span>",
+      "sourceAfter": "<span class=\"eyebrow\">Perth repair services</span>"
+    },
+    {
+      "file": "index.html",
+      "section": 1,
+      "field": "html",
+      "before": "<h2>Plumbing and electrical repairs, clearly explained.</h2>",
+      "after": "<h2>Plumbing and electrical work for homes and managed properties</h2>",
+      "reason": "Name service and audience",
+      "sourceBefore": "<h2>Plumbing and electrical repairs, clearly explained.</h2>",
+      "sourceAfter": "<h2>Plumbing and electrical work for homes and managed properties</h2>"
+    },
+    {
+      "file": "index.html",
+      "section": 1,
+      "field": "html",
+      "before": "<p class=\"lead\">\n              Property issues do not always arrive neatly labelled. Tell us what\n              you have noticed, where the property is, and any access details\n              that matter.\n            </p>",
+      "after": "<p class=\"lead\">Our Perth team handles plumbing repairs, electrical repairs and property maintenance for homeowners, rentals and strata properties. Choose the service below for the work involved, existing price guides and quotation conditions.</p>",
+      "reason": "Opening now introduces work and route choices",
+      "sourceBefore": "<p class=\"lead\">\n              Property issues do not always arrive neatly labelled. Tell us what\n              you have noticed, where the property is, and any access details\n              that matter.\n            </p>",
+      "sourceAfter": "<p class=\"lead\">Our Perth team handles plumbing repairs, electrical repairs and property maintenance for homeowners, rentals and strata properties. Choose the service below for the work involved, existing price guides and quotation conditions.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "<p>\n                For slow drainage, a blocked toilet, gurgling or fixture\n                backups, start with the affected room and whether water is\n                returning elsewhere.\n              </p>",
+      "after": "<p>Assessment and clearing of blocked sinks, showers and toilets, with separate repair options where investigation identifies damaged drainage.</p>",
+      "reason": "Drain card describes clearing and repair",
+      "sourceBefore": "<p>\n                For slow drainage, a blocked toilet, gurgling or fixture\n                backups, start with the affected room and whether water is\n                returning elsewhere.\n              </p>",
+      "sourceAfter": "<p>Assessment and clearing of blocked sinks, showers and toilets, with separate repair options where investigation identifies damaged drainage.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "<p>\n                For active water or a failed pipe, put safety first and note the\n                affected area before contacting us.\n              </p>",
+      "after": "<p>Repair of failed private pipes and connections. The quote distinguishes the pipe repair from concealed access work and surface reinstatement.</p>",
+      "reason": "Burst-pipe card names the actual work",
+      "sourceBefore": "<p>\n                For active water or a failed pipe, put safety first and note the\n                affected area before contacting us.\n              </p>",
+      "sourceAfter": "<p>Repair of failed private pipes and connections. The quote distinguishes the pipe repair from concealed access work and surface reinstatement.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "<p>\n                Describe the symptom rather than testing or dismantling\n                electrical equipment.\n              </p>",
+      "after": "<p>Repair and replacement of lighting and power points, with wiring and circuit requirements assessed for new or relocated fittings.</p>",
+      "reason": "Electrical card introduces repair/installation",
+      "sourceBefore": "<p>\n                Describe the symptom rather than testing or dismantling\n                electrical equipment.\n              </p>",
+      "sourceAfter": "<p>Repair and replacement of lighting and power points, with wiring and circuit requirements assessed for new or relocated fittings.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "<p>\n                Bring together the property reference, issue, access\n                arrangements and approval contact.\n              </p>",
+      "after": "<p>Plumbing and electrical maintenance for rentals and strata properties, with reported faults, approved work and follow-up items kept with the property work order.</p>",
+      "reason": "Maintenance card explains service value",
+      "sourceBefore": "<p>\n                Bring together the property reference, issue, access\n                arrangements and approval contact.\n              </p>",
+      "sourceAfter": "<p>Plumbing and electrical maintenance for rentals and strata properties, with reported faults, approved work and follow-up items kept with the property work order.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "<p>\n                Taps, toilets, showers, kitchen and laundry connections, and\n                appliance connections, taps and fixture repairs.\n              </p>",
+      "after": "<p>Tap and fixture repairs, toilet replacement and dishwasher connections. Supply, removal and connection work are identified in the agreed quote.</p>",
+      "reason": "Remove repeated fittings list and use confirmed scope",
+      "sourceBefore": "<p>\n                Taps, toilets, showers, kitchen and laundry connections, and\n                appliance connections, taps and fixture repairs.\n              </p>",
+      "sourceAfter": "<p>Tap and fixture repairs, toilet replacement and dishwasher connections. Supply, removal and connection work are identified in the agreed quote.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "<p>\n                Smart lighting, automation, energy equipment and electrical\n                upgrades for Perth properties.\n              </p>",
+      "after": "<p>Smart lighting and electrical controls assessed against the existing fittings, wiring and intended operation. The quote identifies installation and product configuration.</p>",
+      "reason": "Constrain smart-home card to established lighting/control scope",
+      "sourceBefore": "<p>\n                Smart lighting, automation, energy equipment and electrical\n                upgrades for Perth properties.\n              </p>",
+      "sourceAfter": "<p>Smart lighting and electrical controls assessed against the existing fittings, wiring and intended operation. The quote identifies installation and product configuration.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "<h3>Smart Home &amp; Energy Electrical Services</h3>",
+      "after": "<h3>Smart Lighting &amp; Electrical Controls</h3>",
+      "reason": "Unprotected card heading names confirmed work only",
+      "sourceBefore": "<h3>Smart Home &amp; Energy Electrical Services</h3>",
+      "sourceAfter": "<h3>Smart Lighting &amp; Electrical Controls</h3>"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "Smart lighting &amp; energy electrical services →",
+      "after": "Smart lighting &amp; electrical controls →",
+      "reason": "Align card link label with service scope",
+      "sourceBefore": "Smart lighting &amp; energy electrical services →",
+      "sourceAfter": "Smart lighting &amp; electrical controls →"
+    },
+    {
+      "file": "index.html",
+      "section": 2,
+      "field": "html",
+      "before": "electrician configuring smart-home and energy equipment",
+      "after": "electrician working with electrical control equipment",
+      "reason": "Avoid an image description that implies unconfirmed energy installation",
+      "sourceBefore": "electrician configuring smart-home and energy equipment",
+      "sourceAfter": "electrician working with electrical control equipment"
+    },
+    {
+      "file": "index.html",
+      "section": 3,
+      "field": "html",
+      "before": "<span class=\"eyebrow\">A better first message</span>",
+      "after": "<span class=\"eyebrow\">Repair enquiries</span>",
+      "reason": "Factual request label",
+      "sourceBefore": "<span class=\"eyebrow\">A better first message</span>",
+      "sourceAfter": "<span class=\"eyebrow\">Repair enquiries</span>"
+    },
+    {
+      "file": "index.html",
+      "section": 4,
+      "field": "html",
+      "before": "<h2>Real work. A closer look.</h2>",
+      "after": "<h2>Kitchen lighting, renovation wiring and switchboard work</h2>",
+      "reason": "Name actual pictured subjects",
+      "sourceBefore": "<h2>Real work. A closer look.</h2>",
+      "sourceAfter": "<h2>Kitchen lighting, renovation wiring and switchboard work</h2>"
+    },
+    {
+      "file": "index.html",
+      "section": 4,
+      "field": "html",
+      "before": "<p>Downlights and fittings shown during the kitchen renovation.</p>",
+      "after": "<p>The photograph shows recessed downlights across the kitchen ceiling. For lighting work, fitting selection, placement and the existing electrical connection are considered together.</p>",
+      "reason": "Connect pictured lighting to relevant installation decisions without invented results",
+      "sourceBefore": "<p>Downlights and fittings shown during the kitchen renovation.</p>",
+      "sourceAfter": "<p>The photograph shows recessed downlights across the kitchen ceiling. For lighting work, fitting selection, placement and the existing electrical connection are considered together.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 4,
+      "field": "html",
+      "before": "<p>Electrical rough-in before the wall linings are installed.</p>",
+      "after": "<p>Visible wiring is shown before wall linings are installed. This stage makes the cable routes visible; the photograph alone does not establish the completed installation or testing results.</p>",
+      "reason": "Explain visible wiring stage without claiming completion",
+      "sourceBefore": "<p>Electrical rough-in before the wall linings are installed.</p>",
+      "sourceAfter": "<p>Visible wiring is shown before wall linings are installed. This stage makes the cable routes visible; the photograph alone does not establish the completed installation or testing results.</p>"
+    },
+    {
+      "file": "index.html",
+      "section": 4,
+      "field": "html",
+      "before": "<p>A view of residential circuit and switchboard equipment.</p>",
+      "after": "<p>The open protective cover shows the arrangement of circuit equipment. Repairs and upgrades require assessment of the existing board and protection; a photograph does not identify an electrical fault.</p>",
+      "reason": "Explain pictured board and diagnostic boundary",
+      "sourceBefore": "<p>A view of residential circuit and switchboard equipment.</p>",
+      "sourceAfter": "<p>The open protective cover shows the arrangement of circuit equipment. Repairs and upgrades require assessment of the existing board and protection; a photograph does not identify an electrical fault.</p>"
+    },
+    {
+      "file": "about.html",
+      "section": 1,
+      "field": "html",
+      "before": "\n      <section class=\"rich-band\">\n        <div class=\"shell\">\n          <span class=\"eyebrow\">Clear scope before work</span>\n          <h2>Practical repairs with a written quote before work proceeds.</h2>\n          <div class=\"split\">\n            <div>\n              <p>\n                For each plumbing or electrical repair, we begin with the\n                observable issue, property details and access information.\n                This helps our local team clarify the work required before a\n                repair is booked.\n              </p>\n              <p>\n                The written quote confirms the repair scope and price before\n                work proceeds. If assessment identifies additional work, that\n                is explained before it is added to the scope.\n              </p>\n            </div>\n            <div class=\"note\">\n              <h3>Service commitments</h3>\n              <p>\n                <strong>Clear repair scope.</strong> The observed issue,\n                property details and access information guide the assessment.\n              </p>\n              <p>\n                <strong>Written quote.</strong> Scope and price are confirmed\n                before work proceeds.\n              </p>\n              <p>\n                <strong>Care for property.</strong> Treating a home or managed\n                property as something worth looking after.\n              </p>\n            </div>\n          </div>\n        </div>\n      </section>",
+      "after": "\n<section class=\"rich-band\"><div class=\"shell text-column\"><span class=\"eyebrow\">Electrical work</span><h2>Kitchen lighting and renovation wiring</h2><p>Our existing electrical work photographs show lighting fittings, exposed wiring during renovation and residential switchboard equipment. They give a view of the installations our electrical service works with, while each property still needs its own assessment.</p><figure><picture data-responsive-media><source type=\"image/avif\" srcset=\"images/electrical-work/kitchen-lighting-wide-responsive-480.avif 480w, images/electrical-work/kitchen-lighting-wide-responsive-960.avif 960w\" sizes=\"(max-width:600px) calc(100vw - 32px), (max-width:800px) 50vw, 390px\"><img loading=\"lazy\" decoding=\"async\" srcset=\"images/electrical-work/kitchen-lighting-wide-responsive-480.webp 480w, images/electrical-work/kitchen-lighting-wide-responsive-960.webp 960w\" sizes=\"(max-width:600px) calc(100vw - 32px), (max-width:800px) 50vw, 390px\" src=\"images/electrical-work/kitchen-lighting-wide.jpg\" width=\"2048\" height=\"1536\" alt=\"Kitchen with installed downlights during renovation\"></picture><figcaption>Recessed downlights in a kitchen renovation, from our existing electrical work photographs.</figcaption></figure><p>Lighting installation includes the fitting, intended location, controls and connection requirements. Wiring visible before wall linings are fitted is an installation stage, not evidence of completed testing. See <a href=\"lighting-installation-perth.html\">lighting installation and repairs</a> or <a href=\"switchboard-upgrades-perth.html\">switchboard repairs and upgrades</a> for the relevant work and quotation scope.</p></div></section>",
+      "reason": "Replace duplicated quote/commitment cards with existing work image and substantive service explanation",
+      "sourceBefore": "\n      <section class=\"rich-band\">\n        <div class=\"shell\">\n          <span class=\"eyebrow\">Clear scope before work</span>\n          <h2>Practical repairs with a written quote before work proceeds.</h2>\n          <div class=\"split\">\n            <div>\n              <p>\n                For each plumbing or electrical repair, we begin with the\n                observable issue, property details and access information.\n                This helps our local team clarify the work required before a\n                repair is booked.\n              </p>\n              <p>\n                The written quote confirms the repair scope and price before\n                work proceeds. If assessment identifies additional work, that\n                is explained before it is added to the scope.\n              </p>\n            </div>\n            <div class=\"note\">\n              <h3>Service commitments</h3>\n              <p>\n                <strong>Clear repair scope.</strong> The observed issue,\n                property details and access information guide the assessment.\n              </p>\n              <p>\n                <strong>Written quote.</strong> Scope and price are confirmed\n                before work proceeds.\n              </p>\n              <p>\n                <strong>Care for property.</strong> Treating a home or managed\n                property as something worth looking after.\n              </p>\n            </div>\n          </div>\n        </div>\n      </section>",
+      "sourceAfter": "\n<section class=\"rich-band\"><div class=\"shell text-column\"><span class=\"eyebrow\">Electrical work</span><h2>Kitchen lighting and renovation wiring</h2><p>Our existing electrical work photographs show lighting fittings, exposed wiring during renovation and residential switchboard equipment. They give a view of the installations our electrical service works with, while each property still needs its own assessment.</p><figure><picture data-responsive-media><source type=\"image/avif\" srcset=\"images/electrical-work/kitchen-lighting-wide-responsive-480.avif 480w, images/electrical-work/kitchen-lighting-wide-responsive-960.avif 960w\" sizes=\"(max-width:600px) calc(100vw - 32px), (max-width:800px) 50vw, 390px\"><img loading=\"lazy\" decoding=\"async\" srcset=\"images/electrical-work/kitchen-lighting-wide-responsive-480.webp 480w, images/electrical-work/kitchen-lighting-wide-responsive-960.webp 960w\" sizes=\"(max-width:600px) calc(100vw - 32px), (max-width:800px) 50vw, 390px\" src=\"images/electrical-work/kitchen-lighting-wide.jpg\" width=\"2048\" height=\"1536\" alt=\"Kitchen with installed downlights during renovation\"></picture><figcaption>Recessed downlights in a kitchen renovation, from our existing electrical work photographs.</figcaption></figure><p>Lighting installation includes the fitting, intended location, controls and connection requirements. Wiring visible before wall linings are fitted is an installation stage, not evidence of completed testing. See <a href=\"lighting-installation-perth.html\">lighting installation and repairs</a> or <a href=\"switchboard-upgrades-perth.html\">switchboard repairs and upgrades</a> for the relevant work and quotation scope.</p></div></section>"
+    },
+    {
+      "file": "about.html",
+      "section": 5,
+      "field": "html",
+      "before": "<h2>Clear details before work is arranged.</h2>\n          <div class=\"rich-grid\">\n            <article><h3>1. Tell us what you have noticed</h3><p>Share the property suburb or address, the room or area affected, what you can see, hear or smell, and when the issue began. Photos can be helpful when they can be taken safely.</p></article>\n            <article><h3>2. Include access and approval information</h3><p>For managed properties, include the tenant or on-site contact, access notes, work-order reference and the person responsible for approvals. This helps us understand the practical context of the request.</p></article>\n            <article><h3>3. Confirm scope and written quote</h3><p>Our local team arranges an on-site assessment, identifies the fault or installation requirements and confirms the scope and written quote. We arrange the appropriately qualified trades for specialist or regulated work and confirm the responsible contractor and documentation before booking.</p></article>\n          </div>\n        </div>",
+      "after": "<h2>Assessment, quotation and repair booking</h2><p>Start with the property address, the repair or installation required and the contact who can arrange entry. For managed properties, include the work-order reference and the person authorised to approve costs. Our team arranges the assessment and confirms the work and price in a written quote before work proceeds.</p><p>Additional findings are explained before extra work is added. The responsible contractor, relevant qualifications and documentation are confirmed for specialist or regulated work before booking. The <a href=\"property-management.html\">property maintenance service</a> explains how plumbing and electrical tasks are recorded and approved together.</p></div>",
+      "reason": "Compress repeated three-card preparation/quote process into one continuous booking chapter",
+      "sourceBefore": "<h2>Clear details before work is arranged.</h2>\n          <div class=\"rich-grid\">\n            <article><h3>1. Tell us what you have noticed</h3><p>Share the property suburb or address, the room or area affected, what you can see, hear or smell, and when the issue began. Photos can be helpful when they can be taken safely.</p></article>\n            <article><h3>2. Include access and approval information</h3><p>For managed properties, include the tenant or on-site contact, access notes, work-order reference and the person responsible for approvals. This helps us understand the practical context of the request.</p></article>\n            <article><h3>3. Confirm scope and written quote</h3><p>Our local team arranges an on-site assessment, identifies the fault or installation requirements and confirms the scope and written quote. We arrange the appropriately qualified trades for specialist or regulated work and confirm the responsible contractor and documentation before booking.</p></article>\n          </div>\n        </div>",
+      "sourceAfter": "<h2>Assessment, quotation and repair booking</h2><p>Start with the property address, the repair or installation required and the contact who can arrange entry. For managed properties, include the work-order reference and the person authorised to approve costs. Our team arranges the assessment and confirms the work and price in a written quote before work proceeds.</p><p>Additional findings are explained before extra work is added. The responsible contractor, relevant qualifications and documentation are confirmed for specialist or regulated work before booking. The <a href=\"property-management.html\">property maintenance service</a> explains how plumbing and electrical tasks are recorded and approved together.</p></div>"
+    },
+    {
+      "file": "about.html",
+      "section": 7,
+      "field": "html",
+      "before": "<h2>Documentation before the right work begins.</h2>",
+      "after": "<h2>Plumbing and electrical licensing and insurance documents</h2>",
+      "reason": "Name actual company information rather than a vague promise",
+      "sourceBefore": "<h2>Documentation before the right work begins.</h2>",
+      "sourceAfter": "<h2>Plumbing and electrical licensing and insurance documents</h2>"
+    },
+    {
+      "file": "perth-cbd-inner-suburbs.html",
+      "section": 1,
+      "field": "container",
+      "before": "<h3>Arrange a repair in a multi-unit or inner-city property</h3><p>For an apartment or shared building, give the unit, building name and the contact who can arrange entry. Identify whether the reported issue is inside the unit or in a common area; that observation does not decide responsibility. Confirm any concierge, lift, parking or equipment-access arrangements with the visit rather than assuming they are included.</p>",
+      "after": "",
+      "reason": "Keep access/approval explanation in the existing regional booking chapter, not repeated above FAQ",
+      "sourceBefore": "<h3>Arrange a repair in a multi-unit or inner-city property</h3><p>For an apartment or shared building, give the unit, building name and the contact who can arrange entry. Identify whether the reported issue is inside the unit or in a common area; that observation does not decide responsibility. Confirm any concierge, lift, parking or equipment-access arrangements with the visit rather than assuming they are included.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "perth-cbd-inner-suburbs.html",
+      "section": 0,
+      "field": "html",
+      "before": "<p>For an apartment, strata or managed property, include the building name, unit or level, access contact and any lift, concierge, key or parking instructions that affect the repair visit.</p>",
+      "after": "<p>Plumbing and electrical work for apartments, homes and managed buildings in CBD and Inner Perth. We assess private fixtures, drainage, hot-water and electrical installations, with building-managed services identified separately in the scope.</p>",
+      "reason": "Lead regional guide with actual work instead of repeating visit preparation",
+      "sourceBefore": "<p>For an apartment, strata or managed property, include the building name, unit or level, access contact and any lift, concierge, key or parking instructions that affect the repair visit.</p>",
+      "sourceAfter": "<p>Plumbing and electrical work for apartments, homes and managed buildings in CBD and Inner Perth. We assess private fixtures, drainage, hot-water and electrical installations, with building-managed services identified separately in the scope.</p>"
+    },
+    {
+      "file": "northern-suburbs.html",
+      "section": 1,
+      "field": "container",
+      "before": "<h3>Identify the entrance and the affected part of the property</h3><p>If the work is in a rear dwelling, upstairs room or separate building, explain how it is reached from the street address. Distinguish the affected fitting from the whole-property supply, and mention any access restrictions. The team uses your address and access details to confirm attendance and the quoted work.</p>",
+      "after": "",
+      "reason": "Keep access/approval explanation in the existing regional booking chapter, not repeated above FAQ",
+      "sourceBefore": "<h3>Identify the entrance and the affected part of the property</h3><p>If the work is in a rear dwelling, upstairs room or separate building, explain how it is reached from the street address. Distinguish the affected fitting from the whole-property supply, and mention any access restrictions. The team uses your address and access details to confirm attendance and the quoted work.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "northern-suburbs.html",
+      "section": 0,
+      "field": "html",
+      "before": "<p>For a Northern Suburbs repair request, state the suburb, property type and the part of the property affected. Add safe observations such as an affected room, fixture or circuit rather than an attempted diagnosis.</p>",
+      "after": "<p>Plumbing and electrical repairs for Northern Suburbs homes, rentals and strata properties. Drain clearing, fixture repairs, hot-water assessment and electrical fault finding can be quoted as distinct tasks within the same property request.</p>",
+      "reason": "Lead regional guide with actual work instead of repeating visit preparation",
+      "sourceBefore": "<p>For a Northern Suburbs repair request, state the suburb, property type and the part of the property affected. Add safe observations such as an affected room, fixture or circuit rather than an attempted diagnosis.</p>",
+      "sourceAfter": "<p>Plumbing and electrical repairs for Northern Suburbs homes, rentals and strata properties. Drain clearing, fixture repairs, hot-water assessment and electrical fault finding can be quoted as distinct tasks within the same property request.</p>"
+    },
+    {
+      "file": "southern-suburbs.html",
+      "section": 1,
+      "field": "container",
+      "before": "<h3>Keep each property and repair request distinct</h3><p>For an owner or manager arranging several jobs, keep the street address, occupant report and approval contact with each task. Do not use one suburb selection as an instruction for several properties. When the issue is near a boundary, shared pipe or external supply, describe the location without assuming ownership or a repair responsibility.</p>",
+      "after": "",
+      "reason": "Keep access/approval explanation in the existing regional booking chapter, not repeated above FAQ",
+      "sourceBefore": "<h3>Keep each property and repair request distinct</h3><p>For an owner or manager arranging several jobs, keep the street address, occupant report and approval contact with each task. Do not use one suburb selection as an instruction for several properties. When the issue is near a boundary, shared pipe or external supply, describe the location without assuming ownership or a repair responsibility.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "southern-suburbs.html",
+      "section": 0,
+      "field": "html",
+      "before": "<p>For a Southern Suburbs property, including <a href=\"contact.html?suburb=Thornlie\">Thornlie</a>, report visible water, drainage changes and electrical faults as separate observations. Include the suburb, access contact and whether the request is for a home, rental, strata or managed property.</p>",
+      "after": "<p>Plumbing and electrical repairs for Southern Suburbs properties, including <a href=\"contact.html?suburb=Thornlie\">Thornlie</a>. Our team assesses leak sources, damaged pipework, drainage, hot water and electrical faults before confirming the work in a written quote.</p>",
+      "reason": "Lead regional guide with actual work instead of repeating visit preparation",
+      "sourceBefore": "<p>For a Southern Suburbs property, including <a href=\"contact.html?suburb=Thornlie\">Thornlie</a>, report visible water, drainage changes and electrical faults as separate observations. Include the suburb, access contact and whether the request is for a home, rental, strata or managed property.</p>",
+      "sourceAfter": "<p>Plumbing and electrical repairs for Southern Suburbs properties, including <a href=\"contact.html?suburb=Thornlie\">Thornlie</a>. Our team assesses leak sources, damaged pipework, drainage, hot water and electrical faults before confirming the work in a written quote.</p>"
+    },
+    {
+      "file": "eastern-suburbs.html",
+      "section": 1,
+      "field": "container",
+      "before": "<h3>Explain site access before arranging the assessment</h3><p>For a property with controlled entry, a shared driveway or operating restrictions, give the nominated access contact and any required check-in arrangements. State whether the request concerns a home, rental or other premises. Provide the property type and proposed task so the team can confirm the appropriate service.</p>",
+      "after": "",
+      "reason": "Keep access/approval explanation in the existing regional booking chapter, not repeated above FAQ",
+      "sourceBefore": "<h3>Explain site access before arranging the assessment</h3><p>For a property with controlled entry, a shared driveway or operating restrictions, give the nominated access contact and any required check-in arrangements. State whether the request concerns a home, rental or other premises. Provide the property type and proposed task so the team can confirm the appropriate service.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "eastern-suburbs.html",
+      "section": 0,
+      "field": "html",
+      "before": "<p>For an Eastern Suburbs electrical repair request, identify the affected area or circuit only if it can be observed safely. Pair that with the property access contact and any separate plumbing concern.</p>",
+      "after": "<p>Plumbing and electrical work for Eastern Suburbs homes, rentals and managed premises. We assess fixture and appliance connections, drainage, hot water, power faults and switchboard concerns, with repairs and planned installation quoted to suit the existing property.</p>",
+      "reason": "Lead regional guide with actual work instead of repeating visit preparation",
+      "sourceBefore": "<p>For an Eastern Suburbs electrical repair request, identify the affected area or circuit only if it can be observed safely. Pair that with the property access contact and any separate plumbing concern.</p>",
+      "sourceAfter": "<p>Plumbing and electrical work for Eastern Suburbs homes, rentals and managed premises. We assess fixture and appliance connections, drainage, hot water, power faults and switchboard concerns, with repairs and planned installation quoted to suit the existing property.</p>"
+    },
+    {
+      "file": "western-suburbs.html",
+      "section": 1,
+      "field": "container",
+      "before": "<h3>Separate a current fault from planned replacement work</h3><p>If the request includes both a fault and a proposed renovation fitting, list them separately. Product dimensions, existing connections and access can affect replacement work. Give any building-entry restrictions or parking arrangements when booking; do not purchase a fitting on the assumption that it matches the current installation.</p>",
+      "after": "",
+      "reason": "Keep access/approval explanation in the existing regional booking chapter, not repeated above FAQ",
+      "sourceBefore": "<h3>Separate a current fault from planned replacement work</h3><p>If the request includes both a fault and a proposed renovation fitting, list them separately. Product dimensions, existing connections and access can affect replacement work. Give any building-entry restrictions or parking arrangements when booking; do not purchase a fitting on the assumption that it matches the current installation.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "western-suburbs.html",
+      "section": 0,
+      "field": "html",
+      "before": "<p>For a Western Suburbs repair request, distinguish fixture concerns such as taps, toilets and drainage from lighting, switches and power points. Include the affected room or outdoor area and an access contact.</p>",
+      "after": "<p>Plumbing and electrical repairs for Western Suburbs bathrooms, kitchens, laundries and living areas. The work can include tap and toilet repairs, drainage, lighting and power points, with product replacement and new connections identified separately.</p>",
+      "reason": "Lead regional guide with actual work instead of repeating visit preparation",
+      "sourceBefore": "<p>For a Western Suburbs repair request, distinguish fixture concerns such as taps, toilets and drainage from lighting, switches and power points. Include the affected room or outdoor area and an access contact.</p>",
+      "sourceAfter": "<p>Plumbing and electrical repairs for Western Suburbs bathrooms, kitchens, laundries and living areas. The work can include tap and toilet repairs, drainage, lighting and power points, with product replacement and new connections identified separately.</p>"
+    },
+    {
+      "file": "perth-hills-swan-valley.html",
+      "section": 1,
+      "field": "container",
+      "before": "<h3>Describe the property route and equipment location</h3><p>Include the complete address, the appropriate driveway or entry point and any known access restriction. If the equipment is outside or in a separate building, describe its location without entering a hazard. Tanks, pumps, private wastewater systems and other specialist infrastructure are not automatically included in a general repair request; confirm the specific task first.</p>",
+      "after": "",
+      "reason": "Keep access/approval explanation in the existing regional booking chapter, not repeated above FAQ",
+      "sourceBefore": "<h3>Describe the property route and equipment location</h3><p>Include the complete address, the appropriate driveway or entry point and any known access restriction. If the equipment is outside or in a separate building, describe its location without entering a hazard. Tanks, pumps, private wastewater systems and other specialist infrastructure are not automatically included in a general repair request; confirm the specific task first.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "perth-hills-swan-valley.html",
+      "section": 0,
+      "field": "html",
+      "before": "<p>For Perth Hills and Swan Valley properties, include the suburb and any driveway, gate, site-contact or access detail that is relevant to the repair visit. Keep electrical, hot-water, drainage and leak symptoms separate.</p>",
+      "after": "<p>Plumbing and electrical repairs for Perth Hills and Swan Valley properties. We assess hot-water equipment, leaks, drainage and electrical faults against the installation at the address; equipment type and specialist system requirements are confirmed before work is accepted.</p>",
+      "reason": "Lead regional guide with actual work instead of repeating visit preparation",
+      "sourceBefore": "<p>For Perth Hills and Swan Valley properties, include the suburb and any driveway, gate, site-contact or access detail that is relevant to the repair visit. Keep electrical, hot-water, drainage and leak symptoms separate.</p>",
+      "sourceAfter": "<p>Plumbing and electrical repairs for Perth Hills and Swan Valley properties. We assess hot-water equipment, leaks, drainage and electrical faults against the installation at the address; equipment type and specialist system requirements are confirmed before work is accepted.</p>"
+    },
+    {
+      "file": "service-areas.html",
+      "section": 1,
+      "field": "container",
+      "before": "Mandurah and Peel are not automatically included by the research table; ask about an address outside the listed directory.",
+      "after": "For an address outside the listed Perth suburbs, contact the team to confirm coverage and availability.",
+      "reason": "Remove internal research explanation without expanding coverage",
+      "sourceBefore": "Mandurah and Peel are not automatically included by the research table; ask about an address outside the listed directory.",
+      "sourceAfter": "For an address outside the listed Perth suburbs, contact the team to confirm coverage and availability."
+    },
+    {
+      "file": "service-areas.html",
+      "section": 1,
+      "field": "container",
+      "before": "<h2>Tell us what is happening.</h2>",
+      "after": "<h2>Request plumbing or electrical work</h2>",
+      "reason": "Use service-led request heading",
+      "sourceBefore": "<h2>Tell us what is happening.</h2>",
+      "sourceAfter": "<h2>Request plumbing or electrical work</h2>"
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 9,
+      "field": "container",
+      "before": "<h2 id=\"guide-5\">A useful first message can be brief</h2>",
+      "after": "<h2 id=\"guide-5\">Maintenance enquiry questions</h2>",
+      "reason": "Identify actual FAQ topic instead of another preparation chapter",
+      "sourceBefore": "<h2 id=\"guide-5\">A useful first message can be brief</h2>",
+      "sourceAfter": "<h2 id=\"guide-5\">Maintenance enquiry questions</h2>"
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 9,
+      "field": "container",
+      "before": "<p>Give the property location, affected item, observed change and best contact. If there is a previous job reference, include it as history rather than an assumed diagnosis. Separate a request to investigate from a request to install a particular product; the team can then confirm what the proposed visit needs to cover.</p>",
+      "after": "",
+      "reason": "The useful preceding report/access/approval chapters already explain this preparation",
+      "sourceBefore": "<p>Give the property location, affected item, observed change and best contact. If there is a previous job reference, include it as history rather than an assumed diagnosis. Separate a request to investigate from a request to install a particular product; the team can then confirm what the proposed visit needs to cover.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "news-clearer-property-maintenance-enquiry.html",
+      "section": 4,
+      "field": "html",
+      "before": ">A useful first message can be brief</a>",
+      "after": ">Maintenance enquiry questions</a>",
+      "reason": "Keep guide navigation aligned with retained FAQ anchor",
+      "sourceBefore": ">A useful first message can be brief</a>",
+      "sourceAfter": ">Maintenance enquiry questions</a>"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 10,
+      "field": "container",
+      "before": "<h2 id=\"guide-5\">Confirm access to the equipment as well as the property</h2>",
+      "after": "<h2 id=\"guide-5\">Repair-visit access questions</h2>",
+      "reason": "Identify actual FAQ topic instead of another preparation chapter",
+      "sourceBefore": "<h2 id=\"guide-5\">Confirm access to the equipment as well as the property</h2>",
+      "sourceAfter": "<h2 id=\"guide-5\">Repair-visit access questions</h2>"
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 10,
+      "field": "container",
+      "before": "<p>Entry through the front door may not provide access to the affected room, fixture or installation. Name the on-site contact and explain any agreed building arrangements. If availability changes, update the request promptly. Share private entry details through the agreed contact method, not in public photos or open pages.</p>",
+      "after": "",
+      "reason": "The useful preceding report/access/approval chapters already explain this preparation",
+      "sourceBefore": "<p>Entry through the front door may not provide access to the affected room, fixture or installation. Name the on-site contact and explain any agreed building arrangements. If availability changes, update the request promptly. Share private entry details through the agreed contact method, not in public photos or open pages.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "section": 4,
+      "field": "html",
+      "before": ">Confirm access to the equipment as well as the property</a>",
+      "after": ">Repair-visit access questions</a>",
+      "reason": "Keep guide navigation aligned with retained FAQ anchor",
+      "sourceBefore": ">Confirm access to the equipment as well as the property</a>",
+      "sourceAfter": ">Repair-visit access questions</a>"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 10,
+      "field": "container",
+      "before": "<h2 id=\"guide-5\">Separate assessment authority from repair authority</h2>",
+      "after": "<h2 id=\"guide-5\">Work-order approval questions</h2>",
+      "reason": "Identify actual FAQ topic instead of another preparation chapter",
+      "sourceBefore": "<h2 id=\"guide-5\">Separate assessment authority from repair authority</h2>",
+      "sourceAfter": "<h2 id=\"guide-5\">Work-order approval questions</h2>"
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 10,
+      "field": "container",
+      "before": "<p>A work order should identify the assessable task, property reference, access contact and approval boundary. A spending limit is not a technical diagnosis or permission to substitute any product. If a different repair is recommended, keep the findings, proposed scope and decision together under the same reference.</p>",
+      "after": "",
+      "reason": "The useful preceding report/access/approval chapters already explain this preparation",
+      "sourceBefore": "<p>A work order should identify the assessable task, property reference, access contact and approval boundary. A spending limit is not a technical diagnosis or permission to substitute any product. If a different repair is recommended, keep the findings, proposed scope and decision together under the same reference.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "news-useful-property-work-order.html",
+      "section": 4,
+      "field": "html",
+      "before": ">Separate assessment authority from repair authority</a>",
+      "after": ">Work-order approval questions</a>",
+      "reason": "Keep guide navigation aligned with retained FAQ anchor",
+      "sourceBefore": ">Separate assessment authority from repair authority</a>",
+      "sourceAfter": ">Work-order approval questions</a>"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 10,
+      "field": "container",
+      "before": "<h2 id=\"guide-5\">A short handover that keeps the roles separate</h2>",
+      "after": "<h2 id=\"guide-5\">Maintenance handover questions</h2>",
+      "reason": "Identify actual FAQ topic instead of another preparation chapter",
+      "sourceBefore": "<h2 id=\"guide-5\">A short handover that keeps the roles separate</h2>",
+      "sourceAfter": "<h2 id=\"guide-5\">Maintenance handover questions</h2>"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 10,
+      "field": "container",
+      "before": "<p>Record the occupant observation, current condition, property and equipment location, access contact, and person who can approve the proposed work. Preserve the tenant report as reported; do not rewrite it as a diagnosis. If the condition worsens or the contact changes, update the same reference so the team does not rely on an obsolete instruction.</p>",
+      "after": "",
+      "reason": "The useful preceding report/access/approval chapters already explain this preparation",
+      "sourceBefore": "<p>Record the occupant observation, current condition, property and equipment location, access contact, and person who can approve the proposed work. Preserve the tenant report as reported; do not rewrite it as a diagnosis. If the condition worsens or the contact changes, update the same reference so the team does not rely on an obsolete instruction.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 4,
+      "field": "html",
+      "before": ">A short handover that keeps the roles separate</a>",
+      "after": ">Maintenance handover questions</a>",
+      "reason": "Keep guide navigation aligned with retained FAQ anchor",
+      "sourceBefore": ">A short handover that keeps the roles separate</a>",
+      "sourceAfter": ">Maintenance handover questions</a>"
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "section": 10,
+      "field": "container",
+      "before": "<h2 id=\"guide-5\">Prepare a description, not a repair decision</h2>",
+      "after": "<h2 id=\"guide-5\">Hot-water assessment questions</h2>",
+      "reason": "Identify actual FAQ topic instead of another preparation chapter",
+      "sourceBefore": "<h2 id=\"guide-5\">Prepare a description, not a repair decision</h2>",
+      "sourceAfter": "<h2 id=\"guide-5\">Hot-water assessment questions</h2>"
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "section": 10,
+      "field": "container",
+      "before": "<p>Say whether hot water is missing at one outlet or throughout the property, whether flow has changed and whether water is visible near the unit. Safely readable product details can help identify the system. Keep gas, refrigeration, electrical and plumbing scope distinct; a general hot-water request does not establish who is authorised for every component.</p>",
+      "after": "",
+      "reason": "The useful preceding report/access/approval chapters already explain this preparation",
+      "sourceBefore": "<p>Say whether hot water is missing at one outlet or throughout the property, whether flow has changed and whether water is visible near the unit. Safely readable product details can help identify the system. Keep gas, refrigeration, electrical and plumbing scope distinct; a general hot-water request does not establish who is authorised for every component.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "section": 4,
+      "field": "html",
+      "before": ">Prepare a description, not a repair decision</a>",
+      "after": ">Hot-water assessment questions</a>",
+      "reason": "Keep guide navigation aligned with retained FAQ anchor",
+      "sourceBefore": ">Prepare a description, not a repair decision</a>",
+      "sourceAfter": ">Hot-water assessment questions</a>"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 13,
+      "field": "container",
+      "before": "<h2 id=\"guide-6\">Report a symptom without trying to reproduce it</h2>",
+      "after": "<h2 id=\"guide-6\">Safety-switch assessment questions</h2>",
+      "reason": "Identify actual FAQ topic instead of another preparation chapter",
+      "sourceBefore": "<h2 id=\"guide-6\">Report a symptom without trying to reproduce it</h2>",
+      "sourceAfter": "<h2 id=\"guide-6\">Safety-switch assessment questions</h2>"
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 13,
+      "field": "container",
+      "before": "<p>Useful notes include the affected rooms and whether the trip happened during rain, appliance use or another observed change. These details guide the assessment; they do not prove which part is faulty. Do not repeatedly reset the device, bypass protection or open equipment to produce a better report.</p>",
+      "after": "",
+      "reason": "The useful preceding report/access/approval chapters already explain this preparation",
+      "sourceBefore": "<p>Useful notes include the affected rooms and whether the trip happened during rain, appliance use or another observed change. These details guide the assessment; they do not prove which part is faulty. Do not repeatedly reset the device, bypass protection or open equipment to produce a better report.</p>",
+      "sourceAfter": ""
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "section": 4,
+      "field": "html",
+      "before": ">Report a symptom without trying to reproduce it</a>",
+      "after": ">Safety-switch assessment questions</a>",
+      "reason": "Keep guide navigation aligned with retained FAQ anchor",
+      "sourceBefore": ">Report a symptom without trying to reproduce it</a>",
+      "sourceAfter": ">Safety-switch assessment questions</a>"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 11,
+      "field": "html",
+      "before": "<p data-guide-services>Keep an occupant-reported <a href=\"smoke-alarm-maintenance-perth.html\">smoke-alarm fault</a> distinct from planned <a href=\"fixtures-appliances-perth.html\">fixture or appliance connections</a> and <a href=\"renewables-smart-home-perth.html\">smart-home electrical work</a>. Record the location and requested assessment for each task, then identify who may approve the quoted scope. The handover is not a technical inspection or evidence that a proposed product is compatible.</p>",
+      "after": "<p data-guide-services>Keep the completed work, outstanding recommendations and authorised contact with the repair record. For the next instruction, use the <a href=\"news-useful-property-work-order.html\">work-order approval guide</a>; for entry arrangements, use the <a href=\"news-keeping-access-information-together.html\">access checklist</a>.</p>",
+      "reason": "End the handover on records and responsibilities rather than unrelated service links",
+      "sourceBefore": "<p data-guide-services>Keep an occupant-reported <a href=\"smoke-alarm-maintenance-perth.html\">smoke-alarm fault</a> distinct from planned <a href=\"fixtures-appliances-perth.html\">fixture or appliance connections</a> and <a href=\"renewables-smart-home-perth.html\">smart-home electrical work</a>. Record the location and requested assessment for each task, then identify who may approve the quoted scope. The handover is not a technical inspection or evidence that a proposed product is compatible.</p>",
+      "sourceAfter": "<p data-guide-services>Keep the completed work, outstanding recommendations and authorised contact with the repair record. For the next instruction, use the <a href=\"news-useful-property-work-order.html\">work-order approval guide</a>; for entry arrangements, use the <a href=\"news-keeping-access-information-together.html\">access checklist</a>.</p>"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 6,
+      "field": "html",
+      "before": "<h2 id=\"guide-1\">Use this checklist</h2>",
+      "after": "<h2 id=\"guide-1\">Property maintenance handover checklist</h2>",
+      "reason": "Name the checklist topic",
+      "sourceBefore": "<h2 id=\"guide-1\">Use this checklist</h2>",
+      "sourceAfter": "<h2 id=\"guide-1\">Property maintenance handover checklist</h2>"
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "section": 4,
+      "field": "html",
+      "before": ">Use this checklist</a>",
+      "after": ">Property maintenance handover checklist</a>",
+      "reason": "Align checklist navigation",
+      "sourceBefore": ">Use this checklist</a>",
+      "sourceAfter": ">Property maintenance handover checklist</a>"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 35,
+      "field": "html",
+      "before": "<p>No. Report what you can see safely. A meter record can help with a stable suspected leak, but active water spread or an electrical hazard takes priority over collecting readings.</p>",
+      "after": "<p>Report what you can see safely; meter readings are not required before contacting the team. A meter record can help with a stable suspected leak, but active water spread or an electrical hazard takes priority over collecting readings.</p>",
+      "reason": "Remove answer opener left under an educational statement heading",
+      "sourceBefore": "<p>No. Report what you can see safely. A meter record can help with a stable suspected leak, but active water spread or an electrical hazard takes priority over collecting readings.</p>",
+      "sourceAfter": "<p>Report what you can see safely; meter readings are not required before contacting the team. A meter record can help with a stable suspected leak, but active water spread or an electrical hazard takes priority over collecting readings.</p>"
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "section": 39,
+      "field": "html",
+      "before": "<p>Only if those tasks are included in the agreed scope. Ask for inspection, opening, pipe repair and surface restoration to be identified separately.</p>",
+      "after": "<p>Leak detection, pipe repair and reinstating a wall are separate tasks. Ask for inspection, opening, pipe repair and surface restoration to be identified in the written quote; only the agreed work is included.</p>",
+      "reason": "Complete the standalone scope explanation",
+      "sourceBefore": "<p>Only if those tasks are included in the agreed scope. Ask for inspection, opening, pipe repair and surface restoration to be identified separately.</p>",
+      "sourceAfter": "<p>Leak detection, pipe repair and reinstating a wall are separate tasks. Ask for inspection, opening, pipe repair and surface restoration to be identified in the written quote; only the agreed work is included.</p>"
+    },
+    {
+      "file": "contact.html",
+      "section": 0,
+      "field": "container",
+      "before": "<h3>Repair request details</h3>\n<p>Provide the property address or suburb, a short description, when it began, whether there is an active leak or electrical hazard, and the best access contact.</p>",
+      "after": "<h3>Plumbing and electrical service scope</h3>\n<p>For repairs and installation work, see the <a href=\"plumbing.html\">plumbing services</a> and <a href=\"electrical.html\">electrical services</a>. Rentals and strata work orders are covered by <a href=\"property-management.html\">property maintenance</a>.</p>",
+      "reason": "Replace repeated contact checklist with useful service navigation; enquiry form unchanged",
+      "sourceBefore": "<h3>Repair request details</h3>\n<p>Provide the property address or suburb, a short description, when it began, whether there is an active leak or electrical hazard, and the best access contact.</p>",
+      "sourceAfter": "<h3>Plumbing and electrical service scope</h3>\n<p>For repairs and installation work, see the <a href=\"plumbing.html\">plumbing services</a> and <a href=\"electrical.html\">electrical services</a>. Rentals and strata work orders are covered by <a href=\"property-management.html\">property maintenance</a>.</p>"
+    }
+  ]
+}
