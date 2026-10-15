@@ -424,7 +424,7 @@ export const page: PageData = {
 },
 {
 "question": "How do I arrange an urgent plumbing or electrical repair?",
-"answer": "<p>Call <a href=\"tel:{{ppp:shared:business.localTelephone:html}}\">{{ppp:shared:business.displayTelephone:html}}</a> with the property address, current condition and access contact. The team confirms attendance and the emergency work quote; an online enquiry does not reserve a visit.</p>" as TrustedHtml
+"answer": "<p>Call <a href=\"tel:{{ppp:shared:contactRouting.telephone:html}}\">{{ppp:shared:business.displayTelephone:html}}</a> with the property address, current condition and access contact. The team confirms attendance and the emergency work quote; an online enquiry does not reserve a visit.</p>" as TrustedHtml
 },
 {
 "question": "Are licence details available?",

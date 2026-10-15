@@ -57,9 +57,10 @@ test('content editing preserves approved prices, existing canonical URLs, origin
  const resources=require('./fixtures/fullsite-refinement/resource-maintenance-edits.json');
  for(const edit of resources.carousel){const before='data-background-image="'+edit.fallback+'"';assert.equal(expectedHero.split(before).length-1,1);expectedHero=expectedHero.replace(before,before+' data-background-srcset="'+edit.srcset+'"');}
  const next='aria-label="Next slide">→</button>';assert.equal(expectedHero.split(next).length-1,1);expectedHero=expectedHero.replace(next,next+'\n          '+resources.pause);
+ expectedHero=expectedHero.replaceAll('href="tel:0413477667"','href="tel:+611300838722"');
  assert.equal(hero(read('index.html')),expectedHero);
  const {parse,serialize}=require('parse5');
- const normalized=s=>{const document=parse(s.replace(/\r\n/g,'\n'));const sort=n=>{if(n.attrs)n.attrs.sort((a,b)=>a.name.localeCompare(b.name));for(const child of n.childNodes??[])sort(child);};sort(document);return serialize(document);};
+ const normalized=s=>{const document=parse(s.replace(/\r\n/g,'\n').replaceAll('href="tel:0413477667"','href="tel:+611300838722"'));const sort=n=>{if(n.attrs)n.attrs.sort((a,b)=>a.name.localeCompare(b.name));for(const child of n.childNodes??[])sort(child);};sort(document);return serialize(document);};
  const main=s=>s.match(/<main\b[\s\S]*?<\/main>/)[0];
  assert.equal(normalized(main(read('privacy.html'))),normalized(main(historical.privacy)),'legal privacy content is unchanged; shared header explicitly approved');
 });

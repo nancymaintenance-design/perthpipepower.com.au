@@ -17,7 +17,8 @@ const resources=require('./fixtures/fullsite-refinement/resource-maintenance-edi
 for(const edit of resources.carousel){const before='data-background-image="'+edit.fallback+'"';assert.equal(original.split(before).length-1,1);original=original.replace(before,before+' data-background-srcset="'+edit.srcset+'"');}
 const next='aria-label="Next slide">→</button>';assert.equal(original.split(next).length-1,1);original=original.replace(next,next+'\n          '+resources.pause);
 const hero=s=>s.match(/<section class="hero"[\s\S]*?<\/section>/)[0].replace(/\r\n/g,'\n');
-assert.equal(hero(html),hero(original),'restored hero exactly preserves published carousel markup');
+original=original.replaceAll('href="tel:0413477667"','href="tel:+611300838722"');
+assert.equal(hero(html),hero(original),'restored hero exactly preserves published carousel markup with approved contact destinations');
 assert.doesNotMatch(html,/class="field-hero"|class="field-process"/);
 assert.match(html,/rel="preload" as="image" href="hero-repair.jpg"/);
 console.log('PASS: original photographic carousel restored, generic split hero and process removed.');

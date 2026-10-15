@@ -22,7 +22,7 @@ for(const width of [1440,320])test('native no-JS keyboard service menu clears th
   expect(menu.x).toBeGreaterThanOrEqual(0);expect(menu.x+menu.width).toBeLessThanOrEqual(width+1);
   await page.screenshot({path:path.join(report,'screenshots','native-menu-'+width+'.png')});
   await page.keyboard.press('Enter');await expect(page).toHaveURL(/contact\.html\?service=plumbing\.html$/);
-  await expect(page.locator('h1')).toBeVisible();await expect(page.locator('a[href="tel:0413477667"]').first()).toBeAttached();
+  await expect(page.locator('h1')).toBeVisible();await expect(page.locator('a[href="tel:+611300838722"]').first()).toBeAttached();
  }finally{await context.close();}
 });
 test('office map and native Maps link remain visible without appended filler',async({page})=>{
