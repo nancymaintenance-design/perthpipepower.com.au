@@ -27,7 +27,10 @@ export function renderNavigation(page: PageData, site: SiteData): string {
   const unified = /id="plumbing-menu"/.test(original) ? original :
     renderChrome(standard, headers[site.layouts[standard.layoutId].headerId]).replace(/<div class="utility">[\s\S]*?<\/div>\s*<\/div>/, '').replace('href="contact.html?service=electrical.html" class="nav-cta"', `href="${href}" class="nav-cta"`).replace('class="nav-cta" href="contact.html?service=electrical.html"', `class="nav-cta" href="${href}"`);
   const route = page.file === 'index.html' ? '/' : page.file;
-  return unified.replace(/\saria-current="[^"]*"/g, '').replace(/<nav\b[\s\S]*?<\/nav>/, nav =>
+  return unified.replace(/<nav\b/, '<button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false">Menu</button><nav')
+    .replace('Renewables &amp; smart home','Smart lighting &amp; controls')
+    .replace('Energy equipment, automation and electrical upgrade enquiries.','Smart lighting, switches, sensors and basic controls.')
+    .replace(/\saria-current="[^"]*"/g, '').replace(/<nav\b[\s\S]*?<\/nav>/, nav =>
     nav.replace(/<a\b([^>]*?)href="([^"]+)"([^>]*)>/g, (all, before, target, after) =>
       target === route && !['plumbing.html', 'electrical.html'].includes(route) ? `<a${before}href="${target}"${after} aria-current="page">` : all)
       .replace(/<button\b([^>]*?)aria-controls="(plumbing|electrical)-menu"([^>]*)>/g,

@@ -95,6 +95,10 @@ h1{font-weight:800}h2{font-size:clamp(1.9rem,3.2vw,3rem)}h3{font-size:1.3rem;lin
 .enquiry-content .contact-grid{display:block}
 .enquiry-content .rich-grid,.enquiry-content .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
 .enquiry-content .price-guide__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.enquiry-content .text-column>figure{max-width:480px;margin:24px 0}
+.enquiry-content .text-column>figure picture,.enquiry-content .text-column>figure img{display:block;width:100%;max-width:100%}
+.enquiry-content .text-column>figure img{height:auto;border-radius:var(--field-radius)}
+.enquiry-content .text-column>figure figcaption{font-size:.85rem;line-height:1.5;margin-top:8px}
 main.article:has(.enquiry-layout){max-width:none;padding:0}
 .enquiry-sidebar__sticky{position:sticky;top:calc(var(--site-header-height) + 16px);max-height:calc(100dvh - var(--site-header-height) - 32px);overflow:auto;scrollbar-gutter:stable;border:1px solid var(--line);border-top:4px solid var(--field-blue);border-radius:var(--field-radius);background:var(--field-light);padding:20px}
 .enquiry-sidebar__call{display:block;color:var(--field-blue);font-weight:800;margin:0 0 14px;text-underline-offset:4px}
@@ -135,4 +139,38 @@ html:not(.nav-enhanced) .site-nav .nav-group:focus-within .mega-menu{position:ab
  .site-nav .nav-group.is-open .mega-menu,html:not(.nav-enhanced) .nav-group:focus-within .mega-menu{position:fixed;top:var(--site-header-height);left:1rem;right:1rem;width:auto;margin:0;transform:none;max-height:calc(100dvh - var(--site-header-height) - 16px);z-index:101}
  html:not(.nav-enhanced) .site-nav .nav-group:focus-within .mega-menu{position:absolute;top:100%;left:1rem;right:1rem;transform:none;max-height:calc(100dvh - 230px)}
  .head-row{align-items:flex-start}.nav-group>button{height:auto}
+}
+/* A non-modal navigation disclosure: native links stay visible without JS. */
+:root{--z-site-header:100;--z-site-menu:101;--field-scroll-thumb:#69808c}
+.site-header{z-index:var(--z-site-header)}
+:where(*){scrollbar-color:var(--field-scroll-thumb) var(--field-light);scrollbar-width:auto}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:var(--field-light)}
+::-webkit-scrollbar-thumb{background:var(--field-scroll-thumb);border:3px solid var(--field-light);border-radius:var(--field-radius)}
+::-webkit-scrollbar-thumb:hover{background:var(--field-blue)}
+::-webkit-scrollbar-thumb:active{background:var(--field-navy)}
+@media(forced-colors:active){:where(*){scrollbar-color:auto}::-webkit-scrollbar-thumb{background:ButtonText}::-webkit-scrollbar-track{background:Canvas}}
+.nav-toggle:focus-visible,.site-nav :is(a,button):focus-visible,#enquiry:focus-visible{outline:3px solid var(--field-blue);outline-offset:4px}
+.page-hero a.button[href="#enquiry"]{background:var(--field-blue);color:var(--field-light);border:2px solid var(--field-blue);margin:8px 0 0;text-decoration:none}
+.page-hero .shell:has(a.button[href^="tel:"]) a.button[href="#enquiry"]{background:transparent;color:var(--field-light);border-color:var(--field-light);margin-left:12px}
+.page-hero a.button[href="#enquiry"]:hover,.page-hero .shell:has(a.button[href^="tel:"]) a.button[href="#enquiry"]:hover{background:var(--field-light);color:var(--field-navy);border-color:var(--field-light)}
+/* Exactly three information/process blocks keep a complete row when there is
+   room, or form a continuous single column; no isolated half-width third card. */
+.enquiry-content :is(.rich-grid,.cards):has(>:nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1199px){.enquiry-content :is(.rich-grid,.cards):has(>:nth-child(3):last-child){grid-template-columns:minmax(0,1fr)}}
+@media(max-width:800px){
+ .nav-enhanced{--site-header-height:72px}
+ .nav-enhanced .head-row{position:relative;flex-wrap:nowrap;align-items:center;min-height:70px;padding-block:8px;gap:12px}
+ .nav-enhanced .brand{min-width:0;flex:1}
+ .nav-enhanced .nav-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:64px;padding:8px 12px;border:1px solid var(--field-blue);border-radius:6px;color:var(--field-blue);background:#fff;font-weight:700}
+ .nav-enhanced .nav-toggle:hover,.nav-enhanced .nav-toggle[aria-expanded="true"]{background:var(--field-light)}
+ .nav-enhanced .site-nav{display:none;position:absolute;top:100%;left:0;right:0;width:100%;max-height:calc(100dvh - var(--site-header-bottom,var(--site-header-height)) - 16px);overflow:auto;overscroll-behavior:contain;background:#fff;border-bottom:2px solid var(--field-blue);padding:12px 16px;z-index:var(--z-site-menu)}
+ .nav-enhanced .site-nav.open{display:block}
+ .nav-enhanced .site-nav .nav-list{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+ .nav-enhanced .site-nav .nav-list>li{width:100%}
+ .nav-enhanced .nav-list>li>a,.nav-enhanced .nav-group>button{min-height:44px;width:100%;padding:8px 12px;font-size:1rem}
+ .nav-enhanced .site-nav .nav-group.is-open .mega-menu{position:static;top:auto;left:auto;right:auto;transform:none;width:100%;max-height:none;overflow:visible;grid-template-columns:minmax(0,1fr);padding:8px;margin:8px 0;box-shadow:none}
+ html:not(.nav-enhanced) .site-nav .nav-group:focus-within .mega-menu{display:grid}
+ .page-hero .shell:has(a.button[href^="tel:"]) a.button[href="#enquiry"]{margin:8px 0 0}
+ #enquiry{scroll-margin-bottom:24px}
 }

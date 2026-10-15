@@ -49,7 +49,7 @@ test('editing, clearing, repeat prefill and restored values stay user-owned',asy
 test('mobile CTA clears hero, menu and in-flow booking controls',async({page})=>{
  await page.setViewportSize({width:390,height:900});await page.goto('/ceiling-fans-perth.html');const cta=page.locator('.mobile-ctas');await expect(cta).toBeHidden();
  await page.locator('main .section').nth(2).scrollIntoViewIfNeeded();await expect(cta).toBeVisible();
- await page.locator('[aria-controls="plumbing-menu"]').click();await expect(cta).toBeHidden();await page.keyboard.press('Escape');
+ await page.locator('.nav-toggle').click();await page.locator('[aria-controls="plumbing-menu"]').click();await expect(cta).toBeHidden();await page.keyboard.press('Escape');await page.keyboard.press('Escape');
  await page.locator('main a.button[href*="contact.html"]').last().scrollIntoViewIfNeeded();await expect(cta).toBeHidden();
 });
 test('no-JS public content, navigation, gallery and contact fallback remain native',async({browser,baseURL})=>{

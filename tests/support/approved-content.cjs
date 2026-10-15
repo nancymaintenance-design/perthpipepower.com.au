@@ -43,7 +43,7 @@ function normalizeChromeWhitespace(tree){
  for(let i=end-1;i>=0;i--)if(c[i][0]==='text'&&!c[i][1].trim())c.splice(i,1);
  return tree;
 }
-function approvedHeader(file){
+function approvedHeader(file,refined=true){
  const promotion=chrome.promotedHeaders[file],source=promotion?.from||file;
  const candidates=bodyChildren(JSON.parse(frozen.pages[source].dom)).filter(n=>isEl(n,'header')&&attr(n,'class')==='site-header');
  assert.equal(candidates.length,1,file+': exactly one immutable top-level shared header');
@@ -64,14 +64,14 @@ function approvedHeader(file){
   }
  }
  assert.deepEqual(selected,chrome.current[file],file+': independently enumerated current targets exist exactly');
- return header;
+ return refined?refineHeader(header):header;
 }
 const approved=structuredClone(frozen);
 assert.deepEqual(Object.keys(chrome.current).sort(),Object.keys(frozen.pages).sort(),'chrome contract covers all 48 routes');
 for(const [file,original]of Object.entries(approved.pages)){
  const tree=JSON.parse(original.dom),body=bodyChildren(tree),headers=body.filter(n=>isEl(n,'header')&&attr(n,'class')==='site-header');
  assert.equal(headers.length,1,file+': exact top-level header replacement boundary');
- body[body.indexOf(headers[0])]=approvedHeader(file);
+ body[body.indexOf(headers[0])]=approvedHeader(file,false);
  // The utility stays byte/DOM-exact from this page's immutable baseline. It is
  // not borrowed from the promoted header's source, removed, or exempted.
  approved.pages[file]=snapshotFromTree(tree,original);
@@ -359,6 +359,54 @@ for(const edit of require('../fixtures/fullsite-refinement/editorial-review-roun
  const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
  replaceFragment(tree,edit.before,edit.after,edit.file,edit.reason);
  approved.pages[edit.file]=snapshotFromTree(tree,previous);
+}
+// Task 3 applies precise shared-control edits to the independently maintained
+// prior DOM. All unrelated attributes, content, metadata and footer nodes stay
+// under the original whole-document comparison.
+function refineHeader(header){
+ const edits=require('../fixtures/fullsite-refinement/shared-enquiry-edits.json');
+ const nav=walk(header).filter(n=>isEl(n,'nav')&&attr(n,'id')==='main-nav');assert.equal(nav.length,1,'one pre-existing main navigation');
+ const parent=walk(header).find(n=>childList(n).includes(nav[0]));
+ childList(parent).splice(childList(parent).indexOf(nav[0]),0,...parts(edits.toggle));
+ const menu=walk(header).find(n=>attr(n,'id')==='electrical-menu');
+ for(const [before,after]of edits.navigationText){
+  const matches=walk(menu).filter(n=>n[0]==='text'&&n[1]===before);assert.equal(matches.length,1,'exact previous navigation label '+before);matches[0][1]=after;
+ }
+ return header;
+}
+{
+ const edits=require('../fixtures/fullsite-refinement/shared-enquiry-edits.json');
+ const eligible=Object.keys(require('../fixtures/content-navigation-repair/enquiry-sidebar-topics.json'));
+ for(const [file,previous]of Object.entries(approved.pages)){
+  const tree=JSON.parse(previous.dom),all=walk(tree),body=bodyChildren(tree);
+  refineHeader(all.find(n=>isEl(n,'header')&&attr(n,'class')==='site-header'));
+  const mobile=all.find(n=>isEl(n,'div')&&attr(n,'class')==='mobile-ctas'),action=walk(mobile).filter(n=>isEl(n,'a')&&text(n)==='Book a repair');assert.equal(action.length,1,file+': one existing mobile booking action');
+  assert.equal(attr(action[0],'href'),'contact.html');action[0][3].find(a=>a[1]==='href')[2]=eligible.includes(file)||file==='contact.html'?'#enquiry':'contact.html#enquiry';
+  if(eligible.includes(file)){
+   const forms=all.filter(n=>isEl(n,'form')&&attr(n,'data-enquiry-form')!==undefined);assert.equal(forms.length,1,file+': one existing form');assert.equal(attr(forms[0],'id'),undefined,file+': no previous anchor collision');
+   forms[0][3].push(['','id','enquiry'],['','tabindex','-1']);forms[0][3].sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b),'en'));
+   const option=edits.selectedOptionEdits[file];if(option){
+    const selected=walk(forms[0]).filter(n=>isEl(n,'option')&&attr(n,'selected')!==undefined);assert.equal(selected.length,1,file+': one selected topic');
+    assert.equal(attr(selected[0],'value'),option[0],file+': exact previous trade/topic');assert.equal(text(selected[0]),option[2]);
+    selected[0][3].find(a=>a[1]==='value')[2]=option[1];selected[0][4]=[['text',option[3]]];
+   }
+   const hero=all.find(n=>isEl(n,'section')&&(attr(n,'class')||'').split(' ').includes('page-hero'));
+   if(hero){
+    const links=walk(hero).filter(n=>isEl(n,'a')&&/^contact\.html(?:[?#]|$)/.test(attr(n,'href')||''));
+    for(const link of links)link[3].find(a=>a[1]==='href')[2]='#enquiry';
+    if(!links.length){const shell=hero[4].find(n=>isEl(n,'div')&&attr(n,'class')==='shell');assert(shell,file+': exact hero shell');shell[4].push(...parts(edits.heroAction));}
+   }
+  }
+  // Reorder only the previously appended handler on rails; the new shared
+  // resolver/prefill must precede it. Existing Contact scripts remain exact.
+  if(file!=='contact.html'){
+   const handler=body.findIndex(n=>isEl(n,'script')&&attr(n,'src')==='contact-form.js');
+   if(eligible.includes(file)&&!['fixtures-appliances-perth.html','renewables-smart-home-perth.html'].includes(file)){assert(handler>=0,file+': existing shared handler');body.splice(handler,0,...parts('<script src="booking-context.js"></script><script src="contact-prefill.js"></script>'));}
+   else{if(!eligible.includes(file))assert.equal(handler,-1,file+': no form handler');let i=body.length;while(i>0&&body[i-1][0]==='text'&&!body[i-1][1].trim())i--;body.splice(i,0,...parts('<script src="booking-context.js"></script><script src="contact-prefill.js"></script>'));}
+  }
+  approved.pages[file]=snapshotFromTree(tree,previous);
+ }
+ Object.assign(approved.assets,edits.runtimeHashes);
 }
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');

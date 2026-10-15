@@ -1,6 +1,7 @@
 const {test,expect}=require('@playwright/test');
 const fs=require('node:fs'),path=require('node:path');
 const report=path.resolve(__dirname,'../../../reports/content-navigation-repair-2026-10-14');
+async function openNavigation(page){const toggle=page.locator('.nav-toggle');if(await toggle.isVisible()&&await toggle.getAttribute('aria-expanded')==='false')await toggle.click();}
 test.beforeEach(async({context,baseURL})=>context.route('**/*',r=>new URL(r.request().url()).origin===baseURL&&!new URL(r.request().url()).pathname.startsWith('/api/')?r.continue():r.abort()));
 for(const width of [1440,320])test('native no-JS keyboard service menu clears the header and follows its link '+width,async({browser,baseURL})=>{
  const context=await browser.newContext({javaScriptEnabled:false,viewport:{width,height:900}});
@@ -40,6 +41,7 @@ test('long translated menu labels wrap without obscuring focused anchors',async(
  await page.locator('[aria-controls="electrical-menu"]').evaluate(n=>n.textContent='Electrical repairs and installations — 电气维修与安装');
  await page.locator('main .section').last().scrollIntoViewIfNeeded();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+ await openNavigation(page);
  const button=page.locator('[aria-controls="electrical-menu"]');await button.click();await expect(page.locator('#electrical-menu')).toBeVisible();await page.keyboard.press('Escape');await expect(button).toBeFocused();
 });
 test('all HTTP pages are the exact built bodies with local-only protections',async({request})=>{
@@ -52,6 +54,7 @@ const pages=['index.html','about.html','plumbing.html','electrical.html','servic
 for(const width of [320,390,1440])test('privacy uses the same sticky service menus '+width,async({page})=>{
  await page.setViewportSize({width,height:900});await page.goto('/privacy.html');
  expect(await page.locator('.site-header').evaluate(n=>getComputedStyle(n).position)).toBe('sticky');
+ await openNavigation(page);
  await page.locator('[aria-controls="electrical-menu"]').click();await expect(page.locator('#electrical-menu')).toBeVisible();
  await page.locator('#electrical-menu a').first().focus();await page.keyboard.press('Escape');await expect(page.locator('[aria-controls="electrical-menu"]')).toBeFocused();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
@@ -72,6 +75,7 @@ for(const width of [320,390,1440])for(const file of pages)test('approved visual 
  if(file==='index.html'&&width===1440)await page.locator('.office-location').screenshot({path:path.join(dir,'home-office-desktop.png')});
  if(file==='about.html'&&width===1440)await page.locator('.enquiry-content>.section').first().screenshot({path:path.join(dir,'about-core-services-desktop.png')});
  if(file==='service-areas.html'){
+  await openNavigation(page);
   await page.locator('[aria-controls="plumbing-menu"]').click();await expect(page.locator('#plumbing-menu')).toBeVisible();
   const menu=await page.locator('#plumbing-menu').boundingBox();expect(menu.x).toBeGreaterThanOrEqual(0);expect(menu.x+menu.width).toBeLessThanOrEqual(width+1);
   await page.screenshot({path:path.join(dir,'areas-menu-'+width+'.png')});
@@ -79,6 +83,7 @@ for(const width of [320,390,1440])for(const file of pages)test('approved visual 
 });
 for(const width of [320,390,1440])test('sticky header and menu clear content and anchors '+width,async({page})=>{
  await page.setViewportSize({width,height:900});await page.goto('/service-areas.html');
+ await openNavigation(page);
  const button=page.locator('[aria-controls="plumbing-menu"]');await button.click();
  await expect(page.locator('#plumbing-menu')).toBeVisible();
  await expect.poll(async()=>{const header=await page.locator('.site-header').boundingBox(),menu=await page.locator('#plumbing-menu').boundingBox();return menu.y-header.y-header.height;}).toBeGreaterThanOrEqual(-1);

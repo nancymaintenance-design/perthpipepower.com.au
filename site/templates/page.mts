@@ -14,7 +14,12 @@ function renderSections(sections: readonly ContentSection[],pageFile:string): st
 
 function renderHeroPage(page: PageData): string {
   if (page.hero === null) throw new Error(`Invalid ${page.kind} page: missing hero for ${page.file}`);
-  return page.hero + renderEnquiryLayout(page,renderSections(page.sections,page.file));
+  let hero:string=page.hero;
+  if(hasEnquirySidebar(page)){
+    hero=hero.replace(/href="contact\.html(?:[?#][^"]*)?"/g,'href="#enquiry"');
+    if(!hero.includes('href="#enquiry"'))hero=hero.replace(/<\/div>(\s*<\/section>\s*)$/, '<a class="button alt" href="#enquiry">Request a repair</a></div>$1');
+  }
+  return hero + renderEnquiryLayout(page,renderSections(page.sections,page.file));
 }
 
 function renderArticle(page: PageData): string {
@@ -55,8 +60,15 @@ export function renderPage(page: PageData, site: SiteData): string {
   const bindings: Record<string, string> = page.breadcrumbContainer === null ? {} : { breadcrumbs: renderBreadcrumbs(page) };
   const main = `<main${Object.entries(page.mainAttributes).map(([key, value]) => ` ${key}="${escapePlainText(value)}"`).join('')}>`
     + renderSlots(content, bindings, `page content for ${page.file}`) + '</main>';
-  const effectiveLayout=hasEnquirySidebar(page)&&!layout.scripts.some(s=>s.includes('src="contact-form.js"'))
-    ? {...layout,scripts:[...layout.scripts,'<script src="contact-form.js"></script>' as import('../types.mjs').TrustedHtml]} : layout;
+  const scripts=[...layout.scripts];
+  for(const src of ['booking-context.js','contact-prefill.js',...(hasEnquirySidebar(page)?['contact-form.js']:[])]){
+    if(!scripts.some(s=>s.includes(`src="${src}"`)))scripts.push(`<script src="${src}"></script>` as import('../types.mjs').TrustedHtml);
+  }
+  const effectiveLayout={...layout,scripts};
+  // The footer itself is unchanged; only the sibling mobile booking action
+  // points directly to an existing form, with Contact as the no-form fallback.
+  const footer=renderFooter(page,site).replace(/(<div class="mobile-ctas">[\s\S]*?<a href=")[^"]+(">Book a repair<\/a>)/,
+    `$1${hasEnquirySidebar(page)||page.kind==='contact'?'#enquiry':'contact.html#enquiry'}$2`);
   return renderDocument(effectiveLayout, { head: renderHead(page, layout), navigation: renderNavigation(page, site),
-    main, footer: renderFooter(page, site) });
+    main, footer });
 }

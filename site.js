@@ -15,20 +15,13 @@
     document.head.append(touchIcon);
   }
 
-  const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.site-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-  }
 
   // Keep safety guidance and in-flow booking actions clear on small screens.
   const mobileActions = document.querySelector('.mobile-ctas');
   if (mobileActions) {
     const hero = document.querySelector('main .page-hero, main .hero');
-    const inlineActions = [...document.querySelectorAll('main a.button[href="contact.html"], main a.button[href^="contact.html?"], main a.button[href^="tel:"]')];
+    const inlineActions = [...document.querySelectorAll('main a.button[href="contact.html"], main a.button[href^="contact.html?"], main a.button[href="#enquiry"], main a.button[href^="tel:"]')];
     const inView = (element) => {
       const rect = element.getBoundingClientRect();
       return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < innerHeight;
@@ -37,7 +30,8 @@
     const updateActions = () => {
       scheduled = false;
       const menuOpen = document.querySelector('.site-nav.open, .nav-group.is-open');
-      mobileActions.hidden = !!menuOpen || !!(hero && hero.getBoundingClientRect().bottom > 0) || inlineActions.some(inView);
+      const form=document.querySelector('[data-enquiry-form]');
+      mobileActions.hidden = !!menuOpen || !!(hero && hero.getBoundingClientRect().bottom > 0) || inlineActions.some(inView) || !!(form&&inView(form));
     };
     const scheduleActions = () => {
       if (!scheduled) { scheduled = true; requestAnimationFrame(updateActions); }

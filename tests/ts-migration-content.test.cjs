@@ -204,13 +204,23 @@ function projectPage(page, layout, chrome, site) {
     return require('../.build/site/templates/faq.mjs').renderFaq(section.items,section.container,page.file);
   }).join('');
   const sidebar=require('../.build/site/templates/enquiry-sidebar.mjs');
-  const main=replace((page.hero??'')+sidebar.renderEnquiryLayout(page,sections),'breadcrumbs',breadcrumbs);
+  const policy=require('./fixtures/fullsite-refinement/shared-enquiry-edits.json');
+  const rail=sidebar.hasEnquirySidebar(page);
+  let hero=page.hero??'';
+  if(rail&&hero){
+    hero=hero.replace(/href="contact\.html(?:[?#][^"]*)?"/g,'href="#enquiry"');
+    if(!hero.includes('href="#enquiry"'))hero=hero.replace(/<\/div>(\s*<\/section>\s*)$/,policy.heroAction+'</div>$1');
+  }
+  const main=replace(hero+sidebar.renderEnquiryLayout(page,sections),'breadcrumbs',breadcrumbs);
   // Produce approved shared navigation, not the raw pre-unification template.
   // Expected chrome comes independently from immutable DOM + literal policy;
   // head, body content and footer remain manually projected in this test.
   const navigation=require('../.build/site/templates/navigation.mjs').renderNavigation(page,site);
+  const footer=renderChrome(chrome.footers[layout.footerId]).replace('href="contact.html">Book a repair',`href="${rail||page.kind==='contact'?'#enquiry':'contact.html#enquiry'}">Book a repair`);
+  const scripts=[...layout.scripts];
+  for(const src of ['booking-context.js','contact-prefill.js',...(rail?['contact-form.js']:[])])if(!scripts.some(s=>s.includes(`src="${src}"`)))scripts.push(`<script src="${src}"></script>`);
   const result=layout.documentOpen+head+layout.bodyOpen+navigation+layout.beforeMain+
-    `<main${Object.entries(page.mainAttributes).map(([key,value])=>` ${key}="${escape(value)}"`).join('')}>`+main+'</main>'+layout.afterMain+renderChrome(chrome.footers[layout.footerId])+layout.scripts.join('')+(sidebar.hasEnquirySidebar(page)&&!layout.scripts.some(s=>s.includes('src="contact-form.js"'))?'<script src="contact-form.js"></script>':'')+layout.documentClose;
+    `<main${Object.entries(page.mainAttributes).map(([key,value])=>` ${key}="${escape(value)}"`).join('')}>`+main+'</main>'+layout.afterMain+footer+scripts.join('')+layout.documentClose;
   assert.doesNotMatch(result,/\{\{ppp:/,`${page.file}: unconsumed token`);
   return result;
 }

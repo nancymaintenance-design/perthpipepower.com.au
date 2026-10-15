@@ -1,0 +1,24 @@
+{
+ "provenance":"Literal attribute/text edits over the approved immutable prior DOM. No current-output capture. Only shared enquiry/navigation/mobile actions/scripts change.",
+ "toggle":"<button class=\"nav-toggle\" type=\"button\" aria-controls=\"main-nav\" aria-expanded=\"false\">Menu</button>",
+ "heroAction":"<a class=\"button alt\" href=\"#enquiry\">Request a repair</a>",
+ "navigationText":[["Renewables & smart home","Smart lighting & controls"],["Energy equipment, automation and electrical upgrade enquiries.","Smart lighting, switches, sensors and basic controls."]],
+ "selectedOptionEdits":{
+  "blocked-drains-perth.html":["Plumbing — Blocked Drains Perth","Plumbing — Blocked Drain Repairs Perth","Blocked Drains Perth","Blocked Drain Repairs Perth"],
+  "burst-pipe-repair-perth.html":["Plumbing — Burst Pipe Repair Perth","Plumbing — Burst Pipe Repairs Perth","Burst Pipe Repair Perth","Burst Pipe Repairs Perth"],
+  "electrical.html":["Electrical — Electrical","Electrical — Electrical repairs and installation","Electrical","Electrical repairs and installation"],
+  "hot-water-problems-perth.html":["Plumbing — Hot Water Problems Perth","Not sure — Hot Water Repairs & System Replacement Perth","Hot Water Problems Perth","Not sure"],
+  "lighting-power-points-perth.html":["Electrical — Lighting & Power Points Perth","Electrical — Lighting & Power Point Service Overview Perth","Lighting & Power Points Perth","Lighting & Power Point Service Overview Perth"],
+  "plumbing.html":["Plumbing — Plumbing","Plumbing — Plumbing repairs and installation","Plumbing","Plumbing repairs and installation"],
+  "power-faults-perth.html":["Electrical — Power Faults Perth","Electrical — Electrical Fault Finding Perth","Power Faults Perth","Electrical Fault Finding Perth"],
+  "property-management.html":["Not sure — Property management","Not sure — Managed-property plumbing and electrical maintenance","Not sure","Not sure"],
+  "safety-switch-tripping-perth.html":["Electrical — Safety Switch Keeps Tripping in Perth","Electrical — Safety Switch Tripping Repairs Perth","Safety Switch Keeps Tripping in Perth","Safety Switch Tripping Repairs Perth"]
+ },
+ "runtimeHashes":{
+  "booking-context.js":"8164f186086d9803b5a03bf7a2e099db90796067e6b53ae52ea40aa20412cdd4",
+  "contact-prefill.js":"570b67e1bb96c49aba0fbdd4dc1f524bda2f86d57de8195f187c134b9ba3e22e",
+  "field-design.css":"f34215ef8e924cb1cd21c380ad965547958e3ca98603bf07b52dbcd2ac3aa15c",
+  "navigation.js":"a1671067cb48a8d284a202bcdd34fad248cd37526443b3fee203cc530c07443d",
+  "site.js":"350990baede55b257df455ff7f7ac834b16f638a9ee5cc8dad3756cea1256526"
+ }
+}

@@ -108,6 +108,9 @@ test('missing_canonical_page_fails_with_stale_output_present', t => {
   // valid output and every old root HTML file available to catch fallback reads.
   const runtime = path.join(f.dir, 'runtime');
   fs.cpSync(path.join(root, '.build/site'), path.join(runtime, '.build/site'), { recursive: true });
+  // The shared server/client service resolver is now an explicit runtime input.
+  // Keep it present so this fixture still tests the deliberately missing record.
+  fs.copyFileSync(path.join(root, 'booking-context.js'), path.join(runtime, 'booking-context.js'));
   fs.mkdirSync(path.join(runtime, 'data'));
   for (const file of ['perth-suburbs.json', 'editorial-content-dates.json', 'sitemap-content-dates.json']) fs.copyFileSync(path.join(root, 'data', file), path.join(runtime, 'data', file));
   fs.symlinkSync(path.join(root, 'node_modules'), path.join(runtime, 'node_modules'), 'junction');

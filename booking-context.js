@@ -36,7 +36,22 @@
     const [type,label]=services[values[0]];
     return {route:values[0],type,label};
   }
-  const api={services,serviceFromSearch};
+  function serviceFromRoute(pathname){
+    const route=String(pathname||'').split('/').pop();
+    if(!Object.prototype.hasOwnProperty.call(services,route))return null;
+    const [type,label]=services[route];return {route,type,label};
+  }
+  function safeSuburbFromSearch(search){
+    const raw=String(search).match(/(?:^|[?&])suburb=([^&]*)/);
+    if(!raw||/%(?![0-9a-f]{2})/i.test(raw[1]))return null;
+    const values=new URLSearchParams(search).getAll('suburb');
+    const suburb=values.length===1?values[0].trim():'';
+    return suburb&&suburb.length<=240&&!/[\uFFFD\x00-\x1f\x7f]/.test(values[0])?suburb:null;
+  }
+  function resolveBookingContext(pathname,search){
+    return {service:serviceFromSearch(search)||serviceFromRoute(pathname),suburb:safeSuburbFromSearch(search)};
+  }
+  const api={services,serviceFromSearch,serviceFromRoute,safeSuburbFromSearch,resolveBookingContext};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   if(root)root.EllisBookingContext=api;
 })(typeof window!=='undefined'?window:null);
