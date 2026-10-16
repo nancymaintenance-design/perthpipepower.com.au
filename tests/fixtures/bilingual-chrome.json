@@ -1,0 +1,4 @@
+{
+ "style":"<style data-locale-style>.site-nav .language-switch{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 12px;border:1px solid currentColor;border-radius:var(--field-radius,14px);white-space:nowrap;font-weight:700}.language-switch:hover{background:var(--field-light,#edf5f7)}.language-switch:focus-visible{outline:3px solid var(--field-yellow,#f3b63f);outline-offset:3px}html[lang=\"zh-Hans\"] body{font-family:Arial,\"Microsoft YaHei\",\"PingFang SC\",sans-serif}html[lang=\"zh-Hans\"] .eyebrow{letter-spacing:.04em}</style>",
+ "script":"<script data-locale-switch>(()=>{const a=document.querySelector(\".language-switch\");if(!a)return;const refresh=()=>{const u=new URL(a.getAttribute(\"href\"),location.href);u.search=location.search;u.hash=location.hash;a.setAttribute(\"href\",u.pathname+u.search+u.hash)};refresh();addEventListener(\"hashchange\",refresh);a.addEventListener(\"click\",refresh)})();</script>"
+}

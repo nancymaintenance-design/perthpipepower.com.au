@@ -4,7 +4,8 @@ import { dirname, resolve } from 'node:path';
 import type { Difference } from '../baseline.mjs';
 import { assets as approvedAssets } from '../content/assets.mjs';
 import { expectedPageFiles, loadSiteData } from '../content/pages.mjs';
-import { renderSite } from './render-site.mjs';
+import { renderBilingualSite } from './render-bilingual.mjs';
+import {loadApprovedLocales} from '../localization/approved.mjs';
 import { assertNoLinks, checkRoots, listOutputFiles, projectRoot, publicPath, readPublicAssets } from './copy-assets.mjs';
 
 export interface BuildResult {
@@ -16,7 +17,7 @@ export interface BuildResult {
 interface OwnerManifest { version: 1; outDir: string; files: Record<string, string> }
 const hash = (bytes: string | Buffer): string => createHash('sha256').update(bytes).digest('hex');
 const artifacts = ['sitemap.xml', 'robots.txt', 'llms.txt', 'ai-content.json', 'feed.xml', 'rss.xml', 'atom.xml'];
-const allowed = new Set([...expectedPageFiles, ...approvedAssets, ...artifacts]);
+const allowed = new Set([...expectedPageFiles,...expectedPageFiles.map(file=>'zh/'+file), ...approvedAssets, ...artifacts]);
 
 function ownerPath(outDir: string): string {
   const location = resolve(projectRoot, '.build/output-manifests', `${hash(outDir.toLowerCase())}.json`);
@@ -42,7 +43,7 @@ function readOwner(location: string, outDir: string): OwnerManifest | null {
  * before the first write. Missing input cannot damage an existing valid build.
  */
 export function buildSite(options: { sourceRoot: string; outDir: string; mirrorRoot?: string }): BuildResult {
-  const site = loadSiteData(), rendered = renderSite(site);
+  const site = loadSiteData(), rendered = renderBilingualSite(site,loadApprovedLocales(projectRoot,site));
   const roots = checkRoots(options.sourceRoot, options.outDir);
   const resources = readPublicAssets(roots.sourceRoot, site.assets);
   const output = new Map<string, string | Buffer>([...rendered, ...resources]);
@@ -79,10 +80,10 @@ export function buildSite(options: { sourceRoot: string; outDir: string; mirrorR
     mkdirSync(dirname(target), { recursive: true }); writeFileSync(target, output.get(file)!);
   }
   for (const location of stale) { assertNoLinks(location); unlinkSync(location); }
-  if (mirror) for (const [file, text] of rendered) writeFileSync(publicPath(mirror, file), text);
+  if (mirror) for (const [file, text] of rendered) {const target=publicPath(mirror,file);mkdirSync(dirname(target),{recursive:true});writeFileSync(target, text);}
   mkdirSync(dirname(manifestPath), { recursive: true });
   writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
-  return { pages: site.pages.length,
-    sitemapUrls: [...(site.artifacts['sitemap.xml'] ?? '').matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/g)].length,
+  return { pages: [...rendered.keys()].filter(file=>file.endsWith('.html')).length,
+    sitemapUrls: [...(rendered.get('sitemap.xml') ?? '').matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/g)].length,
     written, differences: [] };
 }

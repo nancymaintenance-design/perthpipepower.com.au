@@ -38,7 +38,8 @@ function inventory(dir, prefix = '') {
   }).sort();
 }
 function hashes(dir) { return Object.fromEntries(inventory(dir).map(file => [file, hash(fs.readFileSync(path.join(dir, file)))])); }
-const expectedFiles = [...Object.keys(baseline.pages), ...Object.keys(baseline.assets), ...Object.keys(baseline.artifacts)].sort();
+const bilingual=require('../site/content/locales/manifest.json').enabledLocales.includes('zh-Hans');
+const expectedFiles = [...Object.keys(baseline.pages),...(bilingual?Object.keys(baseline.pages).map(file=>'zh/'+file):[]), ...Object.keys(baseline.assets), ...Object.keys(baseline.artifacts)].sort();
 
 
 // A root-HTML, old-dist, or CommonJS-data fallback must fail even when the real
@@ -62,8 +63,8 @@ test('cold_build_does_not_depend_on_old_html', t => {
   try { const loaded = modules(); comparePublicOutput = loaded.comparePublicOutput; result = loaded.buildSite(f); }
   finally { fs.readFileSync = original; syncBuiltinESMExports(); }
   assert.deepEqual(blocked, []);
-  assert.equal(result.pages, 48);
-  assert.equal(result.sitemapUrls, 47);
+  assert.equal(result.pages, bilingual?96:48);
+  assert.equal(result.sitemapUrls, bilingual?94:47);
   assert.deepEqual(result.written, expectedFiles);
   assert.deepEqual(result.differences, []);
   assert.deepEqual(comparePublicOutput(f.outDir, baseline), []);

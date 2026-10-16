@@ -6,6 +6,7 @@
     "rootDir": ".",
     "outDir": ".build",
     "strict": true,
+    "resolveJsonModule": true,
     "noEmitOnError": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["node"]

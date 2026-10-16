@@ -16,7 +16,12 @@ test('all 48 complete top-level headers and utility blocks match independent imm
  for(const file of Object.keys(frozen.pages)){
   const all=nodes(file),body=all.find(n=>n.tagName==='body'),headers=body.childNodes.filter(n=>n.tagName==='header'&&attr(n,'class')==='site-header');
   assert.equal(headers.length,1,file+': one exact top-level shared header');
-  assert.deepEqual(canonical(headers[0]),approvedHeader(file),file+': full logo/menu/CTA DOM including every attribute, label, destination and current marker');
+  const expectedHeader=approvedHeader(file);
+  if(require('../site/content/locales/manifest.json').enabledLocales.includes('zh-Hans')){
+   const list=cwalk(expectedHeader).find(n=>n[2]==='ul'&&n[3].some(a=>a[1]==='class'&&a[2]==='nav-list'));
+   list[4].push(canonical(require('parse5').parseFragment(`<li data-locale-entry><a class="language-switch" href="/zh/${file==='index.html'?'':file}" lang="zh-Hans" hreflang="zh-Hans" aria-label="切换到中文">中文</a></li>`).childNodes[0]));
+  }
+  assert.deepEqual(canonical(headers[0]),expectedHeader,file+': full logo/menu/CTA DOM plus exact approved language entry');
   const original=cchildren(cwalk(JSON.parse(frozen.pages[file].dom)).find(n=>n[2]==='body')).filter(n=>n[2]==='div'&&n[3].some(a=>a[1]==='class'&&a[2]==='utility'));
   assert.deepEqual(body.childNodes.filter(n=>n.tagName==='div'&&attr(n,'class')==='utility').map(canonical),original,file+': full original utility content/contact links');
  }
@@ -27,7 +32,7 @@ test('all public types expose unified service menus and honest current-page stat
   assert(all.some(n=>n.tagName==='link'&&attr(n,'href')?.split('?')[0]==='field-design.css'),file+': shared sticky navigation styles');
   const list=walk(nav).find(n=>attr(n,'class')==='nav-list');
   const controls=list.childNodes.filter(n=>n.tagName==='li').map(n=>n.childNodes.find(c=>c.tagName==='a'||c.tagName==='button'));
-  assert.deepEqual(controls.map(n=>text(n).trim()),['Home','About','Areas','Plumbing','Electrical','Contact'],file);
+  assert.deepEqual(controls.map(n=>text(n).trim()),['Home','About','Areas','Plumbing','Electrical','Contact',...(require('../site/content/locales/manifest.json').enabledLocales.includes('zh-Hans')?['中文']:[])],file);
   for(const id of ['plumbing-menu','electrical-menu'])assert(all.some(n=>n.tagName==='button'&&attr(n,'aria-controls')===id),file+': '+id);
   const current=walk(nav).filter(n=>attr(n,'aria-current')==='page');
   if(['index.html','about.html','service-areas.html','plumbing.html','electrical.html','contact.html'].includes(file))assert.equal(current.length,1,file);

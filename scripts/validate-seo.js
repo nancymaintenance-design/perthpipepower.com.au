@@ -6,14 +6,20 @@ const args=process.argv.slice(2);
 if(args.length && (args.length!==2 || args[0]!=='--root')) throw new Error('Usage: node scripts/validate-seo.js [--root dist]');
 const root=resolvePublicRoot(args[1]);
 const site=loadCompiledModule('site/content/pages.mjs').loadSiteData();
+const bundles=loadCompiledModule('site/localization/approved.mjs').loadApprovedLocales(process.cwd(),site);
+const bilingual=bundles.length===48;
+const {translationKey}=loadCompiledModule('site/localization/inventory.mjs');
+const {localizedPath}=loadCompiledModule('site/localization/routes.mjs');
+const rendered=loadCompiledModule('site/build/render-bilingual.mjs').renderBilingualSite(site,bundles);
 const issues=[];
 const walk=n=>[n,...(n.childNodes??[]).flatMap(walk)];
 const attr=(n,k)=>n.attrs?.find(a=>a.name===k)?.value;
 const text=n=>n.nodeName==='#text'?n.value:(n.childNodes??[]).map(text).join('');
-const actual=fs.readdirSync(root).filter(f=>f.endsWith('.html')).sort();
-const expected=site.pages.map(p=>p.file).sort();
+const actual=[...fs.readdirSync(root).filter(f=>f.endsWith('.html')),...(fs.existsSync(path.join(root,'zh'))?fs.readdirSync(path.join(root,'zh')).filter(f=>f.endsWith('.html')).map(f=>'zh/'+f):[])].sort();
+const pages=site.pages.flatMap(page=>[page,...(bilingual?[{file:'zh/'+page.file,seo:{...page.seo,title:bundles.find(b=>b.pageId===page.file).values[translationKey(page.seo.title)],description:bundles.find(b=>b.pageId===page.file).values[translationKey(page.seo.description)],canonical:'https://perthpipepower.com.au'+localizedPath(page.file,'zh-Hans')}}]:[])]);
+const expected=pages.map(p=>p.file).sort();
 if(JSON.stringify(actual)!==JSON.stringify(expected)) issues.push('Public page inventory differs from canonical registry');
-for(const page of site.pages) {
+for(const page of pages) {
  const file=path.join(root,page.file);
  if(!fs.existsSync(file)){issues.push(page.file+': missing page');continue;}
  const nodes=walk(parse(fs.readFileSync(file,'utf8')));
@@ -30,7 +36,7 @@ for(const page of site.pages) {
 }
 for(const name of ['robots.txt','sitemap.xml']) {
  const file=path.join(root,name);
- if(!fs.existsSync(file)||fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n')!==site.artifacts[name].replace(/\r\n/g,'\n'))issues.push(name+': differs from canonical content');
+ if(!fs.existsSync(file)||fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n')!==rendered.get(name).replace(/\r\n/g,'\n'))issues.push(name+': differs from canonical content');
 }
 if(issues.length){console.error(issues.join('\n'));process.exitCode=1;}
-else console.log('Validated '+site.pages.length+' canonical tags, titles, descriptions, robots.txt and 47 sitemap URLs in '+root+'.');
+else console.log('Validated '+pages.length+' canonical tags, titles, descriptions, robots.txt and '+(bilingual?94:47)+' sitemap URLs in '+root+'.');

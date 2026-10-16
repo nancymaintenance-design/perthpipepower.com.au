@@ -1,7 +1,11 @@
 (() => {
   const addServiceLink = (menuId, href, title, description) => {
     const menu = document.getElementById(menuId);
-    if (!menu || menu.querySelector('[href="' + href + '"]')) return;
+    if (!menu || [...menu.querySelectorAll('a[href]')].some(a=>new URL(a.getAttribute('href'),location.href).pathname.endsWith('/'+href))) return;
+    if(document.documentElement.lang==='zh-Hans'){
+      const copy=href==='fixtures-appliances-perth.html'?['洁具与电器','厨房、洗衣房和浴室洁具咨询。']:['智能照明与控制','智能照明、开关、传感器与基本控制。'];
+      title=copy[0];description=copy[1];href='/zh/'+href;
+    }
     const item = document.createElement('li');
     item.innerHTML = '<a class="mega-link" href="' + href + '"><span class="mega-copy"><strong>' + title + '</strong><small>' + description + '</small></span></a>';
     menu.append(item);

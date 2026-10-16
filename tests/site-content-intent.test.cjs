@@ -2,15 +2,15 @@ const {SOURCE_ROOT, resolvePublicRoot, createFixture} = require('./support/publi
 const fs=require('node:fs'),assert=require('node:assert/strict'),{test}=require('node:test');
 // Independent historical public expectations keep source archives verifiable.
 const historical=require('./fixtures/ts-migration/historical-public-expectations.json');
-const files=[...fs.readFileSync(require('node:path').join(resolvePublicRoot(),'sitemap.xml'),'utf8').matchAll(/<loc>[^<]*\.au\/([^<]*)<\/loc>/g)].map(m=>m[1]||'index.html');
+const files=[...fs.readFileSync(require('node:path').join(resolvePublicRoot(),'sitemap.xml'),'utf8').matchAll(/<loc>[^<]*\.au\/([^<]*)<\/loc>/g)].map(m=>m[1]==='zh/'?'zh/index.html':m[1]||'index.html');
 const read=f=>fs.readFileSync(require('node:path').join(resolvePublicRoot(),f),'utf8');
 const clean=s=>s.replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
 test('every live page has an explicit distinct search-intent owner, without creating workbook proposal URLs',()=>{
  assert(fs.existsSync(require('node:path').join(SOURCE_ROOT,'data/site-content-intent.cjs')),'Missing approved keyword-to-live-page mapping');
  const map=require('../data/site-content-intent.cjs').pages;
- assert.deepEqual(Object.keys(map).sort(),[...files].sort());
+ assert.deepEqual(Object.keys(map).sort(),[...new Set(files.map(f=>f.replace(/^zh\//,'')))].sort());
  assert.equal(new Set(Object.values(map).map(p=>p.primary)).size,47);
- assert.equal(files.length,47);
+ assert.equal(files.length,require('../site/content/locales/manifest.json').enabledLocales.includes('zh-Hans')?94:47);
  for(const [f,p] of Object.entries(map)){assert(p.intent&&p.primary&&p.links.length>=2,f+': meaningful topic and next paths');for(const [href]of p.links)assert(fs.existsSync(require('node:path').join(resolvePublicRoot(),href.split('#')[0])),f+': dead mapped owner '+href);}
 });
 test('trade overviews, managed-property and contact pages answer booking decisions with native FAQ links',()=>{
@@ -24,7 +24,7 @@ test('all visible FAQ answers agree with structured data and have unique questio
  for(const f of files){
   const h=read(f),m=h.match(/<main\b[\s\S]*?<\/main>/)[0];
   const visible=[...m.matchAll(/<details\b[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)].map(x=>[clean(x[1]),clean(x[2])]);
-  if(['index.html','about.html'].includes(f)){assert.equal(visible.length,0,f+': informative company/service narrative without redundant FAQ');assert(!/"@type":\s*"FAQPage"/.test(h),f+': makes no FAQPage claim');continue;}
+  if(['index.html','about.html'].includes(f.replace(/^zh\//,''))){assert.equal(visible.length,0,f+': informative company/service narrative without redundant FAQ');assert(!/"@type":\s*"FAQPage"/.test(h),f+': makes no FAQPage claim');continue;}
   assert(visible.length>=1,f+': useful customer FAQ missing');
   assert.equal(new Set(visible.map(q=>q[0])).size,visible.length,f+': repeated FAQ');
   const graph=JSON.parse(h.match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];

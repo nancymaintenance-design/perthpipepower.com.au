@@ -43,6 +43,7 @@
   }
 
   const slides = [...document.querySelectorAll('.slide')];
+  const chinese = document.documentElement?.lang === 'zh-Hans';
   const status = document.querySelector('.carousel-status');
   if (!slides.length) return;
 
@@ -65,7 +66,7 @@
     current = (index + slides.length) % slides.length;
     loadSlideImage(slides[current]);
     slides[current].classList.add('is-active');
-    if (status) status.textContent = `${current + 1} of ${slides.length}`;
+    if (status) status.textContent = chinese ? `第 ${current + 1} 张，共 ${slides.length} 张` : `${current + 1} of ${slides.length}`;
   };
 
   document.querySelector('[data-prev]')?.addEventListener('click', () => show(current - 1));
@@ -83,7 +84,7 @@
       if (pause) {
         pause.disabled = motion.matches;
         pause.setAttribute('aria-pressed', String(paused || motion.matches));
-        pause.textContent = motion.matches ? 'Slideshow paused' : paused ? 'Resume slideshow' : 'Pause slideshow';
+        pause.textContent = chinese ? (motion.matches ? '轮播已暂停' : paused ? '继续轮播' : '暂停轮播') : (motion.matches ? 'Slideshow paused' : paused ? 'Resume slideshow' : 'Pause slideshow');
       }
       if (status) status.setAttribute('aria-live', play ? 'off' : 'polite');
     };

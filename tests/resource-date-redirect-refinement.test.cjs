@@ -24,7 +24,7 @@ test('substantive routes are dated while minor headings and coverage wording ret
  for(const [file,entry]of Object.entries(dates))assert.equal(entry.lastmod,retained.includes(file)?'2026-10-13':'2026-10-15',file);
  const xml=read('sitemap.xml');
  for(const [,body]of xml.matchAll(/<url>([\s\S]*?)<\/url>/g)){
-  const file=new URL(body.match(/<loc>([^<]+)/)[1]).pathname.slice(1)||'index.html';assert(body.includes('<lastmod>'+dates[file].lastmod+'</lastmod>'),file);
+  const file=new URL(body.match(/<loc>([^<]+)/)[1]).pathname.replace(/^\/(?:zh\/)?/,'')||'index.html';assert(body.includes('<lastmod>'+dates[file].lastmod+'</lastmod>'),file);
  }
  for(const [file,entry]of Object.entries(require('../data/editorial-content-dates.json'))){
   const html=read(file);assert.equal(entry.lastmod,'2026-10-15',file);assert(html.includes('datetime="2026-10-15">15 October 2026</time>'),file);

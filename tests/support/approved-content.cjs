@@ -462,11 +462,32 @@ function refineHeader(header){
   approved.pages[file]=snapshotFromTree(tree,previous);
  }
 }
+// Explicit runtime-only localization additions preserve the existing English
+// payload contract and behavior; this is not a recapture of page baselines.
+for(const [file,edit] of Object.entries(require('../fixtures/bilingual-runtime-edits.json'))){
+ assert.equal(approved.assets[file],edit.before,file+': previous runtime identity');approved.assets[file]=edit.after;
+}
+function normalizeLocaleChrome(tree,file){
+ const all=walk(tree),entries=all.filter(n=>n[0]==='element'&&attr(n,'data-locale-entry')!==undefined);
+ if(!entries.length)return tree;
+ assert.equal(entries.length,1,file+': one bounded locale entry');
+ const locale=require('../fixtures/bilingual-chrome.json'),tail=file==='index.html'?'':file;
+ const head=all.find(n=>isEl(n,'head')),body=all.find(n=>isEl(n,'body'));
+ const nav=all.find(n=>isEl(n,'nav')&&attr(n,'class')==='site-nav'),list=childList(nav).find(n=>isEl(n,'ul')&&attr(n,'class')==='nav-list');
+ function removeExact(parent,fragment){const expected=parts(fragment);assert.equal(expected.length,1);const list=childList(parent),matches=list.map((n,i)=>JSON.stringify(n)===JSON.stringify(expected[0])?i:-1).filter(i=>i>=0);assert.equal(matches.length,1,file+': exact locale fragment and parent');list.splice(matches[0],1);for(let i=1;i<list.length;i++)if(list[i-1][0]==='text'&&list[i][0]==='text'){list[i-1][1]+=list[i][1];list.splice(i--,1);}}
+ removeExact(list,`<li data-locale-entry><a class="language-switch" href="/zh/${tail}" lang="zh-Hans" hreflang="zh-Hans" aria-label="切换到中文">中文</a></li>`);
+ for(const [language,url]of [['en-AU','/'+tail],['zh-Hans','/zh/'+tail],['x-default','/'+tail]])removeExact(head,`<link data-locale-alternate rel="alternate" hreflang="${language}" href="https://perthpipepower.com.au${url}">`);
+ removeExact(head,locale.style);removeExact(body,locale.script);return tree;
+}
+function bilingualSitemap(xml){return xml.replace('</urlset>',[...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>([\s\S]*?)<\/url>/g)].map(m=>`<url><loc>${m[1].replace('https://perthpipepower.com.au/','https://perthpipepower.com.au/zh/')}</loc>${m[2]}</url>`).join('\n  ')+'\n</urlset>');}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  return comparePublicOutput(root,manifest).filter(d=>{
+  if(d.file==='sitemap.xml'&&d.field==='text')return d.actual!==d.expected&&d.actual!==bilingualSitemap(d.expected);
+  if(d.file==='sitemap.xml'&&d.field==='sitemapUrls')return JSON.stringify(d.actual)!==JSON.stringify(d.expected)&&JSON.stringify(d.actual)!==JSON.stringify([...d.expected,...d.expected.map(u=>u.replace('https://perthpipepower.com.au/','https://perthpipepower.com.au/zh/'))]);
+  if(d.field==='rawText'){const chrome=require('../fixtures/bilingual-chrome.json'),allowed=Object.values(chrome).map(s=>s.replace(/^<(?:style|script)[^>]*>/,'').replace(/<\/(?:style|script)>$/,''));return JSON.stringify(d.actual.filter(n=>!allowed.includes(n.content)))!==JSON.stringify(d.expected);}
   if(d.field!=='dom')return true;
-  return JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.expected)))!==JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.actual)));
+  return JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.expected)))!==JSON.stringify(normalizeChromeWhitespace(normalizeLocaleChrome(JSON.parse(d.actual),d.file)));
  }).map(d=>({...d,expected:d.field==='dom'?'approved exact DOM including shared chrome':d.expected,actual:d.field==='dom'?'unexpected DOM difference':d.actual}));
 }
-module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,approvedHeader,reviewedCopy};
+module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,normalizeLocaleChrome,approvedHeader,reviewedCopy};

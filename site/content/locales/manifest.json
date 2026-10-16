@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "enabledLocales": [
+    "en-AU",
+    "zh-Hans"
+  ],
+  "approvals": {
+    "zh-Hans:about.html": {
+      "chineseRevision": 1,
+      "bundleHash": "be769c0ce6ac72935a92c11a415a4064f11d1006f5c0db4c24374ed7830a6180",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:blocked-drains-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "53086bf4208a04c2ca67423f90aa52d4f82fc67bed419396b0d9d2e6e780da99",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:burst-pipe-repair-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "a803b8f506bd9f224e784dd00426da4abd5d95d4b0ed32a3bb6ac26961664454",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:ceiling-fans-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "21b46f5586fb61e216da6ad46fdc1fd19d2466a0ea0937998246be8323e0ec26",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:contact.html": {
+      "chineseRevision": 1,
+      "bundleHash": "9ad012ab1c269ccf5c29f773dc399d2003a77bceb442a14a5c08b65e43bd84b1",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:dishwasher-installation-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "00b75d098259f60223eae8649c5027c960e04acd67d3a08b350b65c016607cb4",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:eastern-suburbs.html": {
+      "chineseRevision": 1,
+      "bundleHash": "5761bf89057dbda860784bf85f5d015667511e8882ae4ae48e638210cfebeea8",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:electrical.html": {
+      "chineseRevision": 1,
+      "bundleHash": "4ca4466077eb01a73e1ae5ad36acfb827db3fb88a20bc16ca8611e65f74769a0",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:emergency-electrician-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "5286bf8d75e3976fe1454411aabeade1e726c5875b64ff93e7330514289991b9",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:emergency-plumber-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "86ed11a5775d1a6fe102af2961e3874342c52f5388521c23586e65f6cab67af9",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:exhaust-fans-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "953f4d19c7c41aad138e0e2f71a979697c3f88045ab30fe73a88c8a93b28c375",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:faq.html": {
+      "chineseRevision": 1,
+      "bundleHash": "efa029e448e41dcafe19e20d78905cca135094277ee333d942f8cd92c1dffc95",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:fixtures-appliances-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "96e08dbae79102ed9a659ea5ff88c21bb5f1bc032a43bc609d8feb016d4813d2",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:hot-water-problems-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "a9133c6a12a1ca03559e5f90d16c816a721c1426e1d2435a6fe0395645390e03",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:index.html": {
+      "chineseRevision": 1,
+      "bundleHash": "4cd6f95cd834f97eb4f0b7c73c268cb8c7ed7a37ba8576c4c5ba124dad3f637f",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:insights-hot-water-plumbing-or-electrical.html": {
+      "chineseRevision": 1,
+      "bundleHash": "e123f7a13abf71c2335024566e17290044230be45ef581049372dcaa010a82d2",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:insights-reporting-a-plumbing-leak.html": {
+      "chineseRevision": 1,
+      "bundleHash": "02787453827e16e8aedf025609fda6e938e3129376dac666686db8618ac92cc1",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:insights-safety-switch-keeps-tripping.html": {
+      "chineseRevision": 1,
+      "bundleHash": "e271e94e2277500d9e645eb9026f5adfb9f3bcad9ddcd606ea09f4a03e8d7890",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:insights-tenant-property-manager-maintenance-handover.html": {
+      "chineseRevision": 1,
+      "bundleHash": "5f35f7141afe5e16089376580393d3c5e71e8b916d2df3c3edbde04038a89c7f",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:insights.html": {
+      "chineseRevision": 1,
+      "bundleHash": "39b88fd462fb9fe0d299c4c2950b3572f93171fe707f8a56ed4e76b5d4382c70",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:lighting-installation-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "d581c930113d38462bfe80cd59f18323617cedf7e94b63fa77a77fcb2a7a298e",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:lighting-power-points-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "dad2731f534d57db02367f903177c9235f2aa2d1450a855617fb72e40a8b9a6c",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:news-clearer-property-maintenance-enquiry.html": {
+      "chineseRevision": 1,
+      "bundleHash": "21891cafa3ce4cf2da7c92904bd776d97a090e6dde431310ef69e3c39f190753",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:news-keeping-access-information-together.html": {
+      "chineseRevision": 1,
+      "bundleHash": "4ed5d446ab04f40cac4d534d5026f44b4ea74253d19740d8a54c42763d58e149",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:news-useful-property-work-order.html": {
+      "chineseRevision": 1,
+      "bundleHash": "77cb11a1bf6fa536e2b3e6092c96ca90acd09689c4f23f5374f26eb8ef4936c0",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:news.html": {
+      "chineseRevision": 1,
+      "bundleHash": "389ae9d2a5fe3d1fde57435a14009b9bd6917666c136f7d6b5d61d8fae926c9d",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:northern-suburbs.html": {
+      "chineseRevision": 1,
+      "bundleHash": "a763a43200d4ce2eef907ed3b98970eeed61a1882831329323fd62b975ba2842",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:perth-cbd-inner-suburbs.html": {
+      "chineseRevision": 1,
+      "bundleHash": "1f65ae80f3add59b02ba784a0497d75f2834df9e84d7d3ec06d4a7376d37c794",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:perth-hills-swan-valley.html": {
+      "chineseRevision": 1,
+      "bundleHash": "8b76f0a3d1997f116302995b97e4bc65387bbb7a8ee7af5956cc0e382e8148ac",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:plumbing.html": {
+      "chineseRevision": 1,
+      "bundleHash": "caf48f6a98b6a4daaa4e361a8c65146eabd9739dc43b4d74dc057bee45a93893",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:power-faults-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "40a636e4bb658f3b4b526667d284c9a23ad8d8dbbd9b449bcad752453a4e20af",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:power-points-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "dd1a22c9eb4e3ca97716163d6678243c6199c200e7f0b375267b55a04aada790",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:privacy.html": {
+      "chineseRevision": 1,
+      "bundleHash": "fe44f7a3353611c1ee9c9a31b421d82ff96dadf0fec4db7c498fad710e3fb571",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:property-management.html": {
+      "chineseRevision": 1,
+      "bundleHash": "8167960e4b599ae7dfcf26b43cad8c7e257f2ee93afd7c47a44da6de739b3f21",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:rcd-testing-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "eca0f76ace5c3f4b788149a947fe8418a598c2f8815d66f5d81c1119eef2b58e",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:renewables-smart-home-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "752fdffd6550a8d1dbf2bd29e3ea1c19f73921637d8c6522e537fe890ff6a5d8",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:safety-switch-tripping-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "e9f89c841e68493d81c4d5bb6d8b7d56fc3b555e32e9e5ae1f3fc4cc88627785",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:service-areas.html": {
+      "chineseRevision": 1,
+      "bundleHash": "5cbf8f9c410a592343d1ea28e5bd2855a1541feaa1debc13c5c79c6013692909",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:shower-plumbing-repairs-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "a2d677138e6c761d7698682f42ee61e63cc26f967bceb24640895f9fdcb66169",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:smoke-alarm-maintenance-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "877589dc7c85cab648eff4975cb859c6f0b44781e6f4db71872fc73dd164d214",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:southern-suburbs.html": {
+      "chineseRevision": 1,
+      "bundleHash": "5fdff94d78de30e0a663a6180eef9a5ebb8c9537e80f5fec761738495f464881",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:switchboard-upgrades-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "4189478c031c3b0f96246cdf8ad16ed7cf155d6eb17a74cd35f0b0c66372b2f0",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:tap-mixer-repairs-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "e0d471ef414191d3615664d16086f6317478b79b1b7bcf25c0280ceda89ccfd6",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:toilet-installation-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "284a518981455cb5ff9774d7941815fde4597e4bdefcc870cd81db467e9a7a10",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:toilet-repairs-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "d86743f37dcaf4263d11a8ecb15c7cd55aa57a4a9243fadcc8e7242a76ee1658",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:water-leak-detection-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "6f0127920905307d7228ea4cef171754f1e47ce335a95b28fb42fcb08f0517e0",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:water-pressure-perth.html": {
+      "chineseRevision": 1,
+      "bundleHash": "db8af5507e589d9d51953f07a42ab31552139ea297b831d7bfe7a514c3c15938",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    },
+    "zh-Hans:western-suburbs.html": {
+      "chineseRevision": 1,
+      "bundleHash": "ebb5129c8a8d5088651ed7e87e8e20f833ed655ed88d8fd3a9aaaf8d1e5e943f",
+      "approvedAt": "2026-10-16T12:10:28.230Z"
+    }
+  }
+}

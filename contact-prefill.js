@@ -26,18 +26,19 @@ function prefillContactSuburb() {
     if(type && !contextualDefault && !existingRequest && !editedFields.has(type) && !prefilledFields.has(type) && type.value===(initialType || 'Not sure')){
       type.value=context.type;prefilledFields.add(type);
     }
-    fill(message,'Service requested: '+context.label+'\n\n');
+    const chinese=window.EllisLocale?.locale==='zh-Hans';
+    fill(message,chinese?'所需服务：'+(window.EllisLocale.serviceLabels[context.route]||context.label)+'\n\n':'Service requested: '+context.label+'\n\n');
   }
   if(suburb && fill(address,suburb) && (!window.location.hash || window.location.hash!=='#enquiry') && (!document.activeElement || document.activeElement===document.body))address.focus();
   // Carry only allowlisted service and valid suburb context across contact links.
   // Trade-menu links retain their own service rather than inheriting this page.
   for(const link of document.querySelectorAll?.('a[href]')||[]){
     const href=link.getAttribute('href');
-    if(!/^contact\.html(?:[?#]|$)/.test(href))continue;
+    if(!/^(?:\/zh\/|\/)?contact\.html(?:[?#]|$)/.test(href))continue;
     const url=new URL(href,window.location.href);
     if(context&&!url.searchParams.has('service'))url.searchParams.set('service',context.route);
     if(suburb&&!url.searchParams.has('suburb'))url.searchParams.set('suburb',suburb);
-    link.setAttribute('href','contact.html'+url.search+url.hash);
+    link.setAttribute('href',href.split(/[?#]/)[0]+url.search+url.hash);
   }
 }
 
