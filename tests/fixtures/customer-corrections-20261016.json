@@ -1,0 +1,847 @@
+{
+  "evidence": "User instructions 2026-10-16 against f80cd4a: delete intent-safety boxes; simplify internal service labels only; relocate existing kitchen section from About to lighting service. Exact source fragment edits, not output snapshots.",
+  "edits": [
+    {
+      "file": "about.html",
+      "before": "\n<section class=\"rich-band\"><div class=\"shell text-column\"><span class=\"eyebrow\">Electrical work</span><h2>Kitchen lighting and renovation wiring</h2><p>Our electrical work includes lighting and power-point repairs, fault finding and planned installation. We assess the existing connections, fitting positions and controls so the written quote identifies the work needed for the property.</p><figure><picture data-responsive-media><source type=\"image/avif\" srcset=\"images/electrical-work/kitchen-lighting-wide-responsive-480.avif 480w, images/electrical-work/kitchen-lighting-wide-responsive-960.avif 960w\" sizes=\"(max-width:600px) calc(100vw - 32px), (max-width:800px) 50vw, 390px\"><img loading=\"lazy\" decoding=\"async\" srcset=\"images/electrical-work/kitchen-lighting-wide-responsive-480.webp 480w, images/electrical-work/kitchen-lighting-wide-responsive-960.webp 960w\" sizes=\"(max-width:600px) calc(100vw - 32px), (max-width:800px) 50vw, 390px\" src=\"images/electrical-work/kitchen-lighting-wide.jpg\" width=\"2048\" height=\"1536\" alt=\"Kitchen with installed downlights during renovation\"></picture><figcaption>Recessed downlights across the kitchen ceiling, with power points at the bench and island.</figcaption></figure><p>Lighting installation includes the fitting, intended location, controls and connection requirements. A repair to an existing light and a new lighting location can involve different work. See <a href=\"lighting-installation-perth.html\">lighting installation and repairs</a> or <a href=\"switchboard-upgrades-perth.html\">switchboard repairs and upgrades</a> for the relevant work and quotation scope.</p></div></section>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Wastewater overflow needs the right first call.</strong> Water Corporation directs customers with wastewater overflowing on their property to call <a href=\"tel:131375\">13 13 75</a> immediately. Private plumbing and a public sewer fault have different repair responsibilities. <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Wastewater/Sewer-blockage-or-overflow\" target=\"_blank\" rel=\"noopener noreferrer\">Check the official overflow guidance</a>.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "before": "<a href=\"plumbing.html\">Perth plumbing services</a>",
+      "after": "<a href=\"plumbing.html\">plumbing services</a>",
+      "count": 1
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "before": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections Perth</a>",
+      "after": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "before": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement Perth</a>",
+      "after": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "before": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs Perth</a>",
+      "after": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "before": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber Perth</a>",
+      "after": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "blocked-drains-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "burst-pipe-repair-perth.html",
+      "before": "<a href=\"plumbing.html\">Perth plumbing services</a>",
+      "after": "<a href=\"plumbing.html\">plumbing services</a>",
+      "count": 1
+    },
+    {
+      "file": "burst-pipe-repair-perth.html",
+      "before": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs Perth</a>",
+      "after": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "burst-pipe-repair-perth.html",
+      "before": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber Perth</a>",
+      "after": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "burst-pipe-repair-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "ceiling-fans-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Electrical danger comes before booking.</strong> For a shock or tingling tap, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. For a life-threatening emergency or fire, call <a href=\"tel:000\">000</a>. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official emergency guidance</a>. For loss of supply, check <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-issues\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power outage reporting</a> before assuming an internal circuit fault.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "ceiling-fans-perth.html",
+      "before": "<a href=\"electrical.html\">Perth electrical services</a>",
+      "after": "<a href=\"electrical.html\">electrical services</a>",
+      "count": 2
+    },
+    {
+      "file": "ceiling-fans-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "contact.html",
+      "before": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber Perth</a>",
+      "after": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber</a>",
+      "count": 1
+    },
+    {
+      "file": "contact.html",
+      "before": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician Perth</a>",
+      "after": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician</a>",
+      "count": 1
+    },
+    {
+      "file": "dishwasher-installation-perth.html",
+      "before": "<a href=\"plumbing.html\">Perth plumbing services</a>",
+      "after": "<a href=\"plumbing.html\">plumbing services</a>",
+      "count": 2
+    },
+    {
+      "file": "dishwasher-installation-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "eastern-suburbs.html",
+      "before": "<a href=\"plumbing.html\">Plumbing work in eastern Perth</a>",
+      "after": "<a href=\"plumbing.html\">Plumbing work in eastern</a>",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Electrical danger comes before booking.</strong> For a shock or tingling tap, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. For a life-threatening emergency or fire, call <a href=\"tel:000\">000</a>. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official emergency guidance</a>. For loss of supply, check <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-issues\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power outage reporting</a> before assuming an internal circuit fault.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<a href=\"contact.html?service=electrical.html\">ask the Perth team to confirm the proposed scope</a>",
+      "after": "<a href=\"contact.html?service=electrical.html\">ask the team to confirm the proposed scope</a>",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<a href=\"lighting-installation-perth.html\">Lighting Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"lighting-installation-perth.html\">Lighting Installation &amp; Repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<a href=\"ceiling-fans-perth.html\">Ceiling Fan Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"ceiling-fans-perth.html\">Ceiling Fan Installation &amp; Repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement Perth</a>",
+      "after": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement</a>",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades Perth</a>",
+      "after": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades</a>",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks Perth</a>",
+      "after": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks</a>",
+      "count": 1
+    },
+    {
+      "file": "electrical.html",
+      "before": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician Perth</a>",
+      "after": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician</a>",
+      "count": 1
+    },
+    {
+      "file": "emergency-electrician-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Electrical danger comes before booking.</strong> For a shock or tingling tap, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. For a life-threatening emergency or fire, call <a href=\"tel:000\">000</a>. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official emergency guidance</a>. For loss of supply, check <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-issues\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power outage reporting</a> before assuming an internal circuit fault.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "emergency-electrician-perth.html",
+      "before": "<a href=\"electrical.html\">Perth electrical services</a>",
+      "after": "<a href=\"electrical.html\">electrical services</a>",
+      "count": 2
+    },
+    {
+      "file": "emergency-electrician-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "emergency-plumber-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Wastewater overflow needs the right first call.</strong> Water Corporation directs customers with wastewater overflowing on their property to call <a href=\"tel:131375\">13 13 75</a> immediately. Private plumbing and a public sewer fault have different repair responsibilities. <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Wastewater/Sewer-blockage-or-overflow\" target=\"_blank\" rel=\"noopener noreferrer\">Check the official overflow guidance</a>.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "emergency-plumber-perth.html",
+      "before": "<a href=\"plumbing.html\">Perth plumbing services</a>",
+      "after": "<a href=\"plumbing.html\">plumbing services</a>",
+      "count": 2
+    },
+    {
+      "file": "emergency-plumber-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "exhaust-fans-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Electrical danger comes before booking.</strong> For a shock or tingling tap, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. For a life-threatening emergency or fire, call <a href=\"tel:000\">000</a>. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official emergency guidance</a>. For loss of supply, check <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-issues\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power outage reporting</a> before assuming an internal circuit fault.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "exhaust-fans-perth.html",
+      "before": "<a href=\"electrical.html\">Perth electrical services</a>",
+      "after": "<a href=\"electrical.html\">electrical services</a>",
+      "count": 2
+    },
+    {
+      "file": "exhaust-fans-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"lighting-installation-perth.html\">Lighting Installation &amp; Repairs Perth questions</a>",
+      "after": "<a href=\"lighting-installation-perth.html\">Lighting Installation &amp; Repairs questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs Perth questions</a>",
+      "after": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections Perth questions</a>",
+      "after": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement Perth questions</a>",
+      "after": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs Perth questions</a>",
+      "after": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer Perth questions</a>",
+      "after": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"ceiling-fans-perth.html\">Ceiling Fan Installation &amp; Repairs Perth questions</a>",
+      "after": "<a href=\"ceiling-fans-perth.html\">Ceiling Fan Installation &amp; Repairs questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement Perth questions</a>",
+      "after": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades Perth questions</a>",
+      "after": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks Perth questions</a>",
+      "after": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber Perth questions</a>",
+      "after": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber questions</a>",
+      "count": 1
+    },
+    {
+      "file": "faq.html",
+      "before": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician Perth questions</a>",
+      "after": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician questions</a>",
+      "count": 1
+    },
+    {
+      "file": "fixtures-appliances-perth.html",
+      "before": "<a href=\"plumbing.html\">Perth plumbing repairs and installation scope</a>",
+      "after": "<a href=\"plumbing.html\">plumbing repairs and installation scope</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "fixtures-appliances-perth.html",
+      "before": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections Perth</a>",
+      "after": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections</a>",
+      "count": 1
+    },
+    {
+      "file": "fixtures-appliances-perth.html",
+      "before": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement Perth</a>",
+      "after": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement</a>",
+      "count": 1
+    },
+    {
+      "file": "fixtures-appliances-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "hot-water-problems-perth.html",
+      "before": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer Perth</a>",
+      "after": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "hot-water-problems-perth.html",
+      "before": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber Perth</a>",
+      "after": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "hot-water-problems-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "insights-hot-water-plumbing-or-electrical.html",
+      "before": "<a href=\"hot-water-problems-perth.html\">Perth hot-water repair service</a>",
+      "after": "<a href=\"hot-water-problems-perth.html\">hot-water repair service</a>",
+      "count": 1
+    },
+    {
+      "file": "insights-reporting-a-plumbing-leak.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Separate private leaks from utility faults.</strong> For water at the meter, see <a href=\"https://www.watercorporation.com.au/help-and-advice/water-issues/leaks/leaking-meter\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation meter guidance</a>. For wastewater overflow, follow its <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Wastewater/Sewer-blockage-or-overflow\" target=\"_blank\" rel=\"noopener noreferrer\">overflow reporting advice</a> before a normal repair request.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Do not use this checklist for an electrical emergency.</strong> For shock or tingling, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>; call <a href=\"tel:000\">000</a> for a life-threatening emergency or fire. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official reporting guidance</a>.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "insights-safety-switch-keeps-tripping.html",
+      "before": "<a href=\"safety-switch-tripping-perth.html\">Perth safety switch and RCD repairs</a>",
+      "after": "<a href=\"safety-switch-tripping-perth.html\">safety switch and RCD repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "insights-tenant-property-manager-maintenance-handover.html",
+      "before": "<a href=\"property-management.html\">Perth property management maintenance service</a>",
+      "after": "<a href=\"property-management.html\">property management maintenance service</a>",
+      "count": 1
+    },
+    {
+      "file": "lighting-installation-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Electrical danger comes before booking.</strong> For a shock or tingling tap, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. For a life-threatening emergency or fire, call <a href=\"tel:000\">000</a>. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official emergency guidance</a>. For loss of supply, check <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-issues\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power outage reporting</a> before assuming an internal circuit fault.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "lighting-installation-perth.html",
+      "before": "<a href=\"electrical.html\">Perth electrical services</a>",
+      "after": "<a href=\"electrical.html\">electrical services</a>",
+      "count": 2
+    },
+    {
+      "file": "lighting-installation-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "lighting-installation-perth.html",
+      "before": "\n<section class=\"section expanded-scenarios\"><div class=\"shell service-reading\"><h2 id=\"service-scenarios\">Lighting faults, fitting replacement and new installations</h2><div class=\"expanded-scenario\"><h3>LED downlight flickering with a dimmer</h3><p>Several downlights flicker when the dimmer is used, but one room is worse. Tell us which fittings are affected and whether the behaviour changes with the control. A fitting, driver, dimmer or wiring issue can look similar; the symptom alone does not identify the component to replace.</p></div><div class=\"expanded-scenario\"><h3>Replacing a fitting or planning new lighting</h3><p>For a replacement light fitting, share the intended product and existing position. New lighting locations may need a different cable route or control arrangement. We check the proposed use, access and compatibility rather than assuming a new fitting can connect unchanged.</p></div></div></section>",
+      "after": "\n<section class=\"section expanded-scenarios\"><div class=\"shell service-reading\"><h2 id=\"service-scenarios\">Lighting faults, fitting replacement and new installations</h2><div class=\"expanded-scenario\"><h3>LED downlight flickering with a dimmer</h3><p>Several downlights flicker when the dimmer is used, but one room is worse. Tell us which fittings are affected and whether the behaviour changes with the control. A fitting, driver, dimmer or wiring issue can look similar; the symptom alone does not identify the component to replace.</p></div><div class=\"expanded-scenario\"><h3>Replacing a fitting or planning new lighting</h3><p>For a replacement light fitting, share the intended product and existing position. New lighting locations may need a different cable route or control arrangement. We check the proposed use, access and compatibility rather than assuming a new fitting can connect unchanged.</p></div></div></section>\n\n<section class=\"rich-band\"><div class=\"shell text-column\"><span class=\"eyebrow\">Electrical work</span><h2>Kitchen lighting and renovation wiring</h2><p>Our electrical work includes lighting and power-point repairs, fault finding and planned installation. We assess the existing connections, fitting positions and controls so the written quote identifies the work needed for the property.</p><figure><picture data-responsive-media><source type=\"image/avif\" srcset=\"images/electrical-work/kitchen-lighting-wide-responsive-480.avif 480w, images/electrical-work/kitchen-lighting-wide-responsive-960.avif 960w\" sizes=\"(max-width:600px) calc(100vw - 32px), (max-width:800px) 50vw, 390px\"><img loading=\"lazy\" decoding=\"async\" srcset=\"images/electrical-work/kitchen-lighting-wide-responsive-480.webp 480w, images/electrical-work/kitchen-lighting-wide-responsive-960.webp 960w\" sizes=\"(max-width:600px) calc(100vw - 32px), (max-width:800px) 50vw, 390px\" src=\"images/electrical-work/kitchen-lighting-wide.jpg\" width=\"2048\" height=\"1536\" alt=\"Kitchen with installed downlights during renovation\"></picture><figcaption>Recessed downlights across the kitchen ceiling, with power points at the bench and island.</figcaption></figure><p>Lighting installation includes the fitting, intended location, controls and connection requirements. A repair to an existing light and a new lighting location can involve different work. See <a href=\"lighting-installation-perth.html\">lighting installation and repairs</a> or <a href=\"switchboard-upgrades-perth.html\">switchboard repairs and upgrades</a> for the relevant work and quotation scope.</p></div></section>",
+      "count": 1
+    },
+    {
+      "file": "lighting-installation-perth.html",
+      "before": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement Perth</a>",
+      "after": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement</a>",
+      "count": 1
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "before": "<a href=\"lighting-installation-perth.html\">Lighting installation and repairs in Perth</a>",
+      "after": "<a href=\"lighting-installation-perth.html\">Lighting installation and repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "before": "<a href=\"power-points-perth.html\">Power point installation and repairs in Perth</a>",
+      "after": "<a href=\"power-points-perth.html\">Power point installation and repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "before": "<a href=\"lighting-installation-perth.html\">Lighting Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"lighting-installation-perth.html\">Lighting Installation &amp; Repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "before": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "before": "<a href=\"ceiling-fans-perth.html\">Ceiling Fan Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"ceiling-fans-perth.html\">Ceiling Fan Installation &amp; Repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "lighting-power-points-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "news-keeping-access-information-together.html",
+      "before": "<a href=\"property-management.html\">Perth property maintenance service</a>",
+      "after": "<a href=\"property-management.html\">property maintenance service</a>",
+      "count": 1
+    },
+    {
+      "file": "northern-suburbs.html",
+      "before": "<a href=\"electrical.html\">Electrical work in northern Perth</a>",
+      "after": "<a href=\"electrical.html\">Electrical work in northern</a>",
+      "count": 1
+    },
+    {
+      "file": "perth-cbd-inner-suburbs.html",
+      "before": "<a href=\"plumbing.html\">Plumbing services for CBD and inner Perth</a>",
+      "after": "<a href=\"plumbing.html\">Plumbing services for CBD and inner</a>",
+      "count": 1
+    },
+    {
+      "file": "perth-cbd-inner-suburbs.html",
+      "before": "<a href=\"electrical.html\">Electrical work for apartments and inner Perth properties</a>",
+      "after": "<a href=\"electrical.html\">Electrical work for apartments and inner properties</a>",
+      "count": 1
+    },
+    {
+      "file": "plumbing.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>No water across the property?</strong> Check <a href=\"https://www.watercorporation.com.au/About-us/Contact-us\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation supply and outage reporting</a> before assuming a private plumbing fault. Report an unlisted water fault or outage to <a href=\"tel:131375\">13 13 75</a>. Utility network work is not a private repair booking.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "plumbing.html",
+      "before": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections Perth</a>",
+      "after": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections</a>",
+      "count": 1
+    },
+    {
+      "file": "plumbing.html",
+      "before": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement Perth</a>",
+      "after": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement</a>",
+      "count": 1
+    },
+    {
+      "file": "plumbing.html",
+      "before": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs Perth</a>",
+      "after": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "plumbing.html",
+      "before": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer Perth</a>",
+      "after": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer</a>",
+      "count": 1
+    },
+    {
+      "file": "plumbing.html",
+      "before": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber Perth</a>",
+      "after": "<a href=\"emergency-plumber-perth.html\">24-Hour Emergency Plumber</a>",
+      "count": 1
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Check the safety route first.</strong> A shock, tingling tap or damaged network equipment is not a routine fault-finding booking: keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. Call <a href=\"tel:000\">000</a> for a life-threatening emergency or fire. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power emergency advice</a>.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "<a href=\"lighting-installation-perth.html\">Lighting Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"lighting-installation-perth.html\">Lighting Installation &amp; Repairs</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "<a href=\"ceiling-fans-perth.html\">Ceiling Fan Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"ceiling-fans-perth.html\">Ceiling Fan Installation &amp; Repairs</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement Perth</a>",
+      "after": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades Perth</a>",
+      "after": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades</a>",
+      "count": 1
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician Perth</a>",
+      "after": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "power-faults-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "power-points-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Electrical danger comes before booking.</strong> For a shock or tingling tap, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. For a life-threatening emergency or fire, call <a href=\"tel:000\">000</a>. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official emergency guidance</a>. For loss of supply, check <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-issues\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power outage reporting</a> before assuming an internal circuit fault.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "power-points-perth.html",
+      "before": "<a href=\"electrical.html\">Perth electrical services</a>",
+      "after": "<a href=\"electrical.html\">electrical services</a>",
+      "count": 2
+    },
+    {
+      "file": "power-points-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "power-points-perth.html",
+      "before": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections Perth</a>",
+      "after": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections</a>",
+      "count": 1
+    },
+    {
+      "file": "power-points-perth.html",
+      "before": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades Perth</a>",
+      "after": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades</a>",
+      "count": 1
+    },
+    {
+      "file": "power-points-perth.html",
+      "before": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician Perth</a>",
+      "after": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician</a>",
+      "count": 1
+    },
+    {
+      "file": "property-management.html",
+      "before": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement Perth</a>",
+      "after": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement</a>",
+      "count": 1
+    },
+    {
+      "file": "property-management.html",
+      "before": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement Perth</a>",
+      "after": "<a href=\"exhaust-fans-perth.html\">Bathroom Exhaust Fan Replacement</a>",
+      "count": 1
+    },
+    {
+      "file": "property-management.html",
+      "before": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks Perth</a>",
+      "after": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks</a>",
+      "count": 1
+    },
+    {
+      "file": "rcd-testing-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Electrical danger comes before booking.</strong> For a shock or tingling tap, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. For a life-threatening emergency or fire, call <a href=\"tel:000\">000</a>. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official emergency guidance</a>. For loss of supply, check <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-issues\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power outage reporting</a> before assuming an internal circuit fault.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "rcd-testing-perth.html",
+      "before": "<a href=\"electrical.html\">Perth electrical services</a>",
+      "after": "<a href=\"electrical.html\">electrical services</a>",
+      "count": 2
+    },
+    {
+      "file": "rcd-testing-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "renewables-smart-home-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>A shock is not an ordinary tripping enquiry.</strong> Keep clear and contact <a href=\"tel:131351\">Western Power 13 13 51</a> for shock or tingling. Call <a href=\"tel:000\">000</a> for a life-threatening emergency or fire. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official electrical incident guidance</a>.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "before": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs Perth</a>",
+      "after": "<a href=\"power-points-perth.html\">Power Point Installation &amp; Repairs</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "before": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades Perth</a>",
+      "after": "<a href=\"switchboard-upgrades-perth.html\">Switchboard Repairs &amp; Upgrades</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "before": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks Perth</a>",
+      "after": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks</a>",
+      "count": 1
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "before": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician Perth</a>",
+      "after": "<a href=\"emergency-electrician-perth.html\">24-Hour Emergency Electrician</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "safety-switch-tripping-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "shower-plumbing-repairs-perth.html",
+      "before": "<a href=\"plumbing.html\">Perth plumbing services</a>",
+      "after": "<a href=\"plumbing.html\">plumbing services</a>",
+      "count": 2
+    },
+    {
+      "file": "shower-plumbing-repairs-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "smoke-alarm-maintenance-perth.html",
+      "before": "<a href=\"electrical.html\">Perth electrical services</a>",
+      "after": "<a href=\"electrical.html\">electrical services</a>",
+      "count": 1
+    },
+    {
+      "file": "smoke-alarm-maintenance-perth.html",
+      "before": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks Perth</a>",
+      "after": "<a href=\"rcd-testing-perth.html\">RCD Testing &amp; Safety Switch Checks</a>",
+      "count": 1
+    },
+    {
+      "file": "smoke-alarm-maintenance-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "southern-suburbs.html",
+      "before": "<a href=\"electrical.html\">Electrician enquiries for Canning Vale and southern Perth</a>",
+      "after": "<a href=\"electrical.html\">Electrician enquiries for Canning Vale and southern</a>",
+      "count": 1
+    },
+    {
+      "file": "southern-suburbs.html",
+      "before": "<a href=\"plumbing.html\">Plumbing services in southern Perth</a>",
+      "after": "<a href=\"plumbing.html\">Plumbing services in southern</a>",
+      "count": 1
+    },
+    {
+      "file": "switchboard-upgrades-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Electrical danger comes before booking.</strong> For a shock or tingling tap, keep clear and call <a href=\"tel:131351\">Western Power 13 13 51</a>. For a life-threatening emergency or fire, call <a href=\"tel:000\">000</a>. <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/\" target=\"_blank\" rel=\"noopener noreferrer\">Official emergency guidance</a>. For loss of supply, check <a href=\"https://www.westernpower.com.au/issues-enquiries/reporting-issues\" target=\"_blank\" rel=\"noopener noreferrer\">Western Power outage reporting</a> before assuming an internal circuit fault.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "switchboard-upgrades-perth.html",
+      "before": "<a href=\"electrical.html\">Perth electrical services</a>",
+      "after": "<a href=\"electrical.html\">electrical services</a>",
+      "count": 2
+    },
+    {
+      "file": "switchboard-upgrades-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "tap-mixer-repairs-perth.html",
+      "before": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections Perth</a>",
+      "after": "<a href=\"dishwasher-installation-perth.html\">Dishwasher Installation &amp; Connections</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "tap-mixer-repairs-perth.html",
+      "before": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs Perth</a>",
+      "after": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "tap-mixer-repairs-perth.html",
+      "before": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer Perth</a>",
+      "after": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer</a>",
+      "count": 1
+    },
+    {
+      "file": "tap-mixer-repairs-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "toilet-installation-perth.html",
+      "before": "<a href=\"plumbing.html\">Perth plumbing services</a>",
+      "after": "<a href=\"plumbing.html\">plumbing services</a>",
+      "count": 2
+    },
+    {
+      "file": "toilet-installation-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "toilet-repairs-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>If wastewater is overflowing, do not treat it as a cistern adjustment.</strong> Keep clear and follow <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Wastewater/Sewer-blockage-or-overflow\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation overflow guidance</a>, including calling <a href=\"tel:131375\">13 13 75</a> immediately for wastewater overflowing on your property.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "toilet-repairs-perth.html",
+      "before": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement Perth</a>",
+      "after": "<a href=\"toilet-installation-perth.html\">Toilet Installation &amp; Replacement</a>",
+      "count": 1
+    },
+    {
+      "file": "toilet-repairs-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "before": "<aside class=\"intent-safety\" data-intent-safety><p><strong>Is the concern at the water meter?</strong> Use <a href=\"https://www.watercorporation.com.au/help-and-advice/water-issues/leaks/leaking-meter\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation guidance for a leaking meter</a> rather than assuming every leak is private pipework. Do not approach water near electrical equipment.</p></aside>",
+      "after": "",
+      "count": 1
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "before": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs Perth</a>",
+      "after": "<a href=\"shower-plumbing-repairs-perth.html\">Shower Plumbing Leak Repairs</a>",
+      "count": 1
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "before": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer Perth</a>",
+      "after": "<a href=\"water-pressure-perth.html\">Low Water Pressure &amp; Water Hammer</a>",
+      "count": 1,
+      "renderedCount": 0
+    },
+    {
+      "file": "water-leak-detection-perth.html",
+      "before": "<a href=\"service-areas.html\">all six Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">all six service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "water-pressure-perth.html",
+      "before": "<a href=\"plumbing.html\">Perth plumbing services</a>",
+      "after": "<a href=\"plumbing.html\">plumbing services</a>",
+      "count": 2
+    },
+    {
+      "file": "water-pressure-perth.html",
+      "before": "<a href=\"service-areas.html\">Perth service regions</a>",
+      "after": "<a href=\"service-areas.html\">service regions</a>",
+      "count": 1
+    },
+    {
+      "file": "western-suburbs.html",
+      "before": "<a href=\"plumbing.html\">Plumbing work in western Perth</a>",
+      "after": "<a href=\"plumbing.html\">Plumbing work in western</a>",
+      "count": 1
+    },
+    {
+      "file": "western-suburbs.html",
+      "before": "<a href=\"electrical.html\">Electrical work in western Perth</a>",
+      "after": "<a href=\"electrical.html\">Electrical work in western</a>",
+      "count": 1
+    }
+  ]
+}

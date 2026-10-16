@@ -33,11 +33,11 @@ test('all visible FAQ answers agree with structured data and have unique questio
   assert.deepEqual(faqs[0].mainEntity.map(q=>[clean(q.name),clean(q.acceptedAnswer.text)]).sort(byQuestion),visible.sort(byQuestion),f+': FAQ drift');
  }
 });
-test('safety-sensitive queries have utility routing before an ordinary enquiry, not an emergency sales promise',()=>{
+test('removed utility notices stay absent while emergency safety instructions remain available',()=>{
  for(const f of ['electrical.html','power-faults-perth.html','safety-switch-tripping-perth.html','insights-safety-switch-keeps-tripping.html']){
-  const m=read(f).match(/<main\b[\s\S]*?<\/main>/)[0];assert(m.includes('tel:131351'),f+': missing Western Power emergency routing');assert(m.includes('westernpower.com.au/issues-enquiries/reporting-incidents-and-emergencies/'),f+': missing official source');
+  const h=read(f),m=h.match(/<main\b[\s\S]*?<\/main>/)[0];assert(!m.includes('data-intent-safety'),f+': removed notice returned');assert(h.includes('000'),f+': essential emergency safety instruction remains');
  }
- const drain=read('blocked-drains-perth.html');assert(drain.includes('tel:131375'),'wastewater overflow needs Water Corporation routing');
+ const drain=read('blocked-drains-perth.html');assert(!drain.includes('data-intent-safety'));assert(drain.includes('tel:0413477667'));
 });
 test('content editing preserves approved prices, existing canonical URLs, original hero and private personnel',()=>{
  const originalFiles=Object.keys(historical.pages);

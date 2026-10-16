@@ -372,7 +372,7 @@ const legacy = compatibilityView({
       "node": [
         1,
         1,
-        6,
+        5,
         0
       ],
       "mode": "text"
@@ -710,7 +710,7 @@ const legacy = compatibilityView({
       "node": [
         1,
         1,
-        6,
+        5,
         0
       ],
       "mode": "text"
@@ -1726,7 +1726,7 @@ const legacy = compatibilityView({
       "node": [
         1,
         1,
-        6,
+        5,
         0
       ],
       "mode": "text"
@@ -2079,7 +2079,7 @@ const legacy = compatibilityView({
       "node": [
         1,
         1,
-        6,
+        5,
         0
       ],
       "mode": "text"
@@ -2417,7 +2417,7 @@ const legacy = compatibilityView({
       "node": [
         1,
         1,
-        6,
+        5,
         0
       ],
       "mode": "text"

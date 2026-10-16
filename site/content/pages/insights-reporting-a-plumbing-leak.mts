@@ -245,7 +245,7 @@ export const page: PageData = {
 {
 "id": "section-1",
 "kind": "rich",
-"html": "<header class=\"article-header\"><span class=\"eyebrow\">Plumbing guide</span><h1>Reporting a plumbing leak: inspection and repair in Perth</h1><aside class=\"intent-safety\" data-intent-safety><p><strong>Separate private leaks from utility faults.</strong> For water at the meter, see <a href=\"https://www.watercorporation.com.au/help-and-advice/water-issues/leaks/leaking-meter\" target=\"_blank\" rel=\"noopener noreferrer\">Water Corporation meter guidance</a>. For wastewater overflow, follow its <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Wastewater/Sewer-blockage-or-overflow\" target=\"_blank\" rel=\"noopener noreferrer\">overflow reporting advice</a> before a normal repair request.</p></aside><p class=\"article-meta\">Practical property information</p></header>" as TrustedHtml
+"html": "<header class=\"article-header\"><span class=\"eyebrow\">Plumbing guide</span><h1>Reporting a plumbing leak: inspection and repair in Perth</h1><p class=\"article-meta\">Practical property information</p></header>" as TrustedHtml
 },
 {
 "id": "section-2",

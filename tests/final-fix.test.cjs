@@ -17,5 +17,5 @@ for(const [id,wanted]of [
  assert.equal(lists.length,1,id+': one actual navigation list');
  const links=walk(lists[0]).filter(n=>n.tagName==='a');
  assert.deepEqual(links.map(n=>attr(n,'href')),wanted,id+': no duplicated overview or removed useful navigation');
- assert.equal(text(links[0]),'Perth plumbing services');
+ assert.equal(text(links[0]),'plumbing services');
 });

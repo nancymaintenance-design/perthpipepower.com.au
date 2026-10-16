@@ -32,11 +32,11 @@ test('routine hours and emergency availability remain separate in customer copy 
   assert.equal(hours.opens,'09:00');assert.equal(hours.closes,'21:00');assert.equal(hours.dayOfWeek.length,7);
  }
  const emergency=read('emergency-electrician-perth.html').match(/<main\b[\s\S]*?<\/main>/)[0];
- assert(emergency.includes('tel:131351'),'official emergency contact must be present, not index -1');
- assert(emergency.indexOf('tel:131351')<emergency.indexOf('tel:0413477667'),'utility safety route precedes repair call');
+ assert(!emergency.includes('data-intent-safety'),'user-removed utility notice must not return');
+ assert(emergency.includes('tel:0413477667'),'repair contact remains');
  const plumbing=read('emergency-plumber-perth.html').match(/<main\b[\s\S]*?<\/main>/)[0];
- assert(plumbing.includes('tel:131375'),'wastewater reporting must remain on the emergency plumbing page');
- assert(plumbing.indexOf('tel:131375')<plumbing.indexOf('tel:0413477667'));
+ assert(!plumbing.includes('data-intent-safety'),'user-removed overflow notice must not return');
+ assert(plumbing.includes('tel:0413477667'),'repair contact remains');
  assert(/quoted|quote/.test(emergency));assert(!/within 30 minutes|we guarantee arrival|free call-out/i.test(emergency));
 });
 test('expanded page generation is repeatable and preserves existing canonical pages',()=>{
@@ -62,10 +62,10 @@ test('the complete confirmed-content rebuild keeps native menus, dates and FAQ s
   for(const file of fs.readdirSync(root).filter(f=>f.endsWith('.html')).concat(['sitemap.xml','ai-content.json','llms.txt']))fs.copyFileSync(path.join(root,file),path.join(temp,file));
   fs.copyFileSync(path.join(SOURCE_ROOT,'data/sitemap-content-dates.json'),path.join(temp,'data/sitemap-content-dates.json'));
   buildConfirmedContent(temp,'2026-10-12');
-  for(const [file,number]of [['emergency-electrician-perth.html','131351'],['emergency-plumber-perth.html','131375'],['switchboard-upgrades-perth.html','131351']]){
+  for(const file of ['emergency-electrician-perth.html','emergency-plumber-perth.html','switchboard-upgrades-perth.html']){
    const main=fs.readFileSync(path.join(temp,file),'utf8').match(/<main\b[\s\S]*?<\/main>/)[0];
-   assert(main.includes('tel:'+number),file+': rebuild discarded official safety route');
-   assert(main.indexOf('tel:'+number)<main.indexOf('tel:0413477667'));
+   assert(!main.includes('data-intent-safety'),file+': rebuild reintroduced removed notice');
+   assert(main.includes('tel:0413477667'),file+': rebuild discarded repair contact');
   }
   const before=fs.readdirSync(temp).filter(f=>f.endsWith('.html')).map(f=>fs.readFileSync(path.join(temp,f),'utf8'));
   const home=fs.readFileSync(path.join(temp,'index.html'),'utf8');

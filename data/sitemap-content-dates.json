@@ -4,27 +4,27 @@
     "lastmod": "2026-10-15"
   },
   "about.html": {
-    "sha256": "994874e2e9ed3c9eb306eeec3a69e9337f528243c7434211405236bcfd22ca17",
+    "sha256": "cc4e166689c9c6fc2ce449c4043a2325bd44d645c777270bfa1dd15e06fa6028",
     "lastmod": "2026-10-15"
   },
   "plumbing.html": {
-    "sha256": "a70ea92a7f6a25f22dc0f6d8fe28a2b986466ce45334123eb581316896562967",
+    "sha256": "2670959b129027ea53dde6b9de2b33faf7282c49173838deb8ca231f86043dae",
     "lastmod": "2026-10-15"
   },
   "electrical.html": {
-    "sha256": "351d2004e48df5e71a58047bec7a707894ae509e2c0eb9970a095bff5a843fbd",
+    "sha256": "d87d8b93d6a7434d2288066b03efa455ff077aab2885c778d46feac3565e7eb6",
     "lastmod": "2026-10-15"
   },
   "fixtures-appliances-perth.html": {
-    "sha256": "423a2fcc3986ad546900776b36af31f4a34b20bd164172035385ea5ffef33705",
+    "sha256": "ecaacf6d0598f6e3f184cce482fa8ef32c87bea894eb3da989267d6a8f57eb81",
     "lastmod": "2026-10-15"
   },
   "renewables-smart-home-perth.html": {
-    "sha256": "281ce95b8af7e8591cc0c79463d53c6cf2ecf48e68c64fe040c1348369b5278a",
+    "sha256": "6a99bfcb21e050cb41e602b7d9121a5567e1d8ed5398e2e59f4aad43001b1505",
     "lastmod": "2026-10-15"
   },
   "property-management.html": {
-    "sha256": "e947b6e90db5867c2929fa55e296722225b1692debcb699f7e3aaba9c9176436",
+    "sha256": "64314a70e1e8f88c8669318d28deadcccd2ade681bb12383d3839208987af146",
     "lastmod": "2026-10-15"
   },
   "service-areas.html": {
@@ -40,39 +40,39 @@
     "lastmod": "2026-10-13"
   },
   "faq.html": {
-    "sha256": "8118f594ff68ef900ca29d10cc6c7c1f74a6a6017dcdbca045c175481e621950",
+    "sha256": "49999dc7620fb3270dda3a7310122209ba4942da71ff1650af869f2554e0bb49",
     "lastmod": "2026-10-15"
   },
   "contact.html": {
-    "sha256": "4c160e6b905472f96c9aff68e41044cf1f61deec2f44213e89dbb73e37b694a6",
+    "sha256": "3066faa9cdd1217a697635a57c633d1122550fbf34b6d52a45495f0b5bc2e52e",
     "lastmod": "2026-10-15"
   },
   "blocked-drains-perth.html": {
-    "sha256": "16a8a0e9758eca55c6f9fcd29c0f705fd652b8f70e3ec6fb693a9f571732c9d1",
+    "sha256": "0dc53b61dc880659d8f7b939aa118183698672ad9ea703170b007e59e1a78854",
     "lastmod": "2026-10-15"
   },
   "burst-pipe-repair-perth.html": {
-    "sha256": "84a7d2e4a8550ba398d10c866e8a538743afc6c27a074226f7edfc2af920b126",
+    "sha256": "583fa06d4bb934982b394357f440f753094ba89fe23572bdecc68a1bfbd45d17",
     "lastmod": "2026-10-15"
   },
   "eastern-suburbs.html": {
-    "sha256": "f10653c2f76c1c84cb028bc4f1e1c6fbba94fe26d397c108ff4e5a4a3fce63aa",
+    "sha256": "40a6bb22444b059ec5e1307beea76f4ba9cab044387fdfb326e0d4376178c934",
     "lastmod": "2026-10-15"
   },
   "hot-water-problems-perth.html": {
-    "sha256": "c1606699065a715b394f2e432e59b6b3152ebe31d582c7272120e94802202eb8",
+    "sha256": "bc1d4a3fce6af7e7a9109426531e9268bd1342a112d91991cb3fe4dd732aa1fd",
     "lastmod": "2026-10-15"
   },
   "lighting-power-points-perth.html": {
-    "sha256": "2e45a4c11329227e33a85280d4c28e27976b74a45fa28193e4d4d51ed70908e0",
+    "sha256": "4c6a6feac0caebd9d8af3f1ef13465f3a8ecb11c70633b229e20df20e7ff6789",
     "lastmod": "2026-10-13"
   },
   "northern-suburbs.html": {
-    "sha256": "60598f03e8681eb7b11d09ead91b39537ccc632b17fa945e12ff405a8b99f647",
+    "sha256": "8081d0789bda3ed352155f141512ebe7feec7f61ab1b58794d687670dc51e0ce",
     "lastmod": "2026-10-15"
   },
   "perth-cbd-inner-suburbs.html": {
-    "sha256": "eac73278e184456be65f476b3a51d0aae3325300fe39fe004b539a59658a68e1",
+    "sha256": "5dff395e108ff31b59bb7487b76b5ebad53e537f8cadea4c04bd989ade3f83a1",
     "lastmod": "2026-10-15"
   },
   "perth-hills-swan-valley.html": {
@@ -80,51 +80,51 @@
     "lastmod": "2026-10-15"
   },
   "power-faults-perth.html": {
-    "sha256": "83fa2345976593f89bd2c2b1fd03bbd02ebde43135f6b1edd047f9fcb6665b95",
+    "sha256": "5714a6ca71d9d7f2472e51897424b1555ba69bd20e9792d9facc8217300a13f7",
     "lastmod": "2026-10-15"
   },
   "safety-switch-tripping-perth.html": {
-    "sha256": "035b503d8a6eefc66847c599ca656a404c39bc35085edf30dab597c9d07500c8",
+    "sha256": "065da1c735260a12ac42b59aa5706f3da56420b91d84c1c89eddea286284bbd8",
     "lastmod": "2026-10-15"
   },
   "smoke-alarm-maintenance-perth.html": {
-    "sha256": "3b3a76b0d25c7ecab6f3d2660d1eed5aeb8834a17bf4bc23b93d87937e9683fb",
+    "sha256": "8d5ffdad8225e78f6d26788040f6c24b49713e79fb89226a386671bb8c0cbe9f",
     "lastmod": "2026-10-15"
   },
   "southern-suburbs.html": {
-    "sha256": "bbbde5addc2c0ca1aec71029c180024fcdc16a198918ed7aee71a2e493cbcd53",
+    "sha256": "0251e9a7aa4d94c65a4e52a0e9a85baa0707c7d747805a2a28cb339d701836c5",
     "lastmod": "2026-10-15"
   },
   "tap-mixer-repairs-perth.html": {
-    "sha256": "34c91b336da84c8b7bc0b7926cece9c2d13b9e68bd70e481f4d70327f5d398d7",
+    "sha256": "ab475f438ec877291845fc7b0b83a60c4938e41c1c9c9622d354079719ede630",
     "lastmod": "2026-10-15"
   },
   "toilet-repairs-perth.html": {
-    "sha256": "9a35a8de128f3e00d7227ba85d29c7eb409b2e36f04b15aa4bc73979af007b5f",
+    "sha256": "c5cf3dcf3a3daf571780db85eff059457650e8e355af1285dc677d8c497cab49",
     "lastmod": "2026-10-15"
   },
   "water-leak-detection-perth.html": {
-    "sha256": "e49eeb97c03a6a330db95cf17ddb49131a0c0843fedde6f2023e17dbca942b70",
+    "sha256": "97f21cb2c55d4b2dd0d3dba07cf891fb6651f394be33947a5aa8f10dce1f625e",
     "lastmod": "2026-10-15"
   },
   "western-suburbs.html": {
-    "sha256": "678b987f19aa594cfe613beac44fcbb3ccdea072f3f89ac28671782bd494b374",
+    "sha256": "49e9a5f0d05ecbfba94fb8255232cb5f8da7cadc5979d0721230e811ff894254",
     "lastmod": "2026-10-15"
   },
   "insights-reporting-a-plumbing-leak.html": {
-    "sha256": "e6afd9fdf0f1f81c8d75b5586679aa2ab9948094fcae19dd107be07184e739d1",
+    "sha256": "47fd0b66c5bdfcccab4e6434b82343b3246def933faa31922205d0bd5465adc5",
     "lastmod": "2026-10-15"
   },
   "insights-safety-switch-keeps-tripping.html": {
-    "sha256": "ef09b4d323ffeea816fe3cf0af8809645ab0b8cfcab3d9ccf865a44d1a023cf9",
+    "sha256": "69faa2a2910509ab14475db44e0878d54342acd6eef6cb1c134046bbe2a01b75",
     "lastmod": "2026-10-15"
   },
   "insights-tenant-property-manager-maintenance-handover.html": {
-    "sha256": "b945bb02b831656b0fed2a68d12a300719012185a9037579f4779f467186e341",
+    "sha256": "3c6123bf48ba17f391dc9766717123fd6ed8211313e9d47404d5294d7d7e4344",
     "lastmod": "2026-10-15"
   },
   "insights-hot-water-plumbing-or-electrical.html": {
-    "sha256": "5af1cd69055260c63f48f6d9bc52e8c8e39c5afca7310e33edb45c67210ddbb7",
+    "sha256": "758c6026d743b6a24f6ed58d076c082bd75bd41fc25f3892632a75d43332b214",
     "lastmod": "2026-10-15"
   },
   "news-clearer-property-maintenance-enquiry.html": {
@@ -136,55 +136,55 @@
     "lastmod": "2026-10-15"
   },
   "news-keeping-access-information-together.html": {
-    "sha256": "2abc3e1a3f3e96f649ed91b78a1b0054e21518e539384ff2d93601be9a16b39a",
+    "sha256": "282c2d79fb90a7dc0c53fb03e1249ba35280fecc65d3295864976f37ebd70920",
     "lastmod": "2026-10-15"
   },
   "lighting-installation-perth.html": {
-    "sha256": "ec992df146db24b69792151468e3c35948d2a300f626be1f2d697b01157a664d",
+    "sha256": "31b1fad338bf979ad191e8a0159108ab4d6b4f8446ea160499b53c9421931f71",
     "lastmod": "2026-10-15"
   },
   "power-points-perth.html": {
-    "sha256": "b91a67500786e851571298fa223c79d47b1a0ad0dc5bed30df3fe225c8d8533f",
+    "sha256": "5a42f98908210326b16b9fb93f92eb2c81fc3c2f2d9c3dc9b223e97f79f25159",
     "lastmod": "2026-10-15"
   },
   "dishwasher-installation-perth.html": {
-    "sha256": "aa3b97cefca867f2411721af9830cb88f22557d00a533676558f1fe53fcf3d5f",
+    "sha256": "c11d049ad9dcc195e4a2662391409e4df85716b60245a26df97cc93781e85211",
     "lastmod": "2026-10-15"
   },
   "toilet-installation-perth.html": {
-    "sha256": "f6dfa73f1ccf4fafa411ce4cb3bb6b4703abf3e72859b9f33ca145f95055d473",
+    "sha256": "5d745f3acb6ece1ee965d4eab68b6bec73f0afe6b8f8b5b40ff411050d8519b2",
     "lastmod": "2026-10-15"
   },
   "shower-plumbing-repairs-perth.html": {
-    "sha256": "378bcc17cb50ffc49a7049e7becbd5f03fb824ae72566d7c547fb0a96e556077",
+    "sha256": "6901a7e8a46533368943f3fd90b75e15f0f0637d266919d154b44f91f09be47a",
     "lastmod": "2026-10-15"
   },
   "water-pressure-perth.html": {
-    "sha256": "2dc7c9fcde0a2e6c50ae83302846b699fcb39266733e1fe5a76d14bfad2bb46c",
+    "sha256": "280d4eccda5d029f6960454b035aba47049e46d9246bac2ce7760f384e6cff8e",
     "lastmod": "2026-10-15"
   },
   "ceiling-fans-perth.html": {
-    "sha256": "5cc71b1f1c131135f0925e407ec684124c51c3e2a0522aa730847630f286c7c7",
+    "sha256": "24fb5ba79822efbade0545709d57c5f64cc23ed79ac99da3d1d17ecca6e59349",
     "lastmod": "2026-10-15"
   },
   "exhaust-fans-perth.html": {
-    "sha256": "b5d458c2c0e5f1a55f0d66b191f6f0f880dbd91cd5e7da188fda792c3a69bcce",
+    "sha256": "4eb6a3a9da808466d81a9e49359abe6c41562ec385c65779f29c57bb42aa5aa4",
     "lastmod": "2026-10-15"
   },
   "switchboard-upgrades-perth.html": {
-    "sha256": "09f13c7fac6e45813a6747465c7f1d5a5e8997dc8f5f351a89a17a70e1ba01e8",
+    "sha256": "63fb449b59aa746a1a090aace0879e5a393f7a891e3fae0a613c36b90ac37959",
     "lastmod": "2026-10-15"
   },
   "rcd-testing-perth.html": {
-    "sha256": "e0c6f330bde963a3c40b59ecaf8d91a68fa602533cb13a46fa13e75ebc0d43cd",
+    "sha256": "773b89cdf8a1a989849a00be9b33d0054a151047614d46b56c67569a2259344a",
     "lastmod": "2026-10-15"
   },
   "emergency-plumber-perth.html": {
-    "sha256": "17029832b570a060276e43bb6aa72a3d0438a9d5b9abb5b05778d668c21434a2",
+    "sha256": "15949740354a5f3efc1eaa898eedf06b0b34380295ef62bee5b638beb5ec3e53",
     "lastmod": "2026-10-15"
   },
   "emergency-electrician-perth.html": {
-    "sha256": "100add65551a0ed56cfcbdef7fbc2a7a4dfa84063505e2f6ab038247587631db",
+    "sha256": "98dcfccbe0398af343e8e8a769e73c0f676d1aa992b831dd46f09ba9195ab4ff",
     "lastmod": "2026-10-15"
   }
 }

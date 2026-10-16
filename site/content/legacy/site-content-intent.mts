@@ -6068,23 +6068,7 @@ const legacy = compatibilityView({
           ],
           "links": [
             [
-              {
-                "$source": "fragment",
-                "file": "insights-reporting-a-plumbing-leak.html",
-                "path": [
-                  "sections",
-                  1,
-                  "html"
-                ],
-                "node": [
-                  0,
-                  2,
-                  0,
-                  2
-                ],
-                "mode": "attribute",
-                "attribute": "href"
-              },
+              "",
               {
                 "$source": "fragment",
                 "file": "water-leak-detection-perth.html",
@@ -16163,246 +16147,23 @@ const legacy = compatibilityView({
     }
   },
   "safety": {
-    "plumbing.html": {
-      "$source": "fragment",
-      "file": "plumbing.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        1,
-        4,
-        0
-      ],
-      "mode": "inner"
-    },
-    "electrical.html": {
-      "$source": "fragment",
-      "file": "ceiling-fans-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "inner"
-    },
-    "power-faults-perth.html": {
-      "$source": "fragment",
-      "file": "power-faults-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        1,
-        4,
-        0
-      ],
-      "mode": "inner"
-    },
-    "safety-switch-tripping-perth.html": {
-      "$source": "fragment",
-      "file": "safety-switch-tripping-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        1,
-        4,
-        0
-      ],
-      "mode": "inner"
-    },
-    "insights-safety-switch-keeps-tripping.html": {
-      "$source": "fragment",
-      "file": "insights-safety-switch-keeps-tripping.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        0,
-        2,
-        0
-      ],
-      "mode": "inner"
-    },
-    "blocked-drains-perth.html": {
-      "$source": "fragment",
-      "file": "blocked-drains-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        1,
-        4,
-        0
-      ],
-      "mode": "inner"
-    },
-    "toilet-repairs-perth.html": {
-      "$source": "fragment",
-      "file": "toilet-repairs-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        1,
-        4,
-        0
-      ],
-      "mode": "inner"
-    },
-    "water-leak-detection-perth.html": {
-      "$source": "fragment",
-      "file": "water-leak-detection-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        1,
-        4,
-        0
-      ],
-      "mode": "inner"
-    },
-    "insights-reporting-a-plumbing-leak.html": {
-      "$source": "fragment",
-      "file": "insights-reporting-a-plumbing-leak.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        0,
-        2,
-        0
-      ],
-      "mode": "inner"
-    },
-    "lighting-installation-perth.html": {
-      "$source": "fragment",
-      "file": "ceiling-fans-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "inner"
-    },
-    "power-points-perth.html": {
-      "$source": "fragment",
-      "file": "ceiling-fans-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "inner"
-    },
-    "ceiling-fans-perth.html": {
-      "$source": "fragment",
-      "file": "ceiling-fans-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "inner"
-    },
-    "exhaust-fans-perth.html": {
-      "$source": "fragment",
-      "file": "ceiling-fans-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "inner"
-    },
-    "switchboard-upgrades-perth.html": {
-      "$source": "fragment",
-      "file": "ceiling-fans-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "inner"
-    },
-    "rcd-testing-perth.html": {
-      "$source": "fragment",
-      "file": "ceiling-fans-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "inner"
-    },
-    "emergency-plumber-perth.html": {
-      "$source": "fragment",
-      "file": "blocked-drains-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        1,
-        4,
-        0
-      ],
-      "mode": "inner"
-    },
-    "emergency-electrician-perth.html": {
-      "$source": "fragment",
-      "file": "ceiling-fans-perth.html",
-      "path": [
-        "hero"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "inner"
-    }
+    "plumbing.html": "",
+    "electrical.html": "",
+    "power-faults-perth.html": "",
+    "safety-switch-tripping-perth.html": "",
+    "insights-safety-switch-keeps-tripping.html": "",
+    "blocked-drains-perth.html": "",
+    "toilet-repairs-perth.html": "",
+    "water-leak-detection-perth.html": "",
+    "insights-reporting-a-plumbing-leak.html": "",
+    "lighting-installation-perth.html": "",
+    "power-points-perth.html": "",
+    "ceiling-fans-perth.html": "",
+    "exhaust-fans-perth.html": "",
+    "switchboard-upgrades-perth.html": "",
+    "rcd-testing-perth.html": "",
+    "emergency-plumber-perth.html": "",
+    "emergency-electrician-perth.html": ""
   },
   "metadata": {
     "property-management.html": {

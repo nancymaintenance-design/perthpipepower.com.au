@@ -17,6 +17,7 @@ test('whole-site copy avoids gratuitous trust disclaimers while retaining emerge
  assert(home.includes('https://www.google.com/maps?cid=4207134925924682021'));
  assert(home.includes('09:00–21:00'));
  assert(home.includes('24-hour emergency repairs'));
- assert(read('electrical.html').includes('tel:131351'));
- assert(read('blocked-drains-perth.html').includes('tel:131375'));
+ assert(!read('electrical.html').includes('data-intent-safety'));
+ assert(!read('blocked-drains-perth.html').includes('data-intent-safety'));
+ assert(read('electrical.html').includes('000'));
 });

@@ -19,9 +19,10 @@ test('homepage carousel and service cards explain the actual work before reporti
   assert.doesNotMatch(copy,/^(?:Describe|Bring together|For active water|For slow drainage)/i,'card should describe work: '+copy);
  }
 });
-test('About includes existing work imagery and one continuous quotation and booking explanation',()=>{
+test('About retains company and booking content while work imagery lives on the relevant lighting service',()=>{
  const {main,copy}=page('about.html'),nodes=walk(main);
- assert(nodes.some(n=>n.tagName==='picture'&&walk(n).some(i=>(attr(i,'src')||'').includes('images/electrical-work/'))),'real existing work picture');
+ assert(!copy.includes('Kitchen lighting and renovation wiring'),'service example moved out of About');
+ assert(walk(page('lighting-installation-perth.html').main).some(n=>n.tagName==='picture'&&walk(n).some(i=>(attr(i,'src')||'').includes('images/electrical-work/'))),'existing work picture retained on lighting service');
  assert.doesNotMatch(copy,/Clear details before work is arranged|Documentation before the right work begins/);
  assert.equal(nodes.filter(n=>attr(n,'class')==='rich-grid').length,0,'no repeated three-step card wall');
  assert.match(copy,/Plumbing Repairs.*Electrical Repairs.*Property Maintenance/);

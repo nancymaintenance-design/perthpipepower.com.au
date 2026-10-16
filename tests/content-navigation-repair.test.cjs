@@ -71,7 +71,7 @@ test('hubs retain shared hours and one concise urgent attendance note without fr
   const note=all.filter(n=>attr(n,'class')==='service-attendance-note');assert.equal(note.length,1);
   assert.match(text(note[0]),/Emergency repair fees follow the quoted work plan/);
   assert.match(text(note[0]),/For urgent work, call rather than relying on an online enquiry/);
-  if(file==='electrical.html')assert(all.some(n=>attr(n,'href')==='tel:131351'));
+  assert(!all.some(n=>attr(n,'data-intent-safety')!==undefined),'removed utility notice stays absent');
  }
 });
 test('homepage retains the office while avoiding duplicate pathways and advantages',()=>{

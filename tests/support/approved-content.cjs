@@ -448,6 +448,20 @@ function refineHeader(header){
  assert.equal(approved.assets['field-design.css'],edits.fieldDesignCss.before,'previous homepage style fingerprint');
  approved.assets['field-design.css']=edits.fieldDesignCss.after;
 }
+// User-approved 2026-10-16 changes are exact source fragments. This layer
+// retains full-document protection outside the enumerated removals/labels/move.
+{
+ const edits=require('../fixtures/customer-corrections-20261016.json').edits;
+ for(const [file,previous]of Object.entries(approved.pages)){
+  const tree=JSON.parse(previous.dom);
+  for(const edit of edits.filter(e=>e.file===file)){
+   const old=parts(edit.before),next=parts(edit.after),needle=JSON.stringify(old);let count=0;
+   function visit(node){const c=childList(node);for(let i=0;i<=c.length-old.length;i++)if(JSON.stringify(c.slice(i,i+old.length))===needle){c.splice(i,old.length,...structuredClone(next));count++;i+=next.length-1;}c.forEach(visit);}
+   visit(tree);assert.equal(count,edit.renderedCount??edit.count,file+': exact approved customer fragment '+edit.before.slice(0,180));
+  }
+  approved.pages[file]=snapshotFromTree(tree,previous);
+ }
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  return comparePublicOutput(root,manifest).filter(d=>{
