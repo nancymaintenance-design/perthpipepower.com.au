@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "editor:compile": "tsc -p tsconfig.json && tsc -p tsconfig.editor.json",
+    "editor:dev": "npm run editor:compile && node .build/tools/editor/server.mjs",
+    "test:editor": "npm run editor:compile && node --test tests/localization-fields.test.cjs tests/editor-store.test.cjs tests/editor-server.test.cjs",
+    "test:editor:browser": "npm run editor:compile && node --test tests/editor-preview.browser.cjs",
     "compile": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "build": "npm run compile && node .build/site/build/cli.mjs",
