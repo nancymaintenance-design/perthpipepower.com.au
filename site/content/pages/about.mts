@@ -187,7 +187,7 @@ export const page: PageData = {
 "mainAttributes": {
 "id": "main"
 },
-"hero": "\n      <section class=\"page-hero\">\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Perth plumbing &amp; electrical repairs</span>\n          <h1>Plumbing, Electrical Repairs and Property Maintenance in Perth</h1>\n          <p>\n            {{ppp:shared:business.name:html}} is part of the Ellis Group, with a dedicated\n            Perth repair team for homes, rentals and managed properties across\n            Perth.\n          </p>\n        </div>\n      </section>" as TrustedHtml,
+"hero": "\n      <section class=\"page-hero\">\n        <div class=\"shell\">\n          {{ppp:breadcrumbs}}\n          <span class=\"eyebrow\">Perth plumbing &amp; electrical repairs</span>\n          <h1>Plumbing, Electrical Repairs and Property Maintenance in Perth</h1>\n          <p>We’re a professional Perth-based maintenance and repairs team, providing reliable services for residential homes, rental properties and property managers</p>\n        </div>\n      </section>" as TrustedHtml,
 "sections": [
 {
 "id": "section-1",

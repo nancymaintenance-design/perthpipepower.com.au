@@ -451,7 +451,7 @@ function refineHeader(header){
 // User-approved 2026-10-16 changes are exact source fragments. This layer
 // retains full-document protection outside the enumerated removals/labels/move.
 {
- const edits=require('../fixtures/customer-corrections-20261016.json').edits;
+ const edits=[...require('../fixtures/customer-corrections-20261016.json').edits,require('../fixtures/about-subtitle-sync-20261016.json')];
  for(const [file,previous]of Object.entries(approved.pages)){
   const tree=JSON.parse(previous.dom);
   for(const edit of edits.filter(e=>e.file===file)){

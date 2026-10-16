@@ -1,0 +1,6 @@
+{
+  "file": "about.html",
+  "before": "<p>\n            Ellis Services Group is part of the Ellis Group, with a dedicated\n            Perth repair team for homes, rentals and managed properties across\n            Perth.\n          </p>",
+  "after": "<p>We’re a professional Perth-based maintenance and repairs team, providing reliable services for residential homes, rental properties and property managers</p>",
+  "count": 1
+}
