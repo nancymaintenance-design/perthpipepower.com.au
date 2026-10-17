@@ -4,13 +4,11 @@ import {resolve,join,extname,sep} from 'node:path';
 import {randomBytes} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {loadSiteData} from '../../site/content/pages.mjs';
-import {collectEditableFields,pageHash,fragments,textPositions} from '../../site/localization/fields.mjs';
-import {applyLocaleOverlay,escapeText} from '../../site/localization/overlay.mjs';
-import type {PageData,TrustedHtml} from '../../site/types.mjs';
-import {renderPage} from '../../site/templates/page.mjs';
+import type {PageData} from '../../site/types.mjs';
+import {editorContent,checkedChanges,legacyReview,normalizeDraftChanges,renderEditorContent} from './content.mjs';
+import {exportChanges,approveProposal} from './workflow.mjs';
 import {authorized,sameOrigin} from './security.mjs';
-import {seedHomepage} from './seed.mjs';
-import {readDraft,saveDraft,assertPageId,EditorError} from './store.mjs';
+import {readDraft,saveDraft,archiveLegacyDraft,listHistory,restoreRevision,assertPageId,EditorError} from './store.mjs';
 
 export async function startEditor(options:{host:'127.0.0.1';port:number;sourceRoot:string;draftRoot?:string}):Promise<{url:string;close():Promise<void>}>{
  if(options.host!=='127.0.0.1')throw new Error('Loopback only');
@@ -18,31 +16,19 @@ export async function startEditor(options:{host:'127.0.0.1';port:number;sourceRo
  let origin='';
  const json=(response:ServerResponse,status:number,value:unknown)=>{response.writeHead(status,{'content-type':'application/json; charset=utf-8'});response.end(JSON.stringify(value));};
  async function body(request:IncomingMessage):Promise<any>{let text='';for await(const chunk of request){text+=chunk;if(Buffer.byteLength(text)>1024*1024)throw new EditorError(413,'草稿过大');}try{return JSON.parse(text);}catch{throw new EditorError(400,'草稿格式无效');}}
- async function preview(page:PageData,chinese:boolean,editable:boolean):Promise<string>{
+ async function preview(page:PageData,chinese:boolean,editable:boolean,candidate=false):Promise<string>{
   const draft=chinese?await readDraft(draftRoot,page.file):null;
-  const changes=draft?.changes??{};
-  const edited=chinese?applyLocaleOverlay(page,site,{schemaVersion:1,locale:'zh-Hans',baseHash:draft?.baseHash??pageHash(page),values:changes}):page;
-  let effective=edited;
-  if(editable){
-   effective=structuredClone(edited);const fields=collectEditableFields(page,site);
-   for(const original of fragments(page)){
-    // Translate and annotate from original offsets in one pass, preserving the source identity.
-    let html=original.html;
-    for(const node of textPositions(original.html).reverse()){
-     const field=fields.find(f=>f.sourcePath===original.path+node.path);if(!field||field.locked)continue;
-     const value=changes[field.id]??node.value;
-     const wrapped=`<span data-editor-field="${escapeText(field.id)}" tabindex="0" role="button" aria-label="编辑：${escapeText(field.value.slice(0,60))}">${escapeText(value)}</span>`;
-     html=html.slice(0,node.start)+wrapped+html.slice(node.end);
-    }
-    if(original.path==='hero')effective.hero=html as TrustedHtml;else{const section=effective.sections[Number(original.path.split(':')[1])];if(section.kind==='rich')section.html=html as TrustedHtml;}
-   }
-  }
-  let html=renderPage(effective,site).replace(/<script\b(?![^>]*type=["']application\/ld\+json)[^>]*>[\s\S]*?<\/script>/gi,'');
+  const workflow=candidate?await exportChanges(draftRoot,page.file):null;
+  let html=renderEditorContent(page,site,draft,chinese?'zh-Hans':'en-AU',workflow?.proposal?.englishChanges??{},editable&&chinese).replace(/<script\b(?![^>]*type=["']application\/ld\+json)[^>]*>[\s\S]*?<\/script>/gi,'');
   html=html.replace(/<head>/i,`<head><base href="${origin}/"><meta name="robots" content="noindex,nofollow">`);
   if(chinese)html=html.replace(/<html([^>]*)lang="[^"]*"/i,'<html$1lang="zh-Hans"');
-  const bridge=`const editorOrigin=new URL(document.baseURI).origin;document.addEventListener('submit',e=>{e.preventDefault();e.stopImmediatePropagation()},true);document.addEventListener('click',e=>{const n=e.target.closest('[data-editor-field]');if(n){e.preventDefault();e.stopImmediatePropagation();parent.postMessage({type:'editor-field',id:n.dataset.editorField},editorOrigin);return}if(e.target.closest('a,button,input,select,textarea')){e.preventDefault();e.stopImmediatePropagation()}},true);document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&!e.isComposing&&e.target.matches('[data-editor-field]')){e.preventDefault();parent.postMessage({type:'editor-field',id:e.target.dataset.editorField},editorOrigin)}});`;
-  if(chinese&&!editable)html=html.replace(/(<body\b[^>]*>)/i,'$1<div style="background:#fff4d6;color:#102b3a;padding:10px 20px;text-align:center" role="status">本地中文草稿 · 尚未完成全站翻译 · 未发布</div>');
-  return html.replace('</head>','<style>[data-editor-field]{cursor:text}[data-editor-field]:hover,[data-editor-field]:focus-visible{outline:2px solid #075873;outline-offset:3px}</style></head>').replace('</body>',`<script>${bridge}</script></body>`);
+  const bridge=`const editorOrigin=new URL(document.baseURI).origin;document.addEventListener('submit',e=>{e.preventDefault();e.stopImmediatePropagation()},true);document.addEventListener('click',e=>{const n=e.target.closest('[data-editor-field]');if(n){e.preventDefault();e.stopImmediatePropagation();parent.postMessage({type:'editor-field',id:n.dataset.editorField},editorOrigin);return}if(e.target.closest('header button,[data-next],[data-prev],[data-carousel-pause]'))return;if(e.target.closest('a,button,input,select,textarea')){e.preventDefault();e.stopImmediatePropagation()}},true);document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&!e.isComposing&&e.target.matches('[data-editor-field]')){e.preventDefault();parent.postMessage({type:'editor-field',id:e.target.dataset.editorField},editorOrigin)}});`;
+  if(chinese&&!editable)html=html.replace(/(<body\b[^>]*>)/i,'$1<div style="background:#fff4d6;color:#102b3a;padding:10px 20px;text-align:center" role="status">本地中文预览 · 草稿未发布</div>');
+  // srcdoc has an about: URL; the existing navigation must resolve against
+  // this local document base rather than about:srcdoc. Only these read-only
+  // presentation scripts are enabled, never form/analytics handlers.
+  const navigation=(await readFile(join(sourceRoot,'navigation.js'),'utf8')).replaceAll('location.href','document.baseURI');
+  return html.replace('</head>','<style>[data-editor-field]{cursor:text}[data-editor-field]:hover,[data-editor-field]:focus-visible{outline:2px solid #075873;outline-offset:3px}</style></head>').replace('</body>',`<script>${bridge}</script><script>${navigation}</script><script src="${origin}/site.js"></script></body>`);
  }
  const server=createServer(async(request,response)=>{
   response.setHeader('Cache-Control','no-store');response.setHeader('X-Content-Type-Options','nosniff');response.setHeader('Referrer-Policy','no-referrer');
@@ -55,14 +41,20 @@ export async function startEditor(options:{host:'127.0.0.1';port:number;sourceRo
    if(pathname.startsWith('/__editor/api/')){
     if(!authorized(request,origin,token,request.method!=='GET'))throw new EditorError(403,'本地会话无效，请刷新后台');
     if(pathname==='/__editor/api/pages'&&request.method==='GET')return json(response,200,site.pages.map(p=>({pageId:p.file,title:p.seo.title,kind:p.kind})));
-    const match=pathname.match(/^\/__editor\/api\/(draft|preview)\/([^/]+)$/);if(!match)throw new EditorError(404,'页面不存在');
+    const match=pathname.match(/^\/__editor\/api\/(draft|preview|history|restore|workflow|approve)\/([^/]+)$/);if(!match)throw new EditorError(404,'页面不存在');
     const pageId=match[2];assertPageId(pageId);const page=site.pages.find(p=>p.file===pageId)!;
-    if(match[1]==='preview'&&request.method==='GET'){response.setHeader('content-type','text/html; charset=utf-8');return response.end(await preview(page,true,true));}
-    if(match[1]==='draft'&&request.method==='GET')return json(response,200,{pageId,baseHash:pageHash(page),fields:collectEditableFields(page,site),draft:await readDraft(draftRoot,pageId)});
+    if(match[1]==='preview'&&request.method==='GET'){response.setHeader('content-type','text/html; charset=utf-8');return response.end(await preview(page,url.searchParams.get('locale')!=='en-AU',true,url.searchParams.get('candidate')==='1'));}
+    const model=editorContent(page,site);
+    if(match[1]==='draft'&&request.method==='GET'){const draft=await readDraft(draftRoot,pageId),changes=checkedChanges(model,draft);return json(response,200,{pageId,baseHash:model.baseHash,fields:model.fields,draft:draft?{...draft,changes}:null,legacyDraft:!!draft&&draft.baseHash===model.legacyHash,legacyReview:legacyReview(model,draft)});}
+    if(match[1]==='history'&&request.method==='GET')return json(response,200,await listHistory(draftRoot,pageId));
+    if(match[1]==='workflow'&&request.method==='GET')return json(response,200,await exportChanges(draftRoot,pageId));
+    if(match[1]==='restore'&&request.method==='POST'){const input=await body(request);const draft=await restoreRevision(draftRoot,pageId,input.historyRevision,input.expectedRevision,model.baseHash);return json(response,200,draft);}
+    if(match[1]==='approve'&&request.method==='POST'){const input=await body(request);await approveProposal(draftRoot,pageId,input.chineseRevision,input.proposalHash);return json(response,200,await exportChanges(draftRoot,pageId));}
     if(match[1]==='draft'&&request.method==='PUT'){
      const input=await body(request);if(!input||typeof input!=='object')throw new EditorError(400,'草稿格式无效');
-     applyLocaleOverlay(page,site,{schemaVersion:1,locale:'zh-Hans',baseHash:input.baseHash,values:input.changes??{}});
-     return json(response,200,await saveDraft(draftRoot,{pageId,expectedRevision:input.expectedRevision,baseHash:input.baseHash,changes:input.changes}));
+     if(input.baseHash!==model.baseHash)throw new EditorError(409,'页面基线已更新，请保留当前文字并重新载入');
+     const previous=await readDraft(draftRoot,pageId);if(previous?.baseHash===model.legacyHash)await archiveLegacyDraft(draftRoot,previous);
+     return json(response,200,await saveDraft(draftRoot,{pageId,expectedRevision:input.expectedRevision,baseHash:model.baseHash,changes:normalizeDraftChanges(model,input.changes)}));
     }throw new EditorError(405,'方法不可用');
    }
    if(request.method!=='GET'&&request.method!=='HEAD')throw new EditorError(403,'本地预览禁止提交');
@@ -87,4 +79,4 @@ export async function startEditor(options:{host:'127.0.0.1';port:number;sourceRo
  const address=server.address();if(!address||typeof address==='string')throw new Error('No address');origin=`http://127.0.0.1:${address.port}`;
  return {url:origin+'/__editor/',close:()=>new Promise<void>((done,reject)=>server.close(error=>error?reject(error):done()))};
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){await seedHomepage(process.cwd());const server=await startEditor({host:'127.0.0.1',port:4200,sourceRoot:process.cwd()});console.log('本地中文草稿编辑器 '+server.url);}
+if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){const server=await startEditor({host:'127.0.0.1',port:4200,sourceRoot:process.cwd()});console.log('本地中文草稿编辑器 '+server.url);}

@@ -11,3 +11,11 @@ test('stale_revision_returns_409',async()=>{
  }finally{await fs.rm(root,{recursive:true,force:true});}
 });
 test('path_traversal_rejected',async()=>{const m=await import('../.build/tools/editor/store.mjs');await assert.rejects(m.readDraft('unused','../secret'));await assert.rejects(m.readDraft('unused','unknown.html'));});
+test('restore creates a new revision and preserves other pages; stale restoration is rejected',async()=>{
+ const m=await import('../.build/tools/editor/store.mjs'),root=await fs.mkdtemp(path.join(os.tmpdir(),'editor-history-'));
+ try{await m.saveDraft(root,{pageId:'about.html',expectedRevision:0,baseHash:'base',changes:{x:'第一版'}});await m.saveDraft(root,{pageId:'about.html',expectedRevision:1,baseHash:'base',changes:{x:'第二版'}});
+ await m.saveDraft(root,{pageId:'index.html',expectedRevision:0,baseHash:'base',changes:{y:'其他页'}});
+ assert.equal((await m.listHistory(root,'about.html')).length,2);const restored=await m.restoreRevision(root,'about.html',1,2,'base');assert.equal(restored.revision,3);assert.equal(restored.changes.x,'第一版');assert.equal((await m.readDraft(root,'index.html')).changes.y,'其他页');
+ await assert.rejects(()=>m.restoreRevision(root,'about.html',1,2,'base'),/其他窗口/);await assert.rejects(()=>m.restoreRevision(root,'about.html',1,3,'changed'),/基线/);
+ }finally{await fs.rm(root,{recursive:true,force:true});}
+});

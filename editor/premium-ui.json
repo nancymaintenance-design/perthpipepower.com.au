@@ -1,0 +1,11 @@
+{
+ "profile":"product-admin",
+ "sourceRoots":["ui"],
+ "locale":"zh-Hans",
+ "canonicalMap":"UX-CONTRACT.md",
+ "requiredCapabilities":["Select/Listbox","Form","Scrollbar","Toast","CRUD"],
+ "ownership":{"Select/Listbox":"native"},
+ "requiredCommands":["unit","e2e"],
+ "commands":{"unit":"npm run test:editor","e2e":"npm run test:editor:browser"},
+ "evidence":{"crudFullFlow":"../tests/editor-workflow.browser.cjs","failurePaths":"../tests/editor-server.test.cjs"}
+}
