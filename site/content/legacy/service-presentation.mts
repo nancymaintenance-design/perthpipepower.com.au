@@ -9,22 +9,7 @@ const legacy = compatibilityView({
       "plumbing leak inspection",
       "water leak repair"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "water-leak-detection-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -54,22 +39,7 @@ const legacy = compatibilityView({
       "damaged water pipe",
       "active water leak"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "burst-pipe-repair-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -96,22 +66,7 @@ const legacy = compatibilityView({
       "slow drainage",
       "drain clearing"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "blocked-drains-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -138,22 +93,7 @@ const legacy = compatibilityView({
       "hot water temperature",
       "hot water plumbing or electrical"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "hot-water-problems-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -178,22 +118,7 @@ const legacy = compatibilityView({
       "mixer replacement",
       "tap leak repair"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "tap-mixer-repairs-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -223,22 +148,7 @@ const legacy = compatibilityView({
       "blocked toilet",
       "toilet leak"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "toilet-repairs-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -271,22 +181,7 @@ const legacy = compatibilityView({
         ]
       }
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "power-faults-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -350,22 +245,7 @@ const legacy = compatibilityView({
         "mode": "text"
       }
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "safety-switch-tripping-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -395,22 +275,7 @@ const legacy = compatibilityView({
       "power point installation",
       "downlights"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "lighting-power-points-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -477,22 +342,7 @@ const legacy = compatibilityView({
       "smoke alarm fault",
       "rental property smoke alarms"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "smoke-alarm-maintenance-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -519,22 +369,7 @@ const legacy = compatibilityView({
       "washing machine connection",
       "kitchen laundry bathroom plumbing"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "fixtures-appliances-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",
@@ -566,22 +401,7 @@ const legacy = compatibilityView({
       "home automation",
       "energy equipment electrical work"
     ],
-    "scope": {
-      "$source": "fragment",
-      "file": "renewables-smart-home-perth.html",
-      "path": [
-        "sections",
-        1,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        3,
-        0
-      ],
-      "mode": "text"
-    },
+    "scope": "",
     "links": [
       {
         "$source": "page",

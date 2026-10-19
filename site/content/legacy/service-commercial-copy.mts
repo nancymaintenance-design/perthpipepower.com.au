@@ -314,23 +314,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "hot-water-problems-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -634,23 +618,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "blocked-drains-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -973,23 +941,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "water-leak-detection-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -1330,23 +1282,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "burst-pipe-repair-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -1668,23 +1604,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "tap-mixer-repairs-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -1988,23 +1908,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "toilet-repairs-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -2341,23 +2245,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "power-faults-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -2679,23 +2567,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "safety-switch-tripping-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -3015,23 +2887,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "lighting-power-points-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       "Which service page should I use for my enquiry?",
       "Choose lighting for lights and fittings, power points for outlets and switches, or fault finding for an uncertain or wider circuit problem. List separate tasks together if needed; the team confirms the assessment and written scope."
@@ -3312,23 +3168,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "smoke-alarm-maintenance-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -3648,23 +3488,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "fixtures-appliances-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",
@@ -3985,23 +3809,7 @@ const legacy = compatibilityView({
       ],
       "mode": "text"
     },
-    "safety": {
-      "$source": "fragment",
-      "file": "renewables-smart-home-perth.html",
-      "path": [
-        "sections",
-        0,
-        "html"
-      ],
-      "node": [
-        1,
-        0,
-        6,
-        1
-      ],
-      "mode": "text",
-      "trim": true
-    },
+    "safety": "",
     "newFaq": [
       {
         "$source": "page",

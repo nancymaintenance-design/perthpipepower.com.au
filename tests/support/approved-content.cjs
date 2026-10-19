@@ -467,6 +467,26 @@ function refineHeader(header){
 for(const [file,edit] of Object.entries(require('../fixtures/bilingual-runtime-edits.json'))){
  assert.equal(approved.assets[file],edit.before,file+': previous runtime identity');approved.assets[file]=edit.after;
 }
+// Exact customer-approved 2026-10-19 edits layered on immutable prior evidence.
+// Every replacement/removal must match the old node(s); no page-level exemption.
+for(const edit of require('../fixtures/copy-cleanup-20261019.json').edits){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ for(const op of edit.ops){
+  if(op.op==='replace'){
+   const parent=op.path.slice(0,-1).reduce((n,i)=>n[i],tree),key=op.path.at(-1);
+   assert.deepEqual(parent[key],op.before,edit.file+': exact prior node at '+op.path.join('/'));
+   parent[key]=structuredClone(op.after);
+  }else{
+   const list=op.path.reduce((n,i)=>n[i],tree);
+   assert.deepEqual(list.slice(op.at,op.at+op.before.length),op.before,edit.file+': exact removed nodes');
+   list.splice(op.at,op.before.length,...structuredClone(op.after));
+  }
+ }
+ const updated=snapshotFromTree(tree,previous),all=walk(tree);
+ updated.title=text(all.find(n=>isEl(n,'title')));
+ updated.description=attr(all.find(n=>isEl(n,'meta')&&attr(n,'name')==='description'),'content');
+ approved.pages[edit.file]=updated;
+}
 function normalizeLocaleChrome(tree,file){
  const all=walk(tree),entries=all.filter(n=>n[0]==='element'&&attr(n,'data-locale-entry')!==undefined);
  if(!entries.length)return tree;

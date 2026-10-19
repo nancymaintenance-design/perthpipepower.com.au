@@ -17,7 +17,7 @@ const home = read('index.html');
 assert.match(home, /<title>\s*Plumbing &amp; Electrical Repairs Perth \| Ellis\s*<\/title>/, 'home title retains the service topic and brand');
 assert.match(home, /<link rel="canonical" href="https:\/\/perthpipepower\.com\.au\/"\s*\/?\s*>/, 'home canonical must remain root');
 assert.match(home, /Ellis Services Group/, 'home must retain the verified brand');
-assert.match(home, /<h1\b[^>]*>\s*Plumbing and electrical repairs in Perth\s*<\/h1>/i, 'home H1 must state the Perth plumbing and electrical repair service');
+assert.match(home, /<h1\b[^>]*>\s*Plumbing and electrical repair services in Perth\s*<\/h1>/i, 'home H1 must state the Perth plumbing and electrical repair service');
 
 const safetySwitch = read('safety-switch-tripping-perth.html');
 assert.ok(hrefs(mainContent(safetySwitch)).includes('insights-safety-switch-keeps-tripping.html'), 'safety-switch page must lead to the existing insight');

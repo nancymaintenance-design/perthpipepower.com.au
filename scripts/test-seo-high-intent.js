@@ -8,7 +8,7 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const main = (html) => html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? '';
 
 const home = main(read('index.html'));
-assert.match(home, /Blocked Drains[^<]*Drain Clearing &amp; Repairs/i);
+assert.match(home, /Blocked drain clearing and repairs/i);
 assert.match(home, /href="blocked-drains-perth\.html"/);
 assert.match(home, /Burst pipe/i);
 assert.match(home, /href="burst-pipe-repair-perth\.html"/);

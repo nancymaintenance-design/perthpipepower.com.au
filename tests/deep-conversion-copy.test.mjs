@@ -45,7 +45,8 @@ test('runtime service context assigns qualified work to company and makes photos
   assert.match(text,/on-site assessment/i);
   assert.match(text,/Do not put yourself at risk/i);
   const staticText=visible(read('hot-water-problems-perth.html'));
-  assert.match(staticText,/Our Perth plumbing and electrical work is carried out by appropriately licensed trades/i);
+  assert.doesNotMatch(staticText,/class="service-trade-note"/i,'trade boilerplate stays removed from neighbouring service pages');
+  assert.match(visible(read('about.html')),/appropriately licensed plumbing and electrical tradespeople/i,'company documentation stays on About');
   assert.doesNotMatch(staticText,/Photos are optional: email safely taken photos to/i,'service pages do not repeat centralized submission instructions');
 });
 test('installation runtime and static enquiry path do not presume a fault diagnosis',()=>{

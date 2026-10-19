@@ -22,7 +22,9 @@ for (const file of fs.readdirSync(root).filter(f => f.endsWith('.html'))) {
   assert.equal(new Set(ids).size, ids.length, file + ': no duplicate ids');
   const page = graph.find(n => n['@id']?.endsWith('#webpage'));
   assert.equal(page.about['@id'], b.id);
-  assert(html.includes('data-business-identity'), file + ': visible identity');
+  assert(html.includes('class="brand"'), file + ': visible brand remains');
+  assert(html.includes('tel:0413477667'), file + ': visible business contact');
+  if(file==='about.html')assert(html.includes('ABN 96 645 821 745'), 'About retains company registration details');
   assert(!/https:\/\/share\.google\/(HbT2Uijg3K6yaqcpV|Z4tImXHToPi9H4LmH|XuRahe0m1VzUUvcGV)/.test(html));
   if (file !== 'index.html') {
     const crumb = graph.find(n => n['@type'] === 'BreadcrumbList');
@@ -42,4 +44,4 @@ const headers = config.headers.find(r => r.source === '/(.*)')?.headers || [];
 for (const key of ['X-Content-Type-Options', 'X-Frame-Options', 'Referrer-Policy', 'Permissions-Policy']) {
   assert(headers.some(h => h.key === key), key + ': global response header');
 }
-console.log('PASS: connected entity graphs, visible ABN, official links, service coverage and security headers.');
+console.log('PASS: connected entity graphs, About registration, visible brand/contact, service coverage and security headers.');

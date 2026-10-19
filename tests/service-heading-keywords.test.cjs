@@ -15,6 +15,14 @@ const services = [
   ['fixtures-appliances-perth.html', 'Fixture, Tap &amp; Appliance Connection Services in Perth'],
   ['renewables-smart-home-perth.html', 'Smart Home &amp; Energy Electrical Services in Perth'],
 ];
+const approvedCards={
+ 'blocked-drains-perth.html':'Blocked drain clearing and repairs',
+ 'burst-pipe-repair-perth.html':'Burst pipe repairs',
+ 'lighting-power-points-perth.html':'Lighting and power point installation and repairs',
+ 'property-management.html':'Plumbing and electrical maintenance for property managers',
+ 'fixtures-appliances-perth.html':'Taps, bathroom fixtures and appliance connections',
+ 'renewables-smart-home-perth.html':'Smart lighting and electrical controls'
+};
 
 for (const [page, heading] of services) {
   const card = home
@@ -23,9 +31,7 @@ for (const [page, heading] of services) {
     .map((fragment) => `<article class="card">${fragment}`)
     .find((fragment) => fragment.includes(`href="${page}"`));
   assert.ok(card, `Homepage should link the ${heading} card to ${page}`);
-  const secondary = page==='renewables-smart-home-perth.html'
-    ? 'Smart Lighting &amp; Electrical Controls'
-    : heading.replaceAll(' in Perth','').replaceAll(' Perth','');
+  const secondary = approvedCards[page];
   assert.match(card, new RegExp(`<h3>${secondary}<\\/h3>`));
 
   const pageHtml = read(page);
