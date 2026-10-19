@@ -39,7 +39,7 @@ function inventory(dir, prefix = '') {
 }
 function hashes(dir) { return Object.fromEntries(inventory(dir).map(file => [file, hash(fs.readFileSync(path.join(dir, file)))])); }
 const bilingual=require('../site/content/locales/manifest.json').enabledLocales.includes('zh-Hans');
-const expectedFiles = [...Object.keys(baseline.pages),...(bilingual?Object.keys(baseline.pages).map(file=>'zh/'+file):[]), ...Object.keys(baseline.assets), ...Object.keys(baseline.artifacts)].sort();
+const expectedFiles = [...Object.keys(baseline.pages),...(bilingual?Object.keys(baseline.pages).map(file=>'zh/'+file):[]), ...Object.keys(baseline.assets), ...Object.keys(baseline.artifacts),'feed.json','feed.xml',...(bilingual?['zh/feed.json','zh/feed.xml']:[])].sort();
 
 
 // A root-HTML, old-dist, or CommonJS-data fallback must fail even when the real
@@ -371,19 +371,19 @@ test('hard_linked_standalone_asset_destination_is_refused_before_pending_copy', 
 });
 
 // Directly exercises deletion ownership rather than merely rejecting an extra
-// path. feed.xml is an allowed optional artifact absent from current output.
+// path. atom.xml remains optional and absent; RSS is now a real public output.
 for(const state of ['owned','changed','unowned','out-of-universe','invalid-digest','wrong-outdir'])test(`stale_optional_artifact_${state}_respects_preflight_ownership`,t=>{
   const {buildSite}=modules(),f=fixture(t);
   buildSite({...f,mirrorRoot:f.sourceRoot});
   const owner=path.join(root,'.build/output-manifests',hash(f.outDir.toLowerCase())+'.json');
   t.after(()=>fs.rmSync(owner,{force:true}));
   const manifest=JSON.parse(fs.readFileSync(owner,'utf8'));
-  const stale=path.join(f.outDir,'feed.xml'),original='<feed>PREVIOUS OWNED OPTIONAL ARTIFACT</feed>';
+  const stale=path.join(f.outDir,'atom.xml'),original='<feed>PREVIOUS OWNED OPTIONAL ARTIFACT</feed>';
   fs.writeFileSync(stale,original);
-  if(state!=='unowned')manifest.files['feed.xml']=hash(original);
+  if(state!=='unowned')manifest.files['atom.xml']=hash(original);
   if(state==='changed')fs.writeFileSync(stale,'USER MODIFIED OPTIONAL ARTIFACT');
   if(state==='out-of-universe')manifest.files['../outside.txt']=hash('OUTSIDE');
-  if(state==='invalid-digest')manifest.files['feed.xml']='NOT_A_SHA256';
+  if(state==='invalid-digest')manifest.files['atom.xml']='NOT_A_SHA256';
   if(state==='wrong-outdir')manifest.outDir=f.sourceRoot;
   fs.writeFileSync(owner,JSON.stringify(manifest));
   const outside=path.join(f.dir,'outside.txt');fs.writeFileSync(outside,'OUTSIDE');
@@ -394,10 +394,10 @@ for(const state of ['owned','changed','unowned','out-of-universe','invalid-diges
   if(state==='owned'){
     buildSite({...f,mirrorRoot:f.sourceRoot});
     assert.equal(fs.existsSync(stale),false,'only hash-matching registered stale artifact is deleted');
-    delete beforeOutput['feed.xml'];
+    delete beforeOutput['atom.xml'];
     assert.deepEqual(hashes(f.outDir),beforeOutput);
     assert.deepEqual(hashes(f.sourceRoot),beforeMirror);
-    assert.ok(!Object.hasOwn(JSON.parse(fs.readFileSync(owner,'utf8')).files,'feed.xml'));
+    assert.ok(!Object.hasOwn(JSON.parse(fs.readFileSync(owner,'utf8')).files,'atom.xml'));
     assert.deepEqual([fs.readFileSync(outside),fs.statSync(outside).mtimeMs],before[4]);
   }else{
     assert.throws(()=>buildSite({...f,mirrorRoot:f.sourceRoot}),/unexpected|unowned|modified|hash|Invalid build owner manifest/i);

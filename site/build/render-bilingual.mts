@@ -3,10 +3,11 @@ import {renderSite} from './render-site.mjs';
 import {renderLocalizedPage} from '../localization/render.mjs';
 import {localizedPath,siteOrigin} from '../localization/routes.mjs';
 import {validateLocaleCoverage,type ApprovedLocaleBundle} from '../localization/approved.mjs';
+import {addMachineDiscovery} from '../discovery/machine.mjs';
 /** English renderSite remains the migration authority; this adds an approved locale only. */
 export function renderBilingualSite(site:SiteData,bundles:readonly ApprovedLocaleBundle[]):ReadonlyMap<string,string>{
  const output=new Map(renderSite(site));
- if(!bundles.length)return output;
+ if(!bundles.length)return addMachineDiscovery(output,site);
  const issues=validateLocaleCoverage(site,bundles);if(issues.length)throw new Error('Incomplete bilingual coverage');
  for(const page of site.pages){
   output.set(page.file,renderLocalizedPage(page,site,{locale:'en-AU',preview:false}));
@@ -19,5 +20,5 @@ export function renderBilingualSite(site:SiteData,bundles:readonly ApprovedLocal
   return `<url><loc>${siteOrigin+localizedPath(file,'zh-Hans')}</loc>${m[2]}</url>`;
  }).join('\n  ');
  output.set('sitemap.xml',sitemap.replace('</urlset>',chinese+'\n</urlset>'));
- return new Map([...output].sort(([a],[b])=>a.localeCompare(b,'en')));
+ return addMachineDiscovery(output,site);
 }

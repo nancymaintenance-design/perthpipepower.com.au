@@ -13,6 +13,10 @@ CSP = ("default-src 'self'; script-src 'self' 'unsafe-inline'; "
 DENIED = {'api', 'data', 'scripts', 'tests', 'tools', 'docs', 'internal', 'node_modules', 'site', 'source'}
 ASSETS = {'.html', '.css', '.js', '.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif',
           '.svg', '.ico', '.woff', '.woff2', '.ttf', '.txt', '.xml'}
+FEED_TYPES = {'/feed.json': 'application/feed+json; charset=utf-8',
+              '/zh/feed.json': 'application/feed+json; charset=utf-8',
+              '/feed.xml': 'application/rss+xml; charset=utf-8',
+              '/zh/feed.xml': 'application/rss+xml; charset=utf-8'}
 
 
 class PreviewHandler(BaseHTTPRequestHandler):
@@ -72,11 +76,11 @@ class PreviewHandler(BaseHTTPRequestHandler):
             target = self.server.root / 'index.html'
         elif target.is_dir():
             return self.respond(404)
-        if target.suffix.lower() not in ASSETS and decoded != '/ai-content.json':
+        if target.suffix.lower() not in ASSETS and decoded != '/ai-content.json' and decoded not in FEED_TYPES:
             return self.respond(404)
         if not target.is_file():
             return self.respond(404)
-        self.respond(200, target.read_bytes(), mimetypes.guess_type(target)[0] or 'application/octet-stream')
+        self.respond(200, target.read_bytes(), FEED_TYPES.get(decoded) or mimetypes.guess_type(target)[0] or 'application/octet-stream')
 
 
 def main():

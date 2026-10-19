@@ -5,10 +5,12 @@ import expanded from './content/legacy/expanded-services.mjs';
 import intent from './content/legacy/site-content-intent.mjs';
 import guides from './content/legacy/region-guides.mjs';
 import {renderSite} from './build/render-site.mjs';
+import {addMachineDiscovery} from './discovery/machine.mjs';
 import {renderPage} from './templates/page.mjs';
 import {escapePlainText} from './templates/document.mjs';
 import {assertNoLinks, isReportFixture, publicPath} from './build/copy-assets.mjs';
 import type {TrustedHtml} from './types.mjs';
+const machineSite = () => {const site=loadSiteData();return addMachineDiscovery(renderSite(site),site);};
 
 export function fixtureRoot(root: string): string {
   const target=resolve(root);
@@ -30,24 +32,24 @@ function writeFixture(root: string, output: ReadonlyMap<string,string>): string[
   return pending.map(([file])=>file);
 }
 export function buildExpandedServices(root: string): number {
-  const output=renderSite(loadSiteData());
+  const output=machineSite();
   const selected=new Set([...expanded.pages.map(p=>p.file),'sitemap.xml','ai-content.json']);
   writeFixture(root,new Map([...output].filter(([file])=>selected.has(file))));
   return expanded.pages.length;
 }
 export function buildConfirmedContent(root: string, _date?: string): {newServicePages:number;changed:string[]} {
   // The historical date argument is accepted but never redates approved content.
-  return {newServicePages:expanded.pages.length,changed:writeFixture(root,renderSite(loadSiteData()))};
+  return {newServicePages:expanded.pages.length,changed:writeFixture(root,machineSite())};
 }
 export function applySiteContent(root: string): void {
   const selected=new Set(Object.keys(intent.pages));
-  writeFixture(root,new Map([...renderSite(loadSiteData())].filter(([file])=>selected.has(file))));
+  writeFixture(root,new Map([...machineSite()].filter(([file])=>selected.has(file))));
 }
 export const regionGuides=guides.regionGuides;
 export function applyGuide(_html: string, guide: {route:string}): string {
   const site=loadSiteData(),page=site.pages.find(p=>p.file===guide.route&&p.kind==='region');
   if(!page) throw new Error(`Unknown canonical region: ${guide.route}`);
-  return renderPage(page,site);
+  return addMachineDiscovery(renderSite(site),site).get(page.file)!;
 }
 export interface DecisionSection {
   id:string; heading:string; body:readonly string[]; topics?:readonly string[];

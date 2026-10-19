@@ -104,6 +104,9 @@ test('local deployment config preserves routing and keeps cold build inputs', ()
   const before=require('./fixtures/ts-migration/historical-public-expectations.json').config;
   assert.equal(current.buildCommand,'npm run build'); assert.equal(current.outputDirectory,'dist');
   const {buildCommand,outputDirectory,...rest}=current;
+  const feedHeaders=['/feed.json','/zh/feed.json','/feed.xml','/zh/feed.xml'].map(source=>({source,headers:[{key:'Content-Type',value:source.endsWith('.json')?'application/feed+json; charset=utf-8':'application/rss+xml; charset=utf-8'}]}));
+  assert.deepEqual(rest.headers.slice(0,4),feedHeaders,'only the four approved feed response types are added');
+  rest.headers=rest.headers.slice(4);
   const suburbRules=require('../data/perth-suburbs.json').map(s=>({source:'/service-areas/'+s.slug+'.html',destination:'/contact.html?suburb='+encodeURIComponent(s.name),permanent:true}));
   assert.deepEqual(rest,{...before,redirects:[...suburbRules,...before.redirects]});
   const ignores=fs.readFileSync(path.join(source,'.vercelignore'),'utf8').split(/\r?\n/).map(s=>s.trim());

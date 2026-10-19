@@ -500,9 +500,29 @@ function normalizeLocaleChrome(tree,file){
  removeExact(head,locale.style);removeExact(body,locale.script);return tree;
 }
 function bilingualSitemap(xml){return xml.replace('</urlset>',[...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>([\s\S]*?)<\/url>/g)].map(m=>`<url><loc>${m[1].replace('https://perthpipepower.com.au/','https://perthpipepower.com.au/zh/')}</loc>${m[2]}</url>`).join('\n  ')+'\n</urlset>');}
+// Bounded machine-only policy: retain the approved visible DOM and every old
+// schema property. This never recaptures a complete page or relaxes a body diff.
+function machineApproved(manifest){
+ const change=require('../fixtures/machine-discovery-20261019.json'),next=structuredClone(manifest);
+ for(const [file,previous]of Object.entries(next.pages)){
+  const tree=JSON.parse(previous.dom),all=walk(tree),scripts=all.filter(n=>isEl(n,'script')&&attr(n,'type')==='application/ld+json');
+  assert.equal(scripts.length,change.pages[file].length);
+  scripts.forEach((n,i)=>{
+   const before=JSON.parse(text(n)),after=JSON.parse(change.pages[file][i]);
+   const list=v=>v['@graph']||(Array.isArray(v)?v:[v]);
+   list(before).forEach((entity,index)=>{for(const [key,value]of Object.entries(entity))assert.deepEqual(list(after)[index][key],value,file+': existing schema '+key);});
+   n[4]=[['text',change.pages[file][i]]];
+  });
+  if(file!=='privacy.html')childList(all.find(n=>isEl(n,'head'))).push(...parts('<link data-content-feed rel="alternate" type="application/rss+xml" href="https://perthpipepower.com.au/feed.xml"><link data-content-feed rel="alternate" type="application/feed+json" href="https://perthpipepower.com.au/feed.json">'));
+  next.pages[file]=snapshotFromTree(tree,previous);
+ }
+ next.artifacts={...next.artifacts,...change.feeds};
+ return next;
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
- return comparePublicOutput(root,manifest).filter(d=>{
+ const enhanced=['feed.json','feed.xml','zh/feed.json','zh/feed.xml'].some(file=>fs.existsSync(path.join(root,file)));
+ return comparePublicOutput(root,enhanced?machineApproved(manifest):manifest).filter(d=>{
   if(d.file==='sitemap.xml'&&d.field==='text')return d.actual!==d.expected&&d.actual!==bilingualSitemap(d.expected);
   if(d.file==='sitemap.xml'&&d.field==='sitemapUrls')return JSON.stringify(d.actual)!==JSON.stringify(d.expected)&&JSON.stringify(d.actual)!==JSON.stringify([...d.expected,...d.expected.map(u=>u.replace('https://perthpipepower.com.au/','https://perthpipepower.com.au/zh/'))]);
   if(d.field==='rawText'){const chrome=require('../fixtures/bilingual-chrome.json'),allowed=Object.values(chrome).map(s=>s.replace(/^<(?:style|script)[^>]*>/,'').replace(/<\/(?:style|script)>$/,''));return JSON.stringify(d.actual.filter(n=>!allowed.includes(n.content)))!==JSON.stringify(d.expected);}

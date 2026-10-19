@@ -80,7 +80,7 @@ function snapshot(html: string): PageSnapshot {
   };
 }
 
-const artifactNames = new Set(['sitemap.xml', 'robots.txt', 'llms.txt', 'ai-content.json', 'feed.xml', 'rss.xml', 'atom.xml']);
+const artifactNames = new Set(['sitemap.xml', 'robots.txt', 'llms.txt', 'ai-content.json', 'feed.json', 'feed.xml', 'rss.xml', 'atom.xml']);
 const imageExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif', '.svg', '.ico', '.woff', '.woff2']);
 function pageFiles(root: string): string[] {
   return readdirSync(root, { withFileTypes: true }).filter(entry => entry.isFile() && entry.name.endsWith('.html')).map(entry => entry.name).sort();

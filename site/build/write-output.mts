@@ -6,6 +6,7 @@ import { assets as approvedAssets } from '../content/assets.mjs';
 import { expectedPageFiles, loadSiteData } from '../content/pages.mjs';
 import { renderBilingualSite } from './render-bilingual.mjs';
 import {loadApprovedLocales} from '../localization/approved.mjs';
+import {feedPaths} from '../discovery/machine.mjs';
 import { assertNoLinks, checkRoots, listOutputFiles, projectRoot, publicPath, readPublicAssets } from './copy-assets.mjs';
 
 export interface BuildResult {
@@ -16,7 +17,7 @@ export interface BuildResult {
 }
 interface OwnerManifest { version: 1; outDir: string; files: Record<string, string> }
 const hash = (bytes: string | Buffer): string => createHash('sha256').update(bytes).digest('hex');
-const artifacts = ['sitemap.xml', 'robots.txt', 'llms.txt', 'ai-content.json', 'feed.xml', 'rss.xml', 'atom.xml'];
+const artifacts = ['sitemap.xml', 'robots.txt', 'llms.txt', 'ai-content.json', 'rss.xml', 'atom.xml',...feedPaths];
 const allowed = new Set([...expectedPageFiles,...expectedPageFiles.map(file=>'zh/'+file), ...approvedAssets, ...artifacts]);
 
 function ownerPath(outDir: string): string {
