@@ -98,7 +98,11 @@ test('educational subjects remain in full chapters without repeated short-answer
    assert(plain(body).length>80*expectedEducation[file].length,file+': substantive full explanations retained');
   }
   for(const d of educational){const answer=plain(d[2]).replace(' Read the explanation.','');assert(!plain(body).includes(answer),file+': full answer repeated');assert(answer.length>25,file+': useful direct answer');}
-  assert(section.links.length>0,file+': explanatory source or related guidance missing');
+  const removedExternalOnly={'water-leak-detection-perth.html':'insights-reporting-a-plumbing-leak.html','smoke-alarm-maintenance-perth.html':'insights-tenant-property-manager-maintenance-handover.html'};
+  if(removedExternalOnly[file]){
+   assert.equal(section.links.length,0,file+': removed external-only reference');
+   assert(h.includes('href="'+removedExternalOnly[file]+'"'),file+': useful internal guidance remains available');
+  }else assert(section.links.length>0,file+': explanatory source or related guidance missing');
   const graph=JSON.parse(read(file).match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
   assert.deepEqual(graph.find(n=>n['@type']==='FAQPage').mainEntity.map(n=>[n.name,n.acceptedAnswer.text]),details.map(d=>[plain(d[1]),plain(d[2])]));
  }

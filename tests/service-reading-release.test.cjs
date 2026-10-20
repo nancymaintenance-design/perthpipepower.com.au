@@ -1,6 +1,7 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),crypto=require('crypto');
 const baseline=require('./fixtures/service-reading-release-20261020.json');
-test('style-only release preserves every pre-release HTML, image, script and discovery artifact',()=>{
+test('style release and subsequent exact link cleanup preserve all other public artifacts',()=>{
  assert.equal(baseline.servicePages.length,52);
- for(const [file,before]of Object.entries(baseline.files))if(file!=='field-design.css')assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join('dist',file))).digest('hex'),before,file);
+ const cleanup=require('./fixtures/external-links-cleanup-20261020.json');
+ for(const [file,before]of Object.entries(baseline.files))if(file!=='field-design.css')assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join('dist',file))).digest('hex'),cleanup.afterFiles[file]||before,file);
 });

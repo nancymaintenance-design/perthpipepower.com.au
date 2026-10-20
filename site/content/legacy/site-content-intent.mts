@@ -6066,31 +6066,7 @@ const legacy = compatibilityView({
               "mode": "text"
             }
           ],
-          "links": [
-            [
-              "",
-              {
-                "$source": "fragment",
-                "file": "water-leak-detection-perth.html",
-                "path": [
-                  "sections",
-                  0,
-                  "html"
-                ],
-                "node": [
-                  1,
-                  0,
-                  6,
-                  1,
-                  3,
-                  0,
-                  0,
-                  0
-                ],
-                "mode": "text"
-              }
-            ]
-          ],
+          "links": [],
           "bullets": []
         }
       ]
@@ -10678,48 +10654,7 @@ const legacy = compatibilityView({
               "mode": "text"
             }
           ],
-          "links": [
-            [
-              {
-                "$source": "fragment",
-                "file": "smoke-alarm-maintenance-perth.html",
-                "path": [
-                  "sections",
-                  0,
-                  "html"
-                ],
-                "node": [
-                  1,
-                  0,
-                  4,
-                  4,
-                  1
-                ],
-                "mode": "attribute",
-                "attribute": "href"
-              },
-              {
-                "$source": "fragment",
-                "file": "smoke-alarm-maintenance-perth.html",
-                "path": [
-                  "sections",
-                  0,
-                  "html"
-                ],
-                "node": [
-                  1,
-                  0,
-                  6,
-                  2,
-                  3,
-                  0,
-                  0,
-                  0
-                ],
-                "mode": "text"
-              }
-            ]
-          ],
+          "links": [],
           "bullets": []
         }
       ]
