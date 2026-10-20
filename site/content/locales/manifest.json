@@ -86,14 +86,14 @@
       "approvedAt": "2026-10-19T02:02:39.308Z"
     },
     "zh-Hans:insights-reporting-a-plumbing-leak.html": {
-      "chineseRevision": 4,
-      "bundleHash": "dc5b0eb1e93c56067e5df8c6b8b558ad9c60f3bcef984ea44d71cadf1ed9cd60",
-      "approvedAt": "2026-10-19T02:02:39.308Z"
+      "chineseRevision": 5,
+      "bundleHash": "7451a0070170c7d1a9c22a6fb56fb5e823a447797436bfa0d14f7eec929026e7",
+      "approvedAt": "2026-10-20T07:58:29.170Z"
     },
     "zh-Hans:insights-safety-switch-keeps-tripping.html": {
-      "chineseRevision": 4,
-      "bundleHash": "21392e9bda535a2207772c88351d244f14d3afd863944410cb83ad8e75207539",
-      "approvedAt": "2026-10-19T02:02:39.308Z"
+      "chineseRevision": 5,
+      "bundleHash": "caa23cee18194a2affeec5996acfa4e909324b16bf7681841784fbd73cf69eef",
+      "approvedAt": "2026-10-20T07:58:29.231Z"
     },
     "zh-Hans:insights-tenant-property-manager-maintenance-handover.html": {
       "chineseRevision": 4,
@@ -176,9 +176,9 @@
       "approvedAt": "2026-10-19T02:02:39.310Z"
     },
     "zh-Hans:rcd-testing-perth.html": {
-      "chineseRevision": 4,
-      "bundleHash": "8e4d70103693a8360550d58b26d6765a7aa5d764b02e00db8a46549f7b943ed6",
-      "approvedAt": "2026-10-19T02:02:39.310Z"
+      "chineseRevision": 5,
+      "bundleHash": "8650477117ad8d6aa74bceaf4d720359eadb4e7a5c1ae4f7259f2f33736a0f69",
+      "approvedAt": "2026-10-20T07:58:29.282Z"
     },
     "zh-Hans:renewables-smart-home-perth.html": {
       "chineseRevision": 4,
@@ -201,9 +201,9 @@
       "approvedAt": "2026-10-19T02:02:39.311Z"
     },
     "zh-Hans:smoke-alarm-maintenance-perth.html": {
-      "chineseRevision": 4,
-      "bundleHash": "fb3d6318e40cff8c172cd91cbe0a6bb37e9116f7fbd688cc8a2e31ed7e945f34",
-      "approvedAt": "2026-10-19T02:02:39.311Z"
+      "chineseRevision": 5,
+      "bundleHash": "a5de6333fbc4094cb350f4ad8f98a7f8ce27ae12661b32b162e2fd2885ddfafe",
+      "approvedAt": "2026-10-20T07:58:29.328Z"
     },
     "zh-Hans:southern-suburbs.html": {
       "chineseRevision": 4,
@@ -231,14 +231,14 @@
       "approvedAt": "2026-10-19T02:02:39.311Z"
     },
     "zh-Hans:water-leak-detection-perth.html": {
-      "chineseRevision": 4,
-      "bundleHash": "f405f03ed0ed9b1bdb6b0c04d25d330e81708bec0f1c622678fd3ca5553e7477",
-      "approvedAt": "2026-10-19T02:02:39.311Z"
+      "chineseRevision": 5,
+      "bundleHash": "238acf819e28c5ba8bf21696581af3bb36dac8a9ff0facff055cc1d90dfad408",
+      "approvedAt": "2026-10-20T07:58:29.369Z"
     },
     "zh-Hans:water-pressure-perth.html": {
-      "chineseRevision": 4,
-      "bundleHash": "a2519677ae99438f2ad848d086744220ffaaeb672e923da57ba2314dc403a257",
-      "approvedAt": "2026-10-19T02:02:39.312Z"
+      "chineseRevision": 5,
+      "bundleHash": "5041f8f0c86d96349c2a5b39347eb9c970986f525325ba00b7b62ca94e65ec54",
+      "approvedAt": "2026-10-20T07:58:29.404Z"
     },
     "zh-Hans:western-suburbs.html": {
       "chineseRevision": 4,

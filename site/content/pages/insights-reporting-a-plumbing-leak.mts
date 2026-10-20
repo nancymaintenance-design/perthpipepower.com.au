@@ -310,7 +310,7 @@ export const page: PageData = {
 {
 "id": "section-14",
 "kind": "rich",
-"html": "\n<p>You can request an inspection without meter readings. If the meter is safely accessible and the situation is stable, note the meter type, readings and times. Water Corporation's <a href=\"https://www.watercorporation.com.au/Help-and-advice/Water-issues/Leaks/Detect-a-Leak\">household leak-check guidance</a> compares ordinary meter readings after actual water use has stopped for 15 minutes. An integrated smart meter uses its own model instructions and usage display; do not apply the ordinary dial-reading method to every meter.</p>" as TrustedHtml
+"html": "\n<p>You can request an inspection without meter readings. If the meter is safely accessible and the situation is stable, note the meter type, readings and times. For an ordinary meter, compare readings after actual water use has stopped for 15 minutes. An integrated smart meter uses its own model instructions and usage display; do not apply the ordinary dial-reading method to every meter.</p>" as TrustedHtml
 },
 {
 "id": "section-15",
@@ -345,7 +345,7 @@ export const page: PageData = {
 {
 "id": "section-21",
 "kind": "rich",
-"html": "\n<p>Water Corporation's <a href=\"https://www.watercorporation.com.au/help-and-advice/water-issues/leaks/finding-the-right-plumber-to-fix-a-leak\">guidance on choosing a plumber for a leak</a> explains why hidden leaks need the appropriate skills. Ellis services are provided by appropriately licensed plumbing and electrical tradespeople; licence details are available on request.</p>" as TrustedHtml
+"html": "\n<p>Our licensed plumbers assess hidden leaks and explain the investigation and repair options. Licence details are available on request.</p>" as TrustedHtml
 },
 {
 "id": "section-22",

@@ -516,7 +516,7 @@ function machineApproved(manifest){
   if(file!=='privacy.html')childList(all.find(n=>isEl(n,'head'))).push(...parts('<link data-content-feed rel="alternate" type="application/rss+xml" href="https://perthpipepower.com.au/feed.xml"><link data-content-feed rel="alternate" type="application/feed+json" href="https://perthpipepower.com.au/feed.json">'));
   next.pages[file]=snapshotFromTree(tree,previous);
  }
- next.artifacts={...next.artifacts,...change.feeds};
+ next.artifacts={...next.artifacts,...require('./external-cleanup-feeds.cjs')(change.feeds)};
  return next;
 }
 function compareApprovedOutput(root,manifest=approved){
@@ -537,5 +537,12 @@ approved.artifacts['llms.txt']=llmsReview.text;
 const readingReview=require('../fixtures/service-reading-release-20261020.json');
 for(const [file,hash]of Object.entries(readingReview.afterAssets)){
  assert.equal(approved.assets[file],readingReview.beforeAssets[file],file+': exact pre-release asset');approved.assets[file]=hash;
+}
+// Customer-authorised removal of six external reference destinations. Exact
+// prior fragments only; the rest of each page keeps its original contract.
+for(const edit of require('../fixtures/external-links-cleanup-20261020.json').edits){
+ const previous=approved.pages[edit.file],tree=JSON.parse(previous.dom);
+ replaceFragment(tree,edit.before,edit.after,edit.file,'external-reference cleanup');
+ approved.pages[edit.file]=snapshotFromTree(tree,previous);
 }
 module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,normalizeLocaleChrome,approvedHeader,reviewedCopy};
