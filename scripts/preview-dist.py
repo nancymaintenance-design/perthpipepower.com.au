@@ -80,7 +80,8 @@ class PreviewHandler(BaseHTTPRequestHandler):
             return self.respond(404)
         if not target.is_file():
             return self.respond(404)
-        self.respond(200, target.read_bytes(), FEED_TYPES.get(decoded) or mimetypes.guess_type(target)[0] or 'application/octet-stream')
+        content_type = 'text/plain; charset=utf-8' if decoded == '/llms.txt' else (FEED_TYPES.get(decoded) or mimetypes.guess_type(target)[0] or 'application/octet-stream')
+        self.respond(200, target.read_bytes(), content_type)
 
 
 def main():

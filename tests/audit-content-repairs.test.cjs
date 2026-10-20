@@ -69,7 +69,12 @@ test('primary intent is unique after case folding and overview routes readers to
  for(const file of ['lighting-installation-perth.html','power-points-perth.html'])assert(h.includes('href="'+file+'"'));
  const feed=JSON.parse(read('ai-content.json')).servicePages.find(p=>p.url.endsWith('/lighting-power-points-perth.html'));
  assert.match(feed.title||feed.name,/overview/i);
- assert.match(read('llms.txt').split('\n').find(l=>l.includes('/lighting-power-points-perth.html')),/overview/i);
+ // The curated bilingual directory links directly to the dedicated owners;
+ // the overview page and its existing feed/schema contract remain unchanged.
+ for(const prefix of ['','zh/'])for(const file of ['lighting-installation-perth.html','power-points-perth.html']){
+  const url='https://perthpipepower.com.au/'+prefix+file;
+  assert(read('llms.txt').split('\n').some(line=>line.includes(']('+url+'): ')),url+': descriptive direct owner entry');
+ }
  const graph=JSON.parse(read('lighting-power-points-perth.html').match(/type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
  assert.match(graph.find(n=>n['@type']==='Service').serviceType,/overview/i);
  assert.match(graph.find(n=>n['@type']==='WebPage').description,/dedicated/i);

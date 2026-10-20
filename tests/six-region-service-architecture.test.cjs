@@ -59,7 +59,10 @@ assert.doesNotMatch(JSON.stringify(aiFeed), /fixed price|guaranteed arrival/i);
 assert.equal(aiFeed.business.hours.routine,'09:00–21:00, seven days a week');
 
 const llms = read('llms.txt');
-for (const { file } of regions) assert.match(llms, new RegExp(file));
+// The approved curated directory uses the EN/ZH area hubs rather than copying
+// every regional URL. The six-region navigation checks above remain in force.
+for (const prefix of ['', 'zh/']) assert(llms.split('\n').some(line=>line.includes('](https://perthpipepower.com.au/'+prefix+'service-areas.html): ')));
+for (const { file } of regions) assert(!llms.includes('/'+file+')'),'regional guides remain available via their hub');
 assert.doesNotMatch(llms, /fixed price|guaranteed arrival/i);
 
 console.log('Six-region service architecture contract passed.');

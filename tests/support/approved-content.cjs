@@ -530,4 +530,8 @@ function compareApprovedOutput(root,manifest=approved){
   return JSON.stringify(normalizeChromeWhitespace(JSON.parse(d.expected)))!==JSON.stringify(normalizeChromeWhitespace(normalizeLocaleChrome(JSON.parse(d.actual),d.file)));
  }).map(d=>({...d,expected:d.field==='dom'?'approved exact DOM including shared chrome':d.expected,actual:d.field==='dom'?'unexpected DOM difference':d.actual}));
 }
+// Exact approved directory replacement; no other artifact or page exemption.
+const llmsReview=require('../fixtures/llms-curated-20261020.json');
+assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(approved.artifacts['llms.txt'])).digest('hex'),llmsReview.previousArtifactJSONSha256,'prior reviewed llms identity');
+approved.artifacts['llms.txt']=llmsReview.text;
 module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,normalizeLocaleChrome,approvedHeader,reviewedCopy};
