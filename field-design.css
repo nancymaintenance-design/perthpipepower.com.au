@@ -175,3 +175,26 @@ html:not(.nav-enhanced) .site-nav .nav-group:focus-within .mega-menu{position:ab
  .page-hero .shell:has(a.button[href^="tel:"]) a.button[href="#enquiry"]{margin:8px 0 0}
  #enquiry{scroll-margin-bottom:24px}
 }
+
+/* Approved service reading surface: one document, inset chapters, unchanged content. */
+:is(main[data-commercial-service],main[data-expanded-service],html:has(link[rel="canonical"][href$="/plumbing.html"]) main,html:has(link[rel="canonical"][href$="/electrical.html"]) main) .enquiry-content{
+ background:#fff;border-radius:var(--field-radius);padding:28px;align-self:start;
+}
+:is(main[data-commercial-service],main[data-expanded-service],html:has(link[rel="canonical"][href$="/plumbing.html"]) main,html:has(link[rel="canonical"][href$="/electrical.html"]) main) .enquiry-content>section{
+ background:transparent;border:0;padding:24px 0;margin:0;
+}
+:is(main[data-commercial-service],main[data-expanded-service],html:has(link[rel="canonical"][href$="/plumbing.html"]) main,html:has(link[rel="canonical"][href$="/electrical.html"]) main) .enquiry-content>section:first-child{padding-top:0}
+:is(main[data-commercial-service],main[data-expanded-service],html:has(link[rel="canonical"][href$="/plumbing.html"]) main,html:has(link[rel="canonical"][href$="/electrical.html"]) main) .enquiry-content>section:last-child{padding-bottom:0}
+:is(main[data-commercial-service],main[data-expanded-service],html:has(link[rel="canonical"][href$="/plumbing.html"]) main,html:has(link[rel="canonical"][href$="/electrical.html"]) main) .enquiry-content>section:nth-of-type(even){
+ background:var(--field-light);border-radius:var(--field-radius);padding:24px;margin-block:8px;
+}
+[data-commercial-service] .enquiry-content .service-editorial-part+.service-editorial-part{border-top:0;margin-top:32px;padding-top:0}
+[data-commercial-service] .enquiry-content #service-method>h3{background:var(--field-light);border-radius:var(--field-radius) var(--field-radius) 0 0;padding:24px 24px 10px;margin-bottom:0}
+[data-commercial-service] .enquiry-content #service-method>h3~p{background:var(--field-light);padding:0 24px 18px;margin:0;max-width:none}
+[data-commercial-service] .enquiry-content #service-method>:last-child{border-radius:0 0 var(--field-radius) var(--field-radius);padding-bottom:24px}
+@media(max-width:600px){
+ :is(main[data-commercial-service],main[data-expanded-service],html:has(link[rel="canonical"][href$="/plumbing.html"]) main,html:has(link[rel="canonical"][href$="/electrical.html"]) main) .enquiry-content{padding:20px 18px}
+ :is(main[data-commercial-service],main[data-expanded-service],html:has(link[rel="canonical"][href$="/plumbing.html"]) main,html:has(link[rel="canonical"][href$="/electrical.html"]) main) .enquiry-content>section:nth-of-type(even){padding:20px 16px}
+ [data-commercial-service] .enquiry-content #service-method>h3{padding:20px 16px 10px}
+ [data-commercial-service] .enquiry-content #service-method>h3~p{padding-inline:16px}
+}

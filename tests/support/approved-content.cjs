@@ -534,4 +534,8 @@ function compareApprovedOutput(root,manifest=approved){
 const llmsReview=require('../fixtures/llms-curated-20261020.json');
 assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(approved.artifacts['llms.txt'])).digest('hex'),llmsReview.previousArtifactJSONSha256,'prior reviewed llms identity');
 approved.artifacts['llms.txt']=llmsReview.text;
+const readingReview=require('../fixtures/service-reading-release-20261020.json');
+for(const [file,hash]of Object.entries(readingReview.afterAssets)){
+ assert.equal(approved.assets[file],readingReview.beforeAssets[file],file+': exact pre-release asset');approved.assets[file]=hash;
+}
 module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,normalizeLocaleChrome,approvedHeader,reviewedCopy};
