@@ -14,7 +14,8 @@ test('six removed reference destinations are absent and all approved outbound de
   if(file.endsWith('about.html'))assert(html.includes('abr.business.gov.au/ABN/View?id=645821745'));
  }
 });
-test('only twelve bilingual HTML files and their four derived feeds changed; other artifacts retained',()=>{
+test('reviewed link cleanup plus subsequent navigation retain every other public artifact',()=>{
  assert.equal(Object.keys(fixture.afterFiles).length,16);
- for(const [file,before]of Object.entries(fixture.beforeFiles))assert.equal(hash(fs.readFileSync(path.join('dist',file))),fixture.afterFiles[file]||before,file);
+ const navigation=require('./fixtures/navigation-release-20261021.json');
+ for(const [file,before]of Object.entries(fixture.beforeFiles))assert.equal(hash(fs.readFileSync(path.join('dist',file))),navigation.afterFiles[file]||fixture.afterFiles[file]||before,file);
 });

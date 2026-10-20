@@ -7,6 +7,7 @@ import {localizedPath,localizeInternalHref,siteOrigin} from './routes.mjs';
 import {renderPage} from '../templates/page.mjs';
 import {escapePlainText} from '../templates/document.mjs';
 import {chineseRuntimeConfig} from './runtime.mjs';
+import {applyCustomerPaths} from '../navigation/customer-paths.mjs';
 
 export function requiredTranslations(page:PageData,site:SiteData):readonly {key:string;source:string}[]{
  const entries=new Map(translationPositions(renderPage(page,site)).map(p=>[p.key,p.source]));
@@ -110,5 +111,5 @@ export function renderLocalizedPage(page:PageData,site:SiteData,options:{locale:
  html=html.replace('</head>',tags+style+(locale==='zh-Hans'?chineseRuntimeConfig():'')+'</head>');
  html=html.replace(/(<nav\b[^>]*class="site-nav"[\s\S]*?)(<\/ul>\s*<\/nav>)/,`$1${entry}$2`);
  if(!html.includes('data-locale-entry'))throw new Error('Missing language navigation owner');
- return html.replace('</body>',switchScript+'</body>');
+ return applyCustomerPaths(html.replace('</body>',switchScript+'</body>'),page.file,locale);
 }
