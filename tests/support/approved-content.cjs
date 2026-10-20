@@ -519,10 +519,24 @@ function machineApproved(manifest){
  next.artifacts={...next.artifacts,...require('./external-cleanup-feeds.cjs')(change.feeds)};
  return next;
 }
+function customerNavigationApproved(manifest){
+ const next=structuredClone(manifest),review=require('../fixtures/customer-paths-20261020.json');
+ for(const edit of review.edits){
+  const previous=next.pages[edit.file],tree=normalizeChromeWhitespace(JSON.parse(previous.dom));
+  for(const op of edit.ops){
+   if(op.op==='replace'){const parent=op.path.slice(0,-1).reduce((n,i)=>n[i],tree),key=op.path.at(-1);assert.deepEqual(parent[key],op.before,edit.file+': exact prior navigation node');parent[key]=structuredClone(op.after);}
+   else {const list=op.path.reduce((n,i)=>n[i],tree);assert.deepEqual(list.slice(op.at,op.at+op.before.length),op.before,edit.file+': exact prior navigation fragment');list.splice(op.at,op.before.length,...structuredClone(op.after));}
+  }
+  next.pages[edit.file]=snapshotFromTree(tree,previous);
+ }
+ return next;
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  const enhanced=['feed.json','feed.xml','zh/feed.json','zh/feed.xml'].some(file=>fs.existsSync(path.join(root,file)));
- return comparePublicOutput(root,enhanced?machineApproved(manifest):manifest).filter(d=>{
+ const machine=enhanced?machineApproved(manifest):manifest;
+ const customer=fs.existsSync(path.join(root,'about.html'))&&fs.readFileSync(path.join(root,'about.html'),'utf8').includes('data-customer-path-style');
+ return comparePublicOutput(root,customer?customerNavigationApproved(machine):machine).filter(d=>{
   if(d.file==='sitemap.xml'&&d.field==='text')return d.actual!==d.expected&&d.actual!==bilingualSitemap(d.expected);
   if(d.file==='sitemap.xml'&&d.field==='sitemapUrls')return JSON.stringify(d.actual)!==JSON.stringify(d.expected)&&JSON.stringify(d.actual)!==JSON.stringify([...d.expected,...d.expected.map(u=>u.replace('https://perthpipepower.com.au/','https://perthpipepower.com.au/zh/'))]);
   if(d.field==='rawText'){const chrome=require('../fixtures/bilingual-chrome.json'),allowed=Object.values(chrome).map(s=>s.replace(/^<(?:style|script)[^>]*>/,'').replace(/<\/(?:style|script)>$/,''));return JSON.stringify(d.actual.filter(n=>!allowed.includes(n.content)))!==JSON.stringify(d.expected);}
@@ -534,6 +548,9 @@ function compareApprovedOutput(root,manifest=approved){
 const llmsReview=require('../fixtures/llms-curated-20261020.json');
 assert.equal(require('node:crypto').createHash('sha256').update(JSON.stringify(approved.artifacts['llms.txt'])).digest('hex'),llmsReview.previousArtifactJSONSha256,'prior reviewed llms identity');
 approved.artifacts['llms.txt']=llmsReview.text;
+for(const [file,edit]of Object.entries(require('../fixtures/customer-paths-20261020.json').assets)){
+ assert.equal(approved.assets[file],edit.before,file+': exact previous tracking asset');approved.assets[file]=edit.after;
+}
 const readingReview=require('../fixtures/service-reading-release-20261020.json');
 for(const [file,hash]of Object.entries(readingReview.afterAssets)){
  assert.equal(approved.assets[file],readingReview.beforeAssets[file],file+': exact pre-release asset');approved.assets[file]=hash;

@@ -44,7 +44,18 @@
     let url;
     try { url = new URL(href, document.baseURI); } catch { return; }
     if (url.origin !== location.origin) return;
-    const route = url.pathname.replace(/\/$/, '').slice(1);
+    const breadcrumb = link.closest?.('[data-customer-breadcrumb]');
+    if (breadcrumb) {
+      window.gtag('event', 'breadcrumb_click', {
+        source_path: location.pathname,
+        target_path: url.pathname,
+        locale: document.documentElement.lang,
+        position: Number(link.getAttribute('data-breadcrumb-position')),
+        owner_id: breadcrumb.getAttribute('data-owner-id') || ''
+      });
+      return;
+    }
+    const route = url.pathname.replace(/^\/zh\//, '/').replace(/\/$/, '').slice(1);
     if (services.has(route)) {
       window.gtag('event', 'service_click', { service_page: route, page_path: location.pathname });
     }

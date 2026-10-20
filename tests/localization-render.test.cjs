@@ -28,15 +28,16 @@ test('localized rendering requires complete fresh source-bound plain translation
  const escaped=renderLocalizedPage(page,site,{locale:'zh-Hans',bundle,preview:true});
  assert.match(escaped,/&lt;script&gt;bad&lt;\/script&gt;/);
 });
-test('English rendering only adds language entry and reciprocal metadata',async()=>{
+test('English rendering adds only locale chrome and the separately protected customer navigation projection',async()=>{
  const {renderLocalizedPage}=await import('../.build/site/localization/render.mjs');
  const {loadSiteData}=await import('../.build/site/content/pages.mjs');
  const {renderPage}=await import('../.build/site/templates/page.mjs');
+ const {applyCustomerPaths}=await import('../.build/site/navigation/customer-paths.mjs');
  const site=loadSiteData();
  for(const page of site.pages){
   const result=renderLocalizedPage(page,site,{locale:'en-AU',preview:false});
   assert.match(result,/class="language-switch"[^>]*href="\/zh\//);
   assert.match(result,/lang="en-AU"/);
-  assert.equal(result.replace(/<link data-locale-alternate[^>]+>/g,'').replace(/<style data-locale-style>[\s\S]*?<\/style>/,'').replace(/<li data-locale-entry>[\s\S]*?<\/li>/,'').replace(/<script data-locale-switch>[\s\S]*?<\/script>/,''),renderPage(page,site));
+  assert.equal(result.replace(/<link data-locale-alternate[^>]+>/g,'').replace(/<style data-locale-style>[\s\S]*?<\/style>/,'').replace(/<li data-locale-entry>[\s\S]*?<\/li>/,'').replace(/<script data-locale-switch>[\s\S]*?<\/script>/,''),applyCustomerPaths(renderPage(page,site),page.file,'en-AU'));
  }
 });

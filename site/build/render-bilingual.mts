@@ -4,8 +4,10 @@ import {renderLocalizedPage} from '../localization/render.mjs';
 import {localizedPath,siteOrigin} from '../localization/routes.mjs';
 import {validateLocaleCoverage,type ApprovedLocaleBundle} from '../localization/approved.mjs';
 import {addMachineDiscovery} from '../discovery/machine.mjs';
+import {validateCustomerRoutes} from '../navigation/customer-paths.mjs';
 /** English renderSite remains the migration authority; this adds an approved locale only. */
 export function renderBilingualSite(site:SiteData,bundles:readonly ApprovedLocaleBundle[]):ReadonlyMap<string,string>{
+ validateCustomerRoutes(site);
  const output=new Map(renderSite(site));
  if(!bundles.length)return addMachineDiscovery(output,site);
  const issues=validateLocaleCoverage(site,bundles);if(issues.length)throw new Error('Incomplete bilingual coverage');
