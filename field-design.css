@@ -198,3 +198,118 @@ html:not(.nav-enhanced) .site-nav .nav-group:focus-within .mega-menu{position:ab
  [data-commercial-service] .enquiry-content #service-method>h3{padding:20px 16px 10px}
  [data-commercial-service] .enquiry-content #service-method>h3~p{padding-inline:16px}
 }
+
+/* Homepage enquiry preparation: compact bilingual layout, original content. */
+main:has(>.hero)>.section:has(>.shell>.cards){padding-bottom:32px}
+main:has(>.hero)>.section:has(>.shell>div>.list-check){padding-block:32px 40px}
+main:has(>.hero)>.section:has(>.shell>div>.list-check)>.shell>div{
+ display:grid;
+ grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+ grid-template-rows:min-content 1fr;
+ column-gap:48px;
+ align-items:start;
+}
+main:has(>.hero)>.section:has(>.shell>div>.list-check) .eyebrow{grid-column:1;grid-row:1}
+main:has(>.hero)>.section:has(>.shell>div>.list-check) h2{grid-column:1;grid-row:2;margin:12px 0 0}
+main:has(>.hero)>.section:has(>.shell>div>.list-check) .list-check{grid-column:2;grid-row:1/span 2;margin:0}
+@media(max-width:800px){
+ main:has(>.hero)>.section:has(>.shell>.cards){padding-bottom:24px}
+ main:has(>.hero)>.section:has(>.shell>div>.list-check){padding-block:24px 28px}
+ main:has(>.hero)>.section:has(>.shell>div>.list-check)>.shell>div{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;gap:0}
+ main:has(>.hero)>.section:has(>.shell>div>.list-check) .list-check{grid-column:1;grid-row:3;margin-top:20px}
+}
+
+/* Reviewed follow-up: balanced collections and compact supporting content. */
+main:has(>[data-content-hub])>.section{padding-block:32px}
+main:has(>[data-content-hub])>.section>.intent-content,
+main>[data-content-hub]>.text-column{max-width:960px}
+main>[data-content-hub]>.text-column>h2:first-child{margin-top:0}
+@media(min-width:801px){
+ main:has(>[data-content-hub])>.section>.cards:has(>:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(min-width:601px) and (max-width:1000px){
+ main:has(>[data-content-hub])>.section>.cards:has(>:nth-child(3):last-child)>:last-child{grid-column:1/-1}
+}
+
+/* Remove duplicated vertical padding while retaining a large summary target. */
+.faq details{padding:0 16px}
+.faq summary{min-height:56px;padding-block:16px}
+main:has(.faq-category)>.section>.shell{max-width:1040px}
+main:has(.faq-category)>.section{padding-block:40px}
+main:has(.faq-category) .intent-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 32px}
+main:has(.faq-category) .intent-links li{margin-block:0}
+
+/* About and property work-order bands missed the compact reading rhythm. */
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>.rich-band{padding:28px 24px}
+.enquiry-content .shell.panel{padding:24px}
+
+/* Keep the existing directory booking panel; close its double section gap. */
+main:has(>.area-directory)>.area-directory{padding-bottom:32px}
+main:has(>.area-directory)>.rich-band{padding-block:32px}
+main:has(>.area-directory)>.rich-band>.intent-content{max-width:960px}
+
+@media(max-width:800px){
+ main:has(>[data-content-hub])>.section,
+ main:has(.faq-category)>.section{padding-block:28px}
+ main:has(.faq-category) .intent-links{grid-template-columns:minmax(0,1fr);gap:8px}
+ :is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>.rich-band{padding:24px 16px}
+ .enquiry-content .shell.panel{padding:24px 16px}
+ main:has(>.area-directory)>.area-directory{padding-bottom:24px}
+ main:has(>.area-directory)>.rich-band{padding-block:24px}
+}
+
+/* Supporting-page polish: the existing brand, content and service UI stay intact. */
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content{
+ background:#fff;border:1px solid #d9e4e9;border-radius:var(--field-radius);padding:28px;align-self:start;
+}
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>section{
+ margin:0;padding-block:24px;
+}
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>section:first-child{padding-top:0}
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>section:last-child:not(.rich-band){padding-bottom:0}
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>.rich-band{
+ padding:24px;border-radius:var(--field-radius);margin-block:8px;
+}
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content h2,
+main:has(.faq-category)>.section h2,
+main:has(>[data-content-hub])>.section>.intent-content h2,
+main>[data-content-hub]>.text-column h2,
+main:has(>.area-directory)>.rich-band h2{
+ font-size:clamp(1.65rem,2.4vw,2.125rem);line-height:1.25;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance;
+}
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content :is(.text-column,.intent-content)>h3,
+main>[data-content-hub]>.text-column>h3{
+ font-size:1.2rem;line-height:1.35;margin:24px 0 10px;
+}
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>.section>.shell>:last-child,
+:is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>.rich-band>.shell>:last-child{margin-bottom:0}
+html:has(link[rel="canonical"][href$="/about.html"]) .service-detail h3{font-size:1.15rem;line-height:1.35;margin:0 0 12px}
+html:has(link[rel="canonical"][href$="/about.html"]) .service-detail p:last-child{margin-bottom:0}
+
+/* One rhythm between FAQ overview, service routes and question groups. */
+main:has(.faq-category)>.section{padding-block:28px}
+main:has(.faq-category)>.keyword-gap-content{margin-block:0}
+main:has(.faq-category) .keyword-gap-part>:last-child{margin-bottom:0}
+main:has(.faq-category)>.section.faq{padding-top:12px}
+main:has(.faq-category)>.section.faq>.shell>.intent-content{margin-block:0 28px}
+main:has(.faq-category) .faq-category+ .faq-category{margin-top:28px}
+main:has(.faq-category) .topic-links{gap:8px;margin-block:16px}
+main:has(.faq-category) .topic-links a{display:inline-flex;align-items:center;min-height:44px;border-radius:6px;padding:8px 14px}
+main:has(.faq-category) .topic-links a:hover{background:var(--field-light);border-color:var(--field-blue)}
+main:has(.faq-category) .faq-category>details[open]{background:#fff}
+main:has(.faq-category) .faq-category>details[open]>p{padding-bottom:16px;margin-bottom:0;line-height:1.7}
+
+/* Avoid an extra section-sized margin below a collection's supporting copy. */
+main:has(>[data-content-hub])>.section>.intent-content{margin-bottom:0}
+
+@media(min-width:1001px) and (max-width:1199px){
+ html:has(link[rel="canonical"][href$="/about.html"]) .service-detail-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:600px){
+ :is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content{padding:20px 18px}
+ :is(html:has(link[rel="canonical"][href$="/about.html"]),html:has(link[rel="canonical"][href$="/property-management.html"])) .enquiry-content>.rich-band{padding:20px 16px}
+ main:has(.faq-category)>.section{padding-block:24px}
+ main:has(.faq-category)>.section.faq{padding-top:12px}
+ main:has(.faq-category) .intent-links{gap:4px}
+ main:has(.faq-category) .intent-links a{display:inline-flex;align-items:center;min-height:44px;padding-block:6px}
+}
