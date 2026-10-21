@@ -562,4 +562,15 @@ for(const edit of require('../fixtures/external-links-cleanup-20261020.json').ed
  replaceFragment(tree,edit.before,edit.after,edit.file,'external-reference cleanup');
  approved.pages[edit.file]=snapshotFromTree(tree,previous);
 }
+// Approved UI release: change one stylesheet asset and its exact URL version.
+const uiLayoutReview=require('../fixtures/ui-layout-release-20261021.json');
+assert.equal(approved.assets['field-design.css'],uiLayoutReview.beforeCssSha,'previous reviewed UI asset');
+approved.assets['field-design.css']=uiLayoutReview.afterCssSha;
+for(const [file,previous]of Object.entries(approved.pages)){
+ const edit=uiLayoutReview.versionChanges[file];assert(edit,file+': exact stylesheet version change');
+ const tree=JSON.parse(previous.dom),links=walk(tree).filter(n=>isEl(n,'link')&&attr(n,'href')===edit.before);
+ assert.equal(links.length,1,file+': one prior UI stylesheet');
+ const href=links[0][3].find(a=>a[1]==='href');assert(href,file+': stylesheet href');href[2]=edit.after;
+ approved.pages[file]=snapshotFromTree(tree,previous);
+}
 module.exports={approved,beforeCoherentPresentation,beforeEnquirySidebar,policy,compareApprovedOutput,normalizeChromeWhitespace,normalizeLocaleChrome,approvedHeader,reviewedCopy};
