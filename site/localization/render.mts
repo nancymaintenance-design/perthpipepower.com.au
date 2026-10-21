@@ -68,7 +68,7 @@ export function renderLocalizedPage(page:PageData,site:SiteData,options:{locale:
    }
    if(typeof value!=='string')return value;
    if(key==='inLanguage')return locale;
-   if(['name','description','headline','articleBody','text','caption','serviceType'].includes(key)&&/[A-Za-z]/.test(value)&&!/^https?:/.test(value))return translate(value);
+   if(['name','description','headline','abstract','articleBody','text','caption','serviceType'].includes(key)&&/[A-Za-z]/.test(value)&&!/^https?:/.test(value))return translate(value);
    if(['url','@id','item','mainEntityOfPage'].includes(key)&&value.startsWith(siteOrigin)&&!value.endsWith('#business')){
     if(parentType==='LocalBusiness')return value;
     const rewritten=localizeInternalHref(value,locale,files);return rewritten.startsWith('/')?siteOrigin+rewritten:rewritten;

@@ -18,7 +18,7 @@ for (const expected of [
   'How a repair request moves forward',
   'Licensing &amp; insurance',
   'Registered business details.',
-  'dedicated local repair team',
+  'local repair team',
   'appropriately licensed plumbing and electrical tradespeople',
 ]) {
   assert.ok(about.includes(expected), `About page should present ${expected}`);

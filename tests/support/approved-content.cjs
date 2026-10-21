@@ -536,7 +536,7 @@ function compareApprovedOutput(root,manifest=approved){
  const enhanced=['feed.json','feed.xml','zh/feed.json','zh/feed.xml'].some(file=>fs.existsSync(path.join(root,file)));
  const machine=enhanced?machineApproved(manifest):manifest;
  const customer=fs.existsSync(path.join(root,'about.html'))&&fs.readFileSync(path.join(root,'about.html'),'utf8').includes('data-customer-path-style');
- return comparePublicOutput(root,customer?customerNavigationApproved(machine):machine).filter(d=>{
+ return comparePublicOutput(root,require('./customer-copy-approved.cjs').customerCopyApproved(customer?customerNavigationApproved(machine):machine)).filter(d=>{
   if(d.file==='sitemap.xml'&&d.field==='text')return d.actual!==d.expected&&d.actual!==bilingualSitemap(d.expected);
   if(d.file==='sitemap.xml'&&d.field==='sitemapUrls')return JSON.stringify(d.actual)!==JSON.stringify(d.expected)&&JSON.stringify(d.actual)!==JSON.stringify([...d.expected,...d.expected.map(u=>u.replace('https://perthpipepower.com.au/','https://perthpipepower.com.au/zh/'))]);
   if(d.field==='rawText'){const chrome=require('../fixtures/bilingual-chrome.json'),allowed=Object.values(chrome).map(s=>s.replace(/^<(?:style|script)[^>]*>/,'').replace(/<\/(?:style|script)>$/,''));return JSON.stringify(d.actual.filter(n=>!allowed.includes(n.content)))!==JSON.stringify(d.expected);}

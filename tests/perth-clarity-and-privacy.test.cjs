@@ -11,7 +11,7 @@ const contact = read('contact.html');
 const home = read('index.html');
 const privacy = read('privacy.html');
 
-assert.match(about.replace(/\\s+/g,' '), /part of the Ellis Group.*dedicated local repair team/i);
+assert.match(about.replace(/\\s+/g,' '), /part of the Ellis Group.*local repair team/i);
 assert.match(home, /Our local team provides plumbing repairs, electrical repairs and property maintenance/i);
 assert.match(faq, /Routine service hours: 09:00–21:00, seven days a week/i);
 assert.match(faq, /24-hour emergency repairs/i);

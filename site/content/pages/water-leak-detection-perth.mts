@@ -254,7 +254,7 @@ export const page: PageData = {
 "items": [
 {
 "question": "How is access for a hidden-leak investigation assessed?",
-"answer": "<p>Access and the suspected source determine what investigation is appropriate. Do not assume that every leak can be located or repaired without opening finishes. The proposed method and any access or restoration work need to be explained before approval.</p>" as TrustedHtml
+"answer": "<p>We assess the suspected source and available access, then explain the investigation method. Some concealed leaks need finishes opened to locate or repair the pipe. We confirm any opening and restoration work in the scope before you approve it.</p>" as TrustedHtml
 },
 {
 "question": "Does a high water bill prove there is a leaking pipe?",
