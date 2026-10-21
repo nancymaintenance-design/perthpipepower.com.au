@@ -254,11 +254,11 @@ export const page: PageData = {
 "items": [
 {
 "question": "Does a dripping mixer always need replacing?",
-"answer": "<p>No. The cause, fitting condition and availability of compatible parts need assessment. Ask the quote to distinguish a repair from product supply and installation if replacement is recommended.</p>" as TrustedHtml
+"answer": "<p>Not always. We check the cause, fitting condition and availability of compatible parts before recommending repair or replacement. If replacement is proposed, our quote separates the fitting supply from installation and any additional work.</p>" as TrustedHtml
 },
 {
 "question": "Can I supply the replacement mixer myself?",
-"answer": "<p>Discuss the product and existing connections first. Dimensions, mounting and compatibility can affect installation. The quote should identify who supplies the fitting and whether additional connection work is required.</p>" as TrustedHtml
+"answer": "<p>Discuss the product and existing connections first. Dimensions, mounting and compatibility can affect installation. Our quote identifies who supplies the fitting and any additional connection work required.</p>" as TrustedHtml
 },
 {
 "question": "Drips after a tap is closed",

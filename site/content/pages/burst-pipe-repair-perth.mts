@@ -254,7 +254,7 @@ export const page: PageData = {
 "items": [
 {
 "question": "Will the pipe-repair quote include wall or ceiling restoration?",
-"answer": "<p>Only when the written scope expressly includes it. Confirm pipe access, repair, testing and any separate restoration or other trade work rather than assuming that repairing the pipe restores every affected surface.</p>" as TrustedHtml
+"answer": "<p>Only when it is listed in the written quote. We identify pipe access, the plumbing repair and relevant checks, and state whether wall or ceiling restoration or other trade work is included or needs separate arrangements.</p>" as TrustedHtml
 },
 {
 "question": "How do I arrange an urgent burst-pipe repair?",

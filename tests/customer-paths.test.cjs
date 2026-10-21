@@ -37,7 +37,8 @@ test('single-topic guides return to the actual service and their service parent 
 });
 test('new navigation preserves headings, contact details, forms, core schema, language and public artifacts',()=>{
  const before=require('./fixtures/customer-paths-protected-20261020.json');
- for(const [file,old]of Object.entries(before)){
+ for(const [file,baseline]of Object.entries(before)){
+  const old=require('./support/reviewed-copy.cjs').reviewedCopy(baseline,file);
   const b=walk(parse(output.get(file)));
   for(const tag of ['h1','form','header','footer'])assert.deepEqual(b.filter(n=>n.tagName===tag).map(n=>text(n)),old.text[tag],file+': '+tag);
   const metas=n=>n.filter(n=>n.tagName==='link'&&['canonical','alternate'].includes(attr(n,'rel'))).map(n=>n.attrs);

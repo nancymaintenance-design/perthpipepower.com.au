@@ -213,11 +213,11 @@ export const page: PageData = {
 "items": [
 {
 "question": "Can you work with every smart-home brand or protocol?",
-"answer": "<p>No universal compatibility is assumed. Give the product details and existing system so the proposed configuration and electrical scope can be assessed before acceptance.</p>" as TrustedHtml
+"answer": "<p>Compatibility depends on the product and existing system. Send us those details so we can assess the proposed controls, configuration and electrical work before confirming the job.</p>" as TrustedHtml
 },
 {
 "question": "What should a smart-lighting or control installation quote include?",
-"answer": "<p>The quote should identify the selected controls, connected fittings, fixed electrical work and any product configuration included. Compatibility, cable access and the functions to be checked are assessed against the existing installation. Equipment supply and any separate work should be listed before approval.</p>" as TrustedHtml
+"answer": "<p>Our written quote identifies the selected controls, connected fittings, fixed electrical work and any product configuration included. We assess compatibility, cable access and the functions to be checked against the existing installation, and list equipment supply and any separate work before you approve it.</p>" as TrustedHtml
 },
 {
 "question": "Product details before installation",

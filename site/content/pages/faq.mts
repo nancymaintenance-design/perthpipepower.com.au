@@ -351,7 +351,7 @@ export const page: PageData = {
 {
 "id": "section-1",
 "kind": "rich",
-"html": "\n      <!-- keyword-gap:start --><section class=\"section keyword-gap-content\" data-keyword-gap><div class=\"shell service-reading\"><div class=\"keyword-gap-part\" id=\"gap-price-guide-routes\"><h2>Find the price guide for the actual task</h2><p>The service pages contain the existing guide ranges and their conditions. Compare the included work, not just the lowest figure: attendance or investigation, products, installation, access and separate repair can change the scope. Where a fixed guide is not offered, request a property-specific written quote.</p><p>Confirm any attendance charge, charges if you do not proceed and the scope of further investigation before booking. These questions do not establish that a fee applies or is waived; the team needs to confirm the terms for the proposed visit.</p><ul class=\"intent-links\"><li><a href=\"plumbing.html#gap-plumbing-prices\">Plumber costs and quotation scope</a></li><li><a href=\"electrical.html#gap-electrical-prices\">Electrician costs and investigation scope</a></li><li><a href=\"blocked-drains-perth.html#service-quote\">Blocked-drain clearing price guide</a></li><li><a href=\"hot-water-problems-perth.html#service-quote\">Hot-water repair and replacement price guide</a></li><li><a href=\"toilet-repairs-perth.html#service-quote\">Toilet repair price guide</a></li><li><a href=\"lighting-power-points-perth.html#service-quote\">Lighting and power-point price guide</a></li></ul></div></div></section>" as TrustedHtml
+"html": "\n      <!-- keyword-gap:start --><section class=\"section keyword-gap-content\" data-keyword-gap><div class=\"shell service-reading\"><div class=\"keyword-gap-part\" id=\"gap-price-guide-routes\"><h2>Find the price guide for the actual task</h2><p>The service pages contain the existing guide ranges and their conditions. Compare the included work, not just the lowest figure: attendance or investigation, products, installation, access and separate repair can change the scope. Where a fixed guide is not offered, request a property-specific written quote.</p><p>Before booking, we confirm the terms for the proposed visit with you, including any attendance charge, any charge if you do not proceed and the scope of further investigation. Please ask us about these terms when arranging the assessment.</p><ul class=\"intent-links\"><li><a href=\"plumbing.html#gap-plumbing-prices\">Plumber costs and quotation scope</a></li><li><a href=\"electrical.html#gap-electrical-prices\">Electrician costs and investigation scope</a></li><li><a href=\"blocked-drains-perth.html#service-quote\">Blocked-drain clearing price guide</a></li><li><a href=\"hot-water-problems-perth.html#service-quote\">Hot-water repair and replacement price guide</a></li><li><a href=\"toilet-repairs-perth.html#service-quote\">Toilet repair price guide</a></li><li><a href=\"lighting-power-points-perth.html#service-quote\">Lighting and power-point price guide</a></li></ul></div></div></section>" as TrustedHtml
 },
 {
 "id": "section-2",
@@ -360,11 +360,11 @@ export const page: PageData = {
 "items": [
 {
 "question": "Why can an online guide price differ from the written quote?",
-"answer": "<p>A guide range describes a standard scope; the property may need different access, materials, investigation or additional work. Ask the team to identify the inclusions and approval boundaries in the written quote rather than treating an online range as a fixed offer.</p>" as TrustedHtml
+"answer": "<p>Our guide ranges cover standard work. Your property may need different materials, access, investigation or additional work. We assess these requirements and identify the included tasks and any separate work in your written quote; the online range is not a fixed offer for every property.</p>" as TrustedHtml
 },
 {
 "question": "Can I approve investigation without approving every possible repair?",
-"answer": "<p>Discuss the initial assessment scope and the person authorised to approve it. If further repair or replacement is proposed, ask what needs separate agreement. An enquiry or access arrangement alone is not approval of unlimited work.</p>" as TrustedHtml
+"answer": "<p>Yes. We agree the initial assessment scope and approval contact with you. If we propose further repair or replacement, we explain what needs separate approval. Sending an enquiry or providing access does not authorise additional work.</p>" as TrustedHtml
 },
 {
 "question": "What are your routine hours and emergency arrangements?",

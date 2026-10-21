@@ -5,7 +5,7 @@ export const translationKey=(text:string):string=>createHash('sha256').update(no
 export interface TranslationPosition {key:string;source:string;start:number;end:number;attribute?:string}
 const hidden=new Set(['script','style','noscript','svg','iframe']);
 const translatedAttributes=new Set(['alt','aria-label','title','placeholder']);
-const humanSchemaKeys=new Set(['name','description','headline','articleBody','text','caption','serviceType']);
+const humanSchemaKeys=new Set(['name','description','headline','abstract','articleBody','text','caption','serviceType']);
 export function schemaStrings(value:unknown,key=''):string[]{
  if(typeof value==='string')return humanSchemaKeys.has(key)&&/[A-Za-z]/.test(value)&&!/^https?:/.test(value)?[normalizeText(value)]:[];
  if(Array.isArray(value))return value.flatMap(v=>schemaStrings(v,key));

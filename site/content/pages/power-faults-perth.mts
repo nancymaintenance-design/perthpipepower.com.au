@@ -254,11 +254,11 @@ export const page: PageData = {
 "items": [
 {
 "question": "What if the power fault is not present during the visit?",
-"answer": "<p>Give the electrician the timing and affected areas so the assessment can be scoped. An intermittent symptom may not be resolved in a single visit. Ask what investigation is included and what further testing or access would require approval.</p>" as TrustedHtml
+"answer": "<p>Tell us when the fault occurs and which areas are affected. We assess the reported pattern and explain the findings, included investigation and any further testing or access needing approval. An intermittent fault may need more than one visit.</p>" as TrustedHtml
 },
 {
 "question": "Does fault finding include replacing the faulty equipment?",
-"answer": "<p>Investigation identifies the proposed next step; repair or replacement may be a separate task. The quote should state the included assessment and any additional work before you approve it.</p>" as TrustedHtml
+"answer": "<p>Fault finding identifies the cause and proposed next step. Repair or replacement can be a separate task. Our written quote states the assessment included and any additional work for your approval.</p>" as TrustedHtml
 },
 {
 "question": "Partial loss of power",
