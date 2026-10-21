@@ -45,7 +45,7 @@ test('content_preserves_approved_candidate', () => {
   const {loadSiteData} = modules();
   const site = loadSiteData();
   for (const page of site.pages) {
-    const expected = baseline.pages[page.file];
+    const expected = require('./support/reviewed-copy.cjs').reviewedCopy(baseline.pages[page.file], page.file);
     for (const key of ['title','description','canonical','robots','jsonLd']) assert.deepEqual(page.seo[key], expected[key], `${page.file}: ${key}`);
     const faq = page.sections.flatMap(s => s.kind === 'faq' ? s.items : []);
     // Approved statement narratives keep typed answers; only the compact visible
