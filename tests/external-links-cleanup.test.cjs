@@ -17,5 +17,5 @@ test('six removed reference destinations are absent and all approved outbound de
 test('reviewed link cleanup plus subsequent navigation retain every other public artifact',()=>{
  assert.equal(Object.keys(fixture.afterFiles).length,16);
  const navigation=require('./fixtures/navigation-release-20261021.json');
- for(const [file,before]of Object.entries(fixture.beforeFiles))assert.equal(hash(fs.readFileSync(path.join('dist',file))),require('./fixtures/ui-layout-release-20261021.json').afterFiles[file]||require('./fixtures/customer-copy-20261021.json').afterFiles[file]||navigation.afterFiles[file]||fixture.afterFiles[file]||before,file);
+ for(const [file,before]of Object.entries(fixture.beforeFiles))assert.equal(hash(fs.readFileSync(path.join('dist',file))),require('./fixtures/leak-phone-links-release-20261024.json').afterFiles[file]||require('./fixtures/ui-layout-release-20261021.json').afterFiles[file]||require('./fixtures/customer-copy-20261021.json').afterFiles[file]||navigation.afterFiles[file]||fixture.afterFiles[file]||before,file);
 });
