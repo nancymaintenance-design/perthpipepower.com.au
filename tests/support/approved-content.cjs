@@ -531,12 +531,22 @@ function customerNavigationApproved(manifest){
  }
  return next;
 }
+// User-approved phone-link normalization, applied after all reviewed copy.
+// Exactly two prior anchor attributes on the leak guide; no DOM exemptions.
+function phoneLinksApproved(manifest){
+ const review=require('../fixtures/leak-phone-links-release-20261024.json'),next=structuredClone(manifest);
+ const previous=next.pages[review.page];assert(previous,'reviewed leak guide exists');
+ const tree=JSON.parse(previous.dom),links=walk(tree).filter(n=>isEl(n,'a')&&attr(n,'href')===review.from);
+ assert.equal(links.length,review.changesPerPage,'exact prior leak-guide phone links');
+ for(const link of links){assert.equal(readable(link),review.displayTelephone);link[3].find(a=>a[1]==='href')[2]=review.to;}
+ next.pages[review.page]=snapshotFromTree(tree,previous);return next;
+}
 function compareApprovedOutput(root,manifest=approved){
  const {comparePublicOutput}=require('../../.build/site/baseline.mjs');
  const enhanced=['feed.json','feed.xml','zh/feed.json','zh/feed.xml'].some(file=>fs.existsSync(path.join(root,file)));
  const machine=enhanced?machineApproved(manifest):manifest;
  const customer=fs.existsSync(path.join(root,'about.html'))&&fs.readFileSync(path.join(root,'about.html'),'utf8').includes('data-customer-path-style');
- return comparePublicOutput(root,require('./customer-copy-approved.cjs').customerCopyApproved(customer?customerNavigationApproved(machine):machine)).filter(d=>{
+ return comparePublicOutput(root,phoneLinksApproved(require('./customer-copy-approved.cjs').customerCopyApproved(customer?customerNavigationApproved(machine):machine))).filter(d=>{
   if(d.file==='sitemap.xml'&&d.field==='text')return d.actual!==d.expected&&d.actual!==bilingualSitemap(d.expected);
   if(d.file==='sitemap.xml'&&d.field==='sitemapUrls')return JSON.stringify(d.actual)!==JSON.stringify(d.expected)&&JSON.stringify(d.actual)!==JSON.stringify([...d.expected,...d.expected.map(u=>u.replace('https://perthpipepower.com.au/','https://perthpipepower.com.au/zh/'))]);
   if(d.field==='rawText'){const chrome=require('../fixtures/bilingual-chrome.json'),allowed=Object.values(chrome).map(s=>s.replace(/^<(?:style|script)[^>]*>/,'').replace(/<\/(?:style|script)>$/,''));return JSON.stringify(d.actual.filter(n=>!allowed.includes(n.content)))!==JSON.stringify(d.expected);}
